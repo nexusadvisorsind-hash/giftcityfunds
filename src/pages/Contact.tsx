@@ -181,7 +181,6 @@ function Contact(): JSX.Element {
             <CardContent>
               <p className="mb-2">Email: nexusadvisors.ind@gmail.com</p>
               <p className="mb-2">Phone: +91-99206XXXXX</p>
-              <p className="text-sm text-gray-600">You can also book time using the Book a Call button.</p>
             </CardContent>
           </Card>
         </div>

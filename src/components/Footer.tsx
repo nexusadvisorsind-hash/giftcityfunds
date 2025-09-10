@@ -78,9 +78,9 @@ const Footer = () => {
               © 2024 GIFT City Funds. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition-corporate">
-                Privacy Policy
-              </a>
+              <Link to="/privacy" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition-corporate">
+                Privacy & Policy
+              </Link>
               <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition-corporate">
                 Terms of Service
               </a>

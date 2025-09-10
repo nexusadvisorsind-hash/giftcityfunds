@@ -95,13 +95,23 @@ const Home = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="w-full">
-        <img 
-          src={heroImage} 
-          alt="GIFT City Financial Hub" 
-          className="w-full h-auto object-cover"
-        />
+        <picture>
+          <source srcSet={heroImage.replace('.png', '.webp')} type="image/webp" />
+          <img 
+            src={heroImage} 
+            alt="GIFT City Financial Hub" 
+            className="w-full h-auto object-cover"
+            width="1920"
+            height="1080"
+            loading="eager"
+            decoding="sync"
+          />
+        </picture>
         <div className="py-8 bg-background">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <p className="font-body text-lg text-foreground-muted max-w-4xl mx-auto mb-8">
+              GIFT City Funds provides insights into India's premier International Financial Services Centre, showcasing its role as a gateway for global capital and regulated cross-border finance.
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild variant="gold" size="lg" className="text-lg px-8 py-4">
                 <Link to="/investments">
@@ -110,7 +120,7 @@ const Home = () => {
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="text-lg px-8 py-4">
-                <Link to="/contact">Contact Advisor</Link>
+                <Link to="/contact">Contact Us</Link>
               </Button>
             </div>
           </div>
@@ -125,7 +135,7 @@ const Home = () => {
               India's IFSC Advantage
             </h2>
             <p className="font-body text-lg text-foreground-muted max-w-3xl mx-auto">
-              Operate globally with robust regulation and seamless cross-border flows.
+              India's first International Financial Services Centre offers a unified regulatory framework, global market access, and a business-friendly environment. GIFT City Funds highlights the advantages that make it a hub for international finance.
             </p>
           </div>
         </div>
@@ -138,6 +148,9 @@ const Home = () => {
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-6">
               Why Invest via GIFT City
             </h2>
+            <p className="font-body text-lg text-foreground-muted max-w-3xl mx-auto">
+              Global investors consider GIFT City for its currency flexibility, tax-efficient structures, and streamlined regulatory approach. GIFT City Funds shares perspectives on how these features support cross-border investment flows.
+            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {advantages.map((advantage, index) => (
@@ -164,6 +177,9 @@ const Home = () => {
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-6">
               Fund Categories
             </h2>
+            <p className="font-body text-lg text-foreground-muted max-w-3xl mx-auto">
+              GIFT City Funds covers the key categories of strategies structured under the IFSC — Equity, Hybrid, Passive, and Alternative — for awareness and understanding of the investment landscape.
+            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {fundCategories.map((category, index) => (
@@ -192,10 +208,10 @@ const Home = () => {
       <section className="py-16 bg-surface">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-4">
-            Speak with an Advisor
+            Speak to us to know more about GIFT City Funds
           </h2>
           <p className="font-body text-lg text-foreground-muted max-w-2xl mx-auto mb-8">
-            Our team will guide you on structures and next steps.
+            Speak to us to know more about GIFT City Funds and explore the structures shaping India's international finance hub.
           </p>
           <Button asChild variant="gold" size="lg" className="text-lg px-8 py-4">
             <Link to="/contact">
