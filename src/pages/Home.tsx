@@ -94,19 +94,18 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="w-full">
-        <picture>
-          <source srcSet={heroImage.replace('.png', '.webp')} type="image/webp" />
+      <section className="w-full relative">
+        <div className="w-full h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden">
           <img 
             src={heroImage} 
-            alt="GIFT City Financial Hub" 
-            className="w-full h-auto object-cover"
+            alt="GIFT City Financial Hub - India's Premier International Financial Services Centre" 
+            className="w-full h-full object-cover"
             width="1920"
             height="1080"
             loading="eager"
             decoding="sync"
           />
-        </picture>
+        </div>
         <div className="py-8 bg-background">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <p className="font-body text-lg text-foreground-muted max-w-4xl mx-auto mb-8">
