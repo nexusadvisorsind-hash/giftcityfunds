@@ -253,7 +253,7 @@ const Investments = () => {
             Want to Know More?
           </h2>
           <p className="font-body text-lg text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
-            Connect with Nexus Advisors to learn more about GIFT City funds and how they can provide global investment opportunities.
+            Contact us to learn more about GIFT City funds and how they can provide global investment opportunities.
           </p>
           <Button asChild variant="gold" size="lg">
             <Link to="/contact">

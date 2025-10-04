@@ -15,7 +15,7 @@ const Footer = () => {
               <span className="font-heading font-bold text-xl">GIFT City Funds</span>
             </div>
             <p className="text-primary-foreground/80 mb-4 max-w-md">
-              GIFT City Funds is an informational website owned and managed by Nexus Advisors, Ahmedabad, Gujarat. This site is intended only to provide information about GIFT City Funds, its structure, and advantages. It does not constitute an offer to invest or financial advice.
+              GIFT City Wealth is an informational website owned and managed by Anup Vatyani, Ahmedabad, Gujarat. This site is intended only to provide information about GIFT City investment opportunities, its structure, and advantages. It does not constitute an offer to invest or financial advice.
             </p>
             <div className="space-y-2">
               <div className="flex items-center space-x-2">

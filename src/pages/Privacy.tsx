@@ -11,14 +11,14 @@ const Privacy = () => {
         <div className="prose prose-lg max-w-none">
           <div className="mb-8 p-6 bg-surface rounded-lg">
             <p><strong>Effective date:</strong> 10 September 2025</p>
-            <p><strong>Owner / Data Controller:</strong> Digital Mutation Private Limited</p>
-            <p><strong>Website:</strong> https://giftcityfunds.in</p>
-            <p><strong>Contact:</strong> nexusadvisors.ind@gmail.com</p>
+            <p><strong>Owner / Data Controller:</strong> Anup Vatyani</p>
+            <p><strong>Website:</strong> https://giftcitywealth.in</p>
+            <p><strong>Contact:</strong> info@nexusadvisors.in</p>
           </div>
 
           <div className="mb-8">
             <p className="text-lg">
-              giftcityfunds.in is owned and operated by Digital Mutation Private Limited. It is an informational website about GIFT City and its financial ecosystem. We do not offer, solicit, or distribute any investment funds or securities. Content is provided for informational purposes only.
+              giftcitywealth.in is owned and operated by Anup Vatyani. It is an informational website about GIFT City and its financial ecosystem. We do not offer, solicit, or distribute any investment funds or securities. Content is provided for informational purposes only.
             </p>
           </div>
 
@@ -78,7 +78,7 @@ const Privacy = () => {
 
           <div className="mt-12 p-6 bg-surface rounded-lg text-center">
             <p className="text-sm text-foreground-muted">
-              © Digital Mutation Private Limited. All rights reserved. "GIFT City Funds" is a trading name used by Digital Mutation Private Limited. This page is intended for informational purposes and does not constitute investment advice.
+              © Anup Vatyani. All rights reserved. "GIFT City Wealth" is a trading name used by Anup Vatyani. This page is intended for informational purposes and does not constitute investment advice.
             </p>
           </div>
         </div>
