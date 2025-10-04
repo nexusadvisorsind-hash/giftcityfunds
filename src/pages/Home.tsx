@@ -16,7 +16,7 @@ import {
   Users,
   ArrowRight
 } from "lucide-react";
-import heroImage from "@/assets/hero-wealth.jpg";
+import heroImage from "/lovable-uploads/178cd483-83cc-496d-bd09-df449dbf3c00.png";
 import manWithGlobeImage from "/lovable-uploads/e80b2379-863d-4ad3-a803-8a865b59a949.png";
 import financeSecurityImage from "/lovable-uploads/2229ba3b-6463-4ce4-9082-69086106aa4e.png";
 import moneyBalanceImage from "/lovable-uploads/ec8c2ed1-e4ab-41d7-8b14-52e3df8a2e66.png";
@@ -95,15 +95,16 @@ const Home = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="w-full relative">
-        <div className="w-full h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden">
+        <div className="w-full h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden bg-gradient-to-b from-background to-surface">
           <img 
             src={heroImage} 
             alt="GIFT City Financial Hub - India's Premier International Financial Services Centre" 
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center brightness-105 contrast-110"
             width="1920"
             height="1080"
             loading="eager"
             decoding="sync"
+            fetchPriority="high"
           />
         </div>
         <div className="py-8 bg-background">
