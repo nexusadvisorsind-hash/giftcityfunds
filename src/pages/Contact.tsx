@@ -179,8 +179,8 @@ function Contact(): JSX.Element {
               <CardDescription>Office hours, phone or email</CardDescription>
             </CardHeader>
             <CardContent>
-              <p className="mb-2">Email: info@nexusadvisors.in</p>
-              <p className="mb-2">Phone: +91-99206XXXXX</p>
+              <p className="mb-2">Email: info@giftcitywealth.in</p>
+              <p className="mb-2">Phone: +91 9537533533</p>
             </CardContent>
           </Card>
         </div>
