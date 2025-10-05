@@ -1,14 +1,11 @@
-// src/pages/Contact.tsx
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 
-/* CONFIG - DO NOT CHANGE UNLESS YOU CHANGE THE APPSCRIPT */
-const WEB_APP_URL =
-  "https://script.google.com/macros/s/AKfycbw1GSqz7DA2XX27eN051mp6-VCzFCiBhDamCI86D-csWkd4m1sSInw6hxr-t-JyHPa41w/exec";
-const SECRET_TOKEN = "GIFT-S3cRet-T0k3n-2025";
 const CALENDLY_URL = "https://calendly.com/your-calendly-username/30min";
 
 type FormState = {
@@ -36,11 +33,7 @@ const initialForm: FormState = {
 function Contact(): JSX.Element {
   const [form, setForm] = useState<FormState>(initialForm);
   const [loading, setLoading] = useState(false);
-  const [status, setStatus] = useState<{ show: boolean; success: boolean; message: string }>({
-    show: false,
-    success: false,
-    message: "",
-  });
+  const { toast } = useToast();
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
     const { name, value } = e.target;
@@ -54,63 +47,36 @@ function Contact(): JSX.Element {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setLoading(true);
-    setStatus({ show: false, success: false, message: "" });
 
     try {
-      const payload: Record<string, string> = {
-        token: SECRET_TOKEN,
-        source: "Website - Contact Us",
-        name: form.name || "",
-        email: form.email || "",
-        phone: form.phone || "",
-        whatsapp: form.whatsapp || "",
-        location: form.location || "",
-        country: form.country || "",
-        investorType: form.investorType || "",
-        message: form.message || "",
-      };
-
-      // create or reuse a hidden iframe to avoid CORS preflight
-      let hiddenFrame = document.getElementById("gcf-hidden-iframe") as HTMLIFrameElement | null;
-      if (!hiddenFrame) {
-        hiddenFrame = document.createElement("iframe");
-        hiddenFrame.id = "gcf-hidden-iframe";
-        hiddenFrame.name = "gcf-hidden-iframe";
-        hiddenFrame.style.display = "none";
-        document.body.appendChild(hiddenFrame);
-      }
-
-      // build a plain HTML form and POST to the apps script URL
-      const f = document.createElement("form");
-      f.method = "POST";
-      f.action = WEB_APP_URL;
-      f.target = "gcf-hidden-iframe";
-      f.style.display = "none";
-
-      Object.keys(payload).forEach((k) => {
-        const input = document.createElement("input");
-        input.type = "hidden";
-        input.name = k;
-        input.value = payload[k] ?? "";
-        f.appendChild(input);
+      const { data, error } = await supabase.functions.invoke("submit-contact-form", {
+        body: {
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          whatsapp: form.whatsapp,
+          location: form.location,
+          country: form.country,
+          investorType: form.investorType,
+          message: form.message,
+        },
       });
 
-      document.body.appendChild(f);
+      if (error) throw error;
 
-      // Optimistic UI
-      setStatus({ show: true, success: true, message: "✅ Thanks — your message has been received." });
+      toast({
+        title: "Success!",
+        description: "Your message has been sent. We'll get back to you within 24 hours.",
+      });
+
       setForm(initialForm);
-
-      f.submit();
-
-      setTimeout(() => {
-        try {
-          document.body.removeChild(f);
-        } catch (err) {}
-      }, 3000);
     } catch (err: any) {
       console.error("Contact submit error:", err);
-      setStatus({ show: true, success: false, message: "❌ Submission error. Please try again later." });
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again later.",
+        variant: "destructive",
+      });
     } finally {
       setLoading(false);
     }
@@ -163,12 +129,6 @@ function Contact(): JSX.Element {
                     Book a Call
                   </Button>
                 </div>
-
-                {status.show && (
-                  <div className={`mt-4 p-3 rounded ${status.success ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"}`}>
-                    {status.message}
-                  </div>
-                )}
               </form>
             </CardContent>
           </Card>
@@ -184,8 +144,6 @@ function Contact(): JSX.Element {
             </CardContent>
           </Card>
         </div>
-
-        <iframe id="gcf-hidden-iframe" name="gcf-hidden-iframe" style={{ display: "none" }} />
       </div>
     </div>
   );
