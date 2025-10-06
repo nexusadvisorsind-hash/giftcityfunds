@@ -14,8 +14,8 @@ const Footer = () => {
               </div>
               <span className="font-heading font-bold text-xl">GIFT City Funds</span>
             </div>
-            <p className="text-primary-foreground/80 mb-4 max-w-md">
-              GIFT City Wealth is an informational website owned and managed by Anup Vatyani, Ahmedabad, Gujarat. This site is intended only to provide information about GIFT City investment opportunities, its structure, and advantages. It does not constitute an offer to invest or financial advice.
+            <p className="text-primary-foreground/80 mb-4 max-w-md text-sm">
+              GiftCityWealth.in is an independent informational resource explaining India's International Financial Services Centre (GIFT IFSC). This website provides educational content only and is not an investment advisor, intermediary, or fund distributor. It does not provide investment advice, solicit investments, or facilitate transactions. Refer to official IFSCA notifications and seek professional counsel before making any financial or business decisions.
             </p>
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
