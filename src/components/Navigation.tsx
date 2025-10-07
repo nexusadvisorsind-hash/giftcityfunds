@@ -27,7 +27,7 @@ const Navigation = () => {
               <span className="text-primary-foreground font-heading font-bold text-xl">G</span>
             </div>
             <div className="flex flex-col">
-              <span className="font-heading font-bold text-base md:text-lg text-primary leading-tight">GiftCity Wealth Advisory</span>
+              <span className="font-heading font-bold text-base md:text-lg text-primary leading-tight">GIFT CITY FUNDS</span>
               <span className="font-body text-[10px] md:text-xs text-foreground-muted leading-tight">Anup Vatyani (MFD ARN 106715)</span>
             </div>
           </Link>
