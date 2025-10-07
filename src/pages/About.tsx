@@ -46,8 +46,8 @@ const About = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="About GiftCityWealth.in — GIFT IFSC Explained"
-        description="Learn about the vision, regulatory framework, and ecosystem of GIFT City. Independent, educational resources about India's International Financial Services Centre."
+        title="About GIFT City Wealth — Informational Advisory Platform"
+        description="Learn about our mission to simplify IFSC fund compliance for NRIs and HNIs."
         canonical="https://www.giftcitywealth.in/about"
         schema={schema}
       />
@@ -57,20 +57,24 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-6">
-                About GiftCityWealth.in — GIFT IFSC Explained
+                About GIFT City Wealth — Informational Advisory Platform
               </h1>
               <div className="space-y-4 font-body text-foreground-muted">
                  <p className="text-lg">
-                   GiftCityWealth.in is an independent, informational resource dedicated to explaining India's International Financial Services Centre (GIFT IFSC) and the regulatory framework provided by IFSCA (International Financial Services Centres Authority).
+                   GIFT City Wealth is an independent financial information platform operated by Anup Vatyani. We simplify India's International Financial Services Centre framework for NRIs and HNIs through objective, regulation-first insights.
                  </p>
                  <p>
-                   GIFT City (Gujarat International Finance Tec-City) is India's first IFSC, established to provide world-class financial infrastructure and regulatory framework for international financial services. Located in Gandhinagar, Gujarat, it operates under IFSCA regulations.
+                   We follow SEBI's WCAG 2.1 AA mandate for digital accessibility and publish only verified financial content reviewed by subject experts like Pavan Vatyani.
                  </p>
-                 <p>
-                   This website provides educational content only about GIFT IFSC structures, IFSCA regulations, fund frameworks, tax structures, and operational aspects. We do not provide investment advice, solicit investments, or facilitate transactions.
-                 </p>
-                 <p className="text-sm text-foreground-subtle italic">
-                   All information is for educational purposes. Refer to official IFSCA notifications and consult professional advisors for specific guidance.
+                 <h2 className="font-heading font-bold text-2xl text-primary mt-8 mb-4">Our Compliance Standards</h2>
+                 <ul className="list-disc pl-6 space-y-2">
+                   <li>WCAG 2.1 AA compliance for digital accessibility</li>
+                   <li>SEBI IFSC Regulations 2022 adherence</li>
+                   <li>E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) audits</li>
+                   <li>YMYL (Your Money or Your Life) content standards</li>
+                 </ul>
+                 <p className="text-sm text-foreground-subtle italic mt-6">
+                   All information is for educational purposes. Capital is at risk. Consult a qualified advisor before making decisions.
                  </p>
               </div>
             </div>

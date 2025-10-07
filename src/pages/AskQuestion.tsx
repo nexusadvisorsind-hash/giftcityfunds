@@ -12,18 +12,24 @@ type FormState = {
   name: string;
   email: string;
   phone: string;
+  whatsapp: string;
   location: string;
   country: string;
+  investorType: string;
   message: string;
+  consent: boolean;
 };
 
 const initialForm: FormState = {
   name: "",
   email: "",
   phone: "",
+  whatsapp: "",
   location: "",
   country: "",
+  investorType: "",
   message: "",
+  consent: false,
 };
 
 function AskQuestion(): JSX.Element {
