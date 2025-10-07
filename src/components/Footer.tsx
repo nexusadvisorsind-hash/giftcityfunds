@@ -13,12 +13,12 @@ const Footer = () => {
                 <span className="text-secondary-foreground font-heading font-bold text-xl">G</span>
               </div>
               <div className="flex flex-col">
-                <span className="font-heading font-bold text-lg">GiftCity Wealth Advisory</span>
+                <span className="font-heading font-bold text-lg">GIFT CITY FUNDS</span>
                 <span className="text-sm text-primary-foreground/80">Anup Vatyani (MFD ARN 106715)</span>
               </div>
             </div>
             <p className="text-primary-foreground/80 mb-4 max-w-md">
-              GiftCity Wealth Advisory provides informational content about GIFT City and IFSC investment frameworks for NRIs and HNIs. Owned and operated by Anup Vatyani, a registered Mutual Fund Distributor (AMFI ARN 106715). This platform shares educational resources only and does not offer personalized investment or financial planning.
+              giftcityfunds.in provides information about GIFT City and IFSC investment frameworks for NRIs and HNIs. Owned and operated by Anup Vatyani, a registered Mutual Fund Distributor (AMFI ARN 106715). This platform shares educational resources only and does not offer personalized investment or financial planning.
             </p>
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
@@ -27,7 +27,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
-                <span className="text-sm">info@nexusadvisors.in</span>
+                <span className="text-sm">info@giftcityfunds.in</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4" />
@@ -99,8 +99,8 @@ const Footer = () => {
               <strong>Disclaimer:</strong>
             </p>
             <p className="text-primary-foreground/70 text-xs max-w-5xl mx-auto leading-relaxed mb-2">
-              All content on giftcitywealth.in is for general information and education only.
-              GiftCity Wealth Advisory and its owner Anup Vatyani (MFD ARN 106715) do not provide personalized investment, financial planning, or portfolio management through this website.
+              All content on giftcityfunds.in is for general information and education only.
+              GIFT CITY FUNDS and its owner Anup Vatyani (MFD ARN 106715) do not provide personalized investment, financial planning, or portfolio management through this website.
               Nothing here constitutes a solicitation to buy or sell any security. Users must verify facts via official scheme documents and consult qualified professionals before investing.
             </p>
             <p className="text-primary-foreground/70 text-xs max-w-5xl mx-auto leading-relaxed">
@@ -127,7 +127,7 @@ const Footer = () => {
           </div>
           
           <p className="text-primary-foreground/70 text-xs text-center mt-6">
-            © 2025 GiftCity Wealth Advisory | Anup Vatyani (MFD ARN 106715) | info@giftcitywealth.in | Informational Use Only | Mutual Fund investments are subject to market risk.
+            © 2025 GIFT CITY FUNDS | Anup Vatyani (MFD ARN 106715) | info@giftcityfunds.in | Informational Use Only | Mutual Fund investments are subject to market risk.
           </p>
         </div>
       </div>
