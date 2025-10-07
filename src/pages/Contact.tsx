@@ -86,8 +86,8 @@ function Contact(): JSX.Element {
   return (
     <>
       <SEO
-        title="Contact GIFT City Wealth | Reach Out for IFSC Information"
-        description="Contact GiftCityWealth.in for information about GIFT City IFSC. Get answers to your questions about India's International Financial Services Centre."
+        title="Contact GiftCity Wealth Advisory | Anup Vatyani ARN 106715"
+        description="Contact GiftCity Wealth Advisory for informational resources about GIFT City IFSC. Owned by Anup Vatyani (MFD ARN 106715)."
         canonical="https://www.giftcitywealth.in/contact"
       />
       
@@ -148,9 +148,10 @@ function Contact(): JSX.Element {
               <CardDescription>Office hours, phone or email</CardDescription>
             </CardHeader>
             <CardContent>
-              <p className="mb-2"><strong>Email:</strong> info@nexusadvisors.in</p>
+              <p className="mb-2"><strong>Email:</strong> info@giftcitywealth.in</p>
               <p className="mb-2"><strong>Phone:</strong> +91 95375 33533</p>
               <p className="mb-2"><strong>Location:</strong> Ahmedabad, Gujarat, India</p>
+              <p className="mt-4 text-sm text-gray-600">Author — Anup Vatyani (MFD ARN 106715) | Informational Content Only | No Personalized Advice.</p>
             </CardContent>
           </Card>
         </div>

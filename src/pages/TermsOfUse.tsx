@@ -4,8 +4,8 @@ const TermsOfUse = () => {
   return (
     <>
       <SEO
-        title="Terms of Use | GiftCityWealth.in"
-        description="Terms of use for GiftCityWealth.in - educational information about GIFT City IFSC."
+        title="Terms of Use | GiftCity Wealth Advisory"
+        description="Terms of use for GiftCity Wealth Advisory - Anup Vatyani (ARN 106715) - educational information about GIFT City IFSC."
         canonical="https://www.giftcitywealth.in/terms-of-use"
       />
       
@@ -15,12 +15,12 @@ const TermsOfUse = () => {
           
           <div className="prose prose-lg max-w-none">
             <p className="font-body text-foreground-muted mb-6">
-              GiftCityWealth.in is an informational and educational website focused on GIFT IFSC.
-              The site and its owner Anup Vatyani are not SEBI-registered investment advisors or intermediaries.
+              GiftCity Wealth Advisory is an informational and educational website focused on GIFT IFSC.
+              The site and its owner Anup Vatyani (MFD ARN 106715) are a registered Mutual Fund Distributor and do not provide personalized investment or financial planning through this platform.
             </p>
             
             <p className="font-body text-foreground-muted mb-6">
-              The information shared is general and should not be considered advice.
+              The information shared is general and should not be considered as personalized advice.
               Users must consult licensed professionals before acting on any information.
             </p>
             

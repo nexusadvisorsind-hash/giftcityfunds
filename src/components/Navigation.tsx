@@ -26,7 +26,10 @@ const Navigation = () => {
             <div className="w-10 h-10 gradient-corporate rounded-lg flex items-center justify-center">
               <span className="text-primary-foreground font-heading font-bold text-xl">G</span>
             </div>
-            <span className="font-heading font-bold text-xl text-primary">GIFT City Funds</span>
+            <div className="flex flex-col">
+              <span className="font-heading font-bold text-base md:text-lg text-primary leading-tight">GiftCity Wealth Advisory</span>
+              <span className="font-body text-[10px] md:text-xs text-foreground-muted leading-tight">Anup Vatyani (MFD ARN 106715)</span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

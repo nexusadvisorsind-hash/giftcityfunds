@@ -4,8 +4,8 @@ const AccessibilityStatement = () => {
   return (
     <>
       <SEO
-        title="Accessibility Statement | GiftCityWealth.in"
-        description="Accessibility statement for GiftCityWealth.in - our commitment to WCAG 2.1 AA standards."
+        title="Accessibility Statement | GiftCity Wealth Advisory"
+        description="Accessibility statement for GiftCity Wealth Advisory - Anup Vatyani (ARN 106715) - our commitment to WCAG 2.1 AA standards."
         canonical="https://www.giftcitywealth.in/accessibility-statement"
       />
       
@@ -15,16 +15,16 @@ const AccessibilityStatement = () => {
           
           <div className="prose prose-lg max-w-none">
             <p className="font-body text-foreground-muted mb-6">
-              GiftCityWealth.in is committed to accessibility under WCAG 2.1 AA standards.
+              GiftCity Wealth Advisory is committed to accessibility under WCAG 2.1 AA standards.
               We strive for keyboard navigation, clear contrast, and alt-text on images.
             </p>
             
             <p className="font-body text-foreground-muted mb-6">
-              For feedback or accessibility concerns, contact info@nexusadvisors.in.
+              For feedback or accessibility concerns, contact info@giftcitywealth.in.
             </p>
             
             <p className="font-body text-foreground-muted">
-              <strong>Nodal Officer:</strong> Anup Vatyani, Ahmedabad, Gujarat.
+              <strong>Nodal Officer:</strong> Anup Vatyani (MFD ARN 106715), Ahmedabad, Gujarat.
             </p>
           </div>
         </div>

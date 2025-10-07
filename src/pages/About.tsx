@@ -33,22 +33,39 @@ const About = () => {
   return (
     <>
       <SEO
-        title="About GIFT City IFSC | GiftCityWealth.in Informational Resource"
-        description="Independent educational platform explaining GIFT City IFSC, IFSCA governance, and India's global financial hub."
+        title="About GiftCity Wealth Advisory | Anup Vatyani ARN 106715"
+        description="GiftCity Wealth Advisory is owned and operated by Anup Vatyani (MFD ARN 106715). Educational content about GIFT City and IFSC frameworks for NRIs and HNIs."
         canonical="https://www.giftcitywealth.in/about"
       />
       
       <div className="min-h-screen">
-        {/* Content starts immediately without hero banner */}
-
         {/* Overview Section */}
       <section className="py-16 bg-background mt-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-6">
-                About GiftCityWealth.in and GIFT IFSC
-              </h1>
+          <div className="text-center mb-16">
+            <h1 className="font-heading font-bold text-4xl md:text-5xl text-primary mb-6">
+              About GiftCity Wealth Advisory
+            </h1>
+            <p className="font-body text-lg text-foreground-muted max-w-3xl mx-auto mb-8">
+              GiftCity Wealth Advisory is owned and operated by Anup Vatyani, a registered Mutual Fund Distributor (AMFI ARN 106715).
+            </p>
+            <p className="font-body text-lg text-foreground-muted max-w-3xl mx-auto mb-8">
+              This platform shares informational content about GIFT City and IFSC investment frameworks for NRIs and HNIs.
+              It does not offer personalized investment or financial planning.
+            </p>
+            <p className="font-body text-lg text-foreground-muted max-w-3xl mx-auto mb-8">
+              Content is for educational use only. Investors should consult a SEBI-registered Investment Adviser before acting on any information.
+            </p>
+            <p className="font-body text-lg text-foreground-muted max-w-3xl mx-auto">
+              Contact us at <a href="mailto:info@giftcitywealth.in" className="text-primary hover:underline">info@giftcitywealth.in</a>
+            </p>
+          </div>
+
+          <div className="mb-16">
+            <h2 className="font-heading font-bold text-3xl text-primary mb-6 text-center">
+              About GIFT City IFSC
+            </h2>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-4 font-body text-foreground-muted">
                  <p>
                    GIFT City is India's first IFSC offering global market access, IFSCA regulation, and tax benefits. As the country's premier International Financial Services Centre, GIFT City provides unparalleled opportunities for global financial services with world-class regulatory framework.
@@ -60,14 +77,14 @@ const About = () => {
                    Through IFSCA's robust regulatory environment, GIFT City maintains international standards while providing innovative solutions for cross-border financial services, making it the ideal destination for sophisticated global investment strategies.
                  </p>
               </div>
-            </div>
-            <div className="relative">
-              <img 
-                src={manWithGlobeImage} 
-                alt="GIFT IFSC global financial services hub" 
-                className="rounded-lg shadow-corporate w-full h-auto"
-                loading="lazy"
-              />
+              <div className="relative">
+                <img 
+                  src={manWithGlobeImage} 
+                  alt="GIFT IFSC global financial services hub" 
+                  className="rounded-lg shadow-corporate w-full h-auto"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -177,6 +194,12 @@ const About = () => {
                 </CardDescription>
               </CardContent>
             </Card>
+          </div>
+          
+          <div className="mt-12 text-center">
+            <p className="font-body text-sm text-foreground-muted">
+              Author — Anup Vatyani (MFD ARN 106715) | Informational Content Only | No Personalized Advice.
+            </p>
           </div>
         </div>
       </section>

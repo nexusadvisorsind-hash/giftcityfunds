@@ -95,8 +95,8 @@ const Home = () => {
   return (
     <>
       <SEO
-        title="GIFT City IFSC | Informational Portal – GiftCityWealth.in"
-        description="Learn about India's International Financial Services Centre (GIFT IFSC) and IFSCA framework. GiftCityWealth.in provides verified educational information."
+        title="GiftCity Wealth Advisory | Anup Vatyani (MFD ARN 106715) | Informational Insights on GIFT City & IFSC Funds"
+        description="GiftCity Wealth Advisory provides informational updates and educational resources on GIFT City and IFSC mutual fund frameworks. Operated by Anup Vatyani (Mutual Fund Distributor ARN 106715). No personalized investment advice."
         canonical="https://www.giftcitywealth.in/"
       />
       
@@ -118,10 +118,10 @@ const Home = () => {
         <div className="py-8 bg-background">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <h1 className="font-heading font-bold text-4xl md:text-5xl text-primary mb-6">
-              GIFT City IFSC – India's International Financial Gateway
+              Informational Insights on GIFT City and IFSC Funds
             </h1>
             <p className="font-body text-lg text-foreground-muted max-w-4xl mx-auto mb-8">
-              GIFT City Funds provides insights into India's premier International Financial Services Centre, showcasing its role as a gateway for global capital and regulated cross-border finance.
+              Educational resources by Anup Vatyani (Mutual Fund Distributor ARN 106715) — Simplifying GIFT City investment frameworks for NRIs and HNIs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild variant="gold" size="lg" className="text-lg px-8 py-4">

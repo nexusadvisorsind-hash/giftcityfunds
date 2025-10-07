@@ -310,6 +310,9 @@ const Investments = () => {
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </Button>
+          <p className="font-body text-sm text-primary-foreground/80 mt-8">
+            Author — Anup Vatyani (MFD ARN 106715) | Informational Content Only | No Personalized Advice.
+          </p>
         </div>
       </section>
       </div>

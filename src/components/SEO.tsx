@@ -10,22 +10,25 @@ interface SEOProps {
 export const SEO = ({ title, description, canonical, schema }: SEOProps) => {
   const defaultSchema = {
     "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
-    "name": "GiftCityWealth.in",
-    "url": "https://www.giftcitywealth.in",
-    "logo": "https://www.giftcitywealth.in/assets/logo.png",
-    "description": "Independent informational website explaining India's International Financial Services Centre (GIFT IFSC) framework, structure, and ecosystem. Not a SEBI-registered investment advisor or intermediary.",
+    "@type": "Organization",
+    "@id": "https://giftcitywealth.in/#organization",
+    "name": "GiftCity Wealth Advisory",
+    "url": "https://giftcitywealth.in",
+    "logo": "https://giftcitywealth.in/images/logo.png",
     "founder": {
       "@type": "Person",
       "name": "Anup Vatyani",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Ahmedabad",
-        "addressRegion": "Gujarat",
-        "addressCountry": "IN"
-      }
+      "jobTitle": "Mutual Fund Distributor",
+      "identifier": "ARN106715"
     },
-    "sameAs": ["https://www.linkedin.com/company/giftcitywealth"]
+    "description": "Informational platform about GIFT City and IFSC mutual fund frameworks. No investment advice.",
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "email": "info@giftcitywealth.in",
+      "contactType": "Customer Service",
+      "areaServed": "IN"
+    }],
+    "sameAs": ["https://www.linkedin.com/in/anup-vatyani"]
   };
 
   return (
