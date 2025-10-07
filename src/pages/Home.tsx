@@ -17,7 +17,7 @@ import {
   ArrowRight
 } from "lucide-react";
 import { SEO } from "@/components/SEO";
-import heroImage from "/lovable-uploads/178cd483-83cc-496d-bd09-df449dbf3c00.png";
+import heroImage from "@/assets/hero-new.png";
 import manWithGlobeImage from "/lovable-uploads/e80b2379-863d-4ad3-a803-8a865b59a949.png";
 import financeSecurityImage from "/lovable-uploads/2229ba3b-6463-4ce4-9082-69086106aa4e.png";
 import moneyBalanceImage from "/lovable-uploads/ec8c2ed1-e4ab-41d7-8b14-52e3df8a2e66.png";
