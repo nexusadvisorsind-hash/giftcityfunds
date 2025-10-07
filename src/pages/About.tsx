@@ -1,87 +1,61 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Globe, Shield, MapPin, Building2, TrendingUp, Users } from "lucide-react";
+import heroImage from "/lovable-uploads/178cd483-83cc-496d-bd09-df449dbf3c00.png";
 import manWithGlobeImage from "/lovable-uploads/e80b2379-863d-4ad3-a803-8a865b59a949.png";
-import { SEO } from "@/components/SEO";
 
 const About = () => {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "About GiftCityWealth.in — GIFT IFSC Explained",
-    "description": "Learn about the vision, regulatory framework, and ecosystem of GIFT City. Independent, educational resources about India's International Financial Services Centre.",
-    "author": {
-      "@type": "Organization",
-      "name": "GiftCityWealth.in"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "GiftCityWealth.in"
-    }
-  };
   const features = [
     {
       icon: Globe,
-      title: "International Financial Services Centre",
-      description: "GIFT IFSC serves as India's gateway to international financial services, operating under IFSCA regulations. Educational overview of how IFSC enables cross-border financial operations."
+      title: "Global Financial Hub",
+      description: "GIFT City serves as India's gateway to international finance, connecting domestic markets with global opportunities. Our strategic location provides unparalleled access to both Eastern and Western financial markets."
     },
     {
       icon: Shield,
-      title: "IFSCA Regulatory Framework",
-      description: "The International Financial Services Centres Authority (IFSCA) provides unified regulation for all financial services in GIFT IFSC. Educational insights into the regulatory approach and compliance framework."
+      title: "Regulatory Advantage (IFSCA)",
+      description: "Regulated by the International Financial Services Centres Authority (IFSCA), GIFT City offers a robust regulatory framework that balances investor protection with operational flexibility for global financial services."
     },
     {
       icon: MapPin,
-      title: "Strategic Position",
-      description: "Positioned in Gujarat, India, GIFT IFSC bridges time zones between Asian and European financial markets, understanding how this enables multi-timezone operations."
+      title: "Strategic Location",
+      description: "Positioned between major Asian and European financial centers, GIFT City operates across multiple time zones, enabling 24/7 financial services and seamless global market access."
     }
   ];
 
   const keyStats = [
-    { number: "$50B+", label: "Assets Under Management", source: "IFSCA Annual Report 2023" },
-    { number: "500+", label: "Registered Entities", source: "IFSCA Website" },
-    { number: "24/7", label: "Operations Capability", source: "GIFT City Framework" },
-    { number: "15+", label: "Major Currencies", source: "IFSCA Guidelines" }
+    { number: "$50B+", label: "Assets Under Management" },
+    { number: "200+", label: "Financial Institutions" },
+    { number: "24/7", label: "Market Access" },
+    { number: "15+", label: "Currencies Supported" }
   ];
 
   return (
-    <div className="min-h-screen">
-      <SEO
-        title="About GIFT City Wealth — Informational Advisory Platform"
-        description="Learn about our mission to simplify IFSC fund compliance for NRIs and HNIs."
-        canonical="https://www.giftcitywealth.in/about"
-        schema={schema}
-      />
+    <div className="min-h-screen">{/* Content starts immediately without hero banner */}
+
       {/* Overview Section */}
-      <section className="py-16 bg-background">
+      <section className="py-16 bg-background mt-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-6">
-                About GIFT City Wealth — Informational Advisory Platform
-              </h1>
+              <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-6">
+                Transforming Global Finance
+              </h2>
               <div className="space-y-4 font-body text-foreground-muted">
-                 <p className="text-lg">
-                   GIFT City Wealth is an independent financial information platform operated by Anup Vatyani. We simplify India's International Financial Services Centre framework for NRIs and HNIs through objective, regulation-first insights.
+                 <p>
+                   GIFT City is India's first IFSC offering global market access, IFSCA regulation, and tax benefits. As the country's premier International Financial Services Centre, GIFT City provides unparalleled opportunities for global financial services with world-class regulatory framework.
                  </p>
                  <p>
-                   We follow SEBI's WCAG 2.1 AA mandate for digital accessibility and publish only verified financial content reviewed by subject experts like Pavan Vatyani.
+                   Located in Gujarat, India, GIFT City serves as the gateway between Eastern and Western financial markets, offering international investors seamless access to Indian opportunities while enabling Indian entities to access global markets with enhanced flexibility and reduced regulatory constraints.
                  </p>
-                 <h2 className="font-heading font-bold text-2xl text-primary mt-8 mb-4">Our Compliance Standards</h2>
-                 <ul className="list-disc pl-6 space-y-2">
-                   <li>WCAG 2.1 AA compliance for digital accessibility</li>
-                   <li>SEBI IFSC Regulations 2022 adherence</li>
-                   <li>E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) audits</li>
-                   <li>YMYL (Your Money or Your Life) content standards</li>
-                 </ul>
-                 <p className="text-sm text-foreground-subtle italic mt-6">
-                   All information is for educational purposes. Capital is at risk. Consult a qualified advisor before making decisions.
+                 <p>
+                   Through IFSCA's robust regulatory environment, GIFT City maintains international standards while providing innovative solutions for cross-border financial services, making it the ideal destination for sophisticated global investment strategies.
                  </p>
               </div>
             </div>
             <div className="relative">
               <img 
                 src={manWithGlobeImage} 
-                alt="GIFT City IFSC - International Financial Services Centre in India" 
+                alt="Man with Globe - Global Financial Reach" 
                 className="rounded-lg shadow-corporate w-full h-auto"
               />
             </div>
@@ -94,30 +68,24 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-4">
-              GIFT IFSC Overview — Key Metrics
+              GIFT City by Numbers
             </h2>
             <p className="font-body text-lg text-foreground-muted max-w-2xl mx-auto">
-              Educational snapshot of GIFT IFSC growth and capabilities (data from official sources)
+              Leading indicators of growth and global impact
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {keyStats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="font-heading font-bold text-4xl md:text-5xl text-accent mb-2">
+                <div className="font-heading font-bold text-4xl md:text-5xl text-secondary mb-2">
                   {stat.number}
                 </div>
-                <div className="font-body text-foreground-muted mb-1">
+                <div className="font-body text-foreground-muted">
                   {stat.label}
-                </div>
-                <div className="text-xs text-foreground-subtle">
-                  Source: {stat.source}
                 </div>
               </div>
             ))}
           </div>
-          <p className="text-center text-sm text-foreground-subtle mt-8">
-            Statistics as of 2023. For current data, visit <a href="https://ifsca.gov.in" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">IFSCA.gov.in</a>
-          </p>
         </div>
       </section>
 
@@ -126,10 +94,10 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-4">
-              Understanding GIFT IFSC Framework
+              Key Features & Advantages
             </h2>
             <p className="font-body text-lg text-foreground-muted max-w-2xl mx-auto">
-              Educational overview of key structural features that distinguish GIFT IFSC from domestic Indian markets
+              Discover what makes GIFT City the preferred destination for global financial services
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -152,57 +120,56 @@ const About = () => {
         </div>
       </section>
 
-      {/* Operational Framework */}
+      {/* Benefits for Investors */}
       <section className="py-16 bg-surface">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-4">
-              GIFT IFSC Operational Framework
+              Benefits for Global Investors
             </h2>
             <p className="font-body text-lg text-foreground-muted max-w-2xl mx-auto">
-              Educational overview of structural and operational features under IFSCA regulations
+              GIFT City offers unique advantages for international investment strategies
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="institutional-card hover-lift">
+            <Card className="hover-lift border-border/50">
               <CardHeader>
-                <Building2 className="h-8 w-8 text-accent mb-2" />
-                <CardTitle className="font-heading text-lg text-primary">Tax Framework</CardTitle>
+                <Building2 className="h-8 w-8 text-secondary mb-2" />
+                <CardTitle className="font-heading text-lg text-primary">Tax Efficiency</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="font-body">
-                  Educational overview of tax structures available for eligible IFSC entities, including potential exemptions and incentives under applicable tax laws. Consult tax professionals for advice.
+                  Benefit from IFSC's favorable tax regime with exemptions on capital gains and dividend distribution tax for qualifying investments.
                 </CardDescription>
               </CardContent>
             </Card>
             
-            <Card className="institutional-card hover-lift">
+            <Card className="hover-lift border-border/50">
               <CardHeader>
-                <TrendingUp className="h-8 w-8 text-accent mb-2" />
-                <CardTitle className="font-heading text-lg text-primary">Currency Operations</CardTitle>
+                <TrendingUp className="h-8 w-8 text-secondary mb-2" />
+                <CardTitle className="font-heading text-lg text-primary">Currency Flexibility</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="font-body">
-                  Understanding multi-currency operations framework in GIFT IFSC, enabling transactions in major foreign currencies as per IFSCA guidelines and FEMA exemptions.
+                  Operate in multiple foreign currencies without FEMA restrictions, enabling seamless global investment strategies.
                 </CardDescription>
               </CardContent>
             </Card>
             
-            <Card className="institutional-card hover-lift">
+            <Card className="hover-lift border-border/50">
               <CardHeader>
-                <Users className="h-8 w-8 text-accent mb-2" />
-                <CardTitle className="font-heading text-lg text-primary">Participant Eligibility</CardTitle>
+                <Users className="h-8 w-8 text-secondary mb-2" />
+                <CardTitle className="font-heading text-lg text-primary">Investor Access</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="font-body">
-                  Educational information on participant categories including NRIs, foreign nationals, and institutional investors. Specific eligibility varies by product and IFSCA regulations.
+                  Open to NRIs, foreign nationals, and institutional investors with streamlined onboarding and compliance processes.
                 </CardDescription>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
-
     </div>
   );
 };

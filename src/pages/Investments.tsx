@@ -1,4 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { 
@@ -10,170 +11,127 @@ import {
   BarChart,
   Target,
   CheckCircle,
-  ArrowRight,
-  BookOpen
+  ArrowRight
 } from "lucide-react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import heroImage from "/lovable-uploads/178cd483-83cc-496d-bd09-df449dbf3c00.png";
 import moneyBalanceImage from "/lovable-uploads/ec8c2ed1-e4ab-41d7-8b14-52e3df8a2e66.png";
-import { SEO } from "@/components/SEO";
 
 const Investments = () => {
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is GIFT IFSC?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "GIFT IFSC is India's International Financial Services Centre located in Gujarat International Finance Tec-City, regulated by IFSCA to offer global financial services."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Who regulates GIFT City activities?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The International Financial Services Centres Authority (IFSCA) regulates all financial activities within GIFT IFSC."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What fund structures are available in GIFT IFSC?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "GIFT IFSC allows various fund structures including Alternative Investment Funds (AIFs), Venture Capital Funds, and other pooled investment vehicles under IFSCA regulations."
-        }
-      }
-    ]
-  };
   const advantages = [
     {
       icon: Banknote,
-      title: "Currency Flexibility",
-      description: "Understanding multi-currency operations in GIFT IFSC, enabling fund operations in USD, EUR, GBP and other major currencies as per IFSCA framework."
+      title: "Currency Freedom",
+      description: "Invest across multiple currencies including USD, EUR, GBP, and other major currencies without foreign exchange restrictions or FEMA compliance burdens."
     },
     {
       icon: FileText,
-      title: "Regulatory Framework",
-      description: "Educational overview of IFSCA regulations and how IFSC framework differs from domestic Indian regulations, including FEMA exemptions for eligible operations."
+      title: "No FEMA Constraints",
+      description: "Operate under IFSC regulations that eliminate traditional FEMA limitations, providing greater flexibility for international investment strategies and portfolio management."
     },
     {
       icon: Building,
-      title: "Tax Structures",
-      description: "Learning about tax frameworks available for eligible IFSC entities, including potential benefits and exemptions. Educational information only — consult tax professionals for advice."
+      title: "Tax-Efficient Structures",
+      description: "Benefit from GIFT City's favorable tax regime including exemptions on capital gains, dividend distribution tax, and other fiscal advantages for qualifying investments."
     },
     {
       icon: TrendingUp,
-      title: "Operational Features",
-      description: "Understanding liquidity structures, redemption frameworks, and operational capabilities under various IFSC fund structures as per IFSCA guidelines."
+      title: "Daily Liquidity",
+      description: "Enjoy flexible redemption options with daily liquidity features, ensuring you can access your investments when needed without lengthy lock-in periods."
     }
   ];
 
   const fundCategories = [
     {
       icon: TrendingUp,
-      title: "Equity Fund Structures",
-      description: "Educational content on equity-focused fund frameworks",
-      color: "text-primary"
+      title: "Equity Funds",
+      description: "High-growth sectors with global exposure",
+      details: [
+        "Global technology and innovation",
+        "Emerging market opportunities",
+        "Developed market blue-chip investments",
+        "Sector-specific growth strategies"
+      ],
+      color: "text-corporate-blue",
+      bgColor: "bg-corporate-blue/10"
     },
     {
       icon: PieChart,
-      title: "Hybrid Structures",
-      description: "Understanding balanced allocation frameworks",
-      color: "text-accent"
+      title: "Hybrid Funds",
+      description: "Balanced allocation across asset classes",
+      details: [
+        "Multi-asset diversified portfolios",
+        "Dynamic asset allocation strategies",
+        "Risk-balanced investment approach",
+        "Income and growth objectives"
+      ],
+      color: "text-corporate-gold",
+      bgColor: "bg-corporate-gold/10"
     },
     {
       icon: BarChart,
-      title: "Passive Strategies",
-      description: "Learning about index-linked investment approaches",
-      color: "text-primary"
+      title: "Passive Investments",
+      description: "Index-linked strategies with low fees",
+      details: [
+        "Global index fund exposure",
+        "ETF-based investment strategies",
+        "Low-cost passive management",
+        "Broad market diversification"
+      ],
+      color: "text-corporate-blue",
+      bgColor: "bg-corporate-blue/10"
     },
     {
       icon: Target,
-      title: "Alternative Investment Funds",
-      description: "Educational resources on PE, real estate, and hedge fund frameworks under IFSCA",
-      color: "text-accent"
-    }
-  ];
-
-  const faqs = [
-    {
-      question: "What types of fund structures operate in GIFT IFSC?",
-      answer: "GIFT IFSC hosts various fund structures including mutual funds, AIFs (Alternative Investment Funds), offshore funds, private equity funds, venture capital funds, and hedge funds. Each structure has specific regulatory requirements under IFSCA guidelines."
-    },
-    {
-      question: "Who can invest through GIFT IFSC funds?",
-      answer: "Eligibility varies by product and IFSCA regulations. Typically, institutional investors, qualified investors, and accredited investors can participate. Investment minimums and eligibility criteria are defined by individual fund offerings and IFSCA circulars. This is educational information — consult official IFSCA documentation for specific requirements."
-    },
-    {
-      question: "What is the typical establishment process for a fund in GIFT IFSC?",
-      answer: "The typical process involves: (1) Regulatory consultation and planning with IFSCA framework review, (2) Documentation and IFSCA registration including entity setup and compliance, (3) Operational setup with custodians, administrators, and fund launch. Specific requirements vary by fund type and IFSCA regulations."
-    },
-    {
-      question: "What are the tax implications for GIFT IFSC funds?",
-      answer: "GIFT IFSC offers various tax structures for eligible entities, including potential exemptions and incentives as per applicable tax laws. Specific tax treatment depends on the entity type, activities, and applicable regulations. This is educational information only — consult qualified tax professionals for advice on your specific situation."
+      title: "Alternative Investments",
+      description: "PE, Real Estate, and Hedge Fund strategies",
+      details: [
+        "Private equity opportunities",
+        "Real estate investment trusts",
+        "Hedge fund strategies",
+        "Infrastructure and commodities"
+      ],
+      color: "text-corporate-gold",
+      bgColor: "bg-corporate-gold/10"
     }
   ];
 
   return (
     <div className="min-h-screen">
-      <SEO
-        title="Investments in GIFT City IFSC — Structures & Process | GiftCityWealth.in"
-        description="Informational guide on fund structures, registration process, and operational setup under IFSCA for funds and financial entities in GIFT IFSC — educational purposes only."
-        canonical="https://www.giftcitywealth.in/investments"
-        schema={faqSchema}
-      />
-      {/* Hero Section */}
-      <section className="py-16 bg-gradient-subtle">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="font-heading font-bold text-4xl md:text-5xl text-primary mb-6">
-              Understanding Investments in GIFT City — IFSC Structures & Process
-            </h1>
-            <p className="font-body text-lg text-foreground-muted">
-              Informational guide on fund structures, registration process, and operational setup under IFSCA for funds and financial entities in GIFT IFSC — educational purposes only.
-            </p>
-          </div>
-        </div>
-      </section>
+      {/* Content starts immediately without hero banner */}
 
-      {/* IFSC Framework Features */}
-      <section className="py-16 bg-background">
+      {/* Investment Advantages */}
+      <section className="py-16 bg-background mt-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-8">
-                GIFT IFSC Framework Features
+                Investment Advantages
               </h2>
               <div className="space-y-6">
-                {advantages.map((advantage, index) => (
-                  <div key={index} className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center flex-shrink-0">
-                      <advantage.icon className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-heading font-semibold text-lg text-primary mb-2">
-                        {advantage.title}
-                      </h3>
-                      <p className="font-body text-foreground-muted text-sm">
-                        {advantage.description}
-                      </p>
-                    </div>
+                <div className="grid grid-cols-1 gap-4">
+                  <div className="flex items-center space-x-3">
+                    <Banknote className="h-6 w-6 text-secondary" />
+                    <span className="font-body text-lg text-primary">Currency Freedom</span>
                   </div>
-                ))}
+                  <div className="flex items-center space-x-3">
+                    <FileText className="h-6 w-6 text-secondary" />
+                    <span className="font-body text-lg text-primary">No FEMA Constraints</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <Building className="h-6 w-6 text-secondary" />
+                    <span className="font-body text-lg text-primary">Tax-Efficient Structures</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <TrendingUp className="h-6 w-6 text-secondary" />
+                    <span className="font-body text-lg text-primary">Daily Liquidity</span>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="relative">
               <img 
                 src={moneyBalanceImage} 
-                alt="GIFT City fund structures and investment frameworks - educational illustration" 
+                alt="Investment Balance Illustration" 
                 className="rounded-lg shadow-corporate w-full h-auto"
               />
             </div>
@@ -181,99 +139,106 @@ const Investments = () => {
         </div>
       </section>
 
-      {/* Fund Structure Categories */}
-      <section className="py-16 bg-surface">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-4">
-              Fund Structure Categories
-            </h2>
-            <p className="font-body text-lg text-foreground-muted max-w-3xl mx-auto">
-              Educational overview of fund structure types operating within GIFT IFSC regulatory framework
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
-            {fundCategories.map((category, index) => (
-              <Card key={index} className="institutional-card hover-lift">
-                <CardContent className="p-6">
-                  <div className="flex items-start">
-                    <div className="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                      <category.icon className={`h-6 w-6 ${category.color}`} />
-                    </div>
-                    <div>
-                      <h3 className="font-heading font-semibold text-lg text-primary mb-2">
-                        {category.title}
-                      </h3>
-                      <p className="font-body text-foreground-muted text-sm">
-                        {category.description}
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-          <div className="text-center">
-            <p className="font-body text-foreground-muted mb-4">
-              <strong>Note:</strong> Eligibility and investment minimums vary by product and IFSCA regulations. Typical participation is limited to institutional and accredited investors.
-            </p>
-            <p className="text-sm text-foreground-subtle">
-              Refer to official IFSCA circulars and individual fund documentation for specific requirements.
-            </p>
-          </div>
+      {/* Minimum Investment Notice */}
+      <section className="py-8 bg-surface">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <Badge variant="secondary" className="text-lg font-heading px-6 py-3">
+            Minimum Investment: $150,000
+          </Badge>
+          <p className="font-body text-foreground-muted mt-4 max-w-2xl mx-auto">
+            Our investment solutions are designed for sophisticated investors seeking global diversification through GIFT City's regulatory advantages.
+          </p>
         </div>
       </section>
 
-      {/* Typical Establishment Process */}
+      {/* Fund Categories */}
       <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-4">
-              Typical Establishment Process
+              Fund Categories
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <div className="text-left">
+              <p className="font-body text-lg text-primary mb-2">
+                <strong>Equity</strong> — High-growth sectors with global exposure
+              </p>
+            </div>
+            <div className="text-left">
+              <p className="font-body text-lg text-primary mb-2">
+                <strong>Hybrid</strong> — Balanced allocation
+              </p>
+            </div>
+            <div className="text-left">
+              <p className="font-body text-lg text-primary mb-2">
+                <strong>Passive</strong> — Index-linked strategies
+              </p>
+            </div>
+            <div className="text-left">
+              <p className="font-body text-lg text-primary mb-2">
+                <strong>Alternative</strong> — PE, RE, Hedge Funds
+              </p>
+            </div>
+          </div>
+          <div className="text-center mt-8">
+            <p className="font-heading font-bold text-xl text-primary">
+              Minimum Investment: $150,000
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Investment Process */}
+      <section className="py-16 bg-surface">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-4">
+              Investment Process
             </h2>
             <p className="font-body text-lg text-foreground-muted max-w-2xl mx-auto">
-              Educational overview of the typical fund setup process in GIFT IFSC (actual requirements vary by fund type and IFSCA regulations)
+              A streamlined approach to global investing through GIFT City
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="institutional-card text-center">
+            <Card className="text-center border-border/50">
               <CardHeader>
-                <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4 font-heading font-bold text-xl text-primary">
+                <div className="w-12 h-12 gradient-corporate text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-heading font-bold text-xl">
                   1
                 </div>
-                <CardTitle className="font-heading text-lg text-primary">Regulatory Planning</CardTitle>
+                <CardTitle className="font-heading text-lg text-primary">Consultation</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="font-body">
-                  Understanding IFSCA framework, reviewing applicable regulations, determining fund structure type, and planning regulatory approach.
+                  Initial consultation to understand your investment objectives, risk profile, and global diversification goals.
                 </CardDescription>
               </CardContent>
             </Card>
 
-            <Card className="institutional-card text-center">
+            <Card className="text-center border-border/50">
               <CardHeader>
-                <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4 font-heading font-bold text-xl text-primary">
+                <div className="w-12 h-12 gradient-gold text-secondary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-heading font-bold text-xl">
                   2
                 </div>
-                <CardTitle className="font-heading text-lg text-primary">IFSCA Registration</CardTitle>
+                <CardTitle className="font-heading text-lg text-primary">Documentation</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="font-body">
-                  Entity setup, documentation preparation, IFSCA application process, and compliance framework establishment as per applicable guidelines.
+                  Streamlined KYC and onboarding process designed for international investors with GIFT City compliance.
                 </CardDescription>
               </CardContent>
             </Card>
 
-            <Card className="institutional-card text-center">
+            <Card className="text-center border-border/50">
               <CardHeader>
-                <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4 font-heading font-bold text-xl text-primary">
+                <div className="w-12 h-12 gradient-corporate text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-heading font-bold text-xl">
                   3
                 </div>
-                <CardTitle className="font-heading text-lg text-primary">Operational Setup</CardTitle>
+                <CardTitle className="font-heading text-lg text-primary">Investment</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="font-body">
-                  Appointing custodians and administrators, establishing operational infrastructure, and fund launch in compliance with IFSCA requirements.
+                  Execute your investment strategy with ongoing portfolio management and regular performance reporting.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -281,49 +246,23 @@ const Investments = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-16 bg-surface">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="font-heading font-bold text-3xl text-primary mb-4">
-              Frequently Asked Questions
-            </h2>
-            <p className="font-body text-foreground-muted">
-              Common questions about GIFT IFSC fund structures — Educational information only
-            </p>
-          </div>
-          
-          <Accordion type="single" collapsible className="w-full">
-            {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className="font-heading text-left">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="font-body text-foreground-muted">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-navy text-primary-foreground">
+      {/* Call to Action */}
+      <section className="py-16 bg-gradient-to-r from-primary to-primary-hover">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <BookOpen className="h-16 w-16 mx-auto mb-6 opacity-90" />
-          <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">
-            Have Questions About GIFT IFSC Funds?
+          <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary-foreground mb-4">
+            Want to Know More?
           </h2>
-          <p className="font-body text-lg mb-8 opacity-90">
-            Submit your questions and we'll provide educational information to help you understand GIFT IFSC fund structures better.
+          <p className="font-body text-lg text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
+            Contact us to learn more about GIFT City funds and how they can provide global investment opportunities.
           </p>
-          <Button asChild variant="secondary" size="lg" className="text-lg px-8 py-4">
-            <Link to="/ask-question">Ask a Question</Link>
+          <Button asChild variant="gold" size="lg">
+            <Link to="/contact">
+              Schedule Consultation
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
           </Button>
         </div>
       </section>
-
     </div>
   );
 };

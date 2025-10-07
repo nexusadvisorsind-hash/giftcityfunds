@@ -9,10 +9,9 @@ const Navigation = () => {
 
   const navItems = [
     { label: "Home", path: "/" },
-    { label: "About", path: "/about" },
-    { label: "Investments", path: "/investments" },
-    { label: "Resources", path: "/resources" },
-    { label: "Ask a Question", path: "/ask-question" },
+    { label: "About GIFT City", path: "/about" },
+    { label: "Investment Solutions", path: "/investments" },
+    { label: "Contact Us", path: "/contact" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
