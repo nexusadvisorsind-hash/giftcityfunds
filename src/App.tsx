@@ -11,6 +11,9 @@ import Investments from "./pages/Investments";
 import Resources from "./pages/Resources";
 import AskQuestion from "./pages/AskQuestion";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Disclaimer from "./pages/Disclaimer";
+import Accessibility from "./pages/Accessibility";
+import Grievance from "./pages/Grievance";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +33,9 @@ const App = () => (
               <Route path="/resources" element={<Resources />} />
               <Route path="/ask-question" element={<AskQuestion />} />
               <Route path="/privacy" element={<PrivacyPolicy />} />
+              <Route path="/disclaimer" element={<Disclaimer />} />
+              <Route path="/accessibility" element={<Accessibility />} />
+              <Route path="/grievance" element={<Grievance />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

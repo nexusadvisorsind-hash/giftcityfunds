@@ -20,12 +20,24 @@ import { SEO } from "@/components/SEO";
 const Home = () => {
   const schema = {
     "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
-    "name": "GiftCityWealth.in",
+    "@type": "FinancialService",
+    "name": "GIFT City Wealth",
+    "alternateName": "GIFT City Wealth (Prop. Anup Vatyani)",
     "url": "https://www.giftcitywealth.in",
     "logo": "https://www.giftcitywealth.in/logo.png",
-    "description": "Independent informational portal explaining GIFT City IFSC and IFSCA regulations. Educational content only.",
-    "sameAs": []
+    "description": "Financial Information Platform providing IFSC & GIFT City fund insights.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "GIFT City",
+      "addressLocality": "Gandhinagar",
+      "addressRegion": "Gujarat",
+      "addressCountry": "IN"
+    },
+    "telephone": "+91 95375 33533",
+    "email": "info@nexusadvisors.in",
+    "sameAs": [
+      "https://www.linkedin.com/company/giftcitywealth"
+    ]
   };
   const features = [
     {
@@ -98,9 +110,9 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="GIFT City IFSC — Educational Resource | GiftCityWealth.in"
-        description="GiftCityWealth.in is an independent informational portal explaining GIFT City IFSC, IFSCA regulations, fund structures, and tax frameworks for professionals and NRIs. Educational use only."
-        canonical="https://www.giftcitywealth.in/"
+        title="GIFT City Funds — IFSC & NRI Investment Insights"
+        description="Independent research on GIFT City fund structures and tax rules for HNI investors."
+        canonical="https://www.giftcitywealth.in"
         schema={schema}
       />
       {/* Hero Section */}
@@ -111,21 +123,20 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-primary-foreground mb-6">
-              Discover India's Global Financial Gateway — GIFT City
+              GIFT City Funds — India's Global Financial Gateway
             </h1>
             <p className="font-body text-xl md:text-2xl text-primary-foreground/90 mb-10 leading-relaxed">
-              An independent informational resource explaining GIFT City IFSC, IFSCA regulations, fund structures, and tax frameworks. Educational content only.
+              Independent research and regulatory insights on IFSC fund structures, NRI tax rules and wealth structuring for HNI investors.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild variant="secondary" size="lg" className="text-lg px-8 py-6">
-                <Link to="/about">
-                  Learn About IFSC
-                  <BookOpen className="ml-2 h-5 w-5" />
-                </Link>
+                <a href="/downloads/GIFT-City-30-Point-Checklist.pdf" download>
+                  📘 Download the 30-Point IFSC Readiness Checklist (Free PDF)
+                </a>
               </Button>
               <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6 border-white text-white hover:bg-white hover:text-primary">
                 <Link to="/resources">
-                  Explore Resources
+                  🔎 Explore Resources
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>

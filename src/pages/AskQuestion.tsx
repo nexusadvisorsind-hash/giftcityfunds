@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Checkbox } from "@/components/ui/checkbox";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, HelpCircle } from "lucide-react";
@@ -37,9 +39,14 @@ function AskQuestion(): JSX.Element {
   const [loading, setLoading] = useState(false);
   const { toast } = useToast();
 
-  function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
-    const { name, value } = e.target;
-    setForm((p) => ({ ...p, [name]: value }));
+  function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
+    const { name, value, type } = e.target;
+    if (type === 'checkbox') {
+      const checked = (e.target as HTMLInputElement).checked;
+      setForm((p) => ({ ...p, [name]: checked }));
+    } else {
+      setForm((p) => ({ ...p, [name]: value }));
+    }
   }
 
   async function handleSubmit(e: React.FormEvent) {
@@ -52,10 +59,10 @@ function AskQuestion(): JSX.Element {
           name: form.name,
           email: form.email,
           phone: form.phone,
-          whatsapp: "",
+          whatsapp: form.whatsapp,
           location: form.location,
           country: form.country,
-          investorType: "Information Request",
+          investorType: form.investorType,
           message: form.message,
         },
       });
@@ -140,12 +147,26 @@ function AskQuestion(): JSX.Element {
                       />
                     </div>
                     <div>
-                      <label className="font-body text-sm text-foreground-muted mb-1 block">Phone (Optional)</label>
+                      <label className="font-body text-sm text-foreground-muted mb-1 block">Phone *</label>
                       <Input 
                         name="phone" 
                         value={form.phone} 
                         onChange={handleChange} 
                         placeholder="+91 XXXXX XXXXX"
+                        required
+                        type="tel"
+                        className="font-body"
+                      />
+                    </div>
+                    <div>
+                      <label className="font-body text-sm text-foreground-muted mb-1 block">WhatsApp *</label>
+                      <Input 
+                        name="whatsapp" 
+                        value={form.whatsapp} 
+                        onChange={handleChange} 
+                        placeholder="+91 XXXXX XXXXX"
+                        required
+                        type="tel"
                         className="font-body"
                       />
                     </div>
@@ -183,6 +204,40 @@ function AskQuestion(): JSX.Element {
                         className="font-body"
                       />
                     </div>
+                    <div>
+                      <label className="font-body text-sm text-foreground-muted mb-1 block">Investor Type *</label>
+                      <Select 
+                        name="investorType" 
+                        value={form.investorType} 
+                        onValueChange={(value) => setForm((p) => ({ ...p, investorType: value }))}
+                        required
+                      >
+                        <SelectTrigger className="font-body">
+                          <SelectValue placeholder="Select investor type" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="Retail">Retail</SelectItem>
+                          <SelectItem value="NRI">NRI</SelectItem>
+                          <SelectItem value="HNI">HNI</SelectItem>
+                          <SelectItem value="Institutional">Institutional</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <Checkbox 
+                        id="consent"
+                        name="consent"
+                        checked={form.consent}
+                        onCheckedChange={(checked) => setForm((p) => ({ ...p, consent: checked as boolean }))}
+                        required
+                      />
+                      <label 
+                        htmlFor="consent" 
+                        className="font-body text-sm text-foreground-muted leading-relaxed cursor-pointer"
+                      >
+                        I agree to receive informational updates. *
+                      </label>
+                    </div>
                   </div>
 
                   <Button type="submit" disabled={loading} size="lg" className="w-full">
@@ -203,17 +258,17 @@ function AskQuestion(): JSX.Element {
                 <CardContent className="space-y-4">
                   <div className="flex items-start space-x-3">
                     <Mail className="h-5 w-5 text-accent mt-1" />
-                    <div>
-                      <p className="font-heading font-semibold text-primary">Email</p>
-                      <p className="font-body text-foreground-muted">nexusadvisors.ind@gmail.com</p>
-                    </div>
+                  <div>
+                    <p className="font-heading font-semibold text-primary">Email</p>
+                    <p className="font-body text-foreground-muted">info@nexusadvisors.in</p>
                   </div>
-                  <div className="flex items-start space-x-3">
-                    <Phone className="h-5 w-5 text-accent mt-1" />
-                    <div>
-                      <p className="font-heading font-semibold text-primary">Phone</p>
-                      <p className="font-body text-foreground-muted">+91 9537533533</p>
-                    </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <Phone className="h-5 w-5 text-accent mt-1" />
+                  <div>
+                    <p className="font-heading font-semibold text-primary">Phone</p>
+                    <p className="font-body text-foreground-muted">+91 95375 33533</p>
+                  </div>
                   </div>
                 </CardContent>
               </Card>
