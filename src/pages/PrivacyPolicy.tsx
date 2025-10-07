@@ -1,6 +1,13 @@
+import { SEO } from "@/components/SEO";
+
 const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen py-16 bg-background">
+      <SEO
+        title="Privacy Policy — GiftCityWealth.in"
+        description="Privacy policy for GiftCityWealth.in explaining how we collect, use, and protect your information. Educational resource about GIFT City IFSC."
+        canonical="https://www.giftcitywealth.in/privacy"
+      />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="font-heading font-bold text-4xl text-primary mb-8">Privacy Policy</h1>
         

@@ -20,8 +20,39 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import moneyBalanceImage from "/lovable-uploads/ec8c2ed1-e4ab-41d7-8b14-52e3df8a2e66.png";
+import { SEO } from "@/components/SEO";
 
 const Investments = () => {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is GIFT IFSC?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GIFT IFSC is India's International Financial Services Centre located in Gujarat International Finance Tec-City, regulated by IFSCA to offer global financial services."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who regulates GIFT City activities?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The International Financial Services Centres Authority (IFSCA) regulates all financial activities within GIFT IFSC."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What fund structures are available in GIFT IFSC?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GIFT IFSC allows various fund structures including Alternative Investment Funds (AIFs), Venture Capital Funds, and other pooled investment vehicles under IFSCA regulations."
+        }
+      }
+    ]
+  };
   const advantages = [
     {
       icon: Banknote,
@@ -93,6 +124,12 @@ const Investments = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Investments in GIFT City IFSC — Structures & Process | GiftCityWealth.in"
+        description="Informational guide on fund structures, registration process, and operational setup under IFSCA for funds and financial entities in GIFT IFSC — educational purposes only."
+        canonical="https://www.giftcitywealth.in/investments"
+        schema={faqSchema}
+      />
       {/* Hero Section */}
       <section className="py-16 bg-gradient-subtle">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -282,26 +319,11 @@ const Investments = () => {
             Submit your questions and we'll provide educational information to help you understand GIFT IFSC fund structures better.
           </p>
           <Button asChild variant="secondary" size="lg" className="text-lg px-8 py-4">
-            <Link to="/contact">Ask a Question</Link>
+            <Link to="/ask-question">Ask a Question</Link>
           </Button>
         </div>
       </section>
 
-      {/* Schema Markup for FAQ */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          "mainEntity": faqs.map(faq => ({
-            "@type": "Question",
-            "name": faq.question,
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": faq.answer
-            }
-          }))
-        })}
-      </script>
     </div>
   );
 };

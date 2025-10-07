@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, HelpCircle } from "lucide-react";
+import { SEO } from "@/components/SEO";
 
 type FormState = {
   name: string;
@@ -75,6 +76,11 @@ function AskQuestion(): JSX.Element {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Ask a Question — GIFT City IFSC Inquiries | GiftCityWealth.in"
+        description="Submit your informational questions about GIFT City IFSC, IFSCA regulations, and fund structures. Educational resource only — not investment advice."
+        canonical="https://www.giftcitywealth.in/ask-question"
+      />
       {/* Hero Section */}
       <section className="py-16 bg-gradient-subtle">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -221,19 +227,6 @@ function AskQuestion(): JSX.Element {
         </div>
       </section>
 
-      {/* Schema Markup */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "ContactPage",
-          "name": "Ask a Question About GIFT IFSC",
-          "description": "Submit questions about GIFT City IFSC for educational information responses",
-          "provider": {
-            "@type": "EducationalOrganization",
-            "name": "GiftCityWealth.in"
-          }
-        })}
-      </script>
     </div>
   );
 }

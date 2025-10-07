@@ -15,8 +15,18 @@ import {
   ArrowRight,
   BookOpen
 } from "lucide-react";
+import { SEO } from "@/components/SEO";
 
 const Home = () => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "GiftCityWealth.in",
+    "url": "https://www.giftcitywealth.in",
+    "logo": "https://www.giftcitywealth.in/logo.png",
+    "description": "Independent informational portal explaining GIFT City IFSC and IFSCA regulations. Educational content only.",
+    "sameAs": []
+  };
   const features = [
     {
       icon: Globe,
@@ -87,6 +97,12 @@ const Home = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="GIFT City IFSC — Educational Resource | GiftCityWealth.in"
+        description="GiftCityWealth.in is an independent informational portal explaining GIFT City IFSC, IFSCA regulations, fund structures, and tax frameworks for professionals and NRIs. Educational use only."
+        canonical="https://www.giftcitywealth.in/"
+        schema={schema}
+      />
       {/* Hero Section */}
       <section className="relative py-24 bg-gradient-navy overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -270,7 +286,7 @@ const Home = () => {
             Submit your questions and we'll provide educational information to help you understand GIFT IFSC better.
           </p>
           <Button asChild variant="default" size="lg" className="text-lg px-8 py-6">
-            <Link to="/contact">
+            <Link to="/ask-question">
               Ask a Question
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
@@ -278,21 +294,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Schema Markup */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "EducationalOrganization",
-          "name": "GiftCityWealth.in",
-          "url": "https://www.giftcitywealth.in",
-          "description": "Independent informational portal explaining GIFT City IFSC and IFSCA regulations. Educational content only.",
-          "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "IN",
-            "addressRegion": "Gujarat"
-          }
-        })}
-      </script>
     </div>
   );
 };

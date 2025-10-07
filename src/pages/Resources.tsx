@@ -17,8 +17,39 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { SEO } from "@/components/SEO";
 
 const Resources = () => {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is IFSCA's role in GIFT City?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "IFSCA (International Financial Services Centres Authority) is the unified regulator for all financial services in GIFT IFSC, overseeing banking, capital markets, insurance, and fund management activities."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I access IFSCA regulations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Official IFSCA regulations, circulars, and notifications are published on the IFSCA website at www.ifsca.gov.in. All regulatory updates are publicly accessible."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What tax benefits are available in GIFT IFSC?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GIFT IFSC entities benefit from various tax incentives including 100% profit deduction for first 10 years, exemptions on capital gains, dividend distribution tax, and minimum alternate tax, subject to meeting specified conditions under the Special Economic Zone framework."
+        }
+      }
+    ]
+  };
   const articles = [
     {
       title: "How IFSCA Regulates Fund Management",
@@ -82,6 +113,12 @@ const Resources = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Resources & Guides — GIFT City Knowledge Center | GiftCityWealth.in"
+        description="Downloadable guides, official links, FAQs and articles explaining IFSCA regulations, fund setup steps, and tax frameworks for GIFT IFSC. Educational only."
+        canonical="https://www.giftcitywealth.in/resources"
+        schema={faqSchema}
+      />
       {/* Hero Section */}
       <section className="py-16 bg-gradient-subtle">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -209,26 +246,11 @@ const Resources = () => {
             Submit your questions and we'll provide educational information to help you understand GIFT IFSC better.
           </p>
           <Button asChild variant="secondary" size="lg" className="text-lg px-8 py-4">
-            <Link to="/contact">Ask a Question</Link>
+            <Link to="/ask-question">Ask a Question</Link>
           </Button>
         </div>
       </section>
 
-      {/* Schema Markup for FAQ */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          "mainEntity": faqs.map(faq => ({
-            "@type": "Question",
-            "name": faq.question,
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": faq.answer
-            }
-          }))
-        })}
-      </script>
     </div>
   );
 };

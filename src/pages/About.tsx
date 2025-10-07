@@ -1,8 +1,23 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Globe, Shield, MapPin, Building2, TrendingUp, Users } from "lucide-react";
 import manWithGlobeImage from "/lovable-uploads/e80b2379-863d-4ad3-a803-8a865b59a949.png";
+import { SEO } from "@/components/SEO";
 
 const About = () => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "About GiftCityWealth.in — GIFT IFSC Explained",
+    "description": "Learn about the vision, regulatory framework, and ecosystem of GIFT City. Independent, educational resources about India's International Financial Services Centre.",
+    "author": {
+      "@type": "Organization",
+      "name": "GiftCityWealth.in"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "GiftCityWealth.in"
+    }
+  };
   const features = [
     {
       icon: Globe,
@@ -30,6 +45,12 @@ const About = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="About GiftCityWealth.in — GIFT IFSC Explained"
+        description="Learn about the vision, regulatory framework, and ecosystem of GIFT City. Independent, educational resources about India's International Financial Services Centre."
+        canonical="https://www.giftcitywealth.in/about"
+        schema={schema}
+      />
       {/* Overview Section */}
       <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -178,20 +199,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Schema Markup */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "AboutPage",
-          "name": "About GiftCityWealth.in — GIFT IFSC Explained",
-          "description": "Independent informational resource explaining GIFT City IFSC, IFSCA regulations, and fund frameworks. Educational content only.",
-          "publisher": {
-            "@type": "EducationalOrganization",
-            "name": "GiftCityWealth.in",
-            "url": "https://www.giftcitywealth.in"
-          }
-        })}
-      </script>
     </div>
   );
 };
