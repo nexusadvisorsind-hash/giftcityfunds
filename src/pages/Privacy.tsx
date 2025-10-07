@@ -34,7 +34,7 @@ const Privacy = () => {
           <p>We collect information you provide directly to us, such as when you create an account, fill out a form, or contact us. This may include your name, email address, phone number, and any other information you choose to provide.</p>
 
           <h2 className="text-2xl font-bold mt-8 mb-4">2. How We Use Your Information</h2>
-          <p>We use the information we collect to provide, maintain, and improve our services, process transactions, send you technical notices and support messages, and communicate with you about products, services, and promotional offers.</p>
+          <p>We use the information we collect to provide, maintain, and improve our information areas, process transactions, send you technical notices and support messages, and communicate with you about products, services, and promotional offers.</p>
 
           <h2 className="text-2xl font-bold mt-8 mb-4">3. Legal Basis for Processing</h2>
           <p>We process your personal data based on your consent, contract performance, compliance with legal obligations, protection of vital interests, performance of tasks in the public interest, or legitimate interests.</p>
