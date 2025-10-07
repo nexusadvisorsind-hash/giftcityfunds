@@ -2,6 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { SEO } from "@/components/SEO";
 import { 
   Banknote, 
   FileText, 
@@ -95,18 +96,65 @@ const Investments = () => {
     }
   ];
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is GIFT IFSC?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GIFT IFSC is India's International Financial Services Centre located in Gujarat, regulated by the International Financial Services Centres Authority (IFSCA)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who can register a fund or participate in GIFT IFSC?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Eligible institutional and accredited investors or entities meeting IFSCA guidelines may register funds or operate in GIFT IFSC."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are there tax benefits for entities in GIFT IFSC?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Certain notified tax concessions and exemptions apply to qualifying IFSC entities as per Government of India policy."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is GiftCityWealth.in offering any investment or fund?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. GiftCityWealth.in provides educational information only and does not offer or solicit any investments or financial products."
+        }
+      }
+    ]
+  };
+
   return (
-    <div className="min-h-screen">
-      {/* Content starts immediately without hero banner */}
+    <>
+      <SEO
+        title="Understanding Investments in GIFT City IFSC | GiftCityWealth.in"
+        description="Informational overview of fund categories, processes, and framework under IFSCA regulations at GIFT IFSC. Educational only."
+        canonical="https://www.giftcitywealth.in/investments"
+        schema={faqSchema}
+      />
+      
+      <div className="min-h-screen">
+        {/* Content starts immediately without hero banner */}
 
       {/* Investment Advantages */}
       <section className="py-16 bg-background mt-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-8">
-                Investment Advantages
-              </h2>
+              <h1 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-8">
+                Understanding GIFT City IFSC Framework
+              </h1>
               <div className="space-y-6">
                 <div className="grid grid-cols-1 gap-4">
                   <div className="flex items-center space-x-3">
@@ -131,8 +179,9 @@ const Investments = () => {
             <div className="relative">
               <img 
                 src={moneyBalanceImage} 
-                alt="Investment Balance Illustration" 
+                alt="GIFT IFSC investment framework illustration" 
                 className="rounded-lg shadow-corporate w-full h-auto"
+                loading="lazy"
               />
             </div>
           </div>
@@ -263,7 +312,8 @@ const Investments = () => {
           </Button>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

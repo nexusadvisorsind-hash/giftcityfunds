@@ -1,12 +1,20 @@
 import React from "react";
+import { SEO } from "@/components/SEO";
 
 const Privacy = () => {
   return (
-    <div className="min-h-screen py-16 px-4">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold mb-4">Privacy & Policy</h1>
-        </div>
+    <>
+      <SEO
+        title="Privacy Policy | GiftCityWealth.in"
+        description="Privacy policy for GiftCityWealth.in. Learn how we handle and protect your information when you visit our educational platform."
+        canonical="https://www.giftcitywealth.in/privacy"
+      />
+      
+      <div className="min-h-screen py-16 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-8">
+            <h1 className="text-4xl font-bold mb-4">Privacy & Policy</h1>
+          </div>
 
         <div className="prose prose-lg max-w-none">
           <div className="mb-8 p-6 bg-surface rounded-lg">
@@ -83,7 +91,8 @@ const Privacy = () => {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 

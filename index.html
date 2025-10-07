@@ -3,26 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GIFT City Wealth - Global Financial Investment Solutions</title>
-    <meta name="description" content="Invest through India's Premier International Financial Services Centre. Unlock global financial potential with GIFT City Wealth." />
+    
+    <!-- Primary Meta Tags (will be overridden by React Helmet) -->
+    <title>GIFT City IFSC | Informational Portal – GiftCityWealth.in</title>
+    <meta name="description" content="Learn about India's International Financial Services Centre (GIFT IFSC) and IFSCA framework. GiftCityWealth.in provides verified educational information." />
     <meta name="author" content="Anup Vatyani" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Preload Critical Assets -->
     <link rel="preload" as="image" href="/lovable-uploads/178cd483-83cc-496d-bd09-df449dbf3c00.png" fetchpriority="high">
-
-    <meta property="og:title" content="giftcity-financial-gateway" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <!-- Skip to Content (Accessibility) -->
+    <style>
+      .skip-to-content {
+        position: absolute;
+        left: -9999px;
+        z-index: 999;
+        padding: 1em;
+        background-color: #000;
+        color: #fff;
+        text-decoration: none;
+      }
+      .skip-to-content:focus {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+      }
+    </style>
+    
+    <!-- Google Analytics 4 (Replace with your GA4 ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
+    <!-- Google Search Console Verification (Replace with your verification code) -->
+    <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE_HERE" />
   </head>
 
   <body>
+    <a href="#main-content" className="skip-to-content" aria-label="Skip to main content">Skip to Content</a>
     <div id="root"></div>
+    <main id="main-content"></main>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

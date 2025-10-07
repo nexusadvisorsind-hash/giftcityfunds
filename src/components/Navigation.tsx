@@ -8,10 +8,11 @@ const Navigation = () => {
   const location = useLocation();
 
   const navItems = [
-    { label: "Home", path: "/" },
-    { label: "About GIFT City", path: "/about" },
-    { label: "Investment Solutions", path: "/investments" },
-    { label: "Contact Us", path: "/contact" },
+    { label: "Home", path: "/", ariaLabel: "Navigate to Home page" },
+    { label: "About GIFT City", path: "/about", ariaLabel: "Learn about GIFT City IFSC" },
+    { label: "Investment Solutions", path: "/investments", ariaLabel: "Explore GIFT IFSC investment information" },
+    { label: "Resources", path: "/resources", ariaLabel: "Access GIFT IFSC resources and guides" },
+    { label: "Contact Us", path: "/contact", ariaLabel: "Contact us for more information" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -21,7 +22,7 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2" aria-label="GiftCityWealth.in Home">
             <div className="w-10 h-10 gradient-corporate rounded-lg flex items-center justify-center">
               <span className="text-primary-foreground font-heading font-bold text-xl">G</span>
             </div>
@@ -34,6 +35,7 @@ const Navigation = () => {
               <Link
                 key={item.path}
                 to={item.path}
+                aria-label={item.ariaLabel}
                 className={`font-body text-sm font-medium transition-corporate hover:text-primary ${
                   isActive(item.path) ? "text-primary" : "text-foreground-muted"
                 }`}
@@ -50,6 +52,7 @@ const Navigation = () => {
               size="sm"
               onClick={() => setIsOpen(!isOpen)}
               className="p-2"
+              aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
             >
               {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
@@ -64,6 +67,7 @@ const Navigation = () => {
                 <Link
                   key={item.path}
                   to={item.path}
+                  aria-label={item.ariaLabel}
                   className={`block px-3 py-2 rounded-md text-base font-medium transition-corporate ${
                     isActive(item.path)
                       ? "text-primary bg-accent"

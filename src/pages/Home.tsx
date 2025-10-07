@@ -16,6 +16,7 @@ import {
   Users,
   ArrowRight
 } from "lucide-react";
+import { SEO } from "@/components/SEO";
 import heroImage from "/lovable-uploads/178cd483-83cc-496d-bd09-df449dbf3c00.png";
 import manWithGlobeImage from "/lovable-uploads/e80b2379-863d-4ad3-a803-8a865b59a949.png";
 import financeSecurityImage from "/lovable-uploads/2229ba3b-6463-4ce4-9082-69086106aa4e.png";
@@ -92,13 +93,20 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
+    <>
+      <SEO
+        title="GIFT City IFSC | Informational Portal – GiftCityWealth.in"
+        description="Learn about India's International Financial Services Centre (GIFT IFSC) and IFSCA framework. GiftCityWealth.in provides verified educational information."
+        canonical="https://www.giftcitywealth.in/"
+      />
+      
+      <div className="min-h-screen">
+        {/* Hero Section */}
       <section className="w-full relative">
         <div className="w-full h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden bg-gradient-to-b from-background to-surface">
           <img 
             src={heroImage} 
-            alt="GIFT City Financial Hub - India's Premier International Financial Services Centre" 
+            alt="GIFT City IFSC skyline Gujarat" 
             className="w-full h-full object-cover object-center brightness-105 contrast-110"
             width="1920"
             height="1080"
@@ -109,6 +117,9 @@ const Home = () => {
         </div>
         <div className="py-8 bg-background">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h1 className="font-heading font-bold text-4xl md:text-5xl text-primary mb-6">
+              GIFT City IFSC – India's International Financial Gateway
+            </h1>
             <p className="font-body text-lg text-foreground-muted max-w-4xl mx-auto mb-8">
               GIFT City Funds provides insights into India's premier International Financial Services Centre, showcasing its role as a gateway for global capital and regulated cross-border finance.
             </p>
@@ -221,7 +232,8 @@ const Home = () => {
           </Button>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

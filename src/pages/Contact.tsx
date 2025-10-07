@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
+import { SEO } from "@/components/SEO";
 
 const CALENDLY_URL = "https://calendly.com/your-calendly-username/30min";
 
@@ -83,12 +84,19 @@ function Contact(): JSX.Element {
   }
 
   return (
-    <div className="min-h-screen py-16 px-4">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold mb-2">Contact Us</h1>
-          <p className="text-gray-600">Get in touch — we'll reply within 24 hours.</p>
-        </div>
+    <>
+      <SEO
+        title="Contact GIFT City Wealth | Reach Out for IFSC Information"
+        description="Contact GiftCityWealth.in for information about GIFT City IFSC. Get answers to your questions about India's International Financial Services Centre."
+        canonical="https://www.giftcitywealth.in/contact"
+      />
+      
+      <div className="min-h-screen py-16 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-8">
+            <h1 className="text-4xl font-bold mb-2">Contact Us</h1>
+            <p className="text-gray-600">Get in touch — we'll reply within 24 hours.</p>
+          </div>
 
         <div className="grid md:grid-cols-2 gap-8">
           <Card>
@@ -99,16 +107,16 @@ function Contact(): JSX.Element {
             <CardContent className="space-y-4">
               <form onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                  <Input name="name" value={form.name} onChange={handleChange} placeholder="First Name" required />
-                  <Input name="email" value={form.email} onChange={handleChange} placeholder="Email" required type="email" />
-                  <Input name="phone" value={form.phone} onChange={handleChange} placeholder="Phone" />
-                  <Input name="whatsapp" value={form.whatsapp} onChange={handleChange} placeholder="WhatsApp" />
-                  <Input name="location" value={form.location} onChange={handleChange} placeholder="City, State" />
-                  <Input name="country" value={form.country} onChange={handleChange} placeholder="Country" />
+                  <Input name="name" value={form.name} onChange={handleChange} placeholder="First Name" required aria-label="Enter your first name" />
+                  <Input name="email" value={form.email} onChange={handleChange} placeholder="Email" required type="email" aria-label="Enter your email address" />
+                  <Input name="phone" value={form.phone} onChange={handleChange} placeholder="Phone" aria-label="Enter your phone number" />
+                  <Input name="whatsapp" value={form.whatsapp} onChange={handleChange} placeholder="WhatsApp" aria-label="Enter your WhatsApp number" />
+                  <Input name="location" value={form.location} onChange={handleChange} placeholder="City, State" aria-label="Enter your city and state" />
+                  <Input name="country" value={form.country} onChange={handleChange} placeholder="Country" aria-label="Enter your country" />
                 </div>
 
                 <div className="mb-4">
-                  <select name="investorType" value={form.investorType} onChange={handleChange} className="w-full border p-2">
+                  <select name="investorType" value={form.investorType} onChange={handleChange} className="w-full border p-2" aria-label="Select investor type">
                     <option value="">Select investor type</option>
                     <option value="Retail">Retail</option>
                     <option value="HNI">HNI</option>
@@ -118,14 +126,14 @@ function Contact(): JSX.Element {
                 </div>
 
                 <div className="mb-4">
-                  <Textarea name="message" value={form.message} onChange={handleChange} placeholder="Message" rows={6} />
+                  <Textarea name="message" value={form.message} onChange={handleChange} placeholder="Message" rows={6} aria-label="Enter your message" />
                 </div>
 
                 <div className="flex gap-4 items-center">
-                  <Button type="submit" disabled={loading} className="bg-blue-600 text-white">
+                  <Button type="submit" disabled={loading} className="bg-blue-600 text-white" aria-label="Submit contact form">
                     {loading ? "Sending..." : "Send"}
                   </Button>
-                  <Button type="button" onClick={openCalendly} className="border">
+                  <Button type="button" onClick={openCalendly} className="border" aria-label="Book a call on Calendly">
                     Book a Call
                   </Button>
                 </div>
@@ -145,7 +153,8 @@ function Contact(): JSX.Element {
           </Card>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }
 

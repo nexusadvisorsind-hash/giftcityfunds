@@ -75,7 +75,7 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/20 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-primary-foreground/80 text-sm">
-              © 2024 GIFT City Funds. All rights reserved.
+              © 2025 GIFT City Funds. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="/privacy" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition-corporate">
@@ -89,6 +89,14 @@ const Footer = () => {
               </a>
             </div>
           </div>
+          
+          <hr className="border-primary-foreground/20 my-6" />
+          
+          <p className="text-primary-foreground/70 text-xs text-center">
+            GiftCityWealth.in is an independent informational website explaining India's International Financial Services Centre (GIFT IFSC).
+            This website provides educational content only and does not offer, solicit, or distribute any investment products.
+            © 2025 GiftCityWealth.in | Informational Use Only | Updated October 2025
+          </p>
         </div>
       </div>
     </footer>

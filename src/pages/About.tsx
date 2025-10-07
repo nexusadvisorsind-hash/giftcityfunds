@@ -1,5 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Globe, Shield, MapPin, Building2, TrendingUp, Users } from "lucide-react";
+import { SEO } from "@/components/SEO";
 import heroImage from "/lovable-uploads/178cd483-83cc-496d-bd09-df449dbf3c00.png";
 import manWithGlobeImage from "/lovable-uploads/e80b2379-863d-4ad3-a803-8a865b59a949.png";
 
@@ -30,16 +31,24 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen">{/* Content starts immediately without hero banner */}
+    <>
+      <SEO
+        title="About GIFT City IFSC | GiftCityWealth.in Informational Resource"
+        description="Independent educational platform explaining GIFT City IFSC, IFSCA governance, and India's global financial hub."
+        canonical="https://www.giftcitywealth.in/about"
+      />
+      
+      <div className="min-h-screen">
+        {/* Content starts immediately without hero banner */}
 
-      {/* Overview Section */}
+        {/* Overview Section */}
       <section className="py-16 bg-background mt-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-6">
-                Transforming Global Finance
-              </h2>
+              <h1 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-6">
+                About GiftCityWealth.in and GIFT IFSC
+              </h1>
               <div className="space-y-4 font-body text-foreground-muted">
                  <p>
                    GIFT City is India's first IFSC offering global market access, IFSCA regulation, and tax benefits. As the country's premier International Financial Services Centre, GIFT City provides unparalleled opportunities for global financial services with world-class regulatory framework.
@@ -55,8 +64,9 @@ const About = () => {
             <div className="relative">
               <img 
                 src={manWithGlobeImage} 
-                alt="Man with Globe - Global Financial Reach" 
+                alt="GIFT IFSC global financial services hub" 
                 className="rounded-lg shadow-corporate w-full h-auto"
+                loading="lazy"
               />
             </div>
           </div>
@@ -170,7 +180,8 @@ const About = () => {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 
