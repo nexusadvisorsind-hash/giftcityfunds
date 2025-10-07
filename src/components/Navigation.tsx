@@ -10,7 +10,7 @@ const Navigation = () => {
   const navItems = [
     { label: "Home", path: "/", ariaLabel: "Navigate to Home page" },
     { label: "About GIFT City", path: "/about", ariaLabel: "Learn about GIFT City IFSC" },
-    { label: "Investment Solutions", path: "/investments", ariaLabel: "Explore GIFT IFSC investment information" },
+    { label: "Investment Structures", path: "/investments", ariaLabel: "Explore GIFT IFSC investment information" },
     { label: "Resources", path: "/resources", ariaLabel: "Access GIFT IFSC resources and guides" },
     { label: "Contact Us", path: "/contact", ariaLabel: "Contact us for more information" },
   ];
