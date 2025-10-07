@@ -195,7 +195,7 @@ const Investments = () => {
             Minimum Investment: $150,000
           </Badge>
           <p className="font-body text-foreground-muted mt-4 max-w-2xl mx-auto">
-            Our investment solutions are designed for sophisticated investors seeking global diversification through GIFT City's regulatory advantages.
+            Our investment structures are designed for sophisticated investors seeking global diversification through GIFT City's regulatory advantages.
           </p>
         </div>
       </section>

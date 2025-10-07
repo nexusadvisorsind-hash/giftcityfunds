@@ -14,7 +14,17 @@ export const SEO = ({ title, description, canonical, schema }: SEOProps) => {
     "name": "GiftCityWealth.in",
     "url": "https://www.giftcitywealth.in",
     "logo": "https://www.giftcitywealth.in/assets/logo.png",
-    "description": "GiftCityWealth.in is an independent informational website explaining India's International Financial Services Centre (GIFT IFSC) and IFSCA framework for educational purposes only.",
+    "description": "Independent informational website explaining India's International Financial Services Centre (GIFT IFSC) framework, structure, and ecosystem. Not a SEBI-registered investment advisor or intermediary.",
+    "founder": {
+      "@type": "Person",
+      "name": "Anup Vatyani",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ahmedabad",
+        "addressRegion": "Gujarat",
+        "addressCountry": "IN"
+      }
+    },
     "sameAs": ["https://www.linkedin.com/company/giftcitywealth"]
   };
 

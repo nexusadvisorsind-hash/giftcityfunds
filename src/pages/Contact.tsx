@@ -96,6 +96,7 @@ function Contact(): JSX.Element {
           <div className="text-center mb-8">
             <h1 className="text-4xl font-bold mb-2">Contact Us</h1>
             <p className="text-gray-600">Get in touch — we'll reply within 24 hours.</p>
+            <p className="text-sm text-gray-500 mt-2">This form is for informational correspondence only. No investment or advisory services are offered.</p>
           </div>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -147,8 +148,9 @@ function Contact(): JSX.Element {
               <CardDescription>Office hours, phone or email</CardDescription>
             </CardHeader>
             <CardContent>
-              <p className="mb-2">Email: info@giftcitywealth.in</p>
-              <p className="mb-2">Phone: +91 9537533533</p>
+              <p className="mb-2"><strong>Email:</strong> info@nexusadvisors.in</p>
+              <p className="mb-2"><strong>Phone:</strong> +91 95375 33533</p>
+              <p className="mb-2"><strong>Location:</strong> Ahmedabad, Gujarat, India</p>
             </CardContent>
           </Card>
         </div>

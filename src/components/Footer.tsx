@@ -15,7 +15,7 @@ const Footer = () => {
               <span className="font-heading font-bold text-xl">GIFT City Funds</span>
             </div>
             <p className="text-primary-foreground/80 mb-4 max-w-md">
-              GIFT City Wealth is an informational website owned and managed by Anup Vatyani, Ahmedabad, Gujarat. This site is intended only to provide information about GIFT City investment opportunities, its structure, and advantages. It does not constitute an offer to invest or financial advice.
+              GIFT City Wealth is an informational website owned and managed by Anup Vatyani, Ahmedabad, Gujarat. This site is intended only to provide information about GIFT City investment framework, its structure, and advantages. It does not constitute an offer to invest or financial advice.
             </p>
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
@@ -49,7 +49,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/investments" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">
-                  Investment Solutions
+                  Investment Structures
                 </Link>
               </li>
               <li>
@@ -60,41 +60,60 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Investment Categories */}
+          {/* Legal */}
           <div>
-            <h3 className="font-heading font-semibold text-lg mb-4">Fund Categories</h3>
-            <ul className="space-y-2 text-primary-foreground/80">
-              <li>Equity Funds</li>
-              <li>Hybrid Funds</li>
-              <li>Passive Investments</li>
-              <li>Alternative Investments</li>
+            <h3 className="font-heading font-semibold text-lg mb-4">Legal</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/privacy-policy" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link to="/terms-of-use" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">
+                  Terms of Use
+                </Link>
+              </li>
+              <li>
+                <Link to="/accessibility-statement" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">
+                  Accessibility
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-primary-foreground/80 text-sm">
-              © 2025 GIFT City Funds. All rights reserved.
+          <hr className="border-primary-foreground/20 mb-6" />
+          
+          <div className="text-center mb-6">
+            <p className="text-primary-foreground/70 text-sm mb-2">
+              <strong>Legal & Compliance Disclaimer:</strong>
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="/privacy" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition-corporate">
-                Privacy & Policy
-              </Link>
-              <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition-corporate">
-                Terms of Service
-              </a>
-              <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition-corporate">
-                Regulatory Compliance
-              </a>
-            </div>
+            <p className="text-primary-foreground/70 text-xs max-w-5xl mx-auto leading-relaxed">
+              GiftCityWealth.in is an independent informational website owned and managed by Anup Vatyani, Ahmedabad, Gujarat.
+              It is not a SEBI-registered investment advisor, intermediary, or fund distributor.
+              All content is provided for general educational purposes only to explain the GIFT City IFSC framework, structure, and ecosystem.
+              It does not constitute investment advice, solicitation, or an offer to invest.
+              Users should consult qualified SEBI-registered professionals before making financial, legal, or tax decisions.
+            </p>
           </div>
           
-          <hr className="border-primary-foreground/20 my-6" />
+          <div className="flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-6">
+            <Link to="/privacy-policy" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition-corporate">
+              Privacy Policy
+            </Link>
+            <span className="text-primary-foreground/40 hidden md:inline">|</span>
+            <Link to="/terms-of-use" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition-corporate">
+              Terms of Use
+            </Link>
+            <span className="text-primary-foreground/40 hidden md:inline">|</span>
+            <Link to="/accessibility-statement" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition-corporate">
+              Accessibility
+            </Link>
+          </div>
           
-          <p className="text-primary-foreground/70 text-xs text-center">
-            GiftCityWealth.in is an independent informational website explaining India's International Financial Services Centre (GIFT IFSC).
-            This website provides educational content only and does not offer, solicit, or distribute any investment products.
+          <p className="text-primary-foreground/70 text-xs text-center mt-6">
             © 2025 GiftCityWealth.in | Informational Use Only | Updated October 2025
           </p>
         </div>

@@ -135,7 +135,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-4">
-              Benefits for Global Investors
+              Advantages of the GIFT City Framework
             </h2>
             <p className="font-body text-lg text-foreground-muted max-w-2xl mx-auto">
               GIFT City offers unique advantages for international investment strategies

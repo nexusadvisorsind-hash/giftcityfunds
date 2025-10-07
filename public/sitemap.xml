@@ -36,4 +36,22 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>https://www.giftcitywealth.in/privacy-policy</loc>
+    <lastmod>2025-10-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.giftcitywealth.in/terms-of-use</loc>
+    <lastmod>2025-10-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.giftcitywealth.in/accessibility-statement</loc>
+    <lastmod>2025-10-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
 </urlset>
