@@ -1,14 +1,13 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
+# robots.txt for GiftCityWealth.in
+# Educational resource about GIFT City IFSC
 
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://www.giftcitywealth.in/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1

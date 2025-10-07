@@ -1,0 +1,241 @@
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
+import { Mail, Phone, HelpCircle } from "lucide-react";
+
+type FormState = {
+  name: string;
+  email: string;
+  phone: string;
+  location: string;
+  country: string;
+  message: string;
+};
+
+const initialForm: FormState = {
+  name: "",
+  email: "",
+  phone: "",
+  location: "",
+  country: "",
+  message: "",
+};
+
+function AskQuestion(): JSX.Element {
+  const [form, setForm] = useState<FormState>(initialForm);
+  const [loading, setLoading] = useState(false);
+  const { toast } = useToast();
+
+  function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
+    const { name, value } = e.target;
+    setForm((p) => ({ ...p, [name]: value }));
+  }
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      const { data, error } = await supabase.functions.invoke("submit-contact-form", {
+        body: {
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          whatsapp: "",
+          location: form.location,
+          country: form.country,
+          investorType: "Information Request",
+          message: form.message,
+        },
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Question Submitted Successfully",
+        description: "We'll respond with educational information within 24 hours.",
+      });
+
+      setForm(initialForm);
+    } catch (err: any) {
+      console.error("Question submit error:", err);
+      toast({
+        title: "Submission Error",
+        description: "Failed to submit your question. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  return (
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="py-16 bg-gradient-subtle">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-4xl mx-auto">
+            <HelpCircle className="h-16 w-16 text-primary mx-auto mb-6" />
+            <h1 className="font-heading font-bold text-4xl md:text-5xl text-primary mb-6">
+              Ask a Question About GIFT IFSC
+            </h1>
+            <p className="font-body text-lg text-foreground-muted">
+              Submit your questions about GIFT City IFSC, IFSCA regulations, fund structures, or tax frameworks. We'll provide educational information to help you understand better.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Form Section */}
+      <section className="py-16 bg-background">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="institutional-card">
+              <CardHeader>
+                <CardTitle className="font-heading text-2xl">Submit Your Question</CardTitle>
+                <CardDescription className="font-body">
+                  We'll respond with educational information within 24 hours
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <form onSubmit={handleSubmit}>
+                  <div className="space-y-4 mb-6">
+                    <div>
+                      <label className="font-body text-sm text-foreground-muted mb-1 block">Name *</label>
+                      <Input 
+                        name="name" 
+                        value={form.name} 
+                        onChange={handleChange} 
+                        placeholder="Your Name" 
+                        required 
+                        className="font-body"
+                      />
+                    </div>
+                    <div>
+                      <label className="font-body text-sm text-foreground-muted mb-1 block">Email *</label>
+                      <Input 
+                        name="email" 
+                        value={form.email} 
+                        onChange={handleChange} 
+                        placeholder="your.email@example.com" 
+                        required 
+                        type="email"
+                        className="font-body"
+                      />
+                    </div>
+                    <div>
+                      <label className="font-body text-sm text-foreground-muted mb-1 block">Phone (Optional)</label>
+                      <Input 
+                        name="phone" 
+                        value={form.phone} 
+                        onChange={handleChange} 
+                        placeholder="+91 XXXXX XXXXX"
+                        className="font-body"
+                      />
+                    </div>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <label className="font-body text-sm text-foreground-muted mb-1 block">City (Optional)</label>
+                        <Input 
+                          name="location" 
+                          value={form.location} 
+                          onChange={handleChange} 
+                          placeholder="City"
+                          className="font-body"
+                        />
+                      </div>
+                      <div>
+                        <label className="font-body text-sm text-foreground-muted mb-1 block">Country (Optional)</label>
+                        <Input 
+                          name="country" 
+                          value={form.country} 
+                          onChange={handleChange} 
+                          placeholder="Country"
+                          className="font-body"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <label className="font-body text-sm text-foreground-muted mb-1 block">Your Question *</label>
+                      <Textarea 
+                        name="message" 
+                        value={form.message} 
+                        onChange={handleChange} 
+                        placeholder="What would you like to know about GIFT IFSC, IFSCA regulations, or fund structures?" 
+                        rows={6}
+                        required
+                        className="font-body"
+                      />
+                    </div>
+                  </div>
+
+                  <Button type="submit" disabled={loading} size="lg" className="w-full">
+                    {loading ? "Submitting..." : "Submit Question"}
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
+
+            <div className="space-y-6">
+              <Card className="institutional-card">
+                <CardHeader>
+                  <CardTitle className="font-heading text-xl">Contact Information</CardTitle>
+                  <CardDescription className="font-body">
+                    Other ways to reach us
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <Mail className="h-5 w-5 text-accent mt-1" />
+                    <div>
+                      <p className="font-heading font-semibold text-primary">Email</p>
+                      <p className="font-body text-foreground-muted">nexusadvisors.ind@gmail.com</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <Phone className="h-5 w-5 text-accent mt-1" />
+                    <div>
+                      <p className="font-heading font-semibold text-primary">Phone</p>
+                      <p className="font-body text-foreground-muted">+91 9537533533</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="institutional-card bg-muted">
+                <CardHeader>
+                  <CardTitle className="font-heading text-xl">Important Notice</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="font-body text-foreground-muted text-sm">
+                    This is an educational information service only. We do not provide investment advice, solicit investments, or facilitate transactions. All responses are for informational purposes to help you understand GIFT IFSC better. Refer to official IFSCA notifications and seek professional counsel for specific guidance.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Schema Markup */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          "name": "Ask a Question About GIFT IFSC",
+          "description": "Submit questions about GIFT City IFSC for educational information responses",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "GiftCityWealth.in"
+          }
+        })}
+      </script>
+    </div>
+  );
+}
+
+export default AskQuestion;
