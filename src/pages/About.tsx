@@ -42,25 +42,6 @@ const About = () => {
         {/* Overview Section */}
       <section className="py-16 bg-background mt-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h1 className="font-heading font-bold text-4xl md:text-5xl text-primary mb-6">
-              About GiftCity Wealth Advisory
-            </h1>
-            <p className="font-body text-lg text-foreground-muted max-w-3xl mx-auto mb-8">
-              GiftCity Wealth Advisory is owned and operated by Anup Vatyani, a registered Mutual Fund Distributor (AMFI ARN 106715).
-            </p>
-            <p className="font-body text-lg text-foreground-muted max-w-3xl mx-auto mb-8">
-              This platform shares informational content about GIFT City and IFSC investment frameworks for NRIs and HNIs.
-              It does not offer personalized investment or financial planning.
-            </p>
-            <p className="font-body text-lg text-foreground-muted max-w-3xl mx-auto mb-8">
-              Content is for educational use only. Investors should consult a SEBI-registered Investment Adviser before acting on any information.
-            </p>
-            <p className="font-body text-lg text-foreground-muted max-w-3xl mx-auto">
-              Contact us at <a href="mailto:info@giftcitywealth.in" className="text-primary hover:underline">info@giftcitywealth.in</a>
-            </p>
-          </div>
-
           <div className="mb-16">
             <h2 className="font-heading font-bold text-3xl text-primary mb-6 text-center">
               About GIFT City IFSC

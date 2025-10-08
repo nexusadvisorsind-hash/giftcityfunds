@@ -155,6 +155,23 @@ function Contact(): JSX.Element {
             </CardContent>
           </Card>
         </div>
+
+        {/* About the Contributor Section */}
+        <div className="mt-12 max-w-4xl mx-auto">
+          <Card className="border-primary/20">
+            <CardHeader>
+              <CardTitle className="font-heading text-2xl text-primary">About the Contributor</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4 text-foreground-muted">
+              <p>
+                Anup Vatyani has over 22 years of experience in the banking and financial services industry. An ex-banker with a decade of experience as a Mutual Fund Distributor (AMFI ARN 106715), he brings deep domain expertise in financial products, regulatory frameworks, and investor education.
+              </p>
+              <p>
+                This platform is curated by him to provide accurate, independent, and educational resources on GIFT City and IFSC structures. It does not offer personalized investment or advisory services.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
       </div>
       </div>
     </>

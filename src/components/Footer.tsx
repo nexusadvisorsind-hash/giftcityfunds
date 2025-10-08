@@ -14,7 +14,7 @@ const Footer = () => {
               </div>
               <div className="flex flex-col">
                 <span className="font-heading font-bold text-lg">GIFT CITY FUNDS</span>
-                <span className="text-sm text-primary-foreground/80">Anup Vatyani (MFD ARN 106715)</span>
+                <span className="text-sm text-primary-foreground/80">An Informational Resource on GIFT City and IFSC Frameworks</span>
               </div>
             </div>
             <p className="text-primary-foreground/80 mb-4 max-w-md">
