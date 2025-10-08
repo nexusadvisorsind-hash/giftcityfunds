@@ -17,11 +17,6 @@ import {
   ArrowRight
 } from "lucide-react";
 import { SEO } from "@/components/SEO";
-import heroImage from "@/assets/hero-new.png";
-import manWithGlobeImage from "/lovable-uploads/e80b2379-863d-4ad3-a803-8a865b59a949.png";
-import financeSecurityImage from "/lovable-uploads/2229ba3b-6463-4ce4-9082-69086106aa4e.png";
-import moneyBalanceImage from "/lovable-uploads/ec8c2ed1-e4ab-41d7-8b14-52e3df8a2e66.png";
-import businessDiscussionImage from "/lovable-uploads/13dd1c05-85f5-44db-8e96-ba7926f34d41.png";
 
 const Home = () => {
   const organizationSchema = {
@@ -138,16 +133,16 @@ const Home = () => {
       
       <div className="min-h-screen">
         {/* Hero Section */}
-      <section className="w-full relative">
+      <section className="w-full relative hero-section">
         <div className="w-full h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden bg-gradient-to-b from-background to-surface">
           <img
-            src="/images/hero-optimized.webp"
+            src="/images/hero-optimized-2025.webp"
             alt="GIFT City IFSC skyline Gujarat financial district at dusk"
-            className="w-full h-full object-cover object-center brightness-105 contrast-110"
+            className="hero-image w-full h-full object-cover object-center brightness-105 contrast-110"
             width="1920"
             height="1080"
             fetchPriority="high"
-            decoding="async"
+            decoding="sync"
           />
         </div>
         <div className="py-8 bg-background">

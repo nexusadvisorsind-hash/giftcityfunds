@@ -1,36 +1,70 @@
-# Netlify/Lovable Cloud Headers Configuration
-# This file configures caching and compression for optimal performance
+# Lovable Cloud Headers Configuration
+# Optimized for maximum performance and security
 
-# Cache static assets for 1 year (images, fonts, etc.)
+# Cache static assets for 1 year with immutable flag
 /images/*
   Cache-Control: public, max-age=31536000, immutable
+  Vary: Accept-Encoding
   
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
+  Vary: Accept-Encoding
 
+# Next-gen image formats with long-term caching
 /*.webp
   Cache-Control: public, max-age=31536000, immutable
   Content-Type: image/webp
+  Vary: Accept-Encoding
 
 /*.avif
   Cache-Control: public, max-age=31536000, immutable
   Content-Type: image/avif
+  Vary: Accept-Encoding
 
+/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+  Vary: Accept-Encoding
+
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
+  Vary: Accept-Encoding
+
+# Font files with long-term caching
 /*.woff2
   Cache-Control: public, max-age=31536000, immutable
   Content-Type: font/woff2
+  Access-Control-Allow-Origin: *
 
 /*.woff
   Cache-Control: public, max-age=31536000, immutable
   Content-Type: font/woff
+  Access-Control-Allow-Origin: *
 
-# Don't cache HTML
+# JavaScript and CSS bundles
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: application/javascript
+  Vary: Accept-Encoding
+
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: text/css
+  Vary: Accept-Encoding
+
+# Don't cache HTML to ensure fresh content
 /*.html
   Cache-Control: no-cache, no-store, must-revalidate
+  Vary: Accept-Encoding
 
-# Enable compression for all text assets
+/
+  Cache-Control: no-cache, no-store, must-revalidate
+  Vary: Accept-Encoding
+
+# Security headers and compression for all assets
 /*
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
   Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+  Vary: Accept-Encoding

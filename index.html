@@ -14,15 +14,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- Critical: Preload LCP hero image (WebP for 60% smaller file size) -->
-    <link rel="preload" as="image" href="/images/hero-optimized.webp" fetchpriority="high" type="image/webp">
+    <!-- Critical: Preload LCP hero image with highest priority -->
+    <link rel="preload" as="image" href="/images/hero-optimized-2025.webp" fetchpriority="high" type="image/webp">
     
-    <!-- Load fonts async - non-blocking -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLFj_Z1xlFQ.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVI.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <!-- Load fonts with font-display swap for instant text render -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" media="print" onload="this.media='all';this.onload=null;">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap"></noscript>
     
-    <!-- Skip to Content (Accessibility) -->
+    <!-- Critical CSS for above-the-fold content -->
     <style>
+      /* Skip to Content (Accessibility) */
       .skip-to-content {
         position: absolute;
         left: -9999px;
@@ -37,15 +42,31 @@
         transform: translateX(-50%);
         top: 0;
       }
+      
+      /* Critical styles for hero section - inline for faster LCP */
+      body { margin: 0; font-family: 'Open Sans', system-ui, sans-serif; }
+      .hero-section { position: relative; width: 100%; }
+      .hero-image { width: 100%; height: auto; display: block; object-fit: cover; }
+      
+      /* Prevent layout shift */
+      #root { min-height: 100vh; }
     </style>
     
-    <!-- Google Analytics 4 (Replace with your GA4 ID) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <!-- Defer Analytics - Load after LCP -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
+      window.addEventListener('load', function() {
+        window.requestIdleCallback(function() {
+          var script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX';
+          document.head.appendChild(script);
+          
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-XXXXXXXXXX');
+        });
+      });
     </script>
     
     <!-- Google Search Console Verification (Replace with your verification code) -->
