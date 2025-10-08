@@ -140,14 +140,15 @@ const Home = () => {
         {/* Hero Section */}
       <section className="w-full relative">
         <div className="w-full h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden bg-gradient-to-b from-background to-surface">
-          <img 
-            src={heroImage} 
-            alt="GIFT City IFSC skyline Gujarat" 
+          <img
+            src={heroImage}
+            alt="GIFT City IFSC skyline Gujarat"
             className="w-full h-full object-cover object-center brightness-105 contrast-110"
             width="1920"
             height="1080"
             loading="eager"
             fetchPriority="high"
+            decoding="async"
           />
         </div>
         <div className="py-8 bg-background">
