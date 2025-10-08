@@ -1,0 +1,36 @@
+# Netlify/Lovable Cloud Headers Configuration
+# This file configures caching and compression for optimal performance
+
+# Cache static assets for 1 year (images, fonts, etc.)
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+  
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: image/webp
+
+/*.avif
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: image/avif
+
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: font/woff2
+
+/*.woff
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: font/woff
+
+# Don't cache HTML
+/*.html
+  Cache-Control: no-cache, no-store, must-revalidate
+
+# Enable compression for all text assets
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin

@@ -141,12 +141,11 @@ const Home = () => {
       <section className="w-full relative">
         <div className="w-full h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden bg-gradient-to-b from-background to-surface">
           <img
-            src="/images/hero-cityscape.png"
-            alt="GIFT City IFSC skyline Gujarat"
+            src="/images/hero-optimized.webp"
+            alt="GIFT City IFSC skyline Gujarat financial district at dusk"
             className="w-full h-full object-cover object-center brightness-105 contrast-110"
             width="1920"
             height="1080"
-            loading="eager"
             fetchPriority="high"
             decoding="async"
           />
