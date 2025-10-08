@@ -8,13 +8,13 @@ interface SEOProps {
 }
 
 export const SEO = ({ title, description, canonical, schema }: SEOProps) => {
-  const defaultSchema = {
+  const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "https://giftcitywealth.in/#organization",
+    "@id": "https://www.giftcitywealth.in/#organization",
     "name": "GiftCity Wealth Advisory",
-    "url": "https://giftcitywealth.in",
-    "logo": "https://giftcitywealth.in/images/logo.png",
+    "url": "https://www.giftcitywealth.in",
+    "logo": "https://www.giftcitywealth.in/images/logo.png",
     "founder": {
       "@type": "Person",
       "name": "Anup Vatyani",
@@ -29,6 +29,32 @@ export const SEO = ({ title, description, canonical, schema }: SEOProps) => {
       "areaServed": "IN"
     }],
     "sameAs": ["https://www.linkedin.com/in/anup-vatyani"]
+  };
+
+  const financialServiceSchema = {
+    "@context": "https://schema.org",
+    "@type": "FinancialService",
+    "@id": "https://www.giftcitywealth.in/#financialservice",
+    "name": "GiftCity Wealth Advisory",
+    "url": "https://www.giftcitywealth.in",
+    "logo": "https://www.giftcitywealth.in/images/logo.png",
+    "description": "Informational platform about GIFT City and IFSC mutual fund frameworks operated by Anup Vatyani (MFD ARN 106715).",
+    "founder": {
+      "@type": "Person",
+      "name": "Anup Vatyani",
+      "jobTitle": "Mutual Fund Distributor"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "info@giftcitywealth.in",
+      "contactType": "Customer Support",
+      "areaServed": "IN",
+      "availableLanguage": "en"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "India"
+    }
   };
 
   return (
@@ -56,9 +82,14 @@ export const SEO = ({ title, description, canonical, schema }: SEOProps) => {
       <meta name="twitter:description" content="Independent educational content about India's International Financial Services Centre (GIFT IFSC)." />
       <meta name="twitter:image" content="https://www.giftcitywealth.in/assets/og-image.jpg" />
       
-      {/* Structured Data */}
+      {/* Structured Data - Organization */}
       <script type="application/ld+json">
-        {JSON.stringify(defaultSchema)}
+        {JSON.stringify(organizationSchema)}
+      </script>
+      
+      {/* Structured Data - Financial Service */}
+      <script type="application/ld+json">
+        {JSON.stringify(financialServiceSchema)}
       </script>
       
       {/* Additional Page-Specific Schema */}
