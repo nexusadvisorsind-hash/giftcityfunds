@@ -48,8 +48,11 @@ const PrivacyPolicy = () => {
               <p className="font-body text-foreground-muted mb-3">
                 <strong>Non-Personal Information:</strong> Browser type, IP address, device data, referring URLs, and aggregated analytics data.
               </p>
-              <p className="font-body text-foreground-muted">
+              <p className="font-body text-foreground-muted mb-3">
                 <strong>Cookies:</strong> Small data files used to enhance site functionality, remember preferences, and analyze traffic.
+              </p>
+              <p className="font-body text-foreground-muted">
+                We use cookies to improve site performance and understand usage. Only essential cookies run by default; analytics cookies operate solely after user consent. Users can disable cookies anytime through browser settings.
               </p>
             </section>
 

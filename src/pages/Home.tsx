@@ -24,17 +24,33 @@ import moneyBalanceImage from "/lovable-uploads/ec8c2ed1-e4ab-41d7-8b14-52e3df8a
 import businessDiscussionImage from "/lovable-uploads/13dd1c05-85f5-44db-8e96-ba7926f34d41.png";
 
 const Home = () => {
-  const homeSchema = {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "GIFT City Wealth",
+    "url": "https://www.giftcitywealth.in",
+    "description": "Independent informational platform sharing verified updates on GIFT City funds and India's international financial ecosystem.",
+    "sameAs": ["https://www.linkedin.com/company/giftcitywealth"]
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://www.giftcitywealth.in",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.giftcitywealth.in/?s={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  };
+
+  const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "@id": "https://www.giftcitywealth.in/#webpage",
     "url": "https://www.giftcitywealth.in/",
-    "name": "GIFT City Wealth Advisory | IFSC Investment Platform",
-    "description": "India's Premier IFSC Investment Platform - Educational resources about GIFT City and IFSC mutual fund frameworks.",
-    "isPartOf": {
-      "@type": "WebSite",
-      "@id": "https://www.giftcitywealth.in/#website"
-    }
+    "name": "GIFT City Wealth | Information on GIFT City Funds & Ecosystem",
+    "description": "Independent informational platform on GIFT City funds, policy, and India's global financial ecosystem."
   };
 
   const features = [
@@ -108,11 +124,17 @@ const Home = () => {
   return (
     <>
       <SEO
-        title="GiftCity Wealth Advisory | Anup Vatyani (MFD ARN 106715) | Informational Insights on GIFT City & IFSC Funds"
-        description="GiftCity Wealth Advisory provides informational updates and educational resources on GIFT City and IFSC mutual fund frameworks. Operated by Anup Vatyani (Mutual Fund Distributor ARN 106715). No personalized investment advice."
+        title="GIFT City Wealth | Information on GIFT City Funds & Ecosystem"
+        description="Independent informational platform on GIFT City funds, policy, and India's global financial ecosystem."
         canonical="https://www.giftcitywealth.in/"
-        schema={homeSchema}
+        schema={webPageSchema}
       />
+      <script type="application/ld+json">
+        {JSON.stringify(organizationSchema)}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify(websiteSchema)}
+      </script>
       
       <div className="min-h-screen">
         {/* Hero Section */}
@@ -125,8 +147,6 @@ const Home = () => {
             width="1920"
             height="1080"
             loading="eager"
-            decoding="sync"
-            fetchPriority="high"
           />
         </div>
         <div className="py-8 bg-background">
@@ -238,12 +258,20 @@ const Home = () => {
           <p className="font-body text-lg text-foreground-muted max-w-2xl mx-auto mb-8">
             Speak to us to know more about GIFT City Funds and explore the structures shaping India's international finance hub.
           </p>
-          <Button asChild variant="gold" size="lg" className="text-lg px-8 py-4">
-            <Link to="/contact">
-              Contact Us
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </Button>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button asChild variant="gold" size="lg" className="text-lg px-8 py-4">
+              <Link to="/contact">
+                Contact Us
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+            <Button asChild variant="outline" size="lg" className="text-lg px-8 py-4">
+              <Link to="/about">Learn About GIFT City</Link>
+            </Button>
+            <Button asChild variant="outline" size="lg" className="text-lg px-8 py-4">
+              <Link to="/resources">View Resources</Link>
+            </Button>
+          </div>
         </div>
       </section>
       </div>

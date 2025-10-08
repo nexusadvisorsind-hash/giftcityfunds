@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Globe, Shield, MapPin, Building2, TrendingUp, Users } from "lucide-react";
 import { SEO } from "@/components/SEO";
@@ -33,8 +34,8 @@ const About = () => {
   return (
     <>
       <SEO
-        title="About GiftCity Wealth Advisory | Anup Vatyani ARN 106715"
-        description="GiftCity Wealth Advisory is owned and operated by Anup Vatyani (MFD ARN 106715). Educational content about GIFT City and IFSC frameworks for NRIs and HNIs."
+        title="About | GIFT City Wealth – Independent Information Platform"
+        description="Learn about GIFT City Wealth, an educational platform explaining the GIFT City finance and fund framework."
         canonical="https://www.giftcitywealth.in/about"
       />
       
@@ -181,6 +182,24 @@ const About = () => {
             <p className="font-body text-sm text-foreground-muted">
               Author — Anup Vatyani (MFD ARN 106715) | Informational Content Only | No Personalized Advice.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Internal Links Section */}
+      <section className="py-12 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="font-body text-foreground-muted mb-4">
+            Explore more educational content about GIFT City and IFSC frameworks
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link to="/resources" className="text-primary hover:underline font-semibold">
+              View Insights & Resources
+            </Link>
+            <span className="text-foreground-muted">•</span>
+            <Link to="/contact" className="text-primary hover:underline font-semibold">
+              Get in Touch
+            </Link>
           </div>
         </div>
       </section>

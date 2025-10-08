@@ -86,9 +86,9 @@ function Contact(): JSX.Element {
   return (
     <>
       <SEO
-        title="Contact GIFT CITY FUNDS | Anup Vatyani ARN 106715"
-        description="Contact giftcityfunds.in for informational resources about GIFT City IFSC. Owned by Anup Vatyani (MFD ARN 106715)."
-        canonical="https://www.giftcityfunds.in/contact"
+        title="Contact | GIFT City Wealth Information Portal"
+        description="Get in touch with the GIFT City Wealth information team for research or collaboration."
+        canonical="https://www.giftcitywealth.in/contact"
       />
       
       <div className="min-h-screen py-16 px-4">

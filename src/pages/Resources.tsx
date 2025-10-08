@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { FileText, BookOpen, Scale, Users, ChevronRight, ChevronDown } from "lucide-react";
 import { SEO } from "@/components/SEO";
@@ -163,8 +164,8 @@ const Resources = () => {
   return (
     <>
       <SEO
-        title="GIFT City IFSC Resources & Official Guides | GiftCityWealth.in"
-        description="Official guides, FAQs, and regulatory summaries about India's GIFT City IFSC and IFSCA. Educational content only."
+        title="Insights | GIFT City Funds & Policy Updates"
+        description="Verified insights, articles, and updates on GIFT City's financial ecosystem and regulatory framework."
         canonical="https://www.giftcitywealth.in/resources"
       />
       
@@ -239,6 +240,24 @@ const Resources = () => {
               <p className="font-body text-sm text-foreground-muted text-center">
                 All information provided on this website is for educational and informational purposes only. It does not constitute investment, legal, or tax advice. Investors should consult licensed professionals before making any financial decisions.
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Internal Links Section */}
+        <section className="py-12 bg-background">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p className="font-body text-foreground-muted mb-4">
+              Continue exploring GIFT City information
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link to="/about" className="text-primary hover:underline font-semibold">
+                Learn About GIFT City
+              </Link>
+              <span className="text-foreground-muted">•</span>
+              <Link to="/contact" className="text-primary hover:underline font-semibold">
+                Contact Information Team
+              </Link>
             </div>
           </div>
         </section>
