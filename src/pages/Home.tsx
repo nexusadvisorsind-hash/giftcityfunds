@@ -141,7 +141,7 @@ const Home = () => {
       <section className="w-full relative">
         <div className="w-full h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden bg-gradient-to-b from-background to-surface">
           <img
-            src={heroImage}
+            src="/images/hero-cityscape.png"
             alt="GIFT City IFSC skyline Gujarat"
             className="w-full h-full object-cover object-center brightness-105 contrast-110"
             width="1920"
