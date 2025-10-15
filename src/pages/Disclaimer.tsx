@@ -1,6 +1,5 @@
 import { SEO } from "@/components/SEO";
-import { Link } from "react-router-dom";
-import { ChevronRight } from "lucide-react";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 const Disclaimer = () => {
   const schema = {
@@ -15,18 +14,20 @@ const Disclaimer = () => {
       <SEO
         title="Disclaimer | GIFT City Funds"
         description="Disclaimer for GIFT City Funds - informational content only, no personalized investment advice."
-        canonical="https://www.giftcitywealth.in/disclaimer"
+        canonical="https://giftcitywealth.in/disclaimer"
         schema={schema}
+        breadcrumbs={[
+          { name: "Home", url: "https://giftcitywealth.in/" },
+          { name: "Disclaimer", url: "https://giftcitywealth.in/disclaimer" }
+        ]}
       />
       
       <div className="min-h-screen py-16 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Breadcrumb */}
-          <nav className="flex items-center space-x-2 text-sm text-foreground-muted mb-6">
-            <Link to="/" className="hover:text-primary transition-colors">Home</Link>
-            <ChevronRight className="h-4 w-4" />
-            <span className="text-foreground">Disclaimer</span>
-          </nav>
+          <Breadcrumbs items={[
+            { name: "Home", url: "/" },
+            { name: "Disclaimer", url: "/disclaimer" }
+          ]} />
 
           <p className="text-sm text-foreground-muted mb-4">Last Updated: October 2025</p>
           

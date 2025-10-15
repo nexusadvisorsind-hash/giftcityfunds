@@ -22,19 +22,19 @@ const Home = () => {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "GIFT City Wealth",
-    "url": "https://www.giftcitywealth.in",
-    "description": "Independent informational platform sharing verified updates on GIFT City funds and India's international financial ecosystem.",
-    "sameAs": ["https://www.linkedin.com/company/giftcitywealth"]
+    "name": "GiftCity Wealth Advisory",
+    "url": "https://giftcitywealth.in",
+    "description": "Educational platform about GIFT City and IFSC mutual fund frameworks by Anup Vatyani (MFD ARN 106715).",
+    "sameAs": ["https://www.linkedin.com/in/anup-vatyani"]
   };
 
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "url": "https://www.giftcitywealth.in",
+    "url": "https://giftcitywealth.in",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://www.giftcitywealth.in/?s={search_term_string}",
+      "target": "https://giftcitywealth.in/?s={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   };
@@ -42,10 +42,10 @@ const Home = () => {
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.giftcitywealth.in/#webpage",
-    "url": "https://www.giftcitywealth.in/",
-    "name": "GIFT City Wealth | Information on GIFT City Funds & Ecosystem",
-    "description": "Independent informational platform on GIFT City funds, policy, and India's global financial ecosystem."
+    "@id": "https://giftcitywealth.in/#webpage",
+    "url": "https://giftcitywealth.in/",
+    "name": "GIFT City Wealth | IFSC Investment Information Platform",
+    "description": "Educational platform on GIFT City IFSC investment structures, funds, and regulatory framework."
   };
 
   const features = [
@@ -119,10 +119,13 @@ const Home = () => {
   return (
     <>
       <SEO
-        title="GIFT City Wealth | Information on GIFT City Funds & Ecosystem"
-        description="Independent informational platform on GIFT City funds, policy, and India's global financial ecosystem."
-        canonical="https://www.giftcitywealth.in/"
+        title="GIFT City Wealth | IFSC Investment Information Platform"
+        description="Educational platform on GIFT City IFSC investment structures, funds, and regulatory framework by Anup Vatyani (MFD ARN 106715)."
+        canonical="https://giftcitywealth.in/"
         schema={webPageSchema}
+        breadcrumbs={[
+          { name: "Home", url: "https://giftcitywealth.in/" }
+        ]}
       />
       <script type="application/ld+json">
         {JSON.stringify(organizationSchema)}

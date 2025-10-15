@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { SEO } from "@/components/SEO";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { 
   Banknote, 
   FileText, 
@@ -138,14 +139,23 @@ const Investments = () => {
   return (
     <>
       <SEO
-        title="Understanding Investments in GIFT City IFSC | GiftCityWealth.in"
+        title="Investment Structures in GIFT City IFSC | GiftCityWealth.in"
         description="Informational overview of fund categories, processes, and framework under IFSCA regulations at GIFT IFSC. Educational only."
-        canonical="https://www.giftcitywealth.in/investments"
+        canonical="https://giftcitywealth.in/investment-structures"
         schema={faqSchema}
+        breadcrumbs={[
+          { name: "Home", url: "https://giftcitywealth.in/" },
+          { name: "Investment Structures", url: "https://giftcitywealth.in/investment-structures" }
+        ]}
       />
       
       <div className="min-h-screen">
-        {/* Content starts immediately without hero banner */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+          <Breadcrumbs items={[
+            { name: "Home", url: "/" },
+            { name: "Investment Structures", url: "/investment-structures" }
+          ]} />
+        </div>
 
       {/* Investment Advantages */}
       <section className="py-16 bg-background mt-0">

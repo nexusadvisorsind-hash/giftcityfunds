@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { SEO } from "@/components/SEO";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 const CALENDLY_URL = "https://calendly.com/your-calendly-username/30min";
 
@@ -86,13 +87,21 @@ function Contact(): JSX.Element {
   return (
     <>
       <SEO
-        title="Contact | GIFT City Wealth Information Portal"
-        description="Get in touch with the GIFT City Wealth information team for research or collaboration."
-        canonical="https://www.giftcitywealth.in/contact"
+        title="Contact Us | GIFT City Wealth Advisory | GiftCityWealth.in"
+        description="Get in touch with Anup Vatyani (MFD ARN 106715) for GIFT City and IFSC information. Educational correspondence only."
+        canonical="https://giftcitywealth.in/contact"
+        breadcrumbs={[
+          { name: "Home", url: "https://giftcitywealth.in/" },
+          { name: "Contact", url: "https://giftcitywealth.in/contact" }
+        ]}
       />
       
       <div className="min-h-screen py-16 px-4">
         <div className="max-w-4xl mx-auto">
+          <Breadcrumbs items={[
+            { name: "Home", url: "/" },
+            { name: "Contact", url: "/contact" }
+          ]} />
           <div className="text-center mb-8">
             <h1 className="text-4xl font-bold mb-2">Contact Us</h1>
             <p className="text-gray-600">Get in touch — we'll reply within 24 hours.</p>

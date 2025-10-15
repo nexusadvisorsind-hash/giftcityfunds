@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Globe, Shield, MapPin, Building2, TrendingUp, Users } from "lucide-react";
 import { SEO } from "@/components/SEO";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import heroImage from "/lovable-uploads/178cd483-83cc-496d-bd09-df449dbf3c00.png";
 import manWithGlobeImage from "/lovable-uploads/e80b2379-863d-4ad3-a803-8a865b59a949.png";
 
@@ -34,12 +35,22 @@ const About = () => {
   return (
     <>
       <SEO
-        title="About | GIFT City Wealth – Independent Information Platform"
-        description="Learn about GIFT City Wealth, an educational platform explaining the GIFT City finance and fund framework."
-        canonical="https://www.giftcitywealth.in/about"
+        title="About GIFT City IFSC | GiftCityWealth.in"
+        description="Learn about GIFT City IFSC, India's International Financial Services Centre offering global market access, IFSCA regulation, and tax benefits."
+        canonical="https://giftcitywealth.in/about-gift-city"
+        breadcrumbs={[
+          { name: "Home", url: "https://giftcitywealth.in/" },
+          { name: "About GIFT City", url: "https://giftcitywealth.in/about-gift-city" }
+        ]}
       />
       
       <div className="min-h-screen">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+          <Breadcrumbs items={[
+            { name: "Home", url: "/" },
+            { name: "About GIFT City", url: "/about-gift-city" }
+          ]} />
+        </div>
         {/* Overview Section */}
       <section className="py-16 bg-background mt-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

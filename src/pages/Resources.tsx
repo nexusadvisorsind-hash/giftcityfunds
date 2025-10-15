@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { FileText, BookOpen, Scale, Users, ChevronRight, ChevronDown } from "lucide-react";
 import { SEO } from "@/components/SEO";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 
 const Resources = () => {
@@ -164,12 +165,23 @@ const Resources = () => {
   return (
     <>
       <SEO
-        title="Insights | GIFT City Funds & Policy Updates"
-        description="Verified insights, articles, and updates on GIFT City's financial ecosystem and regulatory framework."
-        canonical="https://www.giftcitywealth.in/resources"
+        title="Resources | GIFT City IFSC Knowledge Center | GiftCityWealth.in"
+        description="Comprehensive educational resources, official guides, and regulatory information about India's International Financial Services Centre."
+        canonical="https://giftcitywealth.in/resources"
+        breadcrumbs={[
+          { name: "Home", url: "https://giftcitywealth.in/" },
+          { name: "Resources", url: "https://giftcitywealth.in/resources" }
+        ]}
       />
       
       <div className="min-h-screen">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+          <Breadcrumbs items={[
+            { name: "Home", url: "/" },
+            { name: "Resources", url: "/resources" }
+          ]} />
+        </div>
+        
         {/* Page Header */}
         <section className="py-16 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

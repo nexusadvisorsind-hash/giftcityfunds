@@ -1,6 +1,5 @@
 import { SEO } from "@/components/SEO";
-import { Link } from "react-router-dom";
-import { ChevronRight } from "lucide-react";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 const PrivacyPolicy = () => {
   const schema = {
@@ -15,18 +14,20 @@ const PrivacyPolicy = () => {
       <SEO
         title="Privacy Policy | GIFT City Funds"
         description="Privacy policy for GIFT City Funds - how we collect, use, and protect your information."
-        canonical="https://www.giftcitywealth.in/privacy-policy"
+        canonical="https://giftcitywealth.in/privacy-policy"
         schema={schema}
+        breadcrumbs={[
+          { name: "Home", url: "https://giftcitywealth.in/" },
+          { name: "Privacy Policy", url: "https://giftcitywealth.in/privacy-policy" }
+        ]}
       />
       
       <div className="min-h-screen py-16 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Breadcrumb */}
-          <nav className="flex items-center space-x-2 text-sm text-foreground-muted mb-6">
-            <Link to="/" className="hover:text-primary transition-colors">Home</Link>
-            <ChevronRight className="h-4 w-4" />
-            <span className="text-foreground">Privacy Policy</span>
-          </nav>
+          <Breadcrumbs items={[
+            { name: "Home", url: "/" },
+            { name: "Privacy Policy", url: "/privacy-policy" }
+          ]} />
 
           <p className="text-sm text-foreground-muted mb-4">Last Updated: October 2025</p>
           
