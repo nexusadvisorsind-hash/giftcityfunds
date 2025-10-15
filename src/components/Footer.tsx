@@ -91,7 +91,40 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/20 mt-8 pt-8">
+        {/* Clean Footer Navigation Bar */}
+        <div className="border-t border-primary-foreground/20 mt-8 pt-6">
+          <nav className="mb-8" aria-label="Footer navigation">
+            <div className="flex flex-wrap justify-center items-center gap-2 md:gap-4 text-sm">
+              <Link to="/" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate px-2 py-1">
+                Home
+              </Link>
+              <span className="text-primary-foreground/40">|</span>
+              <Link to="/investments" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate px-2 py-1">
+                Understanding GIFT City Funds
+              </Link>
+              <span className="text-primary-foreground/40">|</span>
+              <Link to="/about" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate px-2 py-1">
+                About
+              </Link>
+              <span className="text-primary-foreground/40">|</span>
+              <Link to="/disclaimer" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate px-2 py-1">
+                Disclaimer
+              </Link>
+              <span className="text-primary-foreground/40">|</span>
+              <Link to="/privacy-policy" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate px-2 py-1">
+                Privacy Policy
+              </Link>
+              <span className="text-primary-foreground/40">|</span>
+              <Link to="/terms-of-use" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate px-2 py-1">
+                Terms of Use
+              </Link>
+              <span className="text-primary-foreground/40">|</span>
+              <Link to="/contact" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate px-2 py-1">
+                Contact
+              </Link>
+            </div>
+          </nav>
+
           <hr className="border-primary-foreground/20 mb-6" />
           
           <div className="text-center mb-6">
@@ -106,24 +139,6 @@ const Footer = () => {
             <p className="text-primary-foreground/70 text-xs max-w-5xl mx-auto leading-relaxed">
               Mutual Fund investments are subject to market risk. Please read all scheme related documents carefully before investing.
             </p>
-          </div>
-          
-          <div className="flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-6">
-            <Link to="/disclaimer" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition-corporate">
-              Disclaimer
-            </Link>
-            <span className="text-primary-foreground/40 hidden md:inline">|</span>
-            <Link to="/privacy-policy" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition-corporate">
-              Privacy Policy
-            </Link>
-            <span className="text-primary-foreground/40 hidden md:inline">|</span>
-            <Link to="/terms-of-use" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition-corporate">
-              Terms of Use
-            </Link>
-            <span className="text-primary-foreground/40 hidden md:inline">|</span>
-            <Link to="/accessibility-statement" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition-corporate">
-              Accessibility
-            </Link>
           </div>
           
           <p className="text-primary-foreground/70 text-xs text-center mt-6">
