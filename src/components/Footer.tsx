@@ -18,7 +18,9 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-primary-foreground/80 mb-4 max-w-md">
-              giftcitywealth.in provides information about GIFT City and IFSC investment frameworks for NRIs and HNIs. Owned and operated by Anup Vatyani, a registered Mutual Fund Distributor (AMFI ARN 106715). This platform shares educational resources only and does not offer personalized investment or financial planning.
+              giftcitywealth.in provides information about GIFT City and IFSC investment frameworks for NRIs and HNIs. Owned and operated by Anup Vatyani, a registered Mutual Fund Distributor (AMFI ARN-106815).
+              <br /><br />
+              This platform shares educational resources only and does not offer personalized investment advice or financial planning.
             </p>
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
