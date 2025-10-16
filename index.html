@@ -13,16 +13,18 @@
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     
     <!-- Critical: Preload LCP hero image with highest priority -->
-    <link rel="preload" as="image" href="/images/hero-optimized-2025.webp" fetchpriority="high" type="image/webp">
+    <link rel="preload" as="image" href="/images/hero-optimized-2025.webp" fetchpriority="high" type="image/webp" imagesrcset="/images/hero-optimized-2025.webp 1920w" imagesizes="100vw">
     
-    <!-- Preload critical fonts -->
-    <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLFj_Z1xlFQ.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVI.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Preload critical fonts with display swap -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLFj_Z1xlFQ.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVI.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     
     <!-- Load fonts with font-display swap for instant text render -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" media="print" onload="this.media='all';this.onload=null;">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap"></noscript>
     
     <!-- Critical CSS for above-the-fold content -->
@@ -44,12 +46,45 @@
       }
       
       /* Critical styles for hero section - inline for faster LCP */
-      body { margin: 0; font-family: 'Open Sans', system-ui, sans-serif; }
-      .hero-section { position: relative; width: 100%; }
-      .hero-image { width: 100%; height: auto; display: block; object-fit: cover; }
+      body { 
+        margin: 0; 
+        font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
+      }
+      .hero-section { 
+        position: relative; 
+        width: 100%; 
+        contain: layout style paint;
+      }
+      .hero-image { 
+        width: 100%; 
+        height: auto; 
+        display: block; 
+        object-fit: cover;
+        aspect-ratio: 16/9;
+      }
       
       /* Prevent layout shift */
-      #root { min-height: 100vh; }
+      #root { 
+        min-height: 100vh;
+        contain: layout style paint;
+      }
+      
+      /* Reserve space for navigation to prevent CLS */
+      nav { height: 64px; }
+      
+      /* Skeleton loader for hero to prevent CLS */
+      .hero-section::before {
+        content: '';
+        display: block;
+        padding-top: 56.25%; /* 16:9 aspect ratio */
+        background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+      }
+      
+      .hero-section img {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
     </style>
     
     <!-- Defer Analytics - Load after LCP -->
@@ -74,9 +109,10 @@
   </head>
 
   <body>
-    <a href="#main-content" className="skip-to-content" aria-label="Skip to main content">Skip to Content</a>
+    <a href="#main-content" class="skip-to-content" aria-label="Skip to main content">Skip to Content</a>
     <div id="root"></div>
     <main id="main-content"></main>
-    <script type="module" src="/src/main.tsx"></script>
+    <!-- Load main app script with high priority -->
+    <script type="module" src="/src/main.tsx" fetchpriority="high"></script>
   </body>
 </html>

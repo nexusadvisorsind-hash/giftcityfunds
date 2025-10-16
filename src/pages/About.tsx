@@ -75,7 +75,10 @@ const About = () => {
                   src={manWithGlobeImage} 
                   alt="GIFT IFSC global financial services hub" 
                   className="rounded-lg shadow-corporate w-full h-auto"
+                  width="800"
+                  height="600"
                   loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>
