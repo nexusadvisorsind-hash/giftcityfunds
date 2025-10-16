@@ -73,20 +73,30 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/terms" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">
+                  Terms & Conditions
+                </Link>
+              </li>
+              <li>
                 <Link to="/terms-of-use" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">
                   Terms of Use
                 </Link>
               </li>
               <li>
-            <Link to="/disclaimer" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">
-              Disclaimer
-            </Link>
-          </li>
-          <li>
-            <Link to="/accessibility-statement" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">
-              Accessibility
-            </Link>
-          </li>
+                <Link to="/disclaimer" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">
+                  Disclaimer
+                </Link>
+              </li>
+              <li>
+                <Link to="/accessibility-statement" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">
+                  Accessibility
+                </Link>
+              </li>
+              <li>
+                <Link to="/team/anup-vatyani" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">
+                  About Author
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -115,12 +125,16 @@ const Footer = () => {
                 Privacy Policy
               </Link>
               <span className="text-primary-foreground/40">|</span>
-              <Link to="/terms-of-use" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate px-2 py-1">
-                Terms of Use
+              <Link to="/terms" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate px-2 py-1">
+                Terms
               </Link>
               <span className="text-primary-foreground/40">|</span>
               <Link to="/contact" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate px-2 py-1">
                 Contact
+              </Link>
+              <span className="text-primary-foreground/40">|</span>
+              <Link to="/team/anup-vatyani" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate px-2 py-1">
+                About Author
               </Link>
             </div>
           </nav>

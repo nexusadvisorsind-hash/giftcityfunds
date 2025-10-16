@@ -242,6 +242,104 @@ const Resources = () => {
           </div>
         </section>
 
+        {/* Featured Learning Articles Section */}
+        <section className="py-16 bg-background">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="font-heading font-bold text-3xl text-primary mb-8 text-center">
+              Featured GIFT City Learning Articles
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+              <Card className="border-border/50 hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <CardTitle className="font-heading text-lg text-primary">
+                    <Link to="/knowledge/what-is-gift-city-fund" className="hover:underline">
+                      What is a GIFT City Fund?
+                    </Link>
+                  </CardTitle>
+                  <CardDescription className="font-body text-sm text-foreground-muted">
+                    How GIFT City funds work and differ from domestic mutual funds.
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+
+              <Card className="border-border/50 hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <CardTitle className="font-heading text-lg text-primary">
+                    <Link to="/knowledge/how-ifsc-works" className="hover:underline">
+                      How IFSC Works
+                    </Link>
+                  </CardTitle>
+                  <CardDescription className="font-body text-sm text-foreground-muted">
+                    Understanding IFSC rules and investor benefits.
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+
+              <Card className="border-border/50 hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <CardTitle className="font-heading text-lg text-primary">
+                    <Link to="/knowledge/mutual-funds-in-gift-city" className="hover:underline">
+                      Mutual Funds in GIFT City
+                    </Link>
+                  </CardTitle>
+                  <CardDescription className="font-body text-sm text-foreground-muted">
+                    Fund structures and participation process.
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+
+              <Card className="border-border/50 hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <CardTitle className="font-heading text-lg text-primary">
+                    <Link to="/knowledge/tax-benefits-for-nris" className="hover:underline">
+                      Tax Benefits for NRIs
+                    </Link>
+                  </CardTitle>
+                  <CardDescription className="font-body text-sm text-foreground-muted">
+                    Tax advantages for NRI investors.
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            </div>
+
+            {/* Official Reference Links */}
+            <div className="bg-muted p-6 rounded-lg">
+              <h3 className="font-heading font-semibold text-lg text-primary mb-4 text-center">
+                Official Reference Links
+              </h3>
+              <div className="flex flex-wrap justify-center gap-6">
+                <a 
+                  href="https://www.ifsca.gov.in" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline font-semibold"
+                >
+                  IFSC Authority
+                </a>
+                <span className="text-foreground-muted">•</span>
+                <a 
+                  href="https://www.amfiindia.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline font-semibold"
+                >
+                  AMFI
+                </a>
+                <span className="text-foreground-muted">•</span>
+                <a 
+                  href="https://www.sebi.gov.in" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline font-semibold"
+                >
+                  SEBI
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Disclaimer Section */}
         <section className="py-12 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

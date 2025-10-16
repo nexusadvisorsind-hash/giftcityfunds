@@ -13,9 +13,15 @@ import Contact from "./pages/Contact";
 import Privacy from "./pages/Privacy";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfUse from "./pages/TermsOfUse";
+import Terms from "./pages/Terms";
 import AccessibilityStatement from "./pages/AccessibilityStatement";
 import Disclaimer from "./pages/Disclaimer";
 import NotFound from "./pages/NotFound";
+import WhatIsGiftCityFund from "./pages/knowledge/WhatIsGiftCityFund";
+import HowIfscWorks from "./pages/knowledge/HowIfscWorks";
+import MutualFundsInGiftCity from "./pages/knowledge/MutualFundsInGiftCity";
+import TaxBenefitsForNris from "./pages/knowledge/TaxBenefitsForNris";
+import AnupVatyani from "./pages/team/AnupVatyani";
 
 const queryClient = new QueryClient();
 
@@ -38,8 +44,14 @@ const App = () => (
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/terms-of-use" element={<TermsOfUse />} />
+              <Route path="/terms" element={<Terms />} />
               <Route path="/accessibility-statement" element={<AccessibilityStatement />} />
               <Route path="/disclaimer" element={<Disclaimer />} />
+              <Route path="/knowledge/what-is-gift-city-fund" element={<WhatIsGiftCityFund />} />
+              <Route path="/knowledge/how-ifsc-works" element={<HowIfscWorks />} />
+              <Route path="/knowledge/mutual-funds-in-gift-city" element={<MutualFundsInGiftCity />} />
+              <Route path="/knowledge/tax-benefits-for-nris" element={<TaxBenefitsForNris />} />
+              <Route path="/team/anup-vatyani" element={<AnupVatyani />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
