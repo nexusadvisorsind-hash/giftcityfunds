@@ -22,10 +22,22 @@ const Home = () => {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "GiftCity Wealth Advisory",
+    "name": "GIFT City Wealth",
     "url": "https://giftcitywealth.in",
-    "description": "Educational platform about GIFT City and IFSC mutual fund frameworks by Anup Vatyani (MFD ARN 106715).",
-    "sameAs": ["https://www.linkedin.com/in/anup-vatyani"]
+    "logo": "https://giftcitywealth.in/logo.png",
+    "description": "An educational resource on GIFT City and IFSC investment frameworks for NRIs and HNIs.",
+    "founder": {
+      "@type": "Person",
+      "name": "Anup Vatyani",
+      "jobTitle": "Mutual Fund Distributor",
+      "identifier": "AMFI ARN-106815"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-9537533533",
+      "contactType": "Customer Support",
+      "email": "info@giftcitywealth.in"
+    }
   };
 
   const websiteSchema = {
