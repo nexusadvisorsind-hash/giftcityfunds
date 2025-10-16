@@ -33,13 +33,7 @@ export default defineConfig(({ mode }) => ({
     reportCompressedSize: true,
     // Optimize chunk size
     chunkSizeWarningLimit: 1000,
-    // Minify for production
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: mode === 'production',
-        pure_funcs: mode === 'production' ? ['console.log'] : [],
-      },
-    },
+    // Use esbuild for faster minification (default, already included)
+    minify: 'esbuild',
   },
 }));
