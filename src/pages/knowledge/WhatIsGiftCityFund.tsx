@@ -32,55 +32,31 @@ const WhatIsGiftCityFund = () => {
 
             <div className="prose prose-lg max-w-none text-foreground-muted">
               <p className="lead text-xl mb-6">
-                GIFT City funds are mutual funds established within India's International Financial Services Centre (IFSC) located in Gujarat International Finance Tec-City (GIFT City). These funds operate under a unique regulatory framework designed to bridge domestic and international investment opportunities.
+                A GIFT City fund is a mutual fund or investment vehicle registered and operated under India's International Financial Services Centre (IFSC) framework within Gujarat International Finance Tec-City (GIFT City).
+              </p>
+
+              <p>
+                The IFSC framework is regulated by the International Financial Services Centres Authority (IFSCA) — a unified body set up under the IFSCA Act, 2019. These funds enable both Indian and foreign investors, including Non-Resident Indians (NRIs), to invest in Indian and global markets using a globally compliant regulatory structure.
               </p>
 
               <h2 className="font-heading font-semibold text-2xl text-primary mt-8 mb-4">
-                Understanding GIFT City Funds
+                Key Facts
               </h2>
               
-              <p>
-                Unlike traditional Indian mutual funds that operate under SEBI regulations within India's domestic market, GIFT City funds are governed by the International Financial Services Centres Authority (IFSCA). This distinction allows them to offer unique advantages in terms of currency flexibility, tax efficiency, and global market access.
-              </p>
-
-              <h2 className="font-heading font-semibold text-2xl text-primary mt-8 mb-4">
-                Key Differences from Domestic Mutual Funds
-              </h2>
-
-              <h3 className="font-heading font-semibold text-xl text-primary mt-6 mb-3">
-                1. Regulatory Framework
-              </h3>
-              <p>
-                GIFT City funds operate under IFSCA regulations, which align with international standards while remaining within India's legal jurisdiction. This provides a bridge between domestic and offshore investment structures.
-              </p>
-
-              <h3 className="font-heading font-semibold text-xl text-primary mt-6 mb-3">
-                2. Currency Operations
-              </h3>
-              <p>
-                These funds can accept subscriptions and make investments in freely convertible foreign currencies, primarily USD. This eliminates currency conversion complexities for international investors and NRIs.
-              </p>
-
-              <h3 className="font-heading font-semibold text-xl text-primary mt-6 mb-3">
-                3. Investment Universe
-              </h3>
-              <p>
-                GIFT City funds have the flexibility to invest in both Indian securities and global markets, providing diversification opportunities that go beyond what domestic funds typically offer.
-              </p>
-
-              <h2 className="font-heading font-semibold text-2xl text-primary mt-8 mb-4">
-                Who Should Consider GIFT City Funds?
-              </h2>
-
-              <p>
-                GIFT City funds are particularly attractive for Non-Resident Indians (NRIs), Foreign Portfolio Investors (FPIs), and High-Net-Worth Individuals (HNIs) seeking:
-              </p>
               <ul className="list-disc pl-6 space-y-2 my-4">
-                <li>Access to Indian markets without domestic regulatory constraints</li>
-                <li>Tax-efficient investment structures under IFSC benefits</li>
-                <li>Foreign currency denominated investment options</li>
-                <li>Simplified compliance for international investors</li>
+                <li>Funds in IFSC operate in foreign currency (usually USD) under IFSCA mutual fund regulations.</li>
+                <li>IFSCA oversees fund registration, custodian rules, compliance, and disclosures similar to SEBI norms.</li>
+                <li>Fund houses with SEBI registration can set up separate IFSC units in GIFT City.</li>
+                <li>All investment documentation, including KYC and risk disclosures, follows IFSCA/AMFI standards.</li>
               </ul>
+
+              <h2 className="font-heading font-semibold text-2xl text-primary mt-8 mb-4">
+                Why These Funds Matter
+              </h2>
+
+              <p>
+                GIFT City funds offer transparent, globally accessible structures that allow NRIs to invest seamlessly while benefiting from simplified regulatory and tax procedures.
+              </p>
 
               <div className="bg-muted p-6 rounded-lg my-8">
                 <p className="text-sm">
@@ -126,38 +102,17 @@ const WhatIsGiftCityFund = () => {
                 </h3>
 
                 <h4 className="font-heading font-semibold text-lg text-primary mt-6 mb-2">
-                  1. What is the benefit of investing in GIFT City funds?
+                  1. Are GIFT City funds regulated by SEBI or IFSCA?
                 </h4>
                 <p>
-                  GIFT City funds allow investors — especially NRIs — to access global markets through India's IFSC platform with tax advantages and lower compliance burdens.
+                  GIFT City funds are regulated by the International Financial Services Centres Authority (IFSCA) — an independent body created under an Act of Parliament.
                 </p>
 
                 <h4 className="font-heading font-semibold text-lg text-primary mt-6 mb-2">
-                  2. Are GIFT City mutual funds safe?
+                  2. Can resident Indians invest in GIFT City funds?
                 </h4>
                 <p>
-                  These funds are regulated by the International Financial Services Centres Authority (IFSCA) and follow SEBI-equivalent norms, making them as safe as domestic mutual funds, subject to market risks.
-                </p>
-
-                <h4 className="font-heading font-semibold text-lg text-primary mt-6 mb-2">
-                  3. Can NRIs invest in GIFT City funds directly?
-                </h4>
-                <p>
-                  Yes. NRIs can invest directly using NRE/NRO accounts after completing KYC, just like any Indian mutual fund.
-                </p>
-
-                <h4 className="font-heading font-semibold text-lg text-primary mt-6 mb-2">
-                  4. How are GIFT City funds taxed?
-                </h4>
-                <p>
-                  Tax treatment depends on residency status and fund type. GIFT City offers favorable tax exemptions for non-residents under specific sections. Always consult a tax advisor.
-                </p>
-
-                <h4 className="font-heading font-semibold text-lg text-primary mt-6 mb-2">
-                  5. How do I start investing through GIFT City Wealth?
-                </h4>
-                <p>
-                  You can start by contacting our advisory team or filling out the "Get Started" form on our homepage. Our MFD team will guide you through fund selection and documentation.
+                  Yes. Resident investors can participate if the specific fund's terms allow domestic participation and RBI regulations permit outward remittance under LRS (Liberalised Remittance Scheme).
                 </p>
               </section>
 

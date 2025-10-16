@@ -32,75 +32,38 @@ const MutualFundsInGiftCity = () => {
 
             <div className="prose prose-lg max-w-none text-foreground-muted">
               <p className="lead text-xl mb-6">
-                Mutual funds operating in GIFT City's International Financial Services Centre (IFSC) offer unique investment structures that combine the benefits of international fund management with Indian regulatory oversight. Understanding these structures is essential for investors seeking global market access through India's financial gateway.
+                Mutual funds in GIFT City operate under IFSCA (Fund Management) Regulations, 2022. These rules allow Indian fund houses and international managers to establish fund management entities in GIFT City's IFSC to serve both domestic and global investors.
               </p>
 
               <h2 className="font-heading font-semibold text-2xl text-primary mt-8 mb-4">
-                Fund Structure Types in GIFT City
+                Structure Overview
               </h2>
               
-              <h3 className="font-heading font-semibold text-xl text-primary mt-6 mb-3">
-                1. IFSC Mutual Funds
-              </h3>
-              <p>
-                These are mutual funds specifically registered with IFSCA and operating exclusively within the IFSC zone. They can invest in both Indian and international securities, accept subscriptions in foreign currency, and offer units denominated in USD or other convertible currencies.
-              </p>
-
-              <h3 className="font-heading font-semibold text-xl text-primary mt-6 mb-3">
-                2. Feeder Funds
-              </h3>
-              <p>
-                IFSC feeder funds invest primarily in master funds (which could be located domestically or internationally), providing investors with indirect access to diversified portfolios managed by experienced fund managers.
-              </p>
-
-              <h3 className="font-heading font-semibold text-xl text-primary mt-6 mb-3">
-                3. Fund of Funds
-              </h3>
-              <p>
-                These funds invest in other mutual funds or investment funds, providing diversification across multiple fund managers and investment strategies within a single investment vehicle.
-              </p>
+              <ul className="list-disc pl-6 space-y-2 my-4">
+                <li><strong>Fund Management Entity (FME):</strong> The registered manager licensed by IFSCA to launch schemes.</li>
+                <li><strong>Custodian & Trustee:</strong> Must be approved entities within IFSC.</li>
+                <li><strong>Fund categories:</strong> Retail, Professional, and Restricted Schemes — depending on investor type.</li>
+                <li><strong>Currency:</strong> Units are often denominated in USD or other foreign currencies.</li>
+              </ul>
 
               <h2 className="font-heading font-semibold text-2xl text-primary mt-8 mb-4">
-                Investment Process and Requirements
-              </h2>
-
-              <h3 className="font-heading font-semibold text-xl text-primary mt-6 mb-3">
-                Step 1: Eligibility Verification
-              </h3>
-              <p>
-                Investors must verify their eligibility based on residency status. NRIs, FPIs, and qualified domestic investors can participate, each with specific documentation requirements.
-              </p>
-
-              <h3 className="font-heading font-semibold text-xl text-primary mt-6 mb-3">
-                Step 2: KYC Compliance
-              </h3>
-              <p>
-                Complete Know Your Customer (KYC) procedures through IFSC-registered intermediaries. This includes identity verification, address proof, and source of funds documentation.
-              </p>
-
-              <h3 className="font-heading font-semibold text-xl text-primary mt-6 mb-3">
-                Step 3: Account Opening
-              </h3>
-              <p>
-                Open a foreign currency account with an International Banking Unit (IBU) in GIFT City or use existing NRE/NRO accounts for fund subscriptions.
-              </p>
-
-              <h3 className="font-heading font-semibold text-xl text-primary mt-6 mb-3">
-                Step 4: Fund Selection and Investment
-              </h3>
-              <p>
-                Select appropriate funds based on investment objectives, risk profile, and time horizon. Submit subscription applications through registered distributors or directly with fund houses.
-              </p>
-
-              <h2 className="font-heading font-semibold text-2xl text-primary mt-8 mb-4">
-                Key Considerations
+                Investor Participation
               </h2>
 
               <ul className="list-disc pl-6 space-y-2 my-4">
-                <li><strong>Minimum Investment:</strong> Often higher than domestic funds, typically USD 10,000 or equivalent</li>
-                <li><strong>Currency Risk:</strong> While transactions are in USD, underlying investments may have currency exposure</li>
-                <li><strong>Taxation:</strong> Tax treatment varies based on investor residency status and investment holding period</li>
-                <li><strong>Exit Load:</strong> Redemption charges may apply for early withdrawals</li>
+                <li><strong>NRIs/OCIs/Foreign Investors:</strong> Can invest directly without separate RBI approvals since IFSC is treated as an offshore jurisdiction within India.</li>
+                <li><strong>Domestic investors:</strong> Allowed under LRS for international exposure.</li>
+                <li><strong>Compliance:</strong> Similar risk and disclosure norms as SEBI-regulated funds.</li>
+              </ul>
+
+              <h2 className="font-heading font-semibold text-2xl text-primary mt-8 mb-4">
+                Advantages
+              </h2>
+
+              <ul className="list-disc pl-6 space-y-2 my-4">
+                <li>Global-standard fund governance</li>
+                <li>Seamless cross-border investment framework</li>
+                <li>Lower tax friction for eligible non-residents</li>
               </ul>
 
               <div className="bg-muted p-6 rounded-lg my-8">
@@ -147,17 +110,17 @@ const MutualFundsInGiftCity = () => {
                 </h3>
 
                 <h4 className="font-heading font-semibold text-lg text-primary mt-6 mb-2">
-                  1. Can resident Indians invest in GIFT City mutual funds?
+                  1. Who regulates GIFT City mutual funds?
                 </h4>
                 <p>
-                  Yes, resident Indians can invest in GIFT City funds under the Liberalized Remittance Scheme (LRS), subject to the annual limit of USD 250,000 per individual.
+                  They are governed by the IFSCA Fund Management Regulations, 2022.
                 </p>
 
                 <h4 className="font-heading font-semibold text-lg text-primary mt-6 mb-2">
-                  2. What are the typical expense ratios for IFSC funds?
+                  2. What currency are these funds issued in?
                 </h4>
                 <p>
-                  Expense ratios vary by fund type and asset class but are generally competitive with international standards, typically ranging from 0.5% to 2% annually depending on the fund structure and management complexity.
+                  Most IFSC mutual funds are denominated in foreign currency (commonly USD), though some may allow INR-based investment tranches.
                 </p>
               </section>
 

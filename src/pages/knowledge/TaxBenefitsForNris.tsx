@@ -32,69 +32,56 @@ const TaxBenefitsForNris = () => {
 
             <div className="prose prose-lg max-w-none text-foreground-muted">
               <p className="lead text-xl mb-6">
-                GIFT City's International Financial Services Centre (IFSC) offers significant tax advantages for Non-Resident Indian (NRI) investors, making it an attractive destination for those seeking to invest in India while optimizing their tax liability. Understanding these benefits is crucial for effective financial planning.
+                The Government of India has extended several tax incentives to entities and investors operating within GIFT City's IFSC. These aim to make India a competitive global investment destination while maintaining regulatory compliance.
               </p>
 
               <h2 className="font-heading font-semibold text-2xl text-primary mt-8 mb-4">
-                Primary Tax Advantages
+                Key Provisions Under the Income Tax Act
               </h2>
               
               <h3 className="font-heading font-semibold text-xl text-primary mt-6 mb-3">
-                1. Section 80LA Tax Holiday
+                1. Section 80LA
               </h3>
               <p>
-                IFSC entities, including mutual fund houses and fund management companies, enjoy a 100% tax exemption on profits for 10 consecutive years within a 15-year window. This exemption translates to improved fund performance as operating costs are reduced, potentially benefiting investors through lower expense ratios.
+                Fund management entities in IFSC enjoy tax holidays on specified income for up to 10 years out of 15 years of operations.
               </p>
 
               <h3 className="font-heading font-semibold text-xl text-primary mt-6 mb-3">
-                2. Capital Gains Tax Benefits
+                2. Section 10(4D)
               </h3>
               <p>
-                For NRI investors, capital gains arising from the transfer of securities traded on IFSC exchanges may receive favorable tax treatment. Specifically, gains from securities denominated in foreign currency and traded on recognized IFSC exchanges can be exempt from Indian capital gains tax under certain conditions.
+                Income of Category I or II Alternate Investment Funds (AIFs) registered in IFSC is exempt if earned in foreign currency.
               </p>
 
               <h3 className="font-heading font-semibold text-xl text-primary mt-6 mb-3">
-                3. Double Taxation Avoidance Agreement (DTAA)
+                3. Section 10(4F)
               </h3>
               <p>
-                NRIs can benefit from India's extensive DTAA network. Income taxed in India through IFSC investments can claim relief in the country of residence, ensuring income isn't taxed twice. This is particularly valuable for NRIs in countries with high tax rates.
+                Non-resident investors are exempt from tax on income received from portfolio transfers within IFSC.
+              </p>
+
+              <h3 className="font-heading font-semibold text-xl text-primary mt-6 mb-3">
+                4. No Capital Gains Tax
+              </h3>
+              <p>
+                Non-residents are exempt from capital gains tax on transfer of certain IFSC-listed securities (subject to conditions).
+              </p>
+
+              <h3 className="font-heading font-semibold text-xl text-primary mt-6 mb-3">
+                5. GST Exemption
+              </h3>
+              <p>
+                GST exemption on services provided to IFSC entities dealing in foreign currency.
               </p>
 
               <h2 className="font-heading font-semibold text-2xl text-primary mt-8 mb-4">
-                Additional Tax Efficiency Features
+                Practical Benefits for NRIs
               </h2>
 
-              <h3 className="font-heading font-semibold text-xl text-primary mt-6 mb-3">
-                No Securities Transaction Tax (STT)
-              </h3>
-              <p>
-                Transactions on IFSC exchanges are exempt from STT, reducing transaction costs for active traders and investors. This exemption applies to equity, debt, and derivative transactions conducted within the IFSC framework.
-              </p>
-
-              <h3 className="font-heading font-semibold text-xl text-primary mt-6 mb-3">
-                No Dividend Distribution Tax (DDT)
-              </h3>
-              <p>
-                Dividends received from IFSC-based investments are not subject to DDT in the hands of the distributing entity. NRIs need to evaluate the tax treatment of such dividends in their country of residence.
-              </p>
-
-              <h2 className="font-heading font-semibold text-2xl text-primary mt-8 mb-4">
-                Important Considerations for NRI Investors
-              </h2>
-
-              <ul className="list-disc pl-6 space-y-3 my-4">
-                <li>
-                  <strong>Residency Status:</strong> Tax benefits depend on your residential status under Indian tax law. Ensure accurate determination of your tax residency each financial year.
-                </li>
-                <li>
-                  <strong>DTAA Certificate:</strong> Obtain a Tax Residency Certificate (TRC) from your country of residence to claim DTAA benefits effectively.
-                </li>
-                <li>
-                  <strong>PAN Requirement:</strong> NRIs must have a valid PAN card for all financial transactions in India, including IFSC investments.
-                </li>
-                <li>
-                  <strong>Repatriation Rules:</strong> Investment proceeds can typically be repatriated freely, subject to compliance with FEMA regulations and proper documentation.
-                </li>
+              <ul className="list-disc pl-6 space-y-2 my-4">
+                <li>Simplified taxation and lower compliance versus offshore jurisdictions.</li>
+                <li>Foreign-currency transactions are ring-fenced from domestic tax exposure.</li>
+                <li>Investments are protected by IFSCA and Indian legal frameworks.</li>
               </ul>
 
               <div className="bg-muted p-6 rounded-lg my-8">
@@ -141,17 +128,17 @@ const TaxBenefitsForNris = () => {
                 </h3>
 
                 <h4 className="font-heading font-semibold text-lg text-primary mt-6 mb-2">
-                  1. Do NRIs need to pay TDS on GIFT City fund redemptions?
+                  1. Are NRI investments in IFSC taxable in India?
                 </h4>
                 <p>
-                  TDS applicability depends on the nature of income and investor's tax residency status. Generally, capital gains may attract TDS, but rates can be reduced under applicable DTAA provisions with a valid TRC.
+                  In most cases, no, if the investment and gains qualify under the exemptions of Section 10(4D)/(4F). However, tax residency and treaty benefits must be evaluated by each investor.
                 </p>
 
                 <h4 className="font-heading font-semibold text-lg text-primary mt-6 mb-2">
-                  2. Can tax paid in India on IFSC investments be claimed as credit abroad?
+                  2. Do IFSC funds need to deduct TDS for NRIs?
                 </h4>
                 <p>
-                  Yes, most countries allow foreign tax credits for taxes paid in India under DTAA provisions. The mechanism varies by country, so consult your local tax advisor for specific procedures.
+                  IFSC funds comply with IFSCA rules and may apply limited TDS depending on the fund structure. Investors should consult a tax advisor or refer to IFSCA circulars.
                 </p>
               </section>
 

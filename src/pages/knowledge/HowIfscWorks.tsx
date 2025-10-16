@@ -32,59 +32,30 @@ const HowIfscWorks = () => {
 
             <div className="prose prose-lg max-w-none text-foreground-muted">
               <p className="lead text-xl mb-6">
-                The International Financial Services Centre (IFSC) is a special economic zone within India that operates under international financial regulations while remaining within India's legal jurisdiction. Located in GIFT City, Gujarat, it serves as a bridge between domestic and global financial markets.
+                The International Financial Services Centre (IFSC) in GIFT City is India's first globally integrated financial zone. It was established to provide a regulatory ecosystem similar to international hubs like Singapore or Dubai.
+              </p>
+
+              <p>
+                The IFSC operates under the International Financial Services Centres Authority Act, 2019, which consolidates regulatory oversight from SEBI, RBI, IRDAI, and PFRDA under one body — IFSCA.
               </p>
 
               <h2 className="font-heading font-semibold text-2xl text-primary mt-8 mb-4">
-                IFSC Regulatory Framework
+                Core Functions of IFSC
               </h2>
               
-              <p>
-                The IFSC operates under the International Financial Services Centres Authority (IFSCA), a unified regulator established in 2020. IFSCA consolidates regulatory functions previously distributed across SEBI, RBI, IRDAI, and PFRDA, creating a single-window system for international financial services.
-              </p>
-
-              <h2 className="font-heading font-semibold text-2xl text-primary mt-8 mb-4">
-                Key Features of IFSC Operations
-              </h2>
-
-              <h3 className="font-heading font-semibold text-xl text-primary mt-6 mb-3">
-                1. International Standards with Indian Oversight
-              </h3>
-              <p>
-                IFSC entities follow international best practices and standards comparable to global financial centers like Singapore, Dubai, and Hong Kong, while remaining under Indian legal jurisdiction. This unique position provides regulatory certainty and investor protection.
-              </p>
-
-              <h3 className="font-heading font-semibold text-xl text-primary mt-6 mb-3">
-                2. Currency Flexibility
-              </h3>
-              <p>
-                All transactions within IFSC are conducted in freely convertible foreign currencies, primarily US Dollars. This eliminates exchange rate risks and conversion complexities for international participants, making cross-border transactions seamless.
-              </p>
-
-              <h3 className="font-heading font-semibold text-xl text-primary mt-6 mb-3">
-                3. Tax Benefits
-              </h3>
-              <p>
-                IFSC units enjoy significant tax advantages, including 100% profit tax exemption for 10 consecutive years within a 15-year window under Section 80LA. Capital gains on IFSC securities may also receive favorable treatment depending on investor status and holding period.
-              </p>
-
-              <h2 className="font-heading font-semibold text-2xl text-primary mt-8 mb-4">
-                Benefits for Investors
-              </h2>
-
               <ul className="list-disc pl-6 space-y-2 my-4">
-                <li><strong>Simplified Compliance:</strong> Single regulatory authority reduces bureaucratic complexity</li>
-                <li><strong>Global Market Access:</strong> Investment in both Indian and international securities</li>
-                <li><strong>Cost Efficiency:</strong> Lower transaction costs compared to offshore alternatives</li>
-                <li><strong>Regulatory Protection:</strong> Full legal recourse under Indian judicial system</li>
+                <li>Hosts global financial institutions, banks, insurers, brokers, and fund managers.</li>
+                <li>Enables cross-border financial transactions in freely convertible currencies.</li>
+                <li>Facilitates global fund management, aircraft and ship leasing, fintech, and bullion trading.</li>
+                <li>Applies global accounting, KYC, and anti-money laundering (AML) standards.</li>
               </ul>
 
               <h2 className="font-heading font-semibold text-2xl text-primary mt-8 mb-4">
-                Who Can Participate in IFSC?
+                Investor Significance
               </h2>
 
               <p>
-                IFSC is open to a wide range of participants including Non-Resident Indians (NRIs), Foreign Portfolio Investors (FPIs), institutional investors, and qualified domestic investors seeking international exposure. Each category has specific eligibility requirements and documentation needs.
+                For NRIs and global investors, the IFSC allows India-linked investments without the regulatory barriers of the domestic system. All participants operate under IFSCA supervision, ensuring transparency and investor protection.
               </p>
 
               <div className="bg-muted p-6 rounded-lg my-8">
@@ -131,17 +102,17 @@ const HowIfscWorks = () => {
                 </h3>
 
                 <h4 className="font-heading font-semibold text-lg text-primary mt-6 mb-2">
-                  1. Is IFSC part of India or considered offshore?
+                  1. Is GIFT City the only IFSC in India?
                 </h4>
                 <p>
-                  IFSC is physically located in India (GIFT City, Gujarat) but operates under international financial regulations. It's considered a special economic zone with "deemed non-resident" status for foreign exchange purposes.
+                  Yes. As of 2025, GIFT City IFSC is India's only operational International Financial Services Centre.
                 </p>
 
                 <h4 className="font-heading font-semibold text-lg text-primary mt-6 mb-2">
-                  2. What is IFSCA and how does it differ from SEBI?
+                  2. What's the key difference between IFSC and SEZ?
                 </h4>
                 <p>
-                  IFSCA is the unified regulator for IFSC, consolidating powers of SEBI, RBI, IRDAI, and PFRDA for international financial services. It follows international best practices while SEBI governs domestic capital markets.
+                  An SEZ (Special Economic Zone) supports trade and manufacturing, while the IFSC enables international financial transactions under a unified regulator (IFSCA).
                 </p>
               </section>
 
