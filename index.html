@@ -4,6 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RVTXNPKQDS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-RVTXNPKQDS');
+    </script>
+    
     <!-- Primary Meta Tags (will be overridden by React Helmet) -->
     <title>GiftCity Wealth Advisory | Anup Vatyani (MFD ARN 106715) | Informational Insights on GIFT City & IFSC Funds</title>
     <meta name="description" content="GiftCity Wealth Advisory provides informational updates and educational resources on GIFT City and IFSC mutual fund frameworks. Operated by Anup Vatyani (Mutual Fund Distributor ARN 106715)." />
@@ -87,22 +97,6 @@
       }
     </style>
     
-    <!-- Defer Analytics - Load after LCP -->
-    <script>
-      window.addEventListener('load', function() {
-        window.requestIdleCallback(function() {
-          var script = document.createElement('script');
-          script.async = true;
-          script.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX';
-          document.head.appendChild(script);
-          
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-XXXXXXXXXX');
-        });
-      });
-    </script>
     
     <!-- Google Search Console Verification -->
     <meta name="google-site-verification" content="dfgKmsUZeQVRLEv8G43WL9s9kmKj-Bv5FLev4TL_A_I" />
