@@ -4,27 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RVTXNPKQDS"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-RVTXNPKQDS');
-    </script>
-    
     <!-- Primary Meta Tags (will be overridden by React Helmet) -->
     <title>GiftCity Wealth Advisory | Anup Vatyani (MFD ARN 106715) | Informational Insights on GIFT City & IFSC Funds</title>
     <meta name="description" content="GiftCity Wealth Advisory provides informational updates and educational resources on GIFT City and IFSC mutual fund frameworks. Operated by Anup Vatyani (Mutual Fund Distributor ARN 106715)." />
     <meta name="author" content="Anup Vatyani" />
     <meta name="robots" content="index, follow" />
     
-    <!-- Preconnect for Performance -->
+    <!-- Preconnect for Performance - Critical Origins -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     
     <!-- Critical: Preload LCP hero image with highest priority -->
     <link rel="preload" as="image" href="/images/hero-optimized-2025.webp" fetchpriority="high" type="image/webp" imagesrcset="/images/hero-optimized-2025.webp 1920w" imagesizes="100vw">
@@ -97,6 +89,24 @@
       }
     </style>
     
+    <!-- Defer Analytics - Load after critical resources -->
+    <script>
+      window.addEventListener('load', function() {
+        window.requestIdleCallback(function() {
+          var script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=G-RVTXNPKQDS';
+          document.head.appendChild(script);
+          
+          script.onload = function() {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-RVTXNPKQDS');
+          };
+        });
+      });
+    </script>
     
     <!-- Google Search Console Verification -->
     <meta name="google-site-verification" content="dfgKmsUZeQVRLEv8G43WL9s9kmKj-Bv5FLev4TL_A_I" />
