@@ -1,0 +1,29 @@
+# GIFT City Funds
+
+> Educational resource on GIFT City and IFSC mutual fund frameworks by Anup Vatyani (MFD ARN 106715). Informational only — not investment advice.
+
+## Pages
+
+- [Home](/): Overview of GIFT City IFSC investment information.
+- [About GIFT City](/about): Background on India's IFSC and the IFSCA regulator.
+- [Investment Structures](/investments): Educational overview of fund categories under IFSCA.
+- [Resources](/resources): Featured learning articles and official references.
+- [Contact](/contact): Contact and contributor information.
+
+## Knowledge
+
+- [What is a GIFT City Fund?](/knowledge/what-is-gift-city-fund): Guide to IFSC mutual funds.
+- [How the IFSC Framework Works](/knowledge/how-ifsc-works): Regulatory overview.
+- [Mutual Funds in GIFT City](/knowledge/mutual-funds-in-gift-city): Fund structures under IFSCA.
+- [Tax Benefits for NRIs](/knowledge/tax-benefits-for-nris): NRI tax provisions.
+
+## Team
+
+- [Anup Vatyani](/team/anup-vatyani): Contributor bio (MFD ARN 106715).
+
+## Optional
+
+- [Disclaimer](/disclaimer)
+- [Privacy Policy](/privacy-policy)
+- [Terms of Use](/terms-of-use)
+- [Accessibility](/accessibility)
