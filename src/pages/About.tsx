@@ -37,10 +37,10 @@ const About = () => {
       <SEO
         title="About GIFT City IFSC | GiftCityWealth.in"
         description="Learn about GIFT City IFSC, India's International Financial Services Centre offering global market access, IFSCA regulation, and tax benefits."
-        canonical="https://giftcityfunds.in/about-gift-city"
+        canonical="https://giftcityfunds.in/about"
         breadcrumbs={[
           { name: "Home", url: "https://giftcityfunds.in/" },
-          { name: "About GIFT City", url: "https://giftcityfunds.in/about-gift-city" }
+          { name: "About GIFT City", url: "https://giftcityfunds.in/about" }
         ]}
       />
       
@@ -48,16 +48,16 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
           <Breadcrumbs items={[
             { name: "Home", url: "/" },
-            { name: "About GIFT City", url: "/about-gift-city" }
+            { name: "About GIFT City", url: "/about" }
           ]} />
         </div>
         {/* Overview Section */}
       <section className="py-16 bg-background mt-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16">
-            <h2 className="font-heading font-bold text-3xl text-primary mb-6 text-center">
-              About GIFT City IFSC
-            </h2>
+            <h1 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-6 text-center">
+              About GIFT City IFSC - India's Global Financial Hub
+            </h1>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-4 font-body text-foreground-muted">
                  <p>
