@@ -141,11 +141,11 @@ const Investments = () => {
       <SEO
         title="Investment Structures in GIFT City IFSC | GiftCityWealth.in"
         description="Informational overview of fund categories, processes, and framework under IFSCA regulations at GIFT IFSC. Educational only."
-        canonical="https://giftcityfunds.in/investment-structures"
+        canonical="https://giftcityfunds.in/investments"
         schema={faqSchema}
         breadcrumbs={[
           { name: "Home", url: "https://giftcityfunds.in/" },
-          { name: "Investment Structures", url: "https://giftcityfunds.in/investment-structures" }
+          { name: "Investment Structures", url: "https://giftcityfunds.in/investments" }
         ]}
       />
       
@@ -153,7 +153,7 @@ const Investments = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
           <Breadcrumbs items={[
             { name: "Home", url: "/" },
-            { name: "Investment Structures", url: "/investment-structures" }
+            { name: "Investment Structures", url: "/investments" }
           ]} />
         </div>
 
