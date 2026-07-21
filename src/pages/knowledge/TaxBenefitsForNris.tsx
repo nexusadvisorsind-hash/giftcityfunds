@@ -10,6 +10,15 @@ const TaxBenefitsForNris = () => {
         title="Tax Benefits for NRIs in GIFT City | IFSC Tax Advantages Guide"
         description="Complete guide to tax advantages for NRI investors in GIFT City IFSC. Understand DTAA benefits, capital gains treatment, and tax-efficient investment structures."
         canonical="https://giftcityfunds.in/knowledge/tax-benefits-for-nris"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Tax Benefits for NRIs in GIFT City",
+          "description": "Educational overview of NRI tax provisions under the GIFT City IFSC framework.",
+          "author": { "@type": "Person", "name": "Anup Vatyani", "url": "https://giftcityfunds.in/team/anup-vatyani" },
+          "publisher": { "@type": "Organization", "name": "GIFT City Funds", "url": "https://giftcityfunds.in" },
+          "mainEntityOfPage": "https://giftcityfunds.in/knowledge/tax-benefits-for-nris"
+        }}
         breadcrumbs={[
           { name: "Home", url: "https://giftcityfunds.in/" },
           { name: "Resources", url: "https://giftcityfunds.in/resources" },

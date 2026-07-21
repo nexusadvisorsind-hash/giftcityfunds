@@ -19,38 +19,6 @@ import {
 import { SEO } from "@/components/SEO";
 
 const Home = () => {
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "GIFT City Wealth",
-    "url": "https://giftcityfunds.in",
-    "logo": "https://giftcityfunds.in/logo.png",
-    "description": "An educational resource on GIFT City and IFSC investment frameworks for NRIs and HNIs.",
-    "founder": {
-      "@type": "Person",
-      "name": "Anup Vatyani",
-      "jobTitle": "Mutual Fund Distributor",
-      "identifier": "AMFI ARN-106815"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+91-9537533533",
-      "contactType": "Customer Support",
-      "email": "info@giftcityfunds.in"
-    }
-  };
-
-  const websiteSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "url": "https://giftcityfunds.in",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://giftcityfunds.in/?s={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  };
-
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -139,12 +107,6 @@ const Home = () => {
           { name: "Home", url: "https://giftcityfunds.in/" }
         ]}
       />
-      <script type="application/ld+json">
-        {JSON.stringify(organizationSchema)}
-      </script>
-      <script type="application/ld+json">
-        {JSON.stringify(websiteSchema)}
-      </script>
       
       <div className="min-h-screen">
         {/* Hero Section */}

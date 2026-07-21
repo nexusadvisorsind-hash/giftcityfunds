@@ -10,6 +10,15 @@ const MutualFundsInGiftCity = () => {
         title="Mutual Funds in GIFT City | Fund Structures & Investment Process"
         description="Comprehensive guide to mutual fund structures in GIFT City IFSC. Learn about fund types, investment process, and participation requirements."
         canonical="https://giftcityfunds.in/knowledge/mutual-funds-in-gift-city"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Mutual Funds in GIFT City",
+          "description": "Educational overview of mutual fund structures available under IFSCA in GIFT City.",
+          "author": { "@type": "Person", "name": "Anup Vatyani", "url": "https://giftcityfunds.in/team/anup-vatyani" },
+          "publisher": { "@type": "Organization", "name": "GIFT City Funds", "url": "https://giftcityfunds.in" },
+          "mainEntityOfPage": "https://giftcityfunds.in/knowledge/mutual-funds-in-gift-city"
+        }}
         breadcrumbs={[
           { name: "Home", url: "https://giftcityfunds.in/" },
           { name: "Resources", url: "https://giftcityfunds.in/resources" },

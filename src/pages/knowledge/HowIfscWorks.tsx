@@ -10,6 +10,15 @@ const HowIfscWorks = () => {
         title="How IFSC Works | Understanding India's International Financial Services Centre"
         description="Complete guide to IFSC operations, regulatory framework, and benefits for investors. Learn how India's International Financial Services Centre enables global investment access."
         canonical="https://giftcityfunds.in/knowledge/how-ifsc-works"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "How the IFSC Framework Works",
+          "description": "Educational overview of how IFSCA regulates GIFT City's International Financial Services Centre.",
+          "author": { "@type": "Person", "name": "Anup Vatyani", "url": "https://giftcityfunds.in/team/anup-vatyani" },
+          "publisher": { "@type": "Organization", "name": "GIFT City Funds", "url": "https://giftcityfunds.in" },
+          "mainEntityOfPage": "https://giftcityfunds.in/knowledge/how-ifsc-works"
+        }}
         breadcrumbs={[
           { name: "Home", url: "https://giftcityfunds.in/" },
           { name: "Resources", url: "https://giftcityfunds.in/resources" },
