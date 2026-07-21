@@ -10,6 +10,15 @@ const WhatIsGiftCityFund = () => {
         title="What is a GIFT City Fund? | Complete Guide to IFSC Mutual Funds"
         description="Comprehensive guide explaining GIFT City funds, how they work, and how they differ from domestic mutual funds. Learn about IFSC investment opportunities."
         canonical="https://giftcityfunds.in/knowledge/what-is-gift-city-fund"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "What is a GIFT City Fund?",
+          "description": "Comprehensive guide explaining GIFT City funds and how they work under the IFSC framework.",
+          "author": { "@type": "Person", "name": "Anup Vatyani", "url": "https://giftcityfunds.in/team/anup-vatyani" },
+          "publisher": { "@type": "Organization", "name": "GIFT City Funds", "url": "https://giftcityfunds.in" },
+          "mainEntityOfPage": "https://giftcityfunds.in/knowledge/what-is-gift-city-fund"
+        }}
         breadcrumbs={[
           { name: "Home", url: "https://giftcityfunds.in/" },
           { name: "Resources", url: "https://giftcityfunds.in/resources" },
