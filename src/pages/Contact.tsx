@@ -89,10 +89,10 @@ function Contact(): JSX.Element {
       <SEO
         title="Contact Us | GIFT City Wealth Advisory | GiftCityWealth.in"
         description="Get in touch with Anup Vatyani (MFD ARN 106715) for GIFT City and IFSC information. Educational correspondence only."
-        canonical="https://giftcitywealth.in/contact"
+        canonical="https://giftcityfunds.in/contact"
         breadcrumbs={[
-          { name: "Home", url: "https://giftcitywealth.in/" },
-          { name: "Contact", url: "https://giftcitywealth.in/contact" }
+          { name: "Home", url: "https://giftcityfunds.in/" },
+          { name: "Contact", url: "https://giftcityfunds.in/contact" }
         ]}
       />
       

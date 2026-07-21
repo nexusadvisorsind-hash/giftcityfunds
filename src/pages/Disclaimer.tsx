@@ -14,11 +14,11 @@ const Disclaimer = () => {
       <SEO
         title="Disclaimer | GIFT City Funds"
         description="Disclaimer for GIFT City Funds - informational content only, no personalized investment advice."
-        canonical="https://giftcitywealth.in/disclaimer"
+        canonical="https://giftcityfunds.in/disclaimer"
         schema={schema}
         breadcrumbs={[
-          { name: "Home", url: "https://giftcitywealth.in/" },
-          { name: "Disclaimer", url: "https://giftcitywealth.in/disclaimer" }
+          { name: "Home", url: "https://giftcityfunds.in/" },
+          { name: "Disclaimer", url: "https://giftcityfunds.in/disclaimer" }
         ]}
       />
       

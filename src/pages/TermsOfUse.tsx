@@ -14,11 +14,11 @@ const TermsOfUse = () => {
       <SEO
         title="Terms of Use | GIFT City Funds"
         description="Terms of use for GIFT City Funds - educational information about GIFT City IFSC."
-        canonical="https://giftcitywealth.in/terms-of-use"
+        canonical="https://giftcityfunds.in/terms-of-use"
         schema={schema}
         breadcrumbs={[
-          { name: "Home", url: "https://giftcitywealth.in/" },
-          { name: "Terms of Use", url: "https://giftcitywealth.in/terms-of-use" }
+          { name: "Home", url: "https://giftcityfunds.in/" },
+          { name: "Terms of Use", url: "https://giftcityfunds.in/terms-of-use" }
         ]}
       />
       

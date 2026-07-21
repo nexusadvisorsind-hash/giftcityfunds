@@ -9,10 +9,10 @@ const Terms = () => {
       <SEO
         title="Terms & Conditions | Educational Platform Disclaimer | GiftCityWealth.in"
         description="Terms and conditions for using GiftCityWealth.in. Understanding our educational platform nature and limitations."
-        canonical="https://giftcitywealth.in/terms"
+        canonical="https://giftcityfunds.in/terms"
         breadcrumbs={[
-          { name: "Home", url: "https://giftcitywealth.in/" },
-          { name: "Terms & Conditions", url: "https://giftcitywealth.in/terms" }
+          { name: "Home", url: "https://giftcityfunds.in/" },
+          { name: "Terms & Conditions", url: "https://giftcityfunds.in/terms" }
         ]}
       />
       
@@ -185,7 +185,7 @@ const Terms = () => {
                   For questions about these terms or general inquiries:
                 </p>
                 <div className="bg-muted p-4 rounded-lg mt-3">
-                  <p><strong>Email:</strong> <a href="mailto:info@giftcitywealth.in" className="text-primary hover:underline">info@giftcitywealth.in</a></p>
+                  <p><strong>Email:</strong> <a href="mailto:info@giftcityfunds.in" className="text-primary hover:underline">info@giftcityfunds.in</a></p>
                   <p className="mt-2"><strong>Owner:</strong> Anup Vatyani (MFD ARN 106715)</p>
                 </div>
               </section>

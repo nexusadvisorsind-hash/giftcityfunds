@@ -7,7 +7,7 @@ const Privacy = () => {
       <SEO
         title="Privacy Policy | GiftCityWealth.in"
         description="Privacy policy for GiftCityWealth.in. Learn how we handle and protect your information when you visit our educational platform."
-        canonical="https://www.giftcitywealth.in/privacy"
+        canonical="https://www.giftcityfunds.in/privacy"
       />
       
       <div className="min-h-screen py-16 px-4">
@@ -20,13 +20,13 @@ const Privacy = () => {
           <div className="mb-8 p-6 bg-surface rounded-lg">
             <p><strong>Effective date:</strong> 10 September 2025</p>
             <p><strong>Owner / Data Controller:</strong> Anup Vatyani</p>
-            <p><strong>Website:</strong> https://giftcitywealth.in</p>
+            <p><strong>Website:</strong> https://giftcityfunds.in</p>
             <p><strong>Contact:</strong> info@nexusadvisors.in</p>
           </div>
 
           <div className="mb-8">
             <p className="text-lg">
-              giftcitywealth.in is owned and operated by Anup Vatyani. It is an informational website about GIFT City and its financial ecosystem. We do not offer, solicit, or distribute any investment funds or securities. Content is provided for informational purposes only.
+              giftcityfunds.in is owned and operated by Anup Vatyani. It is an informational website about GIFT City and its financial ecosystem. We do not offer, solicit, or distribute any investment funds or securities. Content is provided for informational purposes only.
             </p>
           </div>
 

@@ -37,10 +37,10 @@ const About = () => {
       <SEO
         title="About GIFT City IFSC | GiftCityWealth.in"
         description="Learn about GIFT City IFSC, India's International Financial Services Centre offering global market access, IFSCA regulation, and tax benefits."
-        canonical="https://giftcitywealth.in/about-gift-city"
+        canonical="https://giftcityfunds.in/about-gift-city"
         breadcrumbs={[
-          { name: "Home", url: "https://giftcitywealth.in/" },
-          { name: "About GIFT City", url: "https://giftcitywealth.in/about-gift-city" }
+          { name: "Home", url: "https://giftcityfunds.in/" },
+          { name: "About GIFT City", url: "https://giftcityfunds.in/about-gift-city" }
         ]}
       />
       

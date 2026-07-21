@@ -184,7 +184,7 @@ Cache-Control: no-cache, no-store, must-revalidate
 ### 2. PageSpeed Insights
 ```
 URL: https://pagespeed.web.dev/
-Test: https://giftcitywealth.in
+Test: https://giftcityfunds.in
 Run both Mobile and Desktop tests
 ```
 

@@ -18,7 +18,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-primary-foreground/80 mb-4 max-w-md">
-              giftcitywealth.in provides information about GIFT City and IFSC investment frameworks for NRIs and HNIs. Owned and operated by Anup Vatyani, a registered Mutual Fund Distributor (AMFI ARN-106815).
+              giftcityfunds.in provides information about GIFT City and IFSC investment frameworks for NRIs and HNIs. Owned and operated by Anup Vatyani, a registered Mutual Fund Distributor (AMFI ARN-106815).
               <br /><br />
               This platform shares educational resources only and does not offer personalized investment advice or financial planning.
             </p>
@@ -29,7 +29,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
-                <span className="text-sm">info@giftcitywealth.in</span>
+                <span className="text-sm">info@giftcityfunds.in</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4" />
@@ -148,7 +148,7 @@ const Footer = () => {
               <strong>Disclaimer:</strong>
             </p>
             <p className="text-primary-foreground/70 text-xs max-w-5xl mx-auto leading-relaxed mb-2">
-              All content on giftcitywealth.in is for general information and education only.
+              All content on giftcityfunds.in is for general information and education only.
               GIFT CITY FUNDS and its owner Anup Vatyani (MFD ARN 106715) do not provide personalized investment, financial planning, or portfolio management through this website.
               Nothing here constitutes a solicitation to buy or sell any security. Users must verify facts via official scheme documents and consult qualified professionals before investing.
             </p>
@@ -158,7 +158,7 @@ const Footer = () => {
           </div>
           
           <p className="text-primary-foreground/70 text-xs text-center mt-6">
-            © 2025 GIFT CITY FUNDS | Anup Vatyani (MFD ARN 106715) | info@giftcitywealth.in | Informational Use Only | Mutual Fund investments are subject to market risk.
+            © 2025 GIFT CITY FUNDS | Anup Vatyani (MFD ARN 106715) | info@giftcityfunds.in | Informational Use Only | Mutual Fund investments are subject to market risk.
           </p>
         </div>
       </div>

@@ -9,11 +9,11 @@ const AnupVatyani = () => {
       <SEO
         title="Anup Vatyani | MFD (AMFI ARN 106715) | GIFT City Investment Advisor"
         description="Learn about Anup Vatyani, a registered Mutual Fund Distributor (AMFI ARN 106715) specializing in GIFT City IFSC investments for NRIs and HNIs."
-        canonical="https://giftcitywealth.in/team/anup-vatyani"
+        canonical="https://giftcityfunds.in/team/anup-vatyani"
         breadcrumbs={[
-          { name: "Home", url: "https://giftcitywealth.in/" },
-          { name: "Team", url: "https://giftcitywealth.in/team/anup-vatyani" },
-          { name: "Anup Vatyani", url: "https://giftcitywealth.in/team/anup-vatyani" }
+          { name: "Home", url: "https://giftcityfunds.in/" },
+          { name: "Team", url: "https://giftcityfunds.in/team/anup-vatyani" },
+          { name: "Anup Vatyani", url: "https://giftcityfunds.in/team/anup-vatyani" }
         ]}
       />
       
@@ -52,8 +52,8 @@ const AnupVatyani = () => {
 
                   <div className="flex items-center space-x-2 text-foreground-muted">
                     <Mail className="h-5 w-5" />
-                    <a href="mailto:info@giftcitywealth.in" className="hover:text-primary transition-colors">
-                      info@giftcitywealth.in
+                    <a href="mailto:info@giftcityfunds.in" className="hover:text-primary transition-colors">
+                      info@giftcityfunds.in
                     </a>
                   </div>
                 </div>
@@ -139,8 +139,8 @@ const AnupVatyani = () => {
                   <div className="space-y-3">
                     <div className="flex items-center space-x-3">
                       <Mail className="h-5 w-5 text-primary" />
-                      <a href="mailto:info@giftcitywealth.in" className="text-primary hover:underline">
-                        info@giftcitywealth.in
+                      <a href="mailto:info@giftcityfunds.in" className="text-primary hover:underline">
+                        info@giftcityfunds.in
                       </a>
                     </div>
                   </div>

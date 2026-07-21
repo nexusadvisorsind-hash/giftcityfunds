@@ -9,11 +9,11 @@ const MutualFundsInGiftCity = () => {
       <SEO
         title="Mutual Funds in GIFT City | Fund Structures & Investment Process"
         description="Comprehensive guide to mutual fund structures in GIFT City IFSC. Learn about fund types, investment process, and participation requirements."
-        canonical="https://giftcitywealth.in/knowledge/mutual-funds-in-gift-city"
+        canonical="https://giftcityfunds.in/knowledge/mutual-funds-in-gift-city"
         breadcrumbs={[
-          { name: "Home", url: "https://giftcitywealth.in/" },
-          { name: "Resources", url: "https://giftcitywealth.in/resources" },
-          { name: "Mutual Funds in GIFT City", url: "https://giftcitywealth.in/knowledge/mutual-funds-in-gift-city" }
+          { name: "Home", url: "https://giftcityfunds.in/" },
+          { name: "Resources", url: "https://giftcityfunds.in/resources" },
+          { name: "Mutual Funds in GIFT City", url: "https://giftcityfunds.in/knowledge/mutual-funds-in-gift-city" }
         ]}
       />
       

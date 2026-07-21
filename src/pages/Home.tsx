@@ -23,8 +23,8 @@ const Home = () => {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "GIFT City Wealth",
-    "url": "https://giftcitywealth.in",
-    "logo": "https://giftcitywealth.in/logo.png",
+    "url": "https://giftcityfunds.in",
+    "logo": "https://giftcityfunds.in/logo.png",
     "description": "An educational resource on GIFT City and IFSC investment frameworks for NRIs and HNIs.",
     "founder": {
       "@type": "Person",
@@ -36,17 +36,17 @@ const Home = () => {
       "@type": "ContactPoint",
       "telephone": "+91-9537533533",
       "contactType": "Customer Support",
-      "email": "info@giftcitywealth.in"
+      "email": "info@giftcityfunds.in"
     }
   };
 
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "url": "https://giftcitywealth.in",
+    "url": "https://giftcityfunds.in",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://giftcitywealth.in/?s={search_term_string}",
+      "target": "https://giftcityfunds.in/?s={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   };
@@ -54,8 +54,8 @@ const Home = () => {
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://giftcitywealth.in/#webpage",
-    "url": "https://giftcitywealth.in/",
+    "@id": "https://giftcityfunds.in/#webpage",
+    "url": "https://giftcityfunds.in/",
     "name": "GIFT City Wealth | IFSC Investment Information Platform",
     "description": "Educational platform on GIFT City IFSC investment structures, funds, and regulatory framework."
   };
@@ -133,10 +133,10 @@ const Home = () => {
       <SEO
         title="GIFT City Wealth | IFSC Investment Information Platform"
         description="Educational platform on GIFT City IFSC investment structures, funds, and regulatory framework by Anup Vatyani (MFD ARN 106715)."
-        canonical="https://giftcitywealth.in/"
+        canonical="https://giftcityfunds.in/"
         schema={webPageSchema}
         breadcrumbs={[
-          { name: "Home", url: "https://giftcitywealth.in/" }
+          { name: "Home", url: "https://giftcityfunds.in/" }
         ]}
       />
       <script type="application/ld+json">

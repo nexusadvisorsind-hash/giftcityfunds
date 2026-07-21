@@ -17,10 +17,10 @@ export const SEO = ({ title, description, canonical, schema, breadcrumbs }: SEOP
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "@id": "https://giftcitywealth.in/#organization",
+  "@id": "https://giftcityfunds.in/#organization",
   "name": "GiftCity Wealth Advisory",
-  "url": "https://giftcitywealth.in",
-  "logo": "https://giftcitywealth.in/images/logo.png",
+  "url": "https://giftcityfunds.in",
+  "logo": "https://giftcityfunds.in/images/logo.png",
   "founder": {
     "@type": "Person",
     "name": "Anup Vatyani",
@@ -30,7 +30,7 @@ const organizationSchema = {
   "description": "Informational platform about GIFT City and IFSC mutual fund frameworks. No investment advice.",
   "contactPoint": [{
     "@type": "ContactPoint",
-    "email": "info@giftcitywealth.in",
+    "email": "info@giftcityfunds.in",
     "contactType": "Customer Service",
     "areaServed": "IN"
   }],
@@ -40,10 +40,10 @@ const organizationSchema = {
 const financialServiceSchema = {
   "@context": "https://schema.org",
   "@type": "FinancialService",
-  "@id": "https://giftcitywealth.in/#financialservice",
+  "@id": "https://giftcityfunds.in/#financialservice",
   "name": "GiftCity Wealth Advisory",
-  "url": "https://giftcitywealth.in",
-  "logo": "https://giftcitywealth.in/images/logo.png",
+  "url": "https://giftcityfunds.in",
+  "logo": "https://giftcityfunds.in/images/logo.png",
   "description": "Informational platform about GIFT City and IFSC mutual fund frameworks operated by Anup Vatyani (MFD ARN 106715).",
   "founder": {
     "@type": "Person",
@@ -52,7 +52,7 @@ const financialServiceSchema = {
   },
   "contactPoint": {
     "@type": "ContactPoint",
-    "email": "info@giftcitywealth.in",
+    "email": "info@giftcityfunds.in",
     "contactType": "Customer Support",
     "areaServed": "IN",
     "availableLanguage": "en"
@@ -79,14 +79,14 @@ const financialServiceSchema = {
       <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content="https://giftcitywealth.in/assets/og-image.jpg" />
+      <meta property="og:image" content="https://giftcityfunds.in/assets/og-image.jpg" />
       <meta property="og:url" content={canonical} />
       
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content="https://giftcitywealth.in/assets/og-image.jpg" />
+      <meta name="twitter:image" content="https://giftcityfunds.in/assets/og-image.jpg" />
       
       {/* Structured Data - Organization */}
       <script type="application/ld+json">
