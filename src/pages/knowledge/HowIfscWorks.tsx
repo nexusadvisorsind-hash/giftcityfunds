@@ -9,11 +9,11 @@ const HowIfscWorks = () => {
       <SEO
         title="How IFSC Works | Understanding India's International Financial Services Centre"
         description="Complete guide to IFSC operations, regulatory framework, and benefits for investors. Learn how India's International Financial Services Centre enables global investment access."
-        canonical="https://giftcitywealth.in/knowledge/how-ifsc-works"
+        canonical="https://giftcityfunds.in/knowledge/how-ifsc-works"
         breadcrumbs={[
-          { name: "Home", url: "https://giftcitywealth.in/" },
-          { name: "Resources", url: "https://giftcitywealth.in/resources" },
-          { name: "How IFSC Works", url: "https://giftcitywealth.in/knowledge/how-ifsc-works" }
+          { name: "Home", url: "https://giftcityfunds.in/" },
+          { name: "Resources", url: "https://giftcityfunds.in/resources" },
+          { name: "How IFSC Works", url: "https://giftcityfunds.in/knowledge/how-ifsc-works" }
         ]}
       />
       

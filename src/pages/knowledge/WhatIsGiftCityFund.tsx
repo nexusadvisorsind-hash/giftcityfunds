@@ -9,11 +9,11 @@ const WhatIsGiftCityFund = () => {
       <SEO
         title="What is a GIFT City Fund? | Complete Guide to IFSC Mutual Funds"
         description="Comprehensive guide explaining GIFT City funds, how they work, and how they differ from domestic mutual funds. Learn about IFSC investment opportunities."
-        canonical="https://giftcitywealth.in/knowledge/what-is-gift-city-fund"
+        canonical="https://giftcityfunds.in/knowledge/what-is-gift-city-fund"
         breadcrumbs={[
-          { name: "Home", url: "https://giftcitywealth.in/" },
-          { name: "Resources", url: "https://giftcitywealth.in/resources" },
-          { name: "What is a GIFT City Fund", url: "https://giftcitywealth.in/knowledge/what-is-gift-city-fund" }
+          { name: "Home", url: "https://giftcityfunds.in/" },
+          { name: "Resources", url: "https://giftcityfunds.in/resources" },
+          { name: "What is a GIFT City Fund", url: "https://giftcityfunds.in/knowledge/what-is-gift-city-fund" }
         ]}
       />
       

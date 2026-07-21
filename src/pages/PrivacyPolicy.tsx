@@ -14,11 +14,11 @@ const PrivacyPolicy = () => {
       <SEO
         title="Privacy Policy | GIFT City Funds"
         description="Privacy policy for GIFT City Funds - how we collect, use, and protect your information."
-        canonical="https://giftcitywealth.in/privacy-policy"
+        canonical="https://giftcityfunds.in/privacy-policy"
         schema={schema}
         breadcrumbs={[
-          { name: "Home", url: "https://giftcitywealth.in/" },
-          { name: "Privacy Policy", url: "https://giftcitywealth.in/privacy-policy" }
+          { name: "Home", url: "https://giftcityfunds.in/" },
+          { name: "Privacy Policy", url: "https://giftcityfunds.in/privacy-policy" }
         ]}
       />
       
@@ -98,7 +98,7 @@ const PrivacyPolicy = () => {
             <section>
               <h2 className="font-heading font-semibold text-2xl text-foreground mb-4">7. Your Rights</h2>
               <p className="font-body text-foreground-muted">
-                You may request access, correction, or deletion of your personal data, or withdraw consent for communication, by emailing <a href="mailto:info@giftcitywealth.in" className="text-primary hover:underline">info@giftcitywealth.in</a>.
+                You may request access, correction, or deletion of your personal data, or withdraw consent for communication, by emailing <a href="mailto:info@giftcityfunds.in" className="text-primary hover:underline">info@giftcityfunds.in</a>.
               </p>
             </section>
 

@@ -9,11 +9,11 @@ const TaxBenefitsForNris = () => {
       <SEO
         title="Tax Benefits for NRIs in GIFT City | IFSC Tax Advantages Guide"
         description="Complete guide to tax advantages for NRI investors in GIFT City IFSC. Understand DTAA benefits, capital gains treatment, and tax-efficient investment structures."
-        canonical="https://giftcitywealth.in/knowledge/tax-benefits-for-nris"
+        canonical="https://giftcityfunds.in/knowledge/tax-benefits-for-nris"
         breadcrumbs={[
-          { name: "Home", url: "https://giftcitywealth.in/" },
-          { name: "Resources", url: "https://giftcitywealth.in/resources" },
-          { name: "Tax Benefits for NRIs", url: "https://giftcitywealth.in/knowledge/tax-benefits-for-nris" }
+          { name: "Home", url: "https://giftcityfunds.in/" },
+          { name: "Resources", url: "https://giftcityfunds.in/resources" },
+          { name: "Tax Benefits for NRIs", url: "https://giftcityfunds.in/knowledge/tax-benefits-for-nris" }
         ]}
       />
       
