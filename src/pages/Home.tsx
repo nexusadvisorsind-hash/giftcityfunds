@@ -201,14 +201,14 @@ const Home = () => {
               ))}
             </ul>
 
-            <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-6">Investing Through Traditional Route vs GIFT City</h2>
-            <div className="overflow-x-auto rounded-lg border border-border">
-              <table className="w-full table-fixed text-left font-body text-sm">
+            <h2 className="font-heading font-bold text-2xl md:text-4xl text-primary mb-6">Investing Through Traditional Route vs GIFT City</h2>
+            <div className="overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0 rounded-lg border border-border">
+              <table className="min-w-[600px] w-full table-fixed text-left font-body text-sm">
                 <thead className="bg-surface">
                   <tr>
-                    <th className="w-[28%] px-4 py-3 font-heading font-semibold text-primary border-b border-border align-top">Feature</th>
-                    <th className="w-[36%] px-4 py-3 font-heading font-semibold text-primary border-b border-border align-top">Traditional Investment Route</th>
-                    <th className="w-[36%] px-4 py-3 font-heading font-semibold text-primary border-b border-border align-top">GIFT City Investment</th>
+                    <th className="w-[22%] px-3 py-2.5 md:px-4 md:py-3 font-heading font-semibold text-primary border-b border-border align-top">Feature</th>
+                    <th className="w-[39%] px-3 py-2.5 md:px-4 md:py-3 font-heading font-semibold text-primary border-b border-border align-top">Traditional Investment Route</th>
+                    <th className="w-[39%] px-3 py-2.5 md:px-4 md:py-3 font-heading font-semibold text-primary border-b border-border align-top">GIFT City Investment</th>
                   </tr>
                 </thead>
                 <tbody className="text-foreground-muted">
@@ -223,9 +223,9 @@ const Home = () => {
                     ["Investment Experience", "Multiple processes and intermediaries", "Streamlined cross-border investment experience"],
                   ].map(([feature, trad, gift]) => (
                     <tr key={feature} className="border-b border-border last:border-b-0">
-                      <td className="px-4 py-3 font-heading font-semibold text-primary align-top">{feature}</td>
-                      <td className="px-4 py-3 align-top">{trad}</td>
-                      <td className="px-4 py-3 align-top">{gift}</td>
+                      <td className="px-3 py-2.5 md:px-4 md:py-3 font-heading font-semibold text-primary align-top break-words">{feature}</td>
+                      <td className="px-3 py-2.5 md:px-4 md:py-3 align-top break-words">{trad}</td>
+                      <td className="px-3 py-2.5 md:px-4 md:py-3 align-top break-words">{gift}</td>
                     </tr>
                   ))}
                 </tbody>
