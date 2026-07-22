@@ -1,6 +1,20 @@
 # Redirect common URL variations to correct routes
+# Legacy IA — 301 to current routes
 /about-us /about 301
 /about-us/ /about 301
+/investments /funds-explained 301
+/investments/ /funds-explained 301
+/understanding-gift-city-funds /funds-explained 301
+/understanding-gift-city-funds/ /funds-explained 301
+/resources /insights 301
+/resources/ /insights 301
+/knowledge/what-is-gift-city-fund /what-is-gift-city 301
+/knowledge/how-ifsc-works /what-is-gift-city 301
+/knowledge/mutual-funds-in-gift-city /funds-explained 301
+/knowledge/tax-benefits-for-nris /taxation 301
+/team/anup-vatyani /about 301
+/privacy /privacy-policy 301
+/terms /terms-of-use 301
 
 # SPA fallback - must be last
 /* /index.html 200
