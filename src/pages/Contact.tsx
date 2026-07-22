@@ -58,6 +58,7 @@ const Contact = () => {
         <h1 className="font-heading font-bold text-3xl md:text-4xl text-primary mt-6 mb-4">Send Us a Message</h1>
         <p className="font-body text-foreground-muted mb-8">This form is for informational correspondence only. No investment or advisory services are offered. We'll get back to you within 24 hours.</p>
 
+        <h2 className="sr-only">Contact form and details</h2>
         <div className="grid md:grid-cols-2 gap-8">
           <Card>
             <CardHeader>
