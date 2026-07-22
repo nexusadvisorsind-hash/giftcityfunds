@@ -10,6 +10,9 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="min-h-screen flex flex-col">
+      <div className="bg-ink text-paper text-[11px] md:text-xs font-body text-center py-1.5 px-4 border-b border-brass/40 sticky top-0 z-50">
+        Author — Anup Vatyani (MFD ARN 106715) | Informational Content Only | No Personalized Advice.
+      </div>
       <Navigation />
       <main className="flex-1">
         {children}
