@@ -26,7 +26,7 @@ const Home = () => {
       <div className="min-h-screen">
         {/* Hero */}
         <section className="relative hero-section">
-          <div className="w-full h-[300px] sm:h-[340px] md:h-[390px] overflow-hidden bg-gradient-to-b from-background to-surface">
+          <div className="w-full h-[300px] sm:h-[340px] md:h-[390px] overflow-hidden bg-background">
             <img
               src="/images/gujrat.png"
               alt="GIFT City IFSC skyline at Gandhinagar, Gujarat"
@@ -37,12 +37,12 @@ const Home = () => {
               decoding="sync"
             />
           </div>
-          <div className="py-12 bg-background">
+          <div className="pt-10 pb-14 md:pt-12 md:pb-16 bg-background">
             <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
               <h1 className="font-heading font-bold text-3xl md:text-5xl text-primary mb-5 leading-tight">
                 GIFT City Funds, Explained Simply
               </h1>
-              <p className="font-body text-lg text-foreground-muted max-w-3xl mx-auto mb-8">
+              <p className="font-body text-lg text-foreground-muted max-w-3xl mx-auto mb-0">
                 A trusted educational resource to understand GIFT City Mutual Funds, Alternative Investment Funds (AIFs), and the IFSC investment ecosystem for NRIs, OCIs and Resident Indians.
               </p>
             </div>
