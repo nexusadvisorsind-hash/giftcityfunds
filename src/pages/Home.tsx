@@ -39,14 +39,11 @@ const Home = () => {
           </div>
           <div className="py-12 bg-background">
             <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-              <div className="inline-block mb-4 px-4 py-1.5 rounded-full bg-secondary/10 border border-secondary/30 text-xs font-body text-secondary">
-                Anup Vatyani · AMFI-Registered Mutual Fund Distributor · ARN 106715
-              </div>
               <h1 className="font-heading font-bold text-3xl md:text-5xl text-primary mb-5 leading-tight">
-                GIFT City Funds, Explained Simply — Before You Decide Anything
+                GIFT City Funds, Explained Simply
               </h1>
               <p className="font-body text-lg text-foreground-muted max-w-3xl mx-auto mb-8">
-                An independent, educational guide to IFSC mutual funds, AIFs and PMS structures for NRIs, OCIs and resident Indians — written to help you understand, not to sell you a scheme.
+                A trusted educational resource to understand GIFT City Mutual Funds, Alternative Investment Funds (AIFs), and the IFSC investment ecosystem for NRIs, OCIs and Resident Indians.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild variant="gold" size="lg" className="text-base px-6 py-4">
