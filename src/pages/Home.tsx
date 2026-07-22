@@ -26,13 +26,13 @@ const Home = () => {
       <div className="min-h-screen">
         {/* Hero */}
         <section className="relative hero-section">
-          <div className="w-full h-[420px] md:h-[520px] overflow-hidden bg-gradient-to-b from-background to-surface">
+          <div className="w-full h-[300px] sm:h-[340px] md:h-[390px] overflow-hidden bg-gradient-to-b from-background to-surface">
             <img
-              src="/images/gujrat.png"
+              src="/images/gift-city-hero-enhanced.jpg"
               alt="GIFT City IFSC skyline at Gandhinagar, Gujarat"
               className="hero-image w-full h-full object-cover object-center"
               width="1920"
-              height="1120"
+              height="860"
               fetchPriority="high"
               decoding="sync"
             />
