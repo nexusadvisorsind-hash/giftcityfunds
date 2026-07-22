@@ -46,11 +46,11 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-5 whitespace-nowrap">
+          <div className="hidden lg:flex items-center gap-4 whitespace-nowrap">
             <Link
               to="/"
               aria-label="Navigate to Home page"
-              className={`font-body text-sm font-medium transition-corporate hover:text-primary ${
+              className={`font-body text-sm font-medium whitespace-nowrap transition-corporate hover:text-primary ${
                 isActive("/") ? "text-primary" : "text-foreground-muted"
               }`}
             >
@@ -58,7 +58,7 @@ const Navigation = () => {
             </Link>
             <DropdownMenu>
               <DropdownMenuTrigger
-                className={`inline-flex items-center gap-1 font-body text-sm font-medium transition-corporate hover:text-primary focus:outline-none ${
+                className={`inline-flex items-center gap-1 font-body text-sm font-medium whitespace-nowrap transition-corporate hover:text-primary focus:outline-none ${
                   learnActive ? "text-primary" : "text-foreground-muted"
                 }`}
               >
@@ -79,7 +79,7 @@ const Navigation = () => {
                 key={item.path}
                 to={item.path}
                 aria-label={item.ariaLabel}
-                className={`font-body text-sm font-medium transition-corporate hover:text-primary ${
+                className={`font-body text-sm font-medium whitespace-nowrap transition-corporate hover:text-primary ${
                   isActive(item.path) ? "text-primary" : "text-foreground-muted"
                 }`}
               >
@@ -88,7 +88,7 @@ const Navigation = () => {
             ))}
             <Link
               to="/contact"
-              className="ml-2 inline-flex items-center rounded-full border border-brass px-4 py-1.5 font-body text-sm font-medium text-brass hover:bg-brass hover:text-primary-foreground transition-corporate"
+              className="ml-2 inline-flex items-center rounded-full border border-brass px-4 py-1.5 font-body text-sm font-medium whitespace-nowrap text-brass hover:bg-brass hover:text-primary-foreground transition-corporate"
             >
               Talk to Anup
             </Link>
