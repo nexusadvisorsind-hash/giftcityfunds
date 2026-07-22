@@ -18,7 +18,7 @@ Comprehensive performance optimizations implemented targeting Core Web Vitals me
 - Added `imagesrcset` and `imagesizes` for responsive loading
 - Explicit dimensions (1920x1080) prevent layout shift
 - `decoding="sync"` for immediate decode
-- **File location**: `/src/assets/gujrat.png.asset.json` (CDN asset)
+- **File location**: `/public/images/gujrat.png`
 
 ✅ **Critical CSS Inlined**
 - Hero section styles in `<head>` for instant render
