@@ -201,14 +201,14 @@ const Home = () => {
               ))}
             </ul>
 
-            <h3 className="font-heading font-semibold text-2xl text-primary mb-6">Investing Through Traditional Route vs GIFT City</h3>
+            <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-6">Investing multi-currency route vs Traditional route</h2>
             <div className="overflow-x-auto rounded-lg border border-border">
-              <table className="w-full text-left font-body text-sm">
+              <table className="w-full table-fixed text-left font-body text-sm">
                 <thead className="bg-surface">
                   <tr>
-                    <th className="px-4 py-3 font-heading font-semibold text-primary border-b border-border">Feature</th>
-                    <th className="px-4 py-3 font-heading font-semibold text-primary border-b border-border">Traditional Investment Route</th>
-                    <th className="px-4 py-3 font-heading font-semibold text-primary border-b border-border">GIFT City Investment</th>
+                    <th className="w-[28%] px-4 py-3 font-heading font-semibold text-primary border-b border-border align-top">Feature</th>
+                    <th className="w-[36%] px-4 py-3 font-heading font-semibold text-primary border-b border-border align-top">Traditional Investment Route</th>
+                    <th className="w-[36%] px-4 py-3 font-heading font-semibold text-primary border-b border-border align-top">GIFT City Investment</th>
                   </tr>
                 </thead>
                 <tbody className="text-foreground-muted">
@@ -222,10 +222,10 @@ const Home = () => {
                     ["Tax Efficiency", "Standard tax provisions", "Potential tax-efficient structures for eligible IFSC investments*"],
                     ["Investment Experience", "Multiple processes and intermediaries", "Streamlined cross-border investment experience"],
                   ].map(([feature, trad, gift]) => (
-                    <tr key={feature} className="border-b border-border last:border-b-0 align-top">
-                      <td className="px-4 py-3 font-heading font-semibold text-primary">{feature}</td>
-                      <td className="px-4 py-3">{trad}</td>
-                      <td className="px-4 py-3">{gift}</td>
+                    <tr key={feature} className="border-b border-border last:border-b-0">
+                      <td className="px-4 py-3 font-heading font-semibold text-primary align-top">{feature}</td>
+                      <td className="px-4 py-3 align-top">{trad}</td>
+                      <td className="px-4 py-3 align-top">{gift}</td>
                     </tr>
                   ))}
                 </tbody>
