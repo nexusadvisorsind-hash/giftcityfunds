@@ -16,8 +16,8 @@ const personSchema = {
 const About = () => (
   <>
     <SEO
-      title="About Anup Vatyani — AMFI-Registered Mutual Fund Distributor (ARN 106715)"
-      description="Meet Anup Vatyani, AMFI-registered Mutual Fund Distributor (ARN 106715) behind GIFT City Funds, an independent educational resource on IFSC investing."
+      title="About Anup Vatyani — MFD ARN 106715 | GIFT City Funds"
+      description="Anup Vatyani, AMFI-registered Mutual Fund Distributor (ARN 106715), curates GIFT City Funds — an independent educational resource on IFSC and GIFT City investing."
       canonical="https://giftcityfunds.in/about"
       schema={personSchema}
       breadcrumbs={[

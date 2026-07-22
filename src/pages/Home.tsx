@@ -16,8 +16,8 @@ const Home = () => {
   return (
     <>
       <SEO
-        title="GIFT City Funds — A Plain-English Guide to IFSC Investing"
-        description="Understand GIFT City & IFSC mutual funds, AIFs and PMS structures before you invest. Independent guide by Anup Vatyani, AMFI-registered MFD (ARN 106715)."
+        title="GIFT City Funds — IFSC Investing Explained Simply"
+        description="Independent, plain-English guide to GIFT City & IFSC mutual funds, AIFs and PMS structures for NRIs, OCIs and resident Indians. By Anup Vatyani, MFD ARN 106715."
         canonical="https://giftcityfunds.in/"
         schema={financialServiceSchema}
         breadcrumbs={[{ name: "Home", url: "https://giftcityfunds.in/" }]}
