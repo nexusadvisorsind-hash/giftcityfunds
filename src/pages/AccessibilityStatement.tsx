@@ -17,6 +17,10 @@ const AccessibilityStatement = () => {
         description="Accessibility statement for GIFT City Funds - our commitment to web accessibility standards."
         canonical="https://www.giftcityfunds.in/accessibility-statement"
         schema={schema}
+        breadcrumbs={[
+          { name: "Home", url: "https://giftcityfunds.in/" },
+          { name: "Accessibility Statement", url: "https://giftcityfunds.in/accessibility-statement" },
+        ]}
       />
       
       <div className="min-h-screen py-16 bg-background">
