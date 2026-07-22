@@ -85,8 +85,69 @@ const Home = () => {
           </div>
         </section>
 
-        {/* What Is GIFT City */}
+        {/* Why Invest Through GIFT City */}
         <section className="py-16 bg-background">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-6">Why Invest Through GIFT City?</h2>
+            <p className="font-body text-lg text-foreground-muted mb-8 leading-relaxed max-w-4xl">
+              GIFT City provides NRIs with a globally aligned investment ecosystem, offering access to professionally managed investment products through India's International Financial Services Centre (IFSC). It combines international standards, regulatory oversight, and a wider range of investment opportunities in one place.
+            </p>
+
+            <h3 className="font-heading font-semibold text-xl text-primary mb-4">Key Benefits</h3>
+            <ul className="grid md:grid-cols-2 gap-3 mb-12">
+              {[
+                "Invest in USD and other permitted foreign currencies (subject to fund structure)",
+                "Access India and global investment opportunities",
+                "Regulated by IFSCA, India's unified IFSC regulator",
+                "Professionally managed investment products",
+                "Potential tax-efficient investment structures",
+                "Diversified options across Mutual Funds, AIFs, REITs, InvITs and more",
+              ].map((b) => (
+                <li key={b} className="flex gap-3 p-4 bg-surface rounded-lg border border-border">
+                  <span className="text-secondary mt-1 shrink-0">◆</span>
+                  <span className="font-body text-sm text-foreground-muted leading-relaxed">{b}</span>
+                </li>
+              ))}
+            </ul>
+
+            <h3 className="font-heading font-semibold text-2xl text-primary mb-6">Investing Through Traditional Route vs GIFT City</h3>
+            <div className="overflow-x-auto rounded-lg border border-border">
+              <table className="w-full text-left font-body text-sm">
+                <thead className="bg-surface">
+                  <tr>
+                    <th className="px-4 py-3 font-heading font-semibold text-primary border-b border-border">Feature</th>
+                    <th className="px-4 py-3 font-heading font-semibold text-primary border-b border-border">Traditional Investment Route</th>
+                    <th className="px-4 py-3 font-heading font-semibold text-primary border-b border-border">GIFT City Investment</th>
+                  </tr>
+                </thead>
+                <tbody className="text-foreground-muted">
+                  {[
+                    ["Investment Currency", "Primarily INR", "USD and other permitted foreign currencies*"],
+                    ["Investment Opportunities", "Primarily India-focused", "India-focused and global investment opportunities"],
+                    ["Investment Products", "Mutual Funds, Stocks, Fixed Income", "Mutual Funds, AIFs, REITs, InvITs, Feeder Funds & Fund of Funds"],
+                    ["Regulatory Framework", "Multiple regulations (RBI, FEMA, SEBI, etc.)", "Unified IFSC ecosystem regulated by IFSCA"],
+                    ["Global Market Access", "Limited", "Easier access through internationally structured funds"],
+                    ["Portfolio Diversification", "Primarily domestic investments", "Diversified exposure across India and global markets"],
+                    ["Tax Efficiency", "Standard tax provisions", "Potential tax-efficient structures for eligible IFSC investments*"],
+                    ["Investment Experience", "Multiple processes and intermediaries", "Streamlined cross-border investment ecosystem"],
+                  ].map(([feature, trad, gift]) => (
+                    <tr key={feature} className="border-b border-border last:border-b-0 align-top">
+                      <td className="px-4 py-3 font-heading font-semibold text-primary">{feature}</td>
+                      <td className="px-4 py-3">{trad}</td>
+                      <td className="px-4 py-3">{gift}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="mt-6 text-xs text-foreground-muted italic">
+              *Investment features, currency options, and tax benefits vary depending on the specific fund structure, applicable regulations, and the investor's country of residence.
+            </p>
+          </div>
+        </section>
+
+        {/* What Is GIFT City */}
+        <section className="py-16 bg-surface">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-6">What Is GIFT City?</h2>
             <p className="font-body text-lg text-foreground-muted mb-6 leading-relaxed">
