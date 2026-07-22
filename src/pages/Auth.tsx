@@ -49,7 +49,7 @@ const Auth = () => {
 
   return (
     <>
-      <SEO title="Admin Sign In — GIFT City Funds" description="Administrator sign in." canonical="https://giftcityfunds.in/auth" noindex />
+      <SEO title="Admin Sign In — GIFT City Funds" description="Administrator sign in." canonical="https://giftcityfunds.in/auth" />
       <div className="min-h-[70vh] flex items-center justify-center px-4 py-16 bg-surface">
         <form onSubmit={submit} className="w-full max-w-md bg-background border border-border rounded-lg p-8 space-y-5">
           <h1 className="font-heading text-2xl font-bold text-primary">
