@@ -18,7 +18,7 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "@id": "https://giftcityfunds.in/#organization",
-  "name": "GiftCity Wealth Advisory",
+  "name": "GIFT City Funds",
   "url": "https://giftcityfunds.in",
   "logo": "https://giftcityfunds.in/images/logo.png",
   "founder": {
@@ -37,30 +37,13 @@ const organizationSchema = {
   "sameAs": ["https://www.linkedin.com/in/anup-vatyani"]
 };
 
-const financialServiceSchema = {
+const websiteSchema = {
   "@context": "https://schema.org",
-  "@type": "FinancialService",
-  "@id": "https://giftcityfunds.in/#financialservice",
-  "name": "GiftCity Wealth Advisory",
+  "@type": "WebSite",
+  "@id": "https://giftcityfunds.in/#website",
+  "name": "GIFT City Funds",
   "url": "https://giftcityfunds.in",
-  "logo": "https://giftcityfunds.in/images/logo.png",
-  "description": "Informational platform about GIFT City and IFSC mutual fund frameworks operated by Anup Vatyani (MFD ARN 106715).",
-  "founder": {
-    "@type": "Person",
-    "name": "Anup Vatyani",
-    "jobTitle": "Mutual Fund Distributor"
-  },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "email": "info@giftcityfunds.in",
-    "contactType": "Customer Support",
-    "areaServed": "IN",
-    "availableLanguage": "en"
-  },
-  "areaServed": {
-    "@type": "Country",
-    "name": "India"
-  }
+  "publisher": { "@id": "https://giftcityfunds.in/#organization" },
 };
 
   return (
@@ -75,7 +58,7 @@ const financialServiceSchema = {
       <link rel="canonical" href={canonical} />
       
       {/* Open Graph / Facebook */}
-      <meta property="og:site_name" content="GiftCityWealth.in" />
+      <meta property="og:site_name" content="GIFT City Funds" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
@@ -95,7 +78,7 @@ const financialServiceSchema = {
       
       {/* Structured Data - Financial Service */}
       <script type="application/ld+json">
-        {JSON.stringify(financialServiceSchema)}
+        {JSON.stringify(websiteSchema)}
       </script>
       
       {/* Additional Page-Specific Schema */}

@@ -48,18 +48,32 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">
-                  About GIFT City
-                </Link>
+                <Link to="/what-is-gift-city" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">What is GIFT City</Link>
               </li>
               <li>
-                <Link to="/investments" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">
-                  Investment Structures
-                </Link>
+                <Link to="/funds-explained" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Funds Explained</Link>
+              </li>
+              <li>
+                <Link to="/who-its-for" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Who It's For</Link>
+              </li>
+              <li>
+                <Link to="/us-based-nris" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">US NRIs</Link>
+              </li>
+              <li>
+                <Link to="/taxation" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Taxation</Link>
+              </li>
+              <li>
+                <Link to="/insights" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Insights</Link>
+              </li>
+              <li>
+                <Link to="/faqs" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">FAQs</Link>
+              </li>
+              <li>
+                <Link to="/about" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">About</Link>
               </li>
               <li>
                 <Link to="/contact" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">
-                  Contact Us
+                  Contact
                 </Link>
               </li>
             </ul>
@@ -95,9 +109,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/team/anup-vatyani" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">
-                  About Author
-                </Link>
+              <Link to="/about" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">About Author</Link>
               </li>
             </ul>
           </div>
@@ -111,9 +123,9 @@ const Footer = () => {
                 Home
               </Link>
               <span className="text-primary-foreground/40">|</span>
-              <Link to="/investments" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate px-2 py-1">
-                Understanding GIFT City Funds
-              </Link>
+              <Link to="/funds-explained" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate px-2 py-1">Funds Explained</Link>
+              <span className="text-primary-foreground/40">|</span>
+              <Link to="/faqs" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate px-2 py-1">FAQs</Link>
               <span className="text-primary-foreground/40">|</span>
               <Link to="/about" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate px-2 py-1">
                 About
@@ -135,9 +147,7 @@ const Footer = () => {
                 Contact
               </Link>
               <span className="text-primary-foreground/40">|</span>
-              <Link to="/team/anup-vatyani" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate px-2 py-1">
-                About Author
-              </Link>
+              <Link to="/insights" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate px-2 py-1">Insights</Link>
             </div>
           </nav>
 

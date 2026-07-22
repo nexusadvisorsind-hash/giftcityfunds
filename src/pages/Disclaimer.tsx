@@ -1,92 +1,32 @@
 import { SEO } from "@/components/SEO";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 
-const Disclaimer = () => {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Disclaimer",
-    "about": "Legal and informational policies of GiftCityWealth.in"
-  };
-
-  return (
-    <>
-      <SEO
-        title="Disclaimer | GIFT City Funds"
-        description="Disclaimer for GIFT City Funds - informational content only, no personalized investment advice."
-        canonical="https://giftcityfunds.in/disclaimer"
-        schema={schema}
-        breadcrumbs={[
-          { name: "Home", url: "https://giftcityfunds.in/" },
-          { name: "Disclaimer", url: "https://giftcityfunds.in/disclaimer" }
-        ]}
-      />
-      
-      <div className="min-h-screen py-16 bg-background">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Breadcrumbs items={[
-            { name: "Home", url: "/" },
-            { name: "Disclaimer", url: "/disclaimer" }
-          ]} />
-
-          <p className="text-sm text-foreground-muted mb-4">Last Updated: October 2025</p>
-          
-          <h1 className="font-heading font-bold text-4xl text-primary mb-8">⚖️ Disclaimer</h1>
-          
-          <div className="prose prose-lg max-w-none space-y-8">
-            <section>
-              <h2 className="font-heading font-semibold text-2xl text-foreground mb-4">1. Purpose & Scope</h2>
-              <p className="font-body text-foreground-muted">
-                The information contained on this website is provided for educational and informational purposes only. It is not intended as financial, investment, tax, or legal advice. Users should seek independent professional counsel before making any financial decisions.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="font-heading font-semibold text-2xl text-foreground mb-4">2. No Professional Advice</h2>
-              <p className="font-body text-foreground-muted">
-                This website does not provide personalized investment, advisory, or solicitation services. The information shared is general in nature and should not be interpreted as a recommendation for any financial product or service.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="font-heading font-semibold text-2xl text-foreground mb-4">3. Accuracy & Updates</h2>
-              <p className="font-body text-foreground-muted">
-                While efforts are made to ensure accuracy and currency, we make no warranties or representations, express or implied, regarding the completeness, reliability, or suitability of any information on this website.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="font-heading font-semibold text-2xl text-foreground mb-4">4. Third-Party Links</h2>
-              <p className="font-body text-foreground-muted">
-                Links to third-party websites or resources are provided for informational convenience only. We do not control or endorse these external sites and assume no responsibility for their content or privacy practices.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="font-heading font-semibold text-2xl text-foreground mb-4">5. Use at Your Own Risk</h2>
-              <p className="font-body text-foreground-muted">
-                Your use of this website and reliance on any information herein are entirely at your own risk. The website owners and contributors shall not be liable for any damages or losses arising from such use.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="font-heading font-semibold text-2xl text-foreground mb-4">6. Limitation of Liability</h2>
-              <p className="font-body text-foreground-muted">
-                To the maximum extent permitted by law, we disclaim any liability for direct, indirect, incidental, consequential, or punitive damages resulting from your access to or use of this site.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="font-heading font-semibold text-2xl text-foreground mb-4">7. Modifications</h2>
-              <p className="font-body text-foreground-muted">
-                We reserve the right to modify, update, or remove website content at any time without prior notice.
-              </p>
-            </section>
-          </div>
-        </div>
+const Disclaimer = () => (
+  <>
+    <SEO
+      title="Disclaimer & Risk Disclosure — GIFT City Funds"
+      description="Legal disclaimer and risk disclosure for the GIFT City Funds educational resource."
+      canonical="https://giftcityfunds.in/disclaimer"
+      breadcrumbs={[
+        { name: "Home", url: "https://giftcityfunds.in/" },
+        { name: "Disclaimer", url: "https://giftcityfunds.in/disclaimer" },
+      ]}
+    />
+    <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
+      <Breadcrumbs items={[{ name: "Home", url: "/" }, { name: "Disclaimer", url: "/disclaimer" }]} />
+      <h1 className="font-heading font-bold text-3xl md:text-4xl text-primary mt-6 mb-8">Disclaimer & Risk Disclosure</h1>
+      <div className="font-body text-foreground-muted space-y-5">
+        <p><strong className="text-primary">Nature of this website.</strong> This website ("GIFT City Funds") is an independent educational resource created and maintained by Anup Vatyani. It is intended solely to help visitors understand GIFT City, IFSC regulation, and the general structure and mechanics of GIFT City-based investment products.</p>
+        <p><strong className="text-primary">Not investment advice.</strong> Nothing on this website constitutes investment advice, a recommendation, or a solicitation to buy or sell any security, fund, or financial product. Anup Vatyani is registered with AMFI as a Mutual Fund Distributor (ARN 106715) and is not a SEBI-Registered Investment Adviser. Any facilitation of mutual fund transactions is undertaken strictly in the capacity of a distributor.</p>
+        <p><strong className="text-primary">Not tax or legal advice.</strong> Tax-related content on this website, including content specific to US-based investors, is provided for general educational purposes only, may not reflect the most current rules, and does not account for individual circumstances. Always consult a qualified Chartered Accountant or tax professional in your jurisdiction before making any decision.</p>
+        <p><strong className="text-primary">Risk disclosure.</strong> Mutual funds, AIFs, PMS and other investment products referenced on this site are subject to market risk. Past performance, where referenced, is not indicative of future returns. Read all scheme-related documents carefully before investing.</p>
+        <p><strong className="text-primary">Third-party information.</strong> Where this site references regulatory frameworks, tax rates, or scheme details, information is sourced from publicly available material believed to be reliable at the time of publication, but is not guaranteed for accuracy or completeness, and is subject to change without notice.</p>
+        <p><strong className="text-primary">No liability.</strong> Anup Vatyani and this website accept no liability for any loss arising from the use of, or reliance on, information provided here.</p>
+        <p><strong className="text-primary">Grievance redressal.</strong> For any complaints, feedback, or concerns regarding this website or its content, please write to info@giftcityfunds.in. We aim to acknowledge all queries within 2 business days. Investors may also escalate concerns through AMFI's official investor grievance mechanisms.</p>
+        <p className="pt-4 text-sm">Author — Anup Vatyani (MFD ARN 106715) | Informational Content Only | No Personalized Advice.</p>
       </div>
-    </>
-  );
-};
+    </div>
+  </>
+);
 
 export default Disclaimer;
