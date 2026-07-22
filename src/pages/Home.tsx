@@ -45,11 +45,8 @@ const Home = () => {
               <p className="font-body text-lg text-foreground-muted max-w-3xl mx-auto mb-8">
                 A trusted educational resource to understand GIFT City Mutual Funds, Alternative Investment Funds (AIFs), and the IFSC investment ecosystem for NRIs, OCIs and Resident Indians.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex justify-center">
                 <Button asChild variant="gold" size="lg">
-                  <Link to="/what-is-gift-city">Start with the Basics <ArrowRight className="ml-2 h-5 w-5" /></Link>
-                </Button>
-                <Button asChild variant="outline" size="lg">
                   <Link to="/contact">Talk to Anup</Link>
                 </Button>
               </div>
