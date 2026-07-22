@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { SEO } from "@/components/SEO";
-import { ArrowRight, Landmark, Layers, Wallet, MessageCircle, CircleDollarSign, TrendingUp, Building2, UserCog } from "lucide-react";
+import { ArrowRight, Landmark, Layers, Wallet, MessageCircle, CircleDollarSign, TrendingUp, Building2, UserCog, BookOpen, UserCheck, FileText, CheckCircle2 } from "lucide-react";
 
 const Home = () => {
   const financialServiceSchema = {
@@ -278,6 +278,55 @@ const Home = () => {
 
         {/* How Anup Can Help */}
 
+        <section className="py-16 bg-background">
+        </section>
+
+        {/* How to Invest — placed before How Anup Can Help */}
+        <section className="py-16 bg-surface">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-4">How to Invest in GIFT City Funds</h2>
+            <p className="font-body text-lg text-foreground-muted mb-8 max-w-4xl leading-relaxed">
+              Advantages tell you <em>why</em>. This tells you <em>what to do next</em> — five practical steps most NRI, OCI and Resident Indian investors follow.
+            </p>
+            <ol className="space-y-4 list-none p-0 mb-8">
+              {[
+                { icon: BookOpen, title: "Understand the structures", body: "Learn how Mutual Fund FoFs, Retail Feeder Funds, AIFs and PMS differ.", to: "/funds-explained", cta: "Funds Explained" },
+                { icon: UserCheck, title: "Check your eligibility & route", body: "NRI, OCI or Resident Indian — and if US-based, verify PFIC / Non-PFIC status first.", to: "/who-its-for", cta: "Who It's For", to2: "/us-based-nris", cta2: "US NRIs" },
+                { icon: FileText, title: "Gather your documents", body: "KYC pack: passport, PAN, overseas address proof, tax residency certificate (as applicable)." },
+                { icon: MessageCircle, title: "Talk to Anup", body: "Get connected with the right Fund Management Entity — no call-centre routing.", to: "/contact", cta: "Contact Anup" },
+                { icon: CheckCircle2, title: "Complete onboarding and invest", body: "Sign subscription documents, complete KYC with the FME, remit funds, receive allotment." },
+              ].map((s, i) => (
+                <li key={s.title} className="flex gap-4 bg-background p-5 rounded-lg border border-border">
+                  <div className="shrink-0 w-9 h-9 rounded-full bg-secondary/15 border border-secondary/40 flex items-center justify-center font-heading font-bold text-secondary">
+                    {i + 1}
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-1">
+                      <s.icon className="h-5 w-5 text-secondary" />
+                      <h3 className="font-heading font-semibold text-primary">{s.title}</h3>
+                    </div>
+                    <p className="font-body text-sm text-foreground-muted leading-relaxed mb-2">{s.body}</p>
+                    {s.to && (
+                      <Link to={s.to} className="font-body text-sm text-secondary hover:underline inline-flex items-center mr-4">
+                        {s.cta} <ArrowRight className="ml-1 h-3.5 w-3.5" />
+                      </Link>
+                    )}
+                    {s.to2 && (
+                      <Link to={s.to2} className="font-body text-sm text-secondary hover:underline inline-flex items-center">
+                        {s.cta2} <ArrowRight className="ml-1 h-3.5 w-3.5" />
+                      </Link>
+                    )}
+                  </div>
+                </li>
+              ))}
+            </ol>
+            <Link to="/how-to-invest" className="font-body text-secondary hover:underline inline-flex items-center">
+              See the full step-by-step guide <ArrowRight className="ml-1 h-4 w-4" />
+            </Link>
+          </div>
+        </section>
+
+        {/* How Anup Can Help (continued) */}
         <section className="py-16 bg-background">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-6">How Anup Can Help</h2>
