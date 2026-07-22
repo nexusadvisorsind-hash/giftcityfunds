@@ -17,12 +17,12 @@ const Navigation = () => {
     { label: "What Is GIFT City", path: "/what-is-gift-city", ariaLabel: "What is GIFT City and IFSC" },
     { label: "Funds Explained", path: "/funds-explained", ariaLabel: "GIFT City fund structures explained" },
     { label: "Who It's For", path: "/who-its-for", ariaLabel: "Who invests in GIFT City funds" },
-    { label: "For US NRIs", path: "/us-based-nris", ariaLabel: "GIFT City funds for US-based NRIs" },
     { label: "Taxation", path: "/taxation", ariaLabel: "Taxation and regulatory framework" },
   ];
 
   const navItems = [
     { label: "Home", path: "/", ariaLabel: "Navigate to Home page" },
+    { label: "For US NRIs", path: "/us-based-nris", ariaLabel: "GIFT City funds for US-based NRIs" },
     { label: "FAQs", path: "/faqs", ariaLabel: "Frequently asked questions" },
     { label: "Insights", path: "/insights", ariaLabel: "GIFT City insights and articles" },
     { label: "About", path: "/about", ariaLabel: "About the contributor Anup Vatyani" },
