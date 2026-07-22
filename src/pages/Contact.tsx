@@ -45,8 +45,8 @@ const Contact = () => {
   return (
     <>
       <SEO
-        title="Contact GIFT City Funds — Anup Vatyani (MFD ARN 106715)"
-        description="Get in touch with Anup Vatyani, AMFI-registered Mutual Fund Distributor (ARN 106715), for informational correspondence on GIFT City and IFSC fund investing."
+        title="Contact — GIFT City Funds | Anup Vatyani, MFD ARN 106715"
+        description="Reach Anup Vatyani for informational questions on GIFT City and IFSC funds. Email, phone and a short contact form — no advisory or solicitation."
         canonical="https://giftcityfunds.in/contact"
         breadcrumbs={[
           { name: "Home", url: "https://giftcityfunds.in/" },
