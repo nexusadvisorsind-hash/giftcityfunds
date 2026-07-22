@@ -19,8 +19,9 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'body': ['Open Sans', 'system-ui', 'sans-serif'],
-				'heading': ['Poppins', 'system-ui', 'sans-serif'],
+				'body': ['Public Sans', 'system-ui', 'sans-serif'],
+				'heading': ['Fraunces', 'ui-serif', 'Georgia', 'serif'],
+				'data': ['IBM Plex Mono', 'ui-monospace', 'monospace'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -32,6 +33,16 @@ export default {
 				'surface-elevated': 'hsl(var(--surface-elevated))',
 				'foreground-muted': 'hsl(var(--foreground-muted))',
 				'foreground-subtle': 'hsl(var(--foreground-subtle))',
+				ink: 'hsl(var(--ink))',
+				paper: 'hsl(var(--paper))',
+				brass: {
+					DEFAULT: 'hsl(var(--brass))',
+					light: 'hsl(var(--brass-light))',
+					dark: 'hsl(var(--brass-dark))',
+				},
+				'rupee-indigo': 'hsl(var(--rupee-indigo))',
+				'dollar-clay': 'hsl(var(--dollar-clay))',
+				line: 'hsl(var(--line))',
 				'corporate-blue': 'hsl(var(--corporate-blue))',
 				'corporate-gold': 'hsl(var(--corporate-gold))',
 				'corporate-blue-light': 'hsl(var(--corporate-blue-light))',

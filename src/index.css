@@ -9,45 +9,57 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Core Brand Colors */
-    --corporate-blue: 227 87% 15%;     /* #0A2463 */
-    --corporate-gold: 45 74% 53%;      /* #D4AF37 */
-    --corporate-blue-light: 227 60% 25%;
-    --corporate-blue-dark: 227 95% 10%;
-    --corporate-gold-light: 45 85% 70%;
-    --corporate-gold-dark: 45 65% 40%;
-    
+    /* GIFT City Funds — Palette
+       Ink #10182A · Paper #F5F4EF · Brass #AD8A3D
+       Rupee Indigo #38456B · Dollar Clay #8B4A36 · Line #DAD5C8 */
+    --ink: 224 47% 12%;
+    --paper: 48 21% 95%;
+    --brass: 41 48% 46%;
+    --brass-light: 41 48% 58%;
+    --brass-dark: 41 48% 36%;
+    --rupee-indigo: 222 31% 32%;
+    --dollar-clay: 13 44% 38%;
+    --line: 42 22% 82%;
+
+    /* Legacy aliases kept so existing components keep working */
+    --corporate-blue: var(--ink);
+    --corporate-gold: var(--brass);
+    --corporate-blue-light: var(--rupee-indigo);
+    --corporate-blue-dark: var(--ink);
+    --corporate-gold-light: var(--brass-light);
+    --corporate-gold-dark: var(--brass-dark);
+
     /* Background & Surface */
-    --background: 0 0% 100%;
-    --surface: 220 14% 98%;
+    --background: 48 21% 95%;         /* Paper */
+    --surface: 46 22% 92%;
     --surface-elevated: 0 0% 100%;
-    
-    /* Text Colors */
-    --foreground: 227 25% 20%;
-    --foreground-muted: 220 9% 55%;
-    --foreground-subtle: 220 9% 70%;
-    
-    /* Component Colors */
+
+    /* Text */
+    --foreground: 224 47% 12%;         /* Ink */
+    --foreground-muted: 224 20% 32%;
+    --foreground-subtle: 224 12% 48%;
+
+    /* Component */
     --card: 0 0% 100%;
-    --card-foreground: 227 25% 20%;
+    --card-foreground: 224 47% 12%;
     --popover: 0 0% 100%;
-    --popover-foreground: 227 25% 20%;
-    
-    /* Primary (Corporate Blue) */
-    --primary: 227 87% 15%;
-    --primary-foreground: 0 0% 100%;
-    --primary-hover: 227 60% 25%;
-    
-    /* Secondary (Corporate Gold) */
-    --secondary: 45 74% 53%;
-    --secondary-foreground: 227 25% 20%;
-    --secondary-hover: 45 85% 70%;
-    
-    /* Accent & Muted */
-    --accent: 220 14% 96%;
-    --accent-foreground: 227 25% 20%;
-    --muted: 220 14% 96%;
-    --muted-foreground: 220 9% 55%;
+    --popover-foreground: 224 47% 12%;
+
+    /* Primary = Ink */
+    --primary: 224 47% 12%;
+    --primary-foreground: 48 21% 95%;
+    --primary-hover: 222 31% 22%;
+
+    /* Secondary = Brass */
+    --secondary: 41 48% 46%;
+    --secondary-foreground: 224 47% 12%;
+    --secondary-hover: 41 48% 40%;
+
+    /* Accent = Rupee Indigo (subtle) */
+    --accent: 46 22% 92%;
+    --accent-foreground: 224 47% 12%;
+    --muted: 46 22% 92%;
+    --muted-foreground: 224 20% 32%;
     
     /* Status Colors */
     --success: 120 60% 45%;
@@ -58,20 +70,20 @@ All colors MUST be HSL.
     --destructive-foreground: 0 0% 100%;
     
     /* Borders & Inputs */
-    --border: 220 14% 90%;
-    --input: 220 14% 90%;
-    --ring: 227 87% 15%;
-    
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--corporate-blue)), hsl(var(--corporate-blue-light)));
-    --gradient-gold: linear-gradient(135deg, hsl(var(--corporate-gold)), hsl(var(--corporate-gold-light)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--corporate-blue)) 0%, hsl(var(--corporate-blue-light)) 100%);
+    --border: 42 22% 82%;              /* Line */
+    --input: 42 22% 82%;
+    --ring: 41 48% 46%;                /* Brass */
+
+    /* Gradients — Ink → Rupee Indigo signature diagonal */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--ink)), hsl(var(--rupee-indigo)));
+    --gradient-gold: linear-gradient(135deg, hsl(var(--brass)), hsl(var(--brass-light)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--ink)) 0%, hsl(var(--rupee-indigo)) 100%);
     
     /* Shadows */
-    --shadow-soft: 0 2px 8px -2px hsl(var(--corporate-blue) / 0.1);
-    --shadow-medium: 0 4px 16px -4px hsl(var(--corporate-blue) / 0.15);
-    --shadow-strong: 0 8px 32px -8px hsl(var(--corporate-blue) / 0.2);
-    --shadow-gold: 0 4px 20px -4px hsl(var(--corporate-gold) / 0.3);
+    --shadow-soft: 0 2px 8px -2px hsl(var(--ink) / 0.08);
+    --shadow-medium: 0 4px 16px -4px hsl(var(--ink) / 0.12);
+    --shadow-strong: 0 8px 32px -8px hsl(var(--ink) / 0.18);
+    --shadow-gold: 0 4px 20px -4px hsl(var(--brass) / 0.25);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -145,7 +157,7 @@ All colors MUST be HSL.
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading font-semibold;
+    @apply font-heading font-medium tracking-tight;
   }
 
   /* Corporate styling utilities */
@@ -178,3 +190,31 @@ All colors MUST be HSL.
     box-shadow: var(--shadow-strong);
   }
 }
+
+/* Meridian Line — signature horizontal rule with ₹ on left, $ on right */
+.meridian-line {
+  position: relative;
+  height: 1px;
+  background: hsl(var(--brass));
+  margin: 2rem 0;
+}
+.meridian-line::before,
+.meridian-line::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.75rem;
+  color: hsl(var(--brass));
+  background: hsl(var(--background));
+  padding: 0 0.5rem;
+}
+.meridian-line::before { content: '₹'; left: 0; }
+.meridian-line::after  { content: '$'; right: 0; }
+.meridian-line-light::before,
+.meridian-line-light::after {
+  background: transparent;
+  color: hsl(var(--brass-light));
+}
+
+.font-data { font-family: 'IBM Plex Mono', ui-monospace, monospace; }
