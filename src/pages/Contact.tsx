@@ -8,8 +8,6 @@ import { useToast } from "@/hooks/use-toast";
 import { SEO } from "@/components/SEO";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 
-const CALENDLY_URL = "https://calendly.com/your-calendly-username/30min";
-
 type FormState = {
   name: string; email: string; phone: string; whatsapp: string;
   location: string; country: string; investorType: string; message: string;
@@ -82,7 +80,6 @@ const Contact = () => {
                 <Textarea name="message" value={form.message} onChange={handleChange} placeholder="Message" rows={6} aria-label="Message" />
                 <div className="flex gap-3">
                   <Button type="submit" disabled={loading} variant="gold">{loading ? "Sending..." : "Send"}</Button>
-                  <Button type="button" variant="outline" onClick={() => window.open(CALENDLY_URL, "_blank")}>Book a Call</Button>
                 </div>
               </form>
             </CardContent>

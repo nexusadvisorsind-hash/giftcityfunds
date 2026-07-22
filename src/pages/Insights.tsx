@@ -1,7 +1,10 @@
+import { useState } from "react";
 import { SEO } from "@/components/SEO";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 
 const seedArticles = [
   "GIFT City vs Direct Foreign Investment: What Actually Changes for an NRI",
@@ -14,7 +17,34 @@ const seedArticles = [
   "Ten Questions NRIs Actually Ask About GIFT City",
 ];
 
-const Insights = () => (
+const Insights = () => {
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  async function handleSubscribe(e: React.FormEvent) {
+    e.preventDefault();
+    const trimmed = email.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmed)) {
+      toast.error("Please enter a valid email address.");
+      return;
+    }
+    setLoading(true);
+    try {
+      const { error } = await supabase.functions.invoke("subscribe-newsletter", {
+        body: { email: trimmed, source: "insights_page" },
+      });
+      if (error) throw error;
+      toast.success("Subscribed!", { description: "You'll get new GIFT City articles in your inbox." });
+      setEmail("");
+    } catch (err) {
+      console.error(err);
+      toast.error("Subscription failed", { description: "Please try again in a moment." });
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  return (
   <>
     <SEO
       title="Insights — GIFT City & IFSC Fund Articles"
@@ -32,9 +62,19 @@ const Insights = () => (
 
       <div className="bg-surface border border-border p-6 rounded-lg mb-12">
         <h2 className="font-heading font-semibold text-primary mb-2">Get new GIFT City articles by email</h2>
-        <form className="flex flex-col sm:flex-row gap-3" onSubmit={(e) => e.preventDefault()}>
-          <Input type="email" placeholder="you@example.com" aria-label="Email address" className="flex-1" />
-          <Button type="submit" variant="gold">Subscribe</Button>
+        <form className="flex flex-col sm:flex-row gap-3" onSubmit={handleSubscribe}>
+          <Input
+            type="email"
+            placeholder="you@example.com"
+            aria-label="Email address"
+            className="flex-1"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <Button type="submit" variant="gold" disabled={loading}>
+            {loading ? "Subscribing..." : "Subscribe"}
+          </Button>
         </form>
       </div>
 
@@ -49,6 +89,7 @@ const Insights = () => (
       </div>
     </div>
   </>
-);
+  );
+};
 
 export default Insights;

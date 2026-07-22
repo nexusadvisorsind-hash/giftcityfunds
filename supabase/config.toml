@@ -2,3 +2,6 @@ project_id = "cdmpyjhbfqwufcgjdxbf"
 
 [functions.submit-contact-form]
 verify_jwt = false
+
+[functions.subscribe-newsletter]
+verify_jwt = false
