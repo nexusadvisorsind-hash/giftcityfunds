@@ -201,14 +201,16 @@ const Home = () => {
               ))}
             </ul>
 
-            <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-6">Investing Through Traditional Route vs GIFT City</h2>
-            <div className="overflow-x-auto rounded-lg border border-border">
+            <h2 className="font-heading font-bold text-2xl md:text-4xl text-primary mb-6">Investing Through Traditional Route vs GIFT City</h2>
+
+            {/* Desktop table */}
+            <div className="hidden md:block overflow-x-auto rounded-lg border border-border">
               <table className="w-full table-fixed text-left font-body text-sm">
                 <thead className="bg-surface">
                   <tr>
-                    <th className="w-[28%] px-4 py-3 font-heading font-semibold text-primary border-b border-border align-top">Feature</th>
-                    <th className="w-[36%] px-4 py-3 font-heading font-semibold text-primary border-b border-border align-top">Traditional Investment Route</th>
-                    <th className="w-[36%] px-4 py-3 font-heading font-semibold text-primary border-b border-border align-top">GIFT City Investment</th>
+                    <th className="w-[24%] px-4 py-3 font-heading font-semibold text-primary border-b border-border align-top">Feature</th>
+                    <th className="w-[38%] px-4 py-3 font-heading font-semibold text-primary border-b border-border align-top">Traditional Investment Route</th>
+                    <th className="w-[38%] px-4 py-3 font-heading font-semibold text-primary border-b border-border align-top">GIFT City Investment</th>
                   </tr>
                 </thead>
                 <tbody className="text-foreground-muted">
@@ -223,13 +225,41 @@ const Home = () => {
                     ["Investment Experience", "Multiple processes and intermediaries", "Streamlined cross-border investment experience"],
                   ].map(([feature, trad, gift]) => (
                     <tr key={feature} className="border-b border-border last:border-b-0">
-                      <td className="px-4 py-3 font-heading font-semibold text-primary align-top">{feature}</td>
-                      <td className="px-4 py-3 align-top">{trad}</td>
-                      <td className="px-4 py-3 align-top">{gift}</td>
+                      <td className="px-4 py-3 font-heading font-semibold text-primary align-top break-words">{feature}</td>
+                      <td className="px-4 py-3 align-top break-words">{trad}</td>
+                      <td className="px-4 py-3 align-top break-words">{gift}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
+            </div>
+
+            {/* Mobile stacked cards */}
+            <div className="md:hidden space-y-4">
+              {[
+                ["Investment Currency", "Primarily INR", "USD and other permitted foreign currencies*"],
+                ["Investment Opportunities", "Primarily India-focused", "India-focused and global investment opportunities"],
+                ["Investment Products", "Mutual Funds, Stocks, Fixed Income", "Mutual Funds, AIFs, REITs, InvITs, Feeder Funds & Fund of Funds"],
+                ["Regulatory Framework", "Multiple regulations (RBI, FEMA, SEBI, etc.)", "Unified IFSC ecosystem regulated by IFSCA"],
+                ["Global Market Access", "Limited", "Easier access through internationally structured funds"],
+                ["Portfolio Diversification", "Primarily domestic investments", "Diversified exposure across India and global markets"],
+                ["Tax Efficiency", "Standard tax provisions", "Potential tax-efficient structures for eligible IFSC investments*"],
+                ["Investment Experience", "Multiple processes and intermediaries", "Streamlined cross-border investment experience"],
+              ].map(([feature, trad, gift]) => (
+                <div key={feature} className="bg-surface rounded-lg border border-border p-4">
+                  <h4 className="font-heading font-semibold text-primary mb-3">{feature}</h4>
+                  <div className="space-y-3">
+                    <div>
+                      <span className="block text-xs font-heading font-semibold text-foreground-muted uppercase tracking-wide mb-1">Traditional Route</span>
+                      <p className="font-body text-sm text-foreground-muted break-words">{trad}</p>
+                    </div>
+                    <div className="pt-3 border-t border-border">
+                      <span className="block text-xs font-heading font-semibold text-secondary uppercase tracking-wide mb-1">GIFT City</span>
+                      <p className="font-body text-sm text-foreground-muted break-words">{gift}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
             <p className="mt-6 text-xs text-foreground-muted italic">
               *Investment features, currency options, and tax benefits vary depending on the specific fund structure, applicable regulations, and the investor's country of residence.
