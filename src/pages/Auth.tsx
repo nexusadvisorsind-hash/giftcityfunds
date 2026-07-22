@@ -71,6 +71,25 @@ const Auth = () => {
           <h1 className="font-heading text-2xl font-bold text-primary">
             {mode === "signin" ? "Admin Sign In" : "Create Admin Account"}
           </h1>
+
+          {status && (
+            <div
+              role="alert"
+              className={`flex items-start gap-3 rounded-md p-4 text-sm ${
+                status.type === "success"
+                  ? "bg-green-50 text-green-900 border border-green-200"
+                  : "bg-red-50 text-red-900 border border-red-200"
+              }`}
+            >
+              {status.type === "success" ? (
+                <CheckCircle2 className="w-5 h-5 text-green-600 shrink-0 mt-0.5" aria-hidden="true" />
+              ) : (
+                <AlertCircle className="w-5 h-5 text-red-600 shrink-0 mt-0.5" aria-hidden="true" />
+              )}
+              <span>{status.message}</span>
+            </div>
+          )}
+
           <div className="space-y-2">
             <Label htmlFor="email">Email</Label>
             <Input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
@@ -85,7 +104,10 @@ const Auth = () => {
           <button
             type="button"
             className="text-sm text-secondary hover:underline w-full text-center"
-            onClick={() => setMode(mode === "signin" ? "signup" : "signin")}
+            onClick={() => {
+              setMode(mode === "signin" ? "signup" : "signin");
+              setStatus(null);
+            }}
           >
             {mode === "signin" ? "Need to create an account?" : "Already have an account? Sign in"}
           </button>
