@@ -15,15 +15,14 @@ import Taxation from "./pages/Taxation";
 import Faqs from "./pages/Faqs";
 import Insights from "./pages/Insights";
 import Contact from "./pages/Contact";
-import Privacy from "./pages/Privacy";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfUse from "./pages/TermsOfUse";
-import Terms from "./pages/Terms";
 import AccessibilityStatement from "./pages/AccessibilityStatement";
 import Disclaimer from "./pages/Disclaimer";
 import NotFound from "./pages/NotFound";
 import Auth from "./pages/Auth";
 import Admin from "./pages/Admin";
+import HowToInvest from "./pages/HowToInvest";
 
 const queryClient = new QueryClient();
 
@@ -49,11 +48,13 @@ const App = () => (
               <Route path="/auth" element={<Auth />} />
               <Route path="/admin" element={<Admin />} />
               <Route path="/disclaimer" element={<Disclaimer />} />
-              <Route path="/privacy" element={<Privacy />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/terms-of-use" element={<TermsOfUse />} />
-              <Route path="/terms" element={<Terms />} />
               <Route path="/accessibility-statement" element={<AccessibilityStatement />} />
+              <Route path="/how-to-invest" element={<HowToInvest />} />
+              {/* Consolidated legacy legal routes */}
+              <Route path="/privacy" element={<Navigate to="/privacy-policy" replace />} />
+              <Route path="/terms" element={<Navigate to="/terms-of-use" replace />} />
               {/* Redirects from prior IA */}
               <Route path="/about-us" element={<Navigate to="/about" replace />} />
               <Route path="/investments" element={<Navigate to="/funds-explained" replace />} />
