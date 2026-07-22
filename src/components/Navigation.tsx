@@ -18,6 +18,7 @@ const Navigation = () => {
     { label: "Funds Explained", path: "/funds-explained", ariaLabel: "GIFT City fund structures explained" },
     { label: "Who It's For", path: "/who-its-for", ariaLabel: "Who invests in GIFT City funds" },
     { label: "Taxation", path: "/taxation", ariaLabel: "Taxation and regulatory framework" },
+    { label: "How to Invest", path: "/how-to-invest", ariaLabel: "How to invest in GIFT City funds" },
   ];
 
   const navItems = [
