@@ -17,12 +17,12 @@ const Navigation = () => {
     { label: "What Is GIFT City", path: "/what-is-gift-city", ariaLabel: "What is GIFT City and IFSC" },
     { label: "Funds Explained", path: "/funds-explained", ariaLabel: "GIFT City fund structures explained" },
     { label: "Who It's For", path: "/who-its-for", ariaLabel: "Who invests in GIFT City funds" },
-    { label: "For US NRIs", path: "/us-based-nris", ariaLabel: "GIFT City funds for US-based NRIs" },
     { label: "Taxation", path: "/taxation", ariaLabel: "Taxation and regulatory framework" },
   ];
 
   const navItems = [
     { label: "Home", path: "/", ariaLabel: "Navigate to Home page" },
+    { label: "For US NRIs", path: "/us-based-nris", ariaLabel: "GIFT City funds for US-based NRIs" },
     { label: "FAQs", path: "/faqs", ariaLabel: "Frequently asked questions" },
     { label: "Insights", path: "/insights", ariaLabel: "GIFT City insights and articles" },
     { label: "About", path: "/about", ariaLabel: "About the contributor Anup Vatyani" },
@@ -46,11 +46,11 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-5 whitespace-nowrap">
+          <div className="hidden lg:flex items-center gap-4 whitespace-nowrap">
             <Link
               to="/"
               aria-label="Navigate to Home page"
-              className={`font-body text-sm font-medium transition-corporate hover:text-primary ${
+              className={`font-body text-sm font-medium whitespace-nowrap transition-corporate hover:text-primary ${
                 isActive("/") ? "text-primary" : "text-foreground-muted"
               }`}
             >
@@ -58,7 +58,7 @@ const Navigation = () => {
             </Link>
             <DropdownMenu>
               <DropdownMenuTrigger
-                className={`inline-flex items-center gap-1 font-body text-sm font-medium transition-corporate hover:text-primary focus:outline-none ${
+                className={`inline-flex items-center gap-1 font-body text-sm font-medium whitespace-nowrap transition-corporate hover:text-primary focus:outline-none ${
                   learnActive ? "text-primary" : "text-foreground-muted"
                 }`}
               >
@@ -79,7 +79,7 @@ const Navigation = () => {
                 key={item.path}
                 to={item.path}
                 aria-label={item.ariaLabel}
-                className={`font-body text-sm font-medium transition-corporate hover:text-primary ${
+                className={`font-body text-sm font-medium whitespace-nowrap transition-corporate hover:text-primary ${
                   isActive(item.path) ? "text-primary" : "text-foreground-muted"
                 }`}
               >
@@ -88,7 +88,7 @@ const Navigation = () => {
             ))}
             <Link
               to="/contact"
-              className="ml-2 inline-flex items-center rounded-full border border-brass px-4 py-1.5 font-body text-sm font-medium text-brass hover:bg-brass hover:text-primary-foreground transition-corporate"
+              className="ml-2 inline-flex items-center rounded-full border border-brass px-4 py-1.5 font-body text-sm font-medium whitespace-nowrap text-brass hover:bg-brass hover:text-primary-foreground transition-corporate"
             >
               Talk to Anup
             </Link>
