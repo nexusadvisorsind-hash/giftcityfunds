@@ -33,7 +33,7 @@ const Home = () => {
               className="hero-image w-full h-full object-cover object-center"
               width="512"
               height="298"
-              fetchpriority="high"
+              fetchPriority="high"
               decoding="sync"
             />
           </div>
