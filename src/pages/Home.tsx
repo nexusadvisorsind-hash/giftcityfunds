@@ -201,7 +201,7 @@ const Home = () => {
               ))}
             </ul>
 
-            <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-6">Investing multi-currency route vs Traditional route</h2>
+            <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-6">Investing Through Traditional Route vs GIFT City</h2>
             <div className="overflow-x-auto rounded-lg border border-border">
               <table className="w-full table-fixed text-left font-body text-sm">
                 <thead className="bg-surface">
