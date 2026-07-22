@@ -179,7 +179,7 @@ const Home = () => {
         {/* Why Invest Through GIFT City */}
         <section className="py-16 bg-background">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-6">Why Invest Through GIFT City?</h2>
+            <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-6">Advantages of GIFT City Funds for NRIs</h2>
             <p className="font-body text-lg text-foreground-muted mb-8 leading-relaxed max-w-4xl">
               GIFT City provides NRIs with a globally aligned investment ecosystem, offering access to professionally managed investment products through India's International Financial Services Centre (IFSC). It combines international standards, regulatory oversight, and a wider range of investment opportunities in one place.
             </p>
