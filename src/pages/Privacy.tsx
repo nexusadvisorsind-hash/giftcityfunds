@@ -8,6 +8,10 @@ const Privacy = () => {
         title="Privacy Policy | GiftCityWealth.in"
         description="Privacy policy for GiftCityWealth.in. Learn how we handle and protect your information when you visit our educational platform."
         canonical="https://www.giftcityfunds.in/privacy"
+        breadcrumbs={[
+          { name: "Home", url: "https://giftcityfunds.in/" },
+          { name: "Privacy", url: "https://giftcityfunds.in/privacy" },
+        ]}
       />
       
       <div className="min-h-screen py-16 px-4">
