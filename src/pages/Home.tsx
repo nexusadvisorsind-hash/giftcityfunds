@@ -276,11 +276,6 @@ const Home = () => {
           </div>
         </section>
 
-        {/* How Anup Can Help */}
-
-        <section className="py-16 bg-background">
-        </section>
-
         {/* How to Invest — placed before How Anup Can Help */}
         <section className="py-16 bg-surface">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
