@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { SEO } from "@/components/SEO";
+import heroAsset from "@/assets/gujrat.png.asset.json";
 import { ArrowRight, Landmark, Layers, Wallet, MessageCircle, CircleDollarSign, TrendingUp, Building2, UserCog } from "lucide-react";
 
 const Home = () => {
@@ -28,11 +29,11 @@ const Home = () => {
         <section className="relative hero-section">
           <div className="w-full h-[420px] md:h-[520px] overflow-hidden bg-gradient-to-b from-background to-surface">
             <img
-              src="/images/hero-optimized-2025.webp"
+              src={heroAsset.url}
               alt="GIFT City IFSC skyline at Gandhinagar, Gujarat"
               className="hero-image w-full h-full object-cover object-center"
-              width="1920"
-              height="1080"
+              width="512"
+              height="298"
               fetchPriority="high"
               decoding="sync"
             />
