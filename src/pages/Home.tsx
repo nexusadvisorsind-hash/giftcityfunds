@@ -42,8 +42,24 @@ const Home = () => {
               <h1 className="font-heading font-bold text-3xl md:text-5xl text-primary mb-5 leading-tight">
                 GIFT City Funds, Explained Simply
               </h1>
-              <p className="font-body text-lg text-foreground-muted max-w-3xl mx-auto mb-0">
+              <p className="font-body text-lg text-foreground-muted max-w-3xl mx-auto mb-8">
                 A trusted educational resource to understand GIFT City Mutual Funds, Alternative Investment Funds (AIFs), and the IFSC investment ecosystem for NRIs, OCIs and Resident Indians.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button asChild variant="gold" size="lg">
+                  <Link to="/what-is-gift-city">Start with the Basics <ArrowRight className="ml-2 h-5 w-5" /></Link>
+                </Button>
+                <Button asChild variant="outline" size="lg">
+                  <Link to="/contact">Talk to Anup</Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+          {/* Stat band */}
+          <div className="bg-primary text-primary-foreground">
+            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-5 text-center">
+              <p className="font-body text-sm md:text-base">
+                NRI investment in GIFT City funds has crossed <strong className="text-brass">$7 billion</strong> — IFSCA, reported March 2025.
               </p>
             </div>
           </div>
