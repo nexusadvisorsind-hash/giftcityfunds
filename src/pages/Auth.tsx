@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import { SEO } from "@/components/SEO";
+import { CheckCircle2, AlertCircle } from "lucide-react";
 
 const Auth = () => {
   const navigate = useNavigate();
@@ -13,6 +14,7 @@ const Auth = () => {
   const [password, setPassword] = useState("");
   const [mode, setMode] = useState<"signin" | "signup">("signin");
   const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState<{ type: "success" | "error"; message: string } | null>(null);
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data }) => {
@@ -27,20 +29,34 @@ const Auth = () => {
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+    setStatus(null);
     try {
       if (mode === "signup") {
-        const { error } = await supabase.auth.signUp({
+        const { error, data } = await supabase.auth.signUp({
           email,
           password,
           options: { emailRedirectTo: `${window.location.origin}/admin` },
         });
         if (error) throw error;
-        toast.success("Account created. Check your email if confirmation is required.");
+        if (data.user?.identities?.length === 0) {
+          setStatus({
+            type: "error",
+            message: "This email is already registered. Please sign in instead.",
+          });
+        } else if (data.session) {
+          toast.success("Account created. Redirecting…");
+        } else {
+          setStatus({
+            type: "success",
+            message: `Account created for ${email}. Please check your inbox (and spam folder) and click the confirmation link before signing in. After confirming, reply here with "done" so I can grant admin access.`,
+          });
+        }
       } else {
         const { error } = await supabase.auth.signInWithPassword({ email, password });
         if (error) throw error;
       }
     } catch (err: any) {
+      setStatus({ type: "error", message: err.message ?? "Authentication failed" });
       toast.error(err.message ?? "Authentication failed");
     } finally {
       setLoading(false);
