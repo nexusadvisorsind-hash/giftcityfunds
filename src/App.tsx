@@ -22,6 +22,8 @@ import Terms from "./pages/Terms";
 import AccessibilityStatement from "./pages/AccessibilityStatement";
 import Disclaimer from "./pages/Disclaimer";
 import NotFound from "./pages/NotFound";
+import Auth from "./pages/Auth";
+import Admin from "./pages/Admin";
 
 const queryClient = new QueryClient();
 
@@ -44,6 +46,8 @@ const App = () => (
               <Route path="/insights" element={<Insights />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/auth" element={<Auth />} />
+              <Route path="/admin" element={<Admin />} />
               <Route path="/disclaimer" element={<Disclaimer />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
