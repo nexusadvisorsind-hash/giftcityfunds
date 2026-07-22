@@ -31,8 +31,8 @@ const Home = () => {
               src="/images/gujrat.png"
               alt="GIFT City IFSC skyline at Gandhinagar, Gujarat"
               className="hero-image w-full h-full object-cover object-center"
-              width="1644"
-              height="957"
+              width="1568"
+              height="1003"
               fetchPriority="high"
               decoding="sync"
             />
