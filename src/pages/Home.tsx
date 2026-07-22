@@ -205,15 +205,24 @@ const Home = () => {
 
             {/* Desktop table */}
             <div className="hidden md:block overflow-x-auto rounded-lg border border-border">
-              <table className="w-full table-fixed text-left font-body text-sm">
+              <table
+                className="w-full table-fixed text-left font-body text-sm text-foreground"
+                aria-describedby="comparison-caption"
+              >
+                <caption
+                  id="comparison-caption"
+                  className="sr-only"
+                >
+                  Comparison of the traditional Indian investment route versus investing through GIFT City IFSC, across currency, products, regulation, market access, diversification, tax efficiency and investor experience.
+                </caption>
                 <thead className="bg-surface">
                   <tr>
-                    <th className="w-[24%] px-4 py-3 font-heading font-semibold text-primary border-b border-border align-top">Feature</th>
-                    <th className="w-[38%] px-4 py-3 font-heading font-semibold text-primary border-b border-border align-top">Traditional Investment Route</th>
-                    <th className="w-[38%] px-4 py-3 font-heading font-semibold text-primary border-b border-border align-top">GIFT City Investment</th>
+                    <th scope="col" className="w-[24%] px-4 py-3 font-heading font-semibold text-primary border-b border-border align-top">Feature</th>
+                    <th scope="col" className="w-[38%] px-4 py-3 font-heading font-semibold text-primary border-b border-border align-top">Traditional Investment Route</th>
+                    <th scope="col" className="w-[38%] px-4 py-3 font-heading font-semibold text-primary border-b border-border align-top">GIFT City Investment</th>
                   </tr>
                 </thead>
-                <tbody className="text-foreground-muted">
+                <tbody className="text-foreground">
                   {[
                     ["Investment Currency", "Primarily INR", "USD and other permitted foreign currencies*"],
                     ["Investment Opportunities", "Primarily India-focused", "India-focused and global investment opportunities"],
@@ -225,7 +234,7 @@ const Home = () => {
                     ["Investment Experience", "Multiple processes and intermediaries", "Streamlined cross-border investment experience"],
                   ].map(([feature, trad, gift]) => (
                     <tr key={feature} className="border-b border-border last:border-b-0">
-                      <td className="px-4 py-3 font-heading font-semibold text-primary align-top break-words">{feature}</td>
+                      <th scope="row" className="px-4 py-3 font-heading font-semibold text-primary align-top break-words text-left">{feature}</th>
                       <td className="px-4 py-3 align-top break-words">{trad}</td>
                       <td className="px-4 py-3 align-top break-words">{gift}</td>
                     </tr>
@@ -235,7 +244,7 @@ const Home = () => {
             </div>
 
             {/* Mobile stacked cards */}
-            <div className="md:hidden space-y-4">
+            <ul className="md:hidden space-y-4 list-none p-0" aria-label="Traditional route versus GIFT City comparison">
               {[
                 ["Investment Currency", "Primarily INR", "USD and other permitted foreign currencies*"],
                 ["Investment Opportunities", "Primarily India-focused", "India-focused and global investment opportunities"],
@@ -246,21 +255,21 @@ const Home = () => {
                 ["Tax Efficiency", "Standard tax provisions", "Potential tax-efficient structures for eligible IFSC investments*"],
                 ["Investment Experience", "Multiple processes and intermediaries", "Streamlined cross-border investment experience"],
               ].map(([feature, trad, gift]) => (
-                <div key={feature} className="bg-surface rounded-lg border border-border p-4">
-                  <h4 className="font-heading font-semibold text-primary mb-3">{feature}</h4>
+                <li key={feature} className="bg-surface rounded-lg border border-border p-4">
+                  <h3 className="font-heading font-semibold text-primary mb-3 text-base">{feature}</h3>
                   <div className="space-y-3">
                     <div>
-                      <span className="block text-xs font-heading font-semibold text-foreground-muted uppercase tracking-wide mb-1">Traditional Route</span>
-                      <p className="font-body text-sm text-foreground-muted break-words">{trad}</p>
+                      <span className="block text-xs font-heading font-semibold text-foreground uppercase tracking-wide mb-1">Traditional Route</span>
+                      <p className="font-body text-sm text-foreground break-words">{trad}</p>
                     </div>
                     <div className="pt-3 border-t border-border">
                       <span className="block text-xs font-heading font-semibold text-secondary uppercase tracking-wide mb-1">GIFT City</span>
-                      <p className="font-body text-sm text-foreground-muted break-words">{gift}</p>
+                      <p className="font-body text-sm text-foreground break-words">{gift}</p>
                     </div>
                   </div>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
             <p className="mt-6 text-xs text-foreground-muted italic">
               *Investment features, currency options, and tax benefits vary depending on the specific fund structure, applicable regulations, and the investor's country of residence.
             </p>
