@@ -9,10 +9,14 @@ const Navigation = () => {
 
   const navItems = [
     { label: "Home", path: "/", ariaLabel: "Navigate to Home page" },
-    { label: "About GIFT City", path: "/about", ariaLabel: "Learn about GIFT City IFSC" },
-    { label: "Investment Structures", path: "/investments", ariaLabel: "Explore GIFT IFSC investment information" },
-    { label: "Resources", path: "/resources", ariaLabel: "Access GIFT IFSC resources and guides" },
-    { label: "Contact Us", path: "/contact", ariaLabel: "Contact us for more information" },
+    { label: "What Is GIFT City", path: "/what-is-gift-city", ariaLabel: "What is GIFT City and IFSC" },
+    { label: "Funds Explained", path: "/funds-explained", ariaLabel: "GIFT City fund structures explained" },
+    { label: "Who It's For", path: "/who-its-for", ariaLabel: "Who invests in GIFT City funds" },
+    { label: "US NRIs", path: "/us-based-nris", ariaLabel: "GIFT City funds for US-based NRIs" },
+    { label: "Taxation", path: "/taxation", ariaLabel: "Taxation and regulatory framework" },
+    { label: "Insights", path: "/insights", ariaLabel: "GIFT City insights and articles" },
+    { label: "About", path: "/about", ariaLabel: "About the contributor Anup Vatyani" },
+    { label: "Contact", path: "/contact", ariaLabel: "Contact us" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -33,7 +37,7 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-5">
             {navItems.map((item) => (
               <Link
                 key={item.path}
@@ -49,7 +53,7 @@ const Navigation = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <Button
               variant="ghost"
               size="sm"
@@ -64,7 +68,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-surface border-t border-border">
               {navItems.map((item) => (
                 <Link
