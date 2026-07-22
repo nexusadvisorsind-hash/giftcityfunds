@@ -147,7 +147,7 @@ const Home = () => {
         </section>
 
         {/* What Is GIFT City */}
-        <section className="py-16 bg-surface">
+        <section className="py-16 bg-surface border-t border-border">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-6">What Is GIFT City?</h2>
             <p className="font-body text-lg text-foreground-muted mb-6 leading-relaxed">
