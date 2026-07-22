@@ -12,32 +12,32 @@ const Navigation = () => {
     { label: "What Is GIFT City", path: "/what-is-gift-city", ariaLabel: "What is GIFT City and IFSC" },
     { label: "Funds Explained", path: "/funds-explained", ariaLabel: "GIFT City fund structures explained" },
     { label: "Who It's For", path: "/who-its-for", ariaLabel: "Who invests in GIFT City funds" },
-    { label: "US NRIs", path: "/us-based-nris", ariaLabel: "GIFT City funds for US-based NRIs" },
+    { label: "For US NRIs", path: "/us-based-nris", ariaLabel: "GIFT City funds for US-based NRIs" },
     { label: "Taxation", path: "/taxation", ariaLabel: "Taxation and regulatory framework" },
+    { label: "FAQs", path: "/faqs", ariaLabel: "Frequently asked questions" },
     { label: "Insights", path: "/insights", ariaLabel: "GIFT City insights and articles" },
     { label: "About", path: "/about", ariaLabel: "About the contributor Anup Vatyani" },
-    { label: "Contact", path: "/contact", ariaLabel: "Contact us" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50">
+    <nav className="bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2" aria-label="GiftCityWealth.in Home">
-            <div className="w-10 h-10 gradient-corporate rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-heading font-bold text-xl">G</span>
+          <Link to="/" className="flex items-center space-x-3" aria-label="GIFT City Funds Home">
+            <div className="w-10 h-10 rounded-md flex items-center justify-center border border-brass/40 bg-background">
+              <span className="font-heading font-semibold text-lg text-brass">G</span>
             </div>
             <div className="flex flex-col">
-              <span className="font-heading font-bold text-base md:text-lg text-primary leading-tight">GIFT CITY FUNDS</span>
-              <span className="font-body text-[10px] md:text-xs text-foreground-muted leading-tight">An Informational Guide about GIFT City Funds</span>
+              <span className="font-heading text-base md:text-lg text-primary leading-tight tracking-tight">GIFT City Funds</span>
+              <span className="font-body text-[10px] md:text-xs text-foreground-muted leading-tight">A plain-English guide to IFSC investing</span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-5">
+          <div className="hidden lg:flex items-center gap-5">
             {navItems.map((item) => (
               <Link
                 key={item.path}
@@ -50,6 +50,12 @@ const Navigation = () => {
                 {item.label}
               </Link>
             ))}
+            <Link
+              to="/contact"
+              className="ml-2 inline-flex items-center rounded-full border border-brass px-4 py-1.5 font-body text-sm font-medium text-brass hover:bg-brass hover:text-primary-foreground transition-corporate"
+            >
+              Talk to Anup
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -85,6 +91,13 @@ const Navigation = () => {
                   {item.label}
                 </Link>
               ))}
+              <Link
+                to="/contact"
+                onClick={() => setIsOpen(false)}
+                className="block mx-3 mt-2 text-center rounded-full border border-brass px-4 py-2 font-body text-base font-medium text-brass"
+              >
+                Talk to Anup
+              </Link>
             </div>
           </div>
         )}
