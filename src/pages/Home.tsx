@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { SEO } from "@/components/SEO";
-import { ArrowRight, Globe2, ShieldCheck, LineChart, Landmark, Layers, Briefcase, Wallet, MessageCircle } from "lucide-react";
+import { ArrowRight, Landmark, Layers, Wallet, MessageCircle, CircleDollarSign, TrendingUp, Building2, UserCog } from "lucide-react";
 
 const Home = () => {
   const financialServiceSchema = {
@@ -71,8 +71,8 @@ const Home = () => {
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-10 text-center">Why Start Here</h2>
             <div className="grid md:grid-cols-3 gap-8">
               {[
-                { icon: ShieldCheck, title: "Regulated by IFSCA", body: "GIFT City funds operate under India's International Financial Services Centres Authority — a single regulator built specifically for this jurisdiction, distinct from SEBI's oversight of the rest of India's mutual fund industry." },
-                { icon: Globe2, title: "Independent, not AMC-run", body: "Unlike a fund house's own website, this isn't built to promote one AMC's scheme. It's a neutral map across GIFT City fund structures, written so you can compare before you commit to anything." },
+                { icon: Landmark, title: "Regulated by IFSCA", body: "GIFT City funds operate under India's International Financial Services Centres Authority — a single regulator built specifically for this jurisdiction, distinct from SEBI's oversight of the rest of India's mutual fund industry." },
+                { icon: TrendingUp, title: "Independent, not AMC-run", body: "Unlike a fund house's own website, this isn't built to promote one AMC's scheme. It's a neutral map across GIFT City fund structures, written so you can compare before you commit to anything." },
                 { icon: MessageCircle, title: "One point of contact", body: "Questions go directly to Anup Vatyani — no call centre, no relationship-manager rotation, no hand-offs between departments." },
               ].map((f) => (
                 <div key={f.title} className="bg-background p-6 rounded-lg border border-border">
@@ -104,9 +104,9 @@ const Home = () => {
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-10 text-center">Why These Funds Exist</h2>
             <div className="grid md:grid-cols-3 gap-8">
               {[
-                { icon: Wallet, title: "Invest in global currency", body: "Contributions and redemptions happen in US Dollars, so currency risk and conversion costs work differently than a typical NRI remittance through the NRE/NRO route." },
+                { icon: CircleDollarSign, title: "Invest in global currency", body: "Contributions and redemptions happen in US Dollars, so currency risk and conversion costs work differently than a typical NRI remittance through the NRE/NRO route." },
                 { icon: Landmark, title: "A separate regulator", body: "The International Financial Services Centres Authority (IFSCA) — not SEBI alone — oversees GIFT City funds, with its own rules on structure, disclosure and investor eligibility." },
-                { icon: Globe2, title: "Built for global portfolios", body: "These structures are designed to hold international assets and route capital across borders in ways a typical onshore Indian mutual fund cannot." },
+                { icon: TrendingUp, title: "Built for global portfolios", body: "These structures are designed to hold international assets and route capital across borders in ways a typical onshore Indian mutual fund cannot." },
               ].map((f) => (
                 <div key={f.title} className="bg-background p-6 rounded-lg border border-border">
                   <f.icon className="h-8 w-8 text-secondary mb-3" />
@@ -126,8 +126,8 @@ const Home = () => {
             <div className="grid md:grid-cols-2 gap-6">
               {[
                 { icon: Layers, title: "Mutual Fund FoF", body: "A feeder fund that channels your money into an underlying scheme; typically the lowest entry ticket of the four." },
-                { icon: Briefcase, title: "AIF (Alternative Investment Fund)", body: "A pooled vehicle for less standardised strategies; typically the highest entry ticket." },
-                { icon: LineChart, title: "PMS (Portfolio Management Services)", body: "A professionally managed, individually held portfolio for investors wanting more customisation." },
+                { icon: Building2, title: "AIF (Alternative Investment Fund)", body: "A pooled vehicle for less standardised strategies; typically the highest entry ticket." },
+                { icon: UserCog, title: "PMS (Portfolio Management Services)", body: "A professionally managed, individually held portfolio for investors wanting more customisation." },
                 { icon: Wallet, title: "Retail Feeder Fund", body: "A lower-ticket fund built for simple, individual access." },
               ].map((f) => (
                 <div key={f.title} className="flex gap-4 p-5 bg-surface rounded-lg border border-border">
