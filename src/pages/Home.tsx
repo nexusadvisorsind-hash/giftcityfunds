@@ -28,11 +28,11 @@ const Home = () => {
         <section className="relative hero-section">
           <div className="w-full h-[420px] md:h-[520px] overflow-hidden bg-gradient-to-b from-background to-surface">
             <img
-              src="/images/hero-optimized-2025.webp"
+              src="/images/gujrat.png"
               alt="GIFT City IFSC skyline at Gandhinagar, Gujarat"
               className="hero-image w-full h-full object-cover object-center"
-              width="1920"
-              height="1080"
+              width="512"
+              height="298"
               fetchPriority="high"
               decoding="sync"
             />
