@@ -201,7 +201,7 @@ const Home = () => {
               ))}
             </ul>
 
-            <h2 className="font-heading font-bold text-2xl md:text-4xl text-primary mb-6">Investing Through Traditional Route vs GIFT City</h2>
+            <h3 className="font-heading font-semibold text-xl text-primary mb-4">Investing Through Traditional Route vs GIFT City</h3>
 
             {/* Desktop table */}
             <div className="hidden md:block overflow-x-auto rounded-lg border border-border">
