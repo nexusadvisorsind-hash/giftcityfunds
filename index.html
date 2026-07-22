@@ -16,13 +16,13 @@
     <meta property="og:title" content="GIFT City Funds — A Plain-English Guide to IFSC Investing" />
     <meta property="og:description" content="Independent educational guide to GIFT City IFSC mutual funds, AIFs and PMS structures by Anup Vatyani (AMFI ARN 106715)." />
     <meta property="og:url" content="https://giftcityfunds.in/" />
-    <meta property="og:image" content="https://giftcityfunds.in/images/gujrat.png" />
+    <meta property="og:image" content="https://giftcityfunds.in/images/gift-city-hero-enhanced.jpg" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="GIFT City Funds — A Plain-English Guide to IFSC Investing" />
     <meta name="twitter:description" content="Independent educational guide to GIFT City IFSC mutual funds, AIFs and PMS structures by Anup Vatyani (AMFI ARN 106715)." />
-    <meta name="twitter:image" content="https://giftcityfunds.in/images/gujrat.png" />
+    <meta name="twitter:image" content="https://giftcityfunds.in/images/gift-city-hero-enhanced.jpg" />
     
     <!-- Preconnect for Performance - Critical Origins -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
@@ -33,7 +33,7 @@
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     
     <!-- Critical: Preload LCP hero image with highest priority -->
-    <link rel="preload" as="image" href="/images/gujrat.png" fetchpriority="high" type="image/png" imagesrcset="/images/gujrat.png 512w" imagesizes="100vw">
+    <link rel="preload" as="image" href="/images/gift-city-hero-enhanced.jpg" fetchpriority="high" type="image/jpeg" imagesrcset="/images/gift-city-hero-enhanced.jpg 1584w" imagesizes="100vw">
     
     <!-- Fonts: Fraunces (display), Public Sans (body), IBM Plex Mono (data) -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'">
@@ -71,10 +71,9 @@
       }
       .hero-image { 
         width: 100%; 
-        height: auto; 
+        height: 100%; 
         display: block; 
         object-fit: cover;
-        aspect-ratio: 16/9;
       }
       
       /* Prevent layout shift */
@@ -86,19 +85,6 @@
       /* Reserve space for navigation to prevent CLS */
       nav { height: 64px; }
       
-      /* Skeleton loader for hero to prevent CLS */
-      .hero-section::before {
-        content: '';
-        display: block;
-        padding-top: 56.25%; /* 16:9 aspect ratio */
-        background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-      }
-      
-      .hero-section img {
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
     </style>
     
     <!-- Defer Analytics - Load after critical resources -->
