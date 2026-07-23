@@ -10,6 +10,7 @@ const personSchema = {
   "name": "Anup Vatyani",
   "jobTitle": "AMFI-Registered Mutual Fund Distributor (ARN 106715)",
   "url": "https://giftcityfunds.in/about",
+  "sameAs": ["https://www.linkedin.com/in/anup-vatyani-081b4142"],
   "worksFor": { "@type": "Organization", "name": "GIFT City Funds" },
 };
 
@@ -42,6 +43,14 @@ const About = () => (
           <li>Decade of MFD experience</li>
           <li>Focus area: GIFT City / IFSC fund structures, regulatory frameworks, investor education</li>
         </ul>
+        <a
+          href="https://www.linkedin.com/in/anup-vatyani-081b4142"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 mt-4 font-body text-secondary hover:underline"
+        >
+          Connect with Anup on LinkedIn
+        </a>
       </div>
 
       <blockquote className="my-10 border-l-4 border-secondary pl-6 italic font-heading text-xl text-primary">
