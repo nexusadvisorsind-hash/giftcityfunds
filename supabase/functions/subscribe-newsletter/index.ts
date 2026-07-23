@@ -55,7 +55,7 @@ serve(async (req) => {
         const resend = new Resend(resendKey);
         await resend.emails.send({
           from: "GIFT City Funds <onboarding@resend.dev>",
-          to: ["nexusadvisors.ind@gmail.com"],
+          to: ["info@giftcityfunds.in"],
           subject: `New newsletter subscriber: ${trimmed}`,
           html: `<p><strong>New subscriber:</strong> ${trimmed}</p><p>Source: ${source ?? "n/a"}</p>`,
         });

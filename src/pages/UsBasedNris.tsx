@@ -11,6 +11,7 @@ const articleSchema = {
   "author": { "@type": "Person", "name": "Anup Vatyani" },
   "publisher": { "@type": "Organization", "name": "GIFT City Funds" },
   "mainEntityOfPage": "https://giftcityfunds.in/us-based-nris",
+  "dateModified": "2026-07-23",
 };
 
 const stcg = [
@@ -33,7 +34,8 @@ const UsBasedNris = () => (
     />
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
       <Breadcrumbs items={[{ name: "Home", url: "/" }, { name: "For US NRIs", url: "/us-based-nris" }]} />
-      <h1 className="font-heading font-bold text-3xl md:text-4xl text-primary mt-6 mb-4">GIFT City Funds for US-Based NRIs</h1>
+      <h1 className="font-heading font-bold text-3xl md:text-4xl text-primary mt-6 mb-2">GIFT City Funds for US-Based NRIs</h1>
+      <p className="font-body text-sm text-foreground-muted mb-2">Last updated: July 2026</p>
       <p className="font-body text-lg text-foreground-muted mb-6">If you live in the United States, the way a fund is taxed can matter more than the fund itself. Here's what changes.</p>
 
       <div className="flex gap-3 bg-secondary/10 border border-secondary/30 p-4 rounded-lg mb-10">

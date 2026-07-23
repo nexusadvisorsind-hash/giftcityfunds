@@ -9,6 +9,7 @@ const articleSchema = {
   "author": { "@type": "Person", "name": "Anup Vatyani" },
   "publisher": { "@type": "Organization", "name": "GIFT City Funds" },
   "mainEntityOfPage": "https://giftcityfunds.in/taxation",
+  "dateModified": "2026-07-23",
 };
 
 const rows = [
@@ -33,7 +34,8 @@ const Taxation = () => (
     />
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
       <Breadcrumbs items={[{ name: "Home", url: "/" }, { name: "Taxation", url: "/taxation" }]} />
-      <h1 className="font-heading font-bold text-3xl md:text-4xl text-primary mt-6 mb-6">Regulation and Taxation of GIFT City Funds</h1>
+      <h1 className="font-heading font-bold text-3xl md:text-4xl text-primary mt-6 mb-2">Regulation and Taxation of GIFT City Funds</h1>
+      <p className="font-body text-sm text-foreground-muted mb-6">Last updated: July 2026</p>
 
       <section className="mb-10 space-y-4 font-body text-foreground-muted">
         <p><strong className="text-primary">Regulatory framework.</strong> GIFT City funds sit under the IFSCA (International Financial Services Centres Authority), India's unified regulator for the IFSC. Fund Management Entities (FMEs) must be registered with IFSCA to operate, and different fund categories (Retail, Category I/II/III AIF, etc.) carry different regulatory conditions around investor eligibility, disclosure and structure.</p>
