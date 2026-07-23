@@ -4,9 +4,15 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 const TermsOfUse = () => {
   const schema = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
+    "@type": "TermsOfService",
     "name": "Terms of Use",
-    "about": "Legal and informational policies of GiftCityWealth.in"
+    "url": "https://giftcityfunds.in/terms-of-use",
+    "description": "Terms governing use of the GIFT City Funds educational website.",
+    "inLanguage": "en-IN",
+    "dateModified": "2026-07-23",
+    "isPartOf": { "@type": "WebSite", "name": "GIFT City Funds", "url": "https://giftcityfunds.in/" },
+    "publisher": { "@type": "Person", "name": "Anup Vatyani", "identifier": "AMFI ARN-106715" },
+    "about": "Website terms of use and permitted-use policy"
   };
 
   return (

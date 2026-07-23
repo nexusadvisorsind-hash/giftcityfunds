@@ -4,9 +4,15 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 const PrivacyPolicy = () => {
   const schema = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
+    "@type": "PrivacyPolicy",
     "name": "Privacy Policy",
-    "about": "Legal and informational policies of GiftCityWealth.in"
+    "url": "https://giftcityfunds.in/privacy-policy",
+    "description": "How GIFT City Funds collects, uses, and protects visitor information.",
+    "inLanguage": "en-IN",
+    "dateModified": "2026-07-23",
+    "isPartOf": { "@type": "WebSite", "name": "GIFT City Funds", "url": "https://giftcityfunds.in/" },
+    "publisher": { "@type": "Person", "name": "Anup Vatyani", "identifier": "AMFI ARN-106715" },
+    "about": "Website privacy and data-handling policy"
   };
 
   return (

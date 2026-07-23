@@ -7,7 +7,13 @@ const AccessibilityStatement = () => {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Accessibility Statement",
-    "about": "Legal and informational policies of GiftCityWealth.in"
+    "url": "https://giftcityfunds.in/accessibility-statement",
+    "description": "GIFT City Funds commitment to WCAG 2.1 AA web accessibility standards.",
+    "inLanguage": "en-IN",
+    "dateModified": "2026-07-23",
+    "isPartOf": { "@type": "WebSite", "name": "GIFT City Funds", "url": "https://giftcityfunds.in/" },
+    "publisher": { "@type": "Person", "name": "Anup Vatyani", "identifier": "AMFI ARN-106715" },
+    "about": "Website accessibility statement"
   };
 
   return (
@@ -15,7 +21,7 @@ const AccessibilityStatement = () => {
       <SEO
         title="Accessibility Statement | GIFT City Funds"
         description="Accessibility statement for GIFT City Funds - our commitment to web accessibility standards."
-        canonical="https://www.giftcityfunds.in/accessibility-statement"
+        canonical="https://giftcityfunds.in/accessibility-statement"
         schema={schema}
         breadcrumbs={[
           { name: "Home", url: "https://giftcityfunds.in/" },

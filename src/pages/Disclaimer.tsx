@@ -7,6 +7,18 @@ const Disclaimer = () => (
       title="Disclaimer & Risk Disclosure — GIFT City Funds"
       description="Legal disclaimer and risk disclosure for the GIFT City Funds educational resource."
       canonical="https://giftcityfunds.in/disclaimer"
+      schema={{
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Disclaimer & Risk Disclosure",
+        "url": "https://giftcityfunds.in/disclaimer",
+        "description": "Legal disclaimer and risk disclosure for the GIFT City Funds educational resource.",
+        "inLanguage": "en-IN",
+        "dateModified": "2026-07-23",
+        "isPartOf": { "@type": "WebSite", "name": "GIFT City Funds", "url": "https://giftcityfunds.in/" },
+        "publisher": { "@type": "Person", "name": "Anup Vatyani", "identifier": "AMFI ARN-106715" },
+        "about": "Investment risk disclosure and educational-content disclaimer"
+      }}
       breadcrumbs={[
         { name: "Home", url: "https://giftcityfunds.in/" },
         { name: "Disclaimer", url: "https://giftcityfunds.in/disclaimer" },
