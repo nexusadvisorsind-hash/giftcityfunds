@@ -14,7 +14,11 @@
 /knowledge/tax-benefits-for-nris /taxation 301
 /team/anup-vatyani /about 301
 /privacy /privacy-policy 301
+/privacy/ /privacy-policy 301
 /terms /terms-of-use 301
+/terms/ /terms-of-use 301
+/privacy-policy/ /privacy-policy 301
+/terms-of-use/ /terms-of-use 301
 
 # SPA fallback - must be last
 /* /index.html 200
