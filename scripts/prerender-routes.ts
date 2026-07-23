@@ -1,6 +1,7 @@
-// Prebuild: emit route-specific HTML shells with baked-in meta so Googlebot
-// sees distinct <title>, description, canonical, and OG tags per URL without
-// executing the SPA. React hydrates on top at runtime.
+// Postbuild: emit route-specific HTML shells (copies of the built index.html
+// with per-route <title>, description, canonical, and OG tags baked in) so
+// Googlebot sees distinct meta per URL without executing the SPA. React
+// hydrates on top at runtime.
 
 import { readFileSync, writeFileSync, mkdirSync } from "fs";
 import { resolve } from "path";
@@ -41,7 +42,7 @@ const routes: Route[] = [
   },
 ];
 
-const template = readFileSync(resolve("index.html"), "utf8");
+const template = readFileSync(resolve("dist/index.html"), "utf8");
 
 function render(route: Route) {
   const canonical = `${BASE}${route.path}`;
@@ -86,7 +87,7 @@ function render(route: Route) {
 }
 
 for (const route of routes) {
-  const dir = resolve("public" + route.path);
+  const dir = resolve("dist" + route.path);
   mkdirSync(dir, { recursive: true });
   writeFileSync(resolve(dir, "index.html"), render(route));
   console.log(`prerendered ${route.path}/index.html`);
