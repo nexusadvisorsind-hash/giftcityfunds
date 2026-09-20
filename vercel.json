@@ -1,0 +1,18 @@
+{
+  "redirects": [
+    { "source": "/about-us", "destination": "/about", "permanent": true },
+    { "source": "/investments", "destination": "/funds-explained", "permanent": true },
+    { "source": "/understanding-gift-city-funds", "destination": "/funds-explained", "permanent": true },
+    { "source": "/resources", "destination": "/insights", "permanent": true },
+    { "source": "/knowledge/what-is-gift-city-fund", "destination": "/what-is-gift-city", "permanent": true },
+    { "source": "/knowledge/how-ifsc-works", "destination": "/what-is-gift-city", "permanent": true },
+    { "source": "/knowledge/mutual-funds-in-gift-city", "destination": "/funds-explained", "permanent": true },
+    { "source": "/knowledge/tax-benefits-for-nris", "destination": "/taxation", "permanent": true },
+    { "source": "/team/anup-vatyani", "destination": "/about", "permanent": true },
+    { "source": "/privacy", "destination": "/privacy-policy", "permanent": true },
+    { "source": "/terms", "destination": "/terms-of-use", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/((?!api/).*)", "destination": "/index.html" }
+  ]
+}
