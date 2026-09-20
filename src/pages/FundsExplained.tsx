@@ -23,7 +23,7 @@ const rows = [
 const FundsExplained = () => (
   <>
     <SEO
-      title="GIFT City Fund Categories: MF FoF, AIF, PMS & Feeders"
+      title="GIFT City Fund Categories: MF FoF, AIF, PMS & Feeders (2026)"
       description="Compare GIFT City fund categories — Mutual Fund FoFs, AIFs (Cat I/II/III), PMS and Retail Feeder Funds — with eligibility, ticket sizes and use cases."
       canonical="https://giftcityfunds.in/funds-explained"
       schema={articleSchema}
