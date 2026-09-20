@@ -33,7 +33,7 @@ const steps = [
     icon: MessageCircle,
     title: "Talk to Anup",
     body:
-      "Once you know the structure that fits, reach out to get connected with the right Fund Management Entity (FME) in GIFT City. Anup Vatyani (AMFI ARN 106815) helps you shortlist and connect — no cold call centre, no rotating relationship manager, no product push.",
+      "Once you know the structure that fits, reach out to get connected with the right Fund Management Entity (FME) in GIFT City. Anup Vatyani (AMFI ARN 106715) helps you shortlist and connect — no cold call centre, no rotating relationship manager, no product push.",
     linkLabel: "Contact Anup",
     linkTo: "/contact",
   },
