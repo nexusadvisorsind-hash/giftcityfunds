@@ -69,7 +69,7 @@ const Admin = () => {
 
   return (
     <>
-      <SEO title="Admin — Contact Submissions" description="Admin view of contact submissions." canonical="https://giftcityfunds.in/admin" />
+      <SEO noindex title="Admin — Contact Submissions" description="Admin view of contact submissions." canonical="https://giftcityfunds.in/admin" />
       <div className="min-h-[70vh] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex items-center justify-between mb-8">
           <h1 className="font-heading text-3xl font-bold text-primary">Contact Submissions</h1>

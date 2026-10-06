@@ -3,7 +3,9 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { StaticRouter } from "react-router-dom/server";
 import { HelmetProvider } from "react-helmet-async";
+import type { ReactNode } from "react";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -14,6 +16,7 @@ import UsBasedNris from "./pages/UsBasedNris";
 import Taxation from "./pages/Taxation";
 import Faqs from "./pages/Faqs";
 import Insights from "./pages/Insights";
+import InsightArticle from "./pages/InsightArticle";
 import Contact from "./pages/Contact";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfUse from "./pages/TermsOfUse";
@@ -26,13 +29,26 @@ import HowToInvest from "./pages/HowToInvest";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <HelmetProvider>
+interface AppProps {
+  /** Set only by the build-time prerenderer (src/entry-server.tsx). */
+  ssrUrl?: string;
+  helmetContext?: object;
+}
+
+const Router = ({ ssrUrl, children }: { ssrUrl?: string; children: ReactNode }) =>
+  ssrUrl ? (
+    <StaticRouter location={ssrUrl}>{children}</StaticRouter>
+  ) : (
+    <BrowserRouter>{children}</BrowserRouter>
+  );
+
+const App = ({ ssrUrl, helmetContext }: AppProps = {}) => (
+  <HelmetProvider context={helmetContext}>
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter>
+        <Router ssrUrl={ssrUrl}>
           <Layout>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -43,6 +59,7 @@ const App = () => (
               <Route path="/taxation" element={<Taxation />} />
               <Route path="/faqs" element={<Faqs />} />
               <Route path="/insights" element={<Insights />} />
+              <Route path="/insights/:slug" element={<InsightArticle />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/auth" element={<Auth />} />
@@ -69,7 +86,7 @@ const App = () => (
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Layout>
-        </BrowserRouter>
+        </Router>
       </TooltipProvider>
     </QueryClientProvider>
   </HelmetProvider>

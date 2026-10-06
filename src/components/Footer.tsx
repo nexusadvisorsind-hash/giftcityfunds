@@ -89,7 +89,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/terms" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">
+                <Link to="/terms-of-use" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">
                   Terms & Conditions
                 </Link>
               </li>
@@ -139,7 +139,7 @@ const Footer = () => {
                 Privacy Policy
               </Link>
               <span className="text-primary-foreground/40">|</span>
-              <Link to="/terms" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate px-2 py-1">
+              <Link to="/terms-of-use" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate px-2 py-1">
                 Terms
               </Link>
               <span className="text-primary-foreground/40">|</span>

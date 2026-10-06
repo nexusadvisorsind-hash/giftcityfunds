@@ -11,16 +11,20 @@ interface SEOProps {
   canonical: string;
   schema?: object;
   breadcrumbs?: BreadcrumbItem[];
+  /** Keep private or utility pages (admin, sign-in) out of search results. */
+  noindex?: boolean;
+  /** Open Graph type; "article" for Insights posts. */
+  type?: "website" | "article";
 }
 
-export const SEO = ({ title, description, canonical, schema, breadcrumbs }: SEOProps) => {
+export const SEO = ({ title, description, canonical, schema, breadcrumbs, noindex, type = "website" }: SEOProps) => {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "@id": "https://giftcityfunds.in/#organization",
   "name": "GIFT City Funds",
   "url": "https://giftcityfunds.in",
-  "logo": "https://giftcityfunds.in/images/logo.png",
+  "logo": "https://giftcityfunds.in/favicon-512.png",
   "founder": {
     "@type": "Person",
     "name": "Anup Vatyani",
@@ -34,7 +38,7 @@ const organizationSchema = {
     "contactType": "Customer Service",
     "areaServed": "IN"
   }],
-  "sameAs": ["https://www.linkedin.com/in/anup-vatyani"]
+  "sameAs": ["https://www.linkedin.com/in/anup-vatyani-081b4142"]
 };
 
 const websiteSchema = {
@@ -52,14 +56,14 @@ const websiteSchema = {
       <title>{title}</title>
       <meta name="title" content={title} />
       <meta name="description" content={description} />
-      <meta name="robots" content="index, follow" />
+      <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
       
       {/* Canonical URL */}
       <link rel="canonical" href={canonical} />
       
       {/* Open Graph / Facebook */}
       <meta property="og:site_name" content="GIFT City Funds" />
-      <meta property="og:type" content="website" />
+      <meta property="og:type" content={type} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={canonical} />

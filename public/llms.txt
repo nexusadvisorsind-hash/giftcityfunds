@@ -1,29 +1,36 @@
 # GIFT City Funds
 
-> Educational resource on GIFT City and IFSC mutual fund frameworks by Anup Vatyani (MFD ARN 106715). Informational only — not investment advice.
+> Independent, plain-English educational guide to GIFT City (IFSC) mutual funds, AIFs and PMS structures for NRIs, OCIs and resident Indians. Written by Anup Vatyani, AMFI-registered Mutual Fund Distributor (ARN 106715). Informational only; not investment, tax or legal advice.
 
-## Pages
+## Guides
 
-- [Home](/): Overview of GIFT City IFSC investment information.
-- [About GIFT City](/about): Background on India's IFSC and the IFSCA regulator.
-- [Investment Structures](/investments): Educational overview of fund categories under IFSCA.
-- [Resources](/resources): Featured learning articles and official references.
-- [Contact](/contact): Contact and contributor information.
+- [What Is GIFT City & IFSC?](https://giftcityfunds.in/what-is-gift-city): India's international financial services centre and its regulator, IFSCA.
+- [GIFT City Fund Categories](https://giftcityfunds.in/funds-explained): Mutual Fund FoFs, AIFs, PMS and feeder funds compared.
+- [Who GIFT City Funds Are For](https://giftcityfunds.in/who-its-for): Fit for NRIs, OCIs and resident Indians.
+- [GIFT City Funds for US-Based NRIs](https://giftcityfunds.in/us-based-nris): PFIC, US tax reporting and what to check.
+- [Regulation and Taxation](https://giftcityfunds.in/taxation): IFSCA oversight, Section 10(4D), LRS and TCS.
+- [How to Invest](https://giftcityfunds.in/how-to-invest): Step-by-step process from eligibility and KYC to allotment.
+- [FAQs](https://giftcityfunds.in/faqs): Short answers to common questions.
 
-## Knowledge
+## Insights articles
 
-- [What is a GIFT City Fund?](/knowledge/what-is-gift-city-fund): Guide to IFSC mutual funds.
-- [How the IFSC Framework Works](/knowledge/how-ifsc-works): Regulatory overview.
-- [Mutual Funds in GIFT City](/knowledge/mutual-funds-in-gift-city): Fund structures under IFSCA.
-- [Tax Benefits for NRIs](/knowledge/tax-benefits-for-nris): NRI tax provisions.
+- [How NRIs Can Invest in GIFT City Funds: A Step-by-Step Overview](https://giftcityfunds.in/insights/nri-step-by-step): A step-by-step walkthrough of how NRIs and OCIs actually invest in GIFT City IFSC funds, from eligibility and KYC to remittance and unit allotment.
+- [LRS, TCS and GIFT City: What Resident Indian Investors Should Know](https://giftcityfunds.in/insights/lrs-tcs-gift-city): How the Liberalised Remittance Scheme (LRS) and Tax Collected at Source (TCS) apply when a Resident Indian invests in a GIFT City fund via the Overseas Portfolio Investment route.
+- [AIF vs PMS vs Mutual Fund FoF: Choosing a GIFT City Structure](https://giftcityfunds.in/insights/aif-vs-pms-vs-fof): A side-by-side comparison of the three main GIFT City fund structures — AIF, PMS and Mutual Fund FoF — to help you choose the right one for your ticket size and goals.
+- [IFSCA vs SEBI: Who Actually Regulates Your GIFT City Fund](https://giftcityfunds.in/insights/ifsca-vs-sebi): A clear explanation of how IFSCA regulates GIFT City IFSC funds, how that differs from SEBI's role for domestic Indian mutual funds, and what it means for investor protection.
+- [GIFT City Fund vs NRE/NRO Investing: A Straight Comparison](https://giftcityfunds.in/insights/gift-city-vs-nre-nro): How investing through a GIFT City fund compares with the traditional NRE and NRO account route for NRIs — currency, repatriation, tax and structure differences explained.
+- [GIFT City vs Direct Foreign Investment: What Actually Changes for an NRI](https://giftcityfunds.in/insights/gift-city-vs-direct-foreign): What changes when an NRI invests through a GIFT City IFSC fund instead of investing directly in a foreign brokerage account or offshore fund.
+- [Ten Questions NRIs Actually Ask About GIFT City Funds](https://giftcityfunds.in/insights/ten-questions-nris-ask): Ten plain-English answers to the questions NRIs most commonly ask before investing in a GIFT City IFSC fund.
+- [PFIC Explained: Why It Matters for Every US-Based NRI Investor](https://giftcityfunds.in/insights/pfic-explained): A plain-English explanation of PFIC status, why it applies to many foreign funds, and why GIFT City fund structure matters for US-based NRIs and US persons.
 
-## Team
+## About
 
-- [Anup Vatyani](/team/anup-vatyani): Contributor bio (MFD ARN 106715).
+- [About Anup Vatyani](https://giftcityfunds.in/about): Contributor background and registration (MFD ARN 106715).
+- [Contact](https://giftcityfunds.in/contact): Contact form and details.
 
 ## Optional
 
-- [Disclaimer](/disclaimer)
-- [Privacy Policy](/privacy-policy)
-- [Terms of Use](/terms-of-use)
-- [Accessibility](/accessibility)
+- [Disclaimer](https://giftcityfunds.in/disclaimer)
+- [Privacy Policy](https://giftcityfunds.in/privacy-policy)
+- [Terms of Use](https://giftcityfunds.in/terms-of-use)
+- [Accessibility Statement](https://giftcityfunds.in/accessibility-statement)

@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import Navigation from "./Navigation";
 import Footer from "./Footer";
+import RelatedGuides from "./RelatedGuides";
 import { FaWhatsapp } from "react-icons/fa";
 
 interface LayoutProps {
@@ -14,8 +15,9 @@ const Layout = ({ children }: LayoutProps) => {
         Author — Anup Vatyani (MFD ARN 106715) | Informational Content Only | No Personalized Advice.
       </div>
       <Navigation />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {children}
+        <RelatedGuides />
       </main>
       <Footer />
       <a
