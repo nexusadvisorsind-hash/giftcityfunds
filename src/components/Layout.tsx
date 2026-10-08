@@ -1,4 +1,5 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Navigation from "./Navigation";
 import Footer from "./Footer";
 import RelatedGuides from "./RelatedGuides";
@@ -11,6 +12,19 @@ interface LayoutProps {
 }
 
 const Layout = ({ children }: LayoutProps) => {
+  // New page: start at the top, or at the #section the link points to.
+  const { pathname, hash } = useLocation();
+  useEffect(() => {
+    if (hash) {
+      const el = document.getElementById(decodeURIComponent(hash.slice(1)));
+      if (el) {
+        el.scrollIntoView();
+        return;
+      }
+    }
+    window.scrollTo(0, 0);
+  }, [pathname, hash]);
+
   // Count clicks on any link that leads to the contact page.
   const onClickCapture = (e: React.MouseEvent) => {
     const a = (e.target as HTMLElement).closest("a");
@@ -18,7 +32,7 @@ const Layout = ({ children }: LayoutProps) => {
   };
   return (
     <div className="min-h-screen flex flex-col" onClickCapture={onClickCapture}>
-      <div className="bg-ink text-paper text-xs font-body text-center py-1.5 px-4 border-b border-brass/40">
+      <div className="bg-ink text-paper text-xs font-body text-center py-1.5 px-4 border-b border-white/10">
         Anup Vatyani — AMFI-registered Mutual Fund Distributor (ARN 106715) | Educational content only | No personalised advice
       </div>
       <Navigation />

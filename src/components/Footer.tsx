@@ -10,8 +10,8 @@ const Footer = () => {
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center">
-                <span className="text-secondary-foreground font-heading font-bold text-xl">G</span>
+              <div className="w-10 h-10 bg-teal rounded-xl flex items-center justify-center">
+                <span className="text-ink font-heading font-bold text-xl">G</span>
               </div>
               <div className="flex flex-col">
                 <span className="font-heading font-bold text-lg">GIFT CITY FUNDS</span>

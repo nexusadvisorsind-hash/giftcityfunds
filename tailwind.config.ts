@@ -19,11 +19,12 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'body': ['Public Sans', 'system-ui', 'sans-serif'],
-				'heading': ['Fraunces', 'ui-serif', 'Georgia', 'serif'],
+				'body': ['DM Sans', 'system-ui', 'sans-serif'],
+				'heading': ['Space Grotesk', 'system-ui', 'sans-serif'],
 				'data': ['IBM Plex Mono', 'ui-monospace', 'monospace'],
 			},
 			colors: {
+				teal: { DEFAULT: 'hsl(var(--teal))', light: 'hsl(var(--teal-light))' },
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',

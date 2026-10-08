@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { SEO } from "@/components/SEO";
-import { ArrowRight, Landmark, Layers, Wallet, MessageCircle, CircleDollarSign, TrendingUp, Building2, UserCog, BookOpen, UserCheck, FileText, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Landmark, Layers, Wallet, MessageCircle, CircleDollarSign, TrendingUp, Building2, UserCog, FileText, Globe2, Home as Home2 } from "lucide-react";
 
 const Home = () => {
   const financialServiceSchema = {
@@ -24,42 +24,131 @@ const Home = () => {
       />
 
       <div className="min-h-screen">
-        {/* Hero */}
-        <section className="relative hero-section">
-          <div className="w-full h-[300px] sm:h-[340px] md:h-[390px] overflow-hidden bg-background">
-            <img
-              src="/images/gift-city-skyline.webp"
-              srcSet="/images/gift-city-skyline-828.webp 828w, /images/gift-city-skyline.webp 1568w"
-              sizes="100vw"
-              alt="GIFT City IFSC skyline at Gandhinagar, Gujarat"
-              className="hero-image w-full h-full object-cover object-top"
-              width="1568"
-              height="501"
-              fetchPriority="high"
-              decoding="sync"
-            />
-          </div>
-          <div className="pt-10 pb-14 md:pt-12 md:pb-16 bg-background">
-            <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-              <h1 className="font-heading font-bold text-3xl md:text-5xl text-primary mb-5 leading-tight">
-                GIFT City Funds, Explained Simply
+        {/* Hero — Option A: navy, persona choice above the fold */}
+        <section className="bg-ink text-white overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 md:pt-12 pb-6 grid gap-10 lg:grid-cols-2 items-center">
+            <div>
+              <p className="gcf-fade-up gcf-delay-1 inline-flex items-center rounded-full bg-teal/15 text-teal-light px-4 py-1.5 font-body text-sm font-medium mb-4">
+                Plain-English guide · Regulated by IFSCA
+              </p>
+              <h1 className="gcf-fade-up gcf-delay-2 font-heading font-bold text-4xl md:text-6xl leading-[1.05] tracking-tight mb-5">
+                GIFT City Funds, <span className="text-teal-light">Explained Simply</span>
               </h1>
-              <p className="font-body text-lg text-foreground-muted max-w-3xl mx-auto mb-8">
+              <p className="gcf-fade-up gcf-delay-3 font-body text-lg md:text-xl text-slate-300 max-w-xl mb-7 leading-relaxed">
                 An educational resource to understand GIFT City Mutual Funds, Alternative Investment Funds (AIFs), and the IFSC investment ecosystem for NRIs, OCIs and Resident Indians.
               </p>
-              <div className="flex justify-center">
-                <Button asChild variant="gold" size="lg">
-                  <Link to="/contact">Talk to Anup</Link>
-                </Button>
+              <div className="gcf-fade-up gcf-delay-4 flex flex-wrap gap-3">
+                <Link to="/what-is-gift-city" className="inline-flex items-center rounded-xl bg-teal text-ink font-heading font-semibold px-6 py-3.5 transition-transform hover:-translate-y-0.5 motion-reduce:hover:translate-y-0">
+                  Start with the basics
+                </Link>
+                <Link to="/gift-city-funds-vs-mutual-funds" className="inline-flex items-center rounded-xl border border-slate-600 text-white font-heading font-medium px-6 py-3.5 transition-colors hover:border-teal-light">
+                  Compare with mutual funds
+                </Link>
               </div>
             </div>
+            <div className="gcf-fade-up gcf-delay-3 relative hidden sm:flex items-center justify-center min-h-[340px]" aria-hidden="false">
+              <div className="gcf-spin-slow absolute w-[360px] h-[360px] rounded-full border border-dashed border-teal-light/35" aria-hidden="true"></div>
+              <div className="gcf-spin-slower absolute w-[284px] h-[284px] rounded-full border border-brass/30" aria-hidden="true"></div>
+              <img
+                src="/images/gift-city-skyline-828.webp"
+                alt="GIFT City IFSC skyline at Gandhinagar, Gujarat"
+                width="248"
+                height="248"
+                fetchPriority="high"
+                className="relative w-[248px] h-[248px] rounded-full object-cover border-[6px] border-[#13254F]"
+              />
+              <span className="gcf-float absolute top-6 left-4 md:left-10 rounded-xl bg-white text-ink px-4 py-2.5 font-body text-sm font-semibold shadow-xl">Invest in USD</span>
+              <span className="gcf-float absolute bottom-8 left-2 md:left-6 rounded-xl bg-brass text-ink px-4 py-2.5 font-body text-sm font-semibold [animation-delay:1.5s]">IFSCA-regulated</span>
+              <span className="gcf-float absolute top-24 right-2 md:right-8 rounded-xl bg-teal text-ink px-4 py-2.5 font-body text-sm font-semibold [animation-delay:3s]">From ~$5,000</span>
+            </div>
           </div>
-          {/* Stat band */}
-          <div className="bg-primary text-primary-foreground">
-            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-5 text-center">
-              <p className="font-body text-sm md:text-base">
-                NRI investment in GIFT City funds has crossed <strong className="text-brass">$7 billion</strong> — IFSCA, reported March 2025.
-              </p>
+
+          {/* Persona choice */}
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+            <p className="font-body text-sm font-semibold uppercase tracking-wider text-slate-400 mb-3">I'm investing as…</p>
+            <div className="grid gap-4 md:grid-cols-3">
+              {[
+                { to: "/who-its-for#nri", title: "An NRI", body: "Invest directly in USD, no LRS", icon: Globe2, tone: "bg-teal" },
+                { to: "/who-its-for#oci", title: "An OCI", body: "Broadly the NRI path; fund checks vary", icon: FileText, tone: "bg-brass" },
+                { to: "/who-its-for#resident", title: "A Resident Indian", body: "Via LRS, up to USD 250,000 a year", icon: Home2, tone: "bg-indigo-300" },
+              ].map((p, i) => (
+                <Link
+                  key={p.to}
+                  to={p.to}
+                  className={`gcf-fade-up gcf-delay-${i + 2} group flex items-center gap-4 rounded-2xl border border-[#23345E] bg-white/[0.04] p-5 transition-all hover:-translate-y-1 hover:border-teal-light hover:bg-teal/15 motion-reduce:hover:translate-y-0`}
+                >
+                  <span className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${p.tone}`}>
+                    <p.icon className="h-6 w-6 text-ink" aria-hidden="true" />
+                  </span>
+                  <span className="flex-1">
+                    <span className="block font-heading text-xl font-semibold">{p.title}</span>
+                    <span className="block font-body text-[15px] text-slate-400">{p.body}</span>
+                  </span>
+                  <ArrowRight className="h-5 w-5 text-teal-light transition-transform group-hover:translate-x-1" aria-hidden="true" />
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Fact ticker */}
+        <div className="bg-teal text-ink overflow-hidden whitespace-nowrap font-body font-semibold text-[15px]" aria-label="Key facts">
+          <div className="gcf-marquee inline-flex gap-12 py-3.5">
+            {[0, 1].map((copy) => (
+              <span key={copy} className="inline-flex gap-12" aria-hidden={copy === 1 ? "true" : undefined}>
+                <span>Regulated by IFSCA, not SEBI</span>
+                <span>Invest and redeem in US Dollars</span>
+                <span>Residents invest via LRS — up to USD 250,000 a year</span>
+                <span>Retail schemes from about USD 5,000</span>
+                <span>NRI investment in GIFT City funds has crossed $7 billion (IFSCA, March 2025)</span>
+                <span>Every guide links to its official source</span>
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* How investing works — five steps */}
+        <section className="py-16 md:py-20 bg-background">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-wrap items-end justify-between gap-4 mb-10">
+              <div>
+                <p className="font-body text-sm font-semibold uppercase tracking-wider text-secondary mb-2">The process</p>
+                <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary">How Investing Works, in Five Steps</h2>
+                <p className="font-body text-lg text-foreground-muted mt-2">The same path most NRI, OCI and Resident Indian investors follow.</p>
+              </div>
+              <Link to="/how-to-invest" className="font-body font-semibold text-secondary hover:underline inline-flex items-center">
+                Read the full guide <ArrowRight className="ml-1 h-4 w-4" />
+              </Link>
+            </div>
+            <div className="relative">
+              <div className="absolute hidden lg:block top-7 left-7 right-7 h-[3px] rounded bg-border" aria-hidden="true">
+                <div className="gcf-grow h-[3px] rounded bg-teal"></div>
+              </div>
+              <ol className="relative grid gap-8 sm:grid-cols-2 lg:grid-cols-5 list-none p-0 m-0">
+                {[
+                  { title: "Understand the structures", body: "Mutual Fund FoFs, Retail Feeder Funds, AIFs and PMS — and their minimums.", to: "/funds-explained", cta: "Funds Explained" },
+                  { title: "Check your eligibility & route", body: "NRI, OCI or Resident Indian — and if US-based, PFIC status first.", to: "/who-its-for", cta: "Who It's For" },
+                  { title: "Gather your documents", body: "Passport, PAN, overseas address proof, tax residency certificate." },
+                  { title: "Ask your questions", body: "Ask Anup how the process works, or to be connected with a Fund Management Entity.", to: "/contact", cta: "Contact Anup", highlight: true },
+                  { title: "Complete onboarding and invest", body: "KYC with the FME, sign subscription documents, remit USD, receive units." },
+                ].map((s, i) => (
+                  <li key={s.title}>
+                    <span
+                      className={`gcf-pop flex h-14 w-14 items-center justify-center rounded-full font-heading text-xl font-bold shadow-[0_0_0_6px_hsl(var(--background))] ${s.highlight ? "bg-brass text-ink" : "bg-ink text-teal-light"}`}
+                      style={{ animationDelay: `${0.2 + i * 0.3}s` }}
+                    >
+                      {i + 1}
+                    </span>
+                    <h3 className="font-heading font-semibold text-lg text-primary mt-4 mb-1.5">{s.title}</h3>
+                    <p className="font-body text-foreground-muted leading-relaxed">{s.body}</p>
+                    {s.to && (
+                      <Link to={s.to} className="font-body text-sm font-semibold text-secondary hover:underline inline-flex items-center mt-2">
+                        {s.cta} <ArrowRight className="ml-1 h-3.5 w-3.5" />
+                      </Link>
+                    )}
+                  </li>
+                ))}
+              </ol>
             </div>
           </div>
         </section>
@@ -74,7 +163,7 @@ const Home = () => {
                 { icon: TrendingUp, title: "Not run by a fund house", body: "This isn't an AMC's own website, and it isn't built to promote one scheme. It explains the GIFT City fund structures so you can compare them before you commit to anything." },
                 { icon: MessageCircle, title: "One point of contact", body: "Questions go directly to Anup Vatyani — no call centre, no relationship-manager rotation, no hand-offs between departments." },
               ].map((f) => (
-                <div key={f.title} className="bg-background p-6 rounded-lg border border-border">
+                <div key={f.title} className="gcf-lift bg-background p-6 rounded-2xl border border-border">
                   <f.icon className="h-8 w-8 text-secondary mb-3" />
                   <h3 className="font-heading font-semibold text-lg text-primary mb-2">{f.title}</h3>
                   <p className="font-body text-foreground-muted text-sm leading-relaxed">{f.body}</p>
@@ -108,7 +197,7 @@ const Home = () => {
                 { icon: Landmark, title: "A separate regulator", body: "The International Financial Services Centres Authority (IFSCA) — not SEBI alone — oversees GIFT City funds, with its own rules on structure, disclosure and investor eligibility." },
                 { icon: TrendingUp, title: "Built for global portfolios", body: "These structures are designed to hold international assets and route capital across borders in ways a typical onshore Indian mutual fund cannot." },
               ].map((f) => (
-                <div key={f.title} className="bg-background p-6 rounded-lg border border-border">
+                <div key={f.title} className="gcf-lift bg-background p-6 rounded-2xl border border-border">
                   <f.icon className="h-8 w-8 text-secondary mb-3" />
                   <h3 className="font-heading font-semibold text-lg text-primary mb-2">{f.title}</h3>
                   <p className="font-body text-foreground-muted text-sm leading-relaxed">{f.body}</p>
@@ -130,7 +219,7 @@ const Home = () => {
                 { icon: UserCog, title: "PMS (Portfolio Management Services)", body: "A professionally managed, individually held portfolio for investors wanting more customisation." },
                 { icon: Wallet, title: "Retail Feeder Fund", body: "A lower-ticket fund built for simple, individual access." },
               ].map((f) => (
-                <div key={f.title} className="flex gap-4 p-5 bg-surface rounded-lg border border-border">
+                <div key={f.title} className="gcf-lift flex gap-4 p-5 bg-surface rounded-2xl border border-border">
                   <f.icon className="h-6 w-6 text-secondary shrink-0 mt-1" />
                   <div>
                     <h3 className="font-heading font-semibold text-primary mb-1">{f.title}</h3>
@@ -157,7 +246,7 @@ const Home = () => {
                 { title: "OCI", body: "Broadly similar access to NRIs, with a few fund-specific eligibility conditions worth checking upfront." },
                 { title: "Resident Indian", body: "You can invest too, via the Liberalised Remittance Scheme (LRS), subject to its own annual limit and tax treatment." },
               ].map((f) => (
-                <div key={f.title} className="bg-background p-6 rounded-lg border border-border">
+                <div key={f.title} className="gcf-lift bg-background p-6 rounded-2xl border border-border">
                   <h3 className="font-heading font-semibold text-primary mb-2">{f.title}</h3>
                   <p className="font-body text-sm text-foreground-muted">{f.body}</p>
                 </div>
@@ -278,51 +367,6 @@ const Home = () => {
               and how they compare with{" "}
               <Link to="/gift-city-funds-vs-mutual-funds" className="text-secondary hover:underline">regular Indian mutual funds</Link>.
             </p>
-          </div>
-        </section>
-
-        {/* How to Invest — placed before How Anup Can Help */}
-        <section className="py-16 bg-surface">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-4">How to Invest in GIFT City Funds</h2>
-            <p className="font-body text-lg text-foreground-muted mb-8 max-w-4xl leading-relaxed">
-              Advantages tell you <em>why</em>. This tells you <em>what to do next</em> — five practical steps most NRI, OCI and Resident Indian investors follow.
-            </p>
-            <ol className="space-y-4 list-none p-0 mb-8">
-              {[
-                { icon: BookOpen, title: "Understand the structures", body: "Learn how Mutual Fund FoFs, Retail Feeder Funds, AIFs and PMS differ.", to: "/funds-explained", cta: "Funds Explained" },
-                { icon: UserCheck, title: "Check your eligibility & route", body: "NRI, OCI or Resident Indian — and if US-based, verify PFIC / Non-PFIC status first.", to: "/who-its-for", cta: "Who It's For", to2: "/us-based-nris", cta2: "US NRIs" },
-                { icon: FileText, title: "Gather your documents", body: "KYC pack: passport, PAN, overseas address proof, tax residency certificate (as applicable)." },
-                { icon: MessageCircle, title: "Talk to Anup", body: "Ask how the process works, or ask to be connected with a Fund Management Entity — no call-centre routing.", to: "/contact", cta: "Contact Anup" },
-                { icon: CheckCircle2, title: "Complete onboarding and invest", body: "Sign subscription documents, complete KYC with the FME, remit funds, receive allotment." },
-              ].map((s, i) => (
-                <li key={s.title} className="flex gap-4 bg-background p-5 rounded-lg border border-border">
-                  <div className="shrink-0 w-9 h-9 rounded-full bg-secondary/15 border border-secondary/40 flex items-center justify-center font-heading font-bold text-secondary">
-                    {i + 1}
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-1">
-                      <s.icon className="h-5 w-5 text-secondary" />
-                      <h3 className="font-heading font-semibold text-primary">{s.title}</h3>
-                    </div>
-                    <p className="font-body text-sm text-foreground-muted leading-relaxed mb-2">{s.body}</p>
-                    {s.to && (
-                      <Link to={s.to} className="font-body text-sm text-secondary hover:underline inline-flex items-center mr-4">
-                        {s.cta} <ArrowRight className="ml-1 h-3.5 w-3.5" />
-                      </Link>
-                    )}
-                    {s.to2 && (
-                      <Link to={s.to2} className="font-body text-sm text-secondary hover:underline inline-flex items-center">
-                        {s.cta2} <ArrowRight className="ml-1 h-3.5 w-3.5" />
-                      </Link>
-                    )}
-                  </div>
-                </li>
-              ))}
-            </ol>
-            <Link to="/how-to-invest" className="font-body text-secondary hover:underline inline-flex items-center">
-              See the full step-by-step guide <ArrowRight className="ml-1 h-4 w-4" />
-            </Link>
           </div>
         </section>
 
