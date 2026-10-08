@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { SEO } from "@/components/SEO";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { OfficialSources } from "@/components/OfficialSources";
+import { AuthorByline } from "@/components/AuthorByline";
 
 const URL = "https://giftcityfunds.in/gift-city-funds-vs-mutual-funds";
 const HEADLINE = "GIFT City Funds vs Regular Indian Mutual Funds";
@@ -60,9 +61,7 @@ const GiftCityVsMutualFunds = () => (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
       <Breadcrumbs items={[{ name: "Home", url: "/" }, { name: "GIFT City Funds vs Mutual Funds", url: "/gift-city-funds-vs-mutual-funds" }]} />
       <h1 className="font-heading font-bold text-3xl md:text-4xl text-primary mt-6 mb-2">{HEADLINE}</h1>
-      <p className="font-body text-sm text-foreground-muted mb-6">
-        By <Link to="/about" className={link}>Anup Vatyani</Link>, AMFI-registered MFD (ARN 106715) · Last reviewed October 2026
-      </p>
+      <AuthorByline dateText="Last reviewed October 2026" />
 
       <div className={body}>
         <p>

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { SEO } from "@/components/SEO";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { OfficialSources } from "@/components/OfficialSources";
+import { AuthorByline } from "@/components/AuthorByline";
 
 const URL = "https://giftcityfunds.in/gift-city-funds-nri-tax-by-country";
 const HEADLINE = "GIFT City Funds for NRIs by Country: UAE, UK, US, Canada and Singapore";
@@ -88,9 +89,7 @@ const NriByCountry = () => (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
       <Breadcrumbs items={[{ name: "Home", url: "/" }, { name: "NRIs by Country", url: "/gift-city-funds-nri-tax-by-country" }]} />
       <h1 className="font-heading font-bold text-3xl md:text-4xl text-primary mt-6 mb-2">{HEADLINE}</h1>
-      <p className="font-body text-sm text-foreground-muted mb-6">
-        By <Link to="/about" className={link}>Anup Vatyani</Link>, AMFI-registered MFD (ARN 106715) · Last reviewed October 2026
-      </p>
+      <AuthorByline dateText="Last reviewed October 2026" />
 
       <div className="font-body text-foreground-muted leading-relaxed space-y-4 mb-8">
         <p>

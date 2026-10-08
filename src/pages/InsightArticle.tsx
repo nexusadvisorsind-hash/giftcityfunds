@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { articles, getArticle } from "./insights/articles";
 import { formatDate } from "@/lib/formatDate";
 import NotFound from "./NotFound";
+import { AuthorByline } from "@/components/AuthorByline";
 
 const InsightArticle = () => {
   const { slug } = useParams();
@@ -21,6 +22,7 @@ const InsightArticle = () => {
       "@type": "Person",
       "name": "Anup Vatyani",
       "url": "https://giftcityfunds.in/about",
+      "image": "https://giftcityfunds.in/images/anup-vatyani.jpg",
       "identifier": "ARN106715",
     },
     "publisher": { "@id": "https://giftcityfunds.in/#organization" },
@@ -48,14 +50,7 @@ const InsightArticle = () => {
         <Breadcrumbs items={[{ name: "Home", url: "/" }, { name: "Insights", url: "/insights" }, { name: article.title, url: `/insights/${article.slug}` }]} />
         <article>
           <h1 className="font-heading font-bold text-3xl md:text-4xl text-primary mt-6 mb-4">{article.title}</h1>
-          <p className="font-body text-sm text-foreground-muted mb-8">
-            By{" "}
-            <Link to="/about" className="text-secondary hover:underline">
-              Anup Vatyani
-            </Link>
-            , AMFI-registered MFD (ARN 106715) · Published{" "}
-            <time dateTime={article.datePublished}>{formatDate(article.datePublished)}</time>
-          </p>
+          <AuthorByline dateText={<>Published <time dateTime={article.datePublished}>{formatDate(article.datePublished)}</time></>} />
           {article.body}
         </article>
 

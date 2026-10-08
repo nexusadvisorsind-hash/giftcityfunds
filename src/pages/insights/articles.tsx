@@ -16,6 +16,159 @@ export interface InsightArticle {
 
 export const articles: InsightArticle[] = [
   {
+    slug: "how-to-open-gift-city-bank-account",
+    title: "How to Open a GIFT City Bank Account (IFSC Banking Unit)",
+    seoTitle: "How to Open a GIFT City Bank Account: NRIs and Residents",
+    description: "Who can open a foreign-currency account with a GIFT City IFSC Banking Unit, the documents banks ask for, how to fund it, and what to check before you choose a bank.",
+    datePublished: "2026-10-08",
+    body: (
+        <div className="font-body text-foreground-muted space-y-4 leading-relaxed">
+          <p>
+            <strong className="text-primary">The short answer.</strong> A GIFT City bank account is a foreign-currency account with an <strong className="text-primary">IFSC Banking Unit (IBU)</strong> — the GIFT City branch of an Indian or foreign bank. NRIs and OCIs can open one to hold US Dollars and other currencies in India. Resident Indians can open one too, funded under the Liberalised Remittance Scheme. Most banks handle the process online or through their NRI desk.
+          </p>
+          <h3 className="font-heading font-semibold text-lg text-primary pt-2">Who can open one</h3>
+          <ul className="list-disc pl-6 space-y-2">
+            <li><strong className="text-primary">NRIs and OCIs:</strong> can open foreign-currency accounts and deposits with an IBU, funded from an overseas bank account.</li>
+            <li><strong className="text-primary">Resident Indians:</strong> can open a Foreign Currency Account in an IFSC under the LRS. Since RBI's revision of July 2024, it can be used for all purposes permitted under LRS, not only for investing in GIFT City. An earlier rule requiring money left idle for 15 days to be sent back to India was withdrawn in 2023.</li>
+          </ul>
+          <h3 className="font-heading font-semibold text-lg text-primary pt-2">The steps</h3>
+          <ol className="list-decimal pl-6 space-y-2">
+            <li><strong className="text-primary">Choose a bank with an IBU.</strong> Several Indian and foreign banks operate in GIFT City. You can check a bank's IFSC registration in the <a href="https://ifsca.gov.in/DirectoryList" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">IFSCA Directory</a>.</li>
+            <li><strong className="text-primary">Prepare KYC documents.</strong> Banks typically ask for a passport, PAN or Form 60, proof of address, a photograph and a FATCA/CRS self-declaration. NRIs may also be asked for proof of overseas address and a Tax Residency Certificate. Requirements differ by bank.</li>
+            <li><strong className="text-primary">Complete the application.</strong> Many banks allow an existing customer to open the account in their app, or a new customer to apply with video KYC. Some still need signed forms.</li>
+            <li><strong className="text-primary">Fund the account.</strong> NRIs send a wire transfer from their overseas account. Residents remit through their Indian bank under LRS, which counts towards the USD 250,000 annual limit and may attract TCS.</li>
+            <li><strong className="text-primary">Use it.</strong> Hold foreign currency, book fixed deposits, invest in GIFT City funds, or — for residents — make other LRS payments abroad.</li>
+          </ol>
+          <h3 className="font-heading font-semibold text-lg text-primary pt-2">What to compare between banks</h3>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Which currencies are offered. US Dollars are standard; some banks also offer Euro, Pound and others.</li>
+            <li>Minimum balance, account charges and transfer fees.</li>
+            <li>Whether the account can be opened fully online from your country.</li>
+            <li>Deposit tenures and rates, if you plan to book fixed deposits. See <Link to="/insights/gift-city-fd-vs-nre-fcnr" className="text-secondary hover:underline">GIFT City FDs vs NRE and FCNR deposits</Link>.</li>
+            <li>What statements the bank issues for tax filing in your country.</li>
+          </ul>
+          <h3 className="font-heading font-semibold text-lg text-primary pt-2">Tax on interest</h3>
+          <p>
+            Interest on foreign-currency deposits with an IBU is exempt from Indian tax for non-residents and RNORs under section 10(15)(viii) of the Income-tax Act. Resident Indians are taxed on it in the normal way. Your country of residence may tax the interest even when India does not.
+          </p>
+          <h3 className="font-heading font-semibold text-lg text-primary pt-2">A bank account is not a fund investment</h3>
+          <p>
+            An IBU account holds cash and deposits. Investing in a GIFT City fund is a separate step with a Fund Management Entity, although many people use the IBU account to send and receive the money. See <Link to="/how-to-invest" className="text-secondary hover:underline">How to Invest in GIFT City Funds</Link>.
+          </p>
+          <p className="text-sm">
+            Sources: <a href="https://rbidocs.rbi.org.in/rdocs/notification/PDFs/NT9952781DE54AA141D3B89703E895DDA10C.PDF" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">RBI circular on LRS remittances to IFSCs (16 Feb 2021)</a>; <a href="https://privateclient.cyrilamarchandblogs.com/2024/07/rbis-revised-lrs-circular-for-ifsc-gift-city-a-welcome-reform/" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">Cyril Amarchand Mangaldas on RBI's July 2024 revision</a>; <a href="https://www.rbi.org.in/Scripts/FAQView.aspx?Id=115" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">RBI LRS FAQs</a>.
+          </p>
+          <p className="text-sm italic pt-2">
+            This article is educational only and is not banking, investment or tax advice. Bank products and rules change; confirm current terms with the bank.
+          </p>
+        </div>
+    ),
+  },
+  {
+    slug: "gift-city-fd-vs-nre-fcnr",
+    title: "GIFT City Fixed Deposits vs NRE and FCNR Deposits",
+    seoTitle: "GIFT City FD vs NRE vs FCNR Deposits for NRIs",
+    description: "GIFT City foreign-currency fixed deposits compared with NRE and FCNR deposits: currency, tenure, Indian tax on interest, what changes when you return to India.",
+    datePublished: "2026-10-08",
+    body: (
+        <div className="font-body text-foreground-muted space-y-4 leading-relaxed">
+          <p>
+            <strong className="text-primary">The short answer.</strong> All three let an NRI earn interest in India that is free of Indian tax and freely repatriable. The difference is currency and flexibility: an NRE deposit is in rupees, an FCNR deposit is in a foreign currency for one to five years, and a GIFT City deposit is in a foreign currency with an IFSC Banking Unit, sometimes for shorter terms.
+          </p>
+          <h3 className="font-heading font-semibold text-lg text-primary pt-2">Side by side</h3>
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead>
+                <tr className="bg-surface">
+                  <th scope="col" className="text-left p-3 border border-border">Feature</th>
+                  <th scope="col" className="text-left p-3 border border-border">GIFT City FD (IBU)</th>
+                  <th scope="col" className="text-left p-3 border border-border">FCNR (B) deposit</th>
+                  <th scope="col" className="text-left p-3 border border-border">NRE deposit</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row" className="text-left p-3 border border-border text-primary font-medium">Currency</th><td className="p-3 border border-border">Foreign currency, usually USD; some banks offer EUR and others</td><td className="p-3 border border-border">Foreign currency, a wider choice at many banks</td><td className="p-3 border border-border">Indian rupees</td></tr>
+                <tr><th scope="row" className="text-left p-3 border border-border text-primary font-medium">Regulated under</th><td className="p-3 border border-border">IFSCA</td><td className="p-3 border border-border">RBI (FEMA)</td><td className="p-3 border border-border">RBI (FEMA)</td></tr>
+                <tr><th scope="row" className="text-left p-3 border border-border text-primary font-medium">Tenure</th><td className="p-3 border border-border">Set by each bank; some start from 7 days, up to 5 years</td><td className="p-3 border border-border">1 to 5 years</td><td className="p-3 border border-border">From 1 year</td></tr>
+                <tr><th scope="row" className="text-left p-3 border border-border text-primary font-medium">Indian tax on interest (NRI)</th><td className="p-3 border border-border">Exempt — section 10(15)(viii)</td><td className="p-3 border border-border">Exempt — section 10(15)(iv)(fa)</td><td className="p-3 border border-border">Exempt — section 10(4)(ii)</td></tr>
+                <tr><th scope="row" className="text-left p-3 border border-border text-primary font-medium">Currency risk for a dollar earner</th><td className="p-3 border border-border">None in USD terms</td><td className="p-3 border border-border">None in deposit-currency terms</td><td className="p-3 border border-border">Yes — rupee movements</td></tr>
+                <tr><th scope="row" className="text-left p-3 border border-border text-primary font-medium">Repatriation</th><td className="p-3 border border-border">Free</td><td className="p-3 border border-border">Free</td><td className="p-3 border border-border">Free</td></tr>
+                <tr><th scope="row" className="text-left p-3 border border-border text-primary font-medium">After you return to India</th><td className="p-3 border border-border">Interest stays exempt while you are RNOR</td><td className="p-3 border border-border">Can run to maturity; interest stays exempt while you are RNOR</td><td className="p-3 border border-border">Must be redesignated; interest becomes taxable</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-sm">Interest rates change often and differ by bank, so compare current rates directly; this table does not.</p>
+          <h3 className="font-heading font-semibold text-lg text-primary pt-2">How people typically choose</h3>
+          <ul className="list-disc pl-6 space-y-2">
+            <li><strong className="text-primary">Earning and spending in dollars:</strong> a GIFT City FD or an FCNR deposit avoids converting to rupees and back.</li>
+            <li><strong className="text-primary">Need a short term, under a year:</strong> some GIFT City FDs allow this; FCNR deposits do not.</li>
+            <li><strong className="text-primary">Planning to spend the money in India:</strong> an NRE deposit is already in rupees, with the rupee's exchange-rate risk.</li>
+            <li><strong className="text-primary">Want market-linked returns instead of interest:</strong> that is a fund, not a deposit. See <Link to="/insights/gift-city-vs-nre-nro" className="text-secondary hover:underline">GIFT City funds vs NRE/NRO investing</Link>.</li>
+          </ul>
+          <h3 className="font-heading font-semibold text-lg text-primary pt-2">Your home country's tax</h3>
+          <p>
+            Indian exemptions do not stop your country of residence from taxing the interest. US, UK and Canadian residents generally report worldwide interest; the UAE does not tax individuals' income. See <Link to="/gift-city-funds-nri-tax-by-country" className="text-secondary hover:underline">GIFT City funds for NRIs by country</Link>.
+          </p>
+          <p className="text-sm">
+            How to open the account first: <Link to="/insights/how-to-open-gift-city-bank-account" className="text-secondary hover:underline">How to open a GIFT City bank account</Link>. Example product terms: <a href="https://www.idfcfirst.bank.in/gift-city/non-resident-banking/fixed-deposit-account" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">one bank's GIFT City fixed deposit page</a>.
+          </p>
+          <p className="text-sm italic pt-2">
+            This article is educational only and is not banking, investment or tax advice. Tax sections are summarised; confirm your position with a CA before relying on them.
+          </p>
+        </div>
+    ),
+  },
+  {
+    slug: "returning-to-india-gift-city-investments",
+    title: "Returning to India? What Happens to Your GIFT City Investments",
+    seoTitle: "Returning to India: What Happens to GIFT City Investments",
+    description: "What changes for your GIFT City funds, deposits and accounts when you move back to India: RNOR status, FEMA rules on holdings, LRS for new money, a checklist.",
+    datePublished: "2026-10-08",
+    body: (
+        <div className="font-body text-foreground-muted space-y-4 leading-relaxed">
+          <p>
+            <strong className="text-primary">The short answer.</strong> You can generally keep GIFT City investments you made as an NRI after you return. What changes is tax: you may first become a Resident but Not Ordinarily Resident (RNOR), which keeps some exemptions for a while, and then a full resident taxed on worldwide income. Any new money you send to GIFT City as a resident goes through the LRS.
+          </p>
+          <h3 className="font-heading font-semibold text-lg text-primary pt-2">1. Your residential status changes in stages</h3>
+          <p>
+            Indian tax law has three statuses: non-resident (NR), resident but not ordinarily resident (RNOR), and resident and ordinarily resident (ROR). Under section 6 of the Income-tax Act, a returning NRI is usually RNOR at first — for example, if they were non-resident in nine of the previous ten years, or spent no more than 729 days in India in the previous seven. How long RNOR lasts depends on your own travel history.
+          </p>
+          <h3 className="font-heading font-semibold text-lg text-primary pt-2">2. While you are RNOR</h3>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Income earned and received outside India is generally not taxed in India, unless it comes from a business controlled or profession set up in India.</li>
+            <li>Interest on GIFT City IBU deposits and FCNR deposits stays exempt, because both exemptions cover RNORs.</li>
+            <li>Gains from GIFT City funds: the treatment depends on the fund structure. Ask your CA before redeeming, because timing a redemption within the RNOR window can matter.</li>
+          </ul>
+          <h3 className="font-heading font-semibold text-lg text-primary pt-2">3. Can you keep the investments?</h3>
+          <p>
+            Generally, yes. Section 6(4) of FEMA allows a person resident in India to hold, own or transfer foreign currency and foreign securities acquired while they were resident outside India. Units in GIFT IFSC are treated as persons resident outside India for FEMA purposes, so holdings bought as an NRI can usually continue. Confirm this with your bank and the Fund Management Entity, who must update your status.
+          </p>
+          <h3 className="font-heading font-semibold text-lg text-primary pt-2">4. New money goes through LRS</h3>
+          <p>
+            Once resident, fresh investments into GIFT City are made under the Liberalised Remittance Scheme, within the USD 250,000 annual limit, and may attract TCS. See <Link to="/insights/lrs-tcs-gift-city" className="text-secondary hover:underline">LRS, TCS and GIFT City</Link>.
+          </p>
+          <h3 className="font-heading font-semibold text-lg text-primary pt-2">5. Once you become ROR</h3>
+          <p>
+            As a full resident you are taxed in India on worldwide income, including GIFT City deposit interest and fund gains, and you must report foreign assets in Schedule FA of your income-tax return.
+          </p>
+          <h3 className="font-heading font-semibold text-lg text-primary pt-2">Checklist before and after you move</h3>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Work out your expected residential status for the next few years with a CA.</li>
+            <li>Tell every bank, IBU and Fund Management Entity about your change of status and update KYC.</li>
+            <li>Redesignate NRE and NRO accounts as required; review FCNR maturities.</li>
+            <li>Keep records of your purchase cost in foreign currency for each holding.</li>
+            <li>Settle tax obligations in the country you are leaving. US citizens and green card holders remain US taxpayers wherever they live.</li>
+          </ul>
+          <p className="text-sm">
+            Related: <Link to="/insights/gift-city-fd-vs-nre-fcnr" className="text-secondary hover:underline">GIFT City FDs vs NRE and FCNR deposits</Link> · <Link to="/taxation" className="text-secondary hover:underline">Regulation and Taxation</Link> · <a href="https://www.incometaxindia.gov.in/" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">Income Tax Department</a>
+          </p>
+          <p className="text-sm italic pt-2">
+            This article is educational only and is not tax, legal or investment advice. Residential status and FEMA rules turn on individual facts; take professional advice before you move.
+          </p>
+        </div>
+    ),
+  },
+  {
     slug: "nri-step-by-step",
     title: "How NRIs Can Invest in GIFT City Funds: A Step-by-Step Overview",
     seoTitle: "How NRIs Can Invest in GIFT City Funds: Step by Step",
@@ -205,8 +358,8 @@ export const articles: InsightArticle[] = [
   {
     slug: "gift-city-vs-direct-foreign",
     title: "GIFT City vs Direct Foreign Investment: What Actually Changes for an NRI",
-    seoTitle: "GIFT City Funds vs Direct Foreign Investing for NRIs",
-    description: "What changes when an NRI invests through a GIFT City IFSC fund instead of investing directly in a foreign brokerage account or offshore fund.",
+    seoTitle: "GIFT City Funds vs US ETFs and Direct Foreign Investing",
+    description: "What changes when an NRI invests through a GIFT City IFSC fund instead of buying US-listed ETFs or other funds through a foreign brokerage account.",
     datePublished: "2026-09-21",
     body: (
         <div className="font-body text-foreground-muted space-y-4 leading-relaxed">
@@ -231,6 +384,20 @@ export const articles: InsightArticle[] = [
           </p>
           <p>
             If you're a US-based NRI weighing this decision, our <Link to="/us-based-nris" className="text-secondary hover:underline">US-Based NRI guide</Link> and the article on <Link to="/insights/pfic-explained" className="text-secondary hover:underline">PFIC status</Link> below are worth reading first, or <Link to="/contact" className="text-secondary hover:underline">talk to Anup</Link> directly about your specific situation.
+          </p>
+          <h3 className="font-heading font-semibold text-lg text-primary pt-2">GIFT City fund vs a US-listed ETF</h3>
+          <p>
+            Many NRIs compare a GIFT City global fund with simply buying a US-listed ETF through an overseas broker. The main differences:
+          </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li><strong className="text-primary">US estate tax (non-US persons):</strong> shares of US companies, including US-listed ETFs, are US-situated assets. The IRS requires an estate tax return for a non-resident non-citizen whose US-situated assets exceed USD 60,000 at death. A fund domiciled in GIFT IFSC is not a US company; ask the fund and a tax adviser how this applies to you.</li>
+            <li><strong className="text-primary">US withholding on dividends:</strong> dividends from US securities paid to non-US persons are subject to US withholding tax, which a tax treaty may reduce.</li>
+            <li><strong className="text-primary">US persons:</strong> the comparison usually reverses. A US-listed ETF is not a PFIC, while most foreign funds are. See <Link to="/insights/pfic-explained" className="text-secondary hover:underline">PFIC explained</Link>.</li>
+            <li><strong className="text-primary">Cost:</strong> broad US ETFs often have very low expense ratios. A GIFT City feeder fund adds its own costs on top of the underlying fund's. Compare the total.</li>
+            <li><strong className="text-primary">Convenience:</strong> a GIFT City fund keeps your investment, statements and KYC within India's regulated framework, which some investors prefer to an overseas brokerage account.</li>
+          </ul>
+          <p className="text-sm">
+            Source: <a href="https://www.irs.gov/individuals/international-taxpayers/some-nonresidents-with-us-assets-must-file-estate-tax-returns" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">IRS — some nonresidents with US assets must file estate tax returns</a>.
           </p>
           <p className="text-sm italic pt-2">
             This article is educational only and is not investment or tax advice. Consult a qualified tax professional familiar with your country of residence before deciding between structures.

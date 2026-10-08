@@ -30,6 +30,7 @@ const organizationSchema = {
   "founder": {
     "@type": "Person",
     "name": "Anup Vatyani",
+    "image": "https://giftcityfunds.in/images/anup-vatyani.jpg",
     "jobTitle": "Mutual Fund Distributor",
     "identifier": "ARN106715"
   },
@@ -68,6 +69,7 @@ const enrich = (item: object): object => {
       "@type": "Person",
       name: "Anup Vatyani",
       url: "https://giftcityfunds.in/about",
+      image: "https://giftcityfunds.in/images/anup-vatyani.jpg",
       identifier: "ARN106715",
     },
     publisher: { "@id": "https://giftcityfunds.in/#organization" },

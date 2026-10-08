@@ -363,12 +363,24 @@ const Home = () => {
         <section className="py-16 bg-background">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-6">About the Contributor</h2>
+            <div className="flex flex-col sm:flex-row gap-6 items-start">
+            <img
+              src="/images/anup-vatyani-320.webp"
+              alt="Anup Vatyani"
+              width={128}
+              height={128}
+              loading="lazy"
+              className="w-32 h-32 rounded-full object-cover border border-border shrink-0"
+            />
+            <div>
             <p className="font-body text-foreground-muted leading-relaxed mb-6">
               Anup Vatyani has over 22 years of experience in banking and financial services, including a decade as an AMFI-registered Mutual Fund Distributor (ARN 106715). This site is his effort to provide an accurate, educational resource on GIFT City and IFSC investing.
             </p>
             <Link to="/about" className="font-body text-secondary hover:underline inline-flex items-center">
               Read Anup's full background <ArrowRight className="ml-1 h-4 w-4" />
             </Link>
+            </div>
+            </div>
           </div>
         </section>
 

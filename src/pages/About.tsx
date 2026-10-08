@@ -10,6 +10,7 @@ const personSchema = {
   "name": "Anup Vatyani",
   "jobTitle": "AMFI-Registered Mutual Fund Distributor (ARN 106715)",
   "url": "https://giftcityfunds.in/about",
+  "image": "https://giftcityfunds.in/images/anup-vatyani.jpg",
   "sameAs": ["https://www.linkedin.com/in/anup-vatyani-081b4142"],
   "identifier": { "@type": "PropertyValue", "propertyID": "AMFI ARN", "value": "106715" },
   "knowsAbout": ["GIFT City", "IFSC fund structures", "Mutual funds", "Alternative Investment Funds", "NRI investing"],
@@ -26,12 +27,26 @@ const About = () => (
       schema={personSchema}
       breadcrumbs={[
         { name: "Home", url: "https://giftcityfunds.in/" },
-        { name: "About", url: "https://giftcityfunds.in/about" },
+        { name: "About Anup Vatyani", url: "https://giftcityfunds.in/about" },
       ]}
     />
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
       <Breadcrumbs items={[{ name: "Home", url: "/" }, { name: "About", url: "/about" }]} />
-      <h1 className="font-heading font-bold text-3xl md:text-4xl text-primary mt-6 mb-6">About the Contributor</h1>
+      <div className="flex flex-col sm:flex-row sm:items-center gap-6 mt-6 mb-8">
+        <img
+          src="/images/anup-vatyani-320.webp"
+          srcSet="/images/anup-vatyani-320.webp 320w, /images/anup-vatyani-640.webp 640w"
+          sizes="160px"
+          alt="Anup Vatyani, AMFI-registered Mutual Fund Distributor"
+          width={160}
+          height={160}
+          className="w-40 h-40 rounded-full object-cover border border-border shrink-0"
+        />
+        <div>
+          <h1 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-2">About Anup Vatyani</h1>
+          <p className="font-body text-foreground-muted">AMFI-registered Mutual Fund Distributor (ARN 106715) · Ahmedabad, Gujarat</p>
+        </div>
+      </div>
       <div className="font-body text-foreground-muted space-y-4">
         <p>Anup Vatyani has over 22 years of experience in the banking and financial services industry. An ex-banker with a decade of experience as a Mutual Fund Distributor (AMFI ARN 106715), he brings deep domain expertise in financial products, regulatory frameworks, and investor education.</p>
         <p>This platform is curated by him to provide accurate, educational resources on GIFT City and IFSC structures. It does not offer personalized investment or advisory services.</p>

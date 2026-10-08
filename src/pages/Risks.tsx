@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { SEO } from "@/components/SEO";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { OfficialSources } from "@/components/OfficialSources";
+import { AuthorByline } from "@/components/AuthorByline";
 
 const URL = "https://giftcityfunds.in/gift-city-funds-risks";
 const HEADLINE = "Risks of GIFT City Funds: What to Know Before You Invest";
@@ -45,7 +46,7 @@ const Risks = () => (
   <>
     <SEO
       title="Risks of GIFT City Funds: Are They Safe? (2026 Guide)"
-      description="The main risks of GIFT City funds explained plainly: market, currency, liquidity, high minimums, tax complexity and regulatory change, and how to check a fund manager."
+      description="The main risks of GIFT City funds explained plainly: market, currency, liquidity, high minimums, tax and regulatory change, and how to check a fund manager."
       canonical={URL}
       type="article"
       schema={[articleSchema, faqSchema]}
@@ -57,9 +58,7 @@ const Risks = () => (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
       <Breadcrumbs items={[{ name: "Home", url: "/" }, { name: "Risks of GIFT City Funds", url: "/gift-city-funds-risks" }]} />
       <h1 className="font-heading font-bold text-3xl md:text-4xl text-primary mt-6 mb-2">{HEADLINE}</h1>
-      <p className="font-body text-sm text-foreground-muted mb-6">
-        By <Link to="/about" className={link}>Anup Vatyani</Link>, AMFI-registered MFD (ARN 106715) · Last reviewed October 2026
-      </p>
+      <AuthorByline dateText="Last reviewed October 2026" />
 
       <div className="font-body text-foreground-muted leading-relaxed space-y-4">
         <p>

@@ -24,8 +24,8 @@ const rows = [
 const FundsExplained = () => (
   <>
     <SEO
-      title="GIFT City Fund Categories: MF FoF, AIF, PMS & Feeders (2026)"
-      description="Compare GIFT City fund categories — Mutual Fund FoFs, AIFs (Cat I/II/III), PMS and Retail Feeder Funds — with eligibility, ticket sizes and use cases."
+      title="GIFT City Fund Types: Retail, Restricted, AIF & PMS (2026)"
+      description="GIFT City fund types compared: retail schemes, restricted schemes (AIFs), venture capital schemes and PMS, with who can invest and minimum tickets."
       canonical="https://giftcityfunds.in/funds-explained"
       schema={articleSchema}
       breadcrumbs={[
@@ -76,6 +76,54 @@ const FundsExplained = () => (
           <p className="font-body text-sm text-foreground-muted">Money from India (via the Liberalised Remittance Scheme, LRS) or global sources flowing out into international markets — global equities, ETFs, bonds, alternative strategies, or structured products, via the Overseas Portfolio Investment (OPI) route.</p>
         </div>
       </div>
+
+      <h2 className="font-heading font-semibold text-2xl text-primary mb-4 mt-10">IFSCA's legal categories: retail, restricted and venture capital schemes</h2>
+      <p className="font-body text-foreground-muted mb-4">
+        Behind the product names above, every GIFT City fund is registered under the IFSCA (Fund Management) Regulations, 2025 as one of a few scheme types. The type decides who may invest and the minimum ticket, and each is run by a matching category of Fund Management Entity (FME).
+      </p>
+      <div className="overflow-x-auto mb-4">
+        <table className="w-full border-collapse text-sm">
+          <thead>
+            <tr className="bg-surface">
+              <th scope="col" className="text-left p-3 border border-border">Scheme type</th>
+              <th scope="col" className="text-left p-3 border border-border">Run by</th>
+              <th scope="col" className="text-left p-3 border border-border">Who can invest</th>
+              <th scope="col" className="text-left p-3 border border-border">Minimum per investor</th>
+            </tr>
+          </thead>
+          <tbody className="text-foreground-muted">
+            <tr className="bg-background">
+              <th scope="row" className="text-left p-3 border border-border font-medium text-primary">Retail scheme (mutual funds, ETFs)</th>
+              <td className="p-3 border border-border">Registered FME (Retail)</td>
+              <td className="p-3 border border-border">Anyone eligible, including individual retail investors</td>
+              <td className="p-3 border border-border">Set by each scheme, e.g. USD 5,000 for some funds</td>
+            </tr>
+            <tr className="bg-background">
+              <th scope="row" className="text-left p-3 border border-border font-medium text-primary">Restricted scheme (AIF Category I, II, III)</th>
+              <td className="p-3 border border-border">Registered FME (Non-Retail)</td>
+              <td className="p-3 border border-border">Accredited investors, or investors meeting the minimum</td>
+              <td className="p-3 border border-border">Commonly USD 150,000</td>
+            </tr>
+            <tr className="bg-background">
+              <th scope="row" className="text-left p-3 border border-border font-medium text-primary">Venture capital scheme</th>
+              <td className="p-3 border border-border">Authorised FME</td>
+              <td className="p-3 border border-border">By private placement, up to 50 investors; close-ended, at least 3 years</td>
+              <td className="p-3 border border-border">As set by the scheme</td>
+            </tr>
+            <tr className="bg-background">
+              <th scope="row" className="text-left p-3 border border-border font-medium text-primary">Portfolio management (PMS)</th>
+              <td className="p-3 border border-border">Registered FME</td>
+              <td className="p-3 border border-border">Individual portfolios, not a pooled scheme</td>
+              <td className="p-3 border border-border">USD 75,000 (reduced from USD 150,000 in 2025)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p className="font-body text-sm text-foreground-muted mb-8">
+        In practice: if you are an individual investing less than USD 75,000, you are looking at retail schemes. Restricted schemes and PMS are built for larger tickets. Sources:{" "}
+        <a href="https://giftcity.dspim.com/knowledge-hub/types-of-gift-city-funds-a-guide-to-fund-categories-under-ifsca" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">DSP GIFT City knowledge hub</a>,{" "}
+        <a href="https://www.business-standard.com/markets/news/ifsca-eases-compliance-for-fund-managers-in-gift-city-to-boost-investment-125022001195_1.html" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">Business Standard on IFSCA's 2025 changes</a>.
+      </p>
 
       <div className="bg-secondary/10 border border-secondary/30 p-6 rounded-lg mb-8">
         <h3 className="font-heading font-semibold text-primary mb-2">A quick word on tax</h3>
