@@ -10,7 +10,7 @@ const articleSchema = {
   "author": { "@type": "Person", "name": "Anup Vatyani" },
   "publisher": { "@type": "Organization", "name": "GIFT City Funds" },
   "mainEntityOfPage": "https://giftcityfunds.in/taxation",
-  "dateModified": "2026-07-23",
+  "dateModified": "2026-10-08",
 };
 
 const rows = [
@@ -36,7 +36,7 @@ const Taxation = () => (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
       <Breadcrumbs items={[{ name: "Home", url: "/" }, { name: "Taxation", url: "/taxation" }]} />
       <h1 className="font-heading font-bold text-3xl md:text-4xl text-primary mt-6 mb-2">Regulation and Taxation of GIFT City Funds</h1>
-      <p className="font-body text-sm text-foreground-muted mb-6">Last updated: July 2026</p>
+      <p className="font-body text-sm text-foreground-muted mb-6">Last updated: October 2026</p>
 
       <section className="mb-10 space-y-4 font-body text-foreground-muted">
         <p><strong className="text-primary">Regulatory framework.</strong> GIFT City funds sit under the IFSCA (International Financial Services Centres Authority), India's unified regulator for the IFSC. Fund Management Entities (FMEs) must be registered with IFSCA to operate, and different fund categories (Retail, Category I/II/III AIF, etc.) carry different regulatory conditions around investor eligibility, disclosure and structure.</p>
@@ -61,6 +61,42 @@ const Taxation = () => (
       <section className="mb-10 font-body text-foreground-muted">
         <h2 className="font-heading font-semibold text-2xl text-primary mb-3">US-based? It's a different picture.</h2>
         <p>US tax law treats foreign funds very differently from Indian tax law — most notably through PFIC classification. If you're a US taxpayer, read the dedicated guide before going further. <Link to="/us-based-nris" className="text-secondary hover:underline">GIFT City Funds for US-Based NRIs →</Link></p>
+      </section>
+
+      <section className="mb-10 font-body text-foreground-muted space-y-4">
+        <h2 className="font-heading font-semibold text-2xl text-primary mb-3">The three questions that decide your tax</h2>
+        <p>There is no single tax rate for "GIFT City funds". The outcome for any investor comes from three answers:</p>
+        <ol className="list-decimal pl-6 space-y-2">
+          <li><strong className="text-primary">Where are you tax resident?</strong> A resident Indian, an NRI in Dubai and a US citizen holding the same fund can each owe different tax, in different countries.</li>
+          <li><strong className="text-primary">What is the fund's structure?</strong> A Mutual Fund FoF, a Retail Feeder Fund, an AIF and a PMS portfolio are taxed differently, and an AIF's category matters too. See <Link to="/funds-explained" className="text-secondary hover:underline">fund structures</Link>.</li>
+          <li><strong className="text-primary">Which way does the money go?</strong> An inbound fund invests in India; an outbound fund invests abroad. The India-side rules and the paperwork differ.</li>
+        </ol>
+      </section>
+
+      <section className="mb-10 font-body text-foreground-muted space-y-4">
+        <h2 className="font-heading font-semibold text-2xl text-primary mb-3">India's tax and your country's tax</h2>
+        <p>
+          India taxes income that arises in India, and your country of residence usually taxes your worldwide income. Where both can tax the same income, a Double Taxation Avoidance Agreement (DTAA) between India and that country decides who taxes what and how credit is given. India has such treaties with the countries most NRIs live in, including the UAE, the UK, the US, Canada and Singapore.
+        </p>
+        <p>
+          To use a treaty, you normally need a <strong className="text-primary">Tax Residency Certificate (TRC)</strong> from your country of residence. Fund houses often ask for it during onboarding, so obtain it before you invest rather than after.
+        </p>
+        <p>
+          Country-specific points, such as the US PFIC rules or the UK's offshore fund rules, are covered in{" "}
+          <Link to="/gift-city-funds-nri-tax-by-country" className="text-secondary hover:underline">GIFT City funds for NRIs by country</Link>.
+        </p>
+      </section>
+
+      <section className="mb-10 font-body text-foreground-muted space-y-4">
+        <h2 className="font-heading font-semibold text-2xl text-primary mb-3">What to ask before you invest</h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>Is tax deducted inside the fund, and at what stage — on income, on gains, or on redemption?</li>
+          <li>Does the fund issue the statements your home country needs for your tax return?</li>
+          <li>For US persons: is the fund documented as Non-PFIC, or does it provide QEF information?</li>
+          <li>For UK residents: does the fund have UK reporting fund status?</li>
+          <li>For resident Indians: how will TCS on your LRS remittance be shown in your tax records?</li>
+        </ul>
+        <p>Take the answers to a qualified CA or tax adviser in your country of residence. They, not the fund, are responsible for your return.</p>
       </section>
 
       <div className="bg-secondary/10 border border-secondary/30 p-6 rounded-lg">

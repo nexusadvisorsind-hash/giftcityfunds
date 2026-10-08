@@ -7,6 +7,7 @@ import { useToast } from "@/hooks/use-toast";
 import { SEO } from "@/components/SEO";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Link } from "react-router-dom";
+import { trackEvent } from "@/lib/analytics";
 
 type FormState = {
   name: string; email: string; phone: string; whatsapp: string;
@@ -40,6 +41,7 @@ const Contact = () => {
         body: { ...form, consentNoticeVersion: "2026-10-08" },
       });
       if (error) throw error;
+      trackEvent("generate_lead", { form: "contact", investor_type: form.investorType || "not_given", email_updates: form.consentUpdates ? "yes" : "no" });
       toast({ title: "Message sent", description: "We'll get back to you within 24 hours." });
       setForm(initialForm);
     } catch (err) {

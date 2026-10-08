@@ -26,6 +26,7 @@ import NotFound from "./pages/NotFound";
 import HowToInvest from "./pages/HowToInvest";
 import GiftCityVsMutualFunds from "./pages/GiftCityVsMutualFunds";
 import Risks from "./pages/Risks";
+import NriByCountry from "./pages/NriByCountry";
 
 // Admin-only screens: loaded on demand, never prerendered.
 const Auth = lazy(() => import("./pages/Auth"));
@@ -75,6 +76,7 @@ const App = ({ ssrUrl, helmetContext }: AppProps = {}) => (
               <Route path="/how-to-invest" element={<HowToInvest />} />
               <Route path="/gift-city-funds-vs-mutual-funds" element={<GiftCityVsMutualFunds />} />
               <Route path="/gift-city-funds-risks" element={<Risks />} />
+              <Route path="/gift-city-funds-nri-tax-by-country" element={<NriByCountry />} />
               {/* Consolidated legacy legal routes */}
               <Route path="/privacy" element={<Navigate to="/privacy-policy" replace />} />
               <Route path="/terms" element={<Navigate to="/terms-of-use" replace />} />

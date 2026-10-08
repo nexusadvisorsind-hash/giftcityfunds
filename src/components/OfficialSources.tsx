@@ -9,6 +9,11 @@ const SOURCES = {
   incomeTax: { label: "Income Tax Department, Government of India", url: "https://www.incometaxindia.gov.in/", note: "The Income-tax Act, including Section 10(4D), and TCS rules." },
   irs8621: { label: "IRS — About Form 8621 (PFIC reporting)", url: "https://www.irs.gov/forms-pubs/about-form-8621", note: "US reporting for shareholders of passive foreign investment companies." },
   sebi: { label: "SEBI — Securities and Exchange Board of India", url: "https://www.sebi.gov.in/", note: "The regulator for domestic Indian mutual funds." },
+  hmrcOffshore: { label: "HMRC — HS265 Offshore funds", url: "https://www.gov.uk/government/publications/offshore-funds-self-assessment-helpsheet-hs265/hs265-offshore-funds", note: "How UK residents are taxed on reporting and non-reporting offshore funds." },
+  ukFig: { label: "GOV.UK — The 4-year foreign income and gains regime", url: "https://www.gov.uk/guidance/check-if-you-can-claim-the-4-year-foreign-income-and-gains-regime", note: "The regime that replaced the remittance basis on 6 April 2025." },
+  uaeTax: { label: "UAE Government portal — Taxation", url: "https://u.ae/en/information-and-services/finance-and-investment/taxation", note: "Taxes levied in the UAE." },
+  craT1135: { label: "Canada Revenue Agency — Form T1135 questions and answers", url: "https://www.canada.ca/en/revenue-agency/services/tax/international-non-residents/information-been-moved/foreign-reporting/questions-answers-about-form-t1135.html", note: "Reporting foreign property costing more than CAD 100,000." },
+  irasOverseas: { label: "IRAS — Income received from overseas", url: "https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/what-is-taxable-what-is-not/income-received-from-overseas", note: "Singapore's treatment of foreign-sourced income for individuals." },
   amfi: { label: "AMFI — Association of Mutual Funds in India", url: "https://www.amfiindia.com/", note: "Verify a Mutual Fund Distributor's ARN." },
 } as const;
 

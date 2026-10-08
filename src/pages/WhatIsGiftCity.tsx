@@ -8,6 +8,7 @@ const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "What Is GIFT City & IFSC? — Explained Simply",
+  "dateModified": "2026-10-08",
   "author": { "@type": "Person", "name": "Anup Vatyani" },
   "publisher": { "@type": "Organization", "name": "GIFT City Funds" },
   "mainEntityOfPage": "https://giftcityfunds.in/what-is-gift-city",
@@ -41,6 +42,43 @@ const WhatIsGiftCity = () => (
         <p>
           <Link to="/funds-explained" className="text-secondary hover:underline inline-flex items-center">See how these fund structures actually work <ArrowRight className="ml-1 h-4 w-4" /></Link>
         </p>
+
+        <h2 className="font-heading font-semibold text-2xl text-primary pt-4">A short timeline</h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li><strong className="text-primary">December 2015:</strong> India's first International Financial Services Centre is set up in GIFT City.</li>
+          <li><strong className="text-primary">2019:</strong> Parliament passes the International Financial Services Centres Authority Act, 2019.</li>
+          <li><strong className="text-primary">27 April 2020:</strong> IFSCA is established under that Act as the single regulator for financial services in India's IFSCs.</li>
+          <li><strong className="text-primary">Since then:</strong> IFSCA has issued its own regulations for fund management, capital markets, banking and insurance, including the IFSCA (Fund Management) Regulations, 2025 that govern GIFT City funds today.</li>
+        </ul>
+
+        <h2 className="font-heading font-semibold text-2xl text-primary pt-4">GIFT City is not all IFSC</h2>
+        <p>
+          GIFT City has two parts. The <strong className="text-primary">IFSC</strong> is the international zone, where business is done in foreign currency under IFSCA. The <strong className="text-primary">Domestic Tariff Area</strong> is the rest of the city, where ordinary Indian rules apply. A "GIFT City fund" in the sense used on this site is one registered in the IFSC, not simply a business with a GIFT City address.
+        </p>
+
+        <h2 className="font-heading font-semibold text-2xl text-primary pt-4">What happens inside GIFT IFSC</h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li><strong className="text-primary">Banking:</strong> IFSC Banking Units of Indian and foreign banks offer foreign-currency accounts and deposits.</li>
+          <li><strong className="text-primary">Capital markets:</strong> international exchanges list and trade securities in foreign currency.</li>
+          <li><strong className="text-primary">Fund management:</strong> Fund Management Entities run retail schemes, AIFs and PMS portfolios — the "GIFT City funds" this site explains.</li>
+          <li><strong className="text-primary">Insurance, aircraft leasing and fintech:</strong> other activities IFSCA regulates, less relevant to individual investors.</li>
+        </ul>
+
+        <h2 className="font-heading font-semibold text-2xl text-primary pt-4">Common questions</h2>
+        <div className="space-y-4">
+          <div className="bg-surface p-5 rounded-lg border border-border">
+            <h3 className="font-heading font-semibold text-primary mb-2">Is GIFT City a tax haven?</h3>
+            <p className="text-sm">No. It is an Indian financial centre with its own regulator and certain tax concessions for IFSC units. Investors are still taxed according to India's rules and those of their country of residence. See <Link to="/taxation" className="text-secondary hover:underline">Regulation and Taxation</Link>.</p>
+          </div>
+          <div className="bg-surface p-5 rounded-lg border border-border">
+            <h3 className="font-heading font-semibold text-primary mb-2">Do I have to visit GIFT City to invest?</h3>
+            <p className="text-sm">Generally no. Onboarding with a Fund Management Entity is usually done with documents and video or digital KYC. See <Link to="/how-to-invest" className="text-secondary hover:underline">How to Invest</Link>.</p>
+          </div>
+          <div className="bg-surface p-5 rounded-lg border border-border">
+            <h3 className="font-heading font-semibold text-primary mb-2">How do I check that a fund manager is registered?</h3>
+            <p className="text-sm">Search the IFSCA Directory of regulated entities, linked below, and match it with the registration details in the fund's offer document.</p>
+          </div>
+        </div>
 
         <div className="bg-surface border border-border rounded-lg p-6 my-6">
           <h2 className="font-heading font-semibold text-primary mb-3">Why this matters for you:</h2>

@@ -37,7 +37,7 @@ const faqs: { g: string; qas: QA[] }[] = [
   ]},
   { g: "Getting Started", qas: [
     { q: "What documents will I need?", a: "It varies by whether you're investing as an individual or an entity, and inbound or outbound. Reach out for a current checklist covering the common requirements." },
-    { q: "Does Anup sell these funds directly?", a: "Anup is an AMFI-registered Mutual Fund Distributor (ARN 106715), not a SEBI-registered Investment Adviser. If you ask, he can explain the process and connect you with a Fund Management Entity, and he may receive commission from the product provider where he facilitates an investment. He does not give personalised investment advice, and this website exists to help you understand the landscape first." },
+    { q: "Does Anup sell these funds directly?", a: "Anup is an AMFI-registered Mutual Fund Distributor (ARN 106715), not a SEBI-registered Investment Adviser. If you ask, he can explain the process and connect you with a Fund Management Entity. He does not give personalised investment advice, and this website exists to help you understand the landscape first." },
     { q: "Is this financial advice?", a: "No. This site is an educational resource. Nothing here should be read as a personalised investment or tax recommendation — always consult your own advisors." },
   ]},
 ];

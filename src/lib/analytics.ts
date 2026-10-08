@@ -50,3 +50,15 @@ export function setConsent(choice: Choice) {
 export function openCookieSettings() {
   window.dispatchEvent(new Event(CONSENT_EVENT));
 }
+
+/**
+ * Record a lead or engagement event in Google Analytics.
+ * Does nothing unless the visitor accepted analytics and it has loaded.
+ * Events used: generate_lead (contact form), whatsapp_click,
+ * newsletter_signup, contact_click (any "Talk to Anup" style link).
+ */
+export function trackEvent(name: string, params: Record<string, string | number> = {}) {
+  if (!loaded || typeof window === "undefined") return;
+  const w = window as unknown as { gtag?: (...a: unknown[]) => void };
+  w.gtag?.("event", name, { page_path: window.location.pathname, ...params });
+}

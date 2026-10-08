@@ -21,6 +21,7 @@ const Navigation = () => {
     { label: "How to Invest", path: "/how-to-invest", ariaLabel: "How to invest in GIFT City funds" },
     { label: "vs Mutual Funds", path: "/gift-city-funds-vs-mutual-funds", ariaLabel: "GIFT City funds compared with regular Indian mutual funds" },
     { label: "Risks", path: "/gift-city-funds-risks", ariaLabel: "Risks of GIFT City funds" },
+    { label: "NRIs by Country", path: "/gift-city-funds-nri-tax-by-country", ariaLabel: "GIFT City funds for NRIs by country of residence" },
   ];
 
   const navItems = [

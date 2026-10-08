@@ -101,16 +101,7 @@ const Auth = () => {
           <Button type="submit" disabled={loading} className="w-full">
             {loading ? "Please wait…" : mode === "signin" ? "Sign In" : "Sign Up"}
           </Button>
-          <button
-            type="button"
-            className="text-sm text-secondary hover:underline w-full text-center"
-            onClick={() => {
-              setMode(mode === "signin" ? "signup" : "signin");
-              setStatus(null);
-            }}
-          >
-            {mode === "signin" ? "Need to create an account?" : "Already have an account? Sign in"}
-          </button>
+          <p className="text-xs text-foreground-muted text-center">Administrator access only. New accounts are not available here.</p>
         </form>
       </div>
     </>

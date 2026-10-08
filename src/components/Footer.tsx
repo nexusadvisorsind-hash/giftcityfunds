@@ -64,6 +64,9 @@ const Footer = () => {
                 <Link to="/gift-city-funds-risks" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Risks</Link>
               </li>
               <li>
+                <Link to="/gift-city-funds-nri-tax-by-country" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">NRIs by Country</Link>
+              </li>
+              <li>
                 <Link to="/us-based-nris" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">US NRIs</Link>
               </li>
               <li>
@@ -176,7 +179,7 @@ const Footer = () => {
             </p>
             <p className="text-primary-foreground/70 text-xs max-w-5xl mx-auto leading-relaxed mb-2">
               This website is not affiliated with, endorsed by or operated by GIFT City Company Limited, IFSCA, SEBI, AMFI, or any asset management company or Fund Management Entity.
-              Anup Vatyani is a Mutual Fund Distributor, not a SEBI-registered Investment Adviser, and may receive commission from product providers where he facilitates an investment.
+              Anup Vatyani is a Mutual Fund Distributor, not a SEBI-registered Investment Adviser.
             </p>
             <p className="text-primary-foreground/70 text-xs max-w-5xl mx-auto leading-relaxed">
               Mutual Fund investments are subject to market risk. Please read all scheme related documents carefully before investing.

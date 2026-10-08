@@ -11,6 +11,9 @@ const personSchema = {
   "jobTitle": "AMFI-Registered Mutual Fund Distributor (ARN 106715)",
   "url": "https://giftcityfunds.in/about",
   "sameAs": ["https://www.linkedin.com/in/anup-vatyani-081b4142"],
+  "identifier": { "@type": "PropertyValue", "propertyID": "AMFI ARN", "value": "106715" },
+  "knowsAbout": ["GIFT City", "IFSC fund structures", "Mutual funds", "Alternative Investment Funds", "NRI investing"],
+  "address": { "@type": "PostalAddress", "addressLocality": "Ahmedabad", "addressRegion": "Gujarat", "addressCountry": "IN" },
   "worksFor": { "@type": "Organization", "name": "GIFT City Funds" },
 };
 
@@ -32,6 +35,13 @@ const About = () => (
       <div className="font-body text-foreground-muted space-y-4">
         <p>Anup Vatyani has over 22 years of experience in the banking and financial services industry. An ex-banker with a decade of experience as a Mutual Fund Distributor (AMFI ARN 106715), he brings deep domain expertise in financial products, regulatory frameworks, and investor education.</p>
         <p>This platform is curated by him to provide accurate, educational resources on GIFT City and IFSC structures. It does not offer personalized investment or advisory services.</p>
+        <p>He started this site because the questions NRIs, OCIs and resident Indians ask about GIFT City funds are often the same — who regulates them, how the money moves, what a US or UK tax return will make of them — and good plain-English answers were hard to find. Each guide here is written to be read before a conversation with any fund house, so that investors arrive knowing what to ask.</p>
+        <h2 className="font-heading font-semibold text-2xl text-primary pt-4">How the content is prepared</h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>Rules and figures are taken from official sources — IFSCA, RBI, the Income Tax Department and, for other countries, their tax authorities — and each guide links to them.</li>
+          <li>Every guide shows when it was published or last reviewed, and is revisited when IFSCA or tax rules change.</li>
+          <li>The site describes structures and processes. It does not rank or recommend funds, and it does not give personalised investment or tax advice.</li>
+        </ul>
       </div>
 
       <div className="mt-8 bg-surface border border-border p-6 rounded-lg">
@@ -51,13 +61,20 @@ const About = () => (
         >
           Connect with Anup on LinkedIn
         </a>
+        <p className="font-body text-sm text-foreground-muted mt-3">
+          Verify the registration: search ARN 106715 on AMFI's{" "}
+          <a href="https://www.amfiindia.com/locate-distributor" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">
+            Locate a Mutual Fund Distributor
+          </a>{" "}
+          page.
+        </p>
       </div>
 
       <blockquote className="my-10 border-l-4 border-secondary pl-6 italic font-heading text-xl text-primary">
         "Understand the structure first. The decision gets easier once you do."
       </blockquote>
 
-      <p className="font-body text-sm text-foreground-muted mb-6">Author — Anup Vatyani (MFD ARN 106715) | Informational Content Only | No Personalized Advice.</p>
+      <p className="font-body text-sm text-foreground-muted mb-6">Anup Vatyani — AMFI-registered Mutual Fund Distributor (ARN 106715) | Educational content only | No personalised advice</p>
 
       <Button asChild variant="gold" size="lg"><Link to="/contact">Talk to Anup <ArrowRight className="ml-2 h-5 w-5" /></Link></Button>
     </div>

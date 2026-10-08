@@ -133,7 +133,7 @@ serve(async (req) => {
 
       const emailResponse = await resend.emails.send({
         from: "GIFT City Funds <onboarding@resend.dev>",
-        to: ["nexusadvisors.ind@gmail.com"],
+        to: ["info@giftcityfunds.in"],
         subject: "New contact form enquiry",
         html: emailHtml,
       });

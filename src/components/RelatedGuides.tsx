@@ -16,6 +16,7 @@ const GUIDES: Record<string, Guide> = {
   faqs: { to: "/faqs", title: "GIFT City Funds FAQs", blurb: "Short answers to the most common questions." },
   vsMf: { to: "/gift-city-funds-vs-mutual-funds", title: "GIFT City Funds vs Regular Mutual Funds", blurb: "Regulator, currency, minimums and tax side by side." },
   risks: { to: "/gift-city-funds-risks", title: "Risks of GIFT City Funds", blurb: "Market, currency, liquidity and tax risks to weigh." },
+  byCountry: { to: "/gift-city-funds-nri-tax-by-country", title: "GIFT City Funds for NRIs by Country", blurb: "UAE, UK, US, Canada and Singapore: what to check." },
   pfic: { to: "/insights/pfic-explained", title: "PFIC Explained for US-Based NRIs", blurb: "Why PFIC status matters and what to ask about a fund." },
   lrs: { to: "/insights/lrs-tcs-gift-city", title: "LRS, TCS and GIFT City", blurb: "What resident Indian investors should know." },
   ten: { to: "/insights/ten-questions-nris-ask", title: "Ten Questions NRIs Ask", blurb: "Practical answers before you invest." },
@@ -26,13 +27,14 @@ const GUIDES: Record<string, Guide> = {
 const RELATED: Record<string, (keyof typeof GUIDES)[]> = {
   "/what-is-gift-city": ["funds", "vsMf", "who"],
   "/funds-explained": ["vsMf", "risks", "how"],
-  "/who-its-for": ["us", "how", "vsNre"],
+  "/who-its-for": ["byCountry", "how", "vsNre"],
   "/us-based-nris": ["pfic", "tax", "how"],
-  "/taxation": ["us", "lrs", "funds"],
+  "/taxation": ["byCountry", "us", "lrs"],
   "/how-to-invest": ["who", "risks", "faqs"],
   "/faqs": ["whatIs", "how", "ten"],
   "/gift-city-funds-vs-mutual-funds": ["funds", "tax", "who"],
-  "/gift-city-funds-risks": ["funds", "us", "how"],
+  "/gift-city-funds-risks": ["funds", "byCountry", "how"],
+  "/gift-city-funds-nri-tax-by-country": ["tax", "us", "risks"],
 };
 
 const RelatedGuides = () => {

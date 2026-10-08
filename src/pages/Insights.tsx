@@ -8,6 +8,7 @@ import { toast } from "sonner";
 
 import { articles, getArticle } from "./insights/articles";
 import { formatDate } from "@/lib/formatDate";
+import { trackEvent } from "@/lib/analytics";
 
 const insightsSchema = {
   "@context": "https://schema.org",
@@ -51,6 +52,7 @@ const Insights = () => {
         body: { email: trimmed, source: "insights_page" },
       });
       if (error) throw error;
+      trackEvent("newsletter_signup", { source: "insights_page" });
       toast.success("Subscribed!", { description: "You'll get new GIFT City articles in your inbox." });
       setEmail("");
     } catch (err) {
