@@ -94,6 +94,11 @@ const Insights = () => {
             {loading ? "Subscribing..." : "Subscribe"}
           </Button>
         </form>
+        <p className="font-body text-xs text-foreground-muted mt-3">
+          By subscribing you agree to receive occasional emails about new articles. We use your email address only for this,
+          and you can unsubscribe at any time by replying "unsubscribe" or writing to info@giftcityfunds.in. See our{" "}
+          <Link to="/privacy-policy" className="text-secondary hover:underline">Privacy Policy</Link>.
+        </p>
       </div>
 
       <h2 className="font-heading font-semibold text-2xl text-primary mb-6">All articles</h2>

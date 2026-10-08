@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { openCookieSettings } from "@/lib/analytics";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
@@ -33,7 +34,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4" />
-                <span className="text-sm">GIFT City, Gujarat, India</span>
+                <span className="text-sm">Ahmedabad, Gujarat, India</span>
               </div>
             </div>
           </div>
@@ -113,6 +114,11 @@ const Footer = () => {
                 <Link to="/accessibility-statement" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">
                   Accessibility
                 </Link>
+              </li>
+              <li>
+                <button type="button" onClick={openCookieSettings} className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate text-left">
+                  Cookie settings
+                </button>
               </li>
               <li>
               <Link to="/about" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">About Author</Link>

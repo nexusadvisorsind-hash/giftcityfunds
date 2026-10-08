@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import Navigation from "./Navigation";
 import Footer from "./Footer";
 import RelatedGuides from "./RelatedGuides";
+import ConsentBanner from "./ConsentBanner";
 import { FaWhatsapp } from "react-icons/fa";
 
 interface LayoutProps {
@@ -20,6 +21,7 @@ const Layout = ({ children }: LayoutProps) => {
         <RelatedGuides />
       </main>
       <Footer />
+      <ConsentBanner />
       <a
         href="https://wa.me/919537533533"
         target="_blank"

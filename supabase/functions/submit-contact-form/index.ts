@@ -18,7 +18,14 @@ interface ContactFormData {
   country?: string;
   investorType?: string;
   message?: string;
+  consentResponse?: boolean;
+  consentUpdates?: boolean;
+  consentNoticeVersion?: string;
 }
+
+// Escape user input before putting it into the notification email.
+const esc = (v: unknown) =>
+  String(v ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]!));
 
 serve(async (req) => {
   // Handle CORS preflight requests
@@ -28,7 +35,8 @@ serve(async (req) => {
 
   try {
     const formData: ContactFormData = await req.json();
-    console.log("Received contact form submission:", formData);
+    // Do not log the submission itself: it contains personal data.
+    console.log("Received contact form submission");
 
     // Basic spam protection: validate required fields
     if (!formData.name || !formData.email) {
@@ -46,6 +54,17 @@ serve(async (req) => {
     if (!emailRegex.test(formData.email)) {
       return new Response(
         JSON.stringify({ error: "Invalid email address" }),
+        {
+          status: 400,
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+        }
+      );
+    }
+
+    // The form cannot be sent without consent; reject direct calls that skip it.
+    if (formData.consentResponse !== true) {
+      return new Response(
+        JSON.stringify({ error: "Consent is required to process this enquiry" }),
         {
           status: 400,
           headers: { ...corsHeaders, "Content-Type": "application/json" },
@@ -87,27 +106,35 @@ serve(async (req) => {
 
     console.log("Saved to database:", submission.id);
 
+    // Separate, optional consent to updates: add to the newsletter list.
+    if (formData.consentUpdates === true) {
+      const { error: subError } = await supabase
+        .from("newsletter_subscribers")
+        .insert({ email: String(formData.email).trim().toLowerCase(), source: "contact_form_optin", ip_address, user_agent });
+      if (subError && !`${subError.message}`.toLowerCase().includes("duplicate")) {
+        console.error("Newsletter opt-in error (non-fatal):", subError.message);
+      }
+    }
+
     // Send email notification
     try {
       const emailHtml = `
         <h2>New Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${formData.name}</p>
-        <p><strong>Email:</strong> ${formData.email}</p>
-        ${formData.phone ? `<p><strong>Phone:</strong> ${formData.phone}</p>` : ''}
-        ${formData.whatsapp ? `<p><strong>WhatsApp:</strong> ${formData.whatsapp}</p>` : ''}
-        ${formData.location ? `<p><strong>Location:</strong> ${formData.location}</p>` : ''}
-        ${formData.country ? `<p><strong>Country:</strong> ${formData.country}</p>` : ''}
-        ${formData.investorType ? `<p><strong>Investor Type:</strong> ${formData.investorType}</p>` : ''}
-        ${formData.message ? `<p><strong>Message:</strong><br/>${formData.message.replace(/\n/g, '<br/>')}</p>` : ''}
+        <p><strong>Name:</strong> ${esc(formData.name)}</p>
+        <p><strong>Email:</strong> ${esc(formData.email)}</p>
+        ${formData.phone ? `<p><strong>Phone:</strong> ${esc(formData.phone)}</p>` : ''}
+        ${formData.investorType ? `<p><strong>Investor Type:</strong> ${esc(formData.investorType)}</p>` : ''}
+        ${formData.message ? `<p><strong>Message:</strong><br/>${esc(formData.message).replace(/\n/g, '<br/>')}</p>` : ''}
         <hr/>
-        <p><small>Submitted at: ${new Date().toLocaleString()}</small></p>
-        <p><small>IP: ${ip_address}</small></p>
+        <p><small>Consent to reply: yes (privacy notice ${esc(formData.consentNoticeVersion ?? "unversioned")})</small></p>
+        <p><small>Consent to email updates: ${formData.consentUpdates === true ? "yes" : "no"}</small></p>
+        <p><small>Submitted at: ${new Date().toISOString()}</small></p>
       `;
 
       const emailResponse = await resend.emails.send({
-        from: "Gift City Wealth <onboarding@resend.dev>",
+        from: "GIFT City Funds <onboarding@resend.dev>",
         to: ["nexusadvisors.ind@gmail.com"],
-        subject: `New Contact Form - ${formData.name}`,
+        subject: "New contact form enquiry",
         html: emailHtml,
       });
 

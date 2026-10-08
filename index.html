@@ -30,10 +30,8 @@
     <!-- Preconnect for Performance - Critical Origins -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     
     <!-- Critical: Preload LCP hero image with highest priority -->
     <link rel="preload" as="image" href="/images/gift-city-skyline.webp" fetchpriority="high" type="image/webp" imagesrcset="/images/gift-city-skyline-828.webp 828w, /images/gift-city-skyline.webp 1568w" imagesizes="100vw">
@@ -80,9 +78,10 @@
       }
       
       /* Prevent layout shift */
+      /* No "contain" here: it would stop position:fixed elements (WhatsApp
+         button, cookie banner) from staying on screen. */
       #root { 
         min-height: 100vh;
-        contain: layout style paint;
       }
       
       /* Reserve space for navigation to prevent CLS */
@@ -90,24 +89,7 @@
       
     </style>
     
-    <!-- Defer Analytics - Load after critical resources -->
-    <script>
-      window.addEventListener('load', function() {
-        window.requestIdleCallback(function() {
-          var script = document.createElement('script');
-          script.async = true;
-          script.src = 'https://www.googletagmanager.com/gtag/js?id=G-RVTXNPKQDS';
-          document.head.appendChild(script);
-          
-          script.onload = function() {
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-RVTXNPKQDS');
-          };
-        });
-      });
-    </script>
+    <!-- Google Analytics loads only after visitor consent: see src/lib/analytics.ts -->
     
     <!-- Google Search Console Verification -->
     <meta name="google-site-verification" content="dfgKmsUZeQVRLEv8G43WL9s9kmKj-Bv5FLev4TL_A_I" />

@@ -6,12 +6,14 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { useToast } from "@/hooks/use-toast";
 import { SEO } from "@/components/SEO";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { Link } from "react-router-dom";
 
 type FormState = {
   name: string; email: string; phone: string; whatsapp: string;
   location: string; country: string; investorType: string; message: string;
+  consentResponse: boolean; consentUpdates: boolean;
 };
-const initialForm: FormState = { name: "", email: "", phone: "", whatsapp: "", location: "", country: "", investorType: "", message: "" };
+const initialForm: FormState = { name: "", email: "", phone: "", whatsapp: "", location: "", country: "", investorType: "", message: "", consentResponse: false, consentUpdates: false };
 
 const Contact = () => {
   const [form, setForm] = useState<FormState>(initialForm);
@@ -20,16 +22,23 @@ const Contact = () => {
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
     const { name, value } = e.target;
-    setForm((p) => ({ ...p, [name]: value }));
+    const checked = (e.target as HTMLInputElement).type === "checkbox" ? (e.target as HTMLInputElement).checked : undefined;
+    setForm((p) => ({ ...p, [name]: checked ?? value }));
   }
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    if (!form.consentResponse) {
+      toast({ title: "Consent needed", description: "Please tick the box to let us use your details to reply.", variant: "destructive" });
+      return;
+    }
     setLoading(true);
     try {
       // Loaded on submit so the backend client is not in every visitor's first download.
       const { supabase } = await import("@/integrations/supabase/client");
-      const { error } = await supabase.functions.invoke("submit-contact-form", { body: form });
+      const { error } = await supabase.functions.invoke("submit-contact-form", {
+        body: { ...form, consentNoticeVersion: "2026-10-08" },
+      });
       if (error) throw error;
       toast({ title: "Message sent", description: "We'll get back to you within 24 hours." });
       setForm(initialForm);
@@ -79,6 +88,22 @@ const Contact = () => {
                   </select>
                 </div>
                 <Textarea name="message" value={form.message} onChange={handleChange} placeholder="Message" rows={6} aria-label="Message" />
+                <p className="font-body text-xs text-foreground-muted">
+                  Please don't include PAN, Aadhaar, bank or account details in this form.
+                </p>
+                <div className="space-y-3 font-body text-sm text-foreground-muted">
+                  <label className="flex items-start gap-3">
+                    <input type="checkbox" name="consentResponse" checked={form.consentResponse} onChange={handleChange} required className="mt-1 h-4 w-4" />
+                    <span>
+                      I agree that Anup Vatyani may use the details above to reply to my enquiry, as explained in the{" "}
+                      <Link to="/privacy-policy" className="text-secondary hover:underline">Privacy Policy</Link>. (Required)
+                    </span>
+                  </label>
+                  <label className="flex items-start gap-3">
+                    <input type="checkbox" name="consentUpdates" checked={form.consentUpdates} onChange={handleChange} className="mt-1 h-4 w-4" />
+                    <span>Also send me occasional GIFT City updates by email. I can unsubscribe at any time. (Optional)</span>
+                  </label>
+                </div>
                 <div className="flex gap-3">
                   <Button type="submit" disabled={loading} variant="gold">{loading ? "Sending..." : "Send"}</Button>
                 </div>
@@ -98,7 +123,7 @@ const Contact = () => {
               <div className="pt-4 border-t border-border mt-4">
                 <p><strong className="text-primary">Feedback or a concern?</strong> For feedback or a complaint, email info@giftcityfunds.in directly — we aim to respond within 2 business days. Investors can also raise concerns through AMFI's official grievance redressal channels.</p>
               </div>
-              <p className="pt-4 text-xs">Author — Anup Vatyani (MFD ARN 106715) | Informational Content Only | No Personalized Advice.</p>
+              <p className="pt-4 text-xs">Anup Vatyani — AMFI-registered Mutual Fund Distributor (ARN 106715) | Educational content only | No personalised advice</p>
             </CardContent>
           </Card>
         </div>
