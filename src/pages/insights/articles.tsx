@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 export interface InsightArticle {
   slug: string;
   title: string;
+  /** Shorter title for search results when the headline runs past ~60 characters. */
+  seoTitle?: string;
   description: string;
   /** ISO date, e.g. "2026-09-21" */
   datePublished: string;
@@ -16,6 +18,7 @@ export const articles: InsightArticle[] = [
   {
     slug: "nri-step-by-step",
     title: "How NRIs Can Invest in GIFT City Funds: A Step-by-Step Overview",
+    seoTitle: "How NRIs Can Invest in GIFT City Funds: Step by Step",
     description: "A step-by-step walkthrough of how NRIs and OCIs actually invest in GIFT City IFSC funds, from eligibility and KYC to remittance and unit allotment.",
     datePublished: "2026-09-21",
     body: (
@@ -56,7 +59,8 @@ export const articles: InsightArticle[] = [
   {
     slug: "lrs-tcs-gift-city",
     title: "LRS, TCS and GIFT City: What Resident Indian Investors Should Know",
-    description: "How the Liberalised Remittance Scheme (LRS) and Tax Collected at Source (TCS) apply when a Resident Indian invests in a GIFT City fund via the Overseas Portfolio Investment route.",
+    seoTitle: "LRS, TCS and GIFT City Funds for Resident Indians",
+    description: "How the Liberalised Remittance Scheme (LRS) and Tax Collected at Source (TCS) apply when a Resident Indian invests in a GIFT City fund.",
     datePublished: "2026-09-21",
     body: (
         <div className="font-body text-foreground-muted space-y-4 leading-relaxed">
@@ -92,7 +96,8 @@ export const articles: InsightArticle[] = [
   {
     slug: "aif-vs-pms-vs-fof",
     title: "AIF vs PMS vs Mutual Fund FoF: Choosing a GIFT City Structure",
-    description: "A side-by-side comparison of the three main GIFT City fund structures — AIF, PMS and Mutual Fund FoF — to help you choose the right one for your ticket size and goals.",
+    seoTitle: "AIF vs PMS vs Mutual Fund FoF in GIFT City Compared",
+    description: "A side-by-side comparison of the three main GIFT City fund structures — AIF, PMS and Mutual Fund FoF — by ticket size, access and investor fit.",
     datePublished: "2026-09-21",
     body: (
         <div className="font-body text-foreground-muted space-y-4 leading-relaxed">
@@ -128,7 +133,7 @@ export const articles: InsightArticle[] = [
   {
     slug: "ifsca-vs-sebi",
     title: "IFSCA vs SEBI: Who Actually Regulates Your GIFT City Fund",
-    description: "A clear explanation of how IFSCA regulates GIFT City IFSC funds, how that differs from SEBI's role for domestic Indian mutual funds, and what it means for investor protection.",
+    description: "How IFSCA regulates GIFT City funds, how that differs from SEBI's role for domestic mutual funds, and what it means for investor protection.",
     datePublished: "2026-09-21",
     body: (
         <div className="font-body text-foreground-muted space-y-4 leading-relaxed">
@@ -164,7 +169,7 @@ export const articles: InsightArticle[] = [
   {
     slug: "gift-city-vs-nre-nro",
     title: "GIFT City Fund vs NRE/NRO Investing: A Straight Comparison",
-    description: "How investing through a GIFT City fund compares with the traditional NRE and NRO account route for NRIs — currency, repatriation, tax and structure differences explained.",
+    description: "How a GIFT City fund compares with the NRE and NRO account route for NRIs — currency, repatriation, tax and structure differences explained.",
     datePublished: "2026-09-21",
     body: (
         <div className="font-body text-foreground-muted space-y-4 leading-relaxed">
@@ -200,6 +205,7 @@ export const articles: InsightArticle[] = [
   {
     slug: "gift-city-vs-direct-foreign",
     title: "GIFT City vs Direct Foreign Investment: What Actually Changes for an NRI",
+    seoTitle: "GIFT City Funds vs Direct Foreign Investing for NRIs",
     description: "What changes when an NRI invests through a GIFT City IFSC fund instead of investing directly in a foreign brokerage account or offshore fund.",
     datePublished: "2026-09-21",
     body: (
@@ -269,7 +275,7 @@ export const articles: InsightArticle[] = [
               <strong className="text-primary">Can Resident Indians invest too, not just NRIs?</strong> Yes, via the Liberalised Remittance Scheme (LRS) under the Overseas Portfolio Investment route — see our explainer on <Link to="/insights/lrs-tcs-gift-city" className="text-secondary hover:underline">LRS, TCS and GIFT City</Link>.
             </li>
             <li>
-              <strong className="text-primary">How do I actually get started?</strong> Understand the structures, confirm your eligibility and route, gather your documents, and connect with an IFSCA-registered Fund Management Entity. <Link to="/contact" className="text-secondary hover:underline">Talk to Anup</Link> for a plain-English walkthrough of your specific situation.
+              <strong className="text-primary">How do I actually get started?</strong> Understand the structures, confirm your eligibility and route, gather your documents, and connect with an IFSCA-registered Fund Management Entity. <Link to="/contact" className="text-secondary hover:underline">Talk to Anup</Link> for a plain-English walkthrough of how the process works.
             </li>
           </ol>
           <p className="text-sm italic pt-2">
@@ -282,6 +288,7 @@ export const articles: InsightArticle[] = [
   {
     slug: "pfic-explained",
     title: "PFIC Explained: Why It Matters for Every US-Based NRI Investor",
+    seoTitle: "PFIC Explained for US-Based NRIs | GIFT City Funds",
     description: "A plain-English explanation of PFIC status, why it applies to many foreign funds, and why GIFT City fund structure matters for US-based NRIs and US persons.",
     datePublished: "2026-09-20",
     body: (
@@ -313,7 +320,7 @@ export const articles: InsightArticle[] = [
             <Link to="/contact" className="text-secondary hover:underline">
               talk to Anup
             </Link>{" "}
-            about which GIFT City structures are typically documented as Non-PFIC or QEF-compliant.
+            about how the process works. Ask the fund's manager how the fund is documented for US tax purposes, and confirm it with your US tax professional.
           </p>
           <p className="text-sm italic pt-2">
             This article is educational only and is not tax or investment advice. PFIC rules are complex and fact-specific — always consult a qualified US tax professional about your own situation.

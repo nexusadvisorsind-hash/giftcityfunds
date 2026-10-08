@@ -5,7 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { StaticRouter } from "react-router-dom/server";
 import { HelmetProvider } from "react-helmet-async";
-import type { ReactNode } from "react";
+import { lazy, Suspense, type ReactNode } from "react";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -23,9 +23,13 @@ import TermsOfUse from "./pages/TermsOfUse";
 import AccessibilityStatement from "./pages/AccessibilityStatement";
 import Disclaimer from "./pages/Disclaimer";
 import NotFound from "./pages/NotFound";
-import Auth from "./pages/Auth";
-import Admin from "./pages/Admin";
 import HowToInvest from "./pages/HowToInvest";
+import GiftCityVsMutualFunds from "./pages/GiftCityVsMutualFunds";
+import Risks from "./pages/Risks";
+
+// Admin-only screens: loaded on demand, never prerendered.
+const Auth = lazy(() => import("./pages/Auth"));
+const Admin = lazy(() => import("./pages/Admin"));
 
 const queryClient = new QueryClient();
 
@@ -62,13 +66,15 @@ const App = ({ ssrUrl, helmetContext }: AppProps = {}) => (
               <Route path="/insights/:slug" element={<InsightArticle />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/auth" element={<Auth />} />
-              <Route path="/admin" element={<Admin />} />
+              <Route path="/auth" element={<Suspense fallback={null}><Auth /></Suspense>} />
+              <Route path="/admin" element={<Suspense fallback={null}><Admin /></Suspense>} />
               <Route path="/disclaimer" element={<Disclaimer />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/terms-of-use" element={<TermsOfUse />} />
               <Route path="/accessibility-statement" element={<AccessibilityStatement />} />
               <Route path="/how-to-invest" element={<HowToInvest />} />
+              <Route path="/gift-city-funds-vs-mutual-funds" element={<GiftCityVsMutualFunds />} />
+              <Route path="/gift-city-funds-risks" element={<Risks />} />
               {/* Consolidated legacy legal routes */}
               <Route path="/privacy" element={<Navigate to="/privacy-policy" replace />} />
               <Route path="/terms" element={<Navigate to="/terms-of-use" replace />} />

@@ -1,6 +1,6 @@
 # GIFT City Funds
 
-> Independent, plain-English educational guide to GIFT City (IFSC) mutual funds, AIFs and PMS structures for NRIs, OCIs and resident Indians. Written by Anup Vatyani, AMFI-registered Mutual Fund Distributor (ARN 106715). Informational only; not investment, tax or legal advice.
+> Plain-English educational guide to GIFT City (IFSC) mutual funds, AIFs and PMS structures for NRIs, OCIs and resident Indians. Written by Anup Vatyani, AMFI-registered Mutual Fund Distributor (ARN 106715). Informational only; not investment, tax or legal advice.
 
 ## Guides
 
@@ -10,6 +10,8 @@
 - [GIFT City Funds for US-Based NRIs](https://giftcityfunds.in/us-based-nris): PFIC, US tax reporting and what to check.
 - [Regulation and Taxation](https://giftcityfunds.in/taxation): IFSCA oversight, Section 10(4D), LRS and TCS.
 - [How to Invest](https://giftcityfunds.in/how-to-invest): Step-by-step process from eligibility and KYC to allotment.
+- [GIFT City Funds vs Regular Mutual Funds](https://giftcityfunds.in/gift-city-funds-vs-mutual-funds): Regulator, currency, minimums, eligibility and tax compared.
+- [Risks of GIFT City Funds](https://giftcityfunds.in/gift-city-funds-risks): Market, currency, liquidity, tax and regulatory risks.
 - [FAQs](https://giftcityfunds.in/faqs): Short answers to common questions.
 
 ## Insights articles

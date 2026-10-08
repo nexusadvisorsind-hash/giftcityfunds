@@ -80,6 +80,20 @@ async function main() {
     }
   }
 
+  // 404.html: hosts that support it (Vercel) serve this with a real 404 status
+  // for unknown URLs instead of answering 200 with the app shell.
+  try {
+    const { html, head } = render("/404");
+    let out = template;
+    for (const tag of PER_PAGE_TAGS) out = out.replace(tag, "");
+    out = out.replace("</head>", `    ${head}\n  </head>`);
+    out = out.replace('<div id="root"></div>', `<div id="root">${html}</div>`);
+    writeFileSync(resolve("dist/404.html"), out);
+    console.log("prerendered 404.html");
+  } catch (err) {
+    failures.push(`404.html: ${(err as Error).message}`);
+  }
+
   rmSync(SSR_OUT, { recursive: true, force: true });
 
   if (failures.length) {

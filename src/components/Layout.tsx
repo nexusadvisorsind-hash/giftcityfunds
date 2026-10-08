@@ -11,8 +11,8 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="min-h-screen flex flex-col">
-      <div className="bg-ink text-paper text-[11px] md:text-xs font-body text-center py-1.5 px-4 border-b border-brass/40">
-        Author — Anup Vatyani (MFD ARN 106715) | Informational Content Only | No Personalized Advice.
+      <div className="bg-ink text-paper text-xs font-body text-center py-1.5 px-4 border-b border-brass/40">
+        Anup Vatyani — AMFI-registered Mutual Fund Distributor (ARN 106715) | Educational content only | No personalised advice
       </div>
       <Navigation />
       <main id="main-content" className="flex-1">

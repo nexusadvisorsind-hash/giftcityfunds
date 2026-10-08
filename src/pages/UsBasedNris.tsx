@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { SEO } from "@/components/SEO";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { OfficialSources } from "@/components/OfficialSources";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, AlertTriangle } from "lucide-react";
 
@@ -99,6 +100,7 @@ const UsBasedNris = () => (
         <p className="font-body text-foreground-muted mb-4">None of this replaces a conversation with your CA. But if you'd like help understanding which structure and route makes sense to explore, Anup can walk you through the options.</p>
         <Button asChild variant="gold" size="lg"><Link to="/contact">Talk to Anup <ArrowRight className="ml-2 h-5 w-5" /></Link></Button>
       </div>
+      <OfficialSources items={["irs8621", "ifsca", "incomeTax"]} />
     </div>
   </>
 );

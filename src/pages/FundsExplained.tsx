@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { SEO } from "@/components/SEO";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { OfficialSources } from "@/components/OfficialSources";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
@@ -47,7 +48,7 @@ const FundsExplained = () => (
               <th className="text-left p-3 border border-border">Structure</th>
               <th className="text-left p-3 border border-border">What it is</th>
               <th className="text-left p-3 border border-border">Typical entry ticket</th>
-              <th className="text-left p-3 border border-border">Best suited for</th>
+              <th className="text-left p-3 border border-border">Typically used by</th>
             </tr>
           </thead>
           <tbody>
@@ -85,9 +86,10 @@ const FundsExplained = () => (
       </div>
 
       <div className="text-center">
-        <p className="font-body text-foreground-muted mb-4">Not sure which structure fits your situation? Talk it through with Anup.</p>
+        <p className="font-body text-foreground-muted mb-4">Have a question about how these structures work? Ask Anup.</p>
         <Button asChild variant="gold" size="lg"><Link to="/contact">Talk to Anup <ArrowRight className="ml-2 h-5 w-5" /></Link></Button>
       </div>
+      <OfficialSources items={["ifsca", "ifscaDirectory", "rbiLrs"]} />
     </div>
   </>
 );

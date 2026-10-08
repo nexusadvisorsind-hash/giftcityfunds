@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { SEO } from "@/components/SEO";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -28,6 +27,8 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
     try {
+      // Loaded on submit so the backend client is not in every visitor's first download.
+      const { supabase } = await import("@/integrations/supabase/client");
       const { error } = await supabase.functions.invoke("submit-contact-form", { body: form });
       if (error) throw error;
       toast({ title: "Message sent", description: "We'll get back to you within 24 hours." });
@@ -53,7 +54,7 @@ const Contact = () => {
       />
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
         <Breadcrumbs items={[{ name: "Home", url: "/" }, { name: "Contact", url: "/contact" }]} />
-        <h1 className="font-heading font-bold text-3xl md:text-4xl text-primary mt-6 mb-4">Send Us a Message</h1>
+        <h1 className="font-heading font-bold text-3xl md:text-4xl text-primary mt-6 mb-4">Contact Anup Vatyani</h1>
         <p className="font-body text-foreground-muted mb-8">This form is for informational correspondence only. No investment or advisory services are offered. We'll get back to you within 24 hours.</p>
 
         <h2 className="sr-only">Contact form and details</h2>

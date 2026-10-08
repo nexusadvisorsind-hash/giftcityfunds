@@ -4,7 +4,6 @@ import { SEO } from "@/components/SEO";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 
 import { articles, getArticle } from "./insights/articles";
@@ -46,6 +45,8 @@ const Insights = () => {
     }
     setLoading(true);
     try {
+      // Loaded on submit so the backend client is not in every visitor's first download.
+      const { supabase } = await import("@/integrations/supabase/client");
       const { error } = await supabase.functions.invoke("subscribe-newsletter", {
         body: { email: trimmed, source: "insights_page" },
       });
@@ -64,7 +65,7 @@ const Insights = () => {
   <>
     <SEO
       title="Insights — GIFT City & IFSC Fund Articles for NRIs (2026)"
-      description="In-depth articles on GIFT City funds, IFSCA regulation, NRI investing, LRS/TCS rules, PFIC status and how GIFT City compares to NRE/NRO and direct foreign investing."
+      description="Articles on GIFT City funds, IFSCA regulation, NRI investing, LRS/TCS rules, PFIC status and how GIFT City compares with NRE/NRO investing."
       canonical="https://giftcityfunds.in/insights"
       schema={insightsSchema}
       breadcrumbs={[

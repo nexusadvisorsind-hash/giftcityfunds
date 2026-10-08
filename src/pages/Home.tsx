@@ -6,18 +6,18 @@ import { ArrowRight, Landmark, Layers, Wallet, MessageCircle, CircleDollarSign, 
 const Home = () => {
   const financialServiceSchema = {
     "@context": "https://schema.org",
-    "@type": "FinancialService",
+    "@type": "WebPage",
     "name": "GIFT City Funds",
     "url": "https://giftcityfunds.in/",
-    "description": "Independent educational guide to GIFT City IFSC mutual funds, AIFs and PMS structures by Anup Vatyani (AMFI ARN 106715).",
+    "description": "Educational guide to GIFT City IFSC mutual funds, AIFs and PMS structures by Anup Vatyani (AMFI ARN 106715).",
     "areaServed": { "@type": "Country", "name": "India" },
   };
 
   return (
     <>
       <SEO
-        title="GIFT City Funds — IFSC Investing Explained Simply (2026)"
-        description="Independent, plain-English guide to GIFT City & IFSC mutual funds, AIFs and PMS structures for NRIs, OCIs and resident Indians. By Anup Vatyani, MFD ARN 106715."
+        title="GIFT City Funds: Types, Tax, Minimums & How to Invest (2026)"
+        description="A plain-English educational guide to GIFT City & IFSC mutual funds, AIFs and PMS structures for NRIs, OCIs and resident Indians. By Anup Vatyani, MFD ARN 106715."
         canonical="https://giftcityfunds.in/"
         schema={financialServiceSchema}
         breadcrumbs={[{ name: "Home", url: "https://giftcityfunds.in/" }]}
@@ -45,7 +45,7 @@ const Home = () => {
                 GIFT City Funds, Explained Simply
               </h1>
               <p className="font-body text-lg text-foreground-muted max-w-3xl mx-auto mb-8">
-                A trusted educational resource to understand GIFT City Mutual Funds, Alternative Investment Funds (AIFs), and the IFSC investment ecosystem for NRIs, OCIs and Resident Indians.
+                An educational resource to understand GIFT City Mutual Funds, Alternative Investment Funds (AIFs), and the IFSC investment ecosystem for NRIs, OCIs and Resident Indians.
               </p>
               <div className="flex justify-center">
                 <Button asChild variant="gold" size="lg">
@@ -71,7 +71,7 @@ const Home = () => {
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 { icon: Landmark, title: "Regulated by IFSCA", body: "GIFT City funds operate under India's International Financial Services Centres Authority — a single regulator built specifically for this jurisdiction, distinct from SEBI's oversight of the rest of India's mutual fund industry." },
-                { icon: TrendingUp, title: "Independent, not AMC-run", body: "Unlike a fund house's own website, this isn't built to promote one AMC's scheme. It's a neutral map across GIFT City fund structures, written so you can compare before you commit to anything." },
+                { icon: TrendingUp, title: "Not run by a fund house", body: "This isn't an AMC's own website, and it isn't built to promote one scheme. It explains the GIFT City fund structures so you can compare them before you commit to anything." },
                 { icon: MessageCircle, title: "One point of contact", body: "Questions go directly to Anup Vatyani — no call centre, no relationship-manager rotation, no hand-offs between departments." },
               ].map((f) => (
                 <div key={f.title} className="bg-background p-6 rounded-lg border border-border">
@@ -272,6 +272,12 @@ const Home = () => {
             <p className="mt-6 text-xs text-foreground-muted italic">
               *Investment features, currency options, and tax benefits vary depending on the specific fund structure, applicable regulations, and the investor's country of residence.
             </p>
+            <p className="mt-4 font-body text-sm text-foreground-muted">
+              These features come with risks, including market risk, currency risk and exit restrictions. Returns are not guaranteed.{" "}
+              <Link to="/gift-city-funds-risks" className="text-secondary hover:underline">Read the risks of GIFT City funds</Link>{" "}
+              and how they compare with{" "}
+              <Link to="/gift-city-funds-vs-mutual-funds" className="text-secondary hover:underline">regular Indian mutual funds</Link>.
+            </p>
           </div>
         </section>
 
@@ -287,7 +293,7 @@ const Home = () => {
                 { icon: BookOpen, title: "Understand the structures", body: "Learn how Mutual Fund FoFs, Retail Feeder Funds, AIFs and PMS differ.", to: "/funds-explained", cta: "Funds Explained" },
                 { icon: UserCheck, title: "Check your eligibility & route", body: "NRI, OCI or Resident Indian — and if US-based, verify PFIC / Non-PFIC status first.", to: "/who-its-for", cta: "Who It's For", to2: "/us-based-nris", cta2: "US NRIs" },
                 { icon: FileText, title: "Gather your documents", body: "KYC pack: passport, PAN, overseas address proof, tax residency certificate (as applicable)." },
-                { icon: MessageCircle, title: "Talk to Anup", body: "Get connected with the right Fund Management Entity — no call-centre routing.", to: "/contact", cta: "Contact Anup" },
+                { icon: MessageCircle, title: "Talk to Anup", body: "Ask how the process works, or ask to be connected with a Fund Management Entity — no call-centre routing.", to: "/contact", cta: "Contact Anup" },
                 { icon: CheckCircle2, title: "Complete onboarding and invest", body: "Sign subscription documents, complete KYC with the FME, remit funds, receive allotment." },
               ].map((s, i) => (
                 <li key={s.title} className="flex gap-4 bg-background p-5 rounded-lg border border-border">
@@ -325,7 +331,7 @@ const Home = () => {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-6">How Anup Can Help</h2>
             <p className="font-body text-lg text-foreground-muted leading-relaxed mb-8">
-              I'm Anup Vatyani, an AMFI-registered Mutual Fund Distributor (ARN 106715) with over 22 years in banking and financial services, including a decade dedicated to mutual fund distribution. My role on this site — and in any conversation that follows — is to help you understand how GIFT City funds work and whether they fit your situation, not to push a specific product. If, after reading through this, you'd like to talk it through, I'm one message away.
+              I'm Anup Vatyani, an AMFI-registered Mutual Fund Distributor (ARN 106715) with over 22 years in banking and financial services, including a decade dedicated to mutual fund distribution. My role on this site — and in any conversation that follows — is to help you understand how GIFT City funds work, not to push a specific product or give personalised investment advice. If, after reading through this, you'd like to talk it through, I'm one message away.
             </p>
             <Button asChild variant="gold" size="lg">
               <Link to="/contact">Talk to Anup <ArrowRight className="ml-2 h-5 w-5" /></Link>
@@ -358,7 +364,7 @@ const Home = () => {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-6">About the Contributor</h2>
             <p className="font-body text-foreground-muted leading-relaxed mb-6">
-              Anup Vatyani has over 22 years of experience in banking and financial services, including a decade as an AMFI-registered Mutual Fund Distributor (ARN 106715). This site is his effort to provide an accurate, independent, educational resource on GIFT City and IFSC investing.
+              Anup Vatyani has over 22 years of experience in banking and financial services, including a decade as an AMFI-registered Mutual Fund Distributor (ARN 106715). This site is his effort to provide an accurate, educational resource on GIFT City and IFSC investing.
             </p>
             <Link to="/about" className="font-body text-secondary hover:underline inline-flex items-center">
               Read Anup's full background <ArrowRight className="ml-1 h-4 w-4" />
@@ -369,7 +375,7 @@ const Home = () => {
         {/* Final CTA */}
         <section className="py-16 bg-primary text-primary-foreground">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">Still deciding if GIFT City investing is right for you?</h2>
+            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">Still have questions about GIFT City funds?</h2>
             <p className="font-body text-lg text-primary-foreground/85 mb-8">
               That's a fair place to be. Ask Anup anything — no forms that go to a call centre, no pressure, and no obligation to invest.
             </p>

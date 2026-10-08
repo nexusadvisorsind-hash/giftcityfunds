@@ -18,7 +18,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-primary-foreground/80 mb-4 max-w-md">
-              giftcityfunds.in provides information about GIFT City and IFSC investment frameworks for NRIs and HNIs. Owned and operated by Anup Vatyani, a registered Mutual Fund Distributor (AMFI ARN-106715).
+              giftcityfunds.in provides information about GIFT City and IFSC investment frameworks for NRIs and HNIs. Owned and operated by Anup Vatyani, AMFI-registered Mutual Fund Distributor (ARN 106715).
               <br /><br />
               This platform shares educational resources only and does not offer personalized investment advice or financial planning.
             </p>
@@ -55,6 +55,12 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/who-its-for" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Who It's For</Link>
+              </li>
+              <li>
+                <Link to="/gift-city-funds-vs-mutual-funds" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">GIFT City Funds vs Mutual Funds</Link>
+              </li>
+              <li>
+                <Link to="/gift-city-funds-risks" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Risks</Link>
               </li>
               <li>
                 <Link to="/us-based-nris" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">US NRIs</Link>
@@ -162,13 +168,17 @@ const Footer = () => {
               GIFT CITY FUNDS and its owner Anup Vatyani (MFD ARN 106715) do not provide personalized investment, financial planning, or portfolio management through this website.
               Nothing here constitutes a solicitation to buy or sell any security. Users must verify facts via official scheme documents and consult qualified professionals before investing.
             </p>
+            <p className="text-primary-foreground/70 text-xs max-w-5xl mx-auto leading-relaxed mb-2">
+              This website is not affiliated with, endorsed by or operated by GIFT City Company Limited, IFSCA, SEBI, AMFI, or any asset management company or Fund Management Entity.
+              Anup Vatyani is a Mutual Fund Distributor, not a SEBI-registered Investment Adviser, and may receive commission from product providers where he facilitates an investment.
+            </p>
             <p className="text-primary-foreground/70 text-xs max-w-5xl mx-auto leading-relaxed">
               Mutual Fund investments are subject to market risk. Please read all scheme related documents carefully before investing.
             </p>
           </div>
           
           <p className="text-primary-foreground/70 text-xs text-center mt-6">
-            © 2025 GIFT CITY FUNDS | Anup Vatyani (MFD ARN 106715) | info@giftcityfunds.in | Informational Use Only | Mutual Fund investments are subject to market risk.
+            © 2026 GIFT CITY FUNDS | Anup Vatyani (MFD ARN 106715) | info@giftcityfunds.in | Informational Use Only | Mutual Fund investments are subject to market risk.
           </p>
         </div>
       </div>

@@ -37,13 +37,13 @@ const PrivacyPolicy = () => {
 
           <p className="text-sm text-foreground-muted mb-4">Last Updated: October 2025</p>
           
-          <h1 className="font-heading font-bold text-4xl text-primary mb-8">🔒 Privacy Policy</h1>
+          <h1 className="font-heading font-bold text-4xl text-primary mb-8">Privacy Policy</h1>
           
           <div className="prose prose-lg max-w-none space-y-8">
             <section>
               <h2 className="font-heading font-semibold text-2xl text-foreground mb-4">1. Introduction</h2>
               <p className="font-body text-foreground-muted">
-                This Privacy Policy describes how GiftCityWealth / Gift City Funds ("we," "us," "our") collects, uses, discloses, and protects personal and non-personal information obtained through this website.
+                This Privacy Policy describes how GIFT City Funds ("we," "us," "our") collects, uses, discloses, and protects personal and non-personal information obtained through this website.
               </p>
             </section>
 

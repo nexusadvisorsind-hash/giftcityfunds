@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { SEO } from "@/components/SEO";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { OfficialSources } from "@/components/OfficialSources";
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -65,6 +66,7 @@ const Taxation = () => (
       <div className="bg-secondary/10 border border-secondary/30 p-6 rounded-lg">
         <p className="font-body text-sm text-primary"><strong>Disclaimer.</strong> Tax rules referenced above are general, current as of publication, and subject to change by the relevant authorities. This is not tax advice — consult a qualified CA or tax professional in your country of residence.</p>
       </div>
+      <OfficialSources items={["ifsca", "incomeTax", "rbiLrs", "irs8621"]} />
     </div>
   </>
 );

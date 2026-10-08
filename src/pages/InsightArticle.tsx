@@ -33,7 +33,7 @@ const InsightArticle = () => {
   return (
     <>
       <SEO
-        title={article.title}
+        title={article.seoTitle ?? article.title}
         description={article.description}
         canonical={url}
         type="article"

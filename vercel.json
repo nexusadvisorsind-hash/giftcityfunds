@@ -13,6 +13,7 @@
     { "source": "/terms", "destination": "/terms-of-use", "permanent": true }
   ],
   "rewrites": [
-    { "source": "/((?!api/).*)", "destination": "/index.html" }
+    { "source": "/admin", "destination": "/index.html" },
+    { "source": "/auth", "destination": "/index.html" }
   ]
 }

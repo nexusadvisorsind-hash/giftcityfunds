@@ -19,6 +19,8 @@ const Navigation = () => {
     { label: "Who It's For", path: "/who-its-for", ariaLabel: "Who invests in GIFT City funds" },
     { label: "Taxation", path: "/taxation", ariaLabel: "Taxation and regulatory framework" },
     { label: "How to Invest", path: "/how-to-invest", ariaLabel: "How to invest in GIFT City funds" },
+    { label: "vs Mutual Funds", path: "/gift-city-funds-vs-mutual-funds", ariaLabel: "GIFT City funds compared with regular Indian mutual funds" },
+    { label: "Risks", path: "/gift-city-funds-risks", ariaLabel: "Risks of GIFT City funds" },
   ];
 
   const navItems = [

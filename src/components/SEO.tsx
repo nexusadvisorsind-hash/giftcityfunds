@@ -9,7 +9,8 @@ interface SEOProps {
   title: string;
   description: string;
   canonical: string;
-  schema?: object;
+  /** One JSON-LD object, or several. */
+  schema?: object | object[];
   breadcrumbs?: BreadcrumbItem[];
   /** Keep private or utility pages (admin, sign-in) out of search results. */
   noindex?: boolean;
@@ -23,6 +24,7 @@ const organizationSchema = {
   "@type": "Organization",
   "@id": "https://giftcityfunds.in/#organization",
   "name": "GIFT City Funds",
+  "alternateName": ["GIFTCityFunds", "giftcityfunds.in", "Gift City Funds"],
   "url": "https://giftcityfunds.in",
   "logo": "https://giftcityfunds.in/favicon-512.png",
   "founder": {
@@ -46,9 +48,32 @@ const websiteSchema = {
   "@type": "WebSite",
   "@id": "https://giftcityfunds.in/#website",
   "name": "GIFT City Funds",
+  "alternateName": ["GIFTCityFunds", "giftcityfunds.in"],
   "url": "https://giftcityfunds.in",
   "publisher": { "@id": "https://giftcityfunds.in/#organization" },
 };
+
+// Fill in the fields Google expects on every Article so individual pages
+// only need to state what is specific to them.
+const SITE_FIRST_PUBLISHED = "2026-07-23";
+const enrich = (item: object): object => {
+  const s = item as Record<string, unknown>;
+  if (s["@type"] !== "Article") return item;
+  return {
+    ...s,
+    image: s.image ?? "https://giftcityfunds.in/images/gift-city-skyline.jpg",
+    datePublished: s.datePublished ?? SITE_FIRST_PUBLISHED,
+    dateModified: s.dateModified ?? s.datePublished ?? SITE_FIRST_PUBLISHED,
+    author: {
+      "@type": "Person",
+      name: "Anup Vatyani",
+      url: "https://giftcityfunds.in/about",
+      identifier: "ARN106715",
+    },
+    publisher: { "@id": "https://giftcityfunds.in/#organization" },
+  };
+};
+const pageSchemas = (schema ? (Array.isArray(schema) ? schema : [schema]) : []).map(enrich);
 
   return (
     <Helmet>
@@ -84,11 +109,11 @@ const websiteSchema = {
       </script>
       
       {/* Additional Page-Specific Schema */}
-      {schema && (
-        <script type="application/ld+json">
-          {JSON.stringify(schema)}
+      {pageSchemas.map((item, i) => (
+        <script key={i} type="application/ld+json">
+          {JSON.stringify(item)}
         </script>
-      )}
+      ))}
       
       {/* BreadcrumbList Schema */}
       {breadcrumbs && breadcrumbs.length > 0 && (

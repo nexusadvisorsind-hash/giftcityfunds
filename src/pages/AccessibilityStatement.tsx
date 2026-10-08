@@ -40,7 +40,7 @@ const AccessibilityStatement = () => {
 
           <p className="text-sm text-foreground-muted mb-4">Last Updated: October 2025</p>
           
-          <h1 className="font-heading font-bold text-4xl text-primary mb-8">♿ Accessibility Statement</h1>
+          <h1 className="font-heading font-bold text-4xl text-primary mb-8">Accessibility Statement</h1>
           
           <div className="prose prose-lg max-w-none space-y-8">
             <section>

@@ -37,7 +37,7 @@ const TermsOfUse = () => {
 
           <p className="text-sm text-foreground-muted mb-4">Last Updated: October 2025</p>
           
-          <h1 className="font-heading font-bold text-4xl text-primary mb-8">📜 Terms of Use</h1>
+          <h1 className="font-heading font-bold text-4xl text-primary mb-8">Terms of Use</h1>
           
           <div className="prose prose-lg max-w-none space-y-8">
             <section>
@@ -64,7 +64,7 @@ const TermsOfUse = () => {
             <section>
               <h2 className="font-heading font-semibold text-2xl text-foreground mb-4">4. Intellectual Property</h2>
               <p className="font-body text-foreground-muted">
-                All text, graphics, designs, and other materials on this website are the property of GiftCityWealth or its licensors. Unauthorized reproduction, distribution, or modification is prohibited.
+                All text, graphics, designs, and other materials on this website are the property of GIFT City Funds or its licensors. Unauthorized reproduction, distribution, or modification is prohibited.
               </p>
             </section>
 

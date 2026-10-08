@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { SEO } from "@/components/SEO";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { OfficialSources } from "@/components/OfficialSources";
 import { ArrowRight } from "lucide-react";
 
 const articleSchema = {
@@ -56,6 +57,7 @@ const WhatIsGiftCity = () => (
           <Link to="/funds-explained" className="text-secondary hover:underline">/funds-explained</Link>
         </p>
       </div>
+      <OfficialSources items={["ifsca", "giftCity", "ifscaDirectory"]} />
     </div>
   </>
 );

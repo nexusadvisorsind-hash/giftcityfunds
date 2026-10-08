@@ -33,7 +33,7 @@ const steps = [
     icon: MessageCircle,
     title: "Talk to Anup",
     body:
-      "Once you know the structure that fits, reach out to get connected with the right Fund Management Entity (FME) in GIFT City. Anup Vatyani (AMFI ARN 106715) helps you shortlist and connect — no cold call centre, no rotating relationship manager, no product push.",
+      "Once you understand the structures, you can ask how the process works or ask to be connected with a Fund Management Entity (FME) in GIFT City. Anup Vatyani is an AMFI-registered Mutual Fund Distributor (ARN 106715): he explains and facilitates, and does not give personalised investment advice.",
     linkLabel: "Contact Anup",
     linkTo: "/contact",
   },
@@ -65,7 +65,7 @@ const HowToInvest = () => {
     <>
       <SEO
         title="How to Invest in GIFT City Funds — Step-by-Step Guide"
-        description="A plain-English 5-step guide to investing in GIFT City IFSC funds for NRIs, OCIs, US-based NRIs and Resident Indians. Structures, eligibility, documents and onboarding."
+        description="A plain-English 5-step guide to investing in GIFT City IFSC funds for NRIs, OCIs and Resident Indians: structures, eligibility, documents and onboarding."
         canonical="https://giftcityfunds.in/how-to-invest"
         schema={howToSchema}
         breadcrumbs={[
@@ -118,7 +118,7 @@ const HowToInvest = () => {
         <div className="mt-12 bg-primary text-primary-foreground rounded-lg p-8 text-center">
           <h2 className="font-heading font-bold text-2xl md:text-3xl mb-3">Ready to take the next step?</h2>
           <p className="font-body text-primary-foreground/85 mb-6">
-            Talk to Anup for a plain-English conversation about which GIFT City structure fits your situation.
+            Talk to Anup for a plain-English conversation about how GIFT City fund structures and the investment process work.
           </p>
           <Button asChild variant="gold" size="lg">
             <Link to="/contact">Talk to Anup <ArrowRight className="ml-2 h-5 w-5" /></Link>
