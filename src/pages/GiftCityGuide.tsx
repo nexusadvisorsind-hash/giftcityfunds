@@ -28,7 +28,7 @@ const GiftCityGuide = () => (
     path="/gift-city-guide"
     headline="GIFT City Guide: Location, Ownership, Connectivity, Living and Working"
     seoTitle="GIFT City Guide: Location, Metro, Liquor Rules, Jobs & Property"
-    description="A factual guide to GIFT City, Gandhinagar: who owns it, size and master plan, location and metro, liquor rules, hotels and clubs, jobs and the property market, with links to official sources."
+    description="GIFT City, Gandhinagar, in facts: who owns it, size, location and metro, liquor rules, hotels, jobs and property, with links to official sources."
     crumb="GIFT City Guide"
     datePublished="2026-10-09"
     faqs={faqs}

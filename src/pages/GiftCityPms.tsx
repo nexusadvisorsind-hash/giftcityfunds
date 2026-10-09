@@ -14,7 +14,7 @@ const GiftCityPms = () => (
     path="/gift-city-pms"
     headline="GIFT City PMS: Portfolio Management Services in GIFT IFSC"
     seoTitle="GIFT City PMS: USD 75,000 Minimum, How It Works (2026)"
-    description="Portfolio management services in GIFT City: USD 75,000 minimum (cut from USD 150,000 in 2025), discretionary vs non-discretionary, GIFT City PMS vs domestic PMS, and how NRIs and residents invest."
+    description="GIFT City PMS: USD 75,000 minimum (cut from USD 150,000 in 2025), types of PMS, how it compares with domestic PMS, and how NRIs and residents invest."
     crumb="GIFT City PMS"
     datePublished="2026-10-09"
     faqs={faqs}

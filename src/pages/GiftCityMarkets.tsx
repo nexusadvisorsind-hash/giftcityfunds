@@ -21,7 +21,7 @@ const GiftCityMarkets = () => (
     path="/gift-city-markets-gift-nifty"
     headline="GIFT Nifty and GIFT City Stock Exchanges Explained: NSE IX, India INX and IIBX"
     seoTitle="GIFT Nifty, NSE IX, India INX & IIBX: GIFT City Markets (2026)"
-    description="What GIFT Nifty is, GIFT Nifty vs SGX Nifty, trading hours, who can trade, and the GIFT City exchanges: NSE IX, India INX and the IIBX bullion exchange. Facts only, no trading tips."
+    description="GIFT Nifty explained: vs SGX Nifty, trading hours, who can trade, and the GIFT City exchanges NSE IX, India INX and IIBX. Facts only, no tips."
     crumb="GIFT Nifty and GIFT City Exchanges"
     datePublished="2026-10-09"
     faqs={faqs}

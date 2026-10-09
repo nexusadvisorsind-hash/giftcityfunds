@@ -19,7 +19,7 @@ const WhatIsIfsca = () => (
     path="/what-is-ifsca"
     headline="What Is IFSCA? GIFT City's Unified Financial Regulator"
     seoTitle="What Is IFSCA? The GIFT City Regulator Explained (2026)"
-    description="IFSCA explained: when it was set up, which regulators' powers it took over (RBI, SEBI, IRDAI, PFRDA), what it regulates in GIFT IFSC, and how to check an IFSCA-registered fund manager."
+    description="What is IFSCA? GIFT City's single regulator: when it was set up, the RBI, SEBI, IRDAI and PFRDA powers it took over, and how to check a fund manager."
     crumb="What Is IFSCA"
     datePublished="2026-10-08"
     faqs={faqs}

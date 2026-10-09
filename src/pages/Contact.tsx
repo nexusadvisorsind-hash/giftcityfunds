@@ -87,10 +87,11 @@ const Contact = () => {
                   <Input name="email" value={form.email} onChange={handleChange} placeholder="Email" required type="email" aria-label="Email" />
                   <Input name="phone" value={form.phone} onChange={handleChange} placeholder="Phone (optional)" aria-label="Phone" />
                   <select name="investorType" value={form.investorType} onChange={handleChange} className="w-full border border-input rounded-md p-2 bg-background" aria-label="Investor type">
-                    <option value="">Select investor type</option>
-                    <option value="Retail">Retail</option>
-                    <option value="HNI">HNI</option>
-                    <option value="Institutional">Institutional</option>
+                    <option value="">I am…</option>
+                    <option value="NRI">An NRI</option>
+                    <option value="OCI">An OCI cardholder</option>
+                    <option value="Resident Indian">A resident Indian</option>
+                    <option value="Institution / family office">An institution or family office</option>
                     <option value="Other">Other</option>
                   </select>
                 </div>

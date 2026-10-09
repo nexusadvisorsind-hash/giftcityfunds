@@ -101,7 +101,7 @@ const RouteChecker = () => {
       kind="WebPage"
       headline="Which GIFT City Route Applies to You? A 30-Second Checker"
       seoTitle="GIFT City Eligibility Checker: Which Route Applies to You?"
-      description="Answer four questions to see how you would invest in a GIFT City fund: LRS and TCS for residents, direct USD for NRIs, NRE/NRO rules, PFIC for US persons. Free, private, no sign-up."
+      description="Four questions show how you would invest in a GIFT City fund: LRS and TCS for residents, USD for NRIs, NRE/NRO rules, PFIC for US persons. Free."
       crumb="Route Checker"
       datePublished="2026-10-08"
       sources={["rbiLrs", "ifsca", "irs8621"]}

@@ -14,7 +14,7 @@ const GiftCityVsInternationalFunds = () => (
     path="/gift-city-vs-international-mutual-funds"
     headline="GIFT City Funds vs International Mutual Funds: Which Route Abroad?"
     seoTitle="GIFT City Fund vs International Mutual Fund (2026 Comparison)"
-    description="GIFT City funds vs Indian international mutual funds and FoFs: the SEBI USD 7 billion cap, currency, minimums, SIPs, LRS and TCS, compared side by side for resident Indians and NRIs."
+    description="GIFT City funds vs Indian international mutual funds: the SEBI USD 7 billion cap, currency, minimums, SIPs, LRS and TCS, side by side."
     crumb="GIFT City vs International Mutual Funds"
     datePublished="2026-10-08"
     faqs={faqs}

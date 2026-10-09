@@ -13,7 +13,7 @@ const GiftCityVsSingaporeDubai = () => (
     path="/gift-city-vs-singapore-dubai"
     headline="GIFT City vs Singapore vs Dubai: How the Fund Centres Compare"
     seoTitle="GIFT City vs Singapore vs Dubai (DIFC): Fund Hubs Compared"
-    description="GIFT IFSC compared with Singapore and Dubai's DIFC as fund centres for Indian and NRI investors: regulator, currency, product range, maturity, India link and what changes for you."
+    description="GIFT City vs Singapore vs Dubai (DIFC) as fund centres for Indian and NRI investors: regulator, currency, product range, India link and what changes for you."
     crumb="GIFT City vs Singapore vs Dubai"
     datePublished="2026-10-09"
     faqs={faqs}

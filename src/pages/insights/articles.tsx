@@ -27,7 +27,7 @@ export const articles: InsightArticle[] = [
     faqs: [{ q: "How long does it take to open a GIFT City bank account?", a: "Usually one to two weeks, and often less with video KYC or if you already bank with the same group." }, { q: "Can resident Indians use a GIFT City account for other overseas payments?", a: "Yes. Since July 2024, a resident's foreign currency account in an IFSC can be used for any purpose permitted under LRS, within the USD 250,000 annual limit." }, { q: "Can I open a GIFT City USD account?", a: "Yes. IFSC Banking Units in GIFT City offer US Dollar accounts and deposits to eligible NRIs, foreign citizens and, within LRS, resident Indians. Each bank sets its own minimum balance and documents." }],
     title: "How to Open a GIFT City Bank Account (IFSC Banking Unit)",
     seoTitle: "How to Open a GIFT City Bank Account: NRIs and Residents",
-    description: "Who can open a foreign-currency account with a GIFT City IFSC Banking Unit, the documents banks ask for, how to fund it, and what to check before you choose a bank.",
+    description: "Who can open a GIFT City bank account with an IFSC Banking Unit, the documents needed, how to fund it, and what to compare between banks.",
     datePublished: "2026-10-08",
     dateModified: "2026-10-09",
     body: (
@@ -140,7 +140,7 @@ export const articles: InsightArticle[] = [
           </ul>
           <h3 className="font-heading font-semibold text-lg text-primary pt-2">Your home country's tax</h3>
           <p>
-            Indian exemptions do not stop your country of residence from taxing the interest. US, UK and Canadian residents generally report worldwide interest; the UAE does not tax individuals' income. See <Link to="/gift-city-funds-for-nri" className="text-secondary hover:underline">GIFT City funds for NRIs by country</Link>.
+            Indian exemptions do not stop your country of residence from taxing the interest. US, UK and Canadian residents generally report worldwide interest; the UAE does not tax individuals' income. See <Link to="/gift-city-funds-for-nri" className="text-secondary hover:underline">GIFT City funds for NRIs, country by country</Link>.
           </p>
           <p className="text-sm">
             How to open the account first: <Link to="/insights/how-to-open-gift-city-bank-account" className="text-secondary hover:underline">How to open a GIFT City bank account</Link>. Example product terms: <a href="https://www.idfcfirst.bank.in/gift-city/non-resident-banking/fixed-deposit-account" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">one bank's GIFT City fixed deposit page</a>.
@@ -266,7 +266,7 @@ export const articles: InsightArticle[] = [
     faqs: [{ q: "What is the GIFT City LRS scheme?", a: "There is no separate scheme: resident Indians invest in GIFT City through the RBI's Liberalised Remittance Scheme, which applies because the IFSC is treated as outside India for foreign exchange purposes." }, { q: "What is the LRS limit? Is it USD 250,000 a year?", a: "Yes. Under the Liberalised Remittance Scheme a resident individual can send up to USD 250,000 abroad in a financial year, across all permitted purposes including investing in GIFT City funds." }, { q: "How much TCS on foreign remittance for investment?", a: "For FY 2026-27, no TCS on the first ₹10 lakh of your LRS remittances in the year and 20% on investment remittances above that. It is credited back against your income tax." }, { q: "Is a GIFT City investment an overseas portfolio investment?", a: "Yes. For a resident Indian, investing in a GIFT City fund is treated as an overseas portfolio investment (OPI) under FEMA, made through LRS, because the IFSC is treated as outside India for foreign exchange purposes." }, { q: "What is Form A2 under LRS?", a: "Form A2 is the application and declaration you give your bank when sending money abroad under LRS. You state the purpose, such as overseas portfolio investment, and confirm the remittance is within your annual limit." }],
     title: "LRS and TCS for GIFT City Funds: Limits, 20% TCS and a Calculator",
     seoTitle: "LRS & TCS on GIFT City Investments: Calculator (FY 2026-27)",
-    description: "How LRS and TCS apply when a resident Indian invests in a GIFT City fund: the USD 250,000 limit, no TCS up to ₹10 lakh, 20% above it, how to claim it back, and a free calculator.",
+    description: "LRS and TCS for GIFT City investments: the USD 250,000 limit, no TCS up to ₹10 lakh, 20% above it, how to claim it back, and a free calculator.",
     datePublished: "2026-09-21",
     dateModified: "2026-10-09",
     body: (

@@ -17,7 +17,7 @@ const ResidentGuide = () => (
     path="/gift-city-funds-for-resident-indians"
     headline="GIFT City Funds for Resident Indians: LRS, TCS and How to Invest Abroad"
     seoTitle="GIFT City Funds for Resident Indians: LRS, TCS, How to Invest"
-    description="How resident Indians invest through GIFT City: outbound funds under LRS (USD 250,000 a year), 20% TCS above ₹10 lakh and how to claim it back, Schedule FA reporting, what you cannot do, with a TCS calculator."
+    description="How resident Indians invest through GIFT City: LRS up to USD 250,000 a year, 20% TCS above ₹10 lakh and claiming it back, Schedule FA, with a calculator."
     crumb="GIFT City Funds for Resident Indians"
     datePublished="2026-10-09"
     faqs={faqs}

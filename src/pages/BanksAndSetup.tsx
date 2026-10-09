@@ -24,7 +24,7 @@ const BanksAndSetup = () => (
     path="/gift-city-banks-and-business-setup"
     headline="Banks in GIFT City and Setting Up a Business in GIFT IFSC"
     seoTitle="Banks in GIFT City & How to Set Up a Company in GIFT IFSC"
-    description="Banks in GIFT City (IFSC Banking Units), opening a foreign currency account, and how companies set up in GIFT IFSC: IFSCA licence, SEZ vs DTA, fintech, aircraft and ship leasing."
+    description="Banks in GIFT City, opening a foreign currency account, and how companies set up in GIFT IFSC: IFSCA licence, SEZ vs DTA, fintech and leasing."
     crumb="Banks and Business Setup in GIFT City"
     datePublished="2026-10-09"
     faqs={faqs}

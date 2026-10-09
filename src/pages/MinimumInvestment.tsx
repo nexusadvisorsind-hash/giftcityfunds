@@ -14,7 +14,7 @@ const MinimumInvestment = () => (
     path="/gift-city-minimum-investment"
     headline="GIFT City Minimum Investment Amounts and Limits, in One Table"
     seoTitle="GIFT City Minimum Investment Amount: Funds, AIF, PMS (2026)"
-    description="Every GIFT City minimum investment in one place: retail schemes, feeder funds, PMS (USD 75,000), AIFs (USD 150,000), venture capital, US stocks, FDs, plus LRS limits and the TCS threshold."
+    description="Every GIFT City minimum in one place: retail funds from USD 500, PMS USD 75,000, AIFs USD 150,000, deposits and US stocks, plus LRS and TCS limits."
     crumb="Minimum Investment and Limits"
     datePublished="2026-10-09"
     faqs={faqs}

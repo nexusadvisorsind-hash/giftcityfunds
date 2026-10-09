@@ -28,7 +28,7 @@ const Home = () => {
     <>
       <SEO
         title="GIFT City Funds: Types, Tax, Minimums & How to Invest (2026)"
-        description="A plain-English educational guide to GIFT City & IFSC mutual funds, AIFs and PMS structures for NRIs, OCIs and resident Indians. By Anup Vatyani, MFD ARN 106715."
+        description="Plain-English guide to GIFT City funds, AIFs and PMS for NRIs, OCIs and resident Indians. By Anup Vatyani, AMFI-registered MFD (ARN 106715)."
         canonical="https://giftcityfunds.in/"
         schema={financialServiceSchema}
         breadcrumbs={[{ name: "Home", url: "https://giftcityfunds.in/" }]}

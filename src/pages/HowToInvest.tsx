@@ -38,7 +38,7 @@ const faqs: Faq[] = [
   { q: "How long does it take to invest in a GIFT City fund?", a: "Usually one to three weeks from first contact with the fund house: a few days for KYC, one to three working days for the remittance to arrive, and allotment at the next applicable NAV. Delays most often come from missing or unattested documents." },
   { q: "Can I invest in GIFT City funds online?", a: "Many fund houses now offer digital onboarding with e-signatures, though some still ask for physical or notarised documents, especially for overseas investors. The remittance itself is made through your bank." },
   { q: "Do I need a GIFT City bank account to invest?", a: "No. You can invest in most GIFT City funds directly from an Indian bank account (residents, under LRS) or an overseas account (NRIs). A GIFT City bank account (IBU) is optional and can be useful for holding dollars." },
-  { q: "Do NRIs need a PAN to invest in a GIFT City fund?", a: "Most fund houses ask for a PAN, or a declaration where PAN is not available. Requirements differ by fund house and investor type, so confirm with the fund before you start." },
+  { q: "Do NRIs need a PAN to invest in a GIFT City fund?", a: "Not always. Some GIFT City funds do not require a PAN from non-residents whose only Indian income is from IFSC funds; others ask for one, or a declaration. Check the fund's KYC list before you start." },
   { q: "How does GIFT City fund redemption work?", a: "You submit a redemption request to the fund house. Proceeds are paid in the fund's currency, usually USD, to your registered bank account. Resident Indians must bring the money back to India or reinvest it within the time allowed by RBI rules." },
 ];
 
@@ -47,7 +47,7 @@ const HowToInvest = () => (
     path="/how-to-invest"
     headline="How to Invest in GIFT City Funds: Step-by-Step Guide for NRIs and Residents"
     seoTitle="How to Invest in GIFT City Funds (2026): NRI & Resident Guide"
-    description="How to invest in GIFT City funds step by step: choosing a structure, LRS for residents vs direct USD for NRIs, KYC documents, remittance, allotment and redemption. With diagrams and a document checklist."
+    description="How to invest in GIFT City funds, step by step: choosing a structure, LRS vs direct USD, KYC documents, remittance, allotment and redemption, with a checklist."
     crumb="How to Invest"
     datePublished="2026-07-23"
     dateModified="2026-10-08"
@@ -114,7 +114,7 @@ const HowToInvest = () => (
         <thead><tr><th className={th}>Document</th><th className={th}>Resident Indian</th><th className={th}>NRI</th><th className={th}>OCI / foreign citizen</th></tr></thead>
         <tbody>
           <tr><td className={td}>Passport</td><td className={td}>Usually</td><td className={td}>Yes</td><td className={td}>Yes (foreign passport)</td></tr>
-          <tr><td className={td}>PAN card</td><td className={td}>Yes</td><td className={td}>Usually</td><td className={td}>Usually, or a declaration</td></tr>
+          <tr><td className={td}>PAN card</td><td className={td}>Yes</td><td className={td}>Some funds; others accept a declaration</td><td className={td}>Some funds; others accept a declaration</td></tr>
           <tr><td className={td}>OCI card</td><td className={td}>—</td><td className={td}>—</td><td className={td}>Yes</td></tr>
           <tr><td className={td}>Proof of address</td><td className={td}>Indian address</td><td className={td}>Overseas address</td><td className={td}>Overseas address</td></tr>
           <tr><td className={td}>Bank statement / cancelled cheque</td><td className={td}>Indian account</td><td className={td}>Account the money comes from</td><td className={td}>Account the money comes from</td></tr>

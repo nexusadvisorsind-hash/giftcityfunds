@@ -140,7 +140,7 @@ const NriGuide = () => (
     path="/gift-city-funds-for-nri"
     headline="GIFT City Funds for NRIs: The Complete Guide, Country by Country"
     seoTitle="GIFT City Funds for NRIs (2026): Rules, Minimums, Tax by Country"
-    description="Everything NRIs need on GIFT City funds: eligibility, USD investing without LRS, minimums from USD 500, documents, repatriation, and full tax explanations for the UAE, Gulf, UK, US, Canada, Singapore and Australia."
+    description="GIFT City funds for NRIs: invest in USD with no LRS, minimums from USD 500, documents, and tax rules for the UAE, Gulf, UK, US, Canada, Singapore and Australia."
     crumb="GIFT City Funds for NRIs"
     datePublished="2026-10-09"
     faqs={faqs}

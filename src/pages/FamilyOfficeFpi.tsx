@@ -14,7 +14,7 @@ const FamilyOfficeFpi = () => (
     path="/gift-city-family-office-fpi"
     headline="Family Offices, FPIs, Venture Capital and Wealth Management in GIFT City"
     seoTitle="GIFT City Family Office, FPI, VC Funds & Wealth Management"
-    description="How GIFT City serves wealthy families and institutions: family investment funds, FPIs in GIFT IFSC (and SEBI's 2024 change for NRIs), venture capital schemes, PMS and private banking."
+    description="GIFT City for wealthy families and institutions: family investment funds, FPIs and SEBI's 2024 NRI change, venture capital schemes, PMS and private banking."
     crumb="Family Offices, FPIs and Wealth Management"
     datePublished="2026-10-09"
     faqs={faqs}

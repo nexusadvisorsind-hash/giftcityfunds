@@ -21,7 +21,7 @@ const rows: [string, string, string][] = [
   ["Governing rules", "SEBI (Mutual Funds) Regulations", "IFSCA (Fund Management) Regulations, 2025"],
   ["Currency", "Indian Rupees (INR)", "Foreign currency, almost always US Dollars (USD)"],
   ["Who manages it", "An Asset Management Company (AMC) registered with SEBI", "A Fund Management Entity (FME) registered with IFSCA and based in GIFT City"],
-  ["Typical minimum", "Low — SIPs often start at ₹100 to ₹500", "Higher — retail and feeder structures from roughly $5,000; PMS and AIFs far more"],
+  ["Typical minimum", "Low — SIPs often start at ₹100 to ₹500", "Higher — retail and feeder funds from about USD 500; PMS and AIFs far more"],
   ["Where it invests", "Mostly Indian securities, with limited overseas exposure", "Indian markets (inbound funds) or global markets (outbound funds)"],
   ["Resident Indians", "Invest directly in rupees", "Invest through the Liberalised Remittance Scheme (LRS), up to USD 250,000 a year"],
   ["NRIs and OCIs", "Usually through NRE or NRO accounts, in rupees", "Usually directly in USD from an overseas bank account"],

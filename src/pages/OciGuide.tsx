@@ -14,7 +14,7 @@ const OciGuide = () => (
     path="/gift-city-funds-for-oci"
     headline="GIFT City Funds for OCI Cardholders: Eligibility, Documents and Tax"
     seoTitle="Can OCI Cardholders Invest in GIFT City Funds? (2026 Guide)"
-    description="How Overseas Citizens of India invest in GIFT City funds: eligibility, documents (foreign passport, OCI card), PAN, US and Canadian citizen restrictions, tax at home, and how it differs from NRIs."
+    description="Can OCI cardholders invest in GIFT City funds? Eligibility, documents, PAN, US and Canadian citizen restrictions, and how it differs from NRIs."
     crumb="GIFT City Funds for OCIs"
     datePublished="2026-10-09"
     faqs={faqs}

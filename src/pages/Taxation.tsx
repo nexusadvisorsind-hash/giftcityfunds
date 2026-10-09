@@ -97,7 +97,7 @@ const Taxation = () => (
         </p>
         <p>
           Country-specific points, such as the US PFIC rules or the UK's offshore fund rules, are covered in{" "}
-          <Link to="/gift-city-funds-for-nri" className="text-secondary hover:underline">GIFT City funds for NRIs by country</Link>.
+          <Link to="/gift-city-funds-for-nri" className="text-secondary hover:underline">GIFT City funds for NRIs, country by country</Link>.
         </p>
       </section>
 

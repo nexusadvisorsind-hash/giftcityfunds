@@ -15,7 +15,7 @@ const UsStocksEtfs = () => (
     path="/gift-city-us-stocks-etfs"
     headline="GIFT City ETFs and US Stocks: How Investing Through GIFT City Works"
     seoTitle="GIFT City ETFs & US Stocks: How to Invest, Tax, Costs (2026)"
-    description="GIFT City ETFs explained: ETFs listed in GIFT IFSC, and how resident Indians and NRIs buy US stocks and ETFs through IFSC brokers: LRS, TCS, dividend withholding, US estate tax, and how it compares with GIFT City funds."
+    description="GIFT City ETFs and US stocks: how residents and NRIs invest through IFSC brokers, LRS and TCS, dividend withholding and US estate tax."
     crumb="GIFT City ETFs and US Stocks"
     datePublished="2026-10-08"
     faqs={faqs}

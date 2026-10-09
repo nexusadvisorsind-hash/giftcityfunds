@@ -42,7 +42,7 @@ const Glossary = () => (
     path="/gift-city-glossary"
     headline="GIFT City Glossary: 27 Terms Explained Simply"
     seoTitle="GIFT City Glossary: IFSC, IFSCA, LRS, TCS, FME & More"
-    description="Plain-English definitions of the terms you meet when investing through GIFT City: IFSC, IFSCA, FME, LRS, TCS, PFIC, inbound and outbound funds, retail and restricted schemes."
+    description="Plain-English definitions of GIFT City terms: IFSC, IFSCA, FME, LRS, TCS, PFIC, inbound and outbound funds, retail and restricted schemes."
     crumb="GIFT City Glossary"
     datePublished="2026-10-08"
     sources={["ifsca", "rbiLrs", "incomeTax"]}

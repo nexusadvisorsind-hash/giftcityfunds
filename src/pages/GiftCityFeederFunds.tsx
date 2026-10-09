@@ -14,7 +14,7 @@ const GiftCityFeederFunds = () => (
     path="/gift-city-feeder-funds"
     headline="GIFT City Feeder Funds: How They Work, and Feeder vs Direct FPI"
     seoTitle="GIFT City Feeder Funds Explained: Inbound, Outbound, vs FPI"
-    description="How GIFT City feeder funds work: inbound feeders into Indian mutual funds, outbound feeders into global funds, layered costs, and how a feeder differs from a fund investing directly as an FPI."
+    description="How GIFT City feeder funds work: inbound and outbound feeders, layered costs, and how a feeder differs from a fund investing directly as an FPI."
     crumb="GIFT City Feeder Funds"
     datePublished="2026-10-09"
     faqs={faqs}

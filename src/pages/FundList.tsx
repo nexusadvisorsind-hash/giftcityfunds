@@ -37,7 +37,7 @@ const FundList = () => (
     path="/gift-city-fund-list"
     headline="GIFT City Fund List 2026: Fund Houses, Inbound and Outbound"
     seoTitle="GIFT City Funds List 2026: Inbound & Outbound Fund Houses"
-    description="Which Indian fund houses run GIFT City funds, which invest in India (inbound) or abroad (outbound), and how to check any fund manager with IFSCA. Facts only, dated and sourced."
+    description="Which fund houses run GIFT City funds, inbound and outbound, and how to check any fund manager with IFSCA. Facts only, dated and sourced."
     crumb="GIFT City Fund List"
     datePublished="2026-10-08"
     reviewed={`Last checked ${LAST_CHECKED}`}

@@ -15,7 +15,7 @@ const GiftCitySip = () => (
     path="/gift-city-sip"
     headline="SIP in GIFT City Funds: Can You Invest Monthly?"
     seoTitle="SIP in GIFT City Funds: How Monthly Investing Works (2026)"
-    description="Can you start a SIP in a GIFT City fund? How recurring investments work for resident Indians (LRS, TCS) and NRIs, with a month-by-month TCS example and alternatives."
+    description="Can you start a SIP in a GIFT City fund? How monthly investing works for residents (LRS, TCS) and NRIs, with a month-by-month TCS example."
     crumb="SIP in GIFT City Funds"
     datePublished="2026-10-08"
     faqs={faqs}

@@ -16,7 +16,7 @@ const GiftCityAif = () => (
     path="/gift-city-aif"
     headline="GIFT City AIF: Alternative Investment Funds in GIFT IFSC Explained"
     seoTitle="GIFT City AIF: Minimum Investment, Types & Who Can Invest (2026)"
-    description="GIFT City AIFs explained: restricted and venture capital schemes, USD 150,000 minimum, how they compare with SEBI Category I, II and III AIFs, who can invest (NRIs, residents via LRS) and what to check."
+    description="GIFT City AIFs: restricted and venture capital schemes, the USD 150,000 minimum, how they differ from SEBI Category I, II and III AIFs, and who can invest."
     crumb="GIFT City AIF"
     datePublished="2026-10-09"
     faqs={faqs}
