@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -18,6 +18,11 @@ const initialForm: FormState = { name: "", email: "", phone: "", whatsapp: "", l
 
 const Contact = () => {
   const [form, setForm] = useState<FormState>(initialForm);
+  // Prefill the message when arriving from the home page's "where to start" widget.
+  useEffect(() => {
+    const topic = new URLSearchParams(window.location.search).get("topic");
+    if (topic) setForm((p) => (p.message ? p : { ...p, message: topic.slice(0, 300) }));
+  }, []);
   const [loading, setLoading] = useState(false);
   const { toast } = useToast();
 

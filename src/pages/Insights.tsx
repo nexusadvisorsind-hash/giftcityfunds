@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Users, Layers, Scale, Landmark } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { SEO } from "@/components/SEO";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -9,6 +10,67 @@ import { toast } from "sonner";
 import { articles, getArticle } from "./insights/articles";
 import { formatDate } from "@/lib/formatDate";
 import { trackEvent } from "@/lib/analytics";
+
+// The Insights hub groups every guide, tool and article into four topics.
+const CLUSTERS: { id: string; title: string; blurb: string; icon: typeof Users; accent: string; badge: string; links: [string, string, string?][] }[] = [
+  {
+    id: "investors", title: "NRI, OCI and resident guides", blurb: "What applies to you, depending on where you live and your citizenship.", icon: Users, accent: "border-t-teal", badge: "bg-teal",
+    links: [
+      ["/gift-city-funds-for-nri", "GIFT City funds for NRIs, country by country", "Guide"],
+      ["/gift-city-funds-for-oci", "GIFT City funds for OCIs", "Guide"],
+      ["/gift-city-funds-for-resident-indians", "GIFT City funds for resident Indians", "Guide"],
+      ["/how-to-invest", "How to invest, step by step", "Guide"],
+      ["/gift-city-route-checker", "Which route applies to you?", "Tool"],
+      ["/insights/pfic-explained", "PFIC explained for US persons", "Article"],
+      ["/insights/returning-to-india-gift-city-investments", "Returning to India", "Article"],
+      ["/insights/gift-city-vs-nre-nro", "GIFT City vs NRE/NRO", "Article"],
+      ["/insights/ten-questions-nris-ask", "Ten questions NRIs ask", "Article"],
+    ],
+  },
+  {
+    id: "funds", title: "Fund types and minimums", blurb: "AIFs, PMS, feeder funds and how they compare with Indian mutual funds.", icon: Layers, accent: "border-t-brass", badge: "bg-brass",
+    links: [
+      ["/funds-explained", "Types of GIFT City funds", "Guide"],
+      ["/gift-city-fund-list", "GIFT City fund list", "Guide"],
+      ["/gift-city-aif", "GIFT City AIF", "Guide"],
+      ["/gift-city-pms", "GIFT City PMS", "Guide"],
+      ["/gift-city-feeder-funds", "Feeder funds vs direct FPI", "Guide"],
+      ["/gift-city-minimum-investment", "Minimum investment and limits", "Guide"],
+      ["/insights/aif-vs-pms-vs-fof", "AIF vs PMS vs mutual fund FoF", "Article"],
+      ["/gift-city-sip", "SIP in GIFT City funds", "Guide"],
+      ["/gift-city-funds-vs-mutual-funds", "GIFT City funds vs mutual funds", "Guide"],
+      ["/gift-city-vs-international-mutual-funds", "vs international mutual funds", "Guide"],
+      ["/gift-city-funds-pros-and-cons", "Pros and cons", "Guide"],
+      ["/gift-city-funds-risks", "Risks", "Guide"],
+      ["/gift-city-family-office-fpi", "Family offices, FPIs and VC funds", "Guide"],
+    ],
+  },
+  {
+    id: "tax", title: "Tax and regulation", blurb: "LRS, TCS, Indian tax rules and who regulates GIFT City.", icon: Scale, accent: "border-t-ink", badge: "bg-indigo-300",
+    links: [
+      ["/taxation", "Regulation and taxation", "Guide"],
+      ["/insights/lrs-tcs-gift-city", "LRS and TCS, with calculator", "Tool"],
+      ["/what-is-ifsca", "What is IFSCA?", "Guide"],
+      ["/insights/ifsca-vs-sebi", "IFSCA vs SEBI", "Article"],
+      ["/what-is-gift-city", "What is GIFT City and IFSC?", "Guide"],
+      ["/gift-city-vs-singapore-dubai", "GIFT City vs Singapore and Dubai", "Guide"],
+      ["/gift-city-glossary", "Glossary", "Guide"],
+      ["/faqs", "FAQs", "Guide"],
+    ],
+  },
+  {
+    id: "banking", title: "Banking and markets", blurb: "Dollar accounts and deposits, US stocks, ETFs and the GIFT City exchanges.", icon: Landmark, accent: "border-t-teal-light", badge: "bg-teal-light",
+    links: [
+      ["/insights/how-to-open-gift-city-bank-account", "Open a GIFT City bank account", "Article"],
+      ["/insights/gift-city-fd-vs-nre-fcnr", "GIFT City FDs vs NRE and FCNR", "Article"],
+      ["/gift-city-us-stocks-etfs", "GIFT City ETFs and US stocks", "Guide"],
+      ["/insights/gift-city-vs-direct-foreign", "GIFT City vs investing directly abroad", "Article"],
+      ["/gift-city-markets-gift-nifty", "GIFT Nifty and the GIFT City exchanges", "Guide"],
+      ["/gift-city-banks-and-business-setup", "Banks and business setup", "Guide"],
+      ["/gift-city-guide", "GIFT City guide: location, living, working", "Guide"],
+    ],
+  },
+];
 
 const insightsSchema = {
   "@context": "https://schema.org",
@@ -28,6 +90,16 @@ const insightsSchema = {
 const Insights = () => {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
+  const [query, setQuery] = useState("");
+  const [tag, setTag] = useState<string>("all");
+  const q = query.trim().toLowerCase();
+  const matches = (text: string) => !q || q.split(/\s+/).every((w) => text.toLowerCase().includes(w));
+  const visibleClusters = CLUSTERS
+    .filter((c) => tag === "all" || tag === c.id || ["Guide", "Tool", "Article"].includes(tag))
+    .map((c) => ({ ...c, links: c.links.filter(([, label, kind]) => matches(label) && (!["Guide", "Tool", "Article"].includes(tag) || kind === tag)) }))
+    .filter((c) => c.links.length > 0);
+  const visibleArticles = articles.filter((a) => matches(`${a.title} ${a.description}`) && (tag === "all" || tag === "Article" || CLUSTERS.find((c) => c.id === tag)?.links.some(([to]) => to === `/insights/${a.slug}`)));
+  const TAGS: [string, string][] = [["all", "All"], ...CLUSTERS.map((c) => [c.id, c.title] as [string, string]), ["Guide", "Guides"], ["Tool", "Tools"], ["Article", "Articles"]];
   const { hash } = useLocation();
   const navigate = useNavigate();
 
@@ -103,43 +175,62 @@ const Insights = () => {
         </p>
       </div>
 
-      <h2 className="font-heading font-semibold text-2xl text-primary mb-4">Core guides and tools</h2>
-      <ul className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-12">
-          <li><Link to="/how-to-invest" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">How to invest</Link></li>
-          <li><Link to="/funds-explained" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">Types of GIFT City funds</Link></li>
-          <li><Link to="/who-its-for" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">Who can invest</Link></li>
-          <li><Link to="/gift-city-fund-list" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">GIFT City fund list</Link></li>
-          <li><Link to="/taxation" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">Taxation</Link></li>
-          <li><Link to="/insights/lrs-tcs-gift-city#calculator" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">TCS calculator</Link></li>
-          <li><Link to="/gift-city-route-checker" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">Route checker</Link></li>
-          <li><Link to="/gift-city-sip" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">SIP in GIFT City</Link></li>
-          <li><Link to="/gift-city-funds-vs-mutual-funds" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">vs mutual funds</Link></li>
-          <li><Link to="/gift-city-vs-international-mutual-funds" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">vs international funds</Link></li>
-          <li><Link to="/gift-city-us-stocks-etfs" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">ETFs and US stocks</Link></li>
-          <li><Link to="/gift-city-funds-risks" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">Risks</Link></li>
-          <li><Link to="/gift-city-funds-pros-and-cons" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">Pros and cons</Link></li>
-          <li><Link to="/gift-city-funds-for-nri#us" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">US-based NRIs</Link></li>
-          <li><Link to="/gift-city-funds-for-oci" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">For OCIs</Link></li>
-          <li><Link to="/gift-city-funds-for-resident-indians" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">For resident Indians</Link></li>
-          <li><Link to="/gift-city-funds-for-nri" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">For NRIs (all countries)</Link></li>
-          <li><Link to="/what-is-gift-city" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">What is GIFT City</Link></li>
-          <li><Link to="/what-is-ifsca" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">What is IFSCA</Link></li>
-          <li><Link to="/gift-city-vs-singapore-dubai" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">vs Singapore & Dubai</Link></li>
-          <li><Link to="/gift-city-glossary" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">Glossary</Link></li>
-          <li><Link to="/gift-city-markets-gift-nifty" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">GIFT Nifty & Exchanges</Link></li>
-          <li><Link to="/gift-city-family-office-fpi" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">Family Offices & FPIs</Link></li>
-          <li><Link to="/gift-city-banks-and-business-setup" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">Banks & Business Setup</Link></li>
-          <li><Link to="/gift-city-guide" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">GIFT City Guide</Link></li>
-          <li><Link to="/gift-city-aif" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">GIFT City AIF</Link></li>
-          <li><Link to="/gift-city-pms" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">GIFT City PMS</Link></li>
-          <li><Link to="/gift-city-feeder-funds" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">Feeder Funds</Link></li>
-          <li><Link to="/gift-city-minimum-investment" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">Minimums & Limits</Link></li>
-          <li><Link to="/faqs" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">FAQs</Link></li>
-      </ul>
+      <div className="mb-8 rounded-2xl border border-border bg-surface p-4 md:p-5">
+        <label htmlFor="insights-search" className="font-heading font-semibold text-primary">Search guides and articles</label>
+        <input
+          id="insights-search"
+          type="search"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="Try PFIC, TCS, AIF, UAE, minimum…"
+          className="mt-2 w-full rounded-lg border border-border bg-background px-3 py-2 font-body text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-teal"
+        />
+        <div className="mt-3 flex flex-wrap gap-2" role="group" aria-label="Filter by topic or type">
+          {TAGS.map(([id, label]) => (
+            <button
+              key={id}
+              type="button"
+              aria-pressed={tag === id}
+              onClick={() => setTag(id)}
+              className={`rounded-full border px-3 py-1 font-body text-sm ${tag === id ? "border-teal bg-teal/15 text-primary font-medium" : "border-border bg-background text-foreground-muted hover:border-teal"}`}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+        <p className="mt-2 font-body text-xs text-foreground-muted" aria-live="polite">
+          {(() => { const n = visibleClusters.reduce((t, c) => t + c.links.length, 0); return n === 1 ? "1 result" : `${n} results`; })()}
+        </p>
+      </div>
 
-      <h2 className="font-heading font-semibold text-2xl text-primary mb-6">All articles</h2>
+      <h2 className="font-heading font-semibold text-2xl text-primary mb-2">Browse by topic</h2>
+      <p className="font-body text-foreground-muted mb-6">Every guide, tool and article, grouped into four topics.</p>
+      <div className="grid md:grid-cols-2 gap-5 mb-14">
+        {visibleClusters.length === 0 && <p className="font-body text-foreground-muted">Nothing matches. Try a shorter word, or <Link to="/faqs" className="text-secondary hover:underline">browse the FAQs</Link>.</p>}
+        {visibleClusters.map((c) => (
+          <section key={c.title} aria-labelledby={`cluster-${c.id}`} className={`rounded-2xl border-t-4 ${c.accent} border-x border-b border-border bg-background p-5 md:p-6`}>
+            <div className="flex items-center gap-3 mb-1">
+              <span className={`flex h-10 w-10 items-center justify-center rounded-xl ${c.badge}`}><c.icon className="h-5 w-5 text-ink" aria-hidden="true" /></span>
+              <h3 id={`cluster-${c.id}`} className="font-heading font-semibold text-xl text-primary">{c.title}</h3>
+            </div>
+            <p className="font-body text-sm text-foreground-muted mb-4">{c.blurb}</p>
+            <ul className="space-y-1.5 list-none p-0">
+              {c.links.map(([to, label, kind]) => (
+                <li key={to}>
+                  <Link to={to} className="group flex items-baseline justify-between gap-3 rounded-lg px-2 py-1.5 font-body text-primary hover:bg-surface">
+                    <span className="group-hover:underline">{label}</span>
+                    {kind && <span className="shrink-0 rounded-full bg-surface px-2 py-0.5 text-[11px] text-foreground-muted">{kind}</span>}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
+      </div>
+
+      <h2 className="font-heading font-semibold text-2xl text-primary mb-6">All articles, newest first</h2>
       <ul className="grid md:grid-cols-2 gap-6">
-        {articles.map((a) => (
+        {visibleArticles.map((a) => (
           <li key={a.slug} className="bg-background border border-border rounded-lg p-6 flex flex-col">
             <time dateTime={a.datePublished} className="text-xs uppercase tracking-wider text-secondary mb-2">
               {formatDate(a.datePublished)}

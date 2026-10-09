@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { GuidePage, h2, p, a, table, th, td, type Faq } from "@/components/GuidePage";
 import { BarChart } from "@/components/Diagrams";
+import TicketLadder from "@/components/TicketLadder";
 
 const faqs: Faq[] = [
   { q: "What is the minimum investment in GIFT City?", a: "It depends on the product: retail schemes and feeder funds set their own minimum, often a few thousand US Dollars; PMS needs USD 75,000; restricted schemes (most AIFs) commonly USD 150,000; US stocks and ETFs through IFSC brokers can start very small." },
@@ -22,6 +23,9 @@ const MinimumInvestment = () => (
     <p className={p}>
       <strong className="text-primary">The short answer.</strong> GIFT City has no single minimum. Retail funds can start at a few thousand US Dollars, PMS at <strong className="text-primary">USD 75,000</strong> and most AIFs at <strong className="text-primary">USD 150,000</strong>. Resident Indians also work within the LRS limit of <strong className="text-primary">USD 250,000 a year</strong>, with TCS above ₹10 lakh.
     </p>
+
+    <h2 className={h2}>Retail tier vs high-ticket tier</h2>
+    <TicketLadder className="mb-4" />
 
     <h2 className={h2}>Minimums by product</h2>
     <div className="overflow-x-auto">

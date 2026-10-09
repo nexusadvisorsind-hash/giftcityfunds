@@ -2,8 +2,10 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { SEO } from "@/components/SEO";
 import MoneyMap from "@/components/MoneyMap";
+import HeroFunnel from "@/components/HeroFunnel";
 import { ArrowRight, Landmark, Layers, Wallet, MessageCircle, CircleDollarSign, TrendingUp, Building2, UserCog, FileText, Globe2, Home as Home2, Calculator, Route, ListChecks, BookA } from "lucide-react";
 import { PageFaqs, type PageFaq } from "@/components/PageFaqs";
+import TicketLadder from "@/components/TicketLadder";
 const PAGE_FAQS: PageFaq[] = [
   { q: "What investment opportunities are there in GIFT City?", a: "For individuals: GIFT City mutual funds and feeder funds, AIFs and PMS for larger amounts, US Dollar fixed deposits at IFSC Banking Units, US stocks and ETFs through IFSC brokers, and dollar insurance products. Each has different minimums, risks and tax." },
   { q: "What is GiftCityFunds?", a: "GiftCityFunds (giftcityfunds.in) is an educational website about GIFT City funds, written by Anup Vatyani, an AMFI-registered Mutual Fund Distributor (ARN 106715). It is not a fund house, a bank or an investment platform, and it does not give personalised advice." },
@@ -72,31 +74,10 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Persona choice */}
+          {/* Where to start: 3-step funnel */}
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
-            <p className="font-body text-sm font-semibold uppercase tracking-wider text-slate-400 mb-3">I'm investing as…</p>
-            <div className="grid gap-4 md:grid-cols-3">
-              {[
-                { to: "/gift-city-funds-for-nri", title: "An NRI", body: "Invest in USD from abroad, no LRS. Rules for every country", icon: Globe2, tone: "bg-teal" },
-                { to: "/gift-city-funds-for-oci", title: "An OCI", body: "Same route as NRIs; citizenship checks vary", icon: FileText, tone: "bg-brass" },
-                { to: "/gift-city-funds-for-resident-indians", title: "A Resident Indian", body: "Invest abroad via LRS, up to USD 250,000 a year", icon: Home2, tone: "bg-indigo-300" },
-              ].map((p, i) => (
-                <Link
-                  key={p.to}
-                  to={p.to}
-                  className={`gcf-fade-up gcf-delay-${i + 2} group flex items-center gap-4 rounded-2xl border border-[#23345E] bg-white/[0.04] p-5 transition-all hover:-translate-y-1 hover:border-teal-light hover:bg-teal/15 motion-reduce:hover:translate-y-0`}
-                >
-                  <span className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${p.tone}`}>
-                    <p.icon className="h-6 w-6 text-ink" aria-hidden="true" />
-                  </span>
-                  <span className="flex-1">
-                    <span className="block font-heading text-xl font-semibold">{p.title}</span>
-                    <span className="block font-body text-[15px] text-slate-400">{p.body}</span>
-                  </span>
-                  <ArrowRight className="h-5 w-5 text-teal-light transition-transform group-hover:translate-x-1" aria-hidden="true" />
-                </Link>
-              ))}
-            </div>
+            <h2 className="font-heading text-xl font-semibold text-white mb-3">Find your starting point in three clicks</h2>
+            <HeroFunnel />
             <p className="mt-5 rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 font-body text-sm text-slate-300">
               <span className="font-semibold text-brass">Start from USD 500.</span> Some GIFT City retail funds now have low minimums. For example, Tata India Dynamic Equity Fund (GIFT City) accepts USD 500 from NRIs, OCIs and foreign investors; it is not open to Indian residents or US persons.{" "}
               <a href="https://www.tatamutualfund.com/ifsc-gift-city" target="_blank" rel="noopener noreferrer" className="text-teal-light underline">Source: Tata Mutual Fund</a>. An example of a minimum, not a recommendation; read the scheme documents.
@@ -163,6 +144,17 @@ const Home = () => {
                 ))}
               </ol>
             </div>
+          </div>
+        </section>
+
+        {/* Two tiers by ticket size */}
+        <section className="py-16 md:py-20 bg-surface" aria-labelledby="tiers-h">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 id="tiers-h" className="font-heading font-bold text-3xl md:text-4xl text-primary max-w-2xl">Two tiers of GIFT City products</h2>
+            <p className="font-body text-lg text-foreground-muted mt-3 mb-8 max-w-2xl">
+              Retail funds start from about USD 500. PMS and AIFs start at USD 75,000 and USD 150,000 and are built for high-net-worth investors, families and institutions. Know which tier you are looking at before you compare.
+            </p>
+            <TicketLadder />
           </div>
         </section>
 

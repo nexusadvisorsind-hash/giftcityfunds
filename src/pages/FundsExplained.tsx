@@ -5,6 +5,7 @@ import { OfficialSources } from "@/components/OfficialSources";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { PageFaqs, type PageFaq } from "@/components/PageFaqs";
+import TicketLadder from "@/components/TicketLadder";
 const PAGE_FAQS: PageFaq[] = [
   { q: "What are GIFT City VC funds?", a: "GIFT City venture capital funds are venture capital schemes registered with IFSCA. They invest in start-ups and early-stage companies in India and abroad and are open only to accredited or high-ticket investors." },
   { q: "What is an alternative investment fund in GIFT City?", a: "An alternative investment fund in GIFT City is a pooled fund for strategies outside conventional mutual funds, set up as a restricted scheme or venture capital scheme under IFSCA's fund management regulations." },
@@ -78,6 +79,8 @@ const FundsExplained = () => (
       <p className="font-body text-foreground-muted mb-8">
         Each structure in depth: <Link to="/gift-city-aif" className="text-secondary hover:underline">GIFT City AIF</Link> · <Link to="/gift-city-pms" className="text-secondary hover:underline">GIFT City PMS</Link> · <Link to="/gift-city-feeder-funds" className="text-secondary hover:underline">feeder funds</Link> · <Link to="/gift-city-minimum-investment" className="text-secondary hover:underline">all minimum investment amounts</Link>.
       </p>
+      <h2 className="font-heading font-semibold text-2xl text-primary mb-4">Retail tier vs high-ticket tier</h2>
+      <TicketLadder className="mb-8" />
       <p className="text-xs italic text-foreground-muted mb-10">Ticket sizes are indicative and vary by Fund Management Entity — always confirm current minimums directly before assuming a structure is out of reach.</p>
 
       <h2 className="font-heading font-semibold text-2xl text-primary mb-4">Inbound vs Outbound: which way is the money moving?</h2>
