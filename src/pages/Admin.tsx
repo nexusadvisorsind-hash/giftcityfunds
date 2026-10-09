@@ -89,7 +89,7 @@ const Admin = () => {
         {!loading && authorized && (
           <>
             <p className="text-sm text-foreground-muted mb-4">{rows.length} total submission{rows.length === 1 ? "" : "s"}</p>
-            <div className="overflow-x-auto border border-border rounded-lg bg-background">
+            <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto border border-border rounded-lg bg-background">
               <table className="w-full text-sm">
                 <thead className="bg-surface">
                   <tr className="text-left">

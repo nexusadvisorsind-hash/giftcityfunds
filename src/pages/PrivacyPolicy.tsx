@@ -108,7 +108,7 @@ const PrivacyPolicy = () => {
                 You can read every page of this site without giving us any personal data. We collect personal data only
                 in the situations below, and only what each purpose needs.
               </p>
-              <div className="overflow-x-auto">
+              <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
                 <table className="w-full border-collapse text-sm">
                   <thead>
                     <tr className="bg-surface text-left">

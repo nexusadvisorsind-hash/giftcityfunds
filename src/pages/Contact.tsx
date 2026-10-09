@@ -104,7 +104,7 @@ const Contact = () => {
                     <input type="checkbox" name="consentResponse" checked={form.consentResponse} onChange={handleChange} required className="mt-1 h-4 w-4" />
                     <span>
                       I agree that Anup Vatyani may use the details above to reply to my enquiry, as explained in the{" "}
-                      <Link to="/privacy-policy" className="text-secondary hover:underline">Privacy Policy</Link>. (Required)
+                      <Link to="/privacy-policy" className="text-secondary underline underline-offset-2">Privacy Policy</Link>. (Required)
                     </span>
                   </label>
                   <label className="flex items-start gap-3">

@@ -39,8 +39,8 @@ const GOALS: Record<Who, Goal[]> = {
 const AS: Record<Who, string> = { nri: "an NRI", oci: "an OCI cardholder", resident: "a resident Indian" };
 
 const Step = ({ n, label, active, done }: { n: number; label: string; active: boolean; done: boolean }) => (
-  <li className={`flex items-center gap-2 font-body text-sm ${active ? "text-white" : done ? "text-teal-light" : "text-slate-500"}`}>
-    <span className={`flex h-6 w-6 items-center justify-center rounded-full text-xs font-bold ${active ? "bg-brass text-ink" : done ? "bg-teal text-ink" : "bg-white/10 text-slate-400"}`}>{n}</span>
+  <li className={`flex items-center gap-2 font-body text-sm ${active ? "text-white" : done ? "text-teal-light" : "text-slate-300"}`}>
+    <span className={`flex h-6 w-6 items-center justify-center rounded-full text-xs font-bold ${active ? "bg-brass text-ink" : done ? "bg-teal text-ink" : "bg-white/15 text-slate-200"}`}>{n}</span>
     {label}
   </li>
 );

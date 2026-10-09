@@ -32,7 +32,7 @@ const GiftCityMarkets = () => (
     </p>
 
     <h2 className={h2}>The GIFT City exchanges at a glance</h2>
-    <div className="overflow-x-auto">
+    <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
       <table className={table}>
         <thead><tr><th className={th}>Exchange</th><th className={th}>Group</th><th className={th}>What trades there</th></tr></thead>
         <tbody>
@@ -62,7 +62,7 @@ const GiftCityMarkets = () => (
     </ul>
 
     <h2 className={h2}>Who can trade in GIFT City markets</h2>
-    <div className="overflow-x-auto">
+    <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
       <table className={table}>
         <thead><tr><th className={th}>Investor</th><th className={th}>GIFT Nifty and other derivatives</th><th className={th}>Shares, ETFs and bonds</th></tr></thead>
         <tbody>

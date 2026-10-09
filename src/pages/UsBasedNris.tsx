@@ -105,7 +105,7 @@ const UsBasedNris = () => (
       <section className="my-12 font-body text-foreground-muted leading-relaxed space-y-4">
         <h2 className="font-heading font-semibold text-2xl text-primary">PFIC, QEF and mark-to-market: the three US tax regimes</h2>
         <p>If a GIFT City fund is a PFIC, US persons are taxed under one of three regimes. Which applies depends on elections you make and on information the fund provides.</p>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead><tr><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">Regime</th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">How gains are taxed</th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">What you need</th></tr></thead>
             <tbody>

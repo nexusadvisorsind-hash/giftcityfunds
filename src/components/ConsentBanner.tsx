@@ -31,21 +31,17 @@ const ConsentBanner = () => {
       aria-label="Analytics cookie consent"
       className="fixed inset-x-0 bottom-0 z-[60] border-t border-border bg-background shadow-lg"
     >
-      <div className="max-w-5xl mx-auto px-4 py-4 flex flex-col md:flex-row md:items-center gap-4">
-        <p className="font-body text-sm text-foreground-muted flex-1">
-          We'd like to use Google Analytics cookies to understand how visitors use this site. They collect data such as your
-          IP address and pages viewed. We use them only if you agree, and you can change your mind at any time from
-          "Cookie settings" in the footer. See our{" "}
-          <Link to="/privacy-policy" className="text-secondary hover:underline">
-            Privacy Policy
-          </Link>
-          .
+      <div className="max-w-5xl mx-auto px-4 py-3 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+        <p className="font-body text-xs md:text-sm text-foreground-muted flex-1 leading-snug">
+          May we use Google Analytics cookies (they record your IP address and pages viewed) to see how the site is used?
+          Only with your consent; change it any time in "Cookie settings".{" "}
+          <Link to="/privacy-policy" className="text-secondary underline underline-offset-2">Privacy Policy</Link>
         </p>
-        <div className="flex gap-3 shrink-0">
-          <Button variant="outline" onClick={() => choose("denied")}>
+        <div className="flex gap-2 shrink-0">
+          <Button size="sm" variant="outline" onClick={() => choose("denied")}>
             Decline
           </Button>
-          <Button variant="gold" onClick={() => choose("granted")}>
+          <Button size="sm" variant="gold" onClick={() => choose("granted")}>
             Accept analytics
           </Button>
         </div>

@@ -35,7 +35,7 @@ const BanksAndSetup = () => (
     </p>
 
     <h2 className={h2}>Banks in GIFT City</h2>
-    <div className="overflow-x-auto">
+    <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
       <table className={table}>
         <thead><tr><th className={th}>Type</th><th className={th}>Examples</th><th className={th}>Useful for individuals</th></tr></thead>
         <tbody>

@@ -1,13 +1,14 @@
 // Build-time only: used by scripts/prerender-routes.ts to render each public
 // route to static HTML. Never loaded in the browser.
 import { renderToString } from "react-dom/server";
-import App from "./App";
+import App, { preloadForPath } from "./App";
 
 interface HelmetDatum {
   toString(): string;
 }
 
-export function render(url: string) {
+export async function render(url: string) {
+  await preloadForPath(url);
   const helmetContext: { helmet?: Record<string, HelmetDatum> } = {};
   const html = renderToString(<App ssrUrl={url} helmetContext={helmetContext} />);
   const h = helmetContext.helmet;

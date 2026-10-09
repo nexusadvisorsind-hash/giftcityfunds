@@ -109,7 +109,7 @@ export const articles: InsightArticle[] = [
             <strong className="text-primary">The short answer.</strong> All three let an NRI earn interest in India that is free of Indian tax and freely repatriable. The difference is currency and flexibility: an NRE deposit is in rupees, an FCNR deposit is in a foreign currency for one to five years, and a GIFT City deposit is in a foreign currency with an IFSC Banking Unit, sometimes for shorter terms.
           </p>
           <h3 className="font-heading font-semibold text-lg text-primary pt-2">Side by side</h3>
-          <div className="overflow-x-auto">
+          <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
             <table className="w-full border-collapse text-sm">
               <thead>
                 <tr className="bg-surface">
@@ -239,7 +239,7 @@ export const articles: InsightArticle[] = [
             ]}
           />
           <h3 className="font-heading font-semibold text-xl text-primary pt-4">What happens to each holding</h3>
-          <div className="overflow-x-auto not-prose">
+          <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto not-prose">
             <table className="w-full text-sm border-collapse">
               <thead><tr><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">Holding</th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">After you return</th></tr></thead>
               <tbody>
@@ -329,7 +329,7 @@ export const articles: InsightArticle[] = [
             Official sources: <a href="https://www.rbi.org.in/Scripts/FAQView.aspx?Id=115" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">RBI FAQs on LRS</a> · <a href="https://www.incometaxindia.gov.in/" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">Income Tax Department</a>
           </p>
           <h3 className="font-heading font-semibold text-xl text-primary pt-4">LRS limit vs TCS threshold: not the same thing</h3>
-          <div className="overflow-x-auto not-prose">
+          <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto not-prose">
             <table className="w-full text-sm border-collapse">
               <thead><tr><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2"></th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">LRS limit</th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">TCS threshold</th></tr></thead>
               <tbody>
@@ -383,7 +383,7 @@ export const articles: InsightArticle[] = [
             See the full comparison table with ticket sizes and investor fit on our <Link to="/funds-explained" className="text-secondary hover:underline">Funds Explained</Link> page, or <Link to="/contact" className="text-secondary hover:underline">talk to Anup</Link> about which structure suits your situation.
           </p>
           <h3 className="font-heading font-semibold text-xl text-primary pt-4">The three structures compared</h3>
-          <div className="overflow-x-auto not-prose">
+          <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto not-prose">
             <table className="w-full text-sm border-collapse">
               <thead><tr><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2"></th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">Mutual Fund FoF / feeder</th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">PMS</th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">AIF</th></tr></thead>
               <tbody>
@@ -474,7 +474,7 @@ export const articles: InsightArticle[] = [
             For more on how GIFT City fits into India's broader investment landscape, see our <Link to="/what-is-gift-city" className="text-secondary hover:underline">What Is GIFT City</Link> page, or <Link to="/contact" className="text-secondary hover:underline">talk to Anup</Link> with any specific fund you're evaluating.
           </p>
           <h3 className="font-heading font-semibold text-xl text-primary pt-4">IFSCA and SEBI side by side</h3>
-          <div className="overflow-x-auto not-prose">
+          <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto not-prose">
             <table className="w-full text-sm border-collapse">
               <thead><tr><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2"></th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">IFSCA</th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">SEBI</th></tr></thead>
               <tbody>
@@ -572,7 +572,7 @@ export const articles: InsightArticle[] = [
             ]}
           />
           <h3 className="font-heading font-semibold text-xl text-primary pt-4">NRE vs NRO vs GIFT City fund</h3>
-          <div className="overflow-x-auto not-prose">
+          <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto not-prose">
             <table className="w-full text-sm border-collapse">
               <thead><tr><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2"></th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">NRE</th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">NRO</th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">GIFT City fund</th></tr></thead>
               <tbody>
@@ -659,7 +659,7 @@ export const articles: InsightArticle[] = [
             Source: <a href="https://www.irs.gov/individuals/international-taxpayers/some-nonresidents-with-us-assets-must-file-estate-tax-returns" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">IRS — some nonresidents with US assets must file estate tax returns</a>.
           </p>
           <h3 className="font-heading font-semibold text-xl text-primary pt-4">Three routes side by side</h3>
-          <div className="overflow-x-auto not-prose">
+          <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto not-prose">
             <table className="w-full text-sm border-collapse">
               <thead><tr><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2"></th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">GIFT City fund</th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">Overseas brokerage account</th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">US stocks/ETFs via GIFT City broker</th></tr></thead>
               <tbody>
@@ -758,7 +758,7 @@ export const articles: InsightArticle[] = [
             <li><strong className="text-primary">Forgetting home-country reporting.</strong> The investment is foreign to your home tax authority; report it from the first year.</li>
           </ul>
           <h3 className="font-heading font-semibold text-xl text-primary pt-4">Documents checklist for NRIs</h3>
-          <div className="overflow-x-auto not-prose">
+          <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto not-prose">
             <table className="w-full text-sm border-collapse">
               <thead><tr><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">Document</th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">Why it is asked for</th></tr></thead>
               <tbody>
@@ -822,7 +822,7 @@ export const articles: InsightArticle[] = [
             about how the process works. Ask the fund's manager how the fund is documented for US tax purposes, and confirm it with your US tax professional.
           </p>
           <h3 className="font-heading font-semibold text-xl text-primary pt-4">The three PFIC tax regimes</h3>
-          <div className="overflow-x-auto not-prose">
+          <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto not-prose">
             <table className="w-full text-sm border-collapse">
               <thead><tr><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">Regime</th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">How gains are taxed</th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">What it needs</th></tr></thead>
               <tbody>

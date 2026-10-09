@@ -54,7 +54,7 @@ const FundsExplained = () => (
       </p>
 
       <h2 className="font-heading font-semibold text-2xl text-primary mb-4">The four structures, compared</h2>
-      <div className="overflow-x-auto mb-4">
+      <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto mb-4">
         <table className="w-full border-collapse text-sm">
           <thead>
             <tr className="bg-surface">
@@ -99,7 +99,7 @@ const FundsExplained = () => (
       <p className="font-body text-foreground-muted mb-4">
         Behind the product names above, every GIFT City fund is registered under the IFSCA (Fund Management) Regulations, 2025 as one of a few scheme types. The type decides who may invest and the minimum ticket, and each is run by a matching category of Fund Management Entity (FME).
       </p>
-      <div className="overflow-x-auto mb-4">
+      <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto mb-4">
         <table className="w-full border-collapse text-sm">
           <thead>
             <tr className="bg-surface">
@@ -155,7 +155,7 @@ const FundsExplained = () => (
         <h2 className="font-heading font-semibold text-2xl text-primary">Alternative investment funds in GIFT City vs SEBI Category I, II and III</h2>
         <p>In India, SEBI classifies AIFs as Category I (for example venture capital), Category II (for example private equity and private credit) and Category III (for example hedge-fund-style strategies). IFSCA does not use these categories. In GIFT City, an alternative investment fund is set up as a <strong className="text-primary">venture capital scheme</strong> or a <strong className="text-primary">restricted scheme</strong>, and the scheme type decides who may invest and the minimum.</p>
         <h2 className="font-heading font-semibold text-2xl text-primary">GIFT City investment minimum amount, at a glance</h2>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead><tr><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">Product</th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">Typical minimum</th></tr></thead>
             <tbody>

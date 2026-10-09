@@ -49,7 +49,7 @@ async function main() {
   });
 
   const { render } = (await import(pathToFileURL(resolve(SSR_OUT, "entry-server.mjs")).href)) as {
-    render: (url: string) => { html: string; head: string };
+    render: (url: string) => Promise<{ html: string; head: string }>;
   };
 
   const template = readFileSync(resolve("dist/index.html"), "utf8");
@@ -60,7 +60,7 @@ async function main() {
   const failures: string[] = [];
   for (const path of routesFromSitemap()) {
     try {
-      const { html, head } = render(path);
+      const { html, head } = await render(path);
       if (!head.includes("<title")) throw new Error("page rendered no <title> (missing <SEO>?)");
 
       let out = template;
@@ -83,7 +83,7 @@ async function main() {
   // 404.html: hosts that support it (Vercel) serve this with a real 404 status
   // for unknown URLs instead of answering 200 with the app shell.
   try {
-    const { html, head } = render("/404");
+    const { html, head } = await render("/404");
     let out = template;
     for (const tag of PER_PAGE_TAGS) out = out.replace(tag, "");
     out = out.replace("</head>", `    ${head}\n  </head>`);

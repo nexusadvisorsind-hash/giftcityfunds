@@ -78,7 +78,7 @@ const AccessibilityStatement = () => {
             <section>
               <h2 className="font-heading font-semibold text-2xl text-foreground mb-4">5. Feedback and Support</h2>
               <p className="font-body text-foreground-muted mb-3">
-                We welcome feedback on accessibility and usability. If you face challenges accessing content or require an alternative format, please contact us at <a href="mailto:info@giftcityfunds.in" className="text-primary hover:underline">info@giftcityfunds.in</a>.
+                We welcome feedback on accessibility and usability. If you face challenges accessing content or require an alternative format, please contact us at <a href="mailto:info@giftcityfunds.in" className="text-primary underline underline-offset-2">info@giftcityfunds.in</a>.
               </p>
               <p className="font-body text-foreground-muted">
                 We will make reasonable efforts to assist and improve the experience.

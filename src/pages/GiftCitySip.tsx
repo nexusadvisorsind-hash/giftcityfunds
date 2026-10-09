@@ -42,7 +42,7 @@ const GiftCitySip = () => (
     />
 
     <h2 className={h2}>Rupee SIP vs GIFT City recurring investment</h2>
-    <div className="overflow-x-auto">
+    <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
       <table className={table}>
         <thead><tr><th className={th}></th><th className={th}>Domestic mutual fund SIP</th><th className={th}>GIFT City fund, recurring</th></tr></thead>
         <tbody>

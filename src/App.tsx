@@ -7,48 +7,96 @@ import { StaticRouter } from "react-router-dom/server";
 import { HelmetProvider } from "react-helmet-async";
 import { lazy, Suspense, type ReactNode } from "react";
 import Layout from "./components/Layout";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import WhatIsGiftCity from "./pages/WhatIsGiftCity";
-import FundsExplained from "./pages/FundsExplained";
-import WhoItsFor from "./pages/WhoItsFor";
-import Taxation from "./pages/Taxation";
-import Faqs from "./pages/Faqs";
-import Insights from "./pages/Insights";
-import InsightArticle from "./pages/InsightArticle";
-import Contact from "./pages/Contact";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import TermsOfUse from "./pages/TermsOfUse";
-import AccessibilityStatement from "./pages/AccessibilityStatement";
-import Disclaimer from "./pages/Disclaimer";
-import NotFound from "./pages/NotFound";
-import HowToInvest from "./pages/HowToInvest";
-import GiftCityVsMutualFunds from "./pages/GiftCityVsMutualFunds";
-import Risks from "./pages/Risks";
-import FundList from "./pages/FundList";
-import GiftCitySip from "./pages/GiftCitySip";
-import GiftCityVsInternationalFunds from "./pages/GiftCityVsInternationalFunds";
-import ProsAndCons from "./pages/ProsAndCons";
-import WhatIsIfsca from "./pages/WhatIsIfsca";
-import UsStocksEtfs from "./pages/UsStocksEtfs";
-import Glossary from "./pages/Glossary";
-import RouteChecker from "./pages/RouteChecker";
-import GiftCityVsSingaporeDubai from "./pages/GiftCityVsSingaporeDubai";
-import GiftCityMarkets from "./pages/GiftCityMarkets";
-import FamilyOfficeFpi from "./pages/FamilyOfficeFpi";
-import BanksAndSetup from "./pages/BanksAndSetup";
-import GiftCityGuide from "./pages/GiftCityGuide";
-import NriGuide from "./pages/NriGuide";
-import OciGuide from "./pages/OciGuide";
-import ResidentGuide from "./pages/ResidentGuide";
-import GiftCityAif from "./pages/GiftCityAif";
-import GiftCityPms from "./pages/GiftCityPms";
-import GiftCityFeederFunds from "./pages/GiftCityFeederFunds";
-import MinimumInvestment from "./pages/MinimumInvestment";
+import { lazyPage, type LazyPage } from "./lib/lazyPage";
+const Home = lazyPage(() => import("./pages/Home"));
+const About = lazyPage(() => import("./pages/About"));
+const WhatIsGiftCity = lazyPage(() => import("./pages/WhatIsGiftCity"));
+const FundsExplained = lazyPage(() => import("./pages/FundsExplained"));
+const WhoItsFor = lazyPage(() => import("./pages/WhoItsFor"));
+const Taxation = lazyPage(() => import("./pages/Taxation"));
+const Faqs = lazyPage(() => import("./pages/Faqs"));
+const Insights = lazyPage(() => import("./pages/Insights"));
+const InsightArticle = lazyPage(() => import("./pages/InsightArticle"));
+const Contact = lazyPage(() => import("./pages/Contact"));
+const PrivacyPolicy = lazyPage(() => import("./pages/PrivacyPolicy"));
+const TermsOfUse = lazyPage(() => import("./pages/TermsOfUse"));
+const AccessibilityStatement = lazyPage(() => import("./pages/AccessibilityStatement"));
+const Disclaimer = lazyPage(() => import("./pages/Disclaimer"));
+const NotFound = lazyPage(() => import("./pages/NotFound"));
+const HowToInvest = lazyPage(() => import("./pages/HowToInvest"));
+const GiftCityVsMutualFunds = lazyPage(() => import("./pages/GiftCityVsMutualFunds"));
+const Risks = lazyPage(() => import("./pages/Risks"));
+const FundList = lazyPage(() => import("./pages/FundList"));
+const GiftCitySip = lazyPage(() => import("./pages/GiftCitySip"));
+const GiftCityVsInternationalFunds = lazyPage(() => import("./pages/GiftCityVsInternationalFunds"));
+const ProsAndCons = lazyPage(() => import("./pages/ProsAndCons"));
+const WhatIsIfsca = lazyPage(() => import("./pages/WhatIsIfsca"));
+const UsStocksEtfs = lazyPage(() => import("./pages/UsStocksEtfs"));
+const Glossary = lazyPage(() => import("./pages/Glossary"));
+const RouteChecker = lazyPage(() => import("./pages/RouteChecker"));
+const GiftCityVsSingaporeDubai = lazyPage(() => import("./pages/GiftCityVsSingaporeDubai"));
+const GiftCityMarkets = lazyPage(() => import("./pages/GiftCityMarkets"));
+const FamilyOfficeFpi = lazyPage(() => import("./pages/FamilyOfficeFpi"));
+const BanksAndSetup = lazyPage(() => import("./pages/BanksAndSetup"));
+const GiftCityGuide = lazyPage(() => import("./pages/GiftCityGuide"));
+const NriGuide = lazyPage(() => import("./pages/NriGuide"));
+const OciGuide = lazyPage(() => import("./pages/OciGuide"));
+const ResidentGuide = lazyPage(() => import("./pages/ResidentGuide"));
+const GiftCityAif = lazyPage(() => import("./pages/GiftCityAif"));
+const GiftCityPms = lazyPage(() => import("./pages/GiftCityPms"));
+const GiftCityFeederFunds = lazyPage(() => import("./pages/GiftCityFeederFunds"));
+const MinimumInvestment = lazyPage(() => import("./pages/MinimumInvestment"));
 
 // Admin-only screens: loaded on demand, never prerendered.
 const Auth = lazy(() => import("./pages/Auth"));
 const Admin = lazy(() => import("./pages/Admin"));
+
+// Which split page each prerendered URL needs, so it can be loaded before
+// rendering (build time) and before hydration (browser).
+const PAGE_FOR_PATH: Record<string, LazyPage> = {
+  "/": Home,
+  "/what-is-gift-city": WhatIsGiftCity,
+  "/funds-explained": FundsExplained,
+  "/who-its-for": WhoItsFor,
+  "/taxation": Taxation,
+  "/faqs": Faqs,
+  "/insights": Insights,
+  "/about": About,
+  "/contact": Contact,
+  "/disclaimer": Disclaimer,
+  "/privacy-policy": PrivacyPolicy,
+  "/terms-of-use": TermsOfUse,
+  "/accessibility-statement": AccessibilityStatement,
+  "/how-to-invest": HowToInvest,
+  "/gift-city-funds-vs-mutual-funds": GiftCityVsMutualFunds,
+  "/gift-city-funds-risks": Risks,
+  "/gift-city-funds-for-nri": NriGuide,
+  "/gift-city-funds-for-oci": OciGuide,
+  "/gift-city-funds-for-resident-indians": ResidentGuide,
+  "/gift-city-fund-list": FundList,
+  "/gift-city-sip": GiftCitySip,
+  "/gift-city-vs-international-mutual-funds": GiftCityVsInternationalFunds,
+  "/gift-city-funds-pros-and-cons": ProsAndCons,
+  "/what-is-ifsca": WhatIsIfsca,
+  "/gift-city-us-stocks-etfs": UsStocksEtfs,
+  "/gift-city-glossary": Glossary,
+  "/gift-city-route-checker": RouteChecker,
+  "/gift-city-vs-singapore-dubai": GiftCityVsSingaporeDubai,
+  "/gift-city-markets-gift-nifty": GiftCityMarkets,
+  "/gift-city-family-office-fpi": FamilyOfficeFpi,
+  "/gift-city-banks-and-business-setup": BanksAndSetup,
+  "/gift-city-guide": GiftCityGuide,
+  "/gift-city-aif": GiftCityAif,
+  "/gift-city-pms": GiftCityPms,
+  "/gift-city-feeder-funds": GiftCityFeederFunds,
+  "/gift-city-minimum-investment": MinimumInvestment,
+};
+
+export function preloadForPath(pathname: string): Promise<void> {
+  const path = pathname.length > 1 ? pathname.replace(/\/+$/, "") : pathname;
+  const page = PAGE_FOR_PATH[path] ?? (path.startsWith("/insights/") ? InsightArticle : NotFound);
+  return page.preload();
+}
 
 const queryClient = new QueryClient();
 

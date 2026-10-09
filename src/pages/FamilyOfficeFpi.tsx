@@ -25,7 +25,7 @@ const FamilyOfficeFpi = () => (
     </p>
 
     <h2 className={h2}>The structures compared</h2>
-    <div className="overflow-x-auto">
+    <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
       <table className={table}>
         <thead><tr><th className={th}>Structure</th><th className={th}>What it is for</th><th className={th}>Who it suits</th></tr></thead>
         <tbody>

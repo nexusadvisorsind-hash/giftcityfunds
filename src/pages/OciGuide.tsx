@@ -25,7 +25,7 @@ const OciGuide = () => (
     </p>
 
     <h2 className={h2}>OCI vs NRI for GIFT City funds</h2>
-    <div className="overflow-x-auto">
+    <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
       <table className={table}>
         <thead><tr><th className={th}></th><th className={th}>NRI</th><th className={th}>OCI cardholder</th></tr></thead>
         <tbody>

@@ -36,7 +36,7 @@ const UkNris = () => (
     />
 
     <h2 className={h2}>Other UK points</h2>
-    <div className="overflow-x-auto">
+    <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
       <table className={table}>
         <thead><tr><th className={th}>Topic</th><th className={th}>What to know</th></tr></thead>
         <tbody>

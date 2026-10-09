@@ -293,7 +293,7 @@ const Home = () => {
             <div className="bg-secondary/10 border border-secondary/30 p-5 rounded-lg mb-6">
               <p className="font-body text-sm text-primary">
                 <strong>Living outside India?</strong> Whether a fund accepts you, and how it is taxed, depends on your country: the UAE and Gulf, UK, US (PFIC rules), Canada, Singapore or Australia.{" "}
-                <Link to="/gift-city-funds-for-nri" className="text-secondary hover:underline">See the NRI guide, country by country</Link>
+                <Link to="/gift-city-funds-for-nri" className="font-semibold text-primary underline underline-offset-2">See the NRI guide, country by country</Link>
               </p>
             </div>
             <Link to="/who-its-for" className="font-body text-secondary hover:underline inline-flex items-center">

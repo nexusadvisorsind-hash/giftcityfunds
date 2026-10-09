@@ -49,7 +49,7 @@ const WhoItsFor = () => (
       </nav>
 
       <h2 className="font-heading font-semibold text-2xl text-primary mb-4">At a glance</h2>
-      <div className="overflow-x-auto mb-10">
+      <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto mb-10">
         <table className="w-full border-collapse text-sm">
           <thead>
             <tr className="bg-surface">

@@ -219,7 +219,7 @@ const Insights = () => {
                 <li key={to}>
                   <Link to={to} className="group flex items-baseline justify-between gap-3 rounded-lg px-2 py-1.5 font-body text-primary hover:bg-surface">
                     <span className="group-hover:underline">{label}</span>
-                    {kind && <span className="shrink-0 rounded-full bg-surface px-2 py-0.5 text-[11px] text-foreground-muted">{kind}</span>}
+                    {kind && <span className="shrink-0 rounded-full bg-surface px-2 py-0.5 text-xs text-foreground-muted">{kind}</span>}
                   </Link>
                 </li>
               ))}

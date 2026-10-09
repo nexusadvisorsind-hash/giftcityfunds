@@ -25,7 +25,7 @@ const GiftCityPms = () => (
     </p>
 
     <h2 className={h2}>GIFT City PMS vs domestic PMS vs GIFT City fund</h2>
-    <div className="overflow-x-auto">
+    <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
       <table className={table}>
         <thead><tr><th className={th}></th><th className={th}>GIFT City PMS</th><th className={th}>Domestic PMS</th><th className={th}>GIFT City retail fund</th></tr></thead>
         <tbody>

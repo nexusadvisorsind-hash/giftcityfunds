@@ -39,7 +39,7 @@ const ResidentGuide = () => (
     />
 
     <h2 className={h2}>What resident Indians can and cannot do</h2>
-    <div className="overflow-x-auto">
+    <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
       <table className={table}>
         <thead><tr><th className={th}>Product</th><th className={th}>Allowed for residents?</th></tr></thead>
         <tbody>

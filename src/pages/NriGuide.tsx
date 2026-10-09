@@ -63,7 +63,7 @@ const COUNTRIES: Country[] = [
     extra: (
       <>
         <h3 className={h3}>PFIC, QEF and mark-to-market: the three US tax regimes</h3>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
           <table className={table}>
             <thead><tr><th className={th}>Regime</th><th className={th}>How gains are taxed</th><th className={th}>What you need</th></tr></thead>
             <tbody>
@@ -176,7 +176,7 @@ const NriGuide = () => (
     </p>
 
     <h2 className={h2}>What NRIs can invest in through GIFT City</h2>
-    <div className="overflow-x-auto">
+    <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
       <table className={table}>
         <thead><tr><th className={th}>Product</th><th className={th}>Typical minimum</th><th className={th}>Notes</th></tr></thead>
         <tbody>
@@ -203,7 +203,7 @@ const NriGuide = () => (
     />
 
     <h2 className={h2}>Country by country: what changes for you</h2>
-    <div className="overflow-x-auto">
+    <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
       <table className={table}>
         <thead><tr><th className={th}>Where you live</th><th className={th}>Home tax on investment income</th><th className={th}>Main thing to check</th></tr></thead>
         <tbody>

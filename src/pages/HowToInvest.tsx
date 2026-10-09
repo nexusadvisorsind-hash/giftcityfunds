@@ -109,7 +109,7 @@ const HowToInvest = () => (
     </ol>
 
     <h2 className={h2}>Document checklist</h2>
-    <div className="overflow-x-auto">
+    <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
       <table className={table}>
         <thead><tr><th className={th}>Document</th><th className={th}>Resident Indian</th><th className={th}>NRI</th><th className={th}>OCI / foreign citizen</th></tr></thead>
         <tbody>

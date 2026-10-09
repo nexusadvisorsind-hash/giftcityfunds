@@ -28,7 +28,7 @@ const MinimumInvestment = () => (
     <TicketLadder className="mb-4" />
 
     <h2 className={h2}>Minimums by product</h2>
-    <div className="overflow-x-auto">
+    <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
       <table className={table}>
         <thead><tr><th className={th}>Product</th><th className={th}>Typical minimum</th><th className={th}>Who it suits</th></tr></thead>
         <tbody>
@@ -54,7 +54,7 @@ const MinimumInvestment = () => (
     />
 
     <h2 className={h2}>Limits for resident Indians</h2>
-    <div className="overflow-x-auto">
+    <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
       <table className={table}>
         <tbody>
           <tr><td className={th}>LRS limit</td><td className={td}>USD 250,000 per person per financial year, all purposes combined</td></tr>
