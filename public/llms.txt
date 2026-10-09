@@ -7,7 +7,6 @@
 - [What Is GIFT City & IFSC?](https://giftcityfunds.in/what-is-gift-city): India's international financial services centre and its regulator, IFSCA.
 - [GIFT City Fund Categories](https://giftcityfunds.in/funds-explained): Mutual Fund FoFs, AIFs, PMS and feeder funds compared.
 - [Who GIFT City Funds Are For](https://giftcityfunds.in/who-its-for): Fit for NRIs, OCIs and resident Indians.
-- [GIFT City Funds for US-Based NRIs](https://giftcityfunds.in/us-based-nris): PFIC, US tax reporting and what to check.
 - [Regulation and Taxation](https://giftcityfunds.in/taxation): IFSCA oversight, Section 10(4D), LRS and TCS.
 - [How to Invest in GIFT City Funds](https://giftcityfunds.in/how-to-invest): Step-by-step for NRIs and residents: structures, LRS vs direct USD, KYC document checklist, remittance, allotment, redemption.
 - [GIFT City Funds vs Regular Mutual Funds](https://giftcityfunds.in/gift-city-funds-vs-mutual-funds): Regulator, currency, minimums, eligibility and tax compared.
@@ -28,7 +27,7 @@
 - [GIFT City PMS](https://giftcityfunds.in/gift-city-pms): USD 75,000 minimum, discretionary vs non-discretionary, vs domestic PMS.
 - [GIFT City Feeder Funds](https://giftcityfunds.in/gift-city-feeder-funds): Inbound and outbound feeders; feeder vs direct FPI.
 - [GIFT City Minimum Investment and Limits](https://giftcityfunds.in/gift-city-minimum-investment): Every minimum, LRS limit and TCS threshold in one table.
-- [GIFT City Funds for NRIs](https://giftcityfunds.in/gift-city-funds-for-nri): Complete NRI guide with full explanations for the UAE, Gulf, UK, US, Canada, Singapore and Australia; minimums from USD 500.
+- [GIFT City Funds for NRIs](https://giftcityfunds.in/gift-city-funds-for-nri): Complete NRI guide with full explanations for the UAE, Gulf, UK, US (PFIC, QEF, mark-to-market), Canada, Singapore and Australia; minimums from USD 500.
 - [GIFT City Funds for OCIs](https://giftcityfunds.in/gift-city-funds-for-oci): OCI eligibility, documents and citizenship rules.
 - [GIFT City Funds for Resident Indians](https://giftcityfunds.in/gift-city-funds-for-resident-indians): LRS, TCS, what residents can and cannot do, Schedule FA.
 - [GIFT City Glossary](https://giftcityfunds.in/gift-city-glossary): 27 terms (IFSC, FME, LRS, TCS, PFIC, inbound/outbound) defined.

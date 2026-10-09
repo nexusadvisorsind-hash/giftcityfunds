@@ -109,7 +109,7 @@ const GiftCityVsMutualFunds = () => (
           <strong className="text-primary">3. Minimum investment.</strong> Domestic mutual funds are built for small, regular investing. GIFT City structures start much higher, and the minimum depends on the type of structure. See the <Link to="/funds-explained" className={link}>comparison of fund structures</Link>.
         </p>
         <p>
-          <strong className="text-primary">4. Tax.</strong> There is no single tax answer for GIFT City funds. It depends on the fund structure, whether the fund is inbound or outbound, and your country of residence. US-based investors also face PFIC rules. See <Link to="/taxation" className={link}>Regulation and Taxation</Link> and the <Link to="/us-based-nris" className={link}>guide for US-based NRIs</Link>.
+          <strong className="text-primary">4. Tax.</strong> There is no single tax answer for GIFT City funds. It depends on the fund structure, whether the fund is inbound or outbound, and your country of residence. US-based investors also face PFIC rules. See <Link to="/taxation" className={link}>Regulation and Taxation</Link> and the <Link to="/gift-city-funds-for-nri#us" className={link}>guide for US-based NRIs</Link>.
         </p>
       </div>
 

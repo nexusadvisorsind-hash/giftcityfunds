@@ -79,7 +79,7 @@ const resultFor = (status: Status, money: Money, goal: Goal, us: boolean): Resul
 
   if (us) {
     points.unshift("Important: as a US person, most GIFT City funds are likely to be PFICs for US tax, with punitive tax and Form 8621 reporting. Check this before anything else.");
-    links.unshift(["/us-based-nris", "US-based NRIs"], ["/insights/pfic-explained", "PFIC explained"]);
+    links.unshift(["/gift-city-funds-for-nri#us", "US-based NRIs"], ["/insights/pfic-explained", "PFIC explained"]);
   }
 
   return { route, points, links };

@@ -118,7 +118,7 @@ const Insights = () => {
           <li><Link to="/gift-city-us-stocks-etfs" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">ETFs and US stocks</Link></li>
           <li><Link to="/gift-city-funds-risks" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">Risks</Link></li>
           <li><Link to="/gift-city-funds-pros-and-cons" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">Pros and cons</Link></li>
-          <li><Link to="/us-based-nris" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">US-based NRIs</Link></li>
+          <li><Link to="/gift-city-funds-for-nri#us" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">US-based NRIs</Link></li>
           <li><Link to="/gift-city-funds-for-oci" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">For OCIs</Link></li>
           <li><Link to="/gift-city-funds-for-resident-indians" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">For resident Indians</Link></li>
           <li><Link to="/gift-city-funds-for-nri" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">For NRIs (all countries)</Link></li>

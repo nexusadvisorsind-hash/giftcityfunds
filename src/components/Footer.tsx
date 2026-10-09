@@ -73,9 +73,6 @@ const Footer = () => {
                 <Link to="/gift-city-funds-for-resident-indians" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">For Resident Indians</Link>
               </li>
               <li>
-                <Link to="/us-based-nris" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">US NRIs</Link>
-              </li>
-              <li>
                 <Link to="/taxation" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Taxation</Link>
               </li>
               <li>

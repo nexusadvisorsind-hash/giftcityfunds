@@ -74,7 +74,7 @@ const Taxation = () => (
 
       <section className="mb-10 font-body text-foreground-muted">
         <h2 className="font-heading font-semibold text-2xl text-primary mb-3">US-based? It's a different picture.</h2>
-        <p>US tax law treats foreign funds very differently from Indian tax law — most notably through PFIC classification. If you're a US taxpayer, read the dedicated guide before going further. <Link to="/us-based-nris" className="text-secondary hover:underline">GIFT City Funds for US-Based NRIs →</Link></p>
+        <p>US tax law treats foreign funds very differently from Indian tax law — most notably through PFIC classification. If you're a US taxpayer, read the dedicated guide before going further. <Link to="/gift-city-funds-for-nri#us" className="text-secondary hover:underline">GIFT City Funds for US-Based NRIs →</Link></p>
       </section>
 
       <section className="mb-10 font-body text-foreground-muted space-y-4">

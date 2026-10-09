@@ -37,7 +37,7 @@ const faqs: { g: string; qas: QA[] }[] = [
   ]},
   { g: "Taxation", qas: [
     { q: "Is TCS on an LRS remittance an extra tax?", a: "No. Tax Collected at Source on LRS remittances above the threshold is an advance tax. You can claim it back or adjust it against your total tax liability when you file your return.", link: { to: "/taxation", label: "Regulation and taxation" } },
-    { q: "How is a GIFT City fund taxed for a US-based NRI?", a: "It depends heavily on whether the structure has PFIC or Non-PFIC status under US tax law — significant enough that we've written a full page on it. See /us-based-nris" },
+    { q: "How is a GIFT City fund taxed for a US-based NRI?", a: "It depends heavily on whether the structure has PFIC or Non-PFIC status under US tax law — covered in the US section of our NRI guide." },
     { q: "Do I have to pay GST on fund management fees?", a: "Generally no — most GIFT City structures aren't subject to India's GST on fund management or performance fees." },
   ]},
   { g: "Getting Started", qas: [
@@ -78,7 +78,7 @@ const Faqs = () => (
             {g.qas.map((qa) => (
               <div key={qa.q} className="bg-surface p-5 rounded-lg border border-border">
                 <h3 className="font-heading font-semibold text-primary mb-2">{qa.q}</h3>
-                <p className="font-body text-sm text-foreground-muted">{qa.link ? (<>{qa.a} <Link to={qa.link.to} className="text-secondary hover:underline">{qa.link.label} →</Link></>) : qa.a.includes("/us-based-nris") ? (<>It depends heavily on whether the structure has PFIC or Non-PFIC status under US tax law — significant enough that we've written a full page on it. <Link to="/us-based-nris" className="text-secondary hover:underline">See the guide →</Link></>) : qa.a}</p>
+                <p className="font-body text-sm text-foreground-muted">{qa.link ? (<>{qa.a} <Link to={qa.link.to} className="text-secondary hover:underline">{qa.link.label} →</Link></>) : qa.a.includes("/gift-city-funds-for-nri#us") ? (<>It depends heavily on whether the structure has PFIC or Non-PFIC status under US tax law — significant enough that we've written a full page on it. <Link to="/gift-city-funds-for-nri#us" className="text-secondary hover:underline">See the guide →</Link></>) : qa.a}</p>
               </div>
             ))}
           </div>

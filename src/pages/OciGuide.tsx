@@ -61,7 +61,7 @@ const OciGuide = () => (
 
     <h2 className={h2}>Tax depends on where you live and your citizenship</h2>
     <p className={p}>
-      US citizens are taxed by the US wherever they live, so PFIC rules follow them even if they live in India or the UAE. See <Link to="/us-based-nris" className={a}>the US guide</Link>. For other countries, see the country sections in <Link to="/gift-city-funds-for-nri#uae" className={a}>GIFT City funds for NRIs</Link>, which apply equally to OCIs living there.
+      US citizens are taxed by the US wherever they live, so PFIC rules follow them even if they live in India or the UAE. See <Link to="/gift-city-funds-for-nri#us" className={a}>the US guide</Link>. For other countries, see the country sections in <Link to="/gift-city-funds-for-nri#uae" className={a}>GIFT City funds for NRIs</Link>, which apply equally to OCIs living there.
     </p>
   </GuidePage>
 );

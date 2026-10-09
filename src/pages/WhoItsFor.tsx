@@ -87,7 +87,7 @@ const WhoItsFor = () => (
         <h2 className="font-heading font-semibold text-2xl text-primary">Non-Resident Indians (NRIs)</h2>
           <p>As a Non-Resident Indian, you can invest directly in GIFT City funds — inbound or outbound — typically in USD, without routing through the standard LRS process that applies to resident Indians. This is one of the more direct advantages GIFT City offers NRIs over conventional NRE/NRO route investing.</p>
           <p className="italic"><strong>What to watch for:</strong> country-specific documentation requirements, minimum ticket sizes, and — if you're US-based — how the fund is taxed where you live.</p>
-          <p>US-based? <Link to="/us-based-nris" className="text-secondary hover:underline">See the dedicated tax guide →</Link> Comparing routes? Read <Link to="/insights/gift-city-vs-nre-nro" className="text-secondary hover:underline">GIFT City fund vs NRE/NRO investing</Link>.</p>
+          <p>US-based? <Link to="/gift-city-funds-for-nri#us" className="text-secondary hover:underline">See the US section of the NRI guide</Link> Comparing routes? Read <Link to="/insights/gift-city-vs-nre-nro" className="text-secondary hover:underline">GIFT City fund vs NRE/NRO investing</Link>.</p>
         <p><Link to="/gift-city-funds-for-nri" className="inline-flex items-center rounded-lg bg-teal/15 px-3 py-2 font-medium text-primary hover:bg-teal/25">Read the full NRI guide, with every major country explained</Link></p>
       </section>
       <section id="oci" className="bg-surface p-6 rounded-lg border border-border font-body text-foreground-muted space-y-3 mb-6 scroll-mt-24">
@@ -111,7 +111,7 @@ const WhoItsFor = () => (
 
       <div className="bg-secondary/10 border border-secondary/30 p-6 rounded-lg">
         <p className="font-body text-sm text-primary">If you're an NRI based in the United States, GIFT City funds interact with US tax rules — like PFIC status — in ways that materially change the numbers.{" "}
-          <Link to="/us-based-nris" className="text-secondary hover:underline">See the US-Based NRI guide →</Link>
+          <Link to="/gift-city-funds-for-nri#us" className="text-secondary hover:underline">See the US section of the NRI guide</Link>
         </p>
       </div>
 

@@ -144,7 +144,7 @@ const FundsExplained = () => (
         <h3 className="font-heading font-semibold text-primary mb-2">A quick word on tax</h3>
         <p className="font-body text-sm text-foreground-muted">
           Tax treatment differs meaningfully by structure, by direction, and by where you live — especially if you're a US-based NRI. We've broken that down separately.{" "}
-          <Link to="/taxation" className="text-secondary hover:underline">See the Taxation page</Link> · <Link to="/us-based-nris" className="text-secondary hover:underline">See the US-Based NRI guide</Link>
+          <Link to="/taxation" className="text-secondary hover:underline">See the Taxation page</Link> · <Link to="/gift-city-funds-for-nri#us" className="text-secondary hover:underline">See the US-Based NRI guide</Link>
         </p>
       </div>
 

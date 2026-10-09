@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { GuidePage, h2, h3, p, a, ul, table, th, td, type Faq } from "@/components/GuidePage";
 import { FlowSteps, RouteDiagram } from "@/components/Diagrams";
@@ -9,6 +10,7 @@ interface Country {
   tax: string[];
   check: string[];
   more?: { to: string; label: string };
+  extra?: ReactNode;
 }
 
 const COUNTRIES: Country[] = [
@@ -58,7 +60,30 @@ const COUNTRIES: Country[] = [
       "Confirm the fund accepts US persons: for example, Tata India Dynamic Equity Fund (GIFT City) states that US and US-connected persons are not eligible",
       "Ask whether the fund provides QEF information, and speak to a US tax adviser first",
     ],
-    more: { to: "/us-based-nris", label: "Full PFIC guide for US-based NRIs" },
+    extra: (
+      <>
+        <h3 className={h3}>PFIC, QEF and mark-to-market: the three US tax regimes</h3>
+        <div className="overflow-x-auto">
+          <table className={table}>
+            <thead><tr><th className={th}>Regime</th><th className={th}>How gains are taxed</th><th className={th}>What you need</th></tr></thead>
+            <tbody>
+              <tr><td className={td}>Excess distribution (default)</td><td className={td}>Gains and large distributions spread over your holding period, taxed at the highest ordinary rate for each year, plus an interest charge</td><td className={td}>Nothing to elect; usually the most costly outcome</td></tr>
+              <tr><td className={td}>QEF (Qualified Electing Fund)</td><td className={td}>Your share of the fund's ordinary earnings and net capital gains each year, keeping capital gain treatment</td><td className={td}>A PFIC Annual Information Statement from the fund, and a timely election</td></tr>
+              <tr><td className={td}>Mark-to-market</td><td className={td}>Each year's rise in value taxed as ordinary income; losses allowed only up to earlier gains</td><td className={td}>The units must count as marketable stock</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3 className={h3}>Inbound vs outbound, from a US perspective</h3>
+        <p className={p}>An inbound fund gives US-based NRIs Indian market exposure in dollars; an outbound GIFT City fund investing in global markets usually makes little sense for a US person, who can buy US-domiciled funds without PFIC issues.</p>
+        <h3 className={h3}>Documents US persons are asked for</h3>
+        <ul className={ul}>
+          <li>US passport or green card, plus Indian passport or OCI card where relevant</li>
+          <li>Form W-9 (US persons) and FATCA self-certification</li>
+          <li>US address proof and bank statement</li>
+        </ul>
+        <p className={p + " mt-3"}>You also report foreign accounts and assets each year (FBAR and, above thresholds, Form 8938). More detail: <Link to="/insights/pfic-explained" className={a}>PFIC explained</Link>.</p>
+      </>
+    ),
   },
   {
     id: "canada",
@@ -96,6 +121,9 @@ const COUNTRIES: Country[] = [
 ];
 
 const faqs: Faq[] = [
+  { q: "How to invest in GIFT City from the USA?", a: "Choose a fund that accepts US persons (many do not), complete the fund house's KYC including Form W-9, and transfer US Dollars from your US bank account. Before investing, check the fund's PFIC status and how you will report it on Form 8621." },
+  { q: "Can US citizens invest in GIFT City funds?", a: "Some GIFT City funds accept US citizens and green card holders, but many do not because of US reporting rules. Where they do, most will be PFICs for US tax, which can be costly; speak to a US tax adviser first." },
+  { q: "What are the PFIC rules for GIFT City funds?", a: "Most GIFT City funds are Passive Foreign Investment Companies (PFICs) for US tax. US persons file Form 8621 each year and, by default, pay tax at the highest ordinary rate plus an interest charge on gains, unless a QEF or mark-to-market election applies." },
   { q: "How are GIFT City funds taxed in the UK for UK-resident NRIs?", a: "It depends on the fund's HMRC reporting status. Gains on a reporting fund are normally capital gains; gains on a non-reporting fund are normally taxed as income (offshore income gains). The 4-year FIG regime may give relief to recent arrivals." },
   { q: "Can NRIs invest in GIFT City funds?", a: "Yes. NRIs can invest in GIFT City funds directly in US Dollars from a bank account abroad, without LRS or TCS. Each fund sets its own eligibility, and some exclude residents of certain countries, especially the US and Canada." },
   { q: "What is the minimum investment for NRIs in GIFT City funds?", a: "It depends on the fund. Some retail schemes start at USD 500; others need a few thousand dollars. PMS needs USD 75,000 and most AIFs about USD 150,000." },
@@ -116,7 +144,7 @@ const NriGuide = () => (
     crumb="GIFT City Funds for NRIs"
     datePublished="2026-10-09"
     faqs={faqs}
-    sources={["ifscaDirectory", "uaeTax", "hmrcOffshore", "ukFig", "irs8621", "craT1135", "irasOverseas", "incomeTax"]}
+    sources={["ifscaDirectory", "irs8621", "uaeTax", "hmrcOffshore", "ukFig", "craT1135", "irasOverseas", "incomeTax"]}
   >
     <p className={p}>
       <strong className="text-primary">The short answer.</strong> As an NRI you can invest in GIFT City funds <strong className="text-primary">directly in US Dollars</strong> from your bank account abroad. There is no LRS limit, no TCS and no rupee conversion, and redemptions come back to you in dollars. Some retail funds start at <strong className="text-primary">USD 500</strong>. What changes from country to country is whether the fund accepts you, and how your home country taxes the investment. Both are covered below.
@@ -199,6 +227,7 @@ const NriGuide = () => (
         <ul className={ul}>{c.tax.map((t) => <li key={t}>{t}</li>)}</ul>
         <h3 className={h3}>Before you invest</h3>
         <ul className={ul}>{c.check.map((t) => <li key={t}>{t}</li>)}</ul>
+        {c.extra}
         {c.more && <p className="font-body mt-3"><Link to={c.more.to} className={a}>{c.more.label}</Link></p>}
       </section>
     ))}

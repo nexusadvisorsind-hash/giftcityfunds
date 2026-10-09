@@ -53,7 +53,7 @@ const ProsAndCons = () => (
     <ul className={ul}>
       <li>You want to invest small amounts monthly in rupees.</li>
       <li>You may need the money at short notice and the fund has a lock-in or exit load.</li>
-      <li>You are a US person and the fund is a PFIC (see <Link to="/us-based-nris" className={a}>US-based NRIs</Link>).</li>
+      <li>You are a US person and the fund is a PFIC (see <Link to="/gift-city-funds-for-nri#us" className={a}>US-based NRIs</Link>).</li>
     </ul>
     <p className={p + " mt-4"}>
       Read the full list of <Link to="/gift-city-funds-risks" className={a}>risks</Link> before deciding.

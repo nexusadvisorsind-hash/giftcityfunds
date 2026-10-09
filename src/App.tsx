@@ -12,7 +12,6 @@ import About from "./pages/About";
 import WhatIsGiftCity from "./pages/WhatIsGiftCity";
 import FundsExplained from "./pages/FundsExplained";
 import WhoItsFor from "./pages/WhoItsFor";
-import UsBasedNris from "./pages/UsBasedNris";
 import Taxation from "./pages/Taxation";
 import Faqs from "./pages/Faqs";
 import Insights from "./pages/Insights";
@@ -79,7 +78,7 @@ const App = ({ ssrUrl, helmetContext }: AppProps = {}) => (
               <Route path="/what-is-gift-city" element={<WhatIsGiftCity />} />
               <Route path="/funds-explained" element={<FundsExplained />} />
               <Route path="/who-its-for" element={<WhoItsFor />} />
-              <Route path="/us-based-nris" element={<UsBasedNris />} />
+              <Route path="/us-based-nris" element={<Navigate to="/gift-city-funds-for-nri#us" replace />} />
               <Route path="/taxation" element={<Taxation />} />
               <Route path="/faqs" element={<Faqs />} />
               <Route path="/insights" element={<Insights />} />

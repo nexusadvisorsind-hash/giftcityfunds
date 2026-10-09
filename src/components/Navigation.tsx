@@ -25,7 +25,6 @@ const Navigation = () => {
     { label: "How to Invest", path: "/how-to-invest", ariaLabel: "How to invest in GIFT City funds" },
     { label: "vs Mutual Funds", path: "/gift-city-funds-vs-mutual-funds", ariaLabel: "GIFT City funds compared with regular Indian mutual funds" },
     { label: "Risks", path: "/gift-city-funds-risks", ariaLabel: "Risks of GIFT City funds" },
-    { label: "For NRIs", path: "/gift-city-funds-for-nri", ariaLabel: "GIFT City funds for NRIs, country by country" },
     { label: "For OCIs", path: "/gift-city-funds-for-oci", ariaLabel: "GIFT City funds for OCI cardholders" },
     { label: "For Resident Indians", path: "/gift-city-funds-for-resident-indians", ariaLabel: "GIFT City funds for resident Indians" },
     { label: "vs International Funds", path: "/gift-city-vs-international-mutual-funds", ariaLabel: "GIFT City funds compared with international mutual funds" },
@@ -49,7 +48,7 @@ const Navigation = () => {
 
   const navItems = [
     { label: "Home", path: "/", ariaLabel: "Navigate to Home page" },
-    { label: "For US NRIs", path: "/us-based-nris", ariaLabel: "GIFT City funds for US-based NRIs" },
+    { label: "For NRIs", path: "/gift-city-funds-for-nri", ariaLabel: "GIFT City funds for NRIs, country by country" },
     { label: "FAQs", path: "/faqs", ariaLabel: "Frequently asked questions" },
     { label: "Insights", path: "/insights", ariaLabel: "GIFT City insights and articles" },
     { label: "About", path: "/about", ariaLabel: "About the contributor Anup Vatyani" },

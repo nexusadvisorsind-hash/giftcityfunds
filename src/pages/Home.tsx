@@ -300,8 +300,8 @@ const Home = () => {
             </div>
             <div className="bg-secondary/10 border border-secondary/30 p-5 rounded-lg mb-6">
               <p className="font-body text-sm text-primary">
-                <strong>Based in the United States?</strong> GIFT City structures interact with US tax rules — like PFIC status — in ways that materially change the numbers.{" "}
-                <Link to="/us-based-nris" className="text-secondary hover:underline">See the dedicated guide for US-based NRIs →</Link>
+                <strong>Living outside India?</strong> Whether a fund accepts you, and how it is taxed, depends on your country: the UAE and Gulf, UK, US (PFIC rules), Canada, Singapore or Australia.{" "}
+                <Link to="/gift-city-funds-for-nri" className="text-secondary hover:underline">See the NRI guide, country by country</Link>
               </p>
             </div>
             <Link to="/who-its-for" className="font-body text-secondary hover:underline inline-flex items-center">
