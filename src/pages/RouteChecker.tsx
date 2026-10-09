@@ -63,7 +63,7 @@ const resultFor = (status: Status, money: Money, goal: Goal, us: boolean): Resul
       points.push("If you are an NRI, your money in India should be in NRE or NRO accounts, not a resident savings account. Fix this with your bank before investing.");
     }
     points.push("You are taxed in your country of residence as well; Indian tax depends on the fund structure.");
-    links.push(["/gift-city-funds-nri-tax-by-country", "Rules by country"], ["/insights/gift-city-vs-nre-nro", "GIFT City vs NRE/NRO"]);
+    links.push(["/gift-city-funds-for-nri", "Rules by country"], ["/insights/gift-city-vs-nre-nro", "GIFT City vs NRE/NRO"]);
     if (status === "oci") points.push("OCI cardholders are generally treated like NRIs for these investments; carry your OCI card and foreign passport for KYC.");
   }
 

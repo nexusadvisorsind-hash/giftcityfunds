@@ -64,7 +64,13 @@ const Footer = () => {
                 <Link to="/gift-city-funds-risks" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Risks</Link>
               </li>
               <li>
-                <Link to="/gift-city-funds-nri-tax-by-country" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">NRIs by Country</Link>
+                <Link to="/gift-city-funds-for-nri" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">For NRIs</Link>
+              </li>
+              <li>
+                <Link to="/gift-city-funds-for-oci" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">For OCIs</Link>
+              </li>
+              <li>
+                <Link to="/gift-city-funds-for-resident-indians" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">For Resident Indians</Link>
               </li>
               <li>
                 <Link to="/us-based-nris" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">US NRIs</Link>
@@ -113,12 +119,6 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/gift-city-glossary" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Glossary</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-funds-for-uae-nris" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">For UAE NRIs</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-funds-for-uk-nris" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">For UK NRIs</Link>
               </li>
               <li>
                 <Link to="/gift-city-vs-singapore-dubai" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">vs Singapore & Dubai</Link>

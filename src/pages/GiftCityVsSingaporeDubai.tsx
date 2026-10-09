@@ -42,7 +42,7 @@ const GiftCityVsSingaporeDubai = () => (
     <h2 className={h2}>What this means for you</h2>
     <ul className={ul}>
       <li><strong className="text-primary">Resident Indians:</strong> LRS limits and TCS are the same wherever the fund is based. GIFT City funds are often easier to reach through Indian fund houses and Indian KYC habits.</li>
-      <li><strong className="text-primary">NRIs in the Gulf:</strong> both DIFC and GIFT City funds can be bought in dollars. GIFT City adds Indian fund houses' India strategies. See <Link to="/gift-city-funds-for-uae-nris" className={a}>GIFT City for UAE NRIs</Link>.</li>
+      <li><strong className="text-primary">NRIs in the Gulf:</strong> both DIFC and GIFT City funds can be bought in dollars. GIFT City adds Indian fund houses' India strategies. See <Link to="/gift-city-funds-for-nri#uae" className={a}>GIFT City for UAE NRIs</Link>.</li>
       <li><strong className="text-primary">Everyone:</strong> compare the fund, its costs, its regulator and how you are taxed where you live. Location alone does not make a fund better.</li>
     </ul>
     <p className={p + " mt-4"}>

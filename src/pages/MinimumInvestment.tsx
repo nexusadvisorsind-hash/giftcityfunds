@@ -29,7 +29,7 @@ const MinimumInvestment = () => (
         <thead><tr><th className={th}>Product</th><th className={th}>Typical minimum</th><th className={th}>Who it suits</th></tr></thead>
         <tbody>
           <tr><td className={td}>US stocks and ETFs via an IFSC broker</td><td className={td}>Can be under USD 100 (fractional)</td><td className={td}>Do-it-yourself investors</td></tr>
-          <tr><td className={td}><Link to="/gift-city-feeder-funds" className={a}>Retail scheme / feeder fund</Link></td><td className={td}>Set by the scheme, often a few thousand USD</td><td className={td}>Most individual investors</td></tr>
+          <tr><td className={td}><Link to="/gift-city-feeder-funds" className={a}>Retail scheme / feeder fund</Link></td><td className={td}>From USD 500 for some schemes</td><td className={td}>Most individual investors</td></tr>
           <tr><td className={td}>USD fixed deposit at an IFSC Banking Unit</td><td className={td}>Set by each bank</td><td className={td}>Savers wanting dollar deposits</td></tr>
           <tr><td className={td}><Link to="/gift-city-pms" className={a}>Portfolio management services</Link></td><td className={td}>USD 75,000</td><td className={td}>Larger investors wanting a managed portfolio</td></tr>
           <tr><td className={td}><Link to="/gift-city-aif" className={a}>Restricted scheme (AIF)</Link></td><td className={td}>Commonly USD 150,000</td><td className={td}>Experienced, high-ticket investors</td></tr>
@@ -41,9 +41,9 @@ const MinimumInvestment = () => (
 
     <BarChart
       title="Typical minimums, USD"
-      caption="Indicative; each scheme or bank sets its own figure. Retail scheme shown at an illustrative USD 5,000."
+      caption="Indicative; each scheme or bank sets its own figure. Some retail schemes start at USD 500."
       rows={[
-        { label: "Retail scheme (example)", value: 5000, display: "~5,000" },
+        { label: "Retail scheme (lowest seen)", value: 500, display: "500" },
         { label: "PMS", value: 75000, display: "75,000" },
         { label: "Restricted scheme (AIF)", value: 150000, display: "150,000", tone: "amber" },
       ]}

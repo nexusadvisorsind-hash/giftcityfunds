@@ -16,6 +16,9 @@
     { "source": "/tcs-calculator", "destination": "/insights/lrs-tcs-gift-city", "permanent": true },
     { "source": "/tcs-on-foreign-remittance", "destination": "/insights/lrs-tcs-gift-city", "permanent": true },
     { "source": "/glossary", "destination": "/gift-city-glossary", "permanent": true },
+    { "source": "/gift-city-funds-nri-tax-by-country", "destination": "/gift-city-funds-for-nri", "permanent": true },
+    { "source": "/gift-city-funds-for-uae-nris", "destination": "/gift-city-funds-for-nri#uae", "permanent": true },
+    { "source": "/gift-city-funds-for-uk-nris", "destination": "/gift-city-funds-for-nri#uk", "permanent": true },
     { "source": "/funds/aif", "destination": "/gift-city-aif", "permanent": true },
     { "source": "/funds/pms", "destination": "/gift-city-pms", "permanent": true }
   ],

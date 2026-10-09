@@ -88,17 +88,20 @@ const WhoItsFor = () => (
           <p>As a Non-Resident Indian, you can invest directly in GIFT City funds — inbound or outbound — typically in USD, without routing through the standard LRS process that applies to resident Indians. This is one of the more direct advantages GIFT City offers NRIs over conventional NRE/NRO route investing.</p>
           <p className="italic"><strong>What to watch for:</strong> country-specific documentation requirements, minimum ticket sizes, and — if you're US-based — how the fund is taxed where you live.</p>
           <p>US-based? <Link to="/us-based-nris" className="text-secondary hover:underline">See the dedicated tax guide →</Link> Comparing routes? Read <Link to="/insights/gift-city-vs-nre-nro" className="text-secondary hover:underline">GIFT City fund vs NRE/NRO investing</Link>.</p>
+        <p><Link to="/gift-city-funds-for-nri" className="inline-flex items-center rounded-lg bg-teal/15 px-3 py-2 font-medium text-primary hover:bg-teal/25">Read the full NRI guide, with every major country explained</Link></p>
       </section>
       <section id="oci" className="bg-surface p-6 rounded-lg border border-border font-body text-foreground-muted space-y-3 mb-6 scroll-mt-24">
         <h2 className="font-heading font-semibold text-2xl text-primary">Overseas Citizens of India (OCIs)</h2>
           <p>Overseas Citizens of India generally follow a similar eligibility path to NRIs for GIFT City fund investing, though specific Fund Management Entities may apply their own documentation or country-based conditions.</p>
           <p className="italic"><strong>What to watch for:</strong> confirm eligibility with the specific fund's FME, as conditions can vary.</p>
+        <p><Link to="/gift-city-funds-for-oci" className="inline-flex items-center rounded-lg bg-teal/15 px-3 py-2 font-medium text-primary hover:bg-teal/25">Read the full OCI guide</Link></p>
       </section>
       <section id="resident" className="bg-surface p-6 rounded-lg border border-border font-body text-foreground-muted space-y-3 mb-6 scroll-mt-24">
         <h2 className="font-heading font-semibold text-2xl text-primary">Resident Indians</h2>
           <p>Resident Indians can invest in outbound GIFT City structures via the Liberalised Remittance Scheme (LRS), which currently allows remittance of up to USD 250,000 per person, per financial year, for this and other permitted purposes.</p>
           <p className="italic"><strong>What to watch for:</strong> LRS remittances above ₹10 lakh typically attract Tax Collected at Source (TCS) — this is adjustable against your final tax liability when filing returns, not an additional cost.</p>
           <p>Read more on the <Link to="/taxation" className="text-secondary hover:underline">Taxation page →</Link> and in <Link to="/insights/lrs-tcs-gift-city" className="text-secondary hover:underline">LRS, TCS and GIFT City</Link>.</p>
+        <p><Link to="/gift-city-funds-for-resident-indians" className="inline-flex items-center rounded-lg bg-teal/15 px-3 py-2 font-medium text-primary hover:bg-teal/25">Read the full guide for resident Indians, with TCS calculator</Link></p>
       </section>
 
       <div id="institutions" className="bg-surface border border-border p-6 rounded-lg mb-6 scroll-mt-24">

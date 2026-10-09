@@ -27,10 +27,10 @@ const articleSchema = {
 };
 
 const rows = [
-  { s: "Mutual Fund FoF", what: "A feeder fund that channels your money into an underlying scheme", t: "From ~$5,000", best: "Investors wanting fund-of-fund simplicity at a lower ticket size" },
+  { s: "Mutual Fund FoF", what: "A feeder fund that channels your money into an underlying scheme", t: "From ~USD 500 for some funds", best: "Investors wanting fund-of-fund simplicity at a lower ticket size" },
   { s: "AIF (Alternative Investment Fund)", what: "A pooled vehicle for less standardised strategies (equity, credit, structured products)", t: "From ~$150,000 (some lower exceptions exist)", best: "Investors comfortable with higher tickets and less liquid strategies" },
   { s: "PMS (Portfolio Management Services)", what: "A professionally managed, individually held portfolio", t: "From ~$75,000", best: "Investors wanting a more customised, discretionary approach" },
-  { s: "Retail Feeder Fund", what: "A lower-ticket fund designed for individual retail access", t: "From ~$5,000", best: "Investors wanting simple exposure without a large minimum" },
+  { s: "Retail Feeder Fund", what: "A lower-ticket fund designed for individual retail access", t: "From ~USD 500 for some funds", best: "Investors wanting simple exposure without a large minimum" },
 ];
 
 const FundsExplained = () => (
@@ -111,7 +111,7 @@ const FundsExplained = () => (
               <th scope="row" className="text-left p-3 border border-border font-medium text-primary">Retail scheme (mutual funds, ETFs)</th>
               <td className="p-3 border border-border">Registered FME (Retail)</td>
               <td className="p-3 border border-border">Anyone eligible, including individual retail investors</td>
-              <td className="p-3 border border-border">Set by each scheme, e.g. USD 5,000 for some funds</td>
+              <td className="p-3 border border-border">Set by each scheme, from USD 500 for some funds</td>
             </tr>
             <tr className="bg-background">
               <th scope="row" className="text-left p-3 border border-border font-medium text-primary">Restricted scheme (AIF Category I, II, III)</th>

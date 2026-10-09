@@ -68,7 +68,7 @@ const Home = () => {
               />
               <span className="gcf-float absolute top-6 left-4 md:left-10 rounded-xl bg-white text-ink px-4 py-2.5 font-body text-sm font-semibold shadow-xl">Invest in USD</span>
               <span className="gcf-float absolute bottom-8 left-2 md:left-6 rounded-xl bg-brass text-ink px-4 py-2.5 font-body text-sm font-semibold [animation-delay:1.5s]">IFSCA-regulated</span>
-              <span className="gcf-float absolute top-24 right-2 md:right-8 rounded-xl bg-teal text-ink px-4 py-2.5 font-body text-sm font-semibold [animation-delay:3s]">From ~$5,000</span>
+              <span className="gcf-float absolute top-24 right-2 md:right-8 rounded-xl bg-teal text-ink px-4 py-2.5 font-body text-sm font-semibold [animation-delay:3s]">From USD 500</span>
             </div>
           </div>
 
@@ -77,9 +77,9 @@ const Home = () => {
             <p className="font-body text-sm font-semibold uppercase tracking-wider text-slate-400 mb-3">I'm investing as…</p>
             <div className="grid gap-4 md:grid-cols-3">
               {[
-                { to: "/who-its-for#nri", title: "An NRI", body: "Invest directly in USD, no LRS", icon: Globe2, tone: "bg-teal" },
-                { to: "/who-its-for#oci", title: "An OCI", body: "Broadly the NRI path; fund checks vary", icon: FileText, tone: "bg-brass" },
-                { to: "/who-its-for#resident", title: "A Resident Indian", body: "Via LRS, up to USD 250,000 a year", icon: Home2, tone: "bg-indigo-300" },
+                { to: "/gift-city-funds-for-nri", title: "An NRI", body: "Invest in USD from abroad, no LRS. Rules for every country", icon: Globe2, tone: "bg-teal" },
+                { to: "/gift-city-funds-for-oci", title: "An OCI", body: "Same route as NRIs; citizenship checks vary", icon: FileText, tone: "bg-brass" },
+                { to: "/gift-city-funds-for-resident-indians", title: "A Resident Indian", body: "Invest abroad via LRS, up to USD 250,000 a year", icon: Home2, tone: "bg-indigo-300" },
               ].map((p, i) => (
                 <Link
                   key={p.to}
@@ -97,6 +97,10 @@ const Home = () => {
                 </Link>
               ))}
             </div>
+            <p className="mt-5 rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 font-body text-sm text-slate-300">
+              <span className="font-semibold text-brass">Start from USD 500.</span> Some GIFT City retail funds now have low minimums. For example, Tata India Dynamic Equity Fund (GIFT City) accepts USD 500 from NRIs, OCIs and foreign investors; it is not open to Indian residents or US persons.{" "}
+              <a href="https://www.tatamutualfund.com/ifsc-gift-city" target="_blank" rel="noopener noreferrer" className="text-teal-light underline">Source: Tata Mutual Fund</a>. An example of a minimum, not a recommendation; read the scheme documents.
+            </p>
           </div>
         </section>
 
@@ -108,7 +112,7 @@ const Home = () => {
                 <span>Regulated by IFSCA, not SEBI</span>
                 <span>Invest and redeem in US Dollars</span>
                 <span>Residents invest via LRS — up to USD 250,000 a year</span>
-                <span>Retail schemes from about USD 5,000</span>
+                <span>Some retail funds from USD 500</span>
                 <span>NRI investment in GIFT City funds has crossed $7 billion (IFSCA, March 2025)</span>
                 <span>Every guide links to its official source</span>
               </span>

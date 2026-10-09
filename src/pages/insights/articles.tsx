@@ -116,7 +116,7 @@ export const articles: InsightArticle[] = [
           </ul>
           <h3 className="font-heading font-semibold text-lg text-primary pt-2">Your home country's tax</h3>
           <p>
-            Indian exemptions do not stop your country of residence from taxing the interest. US, UK and Canadian residents generally report worldwide interest; the UAE does not tax individuals' income. See <Link to="/gift-city-funds-nri-tax-by-country" className="text-secondary hover:underline">GIFT City funds for NRIs by country</Link>.
+            Indian exemptions do not stop your country of residence from taxing the interest. US, UK and Canadian residents generally report worldwide interest; the UAE does not tax individuals' income. See <Link to="/gift-city-funds-for-nri" className="text-secondary hover:underline">GIFT City funds for NRIs by country</Link>.
           </p>
           <p className="text-sm">
             How to open the account first: <Link to="/insights/how-to-open-gift-city-bank-account" className="text-secondary hover:underline">How to open a GIFT City bank account</Link>. Example product terms: <a href="https://www.idfcfirst.bank.in/gift-city/non-resident-banking/fixed-deposit-account" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">one bank's GIFT City fixed deposit page</a>.
@@ -234,7 +234,7 @@ export const articles: InsightArticle[] = [
 
           <h3 className="font-heading font-semibold text-xl text-primary pt-2">Why NRIs are different</h3>
           <p>
-            NRIs investing money already held abroad send it directly in foreign currency. LRS and TCS apply to residents sending money out of India, so they do not arise. See <Link to="/gift-city-funds-for-uae-nris" className="text-secondary hover:underline">UAE NRIs</Link> or <Link to="/gift-city-route-checker" className="text-secondary hover:underline">check your route</Link>.
+            NRIs investing money already held abroad send it directly in foreign currency. LRS and TCS apply to residents sending money out of India, so they do not arise. See <Link to="/gift-city-funds-for-nri#uae" className="text-secondary hover:underline">UAE NRIs</Link> or <Link to="/gift-city-route-checker" className="text-secondary hover:underline">check your route</Link>.
           </p>
 
           <h3 className="font-heading font-semibold text-xl text-primary pt-2">Planning monthly investments?</h3>

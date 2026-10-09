@@ -12,7 +12,6 @@
 - [How to Invest in GIFT City Funds](https://giftcityfunds.in/how-to-invest): Step-by-step for NRIs and residents: structures, LRS vs direct USD, KYC document checklist, remittance, allotment, redemption.
 - [GIFT City Funds vs Regular Mutual Funds](https://giftcityfunds.in/gift-city-funds-vs-mutual-funds): Regulator, currency, minimums, eligibility and tax compared.
 - [Risks of GIFT City Funds](https://giftcityfunds.in/gift-city-funds-risks): Market, currency, liquidity, tax and regulatory risks.
-- [GIFT City Funds for NRIs by Country](https://giftcityfunds.in/gift-city-funds-nri-tax-by-country): Home-country rules to check in the UAE, UK, US, Canada and Singapore.
 - [FAQs](https://giftcityfunds.in/faqs): Short answers to common questions.
 - [GIFT City Fund List 2026](https://giftcityfunds.in/gift-city-fund-list): Fund houses with GIFT City funds, inbound (India) and outbound (global), with sources. Facts only, not ranked.
 - [SIP in GIFT City Funds](https://giftcityfunds.in/gift-city-sip): Whether monthly investing is possible, how LRS and TCS apply to each instalment, and alternatives.
@@ -20,8 +19,6 @@
 - [GIFT City ETFs, US Stocks and ETFs Through GIFT City](https://giftcityfunds.in/gift-city-us-stocks-etfs): IFSC broker route, LRS, dividend withholding, US estate tax, Indian reporting.
 - [Pros and Cons of GIFT City Funds](https://giftcityfunds.in/gift-city-funds-pros-and-cons): Advantages and drawbacks for NRIs and resident Indians.
 - [What Is IFSCA?](https://giftcityfunds.in/what-is-ifsca): The unified regulator for GIFT IFSC, set up on 27 April 2020 under the IFSCA Act, 2019.
-- [GIFT City Funds for UAE NRIs](https://giftcityfunds.in/gift-city-funds-for-uae-nris): Investing in USD from Dubai or Abu Dhabi, no LRS/TCS, UAE tax position, ₹15 lakh deemed-resident rule.
-- [GIFT City Funds for UK NRIs](https://giftcityfunds.in/gift-city-funds-for-uk-nris): HMRC reporting fund status, offshore income gains, FIG regime, ISAs.
 - [GIFT City vs Singapore vs Dubai](https://giftcityfunds.in/gift-city-vs-singapore-dubai): The three fund centres compared for Indian and NRI investors.
 - [GIFT Nifty and GIFT City Exchanges](https://giftcityfunds.in/gift-city-markets-gift-nifty): GIFT Nifty vs SGX Nifty, trading hours, who can trade, NSE IX, India INX, IIBX.
 - [Family Offices, FPIs, VC Funds and Wealth Management](https://giftcityfunds.in/gift-city-family-office-fpi): Family investment funds, IFSC FPIs and SEBI's 2024 NRI change, venture capital schemes, PMS.
@@ -31,6 +28,9 @@
 - [GIFT City PMS](https://giftcityfunds.in/gift-city-pms): USD 75,000 minimum, discretionary vs non-discretionary, vs domestic PMS.
 - [GIFT City Feeder Funds](https://giftcityfunds.in/gift-city-feeder-funds): Inbound and outbound feeders; feeder vs direct FPI.
 - [GIFT City Minimum Investment and Limits](https://giftcityfunds.in/gift-city-minimum-investment): Every minimum, LRS limit and TCS threshold in one table.
+- [GIFT City Funds for NRIs](https://giftcityfunds.in/gift-city-funds-for-nri): Complete NRI guide with full explanations for the UAE, Gulf, UK, US, Canada, Singapore and Australia; minimums from USD 500.
+- [GIFT City Funds for OCIs](https://giftcityfunds.in/gift-city-funds-for-oci): OCI eligibility, documents and citizenship rules.
+- [GIFT City Funds for Resident Indians](https://giftcityfunds.in/gift-city-funds-for-resident-indians): LRS, TCS, what residents can and cannot do, Schedule FA.
 - [GIFT City Glossary](https://giftcityfunds.in/gift-city-glossary): 27 terms (IFSC, FME, LRS, TCS, PFIC, inbound/outbound) defined.
 
 ## Tools

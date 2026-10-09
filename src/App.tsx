@@ -26,7 +26,6 @@ import NotFound from "./pages/NotFound";
 import HowToInvest from "./pages/HowToInvest";
 import GiftCityVsMutualFunds from "./pages/GiftCityVsMutualFunds";
 import Risks from "./pages/Risks";
-import NriByCountry from "./pages/NriByCountry";
 import FundList from "./pages/FundList";
 import GiftCitySip from "./pages/GiftCitySip";
 import GiftCityVsInternationalFunds from "./pages/GiftCityVsInternationalFunds";
@@ -35,13 +34,14 @@ import WhatIsIfsca from "./pages/WhatIsIfsca";
 import UsStocksEtfs from "./pages/UsStocksEtfs";
 import Glossary from "./pages/Glossary";
 import RouteChecker from "./pages/RouteChecker";
-import UaeNris from "./pages/UaeNris";
-import UkNris from "./pages/UkNris";
 import GiftCityVsSingaporeDubai from "./pages/GiftCityVsSingaporeDubai";
 import GiftCityMarkets from "./pages/GiftCityMarkets";
 import FamilyOfficeFpi from "./pages/FamilyOfficeFpi";
 import BanksAndSetup from "./pages/BanksAndSetup";
 import GiftCityGuide from "./pages/GiftCityGuide";
+import NriGuide from "./pages/NriGuide";
+import OciGuide from "./pages/OciGuide";
+import ResidentGuide from "./pages/ResidentGuide";
 import GiftCityAif from "./pages/GiftCityAif";
 import GiftCityPms from "./pages/GiftCityPms";
 import GiftCityFeederFunds from "./pages/GiftCityFeederFunds";
@@ -95,7 +95,10 @@ const App = ({ ssrUrl, helmetContext }: AppProps = {}) => (
               <Route path="/how-to-invest" element={<HowToInvest />} />
               <Route path="/gift-city-funds-vs-mutual-funds" element={<GiftCityVsMutualFunds />} />
               <Route path="/gift-city-funds-risks" element={<Risks />} />
-              <Route path="/gift-city-funds-nri-tax-by-country" element={<NriByCountry />} />
+              <Route path="/gift-city-funds-for-nri" element={<NriGuide />} />
+              <Route path="/gift-city-funds-for-oci" element={<OciGuide />} />
+              <Route path="/gift-city-funds-for-resident-indians" element={<ResidentGuide />} />
+              <Route path="/gift-city-funds-nri-tax-by-country" element={<Navigate to="/gift-city-funds-for-nri" replace />} />
               <Route path="/gift-city-fund-list" element={<FundList />} />
               <Route path="/gift-city-sip" element={<GiftCitySip />} />
               <Route path="/gift-city-vs-international-mutual-funds" element={<GiftCityVsInternationalFunds />} />
@@ -105,8 +108,8 @@ const App = ({ ssrUrl, helmetContext }: AppProps = {}) => (
               <Route path="/tcs-on-foreign-remittance" element={<Navigate to="/insights/lrs-tcs-gift-city" replace />} />
               <Route path="/gift-city-glossary" element={<Glossary />} />
               <Route path="/gift-city-route-checker" element={<RouteChecker />} />
-              <Route path="/gift-city-funds-for-uae-nris" element={<UaeNris />} />
-              <Route path="/gift-city-funds-for-uk-nris" element={<UkNris />} />
+              <Route path="/gift-city-funds-for-uae-nris" element={<Navigate to="/gift-city-funds-for-nri#uae" replace />} />
+              <Route path="/gift-city-funds-for-uk-nris" element={<Navigate to="/gift-city-funds-for-nri#uk" replace />} />
               <Route path="/gift-city-vs-singapore-dubai" element={<GiftCityVsSingaporeDubai />} />
               <Route path="/gift-city-markets-gift-nifty" element={<GiftCityMarkets />} />
               <Route path="/gift-city-family-office-fpi" element={<FamilyOfficeFpi />} />

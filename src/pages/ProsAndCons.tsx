@@ -44,7 +44,7 @@ const ProsAndCons = () => (
 
     <h2 className={h2}>Who commonly looks at GIFT City funds</h2>
     <ul className={ul}>
-      <li><strong className="text-primary">NRIs and OCIs</strong> who earn in dollars or dirhams and want Indian market exposure without converting to rupees. See <Link to="/gift-city-funds-nri-tax-by-country" className={a}>by country</Link>.</li>
+      <li><strong className="text-primary">NRIs and OCIs</strong> who earn in dollars or dirhams and want Indian market exposure without converting to rupees. See <Link to="/gift-city-funds-for-nri" className={a}>by country</Link>.</li>
       <li><strong className="text-primary">Resident Indians</strong> who want global diversification beyond what international mutual funds currently accept. See <Link to="/gift-city-vs-international-mutual-funds" className={a}>the comparison</Link>.</li>
       <li><strong className="text-primary">Returning NRIs</strong> who want to keep part of their savings in dollars. See <Link to="/insights/returning-to-india-gift-city-investments" className={a}>returning to India</Link>.</li>
     </ul>
