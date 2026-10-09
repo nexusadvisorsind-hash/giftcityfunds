@@ -1,8 +1,15 @@
 import { Link } from "react-router-dom";
+import MoneyMap from "@/components/MoneyMap";
 import { SEO } from "@/components/SEO";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { OfficialSources } from "@/components/OfficialSources";
 import { ArrowRight } from "lucide-react";
+import { PageFaqs, type PageFaq } from "@/components/PageFaqs";
+const PAGE_FAQS: PageFaq[] = [
+  { q: "What is the full form of GIFT City?", a: "GIFT City stands for Gujarat International Finance Tec-City. Part of it is notified as GIFT IFSC, India's International Financial Services Centre." },
+  { q: "Where is GIFT City in Gandhinagar?", a: "GIFT City is in Gandhinagar district, Gujarat, between Ahmedabad and Gandhinagar on the Sabarmati river. You do not need to visit it to invest; onboarding with fund houses is usually done remotely." },
+];
+
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -57,6 +64,7 @@ const WhatIsGiftCity = () => (
         </p>
 
         <h2 className="font-heading font-semibold text-2xl text-primary pt-4">What happens inside GIFT IFSC</h2>
+        <MoneyMap className="my-6" />
         <ul className="list-disc pl-6 space-y-2">
           <li><strong className="text-primary">Banking:</strong> IFSC Banking Units of Indian and foreign banks offer foreign-currency accounts and deposits.</li>
           <li><strong className="text-primary">Capital markets:</strong> international exchanges list and trade securities in foreign currency.</li>
@@ -95,6 +103,8 @@ const WhatIsGiftCity = () => (
           <Link to="/funds-explained" className="text-secondary hover:underline">/funds-explained</Link>
         </p>
       </div>
+      <PageFaqs items={PAGE_FAQS} className="my-12" />
+
       <OfficialSources items={["ifsca", "giftCity", "ifscaDirectory"]} />
     </div>
   </>

@@ -245,7 +245,11 @@ All colors MUST be HSL.
   .gcf-lift:hover { transform: translateY(-5px); box-shadow: 0 18px 40px hsl(var(--ink) / .14); }
 }
 
+@keyframes gcf-flow { to { stroke-dashoffset: -56; } }
+.gcf-flow { animation: gcf-flow 2.4s linear infinite; }
+
 @media (prefers-reduced-motion: reduce) {
+  .gcf-flow,
   .gcf-fade-up, .gcf-spin-slow, .gcf-spin-slower, .gcf-float, .gcf-marquee, .gcf-grow, .gcf-pop { animation: none !important; }
   .gcf-lift:hover { transform: none; }
 }

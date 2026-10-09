@@ -73,6 +73,69 @@ const Footer = () => {
                 <Link to="/taxation" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Taxation</Link>
               </li>
               <li>
+                <Link to="/how-to-invest" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">How to Invest</Link>
+              </li>
+              <li>
+                <Link to="/gift-city-aif" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">GIFT City AIF</Link>
+              </li>
+              <li>
+                <Link to="/gift-city-pms" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">GIFT City PMS</Link>
+              </li>
+              <li>
+                <Link to="/gift-city-feeder-funds" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Feeder Funds</Link>
+              </li>
+              <li>
+                <Link to="/gift-city-minimum-investment" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Minimums & Limits</Link>
+              </li>
+              <li>
+                <Link to="/gift-city-fund-list" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">GIFT City Fund List</Link>
+              </li>
+              <li>
+                <Link to="/gift-city-route-checker" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Route Checker</Link>
+              </li>
+              <li>
+                <Link to="/insights/lrs-tcs-gift-city#calculator" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">TCS Calculator</Link>
+              </li>
+              <li>
+                <Link to="/gift-city-sip" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">SIP in GIFT City</Link>
+              </li>
+              <li>
+                <Link to="/gift-city-vs-international-mutual-funds" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">vs International Funds</Link>
+              </li>
+              <li>
+                <Link to="/gift-city-us-stocks-etfs" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">US Stocks & ETFs</Link>
+              </li>
+              <li>
+                <Link to="/gift-city-funds-pros-and-cons" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Pros and Cons</Link>
+              </li>
+              <li>
+                <Link to="/what-is-ifsca" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">What Is IFSCA</Link>
+              </li>
+              <li>
+                <Link to="/gift-city-glossary" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Glossary</Link>
+              </li>
+              <li>
+                <Link to="/gift-city-funds-for-uae-nris" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">For UAE NRIs</Link>
+              </li>
+              <li>
+                <Link to="/gift-city-funds-for-uk-nris" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">For UK NRIs</Link>
+              </li>
+              <li>
+                <Link to="/gift-city-vs-singapore-dubai" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">vs Singapore & Dubai</Link>
+              </li>
+              <li>
+                <Link to="/gift-city-markets-gift-nifty" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">GIFT Nifty & Exchanges</Link>
+              </li>
+              <li>
+                <Link to="/gift-city-family-office-fpi" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Family Offices & FPIs</Link>
+              </li>
+              <li>
+                <Link to="/gift-city-banks-and-business-setup" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Banks & Business Setup</Link>
+              </li>
+              <li>
+                <Link to="/gift-city-guide" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">GIFT City Guide</Link>
+              </li>
+              <li>
                 <Link to="/insights" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Insights</Link>
               </li>
               <li>

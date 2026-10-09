@@ -1,7 +1,16 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { SEO } from "@/components/SEO";
-import { ArrowRight, Landmark, Layers, Wallet, MessageCircle, CircleDollarSign, TrendingUp, Building2, UserCog, FileText, Globe2, Home as Home2 } from "lucide-react";
+import MoneyMap from "@/components/MoneyMap";
+import { ArrowRight, Landmark, Layers, Wallet, MessageCircle, CircleDollarSign, TrendingUp, Building2, UserCog, FileText, Globe2, Home as Home2, Calculator, Route, ListChecks, BookA } from "lucide-react";
+import { PageFaqs, type PageFaq } from "@/components/PageFaqs";
+const PAGE_FAQS: PageFaq[] = [
+  { q: "What investment opportunities are there in GIFT City?", a: "For individuals: GIFT City mutual funds and feeder funds, AIFs and PMS for larger amounts, US Dollar fixed deposits at IFSC Banking Units, US stocks and ETFs through IFSC brokers, and dollar insurance products. Each has different minimums, risks and tax." },
+  { q: "What is GiftCityFunds?", a: "GiftCityFunds (giftcityfunds.in) is an educational website about GIFT City funds, written by Anup Vatyani, an AMFI-registered Mutual Fund Distributor (ARN 106715). It is not a fund house, a bank or an investment platform, and it does not give personalised advice." },
+  { q: "What are GIFT City mutual funds?", a: "GIFT City mutual funds are funds set up in India's International Financial Services Centre (GIFT IFSC) in Gandhinagar and regulated by IFSCA. They include retail schemes, feeder funds, AIFs and portfolio management services, run by IFSCA-registered Fund Management Entities, many of them arms of well-known Indian fund houses." },
+  { q: "Are GIFT City funds USD funds?", a: "Most are. GIFT City funds are usually denominated in US Dollars: you invest in dollars and redeem in dollars. That suits NRIs who earn in foreign currency, and gives resident Indians a dollar holding through LRS." },
+];
+
 
 const Home = () => {
   const financialServiceSchema = {
@@ -149,6 +158,39 @@ const Home = () => {
                   </li>
                 ))}
               </ol>
+            </div>
+          </div>
+        </section>
+
+        {/* Signature infographic */}
+        <section className="py-16 md:py-20 bg-background" aria-labelledby="map-h">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 id="map-h" className="font-heading font-bold text-3xl md:text-4xl text-primary max-w-2xl">Where your money goes when you invest through GIFT City</h2>
+            <p className="font-body text-lg text-foreground-muted mt-3 mb-8 max-w-2xl">
+              GIFT City funds run in two directions. NRIs use them to invest in India in dollars; resident Indians use them to invest abroad.{" "}
+              <Link to="/gift-city-fund-list" className="text-secondary font-medium hover:underline">See which fund houses run them</Link>.
+            </p>
+            <MoneyMap />
+          </div>
+        </section>
+
+        {/* Free tools */}
+        <section className="py-16 bg-ink text-white" aria-labelledby="tools-h">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <h2 id="tools-h" className="font-heading font-bold text-3xl md:text-4xl mb-8">Work it out in under a minute</h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {[
+                { to: "/gift-city-route-checker", icon: Route, t: "Which route applies to me?", d: "Resident, NRI, OCI or returning: see your route, limits and tax collected at source." },
+                { to: "/insights/lrs-tcs-gift-city#calculator", icon: Calculator, t: "TCS calculator", d: "Estimate TCS on any LRS remittance for FY 2026-27, including GIFT City investments." },
+                { to: "/gift-city-fund-list", icon: ListChecks, t: "GIFT City fund list", d: "Fund houses with GIFT City funds, inbound and outbound, with official sources." },
+                { to: "/gift-city-glossary", icon: BookA, t: "Glossary", d: "IFSC, IFSCA, FME, LRS, PFIC and more, explained in a line each." },
+              ].map((c) => (
+                <Link key={c.to} to={c.to} className="group rounded-2xl border border-white/10 bg-white/5 p-5 hover:bg-white/10 gcf-lift">
+                  <c.icon className="h-7 w-7 text-brass mb-3" aria-hidden />
+                  <p className="font-heading font-semibold text-lg text-white group-hover:underline">{c.t}</p>
+                  <p className="font-body text-sm text-slate-300 mt-1">{c.d}</p>
+                </Link>
+              ))}
             </div>
           </div>
         </section>
@@ -429,6 +471,12 @@ const Home = () => {
         </section>
 
         {/* Final CTA */}
+        <section className="py-16 bg-background">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <PageFaqs items={PAGE_FAQS} title="GIFT City funds: quick answers" />
+          </div>
+        </section>
+
         <section className="py-16 bg-primary text-primary-foreground">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">Still have questions about GIFT City funds?</h2>

@@ -2,6 +2,16 @@ import { Link } from "react-router-dom";
 import { SEO } from "@/components/SEO";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { OfficialSources } from "@/components/OfficialSources";
+import { PageFaqs, type PageFaq } from "@/components/PageFaqs";
+const PAGE_FAQS: PageFaq[] = [
+  { q: "What are GIFT City NRI mutual funds?", a: "These are GIFT City funds designed for NRIs: usually US Dollar retail schemes or feeder funds that invest in Indian markets (inbound) or global markets (outbound), bought directly from abroad without converting to rupees." },
+  { q: "How does repatriation from GIFT City work?", a: "For NRIs, redemptions are paid in US Dollars to an overseas or foreign currency account, so there is no rupee repatriation step. Resident Indians must bring money back to India or reinvest it within the time RBI rules allow." },
+  { q: "What is GIFT City outbound investment for resident Indians?", a: "It is investing abroad through a GIFT City fund or IFSC broker, using LRS. The fund invests in US or global markets; you hold it in dollars, within the USD 250,000 annual LRS limit." },
+  { q: "GIFT City investment for NRIs: can NRIs invest?", a: "Yes. NRIs can invest in GIFT City funds directly in US Dollars from an overseas bank account, without LRS or TCS. Each scheme sets its own eligibility, and some exclude residents of certain countries such as the US or Canada." },
+  { q: "Can foreign citizens invest in GIFT City funds?", a: "Yes, foreign citizens, including OCI cardholders, can invest in many GIFT City funds, subject to the fund's eligibility rules and KYC. US persons should check PFIC rules first." },
+  { q: "Can resident Indians invest in GIFT City?", a: "Yes. Resident Indians invest under the Liberalised Remittance Scheme, up to USD 250,000 a financial year, with 20% TCS on remittances above ₹10 lakh a year that can be claimed back in the income tax return." },
+];
+
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -26,7 +36,7 @@ const WhoItsFor = () => (
     />
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
       <Breadcrumbs items={[{ name: "Home", url: "/" }, { name: "Who It's For", url: "/who-its-for" }]} />
-      <h1 className="font-heading font-bold text-3xl md:text-4xl text-primary mt-6 mb-4">Who Actually Invests in GIFT City Funds?</h1>
+      <h1 className="font-heading font-bold text-3xl md:text-4xl text-primary mt-6 mb-4">Who Can Invest in GIFT City Funds?</h1>
       <p className="font-body text-lg text-foreground-muted mb-8">Eligibility and mechanics differ depending on your residency status. Find the section that applies to you.</p>
 
       <nav aria-label="On this page" className="mb-8 font-body text-sm">
@@ -105,6 +115,8 @@ const WhoItsFor = () => (
       <p className="font-body text-foreground-muted mt-8">
         Whichever group you are in, read the <Link to="/gift-city-funds-risks" className="text-secondary hover:underline">risks of GIFT City funds</Link> and how they differ from <Link to="/gift-city-funds-vs-mutual-funds" className="text-secondary hover:underline">regular Indian mutual funds</Link> before deciding.
       </p>
+
+      <PageFaqs items={PAGE_FAQS} className="my-12" />
 
       <OfficialSources items={["ifsca", "ifscaDirectory", "rbiLrs"]} />
     </div>

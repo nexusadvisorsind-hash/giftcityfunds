@@ -3,19 +3,31 @@ import { SEO } from "@/components/SEO";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { PageFaqs, type PageFaq } from "@/components/PageFaqs";
+const PAGE_FAQS: PageFaq[] = [
+  { q: "Is Anup Vatyani a GIFT City mutual fund distributor or an investment advisor?", a: "Anup Vatyani is an AMFI-registered Mutual Fund Distributor (ARN 106715). He explains how GIFT City funds work and can connect you with Fund Management Entities. He is not a SEBI-registered Investment Adviser and does not give personalised investment advice." },
+];
+
 
 const personSchema = {
   "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "url": "https://giftcityfunds.in/about",
+  "dateModified": "2026-10-09",
+  "mainEntity": {
   "@type": "Person",
+  "@id": "https://giftcityfunds.in/about#anup-vatyani",
   "name": "Anup Vatyani",
   "jobTitle": "AMFI-Registered Mutual Fund Distributor (ARN 106715)",
   "url": "https://giftcityfunds.in/about",
   "image": "https://giftcityfunds.in/images/anup-vatyani.jpg",
   "sameAs": ["https://www.linkedin.com/in/anup-vatyani-081b4142"],
   "identifier": { "@type": "PropertyValue", "propertyID": "AMFI ARN", "value": "106715" },
-  "knowsAbout": ["GIFT City", "IFSC fund structures", "Mutual funds", "Alternative Investment Funds", "NRI investing"],
+  "knowsAbout": ["GIFT City", "IFSC fund structures", "IFSCA regulations", "Mutual funds", "Alternative Investment Funds", "Portfolio Management Services", "NRI investing", "Liberalised Remittance Scheme", "PFIC for US-based NRIs"],
+  "hasCredential": { "@type": "EducationalOccupationalCredential", "credentialCategory": "Registration", "name": "AMFI-registered Mutual Fund Distributor", "identifier": "ARN 106715", "recognizedBy": { "@type": "Organization", "name": "Association of Mutual Funds in India", "url": "https://www.amfiindia.com/" } },
   "address": { "@type": "PostalAddress", "addressLocality": "Ahmedabad", "addressRegion": "Gujarat", "addressCountry": "IN" },
-  "worksFor": { "@type": "Organization", "name": "GIFT City Funds" },
+  "worksFor": { "@id": "https://giftcityfunds.in/#organization" },
+  },
 };
 
 const About = () => (
@@ -84,6 +96,8 @@ const About = () => (
           page.
         </p>
       </div>
+
+      <PageFaqs items={PAGE_FAQS} className="my-12" />
 
       <blockquote className="my-10 border-l-4 border-secondary pl-6 italic font-heading text-xl text-primary">
         "Understand the structure first. The decision gets easier once you do."

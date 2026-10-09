@@ -5,6 +5,7 @@ import { articles, getArticle } from "./insights/articles";
 import { formatDate } from "@/lib/formatDate";
 import NotFound from "./NotFound";
 import { AuthorByline } from "@/components/AuthorByline";
+import { PageFaqs } from "@/components/PageFaqs";
 
 const InsightArticle = () => {
   const { slug } = useParams();
@@ -20,6 +21,7 @@ const InsightArticle = () => {
     "image": "https://giftcityfunds.in/images/gift-city-skyline.jpg",
     "author": {
       "@type": "Person",
+      "@id": "https://giftcityfunds.in/about#anup-vatyani",
       "name": "Anup Vatyani",
       "url": "https://giftcityfunds.in/about",
       "image": "https://giftcityfunds.in/images/anup-vatyani.jpg",
@@ -28,7 +30,7 @@ const InsightArticle = () => {
     "publisher": { "@id": "https://giftcityfunds.in/#organization" },
     "mainEntityOfPage": url,
     "datePublished": article.datePublished,
-    "dateModified": article.datePublished,
+    "dateModified": article.dateModified ?? article.datePublished,
   };
   const more = articles.filter((a) => a.slug !== article.slug).slice(0, 3);
 
@@ -50,8 +52,9 @@ const InsightArticle = () => {
         <Breadcrumbs items={[{ name: "Home", url: "/" }, { name: "Insights", url: "/insights" }, { name: article.title, url: `/insights/${article.slug}` }]} />
         <article>
           <h1 className="font-heading font-bold text-3xl md:text-4xl text-primary mt-6 mb-4">{article.title}</h1>
-          <AuthorByline dateText={<>Published <time dateTime={article.datePublished}>{formatDate(article.datePublished)}</time></>} />
+          <AuthorByline dateText={article.dateModified ? <>Updated <time dateTime={article.dateModified}>{formatDate(article.dateModified)}</time></> : <>Published <time dateTime={article.datePublished}>{formatDate(article.datePublished)}</time></>} />
           {article.body}
+          {article.faqs && <PageFaqs items={article.faqs} className="mt-12" />}
         </article>
 
         <aside className="mt-14 pt-8 border-t border-border" aria-labelledby="more-insights">

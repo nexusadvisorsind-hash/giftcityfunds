@@ -3,6 +3,11 @@ import { SEO } from "@/components/SEO";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { OfficialSources } from "@/components/OfficialSources";
 import { AuthorByline } from "@/components/AuthorByline";
+import { PageFaqs, type PageFaq } from "@/components/PageFaqs";
+const PAGE_FAQS: PageFaq[] = [
+  { q: "How are GIFT City funds taxed for NRIs, country by country?", a: "India-side treatment depends on the fund's structure; the home-country rules differ: no personal income tax in the UAE, reporting fund status in the UK, PFIC rules in the US, foreign property reporting in Canada and the foreign-sourced income rules in Singapore." },
+];
+
 
 const URL = "https://giftcityfunds.in/gift-city-funds-nri-tax-by-country";
 const HEADLINE = "GIFT City Funds for NRIs by Country: UAE, UK, US, Canada and Singapore";
@@ -26,6 +31,7 @@ const countries = [
       "India and the UAE have a tax treaty. A UAE Tax Residency Certificate is usually needed to rely on it.",
       "Other Gulf countries have their own rules; check them separately.",
     ],
+    more: { to: "/gift-city-funds-for-uae-nris", label: "Full guide for UAE NRIs" },
   },
   {
     id: "uk",
@@ -36,6 +42,7 @@ const countries = [
       "On 6 April 2025 the remittance basis was replaced by the 4-year foreign income and gains (FIG) regime. It is available in your first four years of UK tax residence after at least ten years as a non-UK resident, and lets you claim relief from UK tax on eligible foreign income and gains.",
       "India and the UK have a tax treaty for income taxed in both countries.",
     ],
+    more: { to: "/gift-city-funds-for-uk-nris", label: "Full guide for UK NRIs" },
   },
   {
     id: "us",
@@ -155,6 +162,8 @@ const NriByCountry = () => (
           <li>Currency movements affect your result in your home currency. See the <Link to="/gift-city-funds-risks" className={link}>risks of GIFT City funds</Link>.</li>
         </ul>
       </section>
+
+      <PageFaqs items={PAGE_FAQS} className="my-12" />
 
       <OfficialSources items={["uaeTax", "hmrcOffshore", "ukFig", "irs8621", "craT1135", "irasOverseas", "incomeTax"]} />
 

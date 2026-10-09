@@ -4,6 +4,12 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { OfficialSources } from "@/components/OfficialSources";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, AlertTriangle } from "lucide-react";
+import { PageFaqs, type PageFaq } from "@/components/PageFaqs";
+const PAGE_FAQS: PageFaq[] = [
+  { q: "How to invest in GIFT City from the USA?", a: "Choose a fund that accepts US investors, complete the fund house's KYC including Form W-9, and transfer US Dollars from your US bank account. Before investing, check the fund's PFIC status and how you will report it on Form 8621." },
+  { q: "Can US citizens invest in GIFT City funds?", a: "Some GIFT City funds accept US citizens and green card holders, but many do not because of US reporting rules. Where they do, most will be PFICs for US tax, which can be costly; speak to a US tax adviser first." },
+];
+
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -95,6 +101,24 @@ const UsBasedNris = () => (
         <h2 className="font-heading font-semibold text-2xl text-primary mb-3">Documentation You'll Be Asked For</h2>
         <p className="font-body text-foreground-muted">Requirements vary by Fund Management Entity and by whether you're investing as an individual or an entity. Reach out to Anup for a current checklist.</p>
       </section>
+
+      <section className="my-12 font-body text-foreground-muted leading-relaxed space-y-4">
+        <h2 className="font-heading font-semibold text-2xl text-primary">PFIC, QEF and mark-to-market: the three US tax regimes</h2>
+        <p>If a GIFT City fund is a PFIC, US persons are taxed under one of three regimes. Which applies depends on elections you make and on information the fund provides.</p>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm border-collapse">
+            <thead><tr><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">Regime</th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">How gains are taxed</th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">What you need</th></tr></thead>
+            <tbody>
+              <tr><td className="border border-border px-3 py-2 font-medium text-primary">Excess distribution (default)</td><td className="border border-border px-3 py-2">Gains and large distributions spread over your holding period, taxed at the highest ordinary rate for each year, plus an interest charge</td><td className="border border-border px-3 py-2">Nothing to elect; usually the most costly outcome</td></tr>
+              <tr><td className="border border-border px-3 py-2 font-medium text-primary">QEF (Qualified Electing Fund)</td><td className="border border-border px-3 py-2">Your share of the fund's ordinary earnings and net capital gains each year, keeping capital gain treatment</td><td className="border border-border px-3 py-2">A PFIC Annual Information Statement from the fund, and a timely election</td></tr>
+              <tr><td className="border border-border px-3 py-2 font-medium text-primary">Mark-to-market</td><td className="border border-border px-3 py-2">Each year's rise in value taxed as ordinary income; losses allowed only up to earlier gains</td><td className="border border-border px-3 py-2">The units must count as marketable stock</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Every regime involves Form 8621 each year. Ask the fund house whether it provides a PFIC Annual Information Statement before you invest, and work through the choice with a US tax adviser. More detail: <a href="/insights/pfic-explained" className="text-secondary hover:underline">PFIC explained</a>.</p>
+      </section>
+
+      <PageFaqs items={PAGE_FAQS} className="my-12" />
 
       <div className="text-center pt-6 border-t border-border">
         <p className="font-body text-foreground-muted mb-4">None of this replaces a conversation with your CA. But if you'd like help understanding which structure and route makes sense to explore, Anup can walk you through the options.</p>

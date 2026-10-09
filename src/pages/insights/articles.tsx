@@ -2,6 +2,9 @@
 // To publish a new article: add an entry here and its URL to public/sitemap.xml.
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
+import TcsCalculator from "@/components/TcsCalculator";
+import type { PageFaq } from "@/components/PageFaqs";
+import { BarChart, FlowSteps } from "@/components/Diagrams";
 
 export interface InsightArticle {
   slug: string;
@@ -11,12 +14,17 @@ export interface InsightArticle {
   description: string;
   /** ISO date, e.g. "2026-09-21" */
   datePublished: string;
+  /** ISO date of the last substantive update. */
+  dateModified?: string;
+  /** Questions phrased the way people search; shown with FAQPage data. */
+  faqs?: PageFaq[];
   body: ReactNode;
 }
 
 export const articles: InsightArticle[] = [
   {
     slug: "how-to-open-gift-city-bank-account",
+    faqs: [{ q: "Can I open a GIFT City USD account?", a: "Yes. IFSC Banking Units in GIFT City offer US Dollar accounts and deposits to eligible NRIs, foreign citizens and, within LRS, resident Indians. Each bank sets its own minimum balance and documents." }],
     title: "How to Open a GIFT City Bank Account (IFSC Banking Unit)",
     seoTitle: "How to Open a GIFT City Bank Account: NRIs and Residents",
     description: "Who can open a foreign-currency account with a GIFT City IFSC Banking Unit, the documents banks ask for, how to fund it, and what to check before you choose a bank.",
@@ -66,6 +74,7 @@ export const articles: InsightArticle[] = [
   },
   {
     slug: "gift-city-fd-vs-nre-fcnr",
+    faqs: [{ q: "What are GIFT City FD interest rates?", a: "GIFT City fixed deposits are offered by IFSC Banking Units in US Dollars and other currencies. Rates are set by each bank, depend on tenure and amount, and change often, so compare the banks' current rate cards rather than relying on a single figure." }],
     title: "GIFT City Fixed Deposits vs NRE and FCNR Deposits",
     seoTitle: "GIFT City FD vs NRE vs FCNR Deposits for NRIs",
     description: "GIFT City foreign-currency fixed deposits compared with NRE and FCNR deposits: currency, tenure, Indian tax on interest, what changes when you return to India.",
@@ -120,6 +129,7 @@ export const articles: InsightArticle[] = [
   },
   {
     slug: "returning-to-india-gift-city-investments",
+    faqs: [{ q: "Returning NRI: what happens to GIFT City investments when you move back to India?", a: "Investments made while you were an NRI can generally continue to be held after you return, under FEMA's rules for returning residents. New money you send abroad after becoming resident goes through LRS. Your tax treatment changes with your residential status." }, { q: "How does RNOR status affect GIFT City investments?", a: "In the years you are 'resident but not ordinarily resident' (RNOR), income that arises and is received outside India is generally not taxed in India. That can make the first years after return a useful window for planning; confirm the dates with a chartered accountant." }],
     title: "Returning to India? What Happens to Your GIFT City Investments",
     seoTitle: "Returning to India: What Happens to GIFT City Investments",
     description: "What changes for your GIFT City funds, deposits and accounts when you move back to India: RNOR status, FEMA rules on holdings, LRS for new money, a checklist.",
@@ -169,81 +179,76 @@ export const articles: InsightArticle[] = [
     ),
   },
   {
-    slug: "nri-step-by-step",
-    title: "How NRIs Can Invest in GIFT City Funds: A Step-by-Step Overview",
-    seoTitle: "How NRIs Can Invest in GIFT City Funds: Step by Step",
-    description: "A step-by-step walkthrough of how NRIs and OCIs actually invest in GIFT City IFSC funds, from eligibility and KYC to remittance and unit allotment.",
-    datePublished: "2026-09-21",
-    body: (
-        <div className="font-body text-foreground-muted space-y-4 leading-relaxed">
-          <p>
-            For most NRIs and OCIs, investing in a GIFT City IFSC fund for the first time raises the same practical question: what actually happens, in what order? The regulatory framework is new enough that there isn't yet a well-worn path the way there is for, say, opening an NRE account. Here is the sequence in practice.
-          </p>
-          <h3 className="font-heading font-semibold text-lg text-primary pt-2">Step 1: Understand which structure you're choosing</h3>
-          <p>
-            GIFT City funds aren't one product — they're a family of structures (Mutual Fund FoFs, AIFs, PMS and Retail Feeder Funds) with different ticket sizes and risk profiles. Get this right first; changing structure later usually means starting the onboarding process over. See our <Link to="/funds-explained" className="text-secondary hover:underline">fund categories comparison</Link> for the full breakdown.
-          </p>
-          <h3 className="font-heading font-semibold text-lg text-primary pt-2">Step 2: Confirm eligibility and residency route</h3>
-          <p>
-            NRIs and OCIs typically invest directly in USD from an overseas bank account — no LRS involved, since the money never originates in India. This is one of the more attractive parts of the GIFT City structure for NRIs specifically. If you're a US-based NRI or US person, also check PFIC vs Non-PFIC status of the specific fund before proceeding.
-          </p>
-          <h3 className="font-heading font-semibold text-lg text-primary pt-2">Step 3: Prepare your KYC documentation</h3>
-          <p>
-            Standard requirements are a valid passport, PAN card (or Form 60 declaration where applicable), proof of overseas address, a recent bank statement, and a tax residency certificate (TRC) from your country of residence. US persons will additionally need to complete a W-9 or W-8BEN as appropriate.
-          </p>
-          <h3 className="font-heading font-semibold text-lg text-primary pt-2">Step 4: Onboard with the Fund Management Entity (FME)</h3>
-          <p>
-            Every GIFT City fund is run by an IFSCA-registered Fund Management Entity. You'll complete their subscription documents and KYC verification directly with them — this is not routed through a mutual fund distributor's platform in the way a domestic Indian mutual fund purchase is.
-          </p>
-          <h3 className="font-heading font-semibold text-lg text-primary pt-2">Step 5: Remit funds and receive your allotment</h3>
-          <p>
-            Once onboarding is complete, you remit funds in USD directly from your overseas account, and receive a unit allotment confirmation from the FME. From there, you track your holding through the FME's investor portal — much like tracking a brokerage account.
-          </p>
-          <p>
-            For the full walkthrough with all five steps laid out visually, see our <Link to="/how-to-invest" className="text-secondary hover:underline">How to Invest guide</Link>, or <Link to="/contact" className="text-secondary hover:underline">talk to Anup</Link> to get matched with the right FME for your situation.
-          </p>
-          <p className="text-sm italic pt-2">
-            This article is educational only and is not investment advice. Always review scheme documents and consult a qualified advisor before investing.
-          </p>
-        </div>
-      
-    ),
-  },
-  {
     slug: "lrs-tcs-gift-city",
-    title: "LRS, TCS and GIFT City: What Resident Indian Investors Should Know",
-    seoTitle: "LRS, TCS and GIFT City Funds for Resident Indians",
-    description: "How the Liberalised Remittance Scheme (LRS) and Tax Collected at Source (TCS) apply when a Resident Indian invests in a GIFT City fund.",
+    faqs: [{ q: "What is the GIFT City LRS scheme?", a: "There is no separate scheme: resident Indians invest in GIFT City through the RBI's Liberalised Remittance Scheme, which applies because the IFSC is treated as outside India for foreign exchange purposes." }, { q: "What is the LRS limit? Is it USD 250,000 a year?", a: "Yes. Under the Liberalised Remittance Scheme a resident individual can send up to USD 250,000 abroad in a financial year, across all permitted purposes including investing in GIFT City funds." }, { q: "How much TCS on foreign remittance for investment?", a: "For FY 2026-27, no TCS on the first ₹10 lakh of your LRS remittances in the year and 20% on investment remittances above that. It is credited back against your income tax." }, { q: "Is a GIFT City investment an overseas portfolio investment?", a: "Yes. For a resident Indian, investing in a GIFT City fund is treated as an overseas portfolio investment (OPI) under FEMA, made through LRS, because the IFSC is treated as outside India for foreign exchange purposes." }, { q: "What is Form A2 under LRS?", a: "Form A2 is the application and declaration you give your bank when sending money abroad under LRS. You state the purpose, such as overseas portfolio investment, and confirm the remittance is within your annual limit." }],
+    title: "LRS and TCS for GIFT City Funds: Limits, 20% TCS and a Calculator",
+    seoTitle: "LRS & TCS on GIFT City Investments: Calculator (FY 2026-27)",
+    description: "How LRS and TCS apply when a resident Indian invests in a GIFT City fund: the USD 250,000 limit, no TCS up to ₹10 lakh, 20% above it, how to claim it back, and a free calculator.",
     datePublished: "2026-09-21",
+    dateModified: "2026-10-09",
     body: (
         <div className="font-body text-foreground-muted space-y-4 leading-relaxed">
           <p>
-            Unlike NRIs, Resident Indians investing in a GIFT City fund route their money through the <strong className="text-primary">Liberalised Remittance Scheme (LRS)</strong> under the Overseas Portfolio Investment (OPI) framework — and that brings two things every Resident Indian investor should understand before remitting: the annual LRS limit, and Tax Collected at Source (TCS).
+            <strong className="text-primary">The short answer.</strong> A resident Indian invests in a GIFT City fund by sending money under the <strong className="text-primary">Liberalised Remittance Scheme (LRS)</strong>, because for foreign exchange purposes GIFT IFSC is treated as outside India. That brings two rules: an annual limit of <strong className="text-primary">USD 250,000</strong>, and Tax Collected at Source (TCS) of <strong className="text-primary">20% on the part of your year's remittances above ₹10 lakh</strong>. TCS is not a cost; you claim it back in your income tax return.
           </p>
-          <h3 className="font-heading font-semibold text-lg text-primary pt-2">The LRS limit</h3>
+
+          <TcsCalculator />
+
+          <h3 className="font-heading font-semibold text-xl text-primary pt-2">How much TCS on a GIFT City investment?</h3>
+          <BarChart
+            title="TCS on a GIFT City investment, if it is your only LRS remittance this year"
+            caption="20% on the portion above ₹10 lakh, FY 2026-27. Illustration only."
+            rows={[
+              { label: "Invest ₹5 lakh", value: 0, display: "₹0" },
+              { label: "Invest ₹10 lakh", value: 0, display: "₹0" },
+              { label: "Invest ₹15 lakh", value: 100000, display: "₹1,00,000" },
+              { label: "Invest ₹25 lakh", value: 300000, display: "₹3,00,000", tone: "amber" },
+              { label: "Invest ₹50 lakh", value: 800000, display: "₹8,00,000", tone: "amber" },
+            ]}
+          />
+
+          <h3 className="font-heading font-semibold text-xl text-primary pt-2">From your bank to the fund, and back to you</h3>
+          <FlowSteps
+            caption="TCS is collected when the money leaves and credited back when you file your return."
+            highlight={4}
+            steps={[
+              { title: "Form A2 at your bank", sub: "Purpose: overseas portfolio investment" },
+              { title: "Bank checks your LRS total", sub: "Across the financial year" },
+              { title: "USD sent to the fund", sub: "TCS deducted above ₹10 lakh" },
+              { title: "TCS shows in Form 26AS", sub: "Against your PAN" },
+              { title: "Claim it in your ITR", sub: "Set off or refunded" },
+            ]}
+          />
+
+          <h3 className="font-heading font-semibold text-xl text-primary pt-2">The ₹10 lakh threshold counts everything</h3>
           <p>
-            The RBI's LRS framework caps how much a Resident Indian can remit abroad in a financial year across all purposes combined — investments, travel, education, gifts and more. A GIFT City fund investment counts against this same annual limit, so it's worth checking how much of your LRS headroom you've already used elsewhere in the year before committing an amount.
+            The threshold is per person per financial year and adds up all your LRS remittances, not just investments. School fees sent abroad in June count towards it, so a GIFT City investment in November may cross the threshold sooner than you expect. Tell your bank about remittances made through other banks.
           </p>
-          <h3 className="font-heading font-semibold text-lg text-primary pt-2">How TCS applies</h3>
+
+          <h3 className="font-heading font-semibold text-xl text-primary pt-2">Getting the TCS back</h3>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Check that the TCS appears in Form 26AS or the Annual Information Statement.</li>
+            <li>Claim it in your income tax return; any excess over your tax is refunded.</li>
+            <li>Salaried? Ask your employer to take it into account when deducting TDS, so less cash is tied up.</li>
+          </ul>
+
+          <h3 className="font-heading font-semibold text-xl text-primary pt-2">Why NRIs are different</h3>
           <p>
-            Remittances under LRS for investment purposes are subject to Tax Collected at Source, deducted by your bank at the time of remittance above the threshold set by current rules. TCS is not an additional cost in the way a fee is — it's a prepayment of tax that you can claim as a credit against your total tax liability when filing your income tax return, or adjust against TDS on your salary if applicable.
+            NRIs investing money already held abroad send it directly in foreign currency. LRS and TCS apply to residents sending money out of India, so they do not arise. See <Link to="/gift-city-funds-for-uae-nris" className="text-secondary hover:underline">UAE NRIs</Link> or <Link to="/gift-city-route-checker" className="text-secondary hover:underline">check your route</Link>.
           </p>
-          <h3 className="font-heading font-semibold text-lg text-primary pt-2">Why this differs from the NRI route</h3>
+
+          <h3 className="font-heading font-semibold text-xl text-primary pt-2">Planning monthly investments?</h3>
           <p>
-            NRIs remit in USD from funds already held overseas, so LRS and TCS simply don't apply to them — this is one of the clearest structural differences between how Resident Indians and NRIs access the same GIFT City fund. It's a distinction worth understanding fully if your household includes both resident and non-resident family members considering the same fund.
+            Each instalment is a separate LRS remittance; see <Link to="/gift-city-sip" className="text-secondary hover:underline">SIP in GIFT City funds</Link> for a month-by-month example.
           </p>
-          <h3 className="font-heading font-semibold text-lg text-primary pt-2">What to check before remitting</h3>
-          <p>
-            Confirm your remaining LRS headroom for the financial year, the current TCS rate and threshold applicable to investment remittances (these have changed in past budgets, so don't rely on last year's figures), and how your specific FME handles TCS documentation for your records at tax-filing time.
-          </p>
-          <p>
-            For how this fits alongside the broader outbound investment picture, see our <Link to="/funds-explained" className="text-secondary hover:underline">Funds Explained</Link> page, or the full <Link to="/taxation" className="text-secondary hover:underline">Taxation guide</Link>.
+
+          <p className="text-sm">
+            Official sources: <a href="https://www.rbi.org.in/Scripts/FAQView.aspx?Id=115" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">RBI FAQs on LRS</a> · <a href="https://www.incometaxindia.gov.in/" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">Income Tax Department</a>
           </p>
           <p className="text-sm italic pt-2">
-            This article is educational only and is not tax advice. LRS limits and TCS rates change with policy updates — confirm current figures with your bank and a tax professional before remitting.
+            This article is educational and is not tax advice. Rates are as changed by the Finance Act, 2026 (effective 1 April 2026) and can change; confirm with your bank or chartered accountant before remitting.
           </p>
         </div>
-      
     ),
   },
   {
@@ -321,6 +326,7 @@ export const articles: InsightArticle[] = [
   },
   {
     slug: "gift-city-vs-nre-nro",
+    faqs: [{ q: "Should NRIs choose a GIFT City fund or an NRE account?", a: "They do different jobs. An NRE account holds rupees with tax-free interest and full repatriation; a GIFT City fund is a market-linked investment, usually in US Dollars, with no rupee conversion. Many NRIs use both." }],
     title: "GIFT City Fund vs NRE/NRO Investing: A Straight Comparison",
     description: "How a GIFT City fund compares with the NRE and NRO account route for NRIs — currency, repatriation, tax and structure differences explained.",
     datePublished: "2026-09-21",

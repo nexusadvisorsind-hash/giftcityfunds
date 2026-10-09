@@ -27,6 +27,25 @@ import HowToInvest from "./pages/HowToInvest";
 import GiftCityVsMutualFunds from "./pages/GiftCityVsMutualFunds";
 import Risks from "./pages/Risks";
 import NriByCountry from "./pages/NriByCountry";
+import FundList from "./pages/FundList";
+import GiftCitySip from "./pages/GiftCitySip";
+import GiftCityVsInternationalFunds from "./pages/GiftCityVsInternationalFunds";
+import ProsAndCons from "./pages/ProsAndCons";
+import WhatIsIfsca from "./pages/WhatIsIfsca";
+import UsStocksEtfs from "./pages/UsStocksEtfs";
+import Glossary from "./pages/Glossary";
+import RouteChecker from "./pages/RouteChecker";
+import UaeNris from "./pages/UaeNris";
+import UkNris from "./pages/UkNris";
+import GiftCityVsSingaporeDubai from "./pages/GiftCityVsSingaporeDubai";
+import GiftCityMarkets from "./pages/GiftCityMarkets";
+import FamilyOfficeFpi from "./pages/FamilyOfficeFpi";
+import BanksAndSetup from "./pages/BanksAndSetup";
+import GiftCityGuide from "./pages/GiftCityGuide";
+import GiftCityAif from "./pages/GiftCityAif";
+import GiftCityPms from "./pages/GiftCityPms";
+import GiftCityFeederFunds from "./pages/GiftCityFeederFunds";
+import MinimumInvestment from "./pages/MinimumInvestment";
 
 // Admin-only screens: loaded on demand, never prerendered.
 const Auth = lazy(() => import("./pages/Auth"));
@@ -77,11 +96,34 @@ const App = ({ ssrUrl, helmetContext }: AppProps = {}) => (
               <Route path="/gift-city-funds-vs-mutual-funds" element={<GiftCityVsMutualFunds />} />
               <Route path="/gift-city-funds-risks" element={<Risks />} />
               <Route path="/gift-city-funds-nri-tax-by-country" element={<NriByCountry />} />
+              <Route path="/gift-city-fund-list" element={<FundList />} />
+              <Route path="/gift-city-sip" element={<GiftCitySip />} />
+              <Route path="/gift-city-vs-international-mutual-funds" element={<GiftCityVsInternationalFunds />} />
+              <Route path="/gift-city-funds-pros-and-cons" element={<ProsAndCons />} />
+              <Route path="/what-is-ifsca" element={<WhatIsIfsca />} />
+              <Route path="/gift-city-us-stocks-etfs" element={<UsStocksEtfs />} />
+              <Route path="/tcs-on-foreign-remittance" element={<Navigate to="/insights/lrs-tcs-gift-city" replace />} />
+              <Route path="/gift-city-glossary" element={<Glossary />} />
+              <Route path="/gift-city-route-checker" element={<RouteChecker />} />
+              <Route path="/gift-city-funds-for-uae-nris" element={<UaeNris />} />
+              <Route path="/gift-city-funds-for-uk-nris" element={<UkNris />} />
+              <Route path="/gift-city-vs-singapore-dubai" element={<GiftCityVsSingaporeDubai />} />
+              <Route path="/gift-city-markets-gift-nifty" element={<GiftCityMarkets />} />
+              <Route path="/gift-city-family-office-fpi" element={<FamilyOfficeFpi />} />
+              <Route path="/gift-city-banks-and-business-setup" element={<BanksAndSetup />} />
+              <Route path="/gift-city-guide" element={<GiftCityGuide />} />
+              <Route path="/gift-city-aif" element={<GiftCityAif />} />
+              <Route path="/gift-city-pms" element={<GiftCityPms />} />
+              <Route path="/gift-city-feeder-funds" element={<GiftCityFeederFunds />} />
+              <Route path="/gift-city-minimum-investment" element={<MinimumInvestment />} />
+              <Route path="/insights/nri-step-by-step" element={<Navigate to="/how-to-invest" replace />} />
               {/* Consolidated legacy legal routes */}
               <Route path="/privacy" element={<Navigate to="/privacy-policy" replace />} />
               <Route path="/terms" element={<Navigate to="/terms-of-use" replace />} />
               {/* Redirects from prior IA */}
               <Route path="/about-us" element={<Navigate to="/about" replace />} />
+              <Route path="/funds/aif" element={<Navigate to="/gift-city-aif" replace />} />
+              <Route path="/funds/pms" element={<Navigate to="/gift-city-pms" replace />} />
               <Route path="/investments" element={<Navigate to="/funds-explained" replace />} />
               <Route path="/understanding-gift-city-funds" element={<Navigate to="/funds-explained" replace />} />
               <Route path="/resources" element={<Navigate to="/insights" replace />} />

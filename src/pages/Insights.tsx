@@ -103,6 +103,40 @@ const Insights = () => {
         </p>
       </div>
 
+      <h2 className="font-heading font-semibold text-2xl text-primary mb-4">Core guides and tools</h2>
+      <ul className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-12">
+          <li><Link to="/how-to-invest" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">How to invest</Link></li>
+          <li><Link to="/funds-explained" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">Types of GIFT City funds</Link></li>
+          <li><Link to="/who-its-for" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">Who can invest</Link></li>
+          <li><Link to="/gift-city-fund-list" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">GIFT City fund list</Link></li>
+          <li><Link to="/taxation" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">Taxation</Link></li>
+          <li><Link to="/insights/lrs-tcs-gift-city#calculator" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">TCS calculator</Link></li>
+          <li><Link to="/gift-city-route-checker" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">Route checker</Link></li>
+          <li><Link to="/gift-city-sip" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">SIP in GIFT City</Link></li>
+          <li><Link to="/gift-city-funds-vs-mutual-funds" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">vs mutual funds</Link></li>
+          <li><Link to="/gift-city-vs-international-mutual-funds" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">vs international funds</Link></li>
+          <li><Link to="/gift-city-us-stocks-etfs" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">ETFs and US stocks</Link></li>
+          <li><Link to="/gift-city-funds-risks" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">Risks</Link></li>
+          <li><Link to="/gift-city-funds-pros-and-cons" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">Pros and cons</Link></li>
+          <li><Link to="/us-based-nris" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">US-based NRIs</Link></li>
+          <li><Link to="/gift-city-funds-for-uae-nris" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">UAE NRIs</Link></li>
+          <li><Link to="/gift-city-funds-for-uk-nris" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">UK NRIs</Link></li>
+          <li><Link to="/gift-city-funds-nri-tax-by-country" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">NRIs by country</Link></li>
+          <li><Link to="/what-is-gift-city" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">What is GIFT City</Link></li>
+          <li><Link to="/what-is-ifsca" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">What is IFSCA</Link></li>
+          <li><Link to="/gift-city-vs-singapore-dubai" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">vs Singapore & Dubai</Link></li>
+          <li><Link to="/gift-city-glossary" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">Glossary</Link></li>
+          <li><Link to="/gift-city-markets-gift-nifty" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">GIFT Nifty & Exchanges</Link></li>
+          <li><Link to="/gift-city-family-office-fpi" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">Family Offices & FPIs</Link></li>
+          <li><Link to="/gift-city-banks-and-business-setup" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">Banks & Business Setup</Link></li>
+          <li><Link to="/gift-city-guide" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">GIFT City Guide</Link></li>
+          <li><Link to="/gift-city-aif" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">GIFT City AIF</Link></li>
+          <li><Link to="/gift-city-pms" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">GIFT City PMS</Link></li>
+          <li><Link to="/gift-city-feeder-funds" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">Feeder Funds</Link></li>
+          <li><Link to="/gift-city-minimum-investment" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">Minimums & Limits</Link></li>
+          <li><Link to="/faqs" className="block rounded-lg border border-border bg-surface px-3 py-2 font-body text-sm text-primary hover:border-teal hover:bg-teal/10">FAQs</Link></li>
+      </ul>
+
       <h2 className="font-heading font-semibold text-2xl text-primary mb-6">All articles</h2>
       <ul className="grid md:grid-cols-2 gap-6">
         {articles.map((a) => (

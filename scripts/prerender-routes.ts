@@ -23,8 +23,8 @@ const PER_PAGE_TAGS: RegExp[] = [
   /\s*<title>[\s\S]*?<\/title>/,
   /\s*<meta name="description"[^>]*>/,
   /\s*<meta name="robots"[^>]*>/,
-  /\s*<meta property="og:(?:type|site_name|title|description|url)"[^>]*>/g,
-  /\s*<meta name="twitter:(?:card|title|description)"[^>]*>/g,
+  /\s*<meta property="og:(?:type|site_name|title|description|url|image)"[^>]*>/g,
+  /\s*<meta name="twitter:(?:card|title|description|image)"[^>]*>/g,
 ];
 
 function routesFromSitemap(): string[] {

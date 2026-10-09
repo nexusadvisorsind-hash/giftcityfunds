@@ -24,6 +24,11 @@ const faqs: { g: string; qas: QA[] }[] = [
   { g: "Minimums and money", qas: [
     { q: "What is the minimum investment in a GIFT City fund?", a: "It depends on the structure. Mutual Fund FoFs and Retail Feeder Funds can start from roughly $5,000, while PMS and AIFs typically require $75,000 to $150,000 or more. Figures are indicative; confirm the current minimum with the fund.", link: { to: "/funds-explained", label: "Compare the structures" } },
     { q: "What is the LRS limit for resident Indians?", a: "The Liberalised Remittance Scheme currently allows a resident individual to remit up to USD 250,000 per financial year for permitted purposes, including investing in outbound GIFT City structures.", link: { to: "/insights/lrs-tcs-gift-city", label: "LRS, TCS and GIFT City" } },
+    { q: "What is the minimum investment in a GIFT City AIF?", a: "GIFT City AIFs are usually restricted schemes, where the minimum is commonly USD 150,000 per investor (accredited investors can be exempt). Portfolio management services need USD 75,000. Retail schemes set their own, often much lower, minimums.", link: { to: "/funds-explained", label: "Types of GIFT City funds" } },
+    { q: "Can I do a SIP in a GIFT City fund?", a: "Only where the scheme allows recurring investments. For resident Indians each instalment is an LRS remittance and counts towards the ₹10 lakh TCS threshold.", link: { to: "/gift-city-sip", label: "SIP in GIFT City funds" } },
+    { q: "How much TCS will I pay when investing from India?", a: "For FY 2026-27, nothing on the first ₹10 lakh of LRS remittances in the year, then 20% on investment remittances above it. TCS is credited back against your income tax.", link: { to: "/insights/lrs-tcs-gift-city#calculator", label: "TCS calculator" } },
+    { q: "Which fund houses offer GIFT City funds?", a: "Several large Indian fund houses run GIFT City funds through IFSCA-registered entities. We keep a dated, sourced list of them.", link: { to: "/gift-city-fund-list", label: "GIFT City fund list" } },
+    { q: "Are there ETFs in GIFT City?", a: "IFSCA rules allow ETFs to be listed on the GIFT IFSC exchanges, though the choice is small. Most investors use GIFT City brokers to buy US-listed ETFs instead.", link: { to: "/gift-city-us-stocks-etfs", label: "GIFT City ETFs and US stocks" } },
     { q: "Is my money repatriable?", a: "Generally yes, since these are USD-denominated structures — but always confirm the specific redemption and repatriation terms with the Fund Management Entity before investing." },
   ]},
   { g: "Safety and risk", qas: [
@@ -65,7 +70,7 @@ const Faqs = () => (
     />
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
       <Breadcrumbs items={[{ name: "Home", url: "/" }, { name: "FAQs", url: "/faqs" }]} />
-      <h1 className="font-heading font-bold text-3xl md:text-4xl text-primary mt-6 mb-10">Frequently Asked Questions</h1>
+      <h1 className="font-heading font-bold text-3xl md:text-4xl text-primary mt-6 mb-10">GIFT City Funds: Frequently Asked Questions</h1>
       {faqs.map((g) => (
         <section key={g.g} className="mb-10">
           <h2 className="font-heading font-semibold text-2xl text-primary mb-4">{g.g}</h2>
