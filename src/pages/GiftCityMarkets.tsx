@@ -33,7 +33,7 @@ const GiftCityMarkets = () => (
 
     <h2 className={h2}>The GIFT City exchanges at a glance</h2>
     <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
-      <table className={table}>
+      <table className={table}><caption className="sr-only">The GIFT City exchanges at a glance</caption>
         <thead><tr><th className={th}>Exchange</th><th className={th}>Group</th><th className={th}>What trades there</th></tr></thead>
         <tbody>
           <tr><td className={td}>NSE International Exchange (NSE IX)</td><td className={td}>NSE</td><td className={td}>GIFT Nifty and other index futures, stock derivatives, bonds, receipts on selected US stocks</td></tr>
@@ -63,7 +63,7 @@ const GiftCityMarkets = () => (
 
     <h2 className={h2}>Who can trade in GIFT City markets</h2>
     <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
-      <table className={table}>
+      <table className={table}><caption className="sr-only">Who can trade in GIFT City markets</caption>
         <thead><tr><th className={th}>Investor</th><th className={th}>GIFT Nifty and other derivatives</th><th className={th}>Shares, ETFs and bonds</th></tr></thead>
         <tbody>
           <tr><td className={td}>NRIs and OCIs</td><td className={td}>Yes, through an IFSC broker</td><td className={td}>Yes</td></tr>

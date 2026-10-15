@@ -59,7 +59,7 @@ const Taxation = () => (
       <section className="mb-10">
         <h2 className="font-heading font-semibold text-2xl text-primary mb-4">India-side tax treatment (general reference)</h2>
         <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
-          <table className="w-full text-sm border-collapse">
+          <table className="w-full text-sm border-collapse"><caption className="sr-only">India-side tax treatment (general reference)</caption>
             <thead><tr className="bg-surface"><th className="text-left p-3 border border-border">Income type</th><th className="text-left p-3 border border-border">Typical treatment (IFSC Cat III AIF)</th></tr></thead>
             <tbody>{rows.map(([a, b]) => <tr key={a}><td className="p-3 border border-border">{a}</td><td className="p-3 border border-border">{b}</td></tr>)}</tbody>
           </table>
@@ -117,7 +117,7 @@ const Taxation = () => (
         <h2 className="font-heading font-semibold text-2xl text-primary">Tax benefits for IFSC units and funds in GIFT City</h2>
         <p>Most of GIFT City's headline tax benefits apply to businesses and funds set up in the IFSC, not directly to individual investors. As summarised in a tax note published on IFSCA's website:</p>
         <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
-          <table className="w-full text-sm border-collapse">
+          <table className="w-full text-sm border-collapse"><caption className="sr-only">Tax benefits for IFSC units and funds in GIFT City</caption>
             <thead><tr><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">Benefit</th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">What it means</th></tr></thead>
             <tbody>
               <tr><td className="border border-border px-3 py-2">10-year tax holiday (Section 80LA)</td><td className="border border-border px-3 py-2">100% deduction of business income for any 10 consecutive years out of 15</td></tr>

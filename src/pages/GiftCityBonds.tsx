@@ -41,7 +41,7 @@ const GiftCityBonds = () => (
 
     <h2 className={h2}>Types of bonds you will find</h2>
     <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
-      <table className={table}>
+      <table className={table}><caption className="sr-only">Types of bonds you will find</caption>
         <thead><tr><th className={th}>Type</th><th className={th}>Currency</th><th className={th}>What to know</th></tr></thead>
         <tbody>
           <tr><td className={td}>Foreign currency bonds of Indian issuers</td><td className={td}>Usually USD</td><td className={td}>Banks, companies and public sector firms raise dollars; often large minimum lots</td></tr>

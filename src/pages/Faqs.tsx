@@ -12,7 +12,7 @@ const faqs: { g: string; qas: QA[] }[] = [
     { q: "Who regulates GIFT City funds?", a: "IFSCA, the International Financial Services Centres Authority. It is the unified regulator for financial services in the IFSC. SEBI regulates domestic Indian mutual funds, not GIFT City funds.", link: { to: "/insights/ifsca-vs-sebi", label: "IFSCA vs SEBI" } },
     { q: "What is the difference between inbound and outbound GIFT City funds?", a: "An inbound fund brings money from outside India into Indian markets. An outbound fund takes money from India or global investors into international markets.", link: { to: "/funds-explained", label: "Fund structures explained" } },
     { q: "Is a GIFT City fund the same as a regular Indian mutual fund?", a: "No. It's regulated by IFSCA (not SEBI alone), denominated in foreign currency, and structured to operate within India's International Financial Services Centre — with different rules on eligibility, currency and taxation." },
-    { q: "Do I need a PAN card to invest?", a: "For many GIFT City structures, a PAN isn't mandatory for eligible foreign investors, though requirements vary by Fund Management Entity and fund category. Confirm with the specific fund before assuming either way." },
+    { q: "Do I need a PAN card to invest?", a: "Resident Indians need a PAN. For NRIs and foreign citizens it depends on the fund house: some require a PAN, others accept a declaration from investors whose only Indian income is from IFSC funds. Confirm with the specific fund before you start." },
     { q: "What currency do I invest in?", a: "Almost always US Dollars. You transfer USD in, and — on redemption — receive USD out; the fund handles INR conversion internally." },
   ]},
   { g: "Eligibility", qas: [

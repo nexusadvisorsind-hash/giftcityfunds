@@ -55,7 +55,7 @@ const FundsExplained = () => (
 
       <h2 className="font-heading font-semibold text-2xl text-primary mb-4">The four structures, compared</h2>
       <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto mb-4">
-        <table className="w-full border-collapse text-sm">
+        <table className="w-full border-collapse text-sm"><caption className="sr-only">The four structures, compared</caption>
           <thead>
             <tr className="bg-surface">
               <th className="text-left p-3 border border-border">Structure</th>
@@ -100,7 +100,7 @@ const FundsExplained = () => (
         Behind the product names above, every GIFT City fund is registered under the IFSCA (Fund Management) Regulations, 2025 as one of a few scheme types. The type decides who may invest and the minimum ticket, and each is run by a matching category of Fund Management Entity (FME).
       </p>
       <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto mb-4">
-        <table className="w-full border-collapse text-sm">
+        <table className="w-full border-collapse text-sm"><caption className="sr-only">IFSCA's legal categories: retail, restricted and venture capital schemes</caption>
           <thead>
             <tr className="bg-surface">
               <th scope="col" className="text-left p-3 border border-border">Scheme type</th>
@@ -156,7 +156,7 @@ const FundsExplained = () => (
         <p>In India, SEBI classifies AIFs as Category I (for example venture capital), Category II (for example private equity and private credit) and Category III (for example hedge-fund-style strategies). IFSCA does not use these categories. In GIFT City, an alternative investment fund is set up as a <strong className="text-primary">venture capital scheme</strong> or a <strong className="text-primary">restricted scheme</strong>, and the scheme type decides who may invest and the minimum.</p>
         <h2 className="font-heading font-semibold text-2xl text-primary">GIFT City investment minimum amount, at a glance</h2>
         <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
-          <table className="w-full text-sm border-collapse">
+          <table className="w-full text-sm border-collapse"><caption className="sr-only">GIFT City investment minimum amount, at a glance</caption>
             <thead><tr><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">Product</th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">Typical minimum</th></tr></thead>
             <tbody>
               <tr><td className="border border-border px-3 py-2">Retail scheme / feeder fund</td><td className="border border-border px-3 py-2">Set by the scheme, often a few thousand USD</td></tr>

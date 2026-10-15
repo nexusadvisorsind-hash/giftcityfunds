@@ -49,7 +49,7 @@ const WhatIsIfsca = () => (
 
     <h2 className={h2}>Key facts</h2>
     <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
-      <table className={table}>
+      <table className={table}><caption className="sr-only">IFSCA key facts</caption>
         <tbody>
           <tr><td className={th}>Full name</td><td className={td}>International Financial Services Centres Authority</td></tr>
           <tr><td className={th}>Law</td><td className={td}>International Financial Services Centres Authority Act, 2019</td></tr>

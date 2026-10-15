@@ -18,7 +18,6 @@ const InsightArticle = () => {
     "@type": "Article",
     "headline": article.title,
     "description": article.description,
-    "image": "https://giftcityfunds.in/images/gift-city-skyline.jpg",
     "author": {
       "@type": "Person",
       "@id": "https://giftcityfunds.in/about#anup-vatyani",

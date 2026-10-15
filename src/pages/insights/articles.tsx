@@ -110,7 +110,7 @@ export const articles: InsightArticle[] = [
           </p>
           <h3 className="font-heading font-semibold text-lg text-primary pt-2">Side by side</h3>
           <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
-            <table className="w-full border-collapse text-sm">
+            <table className="w-full border-collapse text-sm"><caption className="sr-only">GIFT City FDs vs NRE and FCNR deposits, side by side</caption>
               <thead>
                 <tr className="bg-surface">
                   <th scope="col" className="text-left p-3 border border-border">Feature</th>
@@ -240,7 +240,7 @@ export const articles: InsightArticle[] = [
           />
           <h3 className="font-heading font-semibold text-xl text-primary pt-4">What happens to each holding</h3>
           <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto not-prose">
-            <table className="w-full text-sm border-collapse">
+            <table className="w-full text-sm border-collapse"><caption className="sr-only">What happens to each holding</caption>
               <thead><tr><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">Holding</th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">After you return</th></tr></thead>
               <tbody>
                 <tr><td className="border border-border px-3 py-2 font-medium text-primary">GIFT City fund units</td><td className="border border-border px-3 py-2">Can usually be kept; update your status with the fund house</td></tr>
@@ -330,7 +330,7 @@ export const articles: InsightArticle[] = [
           </p>
           <h3 className="font-heading font-semibold text-xl text-primary pt-4">LRS limit vs TCS threshold: not the same thing</h3>
           <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto not-prose">
-            <table className="w-full text-sm border-collapse">
+            <table className="w-full text-sm border-collapse"><caption className="sr-only">LRS limit vs TCS threshold: not the same thing</caption>
               <thead><tr><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2"></th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">LRS limit</th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">TCS threshold</th></tr></thead>
               <tbody>
                 <tr><td className="border border-border px-3 py-2 font-medium text-primary">Set by</td><td className="border border-border px-3 py-2">RBI (foreign exchange)</td><td className="border border-border px-3 py-2">Income-tax law</td></tr>
@@ -384,7 +384,7 @@ export const articles: InsightArticle[] = [
           </p>
           <h3 className="font-heading font-semibold text-xl text-primary pt-4">The three structures compared</h3>
           <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto not-prose">
-            <table className="w-full text-sm border-collapse">
+            <table className="w-full text-sm border-collapse"><caption className="sr-only">The three structures compared</caption>
               <thead><tr><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2"></th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">Mutual Fund FoF / feeder</th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">PMS</th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">AIF</th></tr></thead>
               <tbody>
                 <tr><td className="border border-border px-3 py-2 font-medium text-primary">Typical minimum</td><td className="border border-border px-3 py-2">From USD 500 for some funds</td><td className="border border-border px-3 py-2">USD 75,000</td><td className="border border-border px-3 py-2">Commonly USD 150,000</td></tr>
@@ -475,7 +475,7 @@ export const articles: InsightArticle[] = [
           </p>
           <h3 className="font-heading font-semibold text-xl text-primary pt-4">IFSCA and SEBI side by side</h3>
           <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto not-prose">
-            <table className="w-full text-sm border-collapse">
+            <table className="w-full text-sm border-collapse"><caption className="sr-only">IFSCA and SEBI side by side</caption>
               <thead><tr><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2"></th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">IFSCA</th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">SEBI</th></tr></thead>
               <tbody>
                 <tr><td className="border border-border px-3 py-2 font-medium text-primary">Set up under</td><td className="border border-border px-3 py-2">IFSCA Act, 2019; established 27 April 2020</td><td className="border border-border px-3 py-2">SEBI Act, 1992</td></tr>
@@ -573,7 +573,7 @@ export const articles: InsightArticle[] = [
           />
           <h3 className="font-heading font-semibold text-xl text-primary pt-4">NRE vs NRO vs GIFT City fund</h3>
           <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto not-prose">
-            <table className="w-full text-sm border-collapse">
+            <table className="w-full text-sm border-collapse"><caption className="sr-only">NRE vs NRO vs GIFT City fund</caption>
               <thead><tr><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2"></th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">NRE</th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">NRO</th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">GIFT City fund</th></tr></thead>
               <tbody>
                 <tr><td className="border border-border px-3 py-2 font-medium text-primary">Currency</td><td className="border border-border px-3 py-2">INR</td><td className="border border-border px-3 py-2">INR</td><td className="border border-border px-3 py-2">Usually USD</td></tr>
@@ -660,7 +660,7 @@ export const articles: InsightArticle[] = [
           </p>
           <h3 className="font-heading font-semibold text-xl text-primary pt-4">Three routes side by side</h3>
           <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto not-prose">
-            <table className="w-full text-sm border-collapse">
+            <table className="w-full text-sm border-collapse"><caption className="sr-only">Three routes side by side</caption>
               <thead><tr><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2"></th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">GIFT City fund</th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">Overseas brokerage account</th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">US stocks/ETFs via GIFT City broker</th></tr></thead>
               <tbody>
                 <tr><td className="border border-border px-3 py-2 font-medium text-primary">Who chooses holdings</td><td className="border border-border px-3 py-2">Fund manager</td><td className="border border-border px-3 py-2">You</td><td className="border border-border px-3 py-2">You</td></tr>
@@ -759,7 +759,7 @@ export const articles: InsightArticle[] = [
           </ul>
           <h3 className="font-heading font-semibold text-xl text-primary pt-4">Documents checklist for NRIs</h3>
           <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto not-prose">
-            <table className="w-full text-sm border-collapse">
+            <table className="w-full text-sm border-collapse"><caption className="sr-only">Documents checklist for NRIs</caption>
               <thead><tr><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">Document</th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">Why it is asked for</th></tr></thead>
               <tbody>
                 <tr><td className="border border-border px-3 py-2 font-medium text-primary">Passport</td><td className="border border-border px-3 py-2">Identity and citizenship</td></tr>
@@ -823,7 +823,7 @@ export const articles: InsightArticle[] = [
           </p>
           <h3 className="font-heading font-semibold text-xl text-primary pt-4">The three PFIC tax regimes</h3>
           <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto not-prose">
-            <table className="w-full text-sm border-collapse">
+            <table className="w-full text-sm border-collapse"><caption className="sr-only">The three PFIC tax regimes</caption>
               <thead><tr><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">Regime</th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">How gains are taxed</th><th className="text-left font-heading text-primary bg-surface border border-border px-3 py-2">What it needs</th></tr></thead>
               <tbody>
                 <tr><td className="border border-border px-3 py-2 font-medium text-primary">Excess distribution (default)</td><td className="border border-border px-3 py-2">Gains spread over the holding period, taxed at the highest ordinary rate for each year, plus an interest charge</td><td className="border border-border px-3 py-2">Nothing; it applies automatically</td></tr>

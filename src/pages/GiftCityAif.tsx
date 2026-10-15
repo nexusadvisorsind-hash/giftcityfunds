@@ -28,7 +28,7 @@ const GiftCityAif = () => (
 
     <h2 className={h2}>GIFT City AIFs vs SEBI AIFs</h2>
     <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
-      <table className={table}>
+      <table className={table}><caption className="sr-only">GIFT City AIFs vs SEBI AIFs</caption>
         <thead><tr><th className={th}></th><th className={th}>GIFT City AIF</th><th className={th}>SEBI AIF (domestic)</th></tr></thead>
         <tbody>
           <tr><td className={th}>Regulator</td><td className={td}>IFSCA</td><td className={td}>SEBI</td></tr>

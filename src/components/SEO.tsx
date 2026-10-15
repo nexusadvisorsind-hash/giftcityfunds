@@ -49,15 +49,17 @@ const organizationSchema = {
     "name": "Anup Vatyani",
     "url": "https://giftcityfunds.in/about",
     "image": "https://giftcityfunds.in/images/anup-vatyani.jpg",
-    "jobTitle": "Mutual Fund Distributor",
-    "identifier": "ARN106715"
+    "jobTitle": "AMFI-registered Mutual Fund Distributor (ARN 106715)",
+    "identifier": "ARN106715",
+    "sameAs": ["https://www.linkedin.com/in/anup-vatyani-081b4142"]
   },
   "description": "Informational platform about GIFT City and IFSC mutual fund frameworks. No investment advice.",
   "contactPoint": [{
     "@type": "ContactPoint",
     "email": "info@giftcityfunds.in",
     "contactType": "Customer Service",
-    "areaServed": "IN"
+    "areaServed": ["IN", "AE", "GB", "US", "CA", "SG", "AU"],
+    "availableLanguage": ["English"]
   }],
   "sameAs": ["https://www.linkedin.com/in/anup-vatyani-081b4142"]
 };
@@ -91,7 +93,17 @@ const enrich = (item: object): object => {
       name: "Anup Vatyani",
       url: "https://giftcityfunds.in/about",
       image: "https://giftcityfunds.in/images/anup-vatyani.jpg",
+      jobTitle: "AMFI-registered Mutual Fund Distributor (ARN 106715)",
       identifier: "ARN106715",
+      worksFor: { "@id": "https://giftcityfunds.in/#organization" },
+      sameAs: ["https://www.linkedin.com/in/anup-vatyani-081b4142"],
+      hasCredential: {
+        "@type": "EducationalOccupationalCredential",
+        credentialCategory: "Registration",
+        name: "AMFI-registered Mutual Fund Distributor",
+        identifier: "ARN 106715",
+        recognizedBy: { "@type": "Organization", name: "Association of Mutual Funds in India", url: "https://www.amfiindia.com/" },
+      },
     },
     publisher: { "@id": "https://giftcityfunds.in/#organization" },
   };

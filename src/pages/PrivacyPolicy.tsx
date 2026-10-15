@@ -109,7 +109,7 @@ const PrivacyPolicy = () => {
                 in the situations below, and only what each purpose needs.
               </p>
               <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
-                <table className="w-full border-collapse text-sm">
+                <table className="w-full border-collapse text-sm"><caption className="sr-only">2. What we collect, why, and for how long</caption>
                   <thead>
                     <tr className="bg-surface text-left">
                       <th scope="col" className={cell}>Where</th>

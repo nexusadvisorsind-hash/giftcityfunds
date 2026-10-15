@@ -26,7 +26,7 @@ const FamilyOfficeFpi = () => (
 
     <h2 className={h2}>The structures compared</h2>
     <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
-      <table className={table}>
+      <table className={table}><caption className="sr-only">The structures compared</caption>
         <thead><tr><th className={th}>Structure</th><th className={th}>What it is for</th><th className={th}>Who it suits</th></tr></thead>
         <tbody>
           <tr><td className={td}>Family investment fund (family office)</td><td className={td}>Pooling and investing one family's wealth from GIFT IFSC</td><td className={td}>Wealthy Indian and NRI families</td></tr>

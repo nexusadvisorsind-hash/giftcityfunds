@@ -52,7 +52,7 @@ const UsStocksEtfs = () => (
 
     <h2 className={h2}>US ETFs via GIFT City vs a GIFT City fund vs an international mutual fund</h2>
     <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
-      <table className={table}>
+      <table className={table}><caption className="sr-only">US ETFs via GIFT City vs a GIFT City fund vs an international mutual fund</caption>
         <thead><tr><th className={th}></th><th className={th}>US ETFs via IFSC broker</th><th className={th}>GIFT City outbound fund</th><th className={th}>Indian international MF</th></tr></thead>
         <tbody>
           <tr><td className={th}>Who chooses holdings</td><td className={td}>You</td><td className={td}>Fund manager</td><td className={td}>Fund manager</td></tr>

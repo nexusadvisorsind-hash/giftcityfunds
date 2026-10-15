@@ -1,0 +1,144 @@
+{
+  "redirects": [
+    {
+      "source": "/about-us",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/investments",
+      "destination": "/funds-explained",
+      "permanent": true
+    },
+    {
+      "source": "/understanding-gift-city-funds",
+      "destination": "/funds-explained",
+      "permanent": true
+    },
+    {
+      "source": "/resources",
+      "destination": "/insights",
+      "permanent": true
+    },
+    {
+      "source": "/knowledge/what-is-gift-city-fund",
+      "destination": "/what-is-gift-city",
+      "permanent": true
+    },
+    {
+      "source": "/knowledge/how-ifsc-works",
+      "destination": "/what-is-gift-city",
+      "permanent": true
+    },
+    {
+      "source": "/knowledge/mutual-funds-in-gift-city",
+      "destination": "/funds-explained",
+      "permanent": true
+    },
+    {
+      "source": "/knowledge/tax-benefits-for-nris",
+      "destination": "/taxation",
+      "permanent": true
+    },
+    {
+      "source": "/team/anup-vatyani",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/privacy",
+      "destination": "/privacy-policy",
+      "permanent": true
+    },
+    {
+      "source": "/terms",
+      "destination": "/terms-of-use",
+      "permanent": true
+    },
+    {
+      "source": "/insights/nri-step-by-step",
+      "destination": "/how-to-invest",
+      "permanent": true
+    },
+    {
+      "source": "/gift-city-mutual-funds-list",
+      "destination": "/gift-city-fund-list",
+      "permanent": true
+    },
+    {
+      "source": "/tcs-calculator",
+      "destination": "/insights/lrs-tcs-gift-city",
+      "permanent": true
+    },
+    {
+      "source": "/tcs-on-foreign-remittance",
+      "destination": "/insights/lrs-tcs-gift-city",
+      "permanent": true
+    },
+    {
+      "source": "/glossary",
+      "destination": "/gift-city-glossary",
+      "permanent": true
+    },
+    {
+      "source": "/us-based-nris",
+      "destination": "/gift-city-funds-for-nri#us",
+      "permanent": true
+    },
+    {
+      "source": "/gift-city-funds-nri-tax-by-country",
+      "destination": "/gift-city-funds-for-nri",
+      "permanent": true
+    },
+    {
+      "source": "/gift-city-funds-for-uae-nris",
+      "destination": "/gift-city-funds-for-nri#uae",
+      "permanent": true
+    },
+    {
+      "source": "/gift-city-funds-for-uk-nris",
+      "destination": "/gift-city-funds-for-nri#uk",
+      "permanent": true
+    },
+    {
+      "source": "/funds/aif",
+      "destination": "/gift-city-aif",
+      "permanent": true
+    },
+    {
+      "source": "/funds/pms",
+      "destination": "/gift-city-pms",
+      "permanent": true
+    },
+    {
+      "source": "/insights/how-to-open-gift-city-account",
+      "destination": "/insights/how-to-open-gift-city-bank-account",
+      "permanent": true
+    },
+    {
+      "source": "/gift-city-insurance-for-nri",
+      "destination": "/gift-city-insurance",
+      "permanent": true
+    },
+    {
+      "source": "/gift-city-kyc-documents",
+      "destination": "/gift-city-document-checklist",
+      "permanent": true
+    },
+    {
+      "source": "/gift-city-new-rules",
+      "destination": "/gift-city-rules-updates",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/admin",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/auth",
+      "destination": "/index.html"
+    }
+  ]
+}

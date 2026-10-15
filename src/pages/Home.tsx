@@ -11,6 +11,10 @@ const PAGE_FAQS: PageFaq[] = [
   { q: "What is GiftCityFunds?", a: "GiftCityFunds (giftcityfunds.in) is an educational website about GIFT City funds, written by Anup Vatyani, an AMFI-registered Mutual Fund Distributor (ARN 106715). It is not a fund house, a bank or an investment platform, and it does not give personalised advice." },
   { q: "What are GIFT City mutual funds?", a: "GIFT City mutual funds are funds set up in India's International Financial Services Centre (GIFT IFSC) in Gandhinagar and regulated by IFSCA. They include retail schemes, feeder funds, AIFs and portfolio management services, run by IFSCA-registered Fund Management Entities, many of them arms of well-known Indian fund houses." },
   { q: "Are GIFT City funds USD funds?", a: "Most are. GIFT City funds are usually denominated in US Dollars: you invest in dollars and redeem in dollars. That suits NRIs who earn in foreign currency, and gives resident Indians a dollar holding through LRS." },
+  { q: "Is a GIFT City fund the same as a regular Indian mutual fund?", a: "No. A GIFT City fund is regulated by IFSCA rather than SEBI, is usually in US Dollars, and has its own rules on who can invest, minimums and tax. There is also no SIP: you invest lump sums." },
+  { q: "Do I need a PAN card to invest in GIFT City funds?", a: "Resident Indians need a PAN. For NRIs and foreign citizens it depends on the fund house: some require a PAN, others accept a declaration from investors whose only Indian income is from IFSC funds." },
+  { q: "Who regulates GIFT City funds?", a: "The International Financial Services Centres Authority (IFSCA), the single regulator for financial services in GIFT IFSC. SEBI regulates domestic Indian mutual funds, not GIFT City funds." },
+  { q: "How is a GIFT City fund taxed for a US-based NRI?", a: "Mainly under US rules: most GIFT City funds are likely to be PFICs, which brings annual Form 8621 reporting and potentially punitive tax unless an election is available. Many schemes also do not accept US persons. Take US tax advice first." },
 ];
 
 
@@ -422,21 +426,11 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Frequently Asked */}
+        {/* Frequently asked: answered, with FAQPage schema */}
         <section className="py-16 bg-surface">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-8">Frequently Asked</h2>
-            <ul className="space-y-3 mb-6">
-              {[
-                "Is a GIFT City fund the same as a regular Indian mutual fund?",
-                "Do I need a PAN card to invest?",
-                "How is a GIFT City fund taxed for a US-based NRI?",
-                "Who regulates GIFT City funds?",
-              ].map((q) => (
-                <li key={q} className="bg-background p-4 rounded-lg border border-border font-body text-primary">{q}</li>
-              ))}
-            </ul>
-            <Link to="/faqs" className="font-body text-secondary hover:underline inline-flex items-center">
+            <PageFaqs items={PAGE_FAQS} title="GIFT City funds: frequently asked questions" />
+            <Link to="/faqs" className="mt-4 font-body text-secondary hover:underline inline-flex items-center">
               Read all FAQs <ArrowRight className="ml-1 h-4 w-4" />
             </Link>
           </div>
@@ -464,13 +458,6 @@ const Home = () => {
             </Link>
             </div>
             </div>
-          </div>
-        </section>
-
-        {/* Final CTA */}
-        <section className="py-16 bg-background">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <PageFaqs items={PAGE_FAQS} title="GIFT City funds: quick answers" />
           </div>
         </section>
 

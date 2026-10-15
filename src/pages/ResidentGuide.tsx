@@ -40,7 +40,7 @@ const ResidentGuide = () => (
 
     <h2 className={h2}>What resident Indians can and cannot do</h2>
     <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
-      <table className={table}>
+      <table className={table}><caption className="sr-only">What resident Indians can and cannot do</caption>
         <thead><tr><th className={th}>Product</th><th className={th}>Allowed for residents?</th></tr></thead>
         <tbody>
           <tr><td className={td}>Outbound GIFT City funds</td><td className={td}>Yes, under LRS</td></tr>

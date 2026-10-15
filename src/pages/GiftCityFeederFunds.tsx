@@ -37,7 +37,7 @@ const GiftCityFeederFunds = () => (
 
     <h2 className={h2}>Feeder fund vs direct FPI, side by side</h2>
     <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
-      <table className={table}>
+      <table className={table}><caption className="sr-only">Feeder fund vs direct FPI, side by side</caption>
         <thead><tr><th className={th}></th><th className={th}>Feeder fund</th><th className={th}>Direct FPI fund</th></tr></thead>
         <tbody>
           <tr><td className={th}>What it holds</td><td className={td}>Units of one underlying fund</td><td className={td}>Its own portfolio of securities</td></tr>

@@ -40,7 +40,7 @@ const GiftCityGuide = () => (
 
     <h2 className={h2}>Key facts</h2>
     <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
-      <table className={table}>
+      <table className={table}><caption className="sr-only">GIFT City key facts: location, ownership and connectivity</caption>
         <tbody>
           <tr><td className={th}>Full name</td><td className={td}>Gujarat International Finance Tec-City</td></tr>
           <tr><td className={th}>Developer and owner</td><td className={td}>Gujarat International Finance Tec-City Company Ltd (GIFTCL), Government of Gujarat</td></tr>

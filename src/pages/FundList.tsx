@@ -63,7 +63,7 @@ const FundList = () => (
     <h2 className={h2}>GIFT City mutual funds list: fund houses</h2>
     <p className="font-body text-sm text-foreground-muted mb-3">Alphabetical. Last checked {LAST_CHECKED}. Not exhaustive.</p>
     <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
-      <table className={table}>
+      <table className={table}><caption className="sr-only">GIFT City mutual funds list: fund houses</caption>
         <thead>
           <tr><th className={th}>Fund house</th><th className={th}>GIFT City entity / presence</th><th className={th}>Focus (per source)</th><th className={th}>Direction</th><th className={th}>Source</th></tr>
         </thead>

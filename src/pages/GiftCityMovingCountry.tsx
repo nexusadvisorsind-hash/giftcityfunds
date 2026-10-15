@@ -27,7 +27,7 @@ const GiftCityMovingCountry = () => (
 
     <h2 className={h2}>Three moves, side by side</h2>
     <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
-      <table className={table}>
+      <table className={table}><caption className="sr-only">Three moves, side by side</caption>
         <thead><tr><th className={th}></th><th className={th}>NRI returning to India</th><th className={th}>Resident moving abroad</th><th className={th}>NRI moving between countries</th></tr></thead>
         <tbody>
           <tr><td className={th}>Can you keep the holding?</td><td className={td}>Usually yes (FEMA Section 6(4))</td><td className={td}>Usually yes, if the scheme accepts your new country</td><td className={td}>Usually yes, if the scheme accepts your new country</td></tr>

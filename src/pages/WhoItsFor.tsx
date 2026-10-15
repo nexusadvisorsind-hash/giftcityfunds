@@ -50,7 +50,7 @@ const WhoItsFor = () => (
 
       <h2 className="font-heading font-semibold text-2xl text-primary mb-4">At a glance</h2>
       <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto mb-10">
-        <table className="w-full border-collapse text-sm">
+        <table className="w-full border-collapse text-sm"><caption className="sr-only">Who can invest in GIFT City funds: NRI, OCI and resident Indian at a glance</caption>
           <thead>
             <tr className="bg-surface">
               <th scope="col" className="text-left p-3 border border-border">Investor</th>

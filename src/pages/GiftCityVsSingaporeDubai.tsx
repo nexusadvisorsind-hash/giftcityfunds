@@ -27,7 +27,7 @@ const GiftCityVsSingaporeDubai = () => (
 
     <h2 className={h2}>GIFT City vs Singapore vs Dubai (DIFC), side by side</h2>
     <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
-      <table className={table}>
+      <table className={table}><caption className="sr-only">GIFT City vs Singapore vs Dubai (DIFC), side by side</caption>
         <thead><tr><th className={th}></th><th className={th}>GIFT IFSC (India)</th><th className={th}>Singapore</th><th className={th}>Dubai (DIFC)</th></tr></thead>
         <tbody>
           <tr><td className={th}>Regulator</td><td className={td}>IFSCA</td><td className={td}>MAS</td><td className={td}>DFSA</td></tr>

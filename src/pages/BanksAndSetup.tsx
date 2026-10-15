@@ -36,7 +36,7 @@ const BanksAndSetup = () => (
 
     <h2 className={h2}>Banks in GIFT City</h2>
     <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
-      <table className={table}>
+      <table className={table}><caption className="sr-only">Banks in GIFT City</caption>
         <thead><tr><th className={th}>Type</th><th className={th}>Examples</th><th className={th}>Useful for individuals</th></tr></thead>
         <tbody>
           <tr><td className={td}>Indian banks' IFSC Banking Units</td><td className={td}>SBI, other large public and private sector banks</td><td className={td}>USD accounts and fixed deposits</td></tr>

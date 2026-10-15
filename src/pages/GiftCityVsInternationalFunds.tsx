@@ -39,7 +39,7 @@ const GiftCityVsInternationalFunds = () => (
 
     <h2 className={h2}>Side by side</h2>
     <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
-      <table className={table}>
+      <table className={table}><caption className="sr-only">GIFT City funds vs Indian international mutual funds, side by side</caption>
         <thead><tr><th className={th}></th><th className={th}>International mutual fund / FoF</th><th className={th}>GIFT City outbound fund</th></tr></thead>
         <tbody>
           <tr><td className={th}>Regulator</td><td className={td}>SEBI</td><td className={td}>IFSCA</td></tr>

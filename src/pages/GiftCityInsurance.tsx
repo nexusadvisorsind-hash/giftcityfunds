@@ -39,7 +39,7 @@ const GiftCityInsurance = () => (
 
     <h2 className={h2}>GIFT City policy vs Indian rupee policy</h2>
     <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
-      <table className={table}>
+      <table className={table}><caption className="sr-only">GIFT City policy vs Indian rupee policy</caption>
         <thead><tr><th className={th}></th><th className={th}>Indian rupee policy</th><th className={th}>GIFT City dollar policy</th></tr></thead>
         <tbody>
           <tr><td className={th}>Currency</td><td className={td}>Rupees</td><td className={td}>Usually US Dollars</td></tr>

@@ -29,7 +29,7 @@ const MinimumInvestment = () => (
 
     <h2 className={h2}>Minimums by product</h2>
     <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
-      <table className={table}>
+      <table className={table}><caption className="sr-only">Minimums by product</caption>
         <thead><tr><th className={th}>Product</th><th className={th}>Typical minimum</th><th className={th}>Who it suits</th></tr></thead>
         <tbody>
           <tr><td className={td}>US stocks and ETFs via an IFSC broker</td><td className={td}>Can be under USD 100 (fractional)</td><td className={td}>Do-it-yourself investors</td></tr>
@@ -55,7 +55,7 @@ const MinimumInvestment = () => (
 
     <h2 className={h2}>Limits for resident Indians</h2>
     <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
-      <table className={table}>
+      <table className={table}><caption className="sr-only">Limits for resident Indians</caption>
         <tbody>
           <tr><td className={th}>LRS limit</td><td className={td}>USD 250,000 per person per financial year, all purposes combined</td></tr>
           <tr><td className={th}>TCS threshold</td><td className={td}>No TCS on the first ₹10 lakh of LRS remittances a year; 20% above it on investments (FY 2026-27)</td></tr>

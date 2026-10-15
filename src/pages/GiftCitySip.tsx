@@ -44,7 +44,7 @@ const GiftCitySip = () => (
 
     <h2 className={h2}>Rupee mutual fund SIP vs GIFT City fund</h2>
     <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
-      <table className={table}>
+      <table className={table}><caption className="sr-only">Rupee mutual fund SIP vs GIFT City fund</caption>
         <thead><tr><th className={th}></th><th className={th}>Indian rupee mutual fund</th><th className={th}>GIFT City fund</th></tr></thead>
         <tbody>
           <tr><td className={th}>SIP</td><td className={td}>Available in almost every open-ended scheme</td><td className={td}>Not available</td></tr>
