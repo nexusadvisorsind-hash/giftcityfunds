@@ -37,7 +37,7 @@ const ProsAndCons = () => (
         "Residents use LRS: USD 250,000 a year limit and 20% TCS above ₹10 lakh (creditable)",
         "Currency risk if your spending is in rupees",
         "Many funds are new, so track records are short",
-        "SIPs are not available in every scheme",
+        "No SIP option: you invest in lump sums, not monthly auto-debits",
         "Tax in your country of residence can be complex, especially PFIC rules for US persons",
       ]}
     />

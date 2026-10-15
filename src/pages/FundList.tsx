@@ -101,7 +101,7 @@ const FundList = () => (
     <h3 className={h3}>Questions to ask the fund house</h3>
     <ul className={ul}>
       <li>Is the scheme open to my residential status and country (some exclude US and Canadian residents)?</li>
-      <li>What is the minimum first investment, and are additional or <Link to="/gift-city-sip" className={a}>recurring investments</Link> accepted?</li>
+      <li>What is the minimum first investment, and are additional lump-sum investments accepted? (There is <Link to="/gift-city-sip" className={a}>no SIP in GIFT City</Link>.)</li>
       <li>Is it a feeder fund, and what are the total costs including the underlying fund?</li>
       <li>How are redemptions paid, and how long do they take?</li>
     </ul>

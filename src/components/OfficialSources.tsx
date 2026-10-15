@@ -15,6 +15,10 @@ const SOURCES = {
   craT1135: { label: "Canada Revenue Agency — Form T1135 questions and answers", url: "https://www.canada.ca/en/revenue-agency/services/tax/international-non-residents/information-been-moved/foreign-reporting/questions-answers-about-form-t1135.html", note: "Reporting foreign property costing more than CAD 100,000." },
   irasOverseas: { label: "IRAS — Income received from overseas", url: "https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/what-is-taxable-what-is-not/income-received-from-overseas", note: "Singapore's treatment of foreign-sourced income for individuals." },
   amfi: { label: "AMFI — Association of Mutual Funds in India", url: "https://www.amfiindia.com/", note: "Verify a Mutual Fund Distributor's ARN." },
+  ifscaFmRegs: { label: "IFSCA — Press release on the Fund Management Regulations, 2025", url: "https://ifsca.gov.in/Document/Legal/press-release-notification-of-ifsca-fund-management-regulations-202519022025091920.pdf", note: "The rules for GIFT City funds, PMS and AIFs, notified 19 February 2025." },
+  indiaInx: { label: "India INX — India International Exchange", url: "https://www.indiainx.com/", note: "GIFT City exchange (a BSE subsidiary) listing bonds and other securities." },
+  nseIx: { label: "NSE IX — NSE International Exchange", url: "https://www.nseix.com/", note: "GIFT City exchange (an NSE subsidiary) for bonds, derivatives and US stocks." },
+  rbiFema: { label: "RBI — Foreign Exchange Management Act (FEMA) notifications", url: "https://www.rbi.org.in/Scripts/Fema.aspx", note: "FEMA rules, including holding foreign assets after a change in residence." },
 } as const;
 
 export type SourceKey = keyof typeof SOURCES;

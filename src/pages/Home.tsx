@@ -174,12 +174,13 @@ const Home = () => {
         <section className="py-16 bg-ink text-white" aria-labelledby="tools-h">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 id="tools-h" className="font-heading font-bold text-3xl md:text-4xl mb-8">Work it out in under a minute</h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {[
                 { to: "/gift-city-route-checker", icon: Route, t: "Which route applies to me?", d: "Resident, NRI, OCI or returning: see your route, limits and tax collected at source." },
                 { to: "/insights/lrs-tcs-gift-city#calculator", icon: Calculator, t: "TCS calculator", d: "Estimate TCS on any LRS remittance for FY 2026-27, including GIFT City investments." },
                 { to: "/gift-city-fund-list", icon: ListChecks, t: "GIFT City fund list", d: "Fund houses with GIFT City funds, inbound and outbound, with official sources." },
-                { to: "/gift-city-glossary", icon: BookA, t: "Glossary", d: "IFSC, IFSCA, FME, LRS, PFIC and more, explained in a line each." },
+                { to: "/gift-city-document-checklist", icon: FileText, t: "Document checklist", d: "Pick your status, country and product; print your KYC list." },
+                { to: "/gift-city-rules-updates", icon: Globe2, t: "What changed lately", d: "Dated IFSCA, RBI, SEBI and tax changes, and what each means for you." },
               ].map((c) => (
                 <Link key={c.to} to={c.to} className="group rounded-2xl border border-white/10 bg-white/5 p-5 hover:bg-white/10 gcf-lift">
                   <c.icon className="h-7 w-7 text-brass mb-3" aria-hidden />

@@ -262,3 +262,10 @@ p a.text-teal-light, figcaption a {
   text-underline-offset: 3px;
 }
 [role="region"][tabindex="0"]:focus-visible { outline: 2px solid hsl(var(--teal)); outline-offset: 2px; }
+
+/* Printing the document checklist: show only the checklist. */
+@media print {
+  body * { visibility: hidden; }
+  .gcf-print-area, .gcf-print-area * { visibility: visible; }
+  .gcf-print-area { position: absolute; left: 0; top: 0; width: 100%; border: 0; }
+}

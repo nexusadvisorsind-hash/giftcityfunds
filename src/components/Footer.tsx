@@ -100,7 +100,25 @@ const Footer = () => {
                 <Link to="/insights/lrs-tcs-gift-city#calculator" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">TCS Calculator</Link>
               </li>
               <li>
-                <Link to="/gift-city-sip" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">SIP in GIFT City</Link>
+                <Link to="/gift-city-document-checklist" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Document Checklist</Link>
+              </li>
+              <li>
+                <Link to="/gift-city-rules-updates" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">GIFT City Rule Changes</Link>
+              </li>
+              <li>
+                <Link to="/gift-city-bonds" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">GIFT City Bonds</Link>
+              </li>
+              <li>
+                <Link to="/gift-city-insurance" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">GIFT City Insurance</Link>
+              </li>
+              <li>
+                <Link to="/gift-city-redemption-repatriation" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Redemption & Repatriation</Link>
+              </li>
+              <li>
+                <Link to="/gift-city-moving-country" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Moving Country</Link>
+              </li>
+              <li>
+                <Link to="/gift-city-sip" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">No SIP in GIFT City: why</Link>
               </li>
               <li>
                 <Link to="/gift-city-vs-international-mutual-funds" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">vs International Funds</Link>
@@ -118,7 +136,7 @@ const Footer = () => {
                 <Link to="/gift-city-glossary" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Glossary</Link>
               </li>
               <li>
-                <Link to="/gift-city-vs-singapore-dubai" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">vs Singapore & Dubai</Link>
+                <Link to="/gift-city-vs-singapore-dubai" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">vs Singapore, Dubai, Mauritius</Link>
               </li>
               <li>
                 <Link to="/gift-city-markets-gift-nifty" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">GIFT Nifty & Exchanges</Link>

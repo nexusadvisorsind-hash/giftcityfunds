@@ -5,7 +5,7 @@ import { RouteDiagram } from "@/components/Diagrams";
 const faqs: Faq[] = [
   { q: "Why do some international mutual funds stop accepting money?", a: "SEBI caps how much the Indian mutual fund industry can invest overseas: USD 7 billion in total, with a limit for each fund house. When a fund house nears its limit it pauses fresh lump sums and new SIPs in its international schemes until headroom returns." },
   { q: "Are GIFT City funds subject to the USD 7 billion limit?", a: "No. GIFT City funds are regulated by IFSCA, not SEBI, and invest from the IFSC. The SEBI overseas limit for domestic mutual funds does not apply to them. The investor's own LRS limit still applies to resident Indians." },
-  { q: "Which is better for a resident Indian?", a: "Neither is better in general. An international fund of funds is simpler, takes rupees, allows small SIPs and has no TCS, but may be closed to new money. A GIFT City fund is in dollars, has higher minimums and involves LRS and TCS, but is not affected by the SEBI cap. Your amount, horizon and tax position decide which suits you." },
+  { q: "Which is better for a resident Indian?", a: "Neither is better in general. An international fund of funds is simpler, takes rupees, allows small monthly SIPs and has no TCS, but may be closed to new money. A GIFT City fund is in dollars, has no SIP, has higher minimums and involves LRS and TCS, but is not affected by the SEBI cap. Your amount, horizon and tax position decide which suits you." },
   { q: "Do NRIs have the same choice?", a: "NRIs can usually invest in both. Many use GIFT City funds because they can invest and redeem in dollars from an overseas account without converting to rupees." },
 ];
 
@@ -14,7 +14,7 @@ const GiftCityVsInternationalFunds = () => (
     path="/gift-city-vs-international-mutual-funds"
     headline="GIFT City Funds vs International Mutual Funds: Which Route Abroad?"
     seoTitle="GIFT City Fund vs International Mutual Fund (2026 Comparison)"
-    description="GIFT City funds vs Indian international mutual funds: the SEBI USD 7 billion cap, currency, minimums, SIPs, LRS and TCS, side by side."
+    description="GIFT City funds vs Indian international mutual funds: the SEBI USD 7 billion cap, currency, minimums, SIP (not offered in GIFT City), LRS and TCS, side by side."
     crumb="GIFT City vs International Mutual Funds"
     datePublished="2026-10-08"
     faqs={faqs}
@@ -48,7 +48,7 @@ const GiftCityVsInternationalFunds = () => (
           <tr><td className={th}>How a resident pays</td><td className={td}>Normal rupee payment, SIP by auto-debit</td><td className={td}>Remittance under LRS (USD 250,000 a year limit)</td></tr>
           <tr><td className={th}>TCS for residents</td><td className={td}>None</td><td className={td}>20% on LRS remittances above ₹10 lakh a year (creditable)</td></tr>
           <tr><td className={th}>Minimum</td><td className={td}>Often ₹100 to ₹5,000</td><td className={td}>Set by each scheme, commonly a few thousand USD</td></tr>
-          <tr><td className={th}>SIP</td><td className={td}>Widely available</td><td className={td}>Only some schemes</td></tr>
+          <tr><td className={th}>SIP</td><td className={td}>Widely available</td><td className={td}>Not available; lump sums only</td></tr>
           <tr><td className={th}>Redemption paid in</td><td className={td}>Rupees to your Indian account</td><td className={td}>USD; residents must bring it back or reinvest within RBI timelines</td></tr>
           <tr><td className={th}>Tax</td><td className={td}>Indian capital gains rules for non-equity funds</td><td className={td}>Depends on the fund structure and the investor's residence; see <Link to="/taxation" className={a}>Taxation</Link></td></tr>
         </tbody>

@@ -28,6 +28,12 @@ const GiftCityVsMutualFunds = lazyPage(() => import("./pages/GiftCityVsMutualFun
 const Risks = lazyPage(() => import("./pages/Risks"));
 const FundList = lazyPage(() => import("./pages/FundList"));
 const GiftCitySip = lazyPage(() => import("./pages/GiftCitySip"));
+const GiftCityInsurance = lazyPage(() => import("./pages/GiftCityInsurance"));
+const GiftCityBonds = lazyPage(() => import("./pages/GiftCityBonds"));
+const GiftCityRedemption = lazyPage(() => import("./pages/GiftCityRedemption"));
+const GiftCityMovingCountry = lazyPage(() => import("./pages/GiftCityMovingCountry"));
+const RulesUpdates = lazyPage(() => import("./pages/RulesUpdates"));
+const DocumentChecklist = lazyPage(() => import("./pages/DocumentChecklist"));
 const GiftCityVsInternationalFunds = lazyPage(() => import("./pages/GiftCityVsInternationalFunds"));
 const ProsAndCons = lazyPage(() => import("./pages/ProsAndCons"));
 const WhatIsIfsca = lazyPage(() => import("./pages/WhatIsIfsca"));
@@ -75,6 +81,12 @@ const PAGE_FOR_PATH: Record<string, LazyPage> = {
   "/gift-city-funds-for-resident-indians": ResidentGuide,
   "/gift-city-fund-list": FundList,
   "/gift-city-sip": GiftCitySip,
+  "/gift-city-insurance": GiftCityInsurance,
+  "/gift-city-bonds": GiftCityBonds,
+  "/gift-city-redemption-repatriation": GiftCityRedemption,
+  "/gift-city-moving-country": GiftCityMovingCountry,
+  "/gift-city-rules-updates": RulesUpdates,
+  "/gift-city-document-checklist": DocumentChecklist,
   "/gift-city-vs-international-mutual-funds": GiftCityVsInternationalFunds,
   "/gift-city-funds-pros-and-cons": ProsAndCons,
   "/what-is-ifsca": WhatIsIfsca,
@@ -148,6 +160,12 @@ const App = ({ ssrUrl, helmetContext }: AppProps = {}) => (
               <Route path="/gift-city-funds-nri-tax-by-country" element={<Navigate to="/gift-city-funds-for-nri" replace />} />
               <Route path="/gift-city-fund-list" element={<FundList />} />
               <Route path="/gift-city-sip" element={<GiftCitySip />} />
+              <Route path="/gift-city-insurance" element={<GiftCityInsurance />} />
+              <Route path="/gift-city-bonds" element={<GiftCityBonds />} />
+              <Route path="/gift-city-redemption-repatriation" element={<GiftCityRedemption />} />
+              <Route path="/gift-city-moving-country" element={<GiftCityMovingCountry />} />
+              <Route path="/gift-city-rules-updates" element={<RulesUpdates />} />
+              <Route path="/gift-city-document-checklist" element={<DocumentChecklist />} />
               <Route path="/gift-city-vs-international-mutual-funds" element={<GiftCityVsInternationalFunds />} />
               <Route path="/gift-city-funds-pros-and-cons" element={<ProsAndCons />} />
               <Route path="/what-is-ifsca" element={<WhatIsIfsca />} />

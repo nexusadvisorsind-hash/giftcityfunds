@@ -320,9 +320,9 @@ export const articles: InsightArticle[] = [
             NRIs investing money already held abroad send it directly in foreign currency. LRS and TCS apply to residents sending money out of India, so they do not arise. See <Link to="/gift-city-funds-for-nri#uae" className="text-secondary hover:underline">UAE NRIs</Link> or <Link to="/gift-city-route-checker" className="text-secondary hover:underline">check your route</Link>.
           </p>
 
-          <h3 className="font-heading font-semibold text-xl text-primary pt-2">Planning monthly investments?</h3>
+          <h3 className="font-heading font-semibold text-xl text-primary pt-2">Investing more than once a year?</h3>
           <p>
-            Each instalment is a separate LRS remittance; see <Link to="/gift-city-sip" className="text-secondary hover:underline">SIP in GIFT City funds</Link> for a month-by-month example.
+            GIFT City funds have no SIP, so each investment is a separate LRS remittance that adds to the year's total; see <Link to="/gift-city-sip" className="text-secondary hover:underline">why there is no SIP in GIFT City</Link> for a worked example.
           </p>
 
           <p className="text-sm">

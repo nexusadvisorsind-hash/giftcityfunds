@@ -6,15 +6,17 @@ const faqs: Faq[] = [
   { q: "Is GIFT City like Singapore or Dubai?", a: "In purpose, yes: all three are international financial centres that deal in foreign currency and host fund managers. The differences are maturity, regulator, the range of products and how closely each is linked to India." },
   { q: "Which regulator oversees each centre?", a: "GIFT IFSC is regulated by IFSCA. Singapore's financial sector is regulated by the Monetary Authority of Singapore (MAS). The Dubai International Financial Centre (DIFC) has its own regulator, the Dubai Financial Services Authority (DFSA); Abu Dhabi Global Market (ADGM) has the FSRA." },
   { q: "For a resident Indian, is a Singapore fund different from a GIFT City fund?", a: "Both are overseas investments under LRS, with the same USD 250,000 limit and the same TCS. The practical differences are the regulator, availability through Indian fund houses, and how the fund and your holdings are taxed." },
+  { q: "GIFT City vs Mauritius: what is the difference for India investing?", a: "Mauritius has long been a base for offshore funds investing in India because of its tax treaty. Since the 2016 Protocol, India taxes capital gains on shares acquired from 1 April 2017, and a 2024 Protocol adding a principal purpose test was signed on 7 March 2024 but is not yet in force. GIFT City funds invest in India from inside India, under IFSCA, without relying on a treaty." },
 ];
 
 const GiftCityVsSingaporeDubai = () => (
   <GuidePage
     path="/gift-city-vs-singapore-dubai"
-    headline="GIFT City vs Singapore vs Dubai: How the Fund Centres Compare"
-    seoTitle="GIFT City vs Singapore vs Dubai (DIFC): Fund Hubs Compared"
-    description="GIFT City vs Singapore vs Dubai (DIFC) as fund centres for Indian and NRI investors: regulator, currency, product range, India link and what changes for you."
-    crumb="GIFT City vs Singapore vs Dubai"
+    headline="GIFT City vs Singapore, Dubai and Mauritius: How the Fund Centres Compare"
+    seoTitle="GIFT City vs Singapore vs Dubai vs Mauritius: Fund Hubs Compared"
+    description="GIFT City vs Singapore, Dubai (DIFC) and Mauritius as fund centres for Indian and NRI investors: regulator, currency, India link and the Mauritius treaty."
+    crumb="GIFT City vs Singapore, Dubai and Mauritius"
+    dateModified="2026-10-09"
     datePublished="2026-10-09"
     faqs={faqs}
     sources={["ifsca", "rbiLrs", "giftCity"]}
@@ -23,7 +25,7 @@ const GiftCityVsSingaporeDubai = () => (
       <strong className="text-primary">The short answer.</strong> Singapore and Dubai are older, larger and offer a much wider range of funds. GIFT City is newer but is built specifically to bring India-linked finance onshore: Indian fund houses, an Indian regulator, Indian time zone, and funds aimed at NRIs and resident Indians. For an Indian investor, the choice is usually about which <em>product</em> suits you, not which city.
     </p>
 
-    <h2 className={h2}>Side by side</h2>
+    <h2 className={h2}>GIFT City vs Singapore vs Dubai (DIFC), side by side</h2>
     <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
       <table className={table}>
         <thead><tr><th className={th}></th><th className={th}>GIFT IFSC (India)</th><th className={th}>Singapore</th><th className={th}>Dubai (DIFC)</th></tr></thead>
@@ -38,6 +40,16 @@ const GiftCityVsSingaporeDubai = () => (
         </tbody>
       </table>
     </div>
+
+    <h2 className={h2}>GIFT City vs Mauritius</h2>
+    <p className={p}>
+      For decades, many offshore funds investing in India were set up in Mauritius because of the India–Mauritius tax treaty. That advantage has narrowed:
+    </p>
+    <ul className={ul}>
+      <li><strong className="text-primary">2016 Protocol:</strong> India gained the right to tax capital gains on shares acquired from 1 April 2017; shares bought before that date were grandfathered.</li>
+      <li><strong className="text-primary">2024 Protocol:</strong> signed on 7 March 2024, it adds a principal purpose test that can deny treaty benefits to structures set up mainly for tax reasons. Mauritius's Cabinet approved ratification on 17 July 2026; it takes effect only once both countries complete their procedures.</li>
+      <li><strong className="text-primary">GIFT City:</strong> an IFSC fund invests in India from inside India, under IFSCA, with its own tax concessions in Indian law rather than a treaty. For an NRI, a GIFT City inbound fund and a Mauritius-based India fund may hold similar stocks; the difference is the legal home, the regulator and how each is taxed.</li>
+    </ul>
 
     <h2 className={h2}>What this means for you</h2>
     <ul className={ul}>
