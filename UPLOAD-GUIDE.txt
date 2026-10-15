@@ -1,0 +1,13 @@
+HOW TO UPLOAD (GitHub website)
+1. Unzip this file on your computer. You get a folder "artha-vruksha".
+2. Open your GitHub repo > Add file > Upload files.
+3. Drag the CONTENTS of the unzipped folder (src, public, package.json, ...) into the page.
+   GitHub keeps the folder structure, so each file lands in its right place
+   and same-name files are replaced.
+4. Commit changes. Vercel redeploys automatically.
+Do NOT upload UPLOAD-GUIDE.txt (optional) - it is harmless either way.
+
+Admin login files inside (already placed correctly):
+  src/app/admin/leads/page.tsx
+  src/app/admin/leads/actions.ts
+  src/components/admin-login-form.tsx

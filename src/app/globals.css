@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FFFFFF;
+  --surface: #F5F7FA;
+  --foreground: #101A2E;
+  --foreground-muted: #4B5670;
+
+  /* Brand palette — navy-blue led, with green and gold accents */
+  --primary: #0B1E42;      /* Deep Navy */
+  --primary-foreground: #FFFFFF;
+  --secondary: #1E5FD9;    /* Vibrant Corporate Blue */
+  --secondary-foreground: #FFFFFF;
+  --accent: #D4AF37;       /* Gold */
+  --accent-foreground: #10241D;
+  --green: #0F8A5F;        /* Growth Green */
+  --green-foreground: #FFFFFF;
+  --green-soft: #E7F5EF;
+  --border: #E1E5EC;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-foreground-muted: var(--foreground-muted);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-green: var(--green);
+  --color-green-foreground: var(--green-foreground);
+  --color-green-soft: var(--green-soft);
+  --color-border: var(--border);
+  --font-heading: "Playfair Display", Georgia, serif;
+  --font-body: "Inter", Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+}
+
+/* Hero backgrounds. Each page family gets its own dark, layered gradient so the
+   four service pages do not all look identical. Layered radial glows replace the
+   old dot-grid texture. */
+.hero-navy {
+  background-image:
+    radial-gradient(60% 80% at 85% 0%, rgba(30, 95, 217, 0.55), transparent 70%),
+    radial-gradient(50% 60% at 0% 100%, rgba(15, 138, 95, 0.22), transparent 70%),
+    linear-gradient(to bottom, var(--primary), #0F2F6E);
+}
+.hero-home {
+  background-image:
+    radial-gradient(55% 70% at 78% 40%, rgba(15, 138, 95, 0.30), transparent 70%),
+    radial-gradient(45% 55% at 100% 0%, rgba(212, 175, 55, 0.16), transparent 70%),
+    linear-gradient(160deg, #081736 0%, #0B1E42 45%, #0E2F27 100%);
+}
+.hero-mf {
+  background-image:
+    radial-gradient(55% 80% at 90% 20%, rgba(30, 95, 217, 0.60), transparent 70%),
+    linear-gradient(160deg, #0A1B3D 0%, #0F2F6E 100%);
+}
+.hero-re {
+  background-image:
+    radial-gradient(55% 80% at 90% 30%, rgba(63, 211, 154, 0.22), transparent 70%),
+    linear-gradient(160deg, #0A241D 0%, #0F3B2E 100%);
+}
+.hero-ins {
+  background-image:
+    radial-gradient(55% 80% at 88% 15%, rgba(212, 175, 55, 0.24), transparent 70%),
+    linear-gradient(160deg, #0A1B3D 0%, #14264F 100%);
+}
+.hero-loan {
+  background-image:
+    radial-gradient(55% 80% at 90% 25%, rgba(110, 160, 255, 0.28), transparent 70%),
+    linear-gradient(160deg, #0B1E42 0%, #11275A 60%, #0E2F27 100%);
+}
+.bg-forest {
+  background-image:
+    radial-gradient(50% 70% at 100% 0%, rgba(63, 211, 154, 0.14), transparent 70%),
+    linear-gradient(160deg, #0A241D 0%, #0F3B2E 100%);
+}
+
+/* Card lift on hover — used across service/product/blog cards */
+.card-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px -12px rgba(11, 30, 66, 0.18);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-up {
+  animation: fade-up 0.6s ease both;
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.15);
+  }
+}
+.animate-glow-pulse {
+  animation: glow-pulse 6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up,
+  .animate-glow-pulse {
+    animation: none;
+  }
+}
+
+/* Keyboard focus is always visible */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[role="tab"]:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* In-page anchors land below the sticky header + in-page nav */
+[id] {
+  scroll-margin-top: 7.5rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Long-form reading width */
+.measure {
+  max-width: 62ch;
+}
+
+/* Range inputs: thicker touch target on mobile */
+input[type="range"] {
+  height: 1.5rem;
+}
