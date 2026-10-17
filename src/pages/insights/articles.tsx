@@ -24,12 +24,12 @@ export interface InsightArticle {
 export const articles: InsightArticle[] = [
   {
     slug: "how-to-open-gift-city-bank-account",
-    faqs: [{ q: "How long does it take to open a GIFT City bank account?", a: "Usually one to two weeks, and often less with video KYC or if you already bank with the same group." }, { q: "Can resident Indians use a GIFT City account for other overseas payments?", a: "Yes. Since July 2024, a resident's foreign currency account in an IFSC can be used for any purpose permitted under LRS, within the USD 250,000 annual limit." }, { q: "Can I open a GIFT City USD account?", a: "Yes. IFSC Banking Units in GIFT City offer US Dollar accounts and deposits to eligible NRIs, foreign citizens and, within LRS, resident Indians. Each bank sets its own minimum balance and documents." }],
-    title: "How to Open a GIFT City Bank Account (IFSC Banking Unit)",
-    seoTitle: "How to Open a GIFT City Bank Account: NRIs and Residents",
+    faqs: [{ q: "How long does it take to open a GIFT City bank account?", a: "Usually one to two weeks, and often less with video KYC or if you already bank with the same group." }, { q: "Can a resident Indian open a GIFT City account?", a: "Yes. Since RBI's circular of 10 July 2024, resident individuals can open a foreign currency account with an IFSC Banking Unit in GIFT City under LRS, for permitted financial products and services in IFSC and for transactions in other countries." }, { q: "Can resident Indians use a GIFT City account for other overseas payments?", a: "Yes. Since July 2024, a resident's foreign currency account in an IFSC can be used for any purpose permitted under LRS, within the USD 250,000 annual limit." }, { q: "Can I open a GIFT City USD account?", a: "Yes. IFSC Banking Units in GIFT City offer US Dollar accounts and deposits to eligible NRIs, foreign citizens and, within LRS, resident Indians. Each bank sets its own minimum balance and documents." }],
+    title: "How to Open a GIFT City Account: Bank Account with an IFSC Banking Unit",
+    seoTitle: "How to Open a GIFT City Account: Bank Account for NRIs",
     description: "Who can open a GIFT City bank account with an IFSC Banking Unit, the documents needed, how to fund it, and what to compare between banks.",
     datePublished: "2026-10-08",
-    dateModified: "2026-10-09",
+    dateModified: "2026-10-16",
     body: (
         <div className="font-body text-foreground-muted space-y-4 leading-relaxed">
           <p>
@@ -444,11 +444,12 @@ export const articles: InsightArticle[] = [
   },
   {
     slug: "ifsca-vs-sebi",
-    faqs: [{ q: "Is a GIFT City fund registered with SEBI?", a: "No. GIFT City funds are registered with IFSCA under its fund management regulations. An inbound fund may separately register with SEBI as a foreign portfolio investor to invest in Indian markets, but the fund itself is regulated by IFSCA." }, { q: "Who do I complain to about a GIFT City fund?", a: "First the Fund Management Entity, in writing. If the issue is not resolved, IFSCA is the regulator for GIFT City funds." }, { q: "Does IFSCA regulation guarantee my money?", a: "No. Regulation governs how the manager is registered and how the fund is run and disclosed. It does not guarantee returns or protect against market or currency losses." }],
+    faqs: [{ q: "What is the difference between SEBI and IFSCA?", a: "SEBI regulates India's domestic securities market, including Indian mutual funds. IFSCA is the single regulator for all financial services inside India's International Financial Services Centres, such as GIFT IFSC, covering funds, banking, insurance and exchanges there." }, { q: "Is a GIFT City fund registered with SEBI?", a: "No. GIFT City funds are registered with IFSCA under its fund management regulations. An inbound fund may separately register with SEBI as a foreign portfolio investor to invest in Indian markets, but the fund itself is regulated by IFSCA." }, { q: "Who do I complain to about a GIFT City fund?", a: "First the Fund Management Entity, in writing. If the issue is not resolved, IFSCA is the regulator for GIFT City funds." }, { q: "Does IFSCA regulation guarantee my money?", a: "No. Regulation governs how the manager is registered and how the fund is run and disclosed. It does not guarantee returns or protect against market or currency losses." }],
     title: "IFSCA vs SEBI: Who Actually Regulates Your GIFT City Fund",
+    seoTitle: "Difference Between SEBI and IFSCA: Who Regulates GIFT City",
     description: "How IFSCA regulates GIFT City funds, how that differs from SEBI's role for domestic mutual funds, and what it means for investor protection.",
     datePublished: "2026-09-21",
-    dateModified: "2026-10-09",
+    dateModified: "2026-10-16",
     body: (
         <div className="font-body text-foreground-muted space-y-4 leading-relaxed">
           <p>
@@ -784,12 +785,12 @@ export const articles: InsightArticle[] = [
   },
   {
     slug: "pfic-explained",
-    faqs: [{ q: "Do all GIFT City funds count as PFICs?", a: "Most foreign pooled funds meet the PFIC tests, so US persons should assume a GIFT City fund is a PFIC unless the fund house documents otherwise." }, { q: "When do I not need to file Form 8621?", a: "There is an exception from annual filing when your total PFIC holdings are USD 25,000 or less (USD 50,000 on a joint return) and you had no excess distribution or gain, but elections and sales still require the form. Confirm with a US tax preparer." }, { q: "Can US citizens invest in GIFT City funds at all?", a: "Only where the fund accepts US persons, and many do not. Check eligibility first." }],
+    faqs: [{ q: "What is the definition of a PFIC?", a: "Under US tax law, a passive foreign investment company (PFIC) is a non-US corporation where at least 75% of gross income is passive, or at least 50% of its assets produce or are held to produce passive income. Most foreign mutual funds meet one of these tests." }, { q: "Do all GIFT City funds count as PFICs?", a: "Most foreign pooled funds meet the PFIC tests, so US persons should assume a GIFT City fund is a PFIC unless the fund house documents otherwise." }, { q: "When do I not need to file Form 8621?", a: "There is an exception from annual filing when your total PFIC holdings are USD 25,000 or less (USD 50,000 on a joint return) and you had no excess distribution or gain, but elections and sales still require the form. Confirm with a US tax preparer." }, { q: "Can US citizens invest in GIFT City funds at all?", a: "Only where the fund accepts US persons, and many do not. Check eligibility first." }],
     title: "PFIC Explained: Why It Matters for Every US-Based NRI Investor",
-    seoTitle: "PFIC Explained for US-Based NRIs | GIFT City Funds",
+    seoTitle: "PFIC Definition and Meaning for US-Based NRIs",
     description: "A plain-English explanation of PFIC status, why it applies to many foreign funds, and why GIFT City fund structure matters for US-based NRIs and US persons.",
     datePublished: "2026-09-20",
-    dateModified: "2026-10-09",
+    dateModified: "2026-10-16",
     body: (
         <div className="font-body text-foreground-muted space-y-4 leading-relaxed">
           <p>

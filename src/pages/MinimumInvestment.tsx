@@ -5,6 +5,7 @@ import TicketLadder from "@/components/TicketLadder";
 
 const faqs: Faq[] = [
   { q: "What is the minimum investment in GIFT City?", a: "It depends on the product: retail schemes and feeder funds set their own minimum, often a few thousand US Dollars; PMS needs USD 75,000; restricted schemes (most AIFs) commonly USD 150,000; US stocks and ETFs through IFSC brokers can start very small." },
+  { q: "Are GIFT City funds for retail investors?", a: "Some are. Retail schemes and feeder funds are open to individual investors, commonly from about USD 500. PMS (from USD 75,000) and AIFs (commonly USD 150,000 or more) are built for high-net-worth investors and institutions." },
   { q: "What is the minimum amount for NRIs to invest in GIFT City?", a: "The same product minimums apply to NRIs. NRIs face no LRS limit or TCS, because their money does not leave India." },
   { q: "Is there a maximum for resident Indians?", a: "Yes. Resident Indians can send up to USD 250,000 a financial year under LRS, across all purposes. TCS of 20% applies to investment remittances above ₹10 lakh a year and is credited back in the income tax return." },
 ];

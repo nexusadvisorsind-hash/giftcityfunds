@@ -6,6 +6,7 @@ import { OfficialSources } from "@/components/OfficialSources";
 import { ArrowRight } from "lucide-react";
 import { PageFaqs, type PageFaq } from "@/components/PageFaqs";
 const PAGE_FAQS: PageFaq[] = [
+  { q: "What is the full form of GIFT IFSC?", a: "GIFT IFSC stands for Gujarat International Finance Tec-City International Financial Services Centre. It is the part of GIFT City in Gandhinagar notified as India's first IFSC, regulated by IFSCA." },
   { q: "What is the full form of GIFT City?", a: "GIFT City stands for Gujarat International Finance Tec-City. Part of it is notified as GIFT IFSC, India's International Financial Services Centre." },
   { q: "Where is GIFT City in Gandhinagar?", a: "GIFT City is in Gandhinagar district, Gujarat, between Ahmedabad and Gandhinagar on the Sabarmati river. You do not need to visit it to invest; onboarding with fund houses is usually done remotely." },
 ];
@@ -15,7 +16,7 @@ const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "What Is GIFT City & IFSC? — Explained Simply",
-  "dateModified": "2026-10-08",
+  "dateModified": "2026-10-16",
   "author": { "@type": "Person", "name": "Anup Vatyani" },
   "publisher": { "@type": "Organization", "name": "GIFT City Funds" },
   "mainEntityOfPage": "https://giftcityfunds.in/what-is-gift-city",
@@ -24,8 +25,8 @@ const articleSchema = {
 const WhatIsGiftCity = () => (
   <>
     <SEO
-      title="What Is GIFT City & IFSC? — Explained Simply"
-      description="A plain-English explanation of GIFT City, India's first International Financial Services Centre, and why it matters for fund investing."
+      title="What Is GIFT City & GIFT IFSC? Full Form and Meaning"
+      description="GIFT IFSC full form, what GIFT City is, how India's first International Financial Services Centre works under IFSCA, and why it matters for investors."
       canonical="https://giftcityfunds.in/what-is-gift-city"
       schema={articleSchema}
       breadcrumbs={[
@@ -38,6 +39,12 @@ const WhatIsGiftCity = () => (
       <h1 className="font-heading font-bold text-3xl md:text-4xl text-primary mt-6 mb-8">What Is GIFT City, and What Is an IFSC?</h1>
 
       <div className="prose max-w-none font-body text-foreground-muted space-y-6">
+        <div className="rounded-xl border border-border bg-surface p-5 not-prose">
+          <h2 className="font-heading font-semibold text-xl text-primary mb-2">GIFT IFSC full form</h2>
+          <p className="font-body text-foreground-muted leading-relaxed">
+            <strong className="text-primary">GIFT</strong> stands for <strong className="text-primary">Gujarat International Finance Tec-City</strong>, and <strong className="text-primary">IFSC</strong> for <strong className="text-primary">International Financial Services Centre</strong>. GIFT IFSC is the part of GIFT City in Gandhinagar, Gujarat, notified as India's first IFSC and regulated by the IFSCA.
+          </p>
+        </div>
         <p><strong className="text-primary">The short version.</strong> GIFT City — Gujarat International Finance Tec-City — is a purpose-built financial district in Gandhinagar, Gujarat. Within it sits India's International Financial Services Centre (IFSC): a separately regulated zone where financial institutions can transact in foreign currency, under rules distinct from the rest of India's domestic financial system. It's the reason a "GIFT City fund" behaves differently from a regular Indian mutual fund from the moment you invest.</p>
 
         <p><strong className="text-primary">Why a separate zone exists.</strong> Most Indian financial products operate in rupees, under SEBI, RBI and other domestic regulators built for a rupee-denominated system. The IFSC exists so India could host US-Dollar-denominated financial activity — banking, fund management, insurance, capital markets — on Indian soil, under a single regulator designed specifically for that purpose: the IFSCA.</p>

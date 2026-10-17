@@ -5,6 +5,7 @@ import TcsCalculator from "@/components/TcsCalculator";
 
 const faqs: Faq[] = [
   { q: "What is GIFT City outbound investment for resident Indians?", a: "It is investing abroad through a GIFT City fund, broker or bank, using LRS. The money is held in US Dollars and invested in global markets, within the USD 250,000 annual LRS limit." },
+  { q: "Which GIFT City funds are available in India for Indian residents?", a: "Resident Indians can invest under LRS in outbound GIFT City funds, which invest in US or global markets. Most inbound funds, which invest in India, are for NRIs and foreign investors only. The fund list shows which fund houses run outbound schemes; check each scheme's eligibility." },
   { q: "Can resident Indians invest in GIFT City funds?", a: "Yes, through the Liberalised Remittance Scheme. Resident Indians can invest in outbound GIFT City funds and other permitted IFSC products, up to USD 250,000 a financial year across all LRS purposes." },
   { q: "Can resident Indians invest in inbound GIFT City funds?", a: "Usually not. Inbound funds that invest in India are generally meant for NRIs and foreign investors, and many exclude Indian residents. Residents normally use outbound funds or domestic Indian mutual funds." },
   { q: "How much TCS will I pay?", a: "For FY 2026-27, no TCS on the first ₹10 lakh of LRS remittances in the year, then 20% on investment remittances above it. TCS is credited back against your income tax." },

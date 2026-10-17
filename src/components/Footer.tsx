@@ -118,6 +118,12 @@ const Footer = () => {
                 <Link to="/gift-city-moving-country" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Moving Country</Link>
               </li>
               <li>
+                <Link to="/gift-city-funds-returns" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Returns & Performance</Link>
+              </li>
+              <li>
+                <Link to="/gift-city-funds-zerodha-groww" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Zerodha, Groww & GIFT City</Link>
+              </li>
+              <li>
                 <Link to="/gift-city-sip" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">No SIP in GIFT City: why</Link>
               </li>
               <li>

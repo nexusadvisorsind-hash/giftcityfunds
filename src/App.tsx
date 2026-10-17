@@ -28,6 +28,8 @@ const GiftCityVsMutualFunds = lazyPage(() => import("./pages/GiftCityVsMutualFun
 const Risks = lazyPage(() => import("./pages/Risks"));
 const FundList = lazyPage(() => import("./pages/FundList"));
 const GiftCitySip = lazyPage(() => import("./pages/GiftCitySip"));
+const GiftCityReturns = lazyPage(() => import("./pages/GiftCityReturns"));
+const GiftCityApps = lazyPage(() => import("./pages/GiftCityApps"));
 const GiftCityInsurance = lazyPage(() => import("./pages/GiftCityInsurance"));
 const GiftCityBonds = lazyPage(() => import("./pages/GiftCityBonds"));
 const GiftCityRedemption = lazyPage(() => import("./pages/GiftCityRedemption"));
@@ -81,6 +83,8 @@ const PAGE_FOR_PATH: Record<string, LazyPage> = {
   "/gift-city-funds-for-resident-indians": ResidentGuide,
   "/gift-city-fund-list": FundList,
   "/gift-city-sip": GiftCitySip,
+  "/gift-city-funds-returns": GiftCityReturns,
+  "/gift-city-funds-zerodha-groww": GiftCityApps,
   "/gift-city-insurance": GiftCityInsurance,
   "/gift-city-bonds": GiftCityBonds,
   "/gift-city-redemption-repatriation": GiftCityRedemption,
@@ -160,6 +164,8 @@ const App = ({ ssrUrl, helmetContext }: AppProps = {}) => (
               <Route path="/gift-city-funds-nri-tax-by-country" element={<Navigate to="/gift-city-funds-for-nri" replace />} />
               <Route path="/gift-city-fund-list" element={<FundList />} />
               <Route path="/gift-city-sip" element={<GiftCitySip />} />
+              <Route path="/gift-city-funds-returns" element={<GiftCityReturns />} />
+              <Route path="/gift-city-funds-zerodha-groww" element={<GiftCityApps />} />
               <Route path="/gift-city-insurance" element={<GiftCityInsurance />} />
               <Route path="/gift-city-bonds" element={<GiftCityBonds />} />
               <Route path="/gift-city-redemption-repatriation" element={<GiftCityRedemption />} />
