@@ -230,6 +230,8 @@ All colors MUST be HSL.
 @keyframes gcf-marquee { to { transform: translateX(-50%); } }
 @keyframes gcf-grow { from { width: 0; } to { width: 100%; } }
 @keyframes gcf-pop { from { opacity: 0; transform: scale(.6); } to { opacity: 1; transform: none; } }
+@keyframes gcf-draw { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes gcf-fade-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 
 @layer utilities {
   .gcf-fade-up { animation: gcf-fade-up .8s cubic-bezier(.2,.7,.2,1) both; }
@@ -241,6 +243,8 @@ All colors MUST be HSL.
   .gcf-marquee { animation: gcf-marquee 32s linear infinite; }
   .gcf-grow { animation: gcf-grow 1.8s .3s ease-out both; }
   .gcf-pop { animation: gcf-pop .5s cubic-bezier(.2,.8,.2,1.2) both; }
+  .gcf-draw { transform-origin: left; animation: gcf-draw .9s .45s cubic-bezier(.2,.8,.2,1) both; }
+  .gcf-fade-in { animation: gcf-fade-in .35s ease-out both; }
   .gcf-lift { transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
   .gcf-lift:hover { transform: translateY(-5px); box-shadow: 0 18px 40px hsl(var(--ink) / .14); }
 }
@@ -250,7 +254,7 @@ All colors MUST be HSL.
 
 @media (prefers-reduced-motion: reduce) {
   .gcf-flow,
-  .gcf-fade-up, .gcf-spin-slow, .gcf-spin-slower, .gcf-float, .gcf-marquee, .gcf-grow, .gcf-pop { animation: none !important; }
+  .gcf-fade-up, .gcf-spin-slow, .gcf-spin-slower, .gcf-float, .gcf-marquee, .gcf-grow, .gcf-pop, .gcf-draw, .gcf-fade-in { animation: none !important; }
   .gcf-lift:hover { transform: none; }
 }
 

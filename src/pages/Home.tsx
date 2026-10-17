@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { SEO } from "@/components/SEO";
 import MoneyMap from "@/components/MoneyMap";
-import HeroFunnel from "@/components/HeroFunnel";
+import HeroTabs from "@/components/HeroTabs";
 import { ArrowRight, Landmark, Layers, Wallet, MessageCircle, CircleDollarSign, TrendingUp, Building2, UserCog, FileText, Globe2, Home as Home2, Calculator, Route, ListChecks, BookA } from "lucide-react";
 import { PageFaqs, type PageFaq } from "@/components/PageFaqs";
 import TicketLadder from "@/components/TicketLadder";
@@ -39,52 +39,38 @@ const Home = () => {
       />
 
       <div className="min-h-screen">
-        {/* Hero — Option A: navy, persona choice above the fold */}
+        {/* Hero: one headline, one action, three tabs */}
         <section className="bg-ink text-white overflow-hidden">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 md:pt-12 pb-6 grid gap-10 lg:grid-cols-2 items-center">
-            <div>
-              <p className="gcf-fade-up gcf-delay-1 inline-flex items-center rounded-full bg-teal/15 text-teal-light px-4 py-1.5 font-body text-sm font-medium mb-4">
-                Plain-English guide · Regulated by IFSCA
-              </p>
-              <h1 className="gcf-fade-up gcf-delay-2 font-heading font-bold text-4xl md:text-6xl leading-[1.05] tracking-tight mb-5">
-                GIFT City Funds, <span className="text-teal-light">Explained Simply</span>
-              </h1>
-              <p className="gcf-fade-up gcf-delay-3 font-body text-lg md:text-xl text-slate-300 max-w-xl mb-7 leading-relaxed">
-                An educational resource to understand GIFT City Mutual Funds, Alternative Investment Funds (AIFs), and the IFSC investment ecosystem for NRIs, OCIs and Resident Indians.
-              </p>
-              <div className="gcf-fade-up gcf-delay-4 flex flex-wrap gap-3">
-                <Link to="/what-is-gift-city" className="inline-flex items-center rounded-xl bg-teal text-ink font-heading font-semibold px-6 py-3.5 transition-transform hover:-translate-y-0.5 motion-reduce:hover:translate-y-0">
-                  Start with the basics
-                </Link>
-                <Link to="/gift-city-funds-vs-mutual-funds" className="inline-flex items-center rounded-xl border border-slate-600 text-white font-heading font-medium px-6 py-3.5 transition-colors hover:border-teal-light">
-                  Compare with mutual funds
-                </Link>
-              </div>
-            </div>
-            <div className="gcf-fade-up gcf-delay-3 relative hidden sm:flex items-center justify-center min-h-[340px]" aria-hidden="false">
-              <div className="gcf-spin-slow absolute w-[360px] h-[360px] rounded-full border border-dashed border-teal-light/35" aria-hidden="true"></div>
-              <div className="gcf-spin-slower absolute w-[284px] h-[284px] rounded-full border border-brass/30" aria-hidden="true"></div>
-              <img
-                src="/images/gift-city-skyline-828.webp"
-                alt="GIFT City IFSC skyline at Gandhinagar, Gujarat"
-                width="248"
-                height="248"
-                fetchPriority="high"
-                className="relative w-[248px] h-[248px] rounded-full object-cover border-[6px] border-[#13254F]"
-              />
-              <span className="gcf-float absolute top-6 left-4 md:left-10 rounded-xl bg-white text-ink px-4 py-2.5 font-body text-sm font-semibold shadow-xl">Invest in USD</span>
-              <span className="gcf-float absolute bottom-8 left-2 md:left-6 rounded-xl bg-brass text-ink px-4 py-2.5 font-body text-sm font-semibold [animation-delay:1.5s]">IFSCA-regulated</span>
-              <span className="gcf-float absolute top-24 right-2 md:right-8 rounded-xl bg-teal text-ink px-4 py-2.5 font-body text-sm font-semibold [animation-delay:3s]">From USD 500</span>
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 md:pt-20 pb-6 text-center flex flex-col items-center">
+            <p className="gcf-fade-up gcf-delay-1 inline-flex items-center gap-2 font-body text-xs sm:text-sm font-bold uppercase tracking-[0.12em] text-brass mb-5">
+              <span className="h-2 w-2 rounded-full bg-brass" aria-hidden="true"></span>
+              Funds regulated by IFSCA · invest in USD
+            </p>
+            <h1 className="font-heading font-bold text-[2.6rem] leading-[1.04] sm:text-6xl md:text-7xl md:leading-[1.0] tracking-tight">
+              GIFT City Funds,<br />
+              <span className="relative inline-block text-teal-light">
+                Explained Simply
+                <span className="gcf-draw absolute left-0 right-0 -bottom-1.5 h-1.5 rounded-full bg-brass" aria-hidden="true"></span>
+              </span>
+            </h1>
+            <p className="gcf-fade-up gcf-delay-2 mt-7 font-body text-lg md:text-xl text-slate-300 max-w-xl leading-relaxed">
+              Plain-English guides to investing in dollars through India's international financial centre, for NRIs, OCIs and resident Indians.
+            </p>
+            <div className="gcf-fade-up gcf-delay-3 mt-7 flex flex-wrap items-center justify-center gap-x-5 gap-y-3">
+              <Link to="/gift-city-route-checker" className="inline-flex items-center gap-2 rounded-xl bg-teal text-ink font-heading font-bold text-lg px-6 py-3.5 transition-transform hover:-translate-y-0.5 motion-reduce:hover:translate-y-0">
+                Find your route <ArrowRight className="h-5 w-5" aria-hidden />
+              </Link>
+              <Link to="/contact" className="font-body font-semibold text-teal-light underline underline-offset-4 hover:text-white">
+                or talk to Anup
+              </Link>
             </div>
           </div>
 
-          {/* Where to start: 3-step funnel */}
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
-            <h2 className="font-heading text-xl font-semibold text-white mb-3">Find your starting point in three clicks</h2>
-            <HeroFunnel />
-            <p className="mt-5 rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 font-body text-sm text-slate-300">
-              <span className="font-semibold text-brass">Start from USD 500.</span> Some GIFT City retail funds now have low minimums. For example, Tata India Dynamic Equity Fund (GIFT City) accepts USD 500 from NRIs, OCIs and foreign investors; it is not open to Indian residents or US persons.{" "}
-              <a href="https://www.tatamutualfund.com/ifsc-gift-city" target="_blank" rel="noopener noreferrer" className="text-teal-light underline">Source: Tata Mutual Fund</a>. An example of a minimum, not a recommendation; read the scheme documents.
+          <div className="gcf-fade-up gcf-delay-4 px-4 sm:px-6 lg:px-8 pt-10 pb-12">
+            <HeroTabs />
+            <p className="max-w-4xl mx-auto mt-10 font-body text-sm text-slate-400 text-left">
+              <span className="font-semibold text-brass">Start from USD 500.</span> For example, Tata India Dynamic Equity Fund (GIFT City) accepts USD 500 from NRIs, OCIs and foreign investors; it is not open to Indian residents or US persons.{" "}
+              <a href="https://www.tatamutualfund.com/ifsc-gift-city" target="_blank" rel="noopener noreferrer" className="text-teal-light underline">Source: Tata Mutual Fund</a>. An example of a minimum, not a recommendation.
             </p>
           </div>
         </section>
