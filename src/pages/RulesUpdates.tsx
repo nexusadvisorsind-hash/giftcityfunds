@@ -93,7 +93,7 @@ const RulesUpdates = () => (
     sources={["ifsca", "ifscaFmRegs", "rbiLrs", "sebi", "incomeTax", "ukFig"]}
   >
     <p className={p}>
-      <strong className="text-primary">The short answer.</strong> GIFT City's rules change often. This page lists the changes that matter to investors, newest first, each with what it means for you. Last reviewed {LAST_REVIEWED}.
+      <strong className="text-primary">The short answer.</strong> GIFT City's rules change often. This page lists the changes that matter to investors, newest first, each with what it means for you. For wider developments, see <Link to="/gift-city-news" className={a}>GIFT City news</Link>. Last reviewed {LAST_REVIEWED}.
     </p>
 
     <h2 className={h2}>Latest IFSCA circulars and other rule changes</h2>

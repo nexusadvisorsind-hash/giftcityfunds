@@ -15,7 +15,7 @@ interface House {
 // a ranking. Review monthly; update LAST_CHECKED when you do.
 const LAST_CHECKED = "October 2026";
 const HOUSES: House[] = [
-  { name: "Aditya Birla Sun Life AMC", entity: "GIFT City unit set up through a wholly owned IFSC subsidiary", focus: "See the fund house for current schemes", direction: "Varies", source: { label: "Business Standard report", url: "https://www.business-standard.com/article/news-cm/abslamc-to-set-up-new-unit-at-gift-city-122112900858_1.html" } },
+  { name: "Aditya Birla Sun Life AMC", entity: "Aditya Birla Sun Life AMC International (IFSC)", focus: "ABSL Emerging Market Equity Fund (outbound, for residents under LRS); ABSL India Growth Fund (inbound fund of funds, for NRIs)", direction: "Both", source: { label: "Angel One report", url: "https://www.angelone.in/news/mutual-funds/aditya-birla-sun-life-amc-introduces-gift-city-funds-for-emerging-markets-and-indian-equities" } },
   { name: "Bandhan AMC", entity: "GIFT City operations launched in 2025", focus: "Three India-focused funds at launch", direction: "Inbound", source: { label: "Bandhan AMC announcement", url: "https://www.bandhanamc.com/amcaccess/sites/default/files/2025-05/Bandhan%20AMC%20Commences%20GIFT%20City%20Operations%20with%20the%20Launch%20of%20Three%20India%20Focused%20Funds.pdf" } },
   { name: "DSP", entity: "DSP Fund Managers IFSC Pvt. Ltd., Registered FME (Retail)", focus: "India funds and a global equity fund", direction: "Both", source: { label: "giftcity.dspim.com", url: "https://giftcity.dspim.com/" } },
   { name: "Edelweiss AMC", entity: "GIFT City branch opened in 2025", focus: "Edelweiss India Multimanager Equity Fund – Series I (fund of Indian equity funds); a Greater China equity fund", direction: "Both", source: { label: "edelweissmf.com/gift-city", url: "https://www.edelweissmf.com/gift-city" } },
@@ -48,7 +48,7 @@ const FundList = () => (
     description="GIFT City AMC and mutual fund list: 12 fund houses with GIFT City funds, inbound and outbound, each with a source. How to check any manager with IFSCA."
     crumb="GIFT City Fund List"
     datePublished="2026-10-08"
-    dateModified="2026-10-16"
+    dateModified="2026-10-20"
     reviewed={`Last checked ${LAST_CHECKED}`}
     faqs={faqs}
     sources={["ifscaDirectory", "ifsca", "amfi"]}

@@ -49,6 +49,7 @@ const GUIDES: Record<string, Guide> = {
   docs: { to: "/gift-city-document-checklist", title: "Document Checklist", blurb: "Build your KYC list in 30 seconds." },
   returns: { to: "/gift-city-funds-returns", title: "Returns and Performance", blurb: "How to check and compare a GIFT City fund." },
   apps: { to: "/gift-city-funds-zerodha-groww", title: "Zerodha, Groww and GIFT City", blurb: "What the apps offer, and what they don't." },
+  news: { to: "/gift-city-news", title: "Latest GIFT City News", blurb: "Dated, sourced updates for investors." },
   checker: { to: "/gift-city-route-checker", title: "Which Route Applies to You?", blurb: "A 30-second checker for residents and NRIs." },
 };
 
@@ -89,7 +90,8 @@ const RELATED: Record<string, (keyof typeof GUIDES)[]> = {
   "/gift-city-bonds": ["markets", "etfs", "insurance"],
   "/gift-city-redemption-repatriation": ["moving", "tcs", "how"],
   "/gift-city-moving-country": ["redeem", "byCountry", "pfic"],
-  "/gift-city-rules-updates": ["minimums", "tcs", "ifsca"],
+  "/gift-city-rules-updates": ["news", "minimums", "ifsca"],
+  "/gift-city-news": ["rules", "list", "markets"],
   "/gift-city-document-checklist": ["how", "checker", "redeem"],
 };
 

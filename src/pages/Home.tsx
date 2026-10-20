@@ -6,6 +6,7 @@ import HeroTabs from "@/components/HeroTabs";
 import { ArrowRight, Landmark, Layers, Wallet, MessageCircle, CircleDollarSign, TrendingUp, Building2, UserCog, FileText, Globe2, Home as Home2, Calculator, Route, ListChecks, BookA } from "lucide-react";
 import { PageFaqs, type PageFaq } from "@/components/PageFaqs";
 import TicketLadder from "@/components/TicketLadder";
+import LatestNews from "@/components/LatestNews";
 const PAGE_FAQS: PageFaq[] = [
   { q: "What investment opportunities are there in GIFT City?", a: "For individuals: GIFT City mutual funds and feeder funds, AIFs and PMS for larger amounts, US Dollar fixed deposits at IFSC Banking Units, US stocks and ETFs through IFSC brokers, and dollar insurance products. Each has different minimums, risks and tax." },
   { q: "What is GiftCityFunds?", a: "GiftCityFunds (giftcityfunds.in) is an educational website about GIFT City funds, written by Anup Vatyani, an AMFI-registered Mutual Fund Distributor (ARN 106715). It is not a fund house, a bank or an investment platform, and it does not give personalised advice." },
@@ -181,6 +182,8 @@ const Home = () => {
             </div>
           </div>
         </section>
+
+        <LatestNews />
 
         {/* Why Start Here */}
         <section className="py-16 bg-surface">

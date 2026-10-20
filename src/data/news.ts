@@ -1,0 +1,98 @@
+// GIFT City news, newest first. To add a story: put a new entry at the TOP,
+// in our own words (2–3 factual sentences, no returns or recommendations),
+// with the original source. Then update NEWS_UPDATED and the sitemap lastmod.
+export interface NewsItem {
+  date: string; // ISO yyyy-mm-dd
+  title: string;
+  summary: string;
+  tag: "Funds" | "Regulation" | "Markets" | "Banking" | "Tax" | "Platforms" | "Insurance";
+  source: { label: string; url: string };
+  more?: [string, string]; // related guide on this site
+}
+
+export const NEWS_UPDATED = "20 October 2026";
+
+export const NEWS: NewsItem[] = [
+  {
+    date: "2026-10-18",
+    title: "NMDC and SAIL set up subsidiaries in GIFT IFSC",
+    summary: "The two public sector companies have each incorporated a subsidiary in GIFT City's IFSC: NMDC as a platform for overseas mineral projects, SAIL mainly as a group treasury centre.",
+    tag: "Markets",
+    source: { label: "Business Standard", url: "https://www.business-standard.com/markets/news/psus-tap-gift-city-for-overseas-mineral-hunt-amid-critical-supply-push-126101800834_1.html" },
+  },
+  {
+    date: "2026-10-15",
+    title: "Aditya Birla Sun Life launches two retail GIFT City funds",
+    summary: "Its IFSC subsidiary announced an outbound emerging-markets fund for resident Indians investing under LRS, and an inbound India Growth fund of funds for NRIs and foreign investors. Both have a stated minimum of USD 500.",
+    tag: "Funds",
+    source: { label: "Angel One report", url: "https://www.angelone.in/news/mutual-funds/aditya-birla-sun-life-amc-introduces-gift-city-funds-for-emerging-markets-and-indian-equities" },
+    more: ["/gift-city-fund-list", "GIFT City fund list"],
+  },
+  {
+    date: "2026-09-29",
+    title: "Groww starts rolling out US stocks through GIFT City",
+    summary: "Groww began offering US stocks and ETFs to its users through the GIFT City Global Access Provider route, with wider availability expected over the following month.",
+    tag: "Platforms",
+    source: { label: "Free Press Journal", url: "https://www.freepressjournal.in/business/groww-rolls-out-us-stock-investing-amid-ai-wave" },
+    more: ["/gift-city-funds-zerodha-groww", "Zerodha, Groww and GIFT City"],
+  },
+  {
+    date: "2026-09-02",
+    title: "GIFT City banks disburse USD 52.8 billion under RBI's FCNR(B) swap window",
+    summary: "IFSCA said 20 IFSC Banking Units had disbursed about USD 52.82 billion under RBI's special FCNR(B) swap facility by 31 August 2026, and Indian banks had listed USD 11.12 billion of bonds on IFSC exchanges from April to August.",
+    tag: "Banking",
+    source: { label: "TaxGuru (PIB release)", url: "https://taxguru.in/finance/ifsca-highlights-gift-ifsc-foreign-currency-mobilisation-exceeding-usd-52-8-billion.html" },
+    more: ["/gift-city-banks-and-business-setup", "Banks in GIFT City"],
+  },
+  {
+    date: "2026-08-10",
+    title: "The Wealth Company launches a dollar fund of funds for NRIs",
+    summary: "The Wealth Company's IFSC branch launched a US Dollar Category III AIF that invests in Indian funds. It is for NRIs and global investors; US, Canadian and resident Indian investors are not accepted.",
+    tag: "Funds",
+    source: { label: "Cafemutual", url: "https://cafemutual.com/news/cafe-alt/38470-the-wealth-company-launches-a-dollar-denominated-gift-city-fund-of-funds-for-nris" },
+    more: ["/gift-city-aif", "GIFT City AIFs"],
+  },
+  {
+    date: "2026-07-27",
+    title: "Dollar term insurance for NRIs offered through GIFT City",
+    summary: "Policybazaar began offering US Dollar term insurance from partner insurers through GIFT City, with premiums and claims in dollars and remote onboarding for NRIs.",
+    tag: "Insurance",
+    source: { label: "Business Today", url: "https://www.businesstoday.in/amp/personal-finance/investment/story/policybazaar-launches-dollar-denominated-term-insurance-for-nris-via-gift-city-545492-2026-07-27" },
+    more: ["/gift-city-insurance", "GIFT City insurance"],
+  },
+  {
+    date: "2026-07-17",
+    title: "Mauritius approves ratifying the India–Mauritius tax treaty protocol",
+    summary: "Mauritius's Cabinet approved ratification of the 2024 protocol adding a principal purpose test to the treaty. It takes effect only after both countries complete their procedures.",
+    tag: "Tax",
+    source: { label: "EY tax alert", url: "https://www.ey.com/en_in/technical/alerts-hub/2026/07/mauritian-cabinet-approves-ratification-of-protocol-to-india-mauritius-dtaa" },
+    more: ["/gift-city-vs-singapore-dubai", "GIFT City vs Mauritius"],
+  },
+  {
+    date: "2026-06-17",
+    title: "Zerodha, Groww, Upstox and Angel One get IFSCA nod for US stocks",
+    summary: "IFSCA approved Zerodha and Upstox as broker-dealers and Groww and Angel One as Global Access Providers, letting them offer US stocks through GIFT City.",
+    tag: "Platforms",
+    source: { label: "Business Today", url: "https://www.businesstoday.in/amp/markets/stocks/story/groww-zerodha-angel-one-upstox-secure-gift-city-approval-for-us-and-global-stock-investment-537332-2026-06-17" },
+    more: ["/gift-city-us-stocks-etfs", "US stocks via GIFT City"],
+  },
+  {
+    date: "2026-04-10",
+    title: "IFSCA separates fiduciary roles for GIFT City schemes",
+    summary: "A new IFSCA circular bars a scheme's fiduciary from also acting as its administrator, valuer, auditor or lender. Existing schemes must comply by 30 September 2026.",
+    tag: "Regulation",
+    source: { label: "Mondaq", url: "https://www.mondaq.com/india/fund-management-reits/1784396/ifsca-tightens-fund-management-regime-in-gift-city-accountability-certification-and-governance" },
+    more: ["/gift-city-rules-updates", "All rule changes"],
+  },
+  {
+    date: "2026-03-31",
+    title: "GIFT City bond listings reach USD 70 billion",
+    summary: "IFSCA's debt market report put cumulative debt listings on IFSC exchanges at USD 70.31 billion by 31 March 2026, with USD 49.20 billion outstanding.",
+    tag: "Markets",
+    source: { label: "TaxGuru (IFSCA report)", url: "https://taxguru.in/finance/ifsca-reviews-fy2025-26-debt-market-growth-outlook-gift-ifsc.html" },
+    more: ["/gift-city-bonds", "GIFT City bonds"],
+  },
+];
+
+export const formatNewsDate = (iso: string) =>
+  new Date(iso + "T00:00:00Z").toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });

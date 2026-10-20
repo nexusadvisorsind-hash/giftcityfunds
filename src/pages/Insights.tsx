@@ -10,6 +10,7 @@ import { toast } from "sonner";
 import { articles, getArticle } from "./insights/articles";
 import { formatDate } from "@/lib/formatDate";
 import { trackEvent } from "@/lib/analytics";
+import { NEWS, formatNewsDate } from "@/data/news";
 
 // The Insights hub groups every guide, tool and article into four topics.
 const CLUSTERS: { id: string; title: string; blurb: string; icon: typeof Users; accent: string; badge: string; links: [string, string, string?][] }[] = [
@@ -57,6 +58,7 @@ const CLUSTERS: { id: string; title: string; blurb: string; icon: typeof Users; 
       ["/what-is-ifsca", "What is IFSCA?", "Guide"],
       ["/insights/ifsca-vs-sebi", "IFSCA vs SEBI", "Article"],
       ["/what-is-gift-city", "What is GIFT City and IFSC?", "Guide"],
+      ["/gift-city-news", "Latest GIFT City news", "Guide"],
       ["/gift-city-rules-updates", "GIFT City rule changes, dated", "Guide"],
       ["/gift-city-vs-singapore-dubai", "GIFT City vs Singapore, Dubai and Mauritius", "Guide"],
       ["/gift-city-glossary", "Glossary", "Guide"],
@@ -159,6 +161,21 @@ const Insights = () => {
       <Breadcrumbs items={[{ name: "Home", url: "/" }, { name: "Insights", url: "/insights" }]} />
       <h1 className="font-heading font-bold text-3xl md:text-4xl text-primary mt-6 mb-4">Insights on GIFT City & IFSC Investing</h1>
       <p className="font-body text-lg text-foreground-muted mb-8">Plain-English writing on the mechanics, regulation and tax treatment of GIFT City funds — for NRIs, OCIs and Resident Indians, updated as rules evolve.</p>
+
+      <section aria-labelledby="latest-news" className="mb-8 rounded-2xl border border-border bg-background p-5">
+        <div className="flex flex-wrap items-baseline justify-between gap-3 mb-3">
+          <h2 id="latest-news" className="font-heading font-semibold text-xl text-primary">Latest GIFT City news</h2>
+          <Link to="/gift-city-news" className="font-body text-sm font-semibold text-secondary hover:underline">All news →</Link>
+        </div>
+        <ul className="divide-y divide-border list-none p-0 m-0">
+          {NEWS.slice(0, 3).map((n) => (
+            <li key={n.date + n.title} className="py-2.5 flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4">
+              <time dateTime={n.date} className="shrink-0 font-body text-sm font-semibold text-secondary sm:w-36">{formatNewsDate(n.date)}</time>
+              <Link to="/gift-city-news" className="font-body text-primary hover:underline">{n.title}</Link>
+            </li>
+          ))}
+        </ul>
+      </section>
 
       <div className="bg-surface border border-border p-6 rounded-lg mb-12">
         <h2 className="font-heading font-semibold text-primary mb-2">Get new GIFT City articles by email</h2>

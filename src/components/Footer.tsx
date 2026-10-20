@@ -103,6 +103,9 @@ const Footer = () => {
                 <Link to="/gift-city-document-checklist" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Document Checklist</Link>
               </li>
               <li>
+                <Link to="/gift-city-news" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">GIFT City News</Link>
+              </li>
+              <li>
                 <Link to="/gift-city-rules-updates" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">GIFT City Rule Changes</Link>
               </li>
               <li>

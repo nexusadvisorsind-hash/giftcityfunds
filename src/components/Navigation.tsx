@@ -48,6 +48,7 @@ const Navigation = () => {
     { label: "Route Checker", path: "/gift-city-route-checker", ariaLabel: "Check which GIFT City investment route applies to you" },
     { label: "TCS Calculator", path: "/insights/lrs-tcs-gift-city#calculator", ariaLabel: "TCS on foreign remittance calculator" },
     { label: "Document Checklist", path: "/gift-city-document-checklist", ariaLabel: "Build your GIFT City KYC document checklist" },
+    { label: "Latest News", path: "/gift-city-news", ariaLabel: "Latest GIFT City news for investors" },
     { label: "Rule Changes", path: "/gift-city-rules-updates", ariaLabel: "Dated log of GIFT City rule changes" },
     { label: "Glossary", path: "/gift-city-glossary", ariaLabel: "GIFT City glossary of terms" },
   ];

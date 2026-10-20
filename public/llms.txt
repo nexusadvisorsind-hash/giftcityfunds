@@ -19,6 +19,7 @@
 - [GIFT City Document Checklist](https://giftcityfunds.in/gift-city-document-checklist): Interactive KYC checklist by status (NRI, OCI, resident), country and product.
 - [GIFT City Funds Returns and Performance](https://giftcityfunds.in/gift-city-funds-returns): Where to find NAVs and factsheets, how the rupee and fees change returns, and how to review a fund fairly. No rankings.
 - [Zerodha, Groww and GIFT City](https://giftcityfunds.in/gift-city-funds-zerodha-groww): IFSCA approvals of June 2026 for Zerodha, Upstox, Groww and Angel One (US stocks and ETFs), and how GIFT City funds are bought instead.
+- [GIFT City News](https://giftcityfunds.in/gift-city-news): Dated, sourced GIFT City news for investors: new funds, IFSCA decisions, banking and market updates.
 - [FAQs](https://giftcityfunds.in/faqs): Short answers to common questions.
 - [GIFT City Fund List 2026](https://giftcityfunds.in/gift-city-fund-list): Fund houses with GIFT City funds, inbound (India) and outbound (global), with sources. Facts only, not ranked.
 - [Is There a SIP in GIFT City Funds?](https://giftcityfunds.in/gift-city-sip): No. GIFT City funds have no SIP or monthly auto-debit; how lump-sum and additional investments work, and how LRS and TCS apply.
