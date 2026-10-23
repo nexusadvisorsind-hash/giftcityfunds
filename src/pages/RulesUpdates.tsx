@@ -12,8 +12,14 @@ interface Update {
 
 // Newest first. Add a row whenever a rule that affects investors changes, and
 // update LAST_REVIEWED. Keep each entry factual and dated.
-const LAST_REVIEWED = "9 October 2026";
+const LAST_REVIEWED = "23 October 2026";
 const UPDATES: Update[] = [
+  {
+    date: "2026-10-15", label: "15 October 2026", body: "Ministry of Commerce and Industry",
+    change: "SEZ (Fourth Amendment) Rules, 2026 notified: a fund in GIFT IFSC can rely on its fund management entity's provisional space offer and lease deed.",
+    forYou: "Fewer set-up steps for fund houses, which can mean more GIFT City funds to choose from.",
+    link: ["/gift-city-news", "GIFT City news"],
+  },
   {
     date: "2026-07-17", label: "17 July 2026", body: "Government of Mauritius",
     change: "Mauritius Cabinet approved ratification of the 2024 Protocol to the India–Mauritius tax treaty, which adds a principal purpose test. It takes effect only after both countries complete their procedures.",

@@ -10,9 +10,33 @@ export interface NewsItem {
   more?: [string, string]; // related guide on this site
 }
 
-export const NEWS_UPDATED = "20 October 2026";
+export const NEWS_UPDATED = "23 October 2026";
 
 export const NEWS: NewsItem[] = [
+  {
+    date: "2026-10-19",
+    title: "Angel One starts rolling out US stocks through GIFT City",
+    summary: "Angel One began offering US-listed stocks and ETFs through GIFT City to selected app users, following IFSCA approval, and expects to open it to all users by mid-November.",
+    tag: "Platforms",
+    source: { label: "UNI", url: "https://www.uniindia.com/west-india/business-india-angel-one-us-stock-investing/219556" },
+    more: ["/gift-city-funds-zerodha-groww", "Zerodha, Groww and GIFT City"],
+  },
+  {
+    date: "2026-10-17",
+    title: "Canara HSBC Life launches a dollar ULIP for NRIs via GIFT City",
+    summary: "Canara HSBC Life introduced a US Dollar unit-linked insurance plan through GIFT City, aimed at NRIs, with global equity, gold and silver, and debt fund options. It is distributed through Policybazaar.",
+    tag: "Insurance",
+    source: { label: "Angel One report", url: "https://www.angelone.in/news/market-updates/canara-hsbc-life-introduces-us-dollar-denominated-global-wealth-plan" },
+    more: ["/gift-city-insurance", "GIFT City insurance"],
+  },
+  {
+    date: "2026-10-15",
+    title: "SEZ rules amended to make GIFT City fund set-up easier",
+    summary: "The SEZ (Fourth Amendment) Rules, 2026 let a fund in GIFT IFSC rely on its fund management entity's office space offer and lease deed, removing a separate set-up step for each fund.",
+    tag: "Regulation",
+    source: { label: "AIF Services (G.S.R. 895(E))", url: "https://www.aifservices.in/p/gift-ifsc-fund-setup-gets-a-regulatory" },
+    more: ["/gift-city-rules-updates", "All rule changes"],
+  },
   {
     date: "2026-10-18",
     title: "NMDC and SAIL set up subsidiaries in GIFT IFSC",
@@ -27,6 +51,14 @@ export const NEWS: NewsItem[] = [
     tag: "Funds",
     source: { label: "Angel One report", url: "https://www.angelone.in/news/mutual-funds/aditya-birla-sun-life-amc-introduces-gift-city-funds-for-emerging-markets-and-indian-equities" },
     more: ["/gift-city-fund-list", "GIFT City fund list"],
+  },
+  {
+    date: "2026-10-07",
+    title: "Mirae Asset Sharekhan opens US stocks through GIFT City",
+    summary: "Mirae Asset Sharekhan launched access to over 10,000 US stocks and ETFs, with fractional investing from USD 1, through its IFSCA-registered broker-dealer in GIFT City. Residents invest under LRS.",
+    tag: "Platforms",
+    source: { label: "UNI (Business Wire India)", url: "https://www.uniindia.com/business-wire-india/mirae-asset-sharekhan-enables-indian-investors-to-access-over-10000-us-stocks-and-etfs-through-gift/205332" },
+    more: ["/gift-city-us-stocks-etfs", "US stocks via GIFT City"],
   },
   {
     date: "2026-09-29",

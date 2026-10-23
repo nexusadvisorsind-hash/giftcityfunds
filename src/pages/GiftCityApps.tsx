@@ -17,6 +17,7 @@ const GiftCityApps = () => (
     description="Can you buy GIFT City funds on Zerodha or Groww? What IFSCA approved in 2026, what the apps offer (US stocks and ETFs), and how GIFT City funds are bought instead."
     crumb="Zerodha, Groww and GIFT City"
     datePublished="2026-10-16"
+    dateModified="2026-10-23"
     faqs={faqs}
     sources={["ifsca", "ifscaDirectory", "rbiLrs"]}
   >
@@ -27,13 +28,14 @@ const GiftCityApps = () => (
     <h2 className={h2}>What each app is approved for</h2>
     <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
       <table className={table}>
-        <caption className="sr-only">Zerodha, Groww, Upstox and Angel One GIFT City approvals</caption>
+        <caption className="sr-only">Zerodha, Groww, Upstox, Angel One and Sharekhan in GIFT City</caption>
         <thead><tr><th className={th}>Platform</th><th className={th}>Role in GIFT City</th><th className={th}>What it offers</th><th className={th}>Status (October 2026)</th></tr></thead>
         <tbody>
           <tr><td className={td}>Zerodha</td><td className={td}>Broker-dealer</td><td className={td}>US stocks</td><td className={td}>Approved June 2026; check the app for launch</td></tr>
           <tr><td className={td}>Upstox</td><td className={td}>Broker-dealer</td><td className={td}>US stocks</td><td className={td}>Approved June 2026; check the app for launch</td></tr>
           <tr><td className={td}>Groww</td><td className={td}>Global Access Provider</td><td className={td}>US stocks and ETFs</td><td className={td}>Rolling out from late September 2026</td></tr>
-          <tr><td className={td}>Angel One</td><td className={td}>Global Access Provider</td><td className={td}>US stocks</td><td className={td}>Approved June 2026; check the app for launch</td></tr>
+          <tr><td className={td}>Angel One</td><td className={td}>Global Access Provider</td><td className={td}>US stocks and ETFs</td><td className={td}>Rolling out to selected users from 19 October 2026; all users expected by mid-November</td></tr>
+          <tr><td className={td}>Mirae Asset Sharekhan</td><td className={td}>Broker-dealer (Mirae Asset Capital Markets (IFSC))</td><td className={td}>Over 10,000 US stocks and ETFs; fractional from USD 1</td><td className={td}>Live from 7 October 2026</td></tr>
         </tbody>
       </table>
     </div>
