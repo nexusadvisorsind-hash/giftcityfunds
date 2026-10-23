@@ -16,7 +16,7 @@ const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "What Is GIFT City & IFSC? — Explained Simply",
-  "dateModified": "2026-10-16",
+  "dateModified": "2026-10-23",
   "author": { "@type": "Person", "name": "Anup Vatyani" },
   "publisher": { "@type": "Organization", "name": "GIFT City Funds" },
   "mainEntityOfPage": "https://giftcityfunds.in/what-is-gift-city",
@@ -36,7 +36,7 @@ const WhatIsGiftCity = () => (
     />
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
       <Breadcrumbs items={[{ name: "Home", url: "/" }, { name: "What is GIFT City", url: "/what-is-gift-city" }]} />
-      <h1 className="font-heading font-bold text-3xl md:text-4xl text-primary mt-6 mb-8">What Is GIFT City, and What Is an IFSC?</h1>
+      <h1 className="font-heading font-bold text-3xl md:text-4xl text-primary mt-6 mb-8">What Is GIFT City and GIFT IFSC?</h1>
 
       <div className="prose max-w-none font-body text-foreground-muted space-y-6">
         <div className="rounded-xl border border-border bg-surface p-5 not-prose">
