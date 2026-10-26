@@ -10,7 +10,7 @@ export interface NewsItem {
   more?: [string, string]; // related guide on this site
 }
 
-export const NEWS_UPDATED = "23 October 2026";
+export const NEWS_UPDATED = "24 October 2026";
 
 export const NEWS: NewsItem[] = [
   {
@@ -20,6 +20,13 @@ export const NEWS: NewsItem[] = [
     tag: "Platforms",
     source: { label: "UNI", url: "https://www.uniindia.com/west-india/business-india-angel-one-us-stock-investing/219556" },
     more: ["/gift-city-funds-zerodha-groww", "Zerodha, Groww and GIFT City"],
+  },
+  {
+    date: "2026-10-18",
+    title: "NMDC and SAIL set up subsidiaries in GIFT IFSC",
+    summary: "The two public sector companies have each incorporated a subsidiary in GIFT City's IFSC: NMDC as a platform for overseas mineral projects, SAIL mainly as a group treasury centre.",
+    tag: "Markets",
+    source: { label: "Business Standard", url: "https://www.business-standard.com/markets/news/psus-tap-gift-city-for-overseas-mineral-hunt-amid-critical-supply-push-126101800834_1.html" },
   },
   {
     date: "2026-10-17",
@@ -38,18 +45,19 @@ export const NEWS: NewsItem[] = [
     more: ["/gift-city-rules-updates", "All rule changes"],
   },
   {
-    date: "2026-10-18",
-    title: "NMDC and SAIL set up subsidiaries in GIFT IFSC",
-    summary: "The two public sector companies have each incorporated a subsidiary in GIFT City's IFSC: NMDC as a platform for overseas mineral projects, SAIL mainly as a group treasury centre.",
-    tag: "Markets",
-    source: { label: "Business Standard", url: "https://www.business-standard.com/markets/news/psus-tap-gift-city-for-overseas-mineral-hunt-amid-critical-supply-push-126101800834_1.html" },
-  },
-  {
     date: "2026-10-15",
     title: "Aditya Birla Sun Life launches two retail GIFT City funds",
     summary: "Its IFSC subsidiary announced an outbound emerging-markets fund for resident Indians investing under LRS, and an inbound India Growth fund of funds for NRIs and foreign investors. Both have a stated minimum of USD 500.",
     tag: "Funds",
     source: { label: "Angel One report", url: "https://www.angelone.in/news/mutual-funds/aditya-birla-sun-life-amc-introduces-gift-city-funds-for-emerging-markets-and-indian-equities" },
+    more: ["/gift-city-fund-list", "GIFT City fund list"],
+  },
+  {
+    date: "2026-10-09",
+    title: "Edelweiss launches a US technology fund through GIFT City",
+    summary: "Edelweiss's GIFT City branch opened the Edelweiss US Technology Equity Fund, a retail fund of fund investing in JPMorgan Funds – US Technology Fund. It accepts residents under LRS, NRIs and foreign nationals, from USD 5,000.",
+    tag: "Funds",
+    source: { label: "Cafemutual", url: "https://cafemutual.com/news/cafe-alt/39013-edelweiss-launches-us-technology-fund-through-gift-city" },
     more: ["/gift-city-fund-list", "GIFT City fund list"],
   },
   {
@@ -69,6 +77,14 @@ export const NEWS: NewsItem[] = [
     more: ["/gift-city-funds-zerodha-groww", "Zerodha, Groww and GIFT City"],
   },
   {
+    date: "2026-09-12",
+    title: "GIFT City fund investors cross 16,000; retail now over half",
+    summary: "IFSCA data showed 16,150 investors in GIFT City funds at 30 June 2026, with 8,467 in retail schemes, up from 3,438 in March. Fund management entities rose to 235 and schemes to 401.",
+    tag: "Markets",
+    source: { label: "Cafemutual (IFSCA data)", url: "https://cafemutual.com/news/industry/38786-gift-city-fund-commitments-cross-rs-428-lakh-crore-as-fme-count-reaches-235" },
+    more: ["/gift-city-fund-list", "GIFT City fund list"],
+  },
+  {
     date: "2026-09-02",
     title: "GIFT City banks disburse USD 52.8 billion under RBI's FCNR(B) swap window",
     summary: "IFSCA said 20 IFSC Banking Units had disbursed about USD 52.82 billion under RBI's special FCNR(B) swap facility by 31 August 2026, and Indian banks had listed USD 11.12 billion of bonds on IFSC exchanges from April to August.",
@@ -77,12 +93,27 @@ export const NEWS: NewsItem[] = [
     more: ["/gift-city-banks-and-business-setup", "Banks in GIFT City"],
   },
   {
+    date: "2026-08-25",
+    title: "PPFAS cuts minimum for its GIFT City S&P 500 and Nasdaq 100 funds to USD 500",
+    summary: "PPFAS lowered the minimum first and additional investment in its two outbound GIFT City funds of funds from USD 5,000 to USD 500. Resident Indians invest in them under LRS.",
+    tag: "Funds",
+    source: { label: "IndMoney", url: "https://www.indmoney.com/blog/mutual-funds/parag-parikh-ppfas-gift-outbound-funds-minimum-investment-500" },
+    more: ["/gift-city-fund-list", "GIFT City fund list"],
+  },
+  {
     date: "2026-08-10",
     title: "The Wealth Company launches a dollar fund of funds for NRIs",
     summary: "The Wealth Company's IFSC branch launched a US Dollar Category III AIF that invests in Indian funds. It is for NRIs and global investors; US, Canadian and resident Indian investors are not accepted.",
     tag: "Funds",
     source: { label: "Cafemutual", url: "https://cafemutual.com/news/cafe-alt/38470-the-wealth-company-launches-a-dollar-denominated-gift-city-fund-of-funds-for-nris" },
     more: ["/gift-city-aif", "GIFT City AIFs"],
+  },
+  {
+    date: "2026-08-03",
+    title: "360 ONE's GIFT City arm registered as a retail fund manager",
+    summary: "IFSCA granted 360 ONE Global Asset Management (IFSC) final registration as a retail Fund Management Entity, allowing it to launch retail schemes from GIFT City. No scheme had been launched at the time.",
+    tag: "Funds",
+    source: { label: "Sahi", url: "https://www.sahi.com/news/360-one-wam-subsidiary-gets-final-ifsca-registration-as-retail-fund-manager-4366-PE1_COR" },
   },
   {
     date: "2026-07-27",
@@ -99,6 +130,14 @@ export const NEWS: NewsItem[] = [
     tag: "Tax",
     source: { label: "EY tax alert", url: "https://www.ey.com/en_in/technical/alerts-hub/2026/07/mauritian-cabinet-approves-ratification-of-protocol-to-india-mauritius-dtaa" },
     more: ["/gift-city-vs-singapore-dubai", "GIFT City vs Mauritius"],
+  },
+  {
+    date: "2026-07-04",
+    title: "GIFT City gets its first physical gold fund",
+    summary: "Artha Bharat Investment Managers IFSC launched the Artha Bharat FinMet Physical Gold Fund, which holds at least 95% in LBMA-standard gold bars traded on the India International Bullion Exchange.",
+    tag: "Funds",
+    source: { label: "Business Today", url: "https://www.businesstoday.in/mutual-funds/story/new-fund-launches-in-july-axis-mirae-motilal-oswal-launch-new-passive-funds-gift-city-gets-physical-gold-fund-540992-2026-07-04" },
+    more: ["/gift-city-fund-list", "GIFT City fund list"],
   },
   {
     date: "2026-06-17",

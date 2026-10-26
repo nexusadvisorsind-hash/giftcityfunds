@@ -3,7 +3,7 @@ import { GuidePage, h2, h3, p, a, ul, table, th, td, type Faq } from "@/componen
 import { RouteDiagram } from "@/components/Diagrams";
 
 const faqs: Faq[] = [
-  { q: "Why do some international mutual funds stop accepting money?", a: "SEBI caps how much the Indian mutual fund industry can invest overseas: USD 7 billion in total, with a limit for each fund house. When a fund house nears its limit it pauses fresh lump sums and new SIPs in its international schemes until headroom returns." },
+  { q: "Why do some international mutual funds stop accepting money?", a: "SEBI caps how much the Indian mutual fund industry can invest overseas: USD 7 billion in total, with a limit for each fund house. When a fund house nears its limit it pauses fresh lump sums and new SIPs in its international schemes until headroom returns. In July 2026, Edelweiss, PGIM India and Franklin Templeton paused fresh SIPs and lump sums in some international schemes for this reason." },
   { q: "Are GIFT City funds subject to the USD 7 billion limit?", a: "No. GIFT City funds are regulated by IFSCA, not SEBI, and invest from the IFSC. The SEBI overseas limit for domestic mutual funds does not apply to them. The investor's own LRS limit still applies to resident Indians." },
   { q: "Which is better for a resident Indian?", a: "Neither is better in general. An international fund of funds is simpler, takes rupees, allows small monthly SIPs and has no TCS, but may be closed to new money. A GIFT City fund is in dollars, has no SIP, has higher minimums and involves LRS and TCS, but is not affected by the SEBI cap. Your amount, horizon and tax position decide which suits you." },
   { q: "Do NRIs have the same choice?", a: "NRIs can usually invest in both. Many use GIFT City funds because they can invest and redeem in dollars from an overseas account without converting to rupees." },
@@ -17,6 +17,7 @@ const GiftCityVsInternationalFunds = () => (
     description="GIFT City funds vs Indian international mutual funds: the SEBI USD 7 billion cap, currency, minimums, SIP (not offered in GIFT City), LRS and TCS, side by side."
     crumb="GIFT City vs International Mutual Funds"
     datePublished="2026-10-08"
+    dateModified="2026-10-24"
     faqs={faqs}
     sources={["sebi", "ifsca", "rbiLrs", "incomeTax"]}
   >

@@ -1,136 +1,225 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { GuidePage, h2, h3, p, a, ul, table, th, td, type Faq } from "@/components/GuidePage";
 import { FlowSteps } from "@/components/Diagrams";
 import MoneyMap from "@/components/MoneyMap";
 
-interface House {
-  name: string;
-  entity: string;
-  focus: string;
-  direction: "Inbound" | "Outbound" | "Both" | "Varies";
+type Direction = "Inbound" | "Outbound" | "Gold";
+interface Fund {
+  house: string;
+  scheme: string;
+  direction: Direction;
+  invests: string;
+  minimum: string;
+  who: string;
+  residents: boolean; // resident Indians can invest (LRS)
+  nri: boolean; // NRIs can invest
   source: { label: string; url: string };
 }
 
-// Facts only, alphabetical, each with a public source. Not exhaustive and not
-// a ranking. Review monthly; update LAST_CHECKED when you do.
-const LAST_CHECKED = "October 2026";
-const HOUSES: House[] = [
-  { name: "Aditya Birla Sun Life AMC", entity: "Aditya Birla Sun Life AMC International (IFSC)", focus: "ABSL Emerging Market Equity Fund (outbound, for residents under LRS); ABSL India Growth Fund (inbound fund of funds, for NRIs)", direction: "Both", source: { label: "Angel One report", url: "https://www.angelone.in/news/mutual-funds/aditya-birla-sun-life-amc-introduces-gift-city-funds-for-emerging-markets-and-indian-equities" } },
-  { name: "Bandhan AMC", entity: "GIFT City operations launched in 2025", focus: "Three India-focused funds at launch", direction: "Inbound", source: { label: "Bandhan AMC announcement", url: "https://www.bandhanamc.com/amcaccess/sites/default/files/2025-05/Bandhan%20AMC%20Commences%20GIFT%20City%20Operations%20with%20the%20Launch%20of%20Three%20India%20Focused%20Funds.pdf" } },
-  { name: "DSP", entity: "DSP Fund Managers IFSC Pvt. Ltd., Registered FME (Retail)", focus: "India funds and a global equity fund", direction: "Both", source: { label: "giftcity.dspim.com", url: "https://giftcity.dspim.com/" } },
-  { name: "Edelweiss AMC", entity: "GIFT City branch opened in 2025", focus: "Edelweiss India Multimanager Equity Fund – Series I (fund of Indian equity funds); a Greater China equity fund", direction: "Both", source: { label: "edelweissmf.com/gift-city", url: "https://www.edelweissmf.com/gift-city" } },
-  { name: "HDFC AMC", entity: "HDFC AMC International (IFSC) Ltd.", focus: "See the fund house for current schemes", direction: "Varies", source: { label: "HDFC Mutual Fund", url: "https://www.hdfcfund.com/information/inauguration-subsidiarys-office-gift-city" } },
-  { name: "ICICI Prudential AMC", entity: "GIFT City branch opened in 2025", focus: "India-centric fund at launch", direction: "Inbound", source: { label: "Business Today report", url: "https://www.businesstoday.in/latest/corporate/story/icici-prudential-amc-launches-gift-city-branch-eyes-global-capital-for-indian-markets-491270-2025-08-27" } },
-  { name: "Mirae Asset", entity: "GIFT City fund entity", focus: "Mirae Asset India Equity Allocation GIFT Fund", direction: "Inbound", source: { label: "Mirae Asset product presentation", url: "https://www.miraeassetmf.co.in/docs/default-source/product-presentations/mirae-asset-india-equity-allocation-gift-fund---march-2026.pdf" } },
-  { name: "Motilal Oswal AMC", entity: "GIFT City fund (Category III AIF)", focus: "Motilal Oswal GIFT City India Equity Fund of Funds", direction: "Inbound", source: { label: "PMS AIF World listing", url: "https://www.pmsaifworld.com/portfolio/motilal-oswal-gift-city-india-equity-fund-of-funds/" } },
-  { name: "Nippon India Mutual Fund", entity: "IFSC branch of Nippon Life India Asset Management", focus: "Nippon India Large Cap Fund GIFT (feeder into Nippon India Large Cap Fund)", direction: "Inbound", source: { label: "Angel One report", url: "https://www.angelone.in/news/mutual-funds/nippon-life-india-unveils-its-first-feeder-fund-from-gift-city-nippon-india-large-cap-fund-gift" } },
-  { name: "Sundaram Asset Management", entity: "GIFT City operations", focus: "See the fund house for current schemes", direction: "Varies", source: { label: "sundarammutual.com/gift-city", url: "https://www.sundarammutual.com/gift-city" } },
-  { name: "Tata Asset Management", entity: "IFSCA-approved GIFT City fund", focus: "Tata India Dynamic Equity Fund (GIFT IFSC), a feeder into Indian equity schemes", direction: "Inbound", source: { label: "tatamutualfund.com/ifsc-gift-city", url: "https://www.tatamutualfund.com/ifsc-gift-city" } },
-  { name: "The Wealth Company", entity: "IFSC branch of Wealth Company Asset Management", focus: "The Wealth Company IFSC FoF (US Dollar Category III AIF investing in Indian funds)", direction: "Inbound", source: { label: "Cafemutual report", url: "https://cafemutual.com/news/cafe-alt/38470-the-wealth-company-launches-a-dollar-denominated-gift-city-fund-of-funds-for-nris" } },
+// Facts only, each with a public source. Alphabetical by fund house. Not
+// exhaustive and not a ranking: no returns, no "best". Review monthly and
+// update LAST_CHECKED. Where a fund house has not published a fact, say so.
+const LAST_CHECKED = "24 October 2026";
+
+const LOW_MIN: Fund[] = [
+  { house: "Aditya Birla Sun Life", scheme: "ABSL Emerging Market Equity Fund", direction: "Outbound", invests: "ARGA Emerging Market Equity Fund and/or other emerging market funds", minimum: "USD 500, then multiples of USD 100", who: "Resident Indians under LRS; eligible Indian companies", residents: true, nri: false, source: { label: "Angel One report", url: "https://www.angelone.in/news/mutual-funds/aditya-birla-sun-life-amc-introduces-gift-city-funds-for-emerging-markets-and-indian-equities" } },
+  { house: "Aditya Birla Sun Life", scheme: "ABSL India Growth Fund", direction: "Inbound", invests: "Aditya Birla Sun Life equity schemes, including ETFs and index funds", minimum: "USD 500, then multiples of USD 100", who: "NRIs and foreign investors", residents: false, nri: true, source: { label: "Angel One report", url: "https://www.angelone.in/news/mutual-funds/aditya-birla-sun-life-amc-introduces-gift-city-funds-for-emerging-markets-and-indian-equities" } },
+  { house: "DSP", scheme: "DSP Global Equity Fund", direction: "Outbound", invests: "A concentrated, actively managed portfolio of global companies", minimum: "USD 5,000; top-ups USD 500", who: "Resident Indians under LRS, and other eligible investors per the offer document", residents: true, nri: false, source: { label: "giftcity.dspim.com", url: "https://giftcity.dspim.com/product" } },
+  { house: "Edelweiss", scheme: "Edelweiss Greater China Equity Fund", direction: "Outbound", invests: "JPMorgan Funds – Greater China Fund (fund of fund)", minimum: "USD 5,000; top-ups USD 500", who: "Residents, NRIs and foreign nationals with a PAN; not open to Canada", residents: true, nri: true, source: { label: "edelweissmf.com/gift-city", url: "https://www.edelweissmf.com/gift-city" } },
+  { house: "Edelweiss", scheme: "Edelweiss US Technology Equity Fund", direction: "Outbound", invests: "JPMorgan Funds – US Technology Fund (fund of fund)", minimum: "USD 5,000; top-ups USD 500", who: "Residents, NRIs and foreign nationals with a PAN", residents: true, nri: true, source: { label: "Cafemutual, 9 Oct 2026", url: "https://cafemutual.com/news/cafe-alt/39013-edelweiss-launches-us-technology-fund-through-gift-city" } },
+  { house: "HDFC", scheme: "HDFC International Developed Markets Equity Fund", direction: "Outbound", invests: "A UBS Core MSCI World UCITS ETF (developed-market shares)", minimum: "USD 5,000; top-ups USD 500", who: "Resident Indians under LRS", residents: true, nri: false, source: { label: "Creso report", url: "https://creso.in/blog/gift-city-outbound-retail-funds-(2026)" } },
+  { house: "HDFC", scheme: "HDFC International Emerging Markets Equity Fund", direction: "Outbound", invests: "A UBS Core MSCI EM UCITS ETF (emerging-market shares)", minimum: "USD 5,000; top-ups USD 500", who: "Resident Indians under LRS", residents: true, nri: false, source: { label: "Creso report", url: "https://creso.in/blog/gift-city-outbound-retail-funds-(2026)" } },
+  { house: "Marcellus", scheme: "Marcellus Global Equities Fund", direction: "Outbound", invests: "A concentrated portfolio of global companies", minimum: "USD 5,000; top-ups USD 2,000", who: "Resident Indians (including minors), NRIs, OCIs and others; the fund says it may not suit NRIs for tax reasons", residents: true, nri: true, source: { label: "marcellus.in", url: "https://www.marcellus.in/portfolio-management-services/marcellus-global-equities-fund" } },
+  { house: "PPFAS (Parag Parikh)", scheme: "Parag Parikh IFSC S&P 500 Fund of Fund", direction: "Outbound", invests: "An Invesco S&P 500 UCITS ETF", minimum: "USD 500 (cut from USD 5,000 on 25 Aug 2026)", who: "Resident Indians under LRS", residents: true, nri: false, source: { label: "gift.ppfas.com", url: "https://gift.ppfas.com/" } },
+  { house: "PPFAS (Parag Parikh)", scheme: "Parag Parikh IFSC Nasdaq 100 Fund of Fund", direction: "Outbound", invests: "An Invesco Nasdaq-100 UCITS ETF", minimum: "USD 500 (cut from USD 5,000 on 25 Aug 2026)", who: "Resident Indians under LRS", residents: true, nri: false, source: { label: "gift.ppfas.com", url: "https://gift.ppfas.com/" } },
+  { house: "PPFAS (Parag Parikh)", scheme: "Parag Parikh India Flexi Cap Fund (listed as coming soon)", direction: "Inbound", invests: "Parag Parikh Flexi Cap Fund (feeder)", minimum: "USD 10,000; top-ups USD 1,000", who: "NRIs, foreign individuals and FIIs; not resident Indians", residents: false, nri: true, source: { label: "gift.ppfas.com", url: "https://gift.ppfas.com/product/inbound/parag_parikh_india_flexicap_fund" } },
+  { house: "Sundaram", scheme: "Sundaram India Mid Cap GIFT", direction: "Inbound", invests: "Sundaram Mid Cap Fund (feeder)", minimum: "USD 5,000", who: "NRIs and global investors; check eligibility with the fund house", residents: false, nri: true, source: { label: "Cafemutual report", url: "https://cafemutual.com/news/cafe-alt/36995-sundaram-amc-launches-a-mid-cap-fund-at-gift-city" } },
+  { house: "Tata", scheme: "Tata India Dynamic Equity Fund", direction: "Inbound", invests: "Indian equity mutual funds and ETFs (feeder)", minimum: "USD 500", who: "NRIs and foreign investors; not resident Indians or US persons", residents: false, nri: true, source: { label: "tatamutualfund.com", url: "https://www.tatamutualfund.com/ifsc-gift-city" } },
 ];
-const OUTBOUND = HOUSES.filter((h) => h.direction === "Outbound" || h.direction === "Both");
+
+const HIGH_MIN: Fund[] = [
+  { house: "Artha Bharat", scheme: "Artha Bharat FinMet Physical Gold Fund", direction: "Gold", invests: "At least 95% in LBMA-standard gold bars on the India International Bullion Exchange", minimum: "Not published; ask the manager", who: "Not published; ask the manager", residents: false, nri: false, source: { label: "Hubbis report", url: "https://www.hubbis.com/news/artha-bharat-launches-gift-city-s-first-physical-commodity-fund-and-gift-city-s-first-gold-fund-authorised-by-ifsca" } },
+  { house: "Bandhan", scheme: "Bandhan India Large and Mid-cap Fund, India Small Cap Fund and India Government Securities Fund (IFSC)", direction: "Inbound", invests: "The matching Bandhan Mutual Fund schemes (Category III AIF feeders)", minimum: "Not published; ask the fund house", who: "Global investors", residents: false, nri: true, source: { label: "bandhanamc.com/gift-city", url: "https://bandhanamc.com/gift-city/" } },
+  { house: "DSP", scheme: "DSP India Fund IFSC, DSP India Equity Opps Fund, DSP India Absolute Return Fund", direction: "Inbound", invests: "India-focused (details not published)", minimum: "Not published; ask the fund house", who: "Not published; ask the fund house", residents: false, nri: false, source: { label: "giftcity.dspim.com", url: "https://giftcity.dspim.com/" } },
+  { house: "Edelweiss", scheme: "Edelweiss India Multimanager Equity Fund – Series I", direction: "Inbound", invests: "Indian equity funds (Category III AIF)", minimum: "Not published", who: "Qualified investors, by private placement", residents: false, nri: false, source: { label: "edelweissmf.com/gift-city", url: "https://www.edelweissmf.com/gift-city" } },
+  { house: "HDFC", scheme: "HDFC India Flexi Cap, Balanced Advantage, Midcap Opportunities, Small Cap, NIFTY 50 and Diversified Equity FOF", direction: "Inbound", invests: "The matching HDFC Mutual Fund schemes (Category III AIF feeders)", minimum: "Above USD 150,000 (Class A) or above USD 50,000 (Class AR, not for US or UK investors)", who: "NRIs, foreign nationals and foreign institutions; not resident Indians", residents: false, nri: true, source: { label: "HDFC presentation, July 2026", url: "https://www.federal.bank.in/documents/d/guest/hdfc-ifsc-presentation-july-2026" } },
+  { house: "ICICI Prudential", scheme: "India-focused restricted scheme (name not published)", direction: "Inbound", invests: "Indian markets", minimum: "Not published; ask the fund house", who: "Global investors", residents: false, nri: false, source: { label: "Business Today report", url: "https://www.businesstoday.in/latest/corporate/story/icici-prudential-amc-launches-gift-city-branch-eyes-global-capital-for-indian-markets-491270-2025-08-27" } },
+  { house: "Mirae Asset", scheme: "Mirae Asset India Equity Allocation Fund", direction: "Inbound", invests: "Indian equity", minimum: "Not published on the site; ask the fund house", who: "See the offer document", residents: false, nri: false, source: { label: "Mirae Asset GIFT City", url: "https://giftcity.miraeassetmf.co.in/" } },
+  { house: "Mirae Asset", scheme: "Mirae Asset Global Allocation Fund", direction: "Outbound", invests: "Global markets (close-ended Category III AIF)", minimum: "USD 151,000; USD 10,000 for accredited investors", who: "See the offer document", residents: false, nri: false, source: { label: "Value Research report", url: "https://www.valueresearchonline.com/stories/224953/mirae-asset-sif-launch-global-equity-gift-city/" } },
+  { house: "Mirae Asset", scheme: "Mirae Asset Global Advantage Fund", direction: "Outbound", invests: "Global equity ETFs and offshore funds (restricted scheme)", minimum: "USD 151,000; USD 25,000 for accredited investors", who: "NRIs and foreign nationals only", residents: false, nri: true, source: { label: "Mirae Asset presentation", url: "https://www.federal.bank.in/documents/d/guest/mirae-asset-global-advantage-fund" } },
+  { house: "Motilal Oswal", scheme: "Motilal Oswal GIFT City India Equity Fund of Funds", direction: "Inbound", invests: "Mainly Motilal Oswal Large & Midcap Fund (Category III AIF)", minimum: "USD 150,000", who: "NRIs, foreign nationals and foreign institutions", residents: false, nri: true, source: { label: "Altport listing", url: "https://www.altportfunds.com/?p=8543" } },
+  { house: "Nippon India", scheme: "Nippon India Large Cap Fund GIFT", direction: "Inbound", invests: "Nippon India Large Cap Fund (feeder)", minimum: "USD 150,000", who: "NRIs and foreign nationals", residents: false, nri: true, source: { label: "Cafemutual report", url: "https://cafemutual.com/news/nfo/33944-nippon-life-india-amc-debuts-gift-city-with-nippon-india-large-cap-fund" } },
+  { house: "Phillip Capital", scheme: "Phillip India Billion Opportunities Fund", direction: "Inbound", invests: "Indian equity (Category III AIF)", minimum: "Not published; ask the manager", who: "NRIs and foreign nationals", residents: false, nri: true, source: { label: "Zerodha Daily Brief", url: "https://thedailybrief.zerodha.com/p/gift-city-explained-what-weve-learned" } },
+  { house: "The Wealth Company", scheme: "The Wealth Company IFSC FoF", direction: "Inbound", invests: "Indian mutual fund and SIF schemes (Category III AIF)", minimum: "Not published; ask the fund house", who: "NRIs, HNIs and institutions; not resident Indians, US or Canadian residents", residents: false, nri: true, source: { label: "Cafemutual report", url: "https://cafemutual.com/news/cafe-alt/38470-the-wealth-company-launches-a-dollar-denominated-gift-city-fund-of-funds-for-nris" } },
+  { house: "Unifi Capital", scheme: "Rangoli India Fund", direction: "Inbound", invests: "Indian growth companies (Category III AIF)", minimum: "Not published; ask the manager", who: "Foreign and NRI investors", residents: false, nri: true, source: { label: "Entrepreneur report", url: "https://india.entrepreneur.com/news-and-trends/unifi-capital-launches-two-new-funds-at-gift-city/475451" } },
+];
+
+const ALL = [...LOW_MIN, ...HIGH_MIN];
+const HOUSES = Array.from(new Set(ALL.map((f) => f.house))).sort();
+const OUTBOUND_RES = LOW_MIN.filter((f) => f.direction === "Outbound" && f.residents);
+const INBOUND_NRI = LOW_MIN.filter((f) => f.direction === "Inbound" && f.nri);
+
+type Filter = "all" | "res" | "nri";
+const FILTERS: [Filter, string][] = [["all", "All funds"], ["res", "Resident Indians"], ["nri", "NRIs"]];
+
+const DIR_STYLE: Record<Direction, string> = {
+  Inbound: "bg-brass/20 text-primary",
+  Outbound: "bg-teal/20 text-primary",
+  Gold: "bg-surface text-primary border border-border",
+};
+
+const FundTable = ({ funds, caption }: { funds: Fund[]; caption: string }) => (
+  <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
+    <table className={table}>
+      <caption className="sr-only">{caption}</caption>
+      <thead>
+        <tr><th className={th}>Fund</th><th className={th}>Direction</th><th className={th}>Invests in</th><th className={th}>Minimum</th><th className={th}>Who can invest</th><th className={th}>Source</th></tr>
+      </thead>
+      <tbody>
+        {funds.length === 0 && (
+          <tr><td className={td} colSpan={6}>No funds in this group match the filter.</td></tr>
+        )}
+        {funds.map((f) => (
+          <tr key={f.scheme}>
+            <td className={td + " min-w-[11rem]"}><span className="block font-semibold text-primary">{f.house}</span>{f.scheme}</td>
+            <td className={td}><span className={`inline-block rounded-full px-2 py-0.5 text-xs font-medium ${DIR_STYLE[f.direction]}`}>{f.direction}</span></td>
+            <td className={td}>{f.invests}</td>
+            <td className={td}>{f.minimum}</td>
+            <td className={td}>{f.who}</td>
+            <td className={td}><a href={f.source.url} target="_blank" rel="noopener noreferrer" className={a}>{f.source.label}</a></td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+);
 
 const faqs: Faq[] = [
-  { q: "How many GIFT City funds are there?", a: "The number changes every month as fund houses launch schemes. IFSCA reported that commitments to funds in GIFT IFSC had crossed USD 7 billion by March 2025. For a current list of managers, use the IFSCA Directory of regulated entities." },
+  { q: "How many GIFT City funds are there?", a: "IFSCA data showed 401 funds and schemes run by 235 fund management entities at 30 June 2026. Only 14 of them were authorised retail schemes; most are AIFs and restricted schemes for institutions and wealthy investors. This page lists the funds that Indian fund houses and managers have made public." },
+  { q: "What is the minimum investment in GIFT City funds?", a: "It depends on the fund. Some retail schemes start at USD 500, including ABSL's two funds, PPFAS's S&P 500 and Nasdaq 100 funds and Tata India Dynamic Equity Fund. Many others start at USD 5,000. AIFs and restricted schemes usually need USD 150,000, or less for accredited investors." },
+  { q: "Which GIFT City funds can resident Indians invest in?", a: "Outbound funds that accept investment under LRS, such as those from ABSL, DSP, Edelweiss, HDFC, Marcellus and PPFAS listed on this page. Many inbound funds are for NRIs and foreign investors only. Use the Resident Indians filter above, and confirm eligibility in the offer document." },
   { q: "What is the difference between inbound and outbound GIFT City funds?", a: "Inbound funds collect money in foreign currency and invest it in India; they are mainly used by NRIs and foreign investors. Outbound funds invest outside India, in US or global markets, and are used by resident Indians under LRS as well as NRIs." },
-  { q: "Do DSP, HDFC, ICICI Prudential, Mirae Asset and Bandhan have GIFT City funds?", a: "Yes. Each of these fund houses has announced GIFT City operations or funds, run through an IFSCA-registered entity. The table on this page links to each fund house's own source; check its website for the schemes currently open." },
-  { q: "Which AMCs have GIFT City funds?", a: "Fund houses with public information about GIFT City funds or operations include Aditya Birla Sun Life, Bandhan, DSP, Edelweiss, HDFC, ICICI Prudential, Mirae Asset, Motilal Oswal, Nippon India, Sundaram, Tata and The Wealth Company, each through an IFSCA-registered entity. The table on this page links to each fund house's own source; check its website for the schemes currently open." },
-  { q: "Which are the best funds in GIFT City?", a: "There is no single best fund. Suitability depends on your residence, currency, tax position and goals, so this page lists fund houses factually and does not rank them or show performance. Read each scheme's offer document." },
-  { q: "Which are the best GIFT City funds for NRIs?", a: "There is no single best fund; suitability depends on your residence, currency, tax position and goals. This page lists fund houses factually and does not rank them. Read each scheme's offer document and take advice where you need it." },
+  { q: "Does Parag Parikh (PPFAS) have a GIFT City fund?", a: "Yes. PPFAS Alternate Asset Managers IFSC runs the Parag Parikh IFSC S&P 500 Fund of Fund and Nasdaq 100 Fund of Fund for resident Indians under LRS, with a USD 500 minimum since 25 August 2026. A Parag Parikh India Flexi Cap Fund for NRIs is listed as coming soon." },
+  { q: "Do DSP, HDFC, ICICI Prudential, Mirae Asset and Bandhan have GIFT City funds?", a: "Yes. Each runs GIFT City funds through an IFSCA-registered entity. HDFC and DSP have outbound funds for residents as well as India funds for NRIs; Bandhan, ICICI Prudential and Mirae Asset's India fund are for global investors. The tables on this page link to each source." },
+  { q: "Do Edelweiss, Sundaram, Marcellus and Tata have GIFT City funds?", a: "Yes. Edelweiss has the Greater China Equity Fund and US Technology Equity Fund for residents and NRIs; Marcellus has the Global Equities Fund for residents; Sundaram has the Sundaram India Mid Cap GIFT fund and Tata the Tata India Dynamic Equity Fund, both for NRIs and foreign investors. Details and sources are in the table." },
+  { q: "Which AMCs have GIFT City funds?", a: `Fund houses and managers on this page: ${HOUSES.join(", ")}. Each operates through an IFSCA-registered entity. Check the fund house's website for the schemes currently open.` },
+  { q: "Which are the best funds in GIFT City?", a: "There is no single best fund. Suitability depends on your residence, currency, tax position and goals, so this page lists funds factually and does not rank them or show performance. Read each scheme's offer document." },
+  { q: "Which are the best GIFT City funds for NRIs?", a: "There is no single best fund; suitability depends on your residence, currency, tax position and goals. Note that some funds exclude US or Canadian residents. This page lists funds factually and does not rank them. Read each scheme's offer document." },
   { q: "Why don't you show returns or NAVs?", a: "Short histories in a new market can mislead, and returns shown without context are not a basis for a decision. Each fund house publishes NAVs and factsheets on its own website, linked here." },
 ];
 
-const FundList = () => (
-  <GuidePage
-    path="/gift-city-fund-list"
-    headline="GIFT City Fund List 2026: AMCs and Fund Houses, Inbound and Outbound"
-    seoTitle="GIFT City Funds & AMC List 2026: Inbound and Outbound"
-    description="GIFT City AMC and mutual fund list: 12 fund houses with GIFT City funds, inbound and outbound, each with a source. How to check any manager with IFSCA."
-    crumb="GIFT City Fund List"
-    datePublished="2026-10-08"
-    dateModified="2026-10-20"
-    reviewed={`Last checked ${LAST_CHECKED}`}
-    faqs={faqs}
-    sources={["ifscaDirectory", "ifsca", "amfi"]}
-    extraSchema={[
-      {
-        "@context": "https://schema.org",
-        "@type": "ItemList",
-        name: "Fund houses with GIFT City operations",
-        itemListOrder: "https://schema.org/ItemListOrderAscending",
-        itemListElement: HOUSES.map((h, i) => ({ "@type": "ListItem", position: i + 1, name: h.name, url: h.source.url })),
-      },
-    ]}
-  >
-    <p className={p}>
-      <strong className="text-primary">The short answer.</strong> Most large Indian fund houses now run funds from GIFT City through an IFSCA-registered Fund Management Entity. Some funds invest in India for NRIs and foreign investors (<em>inbound</em>); others invest abroad for Indian and NRI investors (<em>outbound</em>). Below is a factual, dated list of fund houses with public information about their GIFT City funds, and how to check any manager yourself.
-    </p>
+const FundList = () => {
+  const [filter, setFilter] = useState<Filter>("all");
+  const pick = (list: Fund[]) => list.filter((f) => filter === "all" || (filter === "res" ? f.residents : f.nri));
 
-    <h2 className={h2}>Inbound vs outbound in one picture</h2>
-    <MoneyMap className="my-8" />
-
-    <h2 className={h2}>GIFT City mutual funds and AMC list</h2>
-    <p className="font-body text-sm text-foreground-muted mb-3">Alphabetical. Last checked {LAST_CHECKED}. Not exhaustive.</p>
-    <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
-      <table className={table}><caption className="sr-only">GIFT City mutual funds list: fund houses</caption>
-        <thead>
-          <tr><th className={th}>Fund house</th><th className={th}>GIFT City entity / presence</th><th className={th}>Focus (per source)</th><th className={th}>Direction</th><th className={th}>Source</th></tr>
-        </thead>
-        <tbody>
-          {HOUSES.map((h) => (
-            <tr key={h.name}>
-              <td className={td + " font-medium text-primary"}>{h.name}</td>
-              <td className={td}>{h.entity}</td>
-              <td className={td}>{h.focus}</td>
-              <td className={td}>
-                <span className={`inline-block rounded-full px-2 py-0.5 text-xs font-medium ${h.direction === "Inbound" ? "bg-brass/20 text-primary" : h.direction === "Outbound" ? "bg-teal/20 text-primary" : "bg-surface text-primary border border-border"}`}>{h.direction}</span>
-              </td>
-              <td className={td}><a href={h.source.url} target="_blank" rel="noopener noreferrer" className={a}>{h.source.label}</a></td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-    <p className="font-body text-xs text-foreground-muted mt-3">
-      This list is for information only. Inclusion is not a recommendation or endorsement, and funds are not ranked. As a Mutual Fund Distributor, Anup Vatyani may be empanelled with some of these fund houses. Scheme availability, minimums and eligibility change; check the fund house's website and offer document.
-    </p>
-
-    <h2 className={h2}>GIFT City outbound funds list</h2>
-    <p className={p}>
-      Outbound funds invest outside India, in US or global markets. Resident Indians invest in them under LRS (USD 250,000 a year; TCS above ₹10 lakh) and NRIs from their overseas accounts. From the list above:
-    </p>
-    <ul className={ul + " mt-3"}>
-      {OUTBOUND.map((h) => (
-        <li key={h.name}><strong className="text-primary">{h.name}:</strong> {h.focus}. <a href={h.source.url} target="_blank" rel="noopener noreferrer" className={a}>Source</a></li>
-      ))}
-    </ul>
-    <p className="font-body text-sm text-foreground-muted mt-3">
-      Outbound schemes change often. Ask the fund house which ones are open to your residential status, and see <Link to="/gift-city-funds-for-resident-indians" className={a}>GIFT City for resident Indians</Link>.
-    </p>
-
-    <h2 className={h2}>How to check any GIFT City fund yourself</h2>
-    <FlowSteps
-      caption="Five checks that take about ten minutes."
-      steps={[
-        { title: "Find the FME", sub: "Legal name in the offer document" },
-        { title: "Verify with IFSCA", sub: "Directory of regulated entities" },
-        { title: "Confirm scheme type", sub: "Retail or restricted; your eligibility" },
-        { title: "Read costs and exit terms", sub: "Fees, exit load, lock-in" },
-        { title: "Check your tax", sub: "India and your country of residence" },
+  return (
+    <GuidePage
+      path="/gift-city-fund-list"
+      headline="GIFT City Fund List 2026: AMCs and Fund Houses, Inbound and Outbound"
+      seoTitle="GIFT City Funds & AMC List 2026: Inbound and Outbound"
+      description={`GIFT City fund list: ${ALL.length}+ funds from ${HOUSES.length} fund houses, including PPFAS, HDFC, DSP and Tata, with minimums, who can invest and a source for each.`}
+      crumb="GIFT City Fund List"
+      datePublished="2026-10-08"
+      dateModified="2026-10-24"
+      reviewed={`Last checked ${LAST_CHECKED}`}
+      faqs={faqs}
+      sources={["ifscaDirectory", "ifsca", "amfi"]}
+      extraSchema={[
+        {
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          name: "GIFT City funds",
+          itemListOrder: "https://schema.org/ItemListOrderAscending",
+          itemListElement: ALL.map((f, i) => ({ "@type": "ListItem", position: i + 1, name: `${f.scheme} (${f.house})`, url: f.source.url })),
+        },
       ]}
-    />
+    >
+      <p className={p}>
+        <strong className="text-primary">The short answer.</strong> {HOUSES.length} fund houses and managers have made their GIFT City funds public. Some invest in India for NRIs and foreign investors (<em>inbound</em>); others invest abroad for resident Indians under LRS (<em>outbound</em>). Retail funds start from USD 500 to USD 10,000; AIFs usually need USD 150,000. Below is every fund we could confirm, with its minimum, who can invest and a source.
+      </p>
 
-    <h3 className={h3}>Questions to ask the fund house</h3>
-    <ul className={ul}>
-      <li>Is the scheme open to my residential status and country (some exclude US and Canadian residents)?</li>
-      <li>What is the minimum first investment, and are additional lump-sum investments accepted? (There is <Link to="/gift-city-sip" className={a}>no SIP in GIFT City</Link>.)</li>
-      <li>Is it a feeder fund, and what are the total costs including the underlying fund?</li>
-      <li>How are redemptions paid, and how long do they take?</li>
-    </ul>
-    <p className={p + " mt-4"}>
-      New to the structures? Start with <Link to="/funds-explained" className={a}>types of GIFT City funds</Link> or check <Link to="/gift-city-route-checker" className={a}>which route applies to you</Link>.
-    </p>
-  </GuidePage>
-);
+      <h2 className={h2}>Inbound vs outbound in one picture</h2>
+      <MoneyMap className="my-8" />
+
+      <h2 className={h2}>GIFT City mutual funds and AMC list</h2>
+      <p className="font-body text-sm text-foreground-muted mb-3">Alphabetical by fund house. Last checked {LAST_CHECKED}. Not exhaustive and not a ranking.</p>
+      <div role="group" aria-label="Show funds open to" className="flex flex-wrap items-center gap-2 mb-6">
+        <span className="font-body text-sm text-foreground-muted mr-1">Show funds open to:</span>
+        {FILTERS.map(([key, label]) => (
+          <button
+            key={key}
+            type="button"
+            aria-pressed={filter === key}
+            onClick={() => setFilter(key)}
+            className={`rounded-full px-4 py-1.5 font-body text-sm font-semibold border transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary ${filter === key ? "bg-primary text-primary-foreground border-primary" : "bg-background text-primary border-border hover:border-primary"}`}
+          >
+            {label}
+          </button>
+        ))}
+      </div>
+
+      <h3 className={h3}>Retail funds: minimum USD 500 to USD 10,000</h3>
+      <FundTable funds={pick(LOW_MIN)} caption="GIFT City retail funds with lower minimums" />
+
+      <h3 className={h3}>AIFs and restricted funds: higher minimums</h3>
+      <p className="font-body text-sm text-foreground-muted mb-3">Mostly Category III AIFs for NRIs, foreign investors and institutions. Where a fund house has not published a detail, the table says so.</p>
+      <FundTable funds={pick(HIGH_MIN)} caption="GIFT City AIFs and restricted funds" />
+
+      <p className="font-body text-xs text-foreground-muted mt-3">
+        For information only. Inclusion is not a recommendation or endorsement, and funds are not ranked. As a Mutual Fund Distributor, Anup Vatyani may be empanelled with some of these fund houses. Schemes, minimums and eligibility change; check the fund house's website and offer document before investing.
+      </p>
+
+      <h2 className={h2}>GIFT City outbound funds list for resident Indians</h2>
+      <p className={p}>
+        Outbound funds invest outside India. Resident Indians invest under LRS (up to USD 250,000 a year; TCS above ₹10 lakh). They are not subject to the SEBI overseas limit that has made many Indian international mutual funds <Link to="/gift-city-vs-international-mutual-funds" className={a}>pause new money</Link>. Lower-minimum outbound funds on this page:
+      </p>
+      <ul className={ul + " mt-3"}>
+        {OUTBOUND_RES.map((f) => (
+          <li key={f.scheme}><strong className="text-primary">{f.scheme}</strong> ({f.house}): {f.invests}; {f.minimum}.</li>
+        ))}
+      </ul>
+      <p className="font-body text-sm text-foreground-muted mt-3">
+        See <Link to="/gift-city-funds-for-resident-indians" className={a}>GIFT City for resident Indians</Link> and the <Link to="/insights/lrs-tcs-gift-city#calculator" className={a}>TCS calculator</Link>.
+      </p>
+
+      <h2 className={h2}>GIFT City inbound funds for NRIs</h2>
+      <p className={p}>
+        Inbound funds invest in Indian markets in US Dollars, mostly by feeding into a fund house's Indian mutual fund. Lower-minimum inbound funds on this page:
+      </p>
+      <ul className={ul + " mt-3"}>
+        {INBOUND_NRI.map((f) => (
+          <li key={f.scheme}><strong className="text-primary">{f.scheme}</strong> ({f.house}): {f.minimum}. {f.who}.</li>
+        ))}
+      </ul>
+      <p className="font-body text-sm text-foreground-muted mt-3">
+        US and Canadian residents: several funds do not accept you. Check before applying, and read <Link to="/insights/pfic-explained" className={a}>PFIC explained</Link> if you are a US person. More in <Link to="/gift-city-funds-for-nri" className={a}>GIFT City for NRIs</Link>.
+      </p>
+
+      <h2 className={h2}>How to check any GIFT City fund yourself</h2>
+      <FlowSteps
+        caption="Five checks that take about ten minutes."
+        steps={[
+          { title: "Find the FME", sub: "Legal name in the offer document" },
+          { title: "Verify with IFSCA", sub: "Directory of regulated entities" },
+          { title: "Confirm scheme type", sub: "Retail or restricted; your eligibility" },
+          { title: "Read costs and exit terms", sub: "Fees, exit load, lock-in" },
+          { title: "Check your tax", sub: "India and your country of residence" },
+        ]}
+      />
+
+      <h3 className={h3}>Questions to ask the fund house</h3>
+      <ul className={ul}>
+        <li>Is the scheme open to my residential status and country (some exclude US and Canadian residents)?</li>
+        <li>What is the minimum first investment, and are additional lump-sum investments accepted? (There is <Link to="/gift-city-sip" className={a}>no SIP in GIFT City</Link>.)</li>
+        <li>Is it a feeder fund, and what are the total costs including the underlying fund?</li>
+        <li>How are redemptions paid, and how long do they take?</li>
+      </ul>
+      <p className={p + " mt-4"}>
+        New to the structures? Start with <Link to="/funds-explained" className={a}>types of GIFT City funds</Link> or check <Link to="/gift-city-route-checker" className={a}>which route applies to you</Link>.
+      </p>
+    </GuidePage>
+  );
+};
 
 export default FundList;

@@ -85,7 +85,7 @@ const Home = () => {
                 <span>Invest and redeem in US Dollars</span>
                 <span>Residents invest via LRS — up to USD 250,000 a year</span>
                 <span>Some retail funds from USD 500</span>
-                <span>NRI investment in GIFT City funds has crossed $7 billion (IFSCA, March 2025)</span>
+                <span>16,150 investors in GIFT City funds, over half in retail schemes (IFSCA, June 2026)</span>
                 <span>Every guide links to its official source</span>
               </span>
             ))}
