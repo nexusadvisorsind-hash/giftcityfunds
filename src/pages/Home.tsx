@@ -82,7 +82,7 @@ const Home = () => {
             {[0, 1].map((copy) => (
               <span key={copy} className="inline-flex gap-12" aria-hidden={copy === 1 ? "true" : undefined}>
                 <span>Regulated by IFSCA, not SEBI</span>
-                <span>Invest and redeem in US Dollars</span>
+                <span>Funds are in US Dollars; your bank converts from rupees or your local currency</span>
                 <span>Residents invest via LRS — up to USD 250,000 a year</span>
                 <span>Some retail funds from USD 500</span>
                 <span>16,150 investors in GIFT City funds, over half in retail schemes (IFSCA, June 2026)</span>
@@ -274,7 +274,7 @@ const Home = () => {
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary mb-8">Who Actually Invests in These Funds?</h2>
             <div className="grid md:grid-cols-3 gap-6 mb-6">
               {[
-                { title: "NRI", body: "Send money in USD, invest in USD, redeem in USD — a more direct route than the LRS remittance most NRIs default to." },
+                { title: "NRI", body: "Send money from your overseas account (converted to USD if needed), invest and redeem in USD — no conversion to rupees through an NRE or NRO account." },
                 { title: "OCI", body: "Broadly similar access to NRIs, with a few fund-specific eligibility conditions worth checking upfront." },
                 { title: "Resident Indian", body: "You can invest too, via the Liberalised Remittance Scheme (LRS), subject to its own annual limit and tax treatment." },
               ].map((f) => (
