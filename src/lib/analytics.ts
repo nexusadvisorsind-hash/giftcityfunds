@@ -1,6 +1,8 @@
-// Google Analytics loads only after the visitor agrees (DPDP Act: consent before
-// processing personal data such as IP address and cookie identifiers).
+// Google Analytics and Microsoft Clarity load only after the visitor agrees
+// (DPDP Act: consent before processing personal data such as IP address and
+// cookie identifiers).
 const GA_ID = "G-RVTXNPKQDS";
+const CLARITY_ID = "z3mq492luz";
 const KEY = "gcf-analytics-consent"; // "granted" | "denied"
 export const CONSENT_EVENT = "gcf:open-cookie-settings";
 
@@ -31,6 +33,23 @@ export function loadAnalytics() {
   s.async = true;
   s.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
   document.head.appendChild(s);
+  loadClarity();
+}
+
+// Microsoft Clarity: heatmaps and session recordings, to see where visitors
+// get stuck. Text is masked in Clarity's settings. Loaded with the same
+// consent as Google Analytics, and told consent was given.
+function loadClarity() {
+  const w = window as unknown as { clarity?: ((...a: unknown[]) => void) & { q?: unknown[] } };
+  const c = function clarity(...args: unknown[]) {
+    (c.q = c.q || []).push(args);
+  } as ((...a: unknown[]) => void) & { q?: unknown[] };
+  w.clarity = w.clarity || c;
+  const s = document.createElement("script");
+  s.async = true;
+  s.src = `https://www.clarity.ms/tag/${CLARITY_ID}`;
+  document.head.appendChild(s);
+  w.clarity("consent");
 }
 
 export function setConsent(choice: Choice) {

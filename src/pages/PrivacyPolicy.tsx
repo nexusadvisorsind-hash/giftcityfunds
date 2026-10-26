@@ -3,7 +3,7 @@ import { SEO } from "@/components/SEO";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { openCookieSettings } from "@/lib/analytics";
 
-const UPDATED = "8 October 2026";
+const UPDATED = "26 October 2026";
 
 const h2 = "font-heading font-semibold text-2xl text-foreground mb-4";
 const p = "font-body text-foreground-muted";
@@ -47,6 +47,13 @@ const dataRows = [
     basis: "Your consent through the cookie banner",
     keep: "14 months in Google Analytics",
   },
+  {
+    where: "Microsoft Clarity (only if you accept)",
+    what: "Cookie identifier, IP address, device and browser details, and how you scroll, click and move through pages (text you type is masked)",
+    why: "To see where pages are confusing or hard to use, through heatmaps and session recordings",
+    basis: "Your consent through the cookie banner",
+    keep: "Recordings up to 30 days; summary reports up to 13 months in Microsoft Clarity",
+  },
 ];
 
 const processors = [
@@ -54,6 +61,7 @@ const processors = [
   ["Supabase Inc.", "Database that stores form submissions"],
   ["Resend Inc.", "Delivery of form notification emails"],
   ["Google LLC", "Email inbox that receives enquiries; Google Analytics, only with your consent"],
+  ["Microsoft Corporation", "Microsoft Clarity heatmaps and session recordings, only with your consent"],
 ];
 
 const PrivacyPolicy = () => {
@@ -64,7 +72,7 @@ const PrivacyPolicy = () => {
     "url": "https://giftcityfunds.in/privacy-policy",
     "description": "How GIFT City Funds collects, uses, and protects personal data under India's Digital Personal Data Protection Act, 2023.",
     "inLanguage": "en-IN",
-    "dateModified": "2026-10-08",
+    "dateModified": "2026-10-26",
     "isPartOf": { "@type": "WebSite", "name": "GIFT City Funds", "url": "https://giftcityfunds.in/" },
     "publisher": { "@type": "Person", "name": "Anup Vatyani", "identifier": "AMFI ARN-106715" },
     "about": "Website privacy and data-handling policy",
@@ -142,8 +150,8 @@ const PrivacyPolicy = () => {
             <section>
               <h2 className={h2}>3. Cookies</h2>
               <p className={p}>
-                The site works without cookies. Google Analytics cookies are set only if you choose "Accept analytics" in
-                the banner. If you decline, or make no choice, Google Analytics does not load. We store your choice in your
+                The site works without cookies. Google Analytics and Microsoft Clarity cookies are set only if you choose
+                "Accept analytics" in the banner. If you decline, or make no choice, neither of them loads. We store your choice in your
                 browser so we don't ask again. You can change it at any time:{" "}
                 <button type="button" onClick={openCookieSettings} className="text-secondary hover:underline">
                   open cookie settings

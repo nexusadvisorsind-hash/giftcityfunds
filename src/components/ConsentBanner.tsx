@@ -33,7 +33,7 @@ const ConsentBanner = () => {
     >
       <div className="max-w-5xl mx-auto px-4 py-3 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
         <p className="font-body text-xs md:text-sm text-foreground-muted flex-1 leading-snug">
-          May we use Google Analytics cookies (they record your IP address and pages viewed) to see how the site is used?
+          May we use Google Analytics and Microsoft Clarity cookies (they record your IP address, pages viewed and how you scroll and click) to see how the site is used?
           Only with your consent; change it any time in "Cookie settings".{" "}
           <Link to="/privacy-policy" className="text-secondary underline underline-offset-2">Privacy Policy</Link>
         </p>
