@@ -19,7 +19,13 @@ const CLUSTERS: { id: string; title: string; blurb: string; icon: typeof Users; 
     links: [
       ["/gift-city-funds-for-nri", "GIFT City funds for NRIs, country by country", "Guide"],
       ["/gift-city-funds-for-oci", "GIFT City funds for OCIs", "Guide"],
+      ["/gift-city-funds-for-uae-nris", "GIFT City funds for UAE NRIs", "Guide"],
+      ["/gift-city-funds-for-uk-nris", "GIFT City funds for UK NRIs", "Guide"],
+      ["/gift-city-funds-for-us-nris", "GIFT City funds for US NRIs", "Guide"],
+      ["/gift-city-funds-for-singapore-nris", "GIFT City funds for Singapore NRIs", "Guide"],
+      ["/gift-city-funds-for-canada-nris", "GIFT City funds for Canada NRIs", "Guide"],
       ["/gift-city-funds-for-resident-indians", "GIFT City funds for resident Indians", "Guide"],
+      ["/invest-abroad-from-india", "How to invest abroad from India", "Guide"],
       ["/how-to-invest", "How to invest, step by step", "Guide"],
       ["/gift-city-route-checker", "Which route applies to you?", "Tool"],
       ["/insights/pfic-explained", "PFIC explained for US persons", "Article"],

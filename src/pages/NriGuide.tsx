@@ -10,12 +10,14 @@ interface Country {
   tax: string[];
   check: string[];
   more?: { to: string; label: string };
+  page?: string;
   extra?: ReactNode;
 }
 
 const COUNTRIES: Country[] = [
   {
     id: "uae",
+    page: "/gift-city-funds-for-uae-nris",
     name: "UAE (Dubai, Abu Dhabi and other emirates)",
     summary: "The dirham is pegged to the US Dollar and the UAE does not tax individuals on investment income, so a dollar GIFT City fund fits UAE earners neatly. The India-side rules decide most of the outcome.",
     tax: [
@@ -38,6 +40,7 @@ const COUNTRIES: Country[] = [
   },
   {
     id: "uk",
+    page: "/gift-city-funds-for-uk-nris",
     name: "United Kingdom",
     summary: "The deciding question is the fund's HMRC reporting status: without it, gains are normally taxed as income at your marginal rate rather than as capital gains.",
     tax: [
@@ -49,6 +52,7 @@ const COUNTRIES: Country[] = [
   },
   {
     id: "us",
+    page: "/gift-city-funds-for-us-nris",
     name: "United States",
     summary: "Many GIFT City funds do not accept US persons at all. Where they do, PFIC rules usually make the US tax outcome costly, so US-based NRIs should check eligibility and PFIC status before anything else.",
     tax: [
@@ -87,6 +91,7 @@ const COUNTRIES: Country[] = [
   },
   {
     id: "canada",
+    page: "/gift-city-funds-for-canada-nris",
     name: "Canada",
     summary: "Canadian residents are taxed on worldwide income, and some GIFT City funds do not accept Canadian residents, so check eligibility first.",
     tax: [
@@ -98,6 +103,7 @@ const COUNTRIES: Country[] = [
   },
   {
     id: "singapore",
+    page: "/gift-city-funds-for-singapore-nris",
     name: "Singapore",
     summary: "Singapore does not tax capital gains, and foreign-sourced income received by resident individuals is generally exempt, so the India-side treatment matters most.",
     tax: [
@@ -120,20 +126,16 @@ const COUNTRIES: Country[] = [
   },
 ];
 
+const CARD_NAME: Record<string, string> = { uae: "the UAE", uk: "the UK", us: "the US", canada: "Canada", singapore: "Singapore" };
+
 const faqs: Faq[] = [
-  { q: "How to invest in GIFT City from the USA?", a: "Choose a fund that accepts US persons (many do not), complete the fund house's KYC including Form W-9, and transfer US Dollars from your US bank account. Before investing, check the fund's PFIC status and how you will report it on Form 8621." },
-  { q: "Can US citizens invest in GIFT City funds?", a: "Some GIFT City funds accept US citizens and green card holders, but many do not because of US reporting rules. Where they do, most will be PFICs for US tax, which can be costly; speak to a US tax adviser first." },
-  { q: "What are the PFIC rules for GIFT City funds?", a: "Most GIFT City funds are Passive Foreign Investment Companies (PFICs) for US tax. US persons file Form 8621 each year and, by default, pay tax at the highest ordinary rate plus an interest charge on gains, unless a QEF or mark-to-market election applies." },
-  { q: "How are GIFT City funds taxed in the UK for UK-resident NRIs?", a: "It depends on the fund's HMRC reporting status. Gains on a reporting fund are normally capital gains; gains on a non-reporting fund are normally taxed as income (offshore income gains). The 4-year FIG regime may give relief to recent arrivals." },
   { q: "Can NRIs invest in GIFT City in India?", a: "Yes. NRIs can invest in GIFT City funds, deposits, bonds and US stocks through India's GIFT IFSC, usually in US Dollars from an overseas bank account, without LRS or TCS. Each fund or bank sets its own eligibility; some exclude US or Canadian residents." },
   { q: "Can NRIs invest in GIFT City funds?", a: "Yes. NRIs can invest in GIFT City funds directly in US Dollars from a bank account abroad, without LRS or TCS. Each fund sets its own eligibility, and some exclude residents of certain countries, especially the US and Canada." },
   { q: "What is the minimum investment for NRIs in GIFT City funds?", a: "It depends on the fund. Some retail schemes start at USD 500; others need a few thousand dollars. PMS needs USD 75,000 and most AIFs about USD 150,000." },
   { q: "What are GIFT City NRI mutual funds?", a: "They are GIFT City funds designed for NRIs: usually US Dollar retail schemes or feeder funds that invest in Indian markets (inbound) or global markets (outbound), bought directly from abroad without converting to rupees." },
   { q: "Do NRIs pay tax in India on GIFT City funds?", a: "Many GIFT City funds are structured so that non-resident investors bear little or no Indian tax, and NRIs whose only Indian income is from such funds may not need to file an Indian return. You are still taxed in your country of residence. Confirm the treatment for the specific fund." },
   { q: "How does repatriation from GIFT City work for NRIs?", a: "Redemptions are paid in US Dollars to an overseas or foreign currency account, so there is no rupee repatriation step and no NRO repatriation limit." },
-  { q: "How to invest in GIFT City from the UAE?", a: "Choose a fund that accepts UAE residents, complete the fund house's KYC with your passport, visa or Emirates ID and address proof, and transfer US Dollars from your UAE bank account. No LRS or TCS applies." },
   { q: "How are GIFT City funds taxed for NRIs, country by country?", a: "The UAE and most Gulf countries do not tax individuals' investment income; the UK depends on reporting fund status; the US applies PFIC rules; Canada and Australia tax worldwide income with treaty credit; Singapore generally exempts foreign-sourced income for individuals." },
-  { q: "Can US-based NRIs invest in GIFT City funds?", a: "Only in funds that accept US persons, and many do not. Where they do, PFIC rules usually apply. Check the fund's eligibility and PFIC status first." },
 ];
 
 const NriGuide = () => (
@@ -144,6 +146,7 @@ const NriGuide = () => (
     description="GIFT City funds for NRIs: invest in USD with no LRS, minimums from USD 500, documents, and tax rules for the UAE, Gulf, UK, US, Canada, Singapore and Australia."
     crumb="GIFT City Funds for NRIs"
     datePublished="2026-10-09"
+    dateModified="2026-10-26"
     faqs={faqs}
     sources={["ifscaDirectory", "irs8621", "uaeTax", "hmrcOffshore", "ukFig", "craT1135", "irasOverseas", "incomeTax"]}
   >
@@ -208,19 +211,32 @@ const NriGuide = () => (
       <table className={table}><caption className="sr-only">Country by country: what changes for you</caption>
         <thead><tr><th className={th}>Where you live</th><th className={th}>Home tax on investment income</th><th className={th}>Main thing to check</th></tr></thead>
         <tbody>
-          <tr><td className={td}>UAE</td><td className={td}>None for individuals</td><td className={td}>Indian deemed-resident rule</td></tr>
+          <tr><td className={td}><Link to="/gift-city-funds-for-uae-nris" className={a}>UAE</Link></td><td className={td}>None for individuals</td><td className={td}>Indian deemed-resident rule</td></tr>
           <tr><td className={td}>Saudi, Qatar, Kuwait, Bahrain</td><td className={td}>None for individuals</td><td className={td}>Fund eligibility for your country</td></tr>
           <tr><td className={td}>Oman</td><td className={td}>5% on high earners from 2028</td><td className={td}>Whether it applies to you</td></tr>
-          <tr><td className={td}>UK</td><td className={td}>Yes</td><td className={td}>Reporting fund status</td></tr>
-          <tr><td className={td}>US</td><td className={td}>Yes</td><td className={td}>Whether US persons are accepted; PFIC</td></tr>
-          <tr><td className={td}>Canada</td><td className={td}>Yes</td><td className={td}>Eligibility; T1135 reporting</td></tr>
-          <tr><td className={td}>Singapore</td><td className={td}>Generally none on foreign-sourced income</td><td className={td}>Certificate of Residence</td></tr>
+          <tr><td className={td}><Link to="/gift-city-funds-for-uk-nris" className={a}>UK</Link></td><td className={td}>Yes</td><td className={td}>Reporting fund status</td></tr>
+          <tr><td className={td}><Link to="/gift-city-funds-for-us-nris" className={a}>US</Link></td><td className={td}>Yes</td><td className={td}>Whether US persons are accepted; PFIC</td></tr>
+          <tr><td className={td}><Link to="/gift-city-funds-for-canada-nris" className={a}>Canada</Link></td><td className={td}>Yes</td><td className={td}>Eligibility; T1135 reporting</td></tr>
+          <tr><td className={td}><Link to="/gift-city-funds-for-singapore-nris" className={a}>Singapore</Link></td><td className={td}>Generally none on foreign-sourced income</td><td className={td}>Certificate of Residence</td></tr>
           <tr><td className={td}>Australia</td><td className={td}>Yes</td><td className={td}>Eligibility; foreign income tax offset</td></tr>
         </tbody>
       </table>
     </div>
 
-    {COUNTRIES.map((c) => (
+    <h2 className={h2}>Country guides</h2>
+    <ul className="grid gap-4 md:grid-cols-2 list-none p-0">
+      {COUNTRIES.filter((c) => c.page).map((c) => (
+        <li key={c.id} id={c.id} className="scroll-mt-24 rounded-2xl border border-border bg-surface p-5">
+          <h3 className="font-heading font-semibold text-lg text-primary">
+            <Link to={c.page!} className="hover:underline">GIFT City funds for NRIs in {CARD_NAME[c.id] ?? c.name}</Link>
+          </h3>
+          <p className="font-body text-sm text-foreground-muted mt-2 leading-relaxed">{c.summary}</p>
+          <Link to={c.page!} className={a + " inline-block mt-3 text-sm"}>Read the {(CARD_NAME[c.id] ?? c.name).replace(/^the /, "")} guide →</Link>
+        </li>
+      ))}
+    </ul>
+
+    {COUNTRIES.filter((c) => !c.page).map((c) => (
       <section key={c.id} id={c.id} className="mt-10 scroll-mt-24 rounded-2xl border border-border bg-surface p-5 md:p-6">
         <h2 className="font-heading font-semibold text-2xl text-primary mb-2">GIFT City funds for NRIs in {c.name}</h2>
         <p className={p}>{c.summary}</p>

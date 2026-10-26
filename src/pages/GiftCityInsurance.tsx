@@ -56,8 +56,8 @@ const GiftCityInsurance = () => (
       The Indian exemption helps only on the Indian side. Your country of residence decides how the policy is taxed there:
     </p>
     <ul className={ul}>
-      <li><strong className="text-primary">UAE and most of the Gulf:</strong> no personal income tax on individuals, so the Indian position usually decides the outcome. See <Link to="/gift-city-funds-for-nri#uae" className={a}>UAE NRIs</Link>.</li>
-      <li><strong className="text-primary">United States:</strong> a foreign policy may not count as life insurance under US rules, premiums to foreign insurers can attract US excise tax, and cash-value policies may need reporting. See <Link to="/gift-city-funds-for-nri#us" className={a}>US NRIs</Link>.</li>
+      <li><strong className="text-primary">UAE and most of the Gulf:</strong> no personal income tax on individuals, so the Indian position usually decides the outcome. See <Link to="/gift-city-funds-for-uae-nris" className={a}>UAE NRIs</Link>.</li>
+      <li><strong className="text-primary">United States:</strong> a foreign policy may not count as life insurance under US rules, premiums to foreign insurers can attract US excise tax, and cash-value policies may need reporting. See <Link to="/gift-city-funds-for-us-nris" className={a}>US NRIs</Link>.</li>
       <li><strong className="text-primary">UK, Canada, Australia, Singapore:</strong> foreign life policies with an investment element have their own rules. Ask a local tax adviser before buying.</li>
     </ul>
 

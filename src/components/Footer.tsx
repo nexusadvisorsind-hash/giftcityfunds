@@ -67,10 +67,28 @@ const Footer = () => {
                 <Link to="/gift-city-funds-for-nri" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">For NRIs</Link>
               </li>
               <li>
+                <Link to="/gift-city-funds-for-uae-nris" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">NRIs in the UAE</Link>
+              </li>
+              <li>
+                <Link to="/gift-city-funds-for-uk-nris" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">NRIs in the UK</Link>
+              </li>
+              <li>
+                <Link to="/gift-city-funds-for-us-nris" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">NRIs in the US</Link>
+              </li>
+              <li>
+                <Link to="/gift-city-funds-for-singapore-nris" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">NRIs in Singapore</Link>
+              </li>
+              <li>
+                <Link to="/gift-city-funds-for-canada-nris" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">NRIs in Canada</Link>
+              </li>
+              <li>
                 <Link to="/gift-city-funds-for-oci" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">For OCIs</Link>
               </li>
               <li>
                 <Link to="/gift-city-funds-for-resident-indians" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">For Resident Indians</Link>
+              </li>
+              <li>
+                <Link to="/invest-abroad-from-india" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Invest Abroad from India</Link>
               </li>
               <li>
                 <Link to="/taxation" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Taxation</Link>

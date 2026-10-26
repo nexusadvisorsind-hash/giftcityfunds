@@ -19,6 +19,13 @@ const SOURCES = {
   indiaInx: { label: "India INX — India International Exchange", url: "https://www.indiainx.com/", note: "GIFT City exchange (a BSE subsidiary) listing bonds and other securities." },
   nseIx: { label: "NSE IX — NSE International Exchange", url: "https://www.nseix.com/", note: "GIFT City exchange (an NSE subsidiary) for bonds, derivatives and US stocks." },
   rbiFema: { label: "RBI — Foreign Exchange Management Act (FEMA) notifications", url: "https://www.rbi.org.in/Scripts/Fema.aspx", note: "FEMA rules, including holding foreign assets after a change in residence." },
+  itResidency: { label: "Income Tax Department — How to determine if an individual is an NRI", url: "https://incometaxindia.gov.in/Documents/residential-status.htm", note: "The 182-day, 120-day and deemed-resident tests." },
+  uaeTrc: { label: "UAE Federal Tax Authority — Tax Residency Certificate", url: "https://tax.gov.ae/en/services/issuance.of.tax.certificates.aspx", note: "Who qualifies as a UAE tax resident and how to apply." },
+  hmrcCgt: { label: "GOV.UK — Capital Gains Tax rates and allowances", url: "https://www.gov.uk/capital-gains-tax/rates", note: "Current UK rates and the annual exempt amount." },
+  irsFbar: { label: "IRS — Report of Foreign Bank and Financial Accounts (FBAR)", url: "https://www.irs.gov/businesses/small-businesses-self-employed/report-of-foreign-bank-and-financial-accounts-fbar", note: "Reporting foreign accounts above USD 10,000 in aggregate." },
+  irs8938: { label: "IRS — Comparison of Form 8938 and FBAR requirements", url: "https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements", note: "FATCA asset reporting thresholds for US taxpayers." },
+  craCapitalGains: { label: "Canada Revenue Agency — Line 12700 Capital gains", url: "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/personal-income/line-12700-capital-gains.html", note: "How Canadian residents report capital gains." },
+  canadaIta941: { label: "Justice Laws — Income Tax Act section 94.1 (offshore investment fund property)", url: "https://laws-lois.justice.gc.ca/eng/acts/I-3.3/section-94.1.html", note: "Canada's rule that can impute income on certain offshore fund holdings." },
 } as const;
 
 export type SourceKey = keyof typeof SOURCES;

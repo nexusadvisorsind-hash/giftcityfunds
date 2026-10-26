@@ -59,9 +59,9 @@ const GiftCityMovingCountry = () => (
     <h2 className={h2}>Moving to another country</h2>
     <ul className={ul}>
       <li><strong className="text-primary">To the US:</strong> PFIC rules apply from the day you become a US person; a holding bought earlier can become a PFIC problem. Read <Link to="/insights/pfic-explained" className={a}>PFIC explained</Link> before you move.</li>
-      <li><strong className="text-primary">To the UK:</strong> gains on a fund without UK reporting fund status are normally taxed as income. See <Link to="/gift-city-funds-for-nri#uk" className={a}>UK NRIs</Link>.</li>
-      <li><strong className="text-primary">Leaving Canada or Australia:</strong> both can tax unrealised gains when you stop being resident. See <Link to="/gift-city-funds-for-nri#canada" className={a}>Canada</Link> and <Link to="/gift-city-funds-for-nri#australia" className={a}>Australia</Link>.</li>
-      <li><strong className="text-primary">To the UAE or the Gulf:</strong> no personal income tax, but check India's deemed-resident rule if you have large Indian income. See <Link to="/gift-city-funds-for-nri#uae" className={a}>UAE NRIs</Link>.</li>
+      <li><strong className="text-primary">To the UK:</strong> gains on a fund without UK reporting fund status are normally taxed as income. See <Link to="/gift-city-funds-for-uk-nris" className={a}>UK NRIs</Link>.</li>
+      <li><strong className="text-primary">Leaving Canada or Australia:</strong> both can tax unrealised gains when you stop being resident. See <Link to="/gift-city-funds-for-canada-nris" className={a}>Canada</Link> and <Link to="/gift-city-funds-for-nri#australia" className={a}>Australia</Link>.</li>
+      <li><strong className="text-primary">To the UAE or the Gulf:</strong> no personal income tax, but check India's deemed-resident rule if you have large Indian income. See <Link to="/gift-city-funds-for-uae-nris" className={a}>UAE NRIs</Link>.</li>
     </ul>
 
     <h3 className={h3}>Taking the money out instead?</h3>

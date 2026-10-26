@@ -317,7 +317,7 @@ export const articles: InsightArticle[] = [
 
           <h3 className="font-heading font-semibold text-xl text-primary pt-2">Why NRIs are different</h3>
           <p>
-            NRIs investing money already held abroad send it directly in foreign currency. LRS and TCS apply to residents sending money out of India, so they do not arise. See <Link to="/gift-city-funds-for-nri#uae" className="text-secondary hover:underline">UAE NRIs</Link> or <Link to="/gift-city-route-checker" className="text-secondary hover:underline">check your route</Link>.
+            NRIs investing money already held abroad send it directly in foreign currency. LRS and TCS apply to residents sending money out of India, so they do not arise. See <Link to="/gift-city-funds-for-uae-nris" className="text-secondary hover:underline">UAE NRIs</Link> or <Link to="/gift-city-route-checker" className="text-secondary hover:underline">check your route</Link>.
           </p>
 
           <h3 className="font-heading font-semibold text-xl text-primary pt-2">Investing more than once a year?</h3>
@@ -643,7 +643,7 @@ export const articles: InsightArticle[] = [
             A GIFT City fund investment is a single subscription relationship with one FME. Direct foreign investing means managing your own brokerage relationship, currency conversion, and individual security research and monitoring — more control, but more ongoing effort.
           </p>
           <p>
-            If you're a US-based NRI weighing this decision, our <Link to="/gift-city-funds-for-nri#us" className="text-secondary hover:underline">US-Based NRI guide</Link> and the article on <Link to="/insights/pfic-explained" className="text-secondary hover:underline">PFIC status</Link> below are worth reading first, or <Link to="/contact" className="text-secondary hover:underline">talk to Anup</Link> directly about your specific situation.
+            If you're a US-based NRI weighing this decision, our <Link to="/gift-city-funds-for-us-nris" className="text-secondary hover:underline">US-Based NRI guide</Link> and the article on <Link to="/insights/pfic-explained" className="text-secondary hover:underline">PFIC status</Link> below are worth reading first, or <Link to="/contact" className="text-secondary hover:underline">talk to Anup</Link> directly about your specific situation.
           </p>
           <h3 className="font-heading font-semibold text-lg text-primary pt-2">GIFT City fund vs a US-listed ETF</h3>
           <p>
@@ -813,7 +813,7 @@ export const articles: InsightArticle[] = [
           </p>
           <p>
             For more on how residency status shapes what you can invest in, see our{" "}
-            <Link to="/gift-city-funds-for-nri#us" className="text-secondary hover:underline">
+            <Link to="/gift-city-funds-for-us-nris" className="text-secondary hover:underline">
               guide for US-based NRIs
             </Link>
             , or{" "}

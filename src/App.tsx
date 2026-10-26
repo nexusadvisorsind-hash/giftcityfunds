@@ -29,6 +29,12 @@ const Risks = lazyPage(() => import("./pages/Risks"));
 const FundList = lazyPage(() => import("./pages/FundList"));
 const GiftCitySip = lazyPage(() => import("./pages/GiftCitySip"));
 const GiftCityNews = lazyPage(() => import("./pages/GiftCityNews"));
+const NriUae = lazyPage(() => import("./pages/NriUae"));
+const NriUk = lazyPage(() => import("./pages/NriUk"));
+const NriUs = lazyPage(() => import("./pages/NriUs"));
+const NriSingapore = lazyPage(() => import("./pages/NriSingapore"));
+const NriCanada = lazyPage(() => import("./pages/NriCanada"));
+const InvestAbroad = lazyPage(() => import("./pages/InvestAbroad"));
 const GiftCityReturns = lazyPage(() => import("./pages/GiftCityReturns"));
 const GiftCityApps = lazyPage(() => import("./pages/GiftCityApps"));
 const GiftCityInsurance = lazyPage(() => import("./pages/GiftCityInsurance"));
@@ -85,6 +91,12 @@ const PAGE_FOR_PATH: Record<string, LazyPage> = {
   "/gift-city-fund-list": FundList,
   "/gift-city-sip": GiftCitySip,
   "/gift-city-news": GiftCityNews,
+  "/gift-city-funds-for-uae-nris": NriUae,
+  "/gift-city-funds-for-uk-nris": NriUk,
+  "/gift-city-funds-for-us-nris": NriUs,
+  "/gift-city-funds-for-singapore-nris": NriSingapore,
+  "/gift-city-funds-for-canada-nris": NriCanada,
+  "/invest-abroad-from-india": InvestAbroad,
   "/gift-city-funds-returns": GiftCityReturns,
   "/gift-city-funds-zerodha-groww": GiftCityApps,
   "/gift-city-insurance": GiftCityInsurance,
@@ -144,7 +156,7 @@ const App = ({ ssrUrl, helmetContext }: AppProps = {}) => (
               <Route path="/what-is-gift-city" element={<WhatIsGiftCity />} />
               <Route path="/funds-explained" element={<FundsExplained />} />
               <Route path="/who-its-for" element={<WhoItsFor />} />
-              <Route path="/us-based-nris" element={<Navigate to="/gift-city-funds-for-nri#us" replace />} />
+              <Route path="/us-based-nris" element={<Navigate to="/gift-city-funds-for-us-nris" replace />} />
               <Route path="/taxation" element={<Taxation />} />
               <Route path="/faqs" element={<Faqs />} />
               <Route path="/insights" element={<Insights />} />
@@ -182,8 +194,12 @@ const App = ({ ssrUrl, helmetContext }: AppProps = {}) => (
               <Route path="/tcs-on-foreign-remittance" element={<Navigate to="/insights/lrs-tcs-gift-city" replace />} />
               <Route path="/gift-city-glossary" element={<Glossary />} />
               <Route path="/gift-city-route-checker" element={<RouteChecker />} />
-              <Route path="/gift-city-funds-for-uae-nris" element={<Navigate to="/gift-city-funds-for-nri#uae" replace />} />
-              <Route path="/gift-city-funds-for-uk-nris" element={<Navigate to="/gift-city-funds-for-nri#uk" replace />} />
+              <Route path="/gift-city-funds-for-uae-nris" element={<NriUae />} />
+              <Route path="/gift-city-funds-for-uk-nris" element={<NriUk />} />
+              <Route path="/gift-city-funds-for-us-nris" element={<NriUs />} />
+              <Route path="/gift-city-funds-for-singapore-nris" element={<NriSingapore />} />
+              <Route path="/gift-city-funds-for-canada-nris" element={<NriCanada />} />
+              <Route path="/invest-abroad-from-india" element={<InvestAbroad />} />
               <Route path="/gift-city-vs-singapore-dubai" element={<GiftCityVsSingaporeDubai />} />
               <Route path="/gift-city-markets-gift-nifty" element={<GiftCityMarkets />} />
               <Route path="/gift-city-family-office-fpi" element={<FamilyOfficeFpi />} />

@@ -10,7 +10,12 @@ const GUIDES: Record<string, Guide> = {
   whatIs: { to: "/what-is-gift-city", title: "What Is GIFT City & IFSC?", blurb: "The basics of India's international financial centre and its regulator." },
   funds: { to: "/funds-explained", title: "GIFT City Fund Categories Explained", blurb: "Mutual Fund FoFs, AIFs, PMS and feeder funds compared." },
   who: { to: "/who-its-for", title: "Who Can Invest in GIFT City Funds?", blurb: "How it works for NRIs, OCIs and resident Indians." },
-  us: { to: "/gift-city-funds-for-nri#us", title: "US-Based NRIs and PFIC", blurb: "Eligibility, PFIC, QEF and US reporting." },
+  us: { to: "/gift-city-funds-for-us-nris", title: "GIFT City Funds for US NRIs", blurb: "Eligibility, PFIC, Form 8621 and FBAR." },
+  uaeNri: { to: "/gift-city-funds-for-uae-nris", title: "GIFT City Funds for UAE NRIs", blurb: "No UAE tax, TRC and the deemed-resident rule." },
+  ukNri: { to: "/gift-city-funds-for-uk-nris", title: "GIFT City Funds for UK NRIs", blurb: "Reporting fund status, CGT and the FIG regime." },
+  sgNri: { to: "/gift-city-funds-for-singapore-nris", title: "GIFT City Funds for Singapore NRIs", blurb: "No capital gains tax, treaty and currency." },
+  caNri: { to: "/gift-city-funds-for-canada-nris", title: "GIFT City Funds for Canada NRIs", blurb: "Eligibility, T1135 and section 94.1." },
+  abroad: { to: "/invest-abroad-from-india", title: "How to Invest Abroad from India", blurb: "Four routes compared, with LRS, TCS and tax." },
   tax: { to: "/taxation", title: "Regulation and Taxation of GIFT City Funds", blurb: "IFSCA oversight and the India-side tax treatment." },
   how: { to: "/how-to-invest", title: "How to Invest in GIFT City Funds", blurb: "The process step by step, from KYC to allotment." },
   faqs: { to: "/faqs", title: "GIFT City Funds FAQs", blurb: "Short answers to the most common questions." },
@@ -55,9 +60,9 @@ const GUIDES: Record<string, Guide> = {
 
 // Which guides to suggest at the bottom of each page.
 const RELATED: Record<string, (keyof typeof GUIDES)[]> = {
-  "/gift-city-funds-for-nri": ["docs", "insurance", "moving"],
+  "/gift-city-funds-for-nri": ["uaeNri", "ukNri", "us"],
   "/gift-city-funds-for-oci": ["byCountry", "us", "checker"],
-  "/gift-city-funds-for-resident-indians": ["vsIntl", "etfs", "lrs"],
+  "/gift-city-funds-for-resident-indians": ["abroad", "vsIntl", "lrs"],
   "/what-is-gift-city": ["guide", "ifsca", "list"],
   "/funds-explained": ["aif", "pms", "feeder"],
   "/gift-city-aif": ["pms", "minimums", "family"],
@@ -77,7 +82,7 @@ const RELATED: Record<string, (keyof typeof GUIDES)[]> = {
   "/gift-city-guide": ["whatIs", "markets", "banks"],
   "/gift-city-fund-list": ["funds", "how", "checker"],
   "/gift-city-sip": ["tcs", "vsIntl", "etfs"],
-  "/gift-city-vs-international-mutual-funds": ["etfs", "sip", "list"],
+  "/gift-city-vs-international-mutual-funds": ["abroad", "etfs", "list"],
   "/gift-city-funds-pros-and-cons": ["risks", "vsIntl", "checker"],
   "/what-is-ifsca": ["whatIs", "centres", "list"],
   "/gift-city-us-stocks-etfs": ["apps", "vsIntl", "tcs"],
@@ -92,6 +97,12 @@ const RELATED: Record<string, (keyof typeof GUIDES)[]> = {
   "/gift-city-moving-country": ["redeem", "byCountry", "pfic"],
   "/gift-city-rules-updates": ["news", "minimums", "ifsca"],
   "/gift-city-news": ["rules", "list", "markets"],
+  "/gift-city-funds-for-uae-nris": ["byCountry", "vsNre", "docs"],
+  "/gift-city-funds-for-uk-nris": ["byCountry", "moving", "list"],
+  "/gift-city-funds-for-us-nris": ["pfic", "byCountry", "moving"],
+  "/gift-city-funds-for-singapore-nris": ["byCountry", "redeem", "list"],
+  "/gift-city-funds-for-canada-nris": ["byCountry", "moving", "list"],
+  "/invest-abroad-from-india": ["vsIntl", "etfs", "tcs"],
   "/gift-city-document-checklist": ["how", "checker", "redeem"],
 };
 

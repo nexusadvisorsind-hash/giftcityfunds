@@ -78,7 +78,7 @@ const Faqs = () => (
             {g.qas.map((qa) => (
               <div key={qa.q} className="bg-surface p-5 rounded-lg border border-border">
                 <h3 className="font-heading font-semibold text-primary mb-2">{qa.q}</h3>
-                <p className="font-body text-sm text-foreground-muted">{qa.link ? (<>{qa.a} <Link to={qa.link.to} className="text-secondary hover:underline">{qa.link.label} →</Link></>) : qa.a.includes("/gift-city-funds-for-nri#us") ? (<>It depends heavily on whether the structure has PFIC or Non-PFIC status under US tax law — significant enough that we've written a full page on it. <Link to="/gift-city-funds-for-nri#us" className="text-secondary hover:underline">See the guide →</Link></>) : qa.a}</p>
+                <p className="font-body text-sm text-foreground-muted">{qa.link ? (<>{qa.a} <Link to={qa.link.to} className="text-secondary hover:underline">{qa.link.label} →</Link></>) : qa.a.includes("/gift-city-funds-for-us-nris") ? (<>It depends heavily on whether the structure has PFIC or Non-PFIC status under US tax law — significant enough that we've written a full page on it. <Link to="/gift-city-funds-for-us-nris" className="text-secondary hover:underline">See the guide →</Link></>) : qa.a}</p>
               </div>
             ))}
           </div>

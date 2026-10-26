@@ -82,22 +82,12 @@
     },
     {
       "source": "/us-based-nris",
-      "destination": "/gift-city-funds-for-nri#us",
+      "destination": "/gift-city-funds-for-us-nris",
       "permanent": true
     },
     {
       "source": "/gift-city-funds-nri-tax-by-country",
       "destination": "/gift-city-funds-for-nri",
-      "permanent": true
-    },
-    {
-      "source": "/gift-city-funds-for-uae-nris",
-      "destination": "/gift-city-funds-for-nri#uae",
-      "permanent": true
-    },
-    {
-      "source": "/gift-city-funds-for-uk-nris",
-      "destination": "/gift-city-funds-for-nri#uk",
       "permanent": true
     },
     {

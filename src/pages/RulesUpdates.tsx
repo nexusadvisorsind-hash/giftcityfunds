@@ -46,7 +46,7 @@ const UPDATES: Update[] = [
     date: "2025-04-06", label: "6 April 2025", body: "HMRC (UK)",
     change: "The UK replaced the remittance basis with the 4-year foreign income and gains (FIG) regime for new arrivals.",
     forYou: "UK-resident NRIs: changes how foreign gains, including GIFT City funds, may be taxed.",
-    link: ["/gift-city-funds-for-nri#uk", "UK NRIs"],
+    link: ["/gift-city-funds-for-uk-nris", "UK NRIs"],
   },
   {
     date: "2025-04-01", label: "1 April 2025", body: "Finance Act, 2025 (India)",

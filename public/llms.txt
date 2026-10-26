@@ -37,6 +37,12 @@
 - [GIFT City Feeder Funds](https://giftcityfunds.in/gift-city-feeder-funds): Inbound and outbound feeders; feeder vs direct FPI.
 - [GIFT City Minimum Investment and Limits](https://giftcityfunds.in/gift-city-minimum-investment): Every minimum, LRS limit and TCS threshold in one table.
 - [GIFT City Funds for NRIs](https://giftcityfunds.in/gift-city-funds-for-nri): Complete NRI guide with full explanations for the UAE, Gulf, UK, US (PFIC, QEF, mark-to-market), Canada, Singapore and Australia; minimums from USD 500.
+- [GIFT City Funds for UAE NRIs](https://giftcityfunds.in/gift-city-funds-for-uae-nris): Investing from Dubai or Abu Dhabi: no UAE personal tax, TRC, India's deemed-resident rule, funds that accept UAE residents.
+- [GIFT City Funds for UK NRIs](https://giftcityfunds.in/gift-city-funds-for-uk-nris): UK offshore fund rules, reporting fund status, CGT rates and the 4-year FIG regime.
+- [GIFT City Funds for US NRIs](https://giftcityfunds.in/gift-city-funds-for-us-nris): Funds that exclude US persons, PFIC and Form 8621, QEF and mark-to-market, FBAR and Form 8938.
+- [GIFT City Funds for Singapore NRIs](https://giftcityfunds.in/gift-city-funds-for-singapore-nris): No capital gains tax, foreign-sourced income for individuals, Certificate of Residence, currency risk.
+- [GIFT City Funds for Canada NRIs](https://giftcityfunds.in/gift-city-funds-for-canada-nris): Funds that exclude Canadian residents, 50% capital gains inclusion, T1135 and section 94.1.
+- [How to Invest Abroad from India](https://giftcityfunds.in/invest-abroad-from-india): Four routes for residents compared: international mutual funds and the SEBI cap, India-listed global ETFs, US stocks under LRS, GIFT City funds.
 - [GIFT City Funds for OCIs](https://giftcityfunds.in/gift-city-funds-for-oci): OCI eligibility, documents and citizenship rules.
 - [GIFT City Funds for Resident Indians](https://giftcityfunds.in/gift-city-funds-for-resident-indians): LRS, TCS, what residents can and cannot do, Schedule FA.
 - [GIFT City Glossary](https://giftcityfunds.in/gift-city-glossary): 27 terms (IFSC, FME, LRS, TCS, PFIC, inbound/outbound) defined.
