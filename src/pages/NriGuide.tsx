@@ -29,6 +29,7 @@ const COUNTRIES: Country[] = [
   },
   {
     id: "gulf",
+    page: "/gift-city-funds-for-gulf-nris",
     name: "Saudi Arabia, Qatar, Kuwait, Bahrain and Oman",
     summary: "Like the UAE, most Gulf countries do not tax individuals on investment income, and their currencies are mostly pegged to the US Dollar.",
     tax: [
@@ -126,7 +127,7 @@ const COUNTRIES: Country[] = [
   },
 ];
 
-const CARD_NAME: Record<string, string> = { uae: "the UAE", uk: "the UK", us: "the US", canada: "Canada", singapore: "Singapore" };
+const CARD_NAME: Record<string, string> = { gulf: "Saudi Arabia, Qatar, Kuwait, Bahrain and Oman", uae: "the UAE", uk: "the UK", us: "the US", canada: "Canada", singapore: "Singapore" };
 
 const faqs: Faq[] = [
   { q: "Can NRIs invest in GIFT City in India?", a: "Yes. NRIs can invest in GIFT City funds, deposits, bonds and US stocks through India's GIFT IFSC, usually in US Dollars from an overseas bank account, without LRS or TCS. Each fund or bank sets its own eligibility; some exclude US or Canadian residents." },
@@ -146,7 +147,7 @@ const NriGuide = () => (
     description="GIFT City funds for NRIs: invest in USD with no LRS, minimums from USD 500, documents, and tax rules for the UAE, Gulf, UK, US, Canada, Singapore and Australia."
     crumb="GIFT City Funds for NRIs"
     datePublished="2026-10-09"
-    dateModified="2026-10-26"
+    dateModified="2026-11-02"
     faqs={faqs}
     sources={["ifscaDirectory", "irs8621", "uaeTax", "hmrcOffshore", "ukFig", "craT1135", "irasOverseas", "incomeTax"]}
   >
@@ -212,8 +213,8 @@ const NriGuide = () => (
         <thead><tr><th className={th}>Where you live</th><th className={th}>Home tax on investment income</th><th className={th}>Main thing to check</th></tr></thead>
         <tbody>
           <tr><td className={td}><Link to="/gift-city-funds-for-uae-nris" className={a}>UAE</Link></td><td className={td}>None for individuals</td><td className={td}>Indian deemed-resident rule</td></tr>
-          <tr><td className={td}>Saudi, Qatar, Kuwait, Bahrain</td><td className={td}>None for individuals</td><td className={td}>Fund eligibility for your country</td></tr>
-          <tr><td className={td}>Oman</td><td className={td}>5% on high earners from 2028</td><td className={td}>Whether it applies to you</td></tr>
+          <tr><td className={td}><Link to="/gift-city-funds-for-gulf-nris" className={a}>Saudi, Qatar, Kuwait, Bahrain</Link></td><td className={td}>None for individuals</td><td className={td}>Fund eligibility for your country</td></tr>
+          <tr><td className={td}><Link to="/gift-city-funds-for-gulf-nris" className={a}>Oman</Link></td><td className={td}>5% on high earners from 2028</td><td className={td}>Whether it applies to you</td></tr>
           <tr><td className={td}><Link to="/gift-city-funds-for-uk-nris" className={a}>UK</Link></td><td className={td}>Yes</td><td className={td}>Reporting fund status</td></tr>
           <tr><td className={td}><Link to="/gift-city-funds-for-us-nris" className={a}>US</Link></td><td className={td}>Yes</td><td className={td}>Whether US persons are accepted; PFIC</td></tr>
           <tr><td className={td}><Link to="/gift-city-funds-for-canada-nris" className={a}>Canada</Link></td><td className={td}>Yes</td><td className={td}>Eligibility; T1135 reporting</td></tr>

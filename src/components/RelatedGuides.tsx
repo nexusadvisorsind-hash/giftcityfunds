@@ -11,6 +11,7 @@ const GUIDES: Record<string, Guide> = {
   funds: { to: "/funds-explained", title: "GIFT City Fund Categories Explained", blurb: "Mutual Fund FoFs, AIFs, PMS and feeder funds compared." },
   who: { to: "/who-its-for", title: "Who Can Invest in GIFT City Funds?", blurb: "How it works for NRIs, OCIs and resident Indians." },
   us: { to: "/gift-city-funds-for-us-nris", title: "GIFT City Funds for US NRIs", blurb: "Eligibility, PFIC, Form 8621 and FBAR." },
+  gulfNri: { to: "/gift-city-funds-for-gulf-nris", title: "GIFT City Funds for Gulf NRIs", blurb: "Saudi Arabia, Qatar, Kuwait, Bahrain and Oman." },
   uaeNri: { to: "/gift-city-funds-for-uae-nris", title: "GIFT City Funds for UAE NRIs", blurb: "No UAE tax, TRC and the deemed-resident rule." },
   ukNri: { to: "/gift-city-funds-for-uk-nris", title: "GIFT City Funds for UK NRIs", blurb: "Reporting fund status, CGT and the FIG regime." },
   sgNri: { to: "/gift-city-funds-for-singapore-nris", title: "GIFT City Funds for Singapore NRIs", blurb: "No capital gains tax, treaty and currency." },
@@ -60,7 +61,7 @@ const GUIDES: Record<string, Guide> = {
 
 // Which guides to suggest at the bottom of each page.
 const RELATED: Record<string, (keyof typeof GUIDES)[]> = {
-  "/gift-city-funds-for-nri": ["uaeNri", "ukNri", "us"],
+  "/gift-city-funds-for-nri": ["uaeNri", "gulfNri", "us"],
   "/gift-city-funds-for-oci": ["byCountry", "us", "checker"],
   "/gift-city-funds-for-resident-indians": ["abroad", "vsIntl", "lrs"],
   "/what-is-gift-city": ["guide", "ifsca", "list"],
@@ -97,7 +98,8 @@ const RELATED: Record<string, (keyof typeof GUIDES)[]> = {
   "/gift-city-moving-country": ["redeem", "byCountry", "pfic"],
   "/gift-city-rules-updates": ["news", "minimums", "ifsca"],
   "/gift-city-news": ["rules", "list", "markets"],
-  "/gift-city-funds-for-uae-nris": ["byCountry", "vsNre", "docs"],
+  "/gift-city-funds-for-uae-nris": ["gulfNri", "vsNre", "docs"],
+  "/gift-city-funds-for-gulf-nris": ["uaeNri", "vsNre", "docs"],
   "/gift-city-funds-for-uk-nris": ["byCountry", "moving", "list"],
   "/gift-city-funds-for-us-nris": ["pfic", "byCountry", "moving"],
   "/gift-city-funds-for-singapore-nris": ["byCountry", "redeem", "list"],

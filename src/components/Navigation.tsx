@@ -29,6 +29,7 @@ const Navigation = () => {
     { label: "For Resident Indians", path: "/gift-city-funds-for-resident-indians", ariaLabel: "GIFT City funds for resident Indians" },
     { label: "Invest Abroad from India", path: "/invest-abroad-from-india", ariaLabel: "Ways to invest abroad from India compared" },
     { label: "NRIs in the UAE", path: "/gift-city-funds-for-uae-nris", ariaLabel: "GIFT City funds for UAE NRIs" },
+    { label: "NRIs in Saudi, Qatar, Kuwait, Bahrain, Oman", path: "/gift-city-funds-for-gulf-nris", ariaLabel: "GIFT City funds for Gulf NRIs" },
     { label: "NRIs in the UK", path: "/gift-city-funds-for-uk-nris", ariaLabel: "GIFT City funds for UK NRIs" },
     { label: "NRIs in the US", path: "/gift-city-funds-for-us-nris", ariaLabel: "GIFT City funds for US NRIs" },
     { label: "NRIs in Singapore", path: "/gift-city-funds-for-singapore-nris", ariaLabel: "GIFT City funds for Singapore NRIs" },

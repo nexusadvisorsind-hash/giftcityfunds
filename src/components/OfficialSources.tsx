@@ -25,6 +25,11 @@ const SOURCES = {
   irsFbar: { label: "IRS — Report of Foreign Bank and Financial Accounts (FBAR)", url: "https://www.irs.gov/businesses/small-businesses-self-employed/report-of-foreign-bank-and-financial-accounts-fbar", note: "Reporting foreign accounts above USD 10,000 in aggregate." },
   irs8938: { label: "IRS — Comparison of Form 8938 and FBAR requirements", url: "https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements", note: "FATCA asset reporting thresholds for US taxpayers." },
   craCapitalGains: { label: "Canada Revenue Agency — Line 12700 Capital gains", url: "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/personal-income/line-12700-capital-gains.html", note: "How Canadian residents report capital gains." },
+  pwcSaudi: { label: "PwC Worldwide Tax Summaries — Saudi Arabia, individual", url: "https://taxsummaries.pwc.com/saudi-arabia/individual/taxes-on-personal-income", note: "No individual income tax scheme (reviewed 29 July 2026)." },
+  pwcQatar: { label: "PwC Worldwide Tax Summaries — Qatar, income determination", url: "https://taxsummaries.pwc.com/qatar/individual/income-determination", note: "Interest and gains on securities for individuals (reviewed 17 September 2026)." },
+  pwcKuwait: { label: "PwC Worldwide Tax Summaries — Kuwait, individual", url: "https://taxsummaries.pwc.com/kuwait/individual/tax-administration", note: "No personal income tax regime (reviewed 22 July 2026)." },
+  pwcBahrain: { label: "PwC Worldwide Tax Summaries — Bahrain, individual", url: "https://taxsummaries.pwc.com/bahrain/individual/taxes-on-personal-income", note: "No personal income tax regime (reviewed 26 July 2026)." },
+  kpmgOman: { label: "KPMG — Oman introduces personal income tax from 1 January 2028", url: "https://kpmg.com/om/en/insights/2025/06/oman-announces-the-introduction-of-personal-income-tax-effective-1-january-2028.html", note: "Royal Decree 56/2025: 5% above OMR 42,000." },
   canadaIta941: { label: "Justice Laws — Income Tax Act section 94.1 (offshore investment fund property)", url: "https://laws-lois.justice.gc.ca/eng/acts/I-3.3/section-94.1.html", note: "Canada's rule that can impute income on certain offshore fund holdings." },
 } as const;
 

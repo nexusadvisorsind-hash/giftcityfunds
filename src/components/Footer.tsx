@@ -70,6 +70,9 @@ const Footer = () => {
                 <Link to="/gift-city-funds-for-uae-nris" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">NRIs in the UAE</Link>
               </li>
               <li>
+                <Link to="/gift-city-funds-for-gulf-nris" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">NRIs in the Gulf</Link>
+              </li>
+              <li>
                 <Link to="/gift-city-funds-for-uk-nris" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">NRIs in the UK</Link>
               </li>
               <li>

@@ -5,7 +5,7 @@ import { FlowSteps } from "@/components/Diagrams";
 import type { SourceKey } from "@/components/OfficialSources";
 import { LOW_MIN, HIGH_MIN, FUNDS_LAST_CHECKED } from "@/data/funds";
 
-export type CountryCode = "uae" | "uk" | "us" | "sg" | "ca";
+export type CountryCode = "uae" | "uk" | "us" | "sg" | "ca" | "gulf";
 
 export interface CountryPageProps {
   code: CountryCode;
@@ -20,6 +20,7 @@ export interface CountryPageProps {
   facts: [string, ReactNode][];
   steps: { title: string; sub: string }[];
   tax: ReactNode;
+  taxHeading?: string;
   docs: string[];
   money: ReactNode;
   fundNote?: ReactNode;
@@ -102,7 +103,7 @@ export const NriCountryPage = (c: CountryPageProps) => {
         Full details, minimums and sources: <Link to="/gift-city-fund-list" className={a}>GIFT City fund list</Link>.
       </p>
 
-      <h2 className={h2}>How {c.short} taxes GIFT City funds</h2>
+      <h2 className={h2}>{c.taxHeading ?? `How ${c.short} taxes GIFT City funds`}</h2>
       {c.tax}
 
       <h2 className={h2}>Indian tax for NRIs in {c.name}</h2>
@@ -123,7 +124,7 @@ export const NriCountryPage = (c: CountryPageProps) => {
 
       <h2 className={h2}>Other countries</h2>
       <p className={p}>
-        Guides for <Link to="/gift-city-funds-for-uae-nris" className={a}>the UAE</Link>, <Link to="/gift-city-funds-for-uk-nris" className={a}>the UK</Link>, <Link to="/gift-city-funds-for-us-nris" className={a}>the US</Link>, <Link to="/gift-city-funds-for-singapore-nris" className={a}>Singapore</Link> and <Link to="/gift-city-funds-for-canada-nris" className={a}>Canada</Link>, and the Gulf and Australia on the main <Link to="/gift-city-funds-for-nri" className={a}>GIFT City for NRIs</Link> page.
+        Guides for <Link to="/gift-city-funds-for-uae-nris" className={a}>the UAE</Link>, <Link to="/gift-city-funds-for-gulf-nris" className={a}>Saudi Arabia, Qatar, Kuwait, Bahrain and Oman</Link>, <Link to="/gift-city-funds-for-uk-nris" className={a}>the UK</Link>, <Link to="/gift-city-funds-for-us-nris" className={a}>the US</Link>, <Link to="/gift-city-funds-for-singapore-nris" className={a}>Singapore</Link> and <Link to="/gift-city-funds-for-canada-nris" className={a}>Canada</Link>, and Australia on the main <Link to="/gift-city-funds-for-nri" className={a}>GIFT City for NRIs</Link> page.
       </p>
     </GuidePage>
   );

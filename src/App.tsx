@@ -30,6 +30,7 @@ const FundList = lazyPage(() => import("./pages/FundList"));
 const GiftCitySip = lazyPage(() => import("./pages/GiftCitySip"));
 const GiftCityNews = lazyPage(() => import("./pages/GiftCityNews"));
 const NriUae = lazyPage(() => import("./pages/NriUae"));
+const NriGulf = lazyPage(() => import("./pages/NriGulf"));
 const NriUk = lazyPage(() => import("./pages/NriUk"));
 const NriUs = lazyPage(() => import("./pages/NriUs"));
 const NriSingapore = lazyPage(() => import("./pages/NriSingapore"));
@@ -92,6 +93,7 @@ const PAGE_FOR_PATH: Record<string, LazyPage> = {
   "/gift-city-sip": GiftCitySip,
   "/gift-city-news": GiftCityNews,
   "/gift-city-funds-for-uae-nris": NriUae,
+  "/gift-city-funds-for-gulf-nris": NriGulf,
   "/gift-city-funds-for-uk-nris": NriUk,
   "/gift-city-funds-for-us-nris": NriUs,
   "/gift-city-funds-for-singapore-nris": NriSingapore,
@@ -195,6 +197,7 @@ const App = ({ ssrUrl, helmetContext }: AppProps = {}) => (
               <Route path="/gift-city-glossary" element={<Glossary />} />
               <Route path="/gift-city-route-checker" element={<RouteChecker />} />
               <Route path="/gift-city-funds-for-uae-nris" element={<NriUae />} />
+              <Route path="/gift-city-funds-for-gulf-nris" element={<NriGulf />} />
               <Route path="/gift-city-funds-for-uk-nris" element={<NriUk />} />
               <Route path="/gift-city-funds-for-us-nris" element={<NriUs />} />
               <Route path="/gift-city-funds-for-singapore-nris" element={<NriSingapore />} />

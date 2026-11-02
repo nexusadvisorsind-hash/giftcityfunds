@@ -20,6 +20,7 @@ const CLUSTERS: { id: string; title: string; blurb: string; icon: typeof Users; 
       ["/gift-city-funds-for-nri", "GIFT City funds for NRIs, country by country", "Guide"],
       ["/gift-city-funds-for-oci", "GIFT City funds for OCIs", "Guide"],
       ["/gift-city-funds-for-uae-nris", "GIFT City funds for UAE NRIs", "Guide"],
+      ["/gift-city-funds-for-gulf-nris", "GIFT City funds for Gulf NRIs", "Guide"],
       ["/gift-city-funds-for-uk-nris", "GIFT City funds for UK NRIs", "Guide"],
       ["/gift-city-funds-for-us-nris", "GIFT City funds for US NRIs", "Guide"],
       ["/gift-city-funds-for-singapore-nris", "GIFT City funds for Singapore NRIs", "Guide"],
