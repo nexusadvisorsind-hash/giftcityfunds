@@ -120,6 +120,10 @@ const FundList = () => {
         For information only. Inclusion is not a recommendation or endorsement, and funds are not ranked. As a Mutual Fund Distributor, Anup Vatyani may be empanelled with some of these fund houses. Schemes, minimums and eligibility change; check the fund house's website and offer document before investing.
       </p>
 
+      <p className={p + " mt-4"}>
+        Fund house guides: <Link to="/parag-parikh-gift-city-fund" className={a}>Parag Parikh</Link> · <Link to="/hdfc-gift-city-funds" className={a}>HDFC</Link> · <Link to="/dsp-gift-city-funds" className={a}>DSP</Link> · <Link to="/tata-gift-city-fund" className={a}>Tata</Link>. Or <Link to="/gift-city-fund-compare" className={a}>compare funds side by side</Link>.
+      </p>
+
       <h2 className={h2}>GIFT City outbound funds list for resident Indians</h2>
       <p className={p}>
         Outbound funds invest outside India. Resident Indians invest under LRS (up to USD 250,000 a year; TCS above ₹10 lakh). They are not subject to the SEBI overseas limit that has made many Indian international mutual funds <Link to="/gift-city-vs-international-mutual-funds" className={a}>pause new money</Link>. Lower-minimum outbound funds on this page:

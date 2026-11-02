@@ -3,7 +3,7 @@ import { GuidePage, h2, p, a, ul, table, th, td, type Faq } from "@/components/G
 
 const faqs: Faq[] = [
   { q: "Can I buy GIFT City funds on Zerodha?", a: "Not as of October 2026. Zerodha received IFSCA approval in June 2026 to act as a broker-dealer in GIFT City for US stocks. GIFT City mutual funds, feeder funds, AIFs and PMS are bought from the fund house itself, directly or through a registered distributor." },
-  { q: "Can I buy GIFT City funds on Groww?", a: "Groww began rolling out US stocks and ETFs through GIFT City in late September 2026, as a Global Access Provider approved by IFSCA. That is investing in US-listed securities, not GIFT City mutual funds, which are bought from the fund house." },
+  { q: "Can I buy GIFT City funds on Groww?", a: "Groww opened US stocks and ETFs to all its users on 22 October 2026, through the GIFT City Global Access Provider route approved by IFSCA, with fractional investing from USD 1. That is investing in US-listed securities, not GIFT City mutual funds, which are bought from the fund house." },
   { q: "What is a Global Access Provider in GIFT City?", a: "A route set up by IFSCA in 2025 that lets Indian platforms give their users access to foreign markets through an entity in GIFT IFSC, with simpler repatriation of money back to India." },
   { q: "Is buying US stocks through Zerodha or Groww the same as a GIFT City fund?", a: "No. Through the apps you buy individual US stocks or ETFs yourself. A GIFT City fund is a managed pool regulated by IFSCA. For residents both go under LRS, with TCS above ₹10 lakh a year." },
   { q: "How do I invest in a GIFT City fund then?", a: "Choose the fund, complete the fund house's KYC, and send US Dollars to the scheme's account: from India under LRS if you are resident, or from abroad if you are an NRI. The full process is on the how-to-invest page." },
@@ -17,12 +17,12 @@ const GiftCityApps = () => (
     description="Can you buy GIFT City funds on Zerodha or Groww? What IFSCA approved in 2026, what the apps offer (US stocks and ETFs), and how GIFT City funds are bought instead."
     crumb="Zerodha, Groww and GIFT City"
     datePublished="2026-10-16"
-    dateModified="2026-10-23"
+    dateModified="2026-11-02"
     faqs={faqs}
     sources={["ifsca", "ifscaDirectory", "rbiLrs"]}
   >
     <p className={p}>
-      <strong className="text-primary">The short answer.</strong> Zerodha, Groww, Upstox and Angel One are bringing <strong className="text-primary">US stocks and ETFs</strong> to their apps through GIFT City, not GIFT City mutual funds. In June 2026, IFSCA approved Zerodha and Upstox as broker-dealers and Groww and Angel One as Global Access Providers. Groww began rolling out US investing in late September 2026. GIFT City funds are still bought from the fund house.
+      <strong className="text-primary">The short answer.</strong> Zerodha, Groww, Upstox and Angel One are bringing <strong className="text-primary">US stocks and ETFs</strong> to their apps through GIFT City, not GIFT City mutual funds. In June 2026, IFSCA approved Zerodha and Upstox as broker-dealers and Groww and Angel One as Global Access Providers. Groww opened US investing to all its users on 22 October 2026. GIFT City funds are still bought from the fund house.
     </p>
 
     <h2 className={h2}>What each app is approved for</h2>
@@ -33,13 +33,16 @@ const GiftCityApps = () => (
         <tbody>
           <tr><td className={td}>Zerodha</td><td className={td}>Broker-dealer</td><td className={td}>US stocks</td><td className={td}>Approved June 2026; check the app for launch</td></tr>
           <tr><td className={td}>Upstox</td><td className={td}>Broker-dealer</td><td className={td}>US stocks</td><td className={td}>Approved June 2026; check the app for launch</td></tr>
-          <tr><td className={td}>Groww</td><td className={td}>Global Access Provider</td><td className={td}>US stocks and ETFs</td><td className={td}>Rolling out from late September 2026</td></tr>
+          <tr><td className={td}>Groww</td><td className={td}>Global Access Provider</td><td className={td}>Over 10,000 US stocks and ETFs; fractional from USD 1</td><td className={td}>Open to all users from 22 October 2026; funded from a linked HDFC, ICICI, SBI, Axis or Kotak account</td></tr>
           <tr><td className={td}>Angel One</td><td className={td}>Global Access Provider</td><td className={td}>US stocks and ETFs</td><td className={td}>Rolling out to selected users from 19 October 2026; all users expected by mid-November</td></tr>
           <tr><td className={td}>Mirae Asset Sharekhan</td><td className={td}>Broker-dealer (Mirae Asset Capital Markets (IFSC))</td><td className={td}>Over 10,000 US stocks and ETFs; fractional from USD 1</td><td className={td}>Live from 7 October 2026</td></tr>
         </tbody>
       </table>
     </div>
     <p className="font-body text-xs text-foreground-muted mt-2">Based on public reports; features and eligibility change. Check each platform's own terms.</p>
+
+    <h2 className={h2}>How to start US investing on Groww</h2>
+    <p className={p}>Per Groww&apos;s own update of 22 October 2026: open the app, go to Products and tools, then US Stocks; choose a stock or ETF and tap Activate; confirm your employment, income, net worth and source of funds; link a supported Indian savings account (HDFC, ICICI, SBI, Axis or Kotak) and add money by net banking. Residents&apos; remittances count towards LRS, with TCS above ₹10 lakh a year. <a href="https://groww.in/updates/us-stocks-etfs-on-groww" target="_blank" rel="noopener noreferrer" className={a}>Groww&apos;s update</a></p>
 
     <h2 className={h2}>App vs GIFT City fund</h2>
     <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">

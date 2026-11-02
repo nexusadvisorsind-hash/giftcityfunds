@@ -129,7 +129,7 @@
 ],
 [
 "dsp gift city fund",
-"/gift-city-fund-list"
+"/dsp-gift-city-funds"
 ],
 [
 "mirae asset gift city fund",
@@ -137,7 +137,7 @@
 ],
 [
 "hdfc gift city fund",
-"/gift-city-fund-list"
+"/hdfc-gift-city-funds"
 ],
 [
 "icici prudential gift city fund",
@@ -501,11 +501,11 @@
 ],
 [
 "parag parikh gift city fund",
-"/gift-city-fund-list"
+"/parag-parikh-gift-city-fund"
 ],
 [
 "ppfas gift city fund",
-"/gift-city-fund-list"
+"/parag-parikh-gift-city-fund"
 ],
 [
 "edelweiss gift city fund",
@@ -598,5 +598,33 @@
 [
 "gift city middle east nri",
 "/gift-city-funds-for-gulf-nris"
+],
+[
+"tata gift city fund",
+"/tata-gift-city-fund"
+],
+[
+"compare gift city funds",
+"/gift-city-fund-compare"
+],
+[
+"gift city statistics",
+"/gift-city-in-numbers"
+],
+[
+"gift city in numbers",
+"/gift-city-in-numbers"
+],
+[
+"usd vs inr calculator",
+"/usd-vs-inr-calculator"
+],
+[
+"which banks offer gift city accounts",
+"/insights/how-to-open-gift-city-bank-account"
+],
+[
+"groww us stocks gift city",
+"/gift-city-funds-zerodha-groww"
 ]
 ]

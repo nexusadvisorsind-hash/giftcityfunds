@@ -3,11 +3,12 @@ import { Button } from "@/components/ui/button";
 import { SEO } from "@/components/SEO";
 import MoneyMap from "@/components/MoneyMap";
 import HeroTabs from "@/components/HeroTabs";
-import { ArrowRight, Landmark, Layers, Wallet, MessageCircle, CircleDollarSign, TrendingUp, Building2, UserCog, FileText, Globe2, Home as Home2, Calculator, Route, ListChecks, BookA } from "lucide-react";
+import { ArrowRight, ArrowDown, Landmark, Layers, Wallet, MessageCircle, CircleDollarSign, TrendingUp, Building2, UserCog, FileText, Globe2, Home as Home2, Calculator, Route, ListChecks, BookA } from "lucide-react";
 import { PageFaqs, type PageFaq } from "@/components/PageFaqs";
 import TicketLadder from "@/components/TicketLadder";
 import LatestNews from "@/components/LatestNews";
 import HomeFundFinder from "@/components/HomeFundFinder";
+import { FUND_COUNT } from "@/data/funds";
 const PAGE_FAQS: PageFaq[] = [
   { q: "Which GIFT City fund is best?", a: "There is no single best GIFT City fund. The right fund depends on where you live, whether you want Indian or global markets, how much you invest and your tax position. Our GIFT City fund list sets out every fund we could verify, with minimums and who can invest, without ranking them." },
   { q: "Is it good to invest in GIFT City?", a: "It can suit some investors and not others. GIFT City funds offer US Dollar investing under IFSCA regulation, from USD 500 for some retail funds, and are not limited by the SEBI overseas cap. Drawbacks include no SIP, LRS and 20% TCS above ₹10 lakh for residents, short track records and, for US persons, PFIC rules. This is general information, not advice." },
@@ -65,6 +66,9 @@ const Home = () => {
               <Link to="/gift-city-route-checker" className="inline-flex items-center gap-2 rounded-xl bg-teal text-ink font-heading font-bold text-lg px-6 py-3.5 transition-transform hover:-translate-y-0.5 motion-reduce:hover:translate-y-0">
                 Find your route <ArrowRight className="h-5 w-5" aria-hidden />
               </Link>
+              <a href="#fund-finder" className="inline-flex items-center gap-2 rounded-xl border-2 border-teal text-teal-light font-heading font-bold text-lg px-6 py-3 hover:bg-teal/10">
+                Browse {FUND_COUNT} funds <ArrowDown className="h-5 w-5" aria-hidden />
+              </a>
               <Link to="/contact" className="font-body font-semibold text-teal-light underline underline-offset-4 hover:text-white">
                 or talk to Anup
               </Link>

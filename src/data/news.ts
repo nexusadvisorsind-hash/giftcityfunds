@@ -38,6 +38,14 @@ export const NEWS: NewsItem[] = [
     more: ["/gift-city-insurance", "GIFT City insurance"],
   },
   {
+    date: "2026-10-22",
+    title: "Groww opens US stock investing to all users",
+    summary: "Groww made US-listed stocks and ETFs available to all its users after a phased rollout, with fractional investing from USD 1, funded from a linked HDFC, ICICI, SBI, Axis or Kotak savings account.",
+    tag: "Platforms",
+    source: { label: "Groww update", url: "https://groww.in/updates/us-stocks-etfs-on-groww" },
+    more: ["/gift-city-funds-zerodha-groww", "Zerodha, Groww and GIFT City"],
+  },
+  {
     date: "2026-10-19",
     title: "Angel One starts rolling out US stocks through GIFT City",
     summary: "Angel One began offering US-listed stocks and ETFs through GIFT City to selected app users, following IFSCA approval, and expects to open it to all users by mid-November.",

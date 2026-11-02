@@ -46,7 +46,7 @@ const Contact = () => {
         body: { ...form, consentNoticeVersion: "2026-10-08" },
       });
       if (error) throw error;
-      trackEvent("generate_lead", { form: "contact", investor_type: form.investorType || "not_given", email_updates: form.consentUpdates ? "yes" : "no" });
+      trackEvent("generate_lead", { form: "contact", investor_type: form.investorType || "not_given", region: form.country || "not_given", email_updates: form.consentUpdates ? "yes" : "no" });
       toast({ title: "Message sent", description: "We'll get back to you within 24 hours." });
       setForm(initialForm);
     } catch (err) {
@@ -92,6 +92,22 @@ const Contact = () => {
                     <option value="OCI">An OCI cardholder</option>
                     <option value="Resident Indian">A resident Indian</option>
                     <option value="Institution / family office">An institution or family office</option>
+                    <option value="Other">Other</option>
+                  </select>
+                  <select name="country" value={form.country} onChange={handleChange} className="w-full border border-input rounded-md p-2 bg-background md:col-span-2" aria-label="Country you live in">
+                    <option value="">I live in… (optional)</option>
+                    <option value="India">India</option>
+                    <option value="UAE">UAE</option>
+                    <option value="Saudi Arabia">Saudi Arabia</option>
+                    <option value="Qatar">Qatar</option>
+                    <option value="Kuwait">Kuwait</option>
+                    <option value="Bahrain">Bahrain</option>
+                    <option value="Oman">Oman</option>
+                    <option value="UK">UK</option>
+                    <option value="USA">USA</option>
+                    <option value="Singapore">Singapore</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Australia">Australia</option>
                     <option value="Other">Other</option>
                   </select>
                 </div>

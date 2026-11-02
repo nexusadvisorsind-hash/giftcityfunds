@@ -22,6 +22,13 @@
 - [GIFT City News](https://giftcityfunds.in/gift-city-news): Dated, sourced GIFT City news for investors: new funds, IFSCA decisions, banking and market updates.
 - [FAQs](https://giftcityfunds.in/faqs): Short answers to common questions.
 - [GIFT City Fund List 2026](https://giftcityfunds.in/gift-city-fund-list): Every public GIFT City fund we could verify, from 20 fund houses (PPFAS, HDFC, DSP, JioBlackRock, Edelweiss, Tata and more): minimum, who can invest (residents or NRIs), inbound or outbound, with sources. Facts only, not ranked.
+- [Compare GIFT City Funds](https://giftcityfunds.in/gift-city-fund-compare): Up to four GIFT City funds side by side: minimum, direction, who can invest, excluded countries, source. Facts only.
+- [GIFT City in Numbers 2026](https://giftcityfunds.in/gift-city-in-numbers): IFSCA statistics with dates and sources: 235 fund managers, 401 schemes, USD 45.08 bn commitments, 16,150 investors (30 June 2026), retail investor growth.
+- [Dollar vs Rupee Calculator](https://giftcityfunds.in/usd-vs-inr-calculator): The currency effect on money held in US Dollars versus rupees, at a rate change the user chooses.
+- [Parag Parikh GIFT City Funds](https://giftcityfunds.in/parag-parikh-gift-city-fund): PPFAS IFSC S&P 500 and Nasdaq 100 FoFs (USD 500 minimum) and India Flexi Cap.
+- [HDFC GIFT City Funds](https://giftcityfunds.in/hdfc-gift-city-funds): HDFC AMC International (IFSC) outbound funds for residents and India feeder funds for NRIs.
+- [DSP GIFT City Funds](https://giftcityfunds.in/dsp-gift-city-funds): DSP Global Equity Fund for residents under LRS and DSP's India funds.
+- [Tata GIFT City Fund](https://giftcityfunds.in/tata-gift-city-fund): Tata India Dynamic Equity Fund for NRIs and foreign investors from USD 500.
 - [Is There a SIP in GIFT City Funds?](https://giftcityfunds.in/gift-city-sip): No. GIFT City funds have no SIP or monthly auto-debit; how lump-sum and additional investments work, and how LRS and TCS apply.
 - [GIFT City Funds vs International Mutual Funds](https://giftcityfunds.in/gift-city-vs-international-mutual-funds): SEBI USD 7 billion overseas cap, currency, minimums, SIP (not offered in GIFT City), LRS and TCS compared.
 - [GIFT City ETFs, US Stocks and ETFs Through GIFT City](https://giftcityfunds.in/gift-city-us-stocks-etfs): IFSC broker route, LRS, dividend withholding, US estate tax, Indian reporting.

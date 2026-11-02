@@ -52,6 +52,9 @@ const Navigation = () => {
 
   const toolItems = [
     { label: "Fund List", path: "/gift-city-fund-list", ariaLabel: "List of GIFT City fund houses, inbound and outbound" },
+    { label: "Compare Funds", path: "/gift-city-fund-compare", ariaLabel: "Compare GIFT City funds side by side" },
+    { label: "GIFT City in Numbers", path: "/gift-city-in-numbers", ariaLabel: "GIFT City statistics with sources" },
+    { label: "USD vs INR Calculator", path: "/usd-vs-inr-calculator", ariaLabel: "Dollar versus rupee currency calculator" },
     { label: "Route Checker", path: "/gift-city-route-checker", ariaLabel: "Check which GIFT City investment route applies to you" },
     { label: "TCS Calculator", path: "/insights/lrs-tcs-gift-city#calculator", ariaLabel: "TCS on foreign remittance calculator" },
     { label: "Document Checklist", path: "/gift-city-document-checklist", ariaLabel: "Build your GIFT City KYC document checklist" },

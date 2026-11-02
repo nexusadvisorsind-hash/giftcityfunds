@@ -23,7 +23,7 @@ const HomeFundFinder = () => {
   const list = ALL.filter((f) => match(f, filter));
 
   return (
-    <section className="py-16 md:py-20 bg-surface border-b border-border" aria-labelledby="fund-finder-h">
+    <section id="fund-finder" className="py-16 md:py-20 bg-surface border-b border-border scroll-mt-20" aria-labelledby="fund-finder-h">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap items-end justify-between gap-4 mb-6">
           <div>
@@ -40,6 +40,17 @@ const HomeFundFinder = () => {
           </Link>
         </div>
 
+        <p className="font-body text-sm text-foreground-muted mb-4">
+          Funds open where you live:{" "}
+          <Link to="/gift-city-funds-for-uae-nris" className="font-semibold text-secondary hover:underline">UAE</Link>{" · "}
+          <Link to="/gift-city-funds-for-gulf-nris" className="font-semibold text-secondary hover:underline">Saudi, Qatar, Kuwait, Bahrain, Oman</Link>{" · "}
+          <Link to="/gift-city-funds-for-uk-nris" className="font-semibold text-secondary hover:underline">UK</Link>{" · "}
+          <Link to="/gift-city-funds-for-us-nris" className="font-semibold text-secondary hover:underline">US</Link>{" · "}
+          <Link to="/gift-city-funds-for-singapore-nris" className="font-semibold text-secondary hover:underline">Singapore</Link>{" · "}
+          <Link to="/gift-city-funds-for-canada-nris" className="font-semibold text-secondary hover:underline">Canada</Link>{" · "}
+          <Link to="/gift-city-funds-for-resident-indians" className="font-semibold text-secondary hover:underline">India (residents)</Link>
+          {" · "}<Link to="/gift-city-fund-compare" className="font-semibold text-secondary hover:underline">Compare funds side by side</Link>
+        </p>
         <div role="group" aria-label="Show funds" className="flex flex-wrap gap-2 mb-6">
           {FILTERS.map(([k, label]) => (
             <button

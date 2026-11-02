@@ -115,6 +115,27 @@ const Footer = () => {
                 <Link to="/gift-city-fund-list" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">GIFT City Fund List</Link>
               </li>
               <li>
+                <Link to="/parag-parikh-gift-city-fund" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Parag Parikh GIFT City Funds</Link>
+              </li>
+              <li>
+                <Link to="/hdfc-gift-city-funds" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">HDFC GIFT City Funds</Link>
+              </li>
+              <li>
+                <Link to="/dsp-gift-city-funds" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">DSP GIFT City Funds</Link>
+              </li>
+              <li>
+                <Link to="/tata-gift-city-fund" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Tata GIFT City Fund</Link>
+              </li>
+              <li>
+                <Link to="/gift-city-fund-compare" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Compare GIFT City Funds</Link>
+              </li>
+              <li>
+                <Link to="/gift-city-in-numbers" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">GIFT City in Numbers</Link>
+              </li>
+              <li>
+                <Link to="/usd-vs-inr-calculator" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">USD vs INR Calculator</Link>
+              </li>
+              <li>
                 <Link to="/gift-city-route-checker" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Route Checker</Link>
               </li>
               <li>

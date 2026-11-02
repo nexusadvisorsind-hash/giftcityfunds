@@ -31,6 +31,13 @@ const GiftCitySip = lazyPage(() => import("./pages/GiftCitySip"));
 const GiftCityNews = lazyPage(() => import("./pages/GiftCityNews"));
 const NriUae = lazyPage(() => import("./pages/NriUae"));
 const NriGulf = lazyPage(() => import("./pages/NriGulf"));
+const FundCompare = lazyPage(() => import("./pages/FundCompare"));
+const GiftCityNumbers = lazyPage(() => import("./pages/GiftCityNumbers"));
+const UsdInrCalculator = lazyPage(() => import("./pages/UsdInrCalculator"));
+const HousePpfas = lazyPage(() => import("./pages/houses/Ppfas"));
+const HouseHdfc = lazyPage(() => import("./pages/houses/Hdfc"));
+const HouseDsp = lazyPage(() => import("./pages/houses/Dsp"));
+const HouseTata = lazyPage(() => import("./pages/houses/Tata"));
 const NriUk = lazyPage(() => import("./pages/NriUk"));
 const NriUs = lazyPage(() => import("./pages/NriUs"));
 const NriSingapore = lazyPage(() => import("./pages/NriSingapore"));
@@ -94,6 +101,13 @@ const PAGE_FOR_PATH: Record<string, LazyPage> = {
   "/gift-city-news": GiftCityNews,
   "/gift-city-funds-for-uae-nris": NriUae,
   "/gift-city-funds-for-gulf-nris": NriGulf,
+  "/gift-city-fund-compare": FundCompare,
+  "/gift-city-in-numbers": GiftCityNumbers,
+  "/usd-vs-inr-calculator": UsdInrCalculator,
+  "/parag-parikh-gift-city-fund": HousePpfas,
+  "/hdfc-gift-city-funds": HouseHdfc,
+  "/dsp-gift-city-funds": HouseDsp,
+  "/tata-gift-city-fund": HouseTata,
   "/gift-city-funds-for-uk-nris": NriUk,
   "/gift-city-funds-for-us-nris": NriUs,
   "/gift-city-funds-for-singapore-nris": NriSingapore,
@@ -198,6 +212,13 @@ const App = ({ ssrUrl, helmetContext }: AppProps = {}) => (
               <Route path="/gift-city-route-checker" element={<RouteChecker />} />
               <Route path="/gift-city-funds-for-uae-nris" element={<NriUae />} />
               <Route path="/gift-city-funds-for-gulf-nris" element={<NriGulf />} />
+              <Route path="/gift-city-fund-compare" element={<FundCompare />} />
+              <Route path="/gift-city-in-numbers" element={<GiftCityNumbers />} />
+              <Route path="/usd-vs-inr-calculator" element={<UsdInrCalculator />} />
+              <Route path="/parag-parikh-gift-city-fund" element={<HousePpfas />} />
+              <Route path="/hdfc-gift-city-funds" element={<HouseHdfc />} />
+              <Route path="/dsp-gift-city-funds" element={<HouseDsp />} />
+              <Route path="/tata-gift-city-fund" element={<HouseTata />} />
               <Route path="/gift-city-funds-for-uk-nris" element={<NriUk />} />
               <Route path="/gift-city-funds-for-us-nris" element={<NriUs />} />
               <Route path="/gift-city-funds-for-singapore-nris" element={<NriSingapore />} />

@@ -3,7 +3,7 @@ import { SEO } from "@/components/SEO";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { openCookieSettings } from "@/lib/analytics";
 
-const UPDATED = "26 October 2026";
+const UPDATED = "2 November 2026";
 
 const h2 = "font-heading font-semibold text-2xl text-foreground mb-4";
 const p = "font-body text-foreground-muted";
@@ -14,7 +14,7 @@ const cell = "p-3 border border-border align-top";
 const dataRows = [
   {
     where: "Contact form",
-    what: "Name, email address, phone number (optional), investor type (optional), your message",
+    what: "Name, email address, phone number (optional), investor type (optional), country you live in (optional), your message",
     why: "To reply to your enquiry and keep a record of the conversation",
     basis: "Your consent, given by ticking the box on the form",
     keep: "24 months after our last exchange, then deleted",
@@ -72,7 +72,7 @@ const PrivacyPolicy = () => {
     "url": "https://giftcityfunds.in/privacy-policy",
     "description": "How GIFT City Funds collects, uses, and protects personal data under India's Digital Personal Data Protection Act, 2023.",
     "inLanguage": "en-IN",
-    "dateModified": "2026-10-26",
+    "dateModified": "2026-11-02",
     "isPartOf": { "@type": "WebSite", "name": "GIFT City Funds", "url": "https://giftcityfunds.in/" },
     "publisher": { "@type": "Person", "name": "Anup Vatyani", "identifier": "AMFI ARN-106715" },
     "about": "Website privacy and data-handling policy",
