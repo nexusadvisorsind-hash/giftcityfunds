@@ -10,9 +10,17 @@ export interface NewsItem {
   more?: [string, string]; // related guide on this site
 }
 
-export const NEWS_UPDATED = "31 October 2026";
+export const NEWS_UPDATED = "2 November 2026";
 
 export const NEWS: NewsItem[] = [
+  {
+    date: "2026-11-02",
+    title: "Razorpay gets final IFSCA licence for cross-border payments from GIFT City",
+    summary: "IFSCA granted Razorpay a final Payment Service Provider licence in GIFT City, after in-principle approval in April 2026. It is meant to let investment platforms offer global investing through one integration; no platform launch dates were given.",
+    tag: "Platforms",
+    source: { label: "Business Standard", url: "https://business-standard.com/companies/news/razorpay-gets-final-ifsca-licence-cross-border-payments-gift-city-126110200734_1.html" },
+    more: ["/invest-abroad-from-india", "Invest abroad from India"],
+  },
   {
     date: "2026-10-27",
     title: "JioBlackRock launches its first GIFT City fund",
@@ -20,6 +28,14 @@ export const NEWS: NewsItem[] = [
     tag: "Funds",
     source: { label: "Angel One", url: "https://www.angelone.in/news/mutual-funds/jioblackrock-international-amc-launches-jioblackrock-advantage-world-equity-fund-through-gift-city" },
     more: ["/gift-city-fund-list", "GIFT City fund list"],
+  },
+  {
+    date: "2026-10-27",
+    title: "HDFC Life seeks shareholder approval for a GIFT City insurance office",
+    summary: "HDFC Life opened a postal ballot (e-voting until 26 November 2026) to set up an IFSC Insurance Office in GIFT City offering foreign-currency life insurance to NRIs. It still needs IFSCA and IRDAI approvals.",
+    tag: "Insurance",
+    source: { label: "HDFC Life NSE filing", url: "https://nsearchives.nseindia.com/corporate/HDFCLIFE2_27102026193525_CAfinal.pdf" },
+    more: ["/gift-city-insurance", "GIFT City insurance"],
   },
   {
     date: "2026-10-19",
@@ -85,6 +101,14 @@ export const NEWS: NewsItem[] = [
     more: ["/gift-city-funds-zerodha-groww", "Zerodha, Groww and GIFT City"],
   },
   {
+    date: "2026-09-29",
+    title: "IFSCA extends fund manager certification deadline to 31 December 2026",
+    summary: "Key managerial personnel and staff of GIFT City fund management entities now have until 31 December 2026, instead of 30 September, to complete the required certification. IFSCA also recognised an ICAI course alongside the ICSI one.",
+    tag: "Regulation",
+    source: { label: "AZB & Partners", url: "https://www.azbpartners.com/?p=89913" },
+    more: ["/gift-city-rules-updates", "All rule changes"],
+  },
+  {
     date: "2026-09-12",
     title: "GIFT City fund investors cross 16,000; retail now over half",
     summary: "IFSCA data showed 16,150 investors in GIFT City funds at 30 June 2026, with 8,467 in retail schemes, up from 3,438 in March. Fund management entities rose to 235 and schemes to 401.",
@@ -99,6 +123,14 @@ export const NEWS: NewsItem[] = [
     tag: "Banking",
     source: { label: "TaxGuru (PIB release)", url: "https://taxguru.in/finance/ifsca-highlights-gift-ifsc-foreign-currency-mobilisation-exceeding-usd-52-8-billion.html" },
     more: ["/gift-city-banks-and-business-setup", "Banks in GIFT City"],
+  },
+  {
+    date: "2026-08-26",
+    title: "GIFT City fund managers must run investor websites from 1 December 2026",
+    summary: "An IFSCA circular requires every fund management entity to keep a public website or webpage listing its schemes, service providers, grievance contacts and key staff, with a statement that IFSCA registration is not an endorsement. Retail fund managers need an independent website.",
+    tag: "Regulation",
+    source: { label: "Lakshmikumaran & Sridharan", url: "https://www.lkslaw.com/insights/articles/ifsca-mandates-fmes-to-maintain-a-website-or-webpage" },
+    more: ["/gift-city-rules-updates", "All rule changes"],
   },
   {
     date: "2026-08-25",

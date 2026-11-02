@@ -12,13 +12,24 @@ interface Update {
 
 // Newest first. Add a row whenever a rule that affects investors changes, and
 // update LAST_REVIEWED. Keep each entry factual and dated.
-const LAST_REVIEWED = "23 October 2026";
+const LAST_REVIEWED = "2 November 2026";
 const UPDATES: Update[] = [
   {
     date: "2026-10-15", label: "15 October 2026", body: "Ministry of Commerce and Industry",
     change: "SEZ (Fourth Amendment) Rules, 2026 notified: a fund in GIFT IFSC can rely on its fund management entity's provisional space offer and lease deed.",
     forYou: "Fewer set-up steps for fund houses, which can mean more GIFT City funds to choose from.",
     link: ["/gift-city-news", "GIFT City news"],
+  },
+  {
+    date: "2026-09-29", label: "29 September 2026", body: "IFSCA",
+    change: "Deadline for key managerial personnel and staff of fund management entities to complete the specified certification extended from 30 September 2026 to 31 December 2026. An ICAI course was recognised in August alongside the ICSI course.",
+    forYou: "No change for investors; fund managers get more time to meet the new standard.",
+  },
+  {
+    date: "2026-08-26", label: "26 August 2026", body: "IFSCA",
+    change: "Every fund management entity must maintain a public website or webpage from 1 December 2026, listing its schemes, custodian, trustee, administrator and auditor, grievance contacts and key staff, and stating that IFSCA registration is not an endorsement. Retail fund managers need an independent website.",
+    forYou: "From December you should be able to check any GIFT City fund manager's details and complaint route on its own website.",
+    link: ["/gift-city-fund-list", "GIFT City fund list"],
   },
   {
     date: "2026-07-17", label: "17 July 2026", body: "Government of Mauritius",
@@ -33,7 +44,7 @@ const UPDATES: Update[] = [
   },
   {
     date: "2026-04-01", label: "1 April 2026", body: "IFSCA",
-    change: "Key staff of fund management entities in core fund management roles must obtain a specified certification by 30 September 2026.",
+    change: "Key staff of fund management entities in core fund management roles must obtain a specified certification by 30 September 2026 (later extended to 31 December 2026).",
     forYou: "Higher minimum standards for the people managing GIFT City funds.",
   },
   {
