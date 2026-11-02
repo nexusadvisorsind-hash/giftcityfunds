@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { GuidePage, h2, h3, p, a, ul, table, th, td, type Faq } from "@/components/GuidePage";
 import { FlowSteps } from "@/components/Diagrams";
 import MoneyMap from "@/components/MoneyMap";
-import { LOW_MIN, HIGH_MIN, FUNDS_LAST_CHECKED as LAST_CHECKED, type Fund, type Direction } from "@/data/funds";
+import { LOW_MIN, HIGH_MIN, FUNDS_LAST_CHECKED as LAST_CHECKED, FUND_COUNT, HOUSE_COUNT, type Fund, type Direction } from "@/data/funds";
 
 const ALL = [...LOW_MIN, ...HIGH_MIN];
 const HOUSES = Array.from(new Set(ALL.map((f) => f.house))).sort();
@@ -48,7 +48,7 @@ const FundTable = ({ funds, caption }: { funds: Fund[]; caption: string }) => (
 const faqs: Faq[] = [
   { q: "How many GIFT City funds are there?", a: "IFSCA data showed 401 funds and schemes run by 235 fund management entities at 30 June 2026. Only 14 of them were authorised retail schemes; most are AIFs and restricted schemes for institutions and wealthy investors. This page lists the funds that Indian fund houses and managers have made public." },
   { q: "What is the minimum investment in GIFT City funds?", a: "It depends on the fund. Some retail schemes start at USD 500, including ABSL's two funds, PPFAS's S&P 500 and Nasdaq 100 funds and Tata India Dynamic Equity Fund. Many others start at USD 5,000. AIFs and restricted schemes usually need USD 150,000, or less for accredited investors." },
-  { q: "Which GIFT City funds can resident Indians invest in?", a: "Outbound funds that accept investment under LRS, such as those from ABSL, DSP, Edelweiss, HDFC, Marcellus and PPFAS listed on this page. Many inbound funds are for NRIs and foreign investors only. Use the Resident Indians filter above, and confirm eligibility in the offer document." },
+  { q: "Which GIFT City funds can resident Indians invest in?", a: "Outbound funds that accept investment under LRS, such as those from ABSL, DSP, Edelweiss, HDFC, JioBlackRock, Marcellus and PPFAS listed on this page. Many inbound funds are for NRIs and foreign investors only. Use the Resident Indians filter above, and confirm eligibility in the offer document." },
   { q: "What is the difference between inbound and outbound GIFT City funds?", a: "Inbound funds collect money in foreign currency and invest it in India; they are mainly used by NRIs and foreign investors. Outbound funds invest outside India, in US or global markets, and are used by resident Indians under LRS as well as NRIs." },
   { q: "Does Parag Parikh (PPFAS) have a GIFT City fund?", a: "Yes. PPFAS Alternate Asset Managers IFSC runs the Parag Parikh IFSC S&P 500 Fund of Fund and Nasdaq 100 Fund of Fund for resident Indians under LRS, with a USD 500 minimum since 25 August 2026. A Parag Parikh India Flexi Cap Fund for NRIs is listed as coming soon." },
   { q: "Do DSP, HDFC, ICICI Prudential, Mirae Asset and Bandhan have GIFT City funds?", a: "Yes. Each runs GIFT City funds through an IFSCA-registered entity. HDFC and DSP have outbound funds for residents as well as India funds for NRIs; Bandhan, ICICI Prudential and Mirae Asset's India fund are for global investors. The tables on this page link to each source." },
@@ -67,11 +67,11 @@ const FundList = () => {
     <GuidePage
       path="/gift-city-fund-list"
       headline="GIFT City Fund List 2026: AMCs and Fund Houses, Inbound and Outbound"
-      seoTitle="GIFT City Funds & AMC List 2026: Inbound and Outbound"
-      description={`GIFT City fund list: ${ALL.length}+ funds from ${HOUSES.length} fund houses, including PPFAS, HDFC, DSP and Tata, with minimums, who can invest and a source for each.`}
+      seoTitle={`GIFT City Funds List 2026: ${FUND_COUNT} Funds, ${HOUSE_COUNT} AMCs, Inbound & Outbound`}
+      description={`GIFT City fund list: ${FUND_COUNT} funds from ${HOUSE_COUNT} fund houses, including PPFAS, HDFC, DSP and Tata, with minimums, who can invest and a source for each.`}
       crumb="GIFT City Fund List"
       datePublished="2026-10-08"
-      dateModified="2026-10-24"
+      dateModified="2026-10-31"
       reviewed={`Last checked ${LAST_CHECKED}`}
       faqs={faqs}
       sources={["ifscaDirectory", "ifsca", "amfi"]}
@@ -86,7 +86,7 @@ const FundList = () => {
       ]}
     >
       <p className={p}>
-        <strong className="text-primary">The short answer.</strong> {HOUSES.length} fund houses and managers have made their GIFT City funds public. Some invest in India for NRIs and foreign investors (<em>inbound</em>); others invest abroad for resident Indians under LRS (<em>outbound</em>). Retail funds start from USD 500 to USD 10,000; AIFs usually need USD 150,000. Below is every fund we could confirm, with its minimum, who can invest and a source.
+        <strong className="text-primary">The short answer.</strong> We list {FUND_COUNT} GIFT City funds from {HOUSE_COUNT} fund houses and managers that have made them public. Some invest in India for NRIs and foreign investors (<em>inbound</em>); others invest abroad for resident Indians under LRS (<em>outbound</em>). Retail funds start from USD 500 to USD 10,000; AIFs usually need USD 150,000. Below is every fund we could confirm, with its minimum, who can invest and a source.
       </p>
 
       <h2 className={h2}>Inbound vs outbound in one picture</h2>
@@ -124,11 +124,14 @@ const FundList = () => {
       <p className={p}>
         Outbound funds invest outside India. Resident Indians invest under LRS (up to USD 250,000 a year; TCS above ₹10 lakh). They are not subject to the SEBI overseas limit that has made many Indian international mutual funds <Link to="/gift-city-vs-international-mutual-funds" className={a}>pause new money</Link>. Lower-minimum outbound funds on this page:
       </p>
-      <ul className={ul + " mt-3"}>
+      <div className="mt-3 space-y-4">
         {OUTBOUND_RES.map((f) => (
-          <li key={f.scheme}><strong className="text-primary">{f.scheme}</strong> ({f.house}): {f.invests}; {f.minimum}.</li>
+          <div key={f.scheme}>
+            <h3 className="font-heading font-semibold text-lg text-primary">{f.scheme}</h3>
+            <p className="font-body text-foreground-muted leading-relaxed">{f.house}. Invests in: {f.invests}. Minimum: {f.minimum}. <a href={f.source.url} target="_blank" rel="noopener noreferrer" className={a}>Source</a></p>
+          </div>
         ))}
-      </ul>
+      </div>
       <p className="font-body text-sm text-foreground-muted mt-3">
         See <Link to="/gift-city-funds-for-resident-indians" className={a}>GIFT City for resident Indians</Link> and the <Link to="/insights/lrs-tcs-gift-city#calculator" className={a}>TCS calculator</Link>.
       </p>
@@ -137,11 +140,14 @@ const FundList = () => {
       <p className={p}>
         Inbound funds invest in Indian markets in US Dollars, mostly by feeding into a fund house's Indian mutual fund. Lower-minimum inbound funds on this page:
       </p>
-      <ul className={ul + " mt-3"}>
+      <div className="mt-3 space-y-4">
         {INBOUND_NRI.map((f) => (
-          <li key={f.scheme}><strong className="text-primary">{f.scheme}</strong> ({f.house}): {f.minimum}. {f.who}.</li>
+          <div key={f.scheme}>
+            <h3 className="font-heading font-semibold text-lg text-primary">{f.scheme}</h3>
+            <p className="font-body text-foreground-muted leading-relaxed">{f.house}. Invests in: {f.invests}. Minimum: {f.minimum}. Who can invest: {f.who}. <a href={f.source.url} target="_blank" rel="noopener noreferrer" className={a}>Source</a></p>
+          </div>
         ))}
-      </ul>
+      </div>
       <p className="font-body text-sm text-foreground-muted mt-3">
         US and Canadian residents: several funds do not accept you. Check before applying, and read <Link to="/insights/pfic-explained" className={a}>PFIC explained</Link> if you are a US person. More in <Link to="/gift-city-funds-for-nri" className={a}>GIFT City for NRIs</Link>.
       </p>

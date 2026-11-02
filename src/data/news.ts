@@ -10,9 +10,17 @@ export interface NewsItem {
   more?: [string, string]; // related guide on this site
 }
 
-export const NEWS_UPDATED = "24 October 2026";
+export const NEWS_UPDATED = "31 October 2026";
 
 export const NEWS: NewsItem[] = [
+  {
+    date: "2026-10-27",
+    title: "JioBlackRock launches its first GIFT City fund",
+    summary: "JioBlackRock International AMC (IFSC) launched the JioBlackRock Advantage World Equity Fund (IFSC), an open-ended fund of fund investing 90–100% in BlackRock Advantage World Equity Fund, with a USD 5,000 minimum and USD 1,000 top-ups.",
+    tag: "Funds",
+    source: { label: "Angel One", url: "https://www.angelone.in/news/mutual-funds/jioblackrock-international-amc-launches-jioblackrock-advantage-world-equity-fund-through-gift-city" },
+    more: ["/gift-city-fund-list", "GIFT City fund list"],
+  },
   {
     date: "2026-10-19",
     title: "Angel One starts rolling out US stocks through GIFT City",
