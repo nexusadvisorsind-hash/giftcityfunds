@@ -40,7 +40,7 @@ const AS: Record<Who, string> = { nri: "an NRI", oci: "an OCI cardholder", resid
 
 const Step = ({ n, label, active, done }: { n: number; label: string; active: boolean; done: boolean }) => (
   <li className={`flex items-center gap-2 font-body text-sm ${active ? "text-white" : done ? "text-teal-light" : "text-slate-300"}`}>
-    <span className={`flex h-6 w-6 items-center justify-center rounded-full text-xs font-bold ${active ? "bg-brass text-ink" : done ? "bg-teal text-ink" : "bg-white/15 text-slate-200"}`}>{n}</span>
+    <span className={`flex h-6 w-6 items-center justify-center rounded-full text-xs font-bold ${active ? "bg-brass text-white" : done ? "bg-teal text-white" : "bg-white/15 text-slate-200"}`}>{n}</span>
     {label}
   </li>
 );
@@ -122,7 +122,7 @@ const HeroFunnel = () => {
                     onClick={() => trackEvent("funnel_link", { who, goal: goal.id, to })}
                     className="group flex items-center gap-3 rounded-xl bg-white/[0.06] px-4 py-3 font-body text-white hover:bg-teal/15"
                   >
-                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-teal text-xs font-bold text-ink">{i + 1}</span>
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-teal text-xs font-bold text-white">{i + 1}</span>
                     <span className="flex-1">{label}</span>
                     <ArrowRight className="h-4 w-4 text-teal-light transition-transform group-hover:translate-x-1" aria-hidden="true" />
                   </Link>
@@ -141,7 +141,7 @@ const HeroFunnel = () => {
             <Link
               to={contactHref}
               onClick={() => trackEvent("funnel_contact", { who, goal: goal.id })}
-              className="inline-flex items-center justify-center gap-2 rounded-xl bg-brass px-4 py-2.5 font-heading font-semibold text-ink hover:bg-brass-light"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-brass px-4 py-2.5 font-heading font-semibold text-white hover:bg-brass-light"
             >
               Talk to Anup <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>

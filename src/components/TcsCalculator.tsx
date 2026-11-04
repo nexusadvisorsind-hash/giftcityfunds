@@ -47,7 +47,7 @@ const TcsCalculator = () => {
       <div className="grid sm:grid-cols-3 gap-3 mt-6" aria-live="polite">
         <div className="rounded-xl bg-ink text-white p-4">
           <p className="font-body text-xs text-slate-300">TCS your bank collects</p>
-          <p className="font-heading font-bold text-2xl text-brass">{inr(tcs)}</p>
+          <p className="font-heading font-bold text-2xl text-teal-light">{inr(tcs)}</p>
         </div>
         <div className="rounded-xl bg-background border border-border p-4">
           <p className="font-body text-xs text-foreground-muted">Total debited from your account</p>

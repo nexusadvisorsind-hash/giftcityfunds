@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import { LOW_MIN, HIGH_MIN, FUND_COUNT, HOUSE_COUNT, FUNDS_LAST_CHECKED, fundPath, type Fund } from "@/data/funds";
+import { LOW_MIN, HIGH_MIN, FUND_COUNT, HOUSE_COUNT, FUNDS_LAST_CHECKED, type Fund } from "@/data/funds";
+import { FundCard } from "@/components/FundCard";
+import { SectionHead } from "@/components/SectionHead";
 
 // Home page: a compact, factual look at the GIFT City fund list. Same data as
 // /gift-city-fund-list. Alphabetical, never ranked; no returns or NAVs.
@@ -23,22 +25,20 @@ const HomeFundFinder = () => {
   const list = ALL.filter((f) => match(f, filter));
 
   return (
-    <section id="fund-finder" className="py-16 md:py-20 bg-surface border-b border-border scroll-mt-20" aria-labelledby="fund-finder-h">
+    <section id="fund-finder" className="py-16 md:py-20 bg-surface scroll-mt-20" aria-labelledby="fund-finder-h">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-wrap items-end justify-between gap-4 mb-6">
-          <div>
-            <p className="font-body text-sm font-semibold uppercase tracking-wider text-secondary mb-2">GIFT City funds list</p>
-            <h2 id="fund-finder-h" className="font-heading font-bold text-3xl md:text-4xl text-primary">
-              {FUND_COUNT} GIFT City Funds from {HOUSE_COUNT} Fund Houses
-            </h2>
-            <p className="font-body text-lg text-foreground-muted mt-2">
-              Inbound and outbound GIFT City funds, with who can invest and the minimum. Checked {FUNDS_LAST_CHECKED}.
-            </p>
-          </div>
-          <Link to="/gift-city-fund-list" className="font-body font-semibold text-secondary hover:underline inline-flex items-center">
-            See all {FUND_COUNT} funds <ArrowRight className="ml-1 h-4 w-4" aria-hidden />
-          </Link>
-        </div>
+        <SectionHead
+          n={1}
+          label="Funds"
+          id="fund-finder-h"
+          title={<>{FUND_COUNT} GIFT City funds from {HOUSE_COUNT} fund houses</>}
+          sub={<>Who can invest and the minimum, from each fund house. Checked {FUNDS_LAST_CHECKED}.</>}
+          action={
+            <Link to="/gift-city-fund-list" className="font-body font-semibold text-secondary hover:underline inline-flex items-center">
+              See all {FUND_COUNT} funds <ArrowRight className="ml-1 h-4 w-4" aria-hidden />
+            </Link>
+          }
+        />
 
         <p className="font-body text-sm text-foreground-muted mb-4">
           Funds open where you live:{" "}
@@ -65,20 +65,9 @@ const HomeFundFinder = () => {
           ))}
         </div>
 
-        <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 list-none p-0 m-0">
+        <ul className="grid gap-4 md:grid-cols-2 list-none p-0 m-0">
           {list.slice(0, SHOW).map((f) => (
-            <li key={f.scheme} className="rounded-2xl border border-border bg-background p-5 flex flex-col">
-              <p className="font-body text-sm font-semibold text-secondary">{f.house} · {f.direction}</p>
-              <h3 className="mt-1 font-heading font-semibold text-lg text-primary leading-snug">{f.scheme}</h3>
-              <dl className="mt-3 font-body text-sm text-foreground-muted space-y-1 flex-1">
-                <div><dt className="inline font-semibold text-primary">Minimum: </dt><dd className="inline">{f.minimum}</dd></div>
-                <div><dt className="inline font-semibold text-primary">Who can invest: </dt><dd className="inline">{f.who}</dd></div>
-              </dl>
-              <p className="mt-3 font-body text-sm font-medium">
-                {fundPath(f) && <><Link to={fundPath(f)!} className="text-secondary underline underline-offset-2">Fund details</Link>{" · "}</>}
-                <a href={f.source.url} target="_blank" rel="noopener noreferrer" className="text-secondary underline underline-offset-2">Source: {f.source.label}</a>
-              </p>
-            </li>
+            <li key={f.scheme}><FundCard f={f} /></li>
           ))}
         </ul>
 

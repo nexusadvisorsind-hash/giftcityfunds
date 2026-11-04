@@ -4,8 +4,8 @@
 
 const INK = "#0B1736";
 const HUB = "#13224A";
-const TEAL = "#14B8A6";
-const AMBER = "#F5A623";
+const TEAL = "#3B82F6";
+const AMBER = "#93C5FD";
 const WHITE = "#FFFFFF";
 const MUTED = "#B8C4D9";
 
@@ -13,9 +13,9 @@ const Box = ({ x, y, w, h, title, lines, accent }: { x: number; y: number; w: nu
   <g>
     <rect x={x} y={y} width={w} height={h} rx={14} fill={HUB} stroke={accent} strokeWidth={1.5} />
     <rect x={x} y={y + 14} width={4} height={h - 28} rx={2} fill={accent} />
-    <text x={x + 18} y={y + 30} fill={WHITE} fontFamily="'Space Grotesk', sans-serif" fontWeight={600} fontSize={16}>{title}</text>
+    <text x={x + 18} y={y + 30} fill={WHITE} fontFamily="Inter, sans-serif" fontWeight={600} fontSize={16}>{title}</text>
     {lines.map((l, i) => (
-      <text key={l} x={x + 18} y={y + 52 + i * 18} fill={MUTED} fontFamily="'DM Sans', sans-serif" fontSize={13}>{l}</text>
+      <text key={l} x={x + 18} y={y + 52 + i * 18} fill={MUTED} fontFamily="Inter, sans-serif" fontSize={13}>{l}</text>
     ))}
   </g>
 );
@@ -35,7 +35,7 @@ const Towers = ({ cx, base, scale = 1 }: { cx: number; base: number; scale?: num
     <g>
       <rect x={x1} y={base - t1} width={w} height={t1} rx={3} fill={TEAL} />
       {windows(x1, base - t1, t1)}
-      <rect x={x2} y={base - t2} width={w} height={t2} rx={3} fill="#2DD4BF" />
+      <rect x={x2} y={base - t2} width={w} height={t2} rx={3} fill="#60A5FA" />
       {windows(x2, base - t2, t2)}
       <line x1={cx - 50 * scale} x2={cx + 50 * scale} y1={base} y2={base} stroke={TEAL} strokeOpacity={0.5} strokeWidth={2} />
     </g>
@@ -50,7 +50,7 @@ const Flow = ({ d, color, delay = 0 }: { d: string; color: string; delay?: numbe
 );
 
 const Label = ({ x, y, text, color, anchor = "middle" }: { x: number; y: number; text: string; color: string; anchor?: "start" | "middle" | "end" }) => (
-  <text x={x} y={y} textAnchor={anchor} fill={color} fontFamily="'DM Sans', sans-serif" fontWeight={600} fontSize={13}>{text}</text>
+  <text x={x} y={y} textAnchor={anchor} fill={color} fontFamily="Inter, sans-serif" fontWeight={600} fontSize={13}>{text}</text>
 );
 
 export const MoneyMap = ({ className = "" }: { className?: string }) => (
@@ -73,8 +73,8 @@ export const MoneyMap = ({ className = "" }: { className?: string }) => (
       <Box x={730} y={60} w={240} h={100} title="Indian markets" lines={["Inbound funds: Indian", "equities and bonds"]} accent={AMBER} />
       <Box x={730} y={250} w={240} h={100} title="US and global markets" lines={["Outbound funds: global", "equities, ETFs and bonds"]} accent={TEAL} />
       <Towers cx={500} base={250} />
-      <text x={500} y={286} textAnchor="middle" fill={WHITE} fontFamily="'Space Grotesk', sans-serif" fontWeight={700} fontSize={22}>GIFT IFSC</text>
-      <text x={500} y={306} textAnchor="middle" fill={MUTED} fontFamily="'DM Sans', sans-serif" fontSize={13}>IFSCA-regulated funds, in USD</text>
+      <text x={500} y={286} textAnchor="middle" fill={WHITE} fontFamily="Inter, sans-serif" fontWeight={700} fontSize={22}>GIFT IFSC</text>
+      <text x={500} y={306} textAnchor="middle" fill={MUTED} fontFamily="Inter, sans-serif" fontSize={13}>IFSCA-regulated funds, in USD</text>
       <Label x={335} y={98} text="Inbound" color={AMBER} />
       <Label x={335} y={338} text="Outbound" color={TEAL} />
       <Label x={500} y={398} text="No LRS or TCS for NRIs investing from abroad. Residents pay 20% TCS above ₹10 lakh a year, credited back." color={MUTED} />
@@ -95,8 +95,8 @@ export const MoneyMap = ({ className = "" }: { className?: string }) => (
       <Box x={8} y={14} w={166} h={104} title="NRIs" lines={["USD from abroad", "No LRS or TCS"]} accent={AMBER} />
       <Box x={186} y={14} w={166} h={104} title="Resident Indians" lines={["Under LRS", "TCS above ₹10 lakh"]} accent={TEAL} />
       <Towers cx={180} base={360} scale={0.8} />
-      <text x={180} y={392} textAnchor="middle" fill={WHITE} fontFamily="'Space Grotesk', sans-serif" fontWeight={700} fontSize={20}>GIFT IFSC</text>
-      <text x={180} y={410} textAnchor="middle" fill={MUTED} fontFamily="'DM Sans', sans-serif" fontSize={12}>IFSCA-regulated, USD</text>
+      <text x={180} y={392} textAnchor="middle" fill={WHITE} fontFamily="Inter, sans-serif" fontWeight={700} fontSize={20}>GIFT IFSC</text>
+      <text x={180} y={410} textAnchor="middle" fill={MUTED} fontFamily="Inter, sans-serif" fontSize={12}>IFSCA-regulated, USD</text>
       <Box x={8} y={542} w={166} h={104} title="Indian markets" lines={["Inbound funds", "Indian equity, bonds"]} accent={AMBER} />
       <Box x={186} y={542} w={166} h={104} title="Global markets" lines={["Outbound funds", "US and global"]} accent={TEAL} />
       <Label x={70} y={190} text="Inbound" color={AMBER} anchor="end" />

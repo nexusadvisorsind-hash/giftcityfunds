@@ -153,7 +153,7 @@ const RouteChecker = () => {
           {result ? (
             <div className="rounded-2xl bg-ink text-white p-5 md:p-6">
               <p className="font-body text-sm text-teal-light">Your likely route</p>
-              <p className="font-heading font-bold text-2xl text-brass mt-1 mb-4">{result.route}</p>
+              <p className="font-heading font-bold text-2xl text-teal-light mt-1 mb-4">{result.route}</p>
               <ul className="space-y-2 font-body text-sm text-slate-200 list-disc pl-5">
                 {result.points.map((pt) => <li key={pt}>{pt}</li>)}
               </ul>

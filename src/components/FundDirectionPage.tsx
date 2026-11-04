@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { GuidePage, h2, h3, p, a, type Faq } from "@/components/GuidePage";
 import { LOW_MIN, HIGH_MIN, FUNDS_LAST_CHECKED, fundName, fundPath, type Fund } from "@/data/funds";
+import { FundCard } from "@/components/FundCard";
 
 interface Props {
   direction: "Inbound" | "Outbound";
@@ -14,25 +15,6 @@ interface Props {
 }
 
 const schemes = (rows: Fund[]) => rows.filter((f) => !f.upcoming).reduce((n, f) => n + (f.count ?? 1), 0);
-
-const FundBlock = ({ f }: { f: Fund }) => {
-  const to = fundPath(f);
-  return (
-    <div className="rounded-xl border border-border bg-surface p-5">
-      <h3 className="font-heading font-semibold text-lg text-primary">
-        {to ? <Link to={to} className="hover:underline">{fundName(f)}</Link> : fundName(f)}
-      </h3>
-      <p className="font-body text-sm text-foreground-muted mt-1">{f.house}{f.upcoming ? " · listed as coming soon" : ""}</p>
-      <p className="font-body text-foreground-muted leading-relaxed mt-2">
-        <strong className="text-primary">Minimum:</strong> {f.minimum}. <strong className="text-primary">Who can invest:</strong> {f.who}.
-      </p>
-      <p className="font-body text-sm mt-2">
-        {to && <><Link to={to} className={a}>Fund details</Link>{" · "}</>}
-        <a href={f.source.url} target="_blank" rel="noopener noreferrer" className={a}>Source: {f.source.label}</a>
-      </p>
-    </div>
-  );
-};
 
 // Every fund of one direction from src/data/funds.ts, retail first. Facts only.
 export const FundDirectionPage = (c: Props) => {
@@ -70,11 +52,11 @@ export const FundDirectionPage = (c: Props) => {
 
       <h2 className={h2}>Retail {c.direction.toLowerCase()} funds ({schemes(retail)})</h2>
       <p className={p}>Retail schemes have lower minimums, from USD 500 to USD 10,000.</p>
-      <div className="space-y-4 mt-3">{retail.map((f) => <FundBlock key={f.scheme} f={f} />)}</div>
+      <ul className="grid gap-4 md:grid-cols-2 list-none p-0 mt-3">{retail.map((f) => <li key={f.scheme}><FundCard f={f} /></li>)}</ul>
 
       <h2 className={h2}>AIFs and restricted {c.direction.toLowerCase()} funds ({schemes(aif)})</h2>
       <p className={p}>Alternative investment funds and restricted schemes usually need USD 150,000 or more, or accredited-investor status.</p>
-      <div className="space-y-4 mt-3">{aif.map((f) => <FundBlock key={f.scheme} f={f} />)}</div>
+      <ul className="grid gap-4 md:grid-cols-2 list-none p-0 mt-3">{aif.map((f) => <li key={f.scheme}><FundCard f={f} /></li>)}</ul>
 
       {c.after}
 

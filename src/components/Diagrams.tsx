@@ -22,7 +22,7 @@ export const FlowSteps = ({ steps, caption, highlight }: { steps: Step[]; captio
           >
             <div
               className={`w-8 h-8 rounded-full flex items-center justify-center font-heading font-bold text-sm mb-2 ${
-                i === highlight ? "bg-brass text-ink" : "bg-teal text-ink"
+                i === highlight ? "bg-brass text-white" : "bg-teal text-white"
               }`}
             >
               {i + 1}

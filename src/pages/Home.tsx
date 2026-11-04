@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { SEO } from "@/components/SEO";
-import HeroTabs from "@/components/HeroTabs";
+import { SectionHead, SectionLabel } from "@/components/SectionHead";
 import { ArrowRight, ArrowDown, FileText, Globe2, Calculator, Route, ListChecks } from "lucide-react";
 import { PageFaqs, type PageFaq } from "@/components/PageFaqs";
 import LatestNews from "@/components/LatestNews";
@@ -43,47 +43,36 @@ const Home = () => {
       />
 
       <div className="min-h-screen">
-        {/* Hero: one headline, one action, three tabs */}
-        <section className="bg-ink text-white overflow-hidden">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 md:pt-20 pb-6 text-center flex flex-col items-center">
-            <p className="gcf-fade-up gcf-delay-1 inline-flex items-center gap-2 font-body text-xs sm:text-sm font-bold uppercase tracking-[0.12em] text-brass mb-5">
-              <span className="h-2 w-2 rounded-full bg-brass" aria-hidden="true"></span>
-              Funds regulated by IFSCA · invest in USD
+        {/* Hero: centred, text and buttons only (owner's choice, Nov 2026). */}
+        <section className="bg-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 md:pt-28 pb-16 md:pb-24 text-center flex flex-col items-center">
+            <p className="gcf-fade-up gcf-delay-1 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-accent px-3 py-1.5 font-body text-xs sm:text-sm font-semibold text-secondary">
+              <span className="h-2 w-2 rounded-full bg-secondary" aria-hidden="true"></span>
+              Funds regulated by IFSCA · invested in US Dollars
             </p>
-            <h1 className="font-heading font-bold text-[2.6rem] leading-[1.04] sm:text-6xl md:text-7xl md:leading-[1.0] tracking-tight">
-              GIFT City Funds,<br />
-              <span className="relative inline-block text-teal-light">
-                Explained Simply
-                <span className="gcf-draw absolute left-0 right-0 -bottom-1.5 h-1.5 rounded-full bg-brass" aria-hidden="true"></span>
-              </span>
+            <h1 className="mt-6 font-heading font-extrabold text-[2.6rem] leading-[1.04] sm:text-6xl md:text-7xl tracking-[-0.035em] text-primary">
+              GIFT City funds,<br />
+              <span className="text-secondary">explained simply.</span>
             </h1>
-            <p className="gcf-fade-up gcf-delay-2 mt-7 font-body text-lg md:text-xl text-slate-300 max-w-xl leading-relaxed">
-              Plain-English guides to investing in dollars through India's international financial centre, for NRIs, OCIs and resident Indians.
+            <p className="gcf-fade-up gcf-delay-2 mt-6 font-body text-lg md:text-xl text-foreground-muted leading-relaxed">
+              Plain-English guides to {FUND_COUNT} GIFT City funds, for NRIs and resident Indians.
             </p>
-            <div className="gcf-fade-up gcf-delay-3 mt-7 flex flex-wrap items-center justify-center gap-x-5 gap-y-3">
-              <Link to="/gift-city-route-checker" className="inline-flex items-center gap-2 rounded-xl bg-teal text-ink font-heading font-bold text-lg px-6 py-3.5 transition-transform hover:-translate-y-0.5 motion-reduce:hover:translate-y-0">
-                Find your route <ArrowRight className="h-5 w-5" aria-hidden />
-              </Link>
-              <a href="#fund-finder" className="inline-flex items-center gap-2 rounded-xl border-2 border-teal text-teal-light font-heading font-bold text-lg px-6 py-3 hover:bg-teal/10">
-                Browse {FUND_COUNT} funds <ArrowDown className="h-5 w-5" aria-hidden />
+            <div className="gcf-fade-up gcf-delay-3 mt-9 flex flex-wrap items-center justify-center gap-3">
+              <a href="#fund-finder" className="inline-flex items-center gap-2 rounded-lg bg-ink text-white font-body font-semibold text-base px-5 py-3.5 hover:bg-primary-hover">
+                Browse {FUND_COUNT} funds <ArrowDown className="h-4 w-4" aria-hidden />
               </a>
-              <Link to="/contact" className="font-body font-semibold text-teal-light underline underline-offset-4 hover:text-white">
+              <Link to="/gift-city-route-checker" className="inline-flex items-center gap-2 rounded-lg border border-input bg-white text-primary font-body font-semibold text-base px-5 py-3.5 hover:bg-accent">
+                Find your route <ArrowRight className="h-4 w-4" aria-hidden />
+              </Link>
+              <Link to="/contact" className="font-body font-semibold text-secondary underline underline-offset-4 hover:text-secondary-hover">
                 or talk to Anup
               </Link>
             </div>
           </div>
-
-          <div className="gcf-fade-up gcf-delay-4 px-4 sm:px-6 lg:px-8 pt-10 pb-12">
-            <HeroTabs />
-            <p className="max-w-4xl mx-auto mt-10 font-body text-sm text-slate-400 text-left">
-              <span className="font-semibold text-brass">Start from USD 500.</span> For example, Tata India Dynamic Equity Fund (GIFT City) accepts USD 500 from NRIs, OCIs and foreign investors; it is not open to Indian residents or US persons.{" "}
-              <a href="https://www.tatamutualfund.com/ifsc-gift-city" target="_blank" rel="noopener noreferrer" className="text-teal-light underline">Source: Tata Mutual Fund</a>. An example of a minimum, not a recommendation.
-            </p>
-          </div>
         </section>
 
         {/* Fact ticker */}
-        <div className="bg-teal text-ink overflow-hidden whitespace-nowrap font-body font-semibold text-[15px]" aria-label="Key facts">
+        <div className="bg-secondary text-white overflow-hidden whitespace-nowrap font-body font-medium text-[15px]" aria-label="Key facts">
           <div className="gcf-marquee inline-flex gap-12 py-3.5">
             {[0, 1].map((copy) => (
               <span key={copy} className="inline-flex gap-12" aria-hidden={copy === 1 ? "true" : undefined}>
@@ -102,9 +91,9 @@ const Home = () => {
         <HomeFundFinder />
 
         {/* Free tools */}
-        <section className="py-16 bg-ink text-white" aria-labelledby="tools-h">
+        <section className="py-16 md:py-20 bg-white border-t border-border" aria-labelledby="tools-h">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <h2 id="tools-h" className="font-heading font-bold text-3xl md:text-4xl mb-8">Work it out in under a minute</h2>
+            <SectionHead n={2} label="Free tools" id="tools-h" title="Work it out in under a minute" sub="No sign-up needed." />
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {[
                 { to: "/gift-city-route-checker", icon: Route, t: "Which route applies to me?", d: "Resident, NRI, OCI or returning: see your route, limits and tax collected at source." },
@@ -113,10 +102,10 @@ const Home = () => {
                 { to: "/gift-city-document-checklist", icon: FileText, t: "Document checklist", d: "Pick your status, country and product; print your KYC list." },
                 { to: "/gift-city-rules-updates", icon: Globe2, t: "What changed lately", d: "Dated IFSCA, RBI, SEBI and tax changes, and what each means for you." },
               ].map((c) => (
-                <Link key={c.to} to={c.to} className="group rounded-2xl border border-white/10 bg-white/5 p-5 hover:bg-white/10 gcf-lift">
-                  <c.icon className="h-7 w-7 text-brass mb-3" aria-hidden />
-                  <p className="font-heading font-semibold text-lg text-white group-hover:underline">{c.t}</p>
-                  <p className="font-body text-sm text-slate-300 mt-1">{c.d}</p>
+                <Link key={c.to} to={c.to} className="group rounded-2xl border border-border bg-white p-5 hover:border-secondary/40 hover:shadow-sm transition">
+                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-accent"><c.icon className="h-5 w-5 text-secondary" aria-hidden /></span>
+                  <p className="font-heading font-semibold text-lg text-primary group-hover:underline">{c.t}</p>
+                  <p className="font-body text-sm text-foreground-muted mt-1">{c.d}</p>
                 </Link>
               ))}
             </div>
@@ -126,9 +115,10 @@ const Home = () => {
         <LatestNews />
 
         {/* Frequently asked: answered, with FAQPage schema */}
-        <section className="py-16 bg-surface">
+        <section className="py-16 md:py-20 bg-white border-t border-border">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <PageFaqs items={PAGE_FAQS} title="GIFT City funds: frequently asked questions" />
+            <SectionLabel n={4} label="Questions" />
+            <PageFaqs items={PAGE_FAQS} title="Frequently asked questions" className="mt-3 [&>h2]:font-extrabold [&>h2]:text-3xl md:[&>h2]:text-4xl [&>h2]:tracking-[-0.02em] [&>h2]:mb-8" />
             <Link to="/faqs" className="mt-4 font-body text-secondary hover:underline inline-flex items-center">
               Read all FAQs <ArrowRight className="ml-1 h-4 w-4" />
             </Link>

@@ -48,7 +48,7 @@ const HeroTabs = () => {
 
   return (
     <div className="max-w-4xl mx-auto">
-      <div role="tablist" aria-label="Who are you?" className="grid grid-cols-3 border-b-2 border-white/15">
+      <div role="tablist" aria-label="Who are you?" className="grid grid-cols-3 border-b border-border">
         {TABS.map((t, i) => {
           const on = i === active;
           return (
@@ -63,8 +63,8 @@ const HeroTabs = () => {
               tabIndex={on ? 0 : -1}
               onClick={() => select(i)}
               onKeyDown={(e) => onKey(e, i)}
-              className={`-mb-0.5 min-h-[56px] border-b-[3px] px-2 py-4 font-heading text-base sm:text-lg font-bold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass ${
-                on ? "border-brass text-white" : "border-transparent text-slate-300 hover:text-white"
+              className={`-mb-0.5 min-h-[56px] border-b-[3px] px-2 py-4 font-heading text-base sm:text-lg font-bold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary ${
+                on ? "border-secondary text-primary" : "border-transparent text-slate-600 hover:text-primary"
               }`}
             >
               {t.label}
@@ -76,17 +76,17 @@ const HeroTabs = () => {
         <ul className="grid gap-4 sm:grid-cols-3 list-none p-0 m-0">
           {tab.points.map((pt) => (
             <li key={pt} className="flex gap-3 items-start">
-              <span className="flex-none mt-0.5 flex h-7 w-7 items-center justify-center rounded-full bg-teal-light/15">
-                <Check className="h-4 w-4 text-teal-light" strokeWidth={3} aria-hidden />
+              <span className="flex-none mt-0.5 flex h-7 w-7 items-center justify-center rounded-full bg-accent">
+                <Check className="h-4 w-4 text-secondary" strokeWidth={3} aria-hidden />
               </span>
-              <span className="font-body text-base leading-relaxed text-slate-200">{pt}</span>
+              <span className="font-body text-base leading-relaxed text-foreground-muted">{pt}</span>
             </li>
           ))}
         </ul>
         <Link
           to={tab.to}
           onClick={() => trackEvent("hero_tab_link", { tab: tab.id })}
-          className="mt-6 inline-flex items-center font-body font-bold text-teal-light underline underline-offset-4 hover:text-white"
+          className="mt-6 inline-flex items-center font-body font-semibold text-secondary underline underline-offset-4 hover:text-secondary-hover"
         >
           {tab.link} <ArrowRight className="ml-1 h-4 w-4" aria-hidden />
         </Link>

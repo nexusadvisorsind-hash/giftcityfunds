@@ -90,7 +90,7 @@ const HowToInvest = () => (
       {steps.map((s, i) => (
         <li key={s.title} id={`step-${i + 1}`} className="bg-surface border border-border rounded-xl p-5 md:p-6 scroll-mt-24 gcf-lift">
           <div className="flex gap-4">
-            <div className={`shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-heading font-bold ${i === 3 ? "bg-brass text-ink" : "bg-teal text-ink"}`}>{i + 1}</div>
+            <div className={`shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-heading font-bold ${i === 3 ? "bg-brass text-white" : "bg-teal text-white"}`}>{i + 1}</div>
             <div className="flex-1">
               <div className="flex items-center gap-2 mb-2">
                 <s.icon className="h-5 w-5 text-secondary" aria-hidden />

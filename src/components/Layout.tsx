@@ -32,7 +32,7 @@ const Layout = ({ children }: LayoutProps) => {
   };
   return (
     <div className="min-h-screen flex flex-col" onClickCapture={onClickCapture}>
-      <div className="bg-ink text-paper text-xs font-body text-center py-1.5 px-4 border-b border-white/10">
+      <div className="bg-surface text-foreground-muted text-xs font-body text-center py-1.5 px-4 border-b border-border">
         Anup Vatyani — AMFI-registered Mutual Fund Distributor (ARN 106715) | Educational content only | No personalised advice
       </div>
       <Navigation />

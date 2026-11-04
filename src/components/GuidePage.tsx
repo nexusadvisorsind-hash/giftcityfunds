@@ -107,7 +107,7 @@ export const GuidePage = ({
           <p className="font-body text-slate-300 text-sm mb-4">
             Anup Vatyani explains GIFT City fund structures and the investment process in plain English. Educational conversation only, not personalised advice.
           </p>
-          <Link to="/contact" className="inline-flex items-center rounded-xl bg-brass text-ink font-heading font-semibold px-5 py-2.5 hover:bg-brass-light">
+          <Link to="/contact" className="inline-flex items-center rounded-xl bg-brass text-white font-heading font-semibold px-5 py-2.5 hover:bg-brass-light">
             Talk to Anup
           </Link>
         </div>
