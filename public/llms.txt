@@ -22,6 +22,37 @@
 - [GIFT City News](https://giftcityfunds.in/gift-city-news): Dated, sourced GIFT City news for investors: new funds, IFSCA decisions, banking and market updates.
 - [FAQs](https://giftcityfunds.in/faqs): Short answers to common questions.
 - [GIFT City Fund List 2026](https://giftcityfunds.in/gift-city-fund-list): Every public GIFT City fund we could verify, from 20 fund houses (PPFAS, HDFC, DSP, JioBlackRock, Edelweiss, Tata and more): minimum, who can invest (residents or NRIs), inbound or outbound, with sources. Facts only, not ranked.
+- [GIFT City Outbound Funds](https://giftcityfunds.in/gift-city-outbound-funds): Every public GIFT City fund that invests outside India (mostly for resident Indians under LRS), with minimums and eligibility.
+- [GIFT City Inbound Funds](https://giftcityfunds.in/gift-city-inbound-funds): Every public GIFT City fund that invests in India in US Dollars, for NRIs and foreign investors.
+- [Aditya Birla Sun Life GIFT City Funds](https://giftcityfunds.in/aditya-birla-sun-life-gift-city-funds): ABSL Emerging Market Equity Fund and India Growth Fund, both from USD 500.
+- [Edelweiss GIFT City Funds](https://giftcityfunds.in/edelweiss-gift-city-funds): Greater China and US Technology funds (USD 5,000, residents and NRIs) and an India multimanager AIF.
+- [Mirae Asset GIFT City Funds](https://giftcityfunds.in/mirae-asset-gift-city-funds): Global Allocation, Global Advantage and India Equity Allocation funds.
+- [ABSL Emerging Market Equity Fund](https://giftcityfunds.in/gift-city-fund/absl-emerging-market-equity-fund): Aditya Birla Sun Life, outbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [ABSL India Growth Fund](https://giftcityfunds.in/gift-city-fund/absl-india-growth-fund): Aditya Birla Sun Life, inbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [DSP Global Equity Fund](https://giftcityfunds.in/gift-city-fund/dsp-global-equity-fund): DSP, outbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [Edelweiss Greater China Equity Fund](https://giftcityfunds.in/gift-city-fund/edelweiss-greater-china-equity-fund): Edelweiss, outbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [Edelweiss US Technology Equity Fund](https://giftcityfunds.in/gift-city-fund/edelweiss-us-technology-equity-fund): Edelweiss, outbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [HDFC International Developed Markets Equity Fund](https://giftcityfunds.in/gift-city-fund/hdfc-international-developed-markets-equity-fund): HDFC, outbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [HDFC International Emerging Markets Equity Fund](https://giftcityfunds.in/gift-city-fund/hdfc-international-emerging-markets-equity-fund): HDFC, outbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [JioBlackRock Advantage World Equity Fund](https://giftcityfunds.in/gift-city-fund/jioblackrock-advantage-world-equity-fund): JioBlackRock, outbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [Marcellus Global Equities Fund](https://giftcityfunds.in/gift-city-fund/marcellus-global-equities-fund): Marcellus, outbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [Parag Parikh IFSC S&P 500 Fund of Fund](https://giftcityfunds.in/gift-city-fund/parag-parikh-ifsc-sp-500-fund-of-fund): PPFAS (Parag Parikh), outbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [Parag Parikh IFSC Nasdaq 100 Fund of Fund](https://giftcityfunds.in/gift-city-fund/parag-parikh-ifsc-nasdaq-100-fund-of-fund): PPFAS (Parag Parikh), outbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [Parag Parikh India Flexi Cap Fund (IFSC)](https://giftcityfunds.in/gift-city-fund/parag-parikh-india-flexi-cap-fund-ifsc): PPFAS (Parag Parikh), inbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [Sundaram India Mid Cap GIFT](https://giftcityfunds.in/gift-city-fund/sundaram-india-mid-cap-gift): Sundaram, inbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [Tata India Dynamic Equity Fund](https://giftcityfunds.in/gift-city-fund/tata-india-dynamic-equity-fund): Tata, inbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [Bandhan IFSC India Funds](https://giftcityfunds.in/gift-city-fund/bandhan-ifsc-india-funds): Bandhan, inbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [Baroda BNP Paribas GIFT US Small Cap Fund](https://giftcityfunds.in/gift-city-fund/baroda-bnp-paribas-gift-us-small-cap-fund): Baroda BNP Paribas, outbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [Edelweiss India Multimanager Equity Fund](https://giftcityfunds.in/gift-city-fund/edelweiss-india-multimanager-equity-fund): Edelweiss, inbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [Equitree Emerging Opportunities Fund](https://giftcityfunds.in/gift-city-fund/equitree-emerging-opportunities-fund): Equitree Capital, inbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [HDFC IFSC India Feeder Funds](https://giftcityfunds.in/gift-city-fund/hdfc-ifsc-india-feeder-funds): HDFC, inbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [Mirae Asset Global Allocation Fund](https://giftcityfunds.in/gift-city-fund/mirae-asset-global-allocation-fund): Mirae Asset, outbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [Mirae Asset Global Advantage Fund](https://giftcityfunds.in/gift-city-fund/mirae-asset-global-advantage-fund): Mirae Asset, outbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [Motilal Oswal GIFT City India Equity Fund of Funds](https://giftcityfunds.in/gift-city-fund/motilal-oswal-gift-city-india-equity-fof): Motilal Oswal, inbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [Nippon India Large Cap Fund GIFT](https://giftcityfunds.in/gift-city-fund/nippon-india-large-cap-fund-gift): Nippon India, inbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [Phillip India Billion Opportunities Fund](https://giftcityfunds.in/gift-city-fund/phillip-india-billion-opportunities-fund): Phillip Capital, inbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [The Wealth Company IFSC FoF](https://giftcityfunds.in/gift-city-fund/the-wealth-company-ifsc-fof): The Wealth Company, inbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [Unifi Capital Rangoli India Fund](https://giftcityfunds.in/gift-city-fund/unifi-rangoli-india-fund): Unifi Capital, inbound GIFT City fund: minimum, who can invest, what it invests in, source.
 - [Compare GIFT City Funds](https://giftcityfunds.in/gift-city-fund-compare): Up to four GIFT City funds side by side: minimum, direction, who can invest, excluded countries, source. Facts only.
 - [GIFT City in Numbers 2026](https://giftcityfunds.in/gift-city-in-numbers): IFSCA statistics with dates and sources: 235 fund managers, 401 schemes, USD 45.08 bn commitments, 16,150 investors (30 June 2026), retail investor growth.
 - [Dollar vs Rupee Calculator](https://giftcityfunds.in/usd-vs-inr-calculator): The currency effect on money held in US Dollars versus rupees, at a rate change the user chooses.

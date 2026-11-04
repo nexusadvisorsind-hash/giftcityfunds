@@ -52,6 +52,8 @@ const Navigation = () => {
 
   const toolItems = [
     { label: "Fund List", path: "/gift-city-fund-list", ariaLabel: "List of GIFT City fund houses, inbound and outbound" },
+    { label: "Outbound Funds", path: "/gift-city-outbound-funds", ariaLabel: "GIFT City outbound funds that invest outside India" },
+    { label: "Inbound Funds", path: "/gift-city-inbound-funds", ariaLabel: "GIFT City inbound funds that invest in India" },
     { label: "Compare Funds", path: "/gift-city-fund-compare", ariaLabel: "Compare GIFT City funds side by side" },
     { label: "GIFT City in Numbers", path: "/gift-city-in-numbers", ariaLabel: "GIFT City statistics with sources" },
     { label: "USD vs INR Calculator", path: "/usd-vs-inr-calculator", ariaLabel: "Dollar versus rupee currency calculator" },

@@ -115,6 +115,12 @@ const Footer = () => {
                 <Link to="/gift-city-fund-list" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">GIFT City Fund List</Link>
               </li>
               <li>
+                <Link to="/gift-city-outbound-funds" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">GIFT City Outbound Funds</Link>
+              </li>
+              <li>
+                <Link to="/gift-city-inbound-funds" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">GIFT City Inbound Funds</Link>
+              </li>
+              <li>
                 <Link to="/parag-parikh-gift-city-fund" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Parag Parikh GIFT City Funds</Link>
               </li>
               <li>
@@ -125,6 +131,15 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/tata-gift-city-fund" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Tata GIFT City Fund</Link>
+              </li>
+              <li>
+                <Link to="/aditya-birla-sun-life-gift-city-funds" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Aditya Birla Sun Life GIFT City Funds</Link>
+              </li>
+              <li>
+                <Link to="/edelweiss-gift-city-funds" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Edelweiss GIFT City Funds</Link>
+              </li>
+              <li>
+                <Link to="/mirae-asset-gift-city-funds" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Mirae Asset GIFT City Funds</Link>
               </li>
               <li>
                 <Link to="/gift-city-fund-compare" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Compare GIFT City Funds</Link>

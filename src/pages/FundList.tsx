@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { GuidePage, h2, h3, p, a, ul, table, th, td, type Faq } from "@/components/GuidePage";
 import { FlowSteps } from "@/components/Diagrams";
 import MoneyMap from "@/components/MoneyMap";
-import { LOW_MIN, HIGH_MIN, FUNDS_LAST_CHECKED as LAST_CHECKED, FUND_COUNT, HOUSE_COUNT, type Fund, type Direction } from "@/data/funds";
+import { LOW_MIN, HIGH_MIN, FUNDS_LAST_CHECKED as LAST_CHECKED, FUND_COUNT, HOUSE_COUNT, fundPath, type Fund, type Direction } from "@/data/funds";
 
 const ALL = [...LOW_MIN, ...HIGH_MIN];
 const HOUSES = Array.from(new Set(ALL.map((f) => f.house))).sort();
@@ -32,7 +32,7 @@ const FundTable = ({ funds, caption }: { funds: Fund[]; caption: string }) => (
         )}
         {funds.map((f) => (
           <tr key={f.scheme}>
-            <td className={td + " min-w-[11rem]"}><span className="block font-semibold text-primary">{f.house}</span>{f.scheme}</td>
+            <td className={td + " min-w-[11rem]"}><span className="block font-semibold text-primary">{f.house}</span>{fundPath(f) ? <Link to={fundPath(f)!} className={a}>{f.scheme}</Link> : f.scheme}</td>
             <td className={td}><span className={`inline-block rounded-full px-2 py-0.5 text-xs font-medium ${DIR_STYLE[f.direction]}`}>{f.direction}</span></td>
             <td className={td}>{f.invests}</td>
             <td className={td}>{f.minimum}</td>
@@ -81,7 +81,7 @@ const FundList = () => {
           "@type": "ItemList",
           name: "GIFT City funds",
           itemListOrder: "https://schema.org/ItemListOrderAscending",
-          itemListElement: ALL.map((f, i) => ({ "@type": "ListItem", position: i + 1, name: `${f.scheme} (${f.house})`, url: f.source.url })),
+          itemListElement: ALL.map((f, i) => ({ "@type": "ListItem", position: i + 1, name: `${f.scheme} (${f.house})`, url: fundPath(f) ? `https://giftcityfunds.in${fundPath(f)}` : f.source.url })),
         },
       ]}
     >
@@ -131,7 +131,7 @@ const FundList = () => {
       <div className="mt-3 space-y-4">
         {OUTBOUND_RES.map((f) => (
           <div key={f.scheme}>
-            <h3 className="font-heading font-semibold text-lg text-primary">{f.scheme}</h3>
+            <h3 className="font-heading font-semibold text-lg text-primary">{fundPath(f) ? <Link to={fundPath(f)!} className="hover:underline">{f.scheme}</Link> : f.scheme}</h3>
             <p className="font-body text-foreground-muted leading-relaxed">{f.house}. Invests in: {f.invests}. Minimum: {f.minimum}. <a href={f.source.url} target="_blank" rel="noopener noreferrer" className={a}>Source</a></p>
           </div>
         ))}
@@ -147,7 +147,7 @@ const FundList = () => {
       <div className="mt-3 space-y-4">
         {INBOUND_NRI.map((f) => (
           <div key={f.scheme}>
-            <h3 className="font-heading font-semibold text-lg text-primary">{f.scheme}</h3>
+            <h3 className="font-heading font-semibold text-lg text-primary">{fundPath(f) ? <Link to={fundPath(f)!} className="hover:underline">{f.scheme}</Link> : f.scheme}</h3>
             <p className="font-body text-foreground-muted leading-relaxed">{f.house}. Invests in: {f.invests}. Minimum: {f.minimum}. Who can invest: {f.who}. <a href={f.source.url} target="_blank" rel="noopener noreferrer" className={a}>Source</a></p>
           </div>
         ))}

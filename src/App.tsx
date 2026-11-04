@@ -38,6 +38,12 @@ const HousePpfas = lazyPage(() => import("./pages/houses/Ppfas"));
 const HouseHdfc = lazyPage(() => import("./pages/houses/Hdfc"));
 const HouseDsp = lazyPage(() => import("./pages/houses/Dsp"));
 const HouseTata = lazyPage(() => import("./pages/houses/Tata"));
+const HouseAbsl = lazyPage(() => import("./pages/houses/Absl"));
+const HouseEdelweiss = lazyPage(() => import("./pages/houses/Edelweiss"));
+const HouseMirae = lazyPage(() => import("./pages/houses/Mirae"));
+const FundDetail = lazyPage(() => import("./pages/FundDetail"));
+const OutboundFunds = lazyPage(() => import("./pages/OutboundFunds"));
+const InboundFunds = lazyPage(() => import("./pages/InboundFunds"));
 const NriUk = lazyPage(() => import("./pages/NriUk"));
 const NriUs = lazyPage(() => import("./pages/NriUs"));
 const NriSingapore = lazyPage(() => import("./pages/NriSingapore"));
@@ -108,6 +114,11 @@ const PAGE_FOR_PATH: Record<string, LazyPage> = {
   "/hdfc-gift-city-funds": HouseHdfc,
   "/dsp-gift-city-funds": HouseDsp,
   "/tata-gift-city-fund": HouseTata,
+  "/aditya-birla-sun-life-gift-city-funds": HouseAbsl,
+  "/edelweiss-gift-city-funds": HouseEdelweiss,
+  "/mirae-asset-gift-city-funds": HouseMirae,
+  "/gift-city-outbound-funds": OutboundFunds,
+  "/gift-city-inbound-funds": InboundFunds,
   "/gift-city-funds-for-uk-nris": NriUk,
   "/gift-city-funds-for-us-nris": NriUs,
   "/gift-city-funds-for-singapore-nris": NriSingapore,
@@ -140,7 +151,9 @@ const PAGE_FOR_PATH: Record<string, LazyPage> = {
 
 export function preloadForPath(pathname: string): Promise<void> {
   const path = pathname.length > 1 ? pathname.replace(/\/+$/, "") : pathname;
-  const page = PAGE_FOR_PATH[path] ?? (path.startsWith("/insights/") ? InsightArticle : NotFound);
+  const page =
+    PAGE_FOR_PATH[path] ??
+    (path.startsWith("/insights/") ? InsightArticle : path.startsWith("/gift-city-fund/") ? FundDetail : NotFound);
   return page.preload();
 }
 
@@ -219,6 +232,12 @@ const App = ({ ssrUrl, helmetContext }: AppProps = {}) => (
               <Route path="/hdfc-gift-city-funds" element={<HouseHdfc />} />
               <Route path="/dsp-gift-city-funds" element={<HouseDsp />} />
               <Route path="/tata-gift-city-fund" element={<HouseTata />} />
+              <Route path="/aditya-birla-sun-life-gift-city-funds" element={<HouseAbsl />} />
+              <Route path="/edelweiss-gift-city-funds" element={<HouseEdelweiss />} />
+              <Route path="/mirae-asset-gift-city-funds" element={<HouseMirae />} />
+              <Route path="/gift-city-outbound-funds" element={<OutboundFunds />} />
+              <Route path="/gift-city-inbound-funds" element={<InboundFunds />} />
+              <Route path="/gift-city-fund/:slug" element={<FundDetail />} />
               <Route path="/gift-city-funds-for-uk-nris" element={<NriUk />} />
               <Route path="/gift-city-funds-for-us-nris" element={<NriUs />} />
               <Route path="/gift-city-funds-for-singapore-nris" element={<NriSingapore />} />

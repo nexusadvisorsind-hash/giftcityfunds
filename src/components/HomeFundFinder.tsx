@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import { LOW_MIN, HIGH_MIN, FUND_COUNT, HOUSE_COUNT, FUNDS_LAST_CHECKED, type Fund } from "@/data/funds";
+import { LOW_MIN, HIGH_MIN, FUND_COUNT, HOUSE_COUNT, FUNDS_LAST_CHECKED, fundPath, type Fund } from "@/data/funds";
 
 // Home page: a compact, factual look at the GIFT City fund list. Same data as
 // /gift-city-fund-list. Alphabetical, never ranked; no returns or NAVs.
@@ -74,9 +74,10 @@ const HomeFundFinder = () => {
                 <div><dt className="inline font-semibold text-primary">Minimum: </dt><dd className="inline">{f.minimum}</dd></div>
                 <div><dt className="inline font-semibold text-primary">Who can invest: </dt><dd className="inline">{f.who}</dd></div>
               </dl>
-              <a href={f.source.url} target="_blank" rel="noopener noreferrer" className="mt-3 font-body text-sm font-medium text-secondary underline underline-offset-2">
-                Source: {f.source.label}
-              </a>
+              <p className="mt-3 font-body text-sm font-medium">
+                {fundPath(f) && <><Link to={fundPath(f)!} className="text-secondary underline underline-offset-2">Fund details</Link>{" · "}</>}
+                <a href={f.source.url} target="_blank" rel="noopener noreferrer" className="text-secondary underline underline-offset-2">Source: {f.source.label}</a>
+              </p>
             </li>
           ))}
         </ul>
