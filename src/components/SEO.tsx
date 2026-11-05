@@ -32,7 +32,18 @@ const ogImageFor = (canonical: string) => {
   }
 };
 
-export const SEO = ({ title, description, canonical, schema, breadcrumbs, noindex, type = "website", image }: SEOProps) => {
+// Search results show about 155-160 characters; cut longer descriptions at a
+// sentence or word boundary so they never end mid-word.
+const fitDescription = (d: string, max = 158) => {
+  if (d.length <= max) return d;
+  const cut = d.slice(0, max);
+  const stop = Math.max(cut.lastIndexOf(". "), cut.lastIndexOf("; "));
+  if (stop > 100) return cut.slice(0, stop + 1).replace(/;$/, ".");
+  return cut.slice(0, cut.lastIndexOf(" ")).replace(/[,;:\s]+$/, "") + "…";
+};
+
+export const SEO = ({ title, description: rawDescription, canonical, schema, breadcrumbs, noindex, type = "website", image }: SEOProps) => {
+const description = fitDescription(rawDescription);
 const ogImage = image ?? (noindex ? "https://giftcityfunds.in/og/home.jpg" : ogImageFor(canonical));
 const organizationSchema = {
   "@context": "https://schema.org",
@@ -58,7 +69,7 @@ const organizationSchema = {
     "@type": "ContactPoint",
     "email": "info@giftcityfunds.in",
     "contactType": "Customer Service",
-    "areaServed": ["IN", "AE", "GB", "US", "CA", "SG", "AU"],
+    "areaServed": ["IN", "AE", "SA", "QA", "KW", "BH", "OM", "GB", "US", "CA", "SG", "AU"],
     "availableLanguage": ["English"]
   }],
   "sameAs": ["https://www.linkedin.com/in/anup-vatyani-081b4142"]

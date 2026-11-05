@@ -33,7 +33,7 @@ const FundList = () => {
       description={`GIFT City fund list: ${FUND_COUNT} funds from ${HOUSE_COUNT} fund houses, including PPFAS, HDFC, DSP and Tata, with minimums, who can invest and a source for each.`}
       crumb="GIFT City Fund List"
       datePublished="2026-10-08"
-      dateModified="2026-10-31"
+      dateModified="2026-11-05"
       reviewed={`Last checked ${LAST_CHECKED}`}
       faqs={faqs}
       sources={["ifscaDirectory", "ifsca", "amfi"]}

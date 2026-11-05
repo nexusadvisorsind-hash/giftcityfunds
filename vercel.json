@@ -1,6 +1,17 @@
 {
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.giftcityfunds.in"
+        }
+      ],
+      "destination": "https://giftcityfunds.in/:path*",
+      "permanent": true
+    },
+    {
       "source": "/about-us",
       "destination": "/about",
       "permanent": true
@@ -130,5 +141,6 @@
       "source": "/auth",
       "destination": "/index.html"
     }
-  ]
+  ],
+  "trailingSlash": false
 }

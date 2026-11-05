@@ -20,6 +20,14 @@ const directionText = (f: Fund) =>
 
 const plural = (f: Fund) => (f.count ?? 1) > 1;
 
+// Keep titles inside what search results show (about 60 characters).
+const titleFor = (n: string) => {
+  const opts = /gift/i.test(n)
+    ? [`${n}: Minimum, Who Can Invest`, `${n}: Minimum & Eligibility`, `${n}: Minimum`, n]
+    : [`${n} (GIFT City): Minimum, Who Can Invest`, `${n}: GIFT City Fund Minimum`, `${n} | GIFT City Fund`, `${n} GIFT City`, n];
+  return opts.find((t) => t.length <= 62) ?? n;
+};
+
 function faqsFor(f: Fund): Faq[] {
   const n = fundName(f);
   const many = plural(f);
@@ -83,8 +91,8 @@ const FundDetail = () => {
     <GuidePage
       path={path}
       headline={`${n}: GIFT City ${f.direction} ${many ? "Funds" : "Fund"} Facts`}
-      seoTitle={`${n} (GIFT City): Minimum, Who Can Invest`}
-      description={`${n}: ${dir} GIFT City ${many ? "funds" : "fund"} from ${f.house}. Minimum: ${f.minimum}. Who can invest, what it invests in and the source, checked ${FUNDS_LAST_CHECKED}.`.slice(0, 300)}
+      seoTitle={titleFor(n)}
+      description={`${n}: ${dir} GIFT City ${many ? "funds" : "fund"} from ${f.house}. Minimum ${f.minimum.split(/;|\(|, then| or /)[0].trim()}. Who can invest, what it holds and the source.`}
       crumb={n}
       datePublished="2026-11-04"
       reviewed={`Last checked ${FUNDS_LAST_CHECKED}`}
