@@ -99,7 +99,7 @@ const Navigation = () => {
               to="/"
               aria-label="Navigate to Home page"
               className={`font-body text-sm font-medium whitespace-nowrap px-3 py-2 rounded-lg transition-colors hover:text-primary hover:bg-accent ${
-                isActive("/") ? "text-primary bg-accent" : "text-slate-600"
+                isActive("/") ? "text-primary bg-accent shadow-[inset_0_-2px_0_#059669]" : "text-slate-600"
               }`}
             >
               Home
@@ -107,7 +107,7 @@ const Navigation = () => {
             <DropdownMenu>
               <DropdownMenuTrigger
                 className={`inline-flex items-center gap-1 font-body text-sm font-medium whitespace-nowrap px-3 py-2 rounded-lg transition-colors hover:text-primary hover:bg-accent focus:outline-none ${
-                  learnActive ? "text-primary bg-accent" : "text-slate-600"
+                  learnActive ? "text-primary bg-accent shadow-[inset_0_-2px_0_#059669]" : "text-slate-600"
                 }`}
               >
                 Learn <ChevronDown className="h-3.5 w-3.5" />
@@ -125,7 +125,7 @@ const Navigation = () => {
             <DropdownMenu>
               <DropdownMenuTrigger
                 className={`inline-flex items-center gap-1 font-body text-sm font-medium whitespace-nowrap px-3 py-2 rounded-lg transition-colors hover:text-primary hover:bg-accent focus:outline-none ${
-                  toolsActive ? "text-primary bg-accent" : "text-slate-600"
+                  toolsActive ? "text-primary bg-accent shadow-[inset_0_-2px_0_#059669]" : "text-slate-600"
                 }`}
               >
                 Tools <ChevronDown className="h-3.5 w-3.5" />
@@ -146,7 +146,7 @@ const Navigation = () => {
                 to={item.path}
                 aria-label={item.ariaLabel}
                 className={`font-body text-sm font-medium whitespace-nowrap px-3 py-2 rounded-lg transition-colors hover:text-primary hover:bg-accent ${
-                  isActive(item.path) ? "text-primary bg-accent" : "text-slate-600"
+                  isActive(item.path) ? "text-primary bg-accent shadow-[inset_0_-2px_0_#059669]" : "text-slate-600"
                 }`}
               >
                 {item.label}

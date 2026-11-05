@@ -47,7 +47,7 @@ const Home = () => {
         <section className="bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 md:pt-28 pb-16 md:pb-24 text-center flex flex-col items-center">
             <p className="gcf-fade-up gcf-delay-1 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-accent px-3 py-1.5 font-body text-xs sm:text-sm font-semibold text-secondary">
-              <span className="h-2 w-2 rounded-full bg-secondary" aria-hidden="true"></span>
+              <span className="h-2 w-2 rounded-full bg-emerald-500 ring-4 ring-emerald-500/20" aria-hidden="true"></span>
               Funds regulated by IFSCA · invested in US Dollars
             </p>
             <h1 className="mt-6 font-heading font-extrabold text-[2.6rem] leading-[1.04] sm:text-6xl md:text-7xl tracking-[-0.035em] text-primary">

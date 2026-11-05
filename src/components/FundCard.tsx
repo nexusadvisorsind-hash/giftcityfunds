@@ -25,7 +25,7 @@ export const FundCard = ({ f }: { f: Fund }) => {
       </span>
     </>
   );
-  const cls = "flex h-full items-center justify-between gap-4 rounded-2xl border border-border bg-white px-5 py-4 transition hover:border-secondary/40 hover:shadow-sm";
+  const cls = "flex h-full items-center justify-between gap-4 rounded-2xl border-[1.5px] border-emerald-500/70 bg-white px-5 py-4 shadow-[0_1px_2px_rgba(15,23,42,0.05),0_6px_16px_rgba(5,150,105,0.08)] transition hover:border-emerald-600 hover:shadow-[0_12px_28px_rgba(5,150,105,0.16)]";
   return to ? (
     <Link to={to} className={cls}>{body}</Link>
   ) : (

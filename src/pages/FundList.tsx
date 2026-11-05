@@ -1,49 +1,14 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
-import { GuidePage, h2, h3, p, a, ul, table, th, td, type Faq } from "@/components/GuidePage";
+import { GuidePage, h2, h3, p, a, ul, type Faq } from "@/components/GuidePage";
 import { FlowSteps } from "@/components/Diagrams";
 import MoneyMap from "@/components/MoneyMap";
-import { LOW_MIN, HIGH_MIN, FUNDS_LAST_CHECKED as LAST_CHECKED, FUND_COUNT, HOUSE_COUNT, fundPath, type Fund, type Direction } from "@/data/funds";
+import { FundDirectory } from "@/components/FundDirectory";
+import { LOW_MIN, HIGH_MIN, FUNDS_LAST_CHECKED as LAST_CHECKED, FUND_COUNT, HOUSE_COUNT, fundPath } from "@/data/funds";
 
 const ALL = [...LOW_MIN, ...HIGH_MIN];
 const HOUSES = Array.from(new Set(ALL.map((f) => f.house))).sort();
 const OUTBOUND_RES = LOW_MIN.filter((f) => f.direction === "Outbound" && f.residents);
 const INBOUND_NRI = LOW_MIN.filter((f) => f.direction === "Inbound" && f.nri);
-
-type Filter = "all" | "res" | "nri";
-const FILTERS: [Filter, string][] = [["all", "All funds"], ["res", "Resident Indians"], ["nri", "NRIs"]];
-
-const DIR_STYLE: Record<Direction, string> = {
-  Inbound: "bg-brass/20 text-primary",
-  Outbound: "bg-teal/20 text-primary",
-  Gold: "bg-surface text-primary border border-border",
-};
-
-const FundTable = ({ funds, caption }: { funds: Fund[]; caption: string }) => (
-  <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">
-    <table className={table}>
-      <caption className="sr-only">{caption}</caption>
-      <thead>
-        <tr><th className={th}>Fund</th><th className={th}>Direction</th><th className={th}>Invests in</th><th className={th}>Minimum</th><th className={th}>Who can invest</th><th className={th}>Source</th></tr>
-      </thead>
-      <tbody>
-        {funds.length === 0 && (
-          <tr><td className={td} colSpan={6}>No funds in this group match the filter.</td></tr>
-        )}
-        {funds.map((f) => (
-          <tr key={f.scheme}>
-            <td className={td + " min-w-[11rem]"}><span className="block font-semibold text-primary">{f.house}</span>{fundPath(f) ? <Link to={fundPath(f)!} className={a}>{f.scheme}</Link> : f.scheme}</td>
-            <td className={td}><span className={`inline-block rounded-full px-2 py-0.5 text-xs font-medium ${DIR_STYLE[f.direction]}`}>{f.direction}</span></td>
-            <td className={td}>{f.invests}</td>
-            <td className={td}>{f.minimum}</td>
-            <td className={td}>{f.who}</td>
-            <td className={td}><a href={f.source.url} target="_blank" rel="noopener noreferrer" className={a}>{f.source.label}</a></td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  </div>
-);
 
 const faqs: Faq[] = [
   { q: "How many GIFT City funds are there?", a: "IFSCA data showed 401 funds and schemes run by 235 fund management entities at 30 June 2026. Only 14 of them were authorised retail schemes; most are AIFs and restricted schemes for institutions and wealthy investors. This page lists the funds that Indian fund houses and managers have made public." },
@@ -60,9 +25,6 @@ const faqs: Faq[] = [
 ];
 
 const FundList = () => {
-  const [filter, setFilter] = useState<Filter>("all");
-  const pick = (list: Fund[]) => list.filter((f) => filter === "all" || (filter === "res" ? f.residents : f.nri));
-
   return (
     <GuidePage
       path="/gift-city-fund-list"
@@ -89,36 +51,13 @@ const FundList = () => {
         <strong className="text-primary">The short answer.</strong> We list {FUND_COUNT} GIFT City funds from {HOUSE_COUNT} fund houses and managers that have made them public. Some invest in India for NRIs and foreign investors (<em>inbound</em>); others invest abroad for resident Indians under LRS (<em>outbound</em>). Retail funds start from USD 500 to USD 10,000; AIFs usually need USD 150,000. Below is every fund we could confirm, with its minimum, who can invest and a source.
       </p>
 
+      <h2 className={h2}>GIFT City mutual funds and AMC list</h2>
+      <p className="font-body text-sm text-foreground-muted">Every fund we could confirm, with its minimum and who can invest. Search, filter, or switch to the table for full details and sources. Not exhaustive and not a ranking.</p>
+      <FundDirectory />
+
       <h2 className={h2}>Inbound vs outbound in one picture</h2>
       <MoneyMap className="my-8" />
 
-      <h2 className={h2}>GIFT City mutual funds and AMC list</h2>
-      <p className="font-body text-sm text-foreground-muted mb-3">Alphabetical by fund house. Last checked {LAST_CHECKED}. Not exhaustive and not a ranking.</p>
-      <div role="group" aria-label="Show funds open to" className="flex flex-wrap items-center gap-2 mb-6">
-        <span className="font-body text-sm text-foreground-muted mr-1">Show funds open to:</span>
-        {FILTERS.map(([key, label]) => (
-          <button
-            key={key}
-            type="button"
-            aria-pressed={filter === key}
-            onClick={() => setFilter(key)}
-            className={`rounded-full px-4 py-1.5 font-body text-sm font-semibold border transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary ${filter === key ? "bg-primary text-primary-foreground border-primary" : "bg-background text-primary border-border hover:border-primary"}`}
-          >
-            {label}
-          </button>
-        ))}
-      </div>
-
-      <h3 className={h3}>Retail funds: minimum USD 500 to USD 10,000</h3>
-      <FundTable funds={pick(LOW_MIN)} caption="GIFT City retail funds with lower minimums" />
-
-      <h3 className={h3}>AIFs and restricted funds: higher minimums</h3>
-      <p className="font-body text-sm text-foreground-muted mb-3">Mostly Category III AIFs for NRIs, foreign investors and institutions. Where a fund house has not published a detail, the table says so.</p>
-      <FundTable funds={pick(HIGH_MIN)} caption="GIFT City AIFs and restricted funds" />
-
-      <p className="font-body text-xs text-foreground-muted mt-3">
-        For information only. Inclusion is not a recommendation or endorsement, and funds are not ranked. As a Mutual Fund Distributor, Anup Vatyani may be empanelled with some of these fund houses. Schemes, minimums and eligibility change; check the fund house's website and offer document before investing.
-      </p>
 
       <p className={p + " mt-4"}>
         Fund house guides: <Link to="/parag-parikh-gift-city-fund" className={a}>Parag Parikh</Link> · <Link to="/hdfc-gift-city-funds" className={a}>HDFC</Link> · <Link to="/dsp-gift-city-funds" className={a}>DSP</Link> · <Link to="/tata-gift-city-fund" className={a}>Tata</Link>. Or <Link to="/gift-city-fund-compare" className={a}>compare funds side by side</Link>.

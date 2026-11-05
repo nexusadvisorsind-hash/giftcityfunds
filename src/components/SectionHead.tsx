@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 // as its own section rather than one long page.
 export const SectionLabel = ({ n, label }: { n: number; label: string }) => (
   <p className="flex items-center gap-2.5 font-body text-[13px] font-bold uppercase tracking-[0.08em] text-secondary">
-    <span className="inline-flex h-6 w-6 items-center justify-center rounded-md bg-secondary text-white text-xs tracking-normal" aria-hidden>{n}</span>
+    <span className="inline-flex h-6 w-6 items-center justify-center rounded-md bg-emerald-600 text-white text-xs tracking-normal" aria-hidden>{n}</span>
     {label}
   </p>
 );

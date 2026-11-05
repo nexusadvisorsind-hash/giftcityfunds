@@ -22,7 +22,7 @@ export const AuthorByline = ({ dateText }: Props) => (
         Anup Vatyani
       </Link>
       , AMFI-registered Mutual Fund Distributor (ARN 106715)
-      {dateText ? <><br />{dateText}</> : null}
+      {dateText ? <><br /><span className="inline-flex items-center gap-1"><svg viewBox="0 0 24 24" className="h-3.5 w-3.5 text-emerald-600" fill="none" stroke="currentColor" strokeWidth={3} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7" /></svg>{dateText}</span></> : null}
     </p>
   </div>
 );
