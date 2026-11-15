@@ -3,6 +3,7 @@ import { GuidePage, h2, h3, p, a, ul, type Faq } from "@/components/GuidePage";
 import { FlowSteps } from "@/components/Diagrams";
 import MoneyMap from "@/components/MoneyMap";
 import { FundDirectory } from "@/components/FundDirectory";
+import { FundAlerts } from "@/components/FundAlerts";
 import { LOW_MIN, HIGH_MIN, FUNDS_LAST_CHECKED as LAST_CHECKED, FUND_COUNT, HOUSE_COUNT, fundPath } from "@/data/funds";
 
 const ALL = [...LOW_MIN, ...HIGH_MIN];
@@ -54,6 +55,7 @@ const FundList = () => {
       <h2 className={h2}>GIFT City mutual funds and AMC list</h2>
       <p className="font-body text-sm text-foreground-muted">Every fund we could confirm, with its minimum and who can invest. Search, filter, or switch to the table for full details and sources. Not exhaustive and not a ranking.</p>
       <FundDirectory />
+      <FundAlerts source="fund_list" className="my-8" />
 
       <h2 className={h2}>Inbound vs outbound in one picture</h2>
       <MoneyMap className="my-8" />

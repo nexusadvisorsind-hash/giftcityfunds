@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { GuidePage, h2, h3, p, a, ul, table, th, td, type Faq } from "@/components/GuidePage";
 import { FlowSteps } from "@/components/Diagrams";
 import type { SourceKey } from "@/components/OfficialSources";
-import { LOW_MIN, HIGH_MIN, FUNDS_LAST_CHECKED } from "@/data/funds";
+import { LOW_MIN, HIGH_MIN, FUNDS_LAST_CHECKED, fundPath } from "@/data/funds";
 
 export type CountryCode = "uae" | "uk" | "us" | "sg" | "ca" | "gulf";
 
@@ -80,13 +80,13 @@ export const NriCountryPage = (c: CountryPageProps) => {
       <h3 className={h3}>Lower minimums (USD 500 to USD 10,000)</h3>
       <ul className={ul}>
         {openLow.map((f) => (
-          <li key={f.scheme}><strong className="text-primary">{f.scheme}</strong> ({f.house}, {f.direction.toLowerCase()}): {f.minimum}.</li>
+          <li key={f.scheme}><strong className="text-primary">{fundPath(f) ? <Link to={fundPath(f)!} className={a}>{f.scheme}</Link> : f.scheme}</strong> ({f.house}, {f.direction.toLowerCase()}): {f.minimum}.</li>
         ))}
       </ul>
       <h3 className={h3}>AIFs and restricted funds (higher minimums)</h3>
       <ul className={ul}>
         {openHigh.map((f) => (
-          <li key={f.scheme}><strong className="text-primary">{f.scheme}</strong> ({f.house}): {f.minimum}.</li>
+          <li key={f.scheme}><strong className="text-primary">{fundPath(f) ? <Link to={fundPath(f)!} className={a}>{f.scheme}</Link> : f.scheme}</strong> ({f.house}): {f.minimum}.</li>
         ))}
       </ul>
       {closed.length > 0 && (
@@ -94,7 +94,7 @@ export const NriCountryPage = (c: CountryPageProps) => {
           <h3 className={h3}>Funds that say they do not accept {c.short} residents</h3>
           <ul className={ul}>
             {closed.map((f) => (
-              <li key={f.scheme}><strong className="text-primary">{f.scheme}</strong> ({f.house}). <a href={f.source.url} target="_blank" rel="noopener noreferrer" className={a}>Source</a></li>
+              <li key={f.scheme}><strong className="text-primary">{fundPath(f) ? <Link to={fundPath(f)!} className={a}>{f.scheme}</Link> : f.scheme}</strong> ({f.house}). <a href={f.source.url} target="_blank" rel="noopener noreferrer" className={a}>Source</a></li>
             ))}
           </ul>
         </>

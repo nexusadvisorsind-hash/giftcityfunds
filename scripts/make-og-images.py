@@ -15,7 +15,8 @@ BOLD = ImageFont.truetype(str(FONTS / "SpaceGrotesk_700Bold.ttf"), 62)
 LOGO = ImageFont.truetype(str(FONTS / "SpaceGrotesk_700Bold.ttf"), 34)
 SMALL = ImageFont.truetype(str(FONTS / "DMSans_500Medium.ttf"), 26)
 KICK = ImageFont.truetype(str(FONTS / "DMSans_500Medium.ttf"), 24)
-INK, TEAL, AMBER, WHITE, SLATE = (11, 23, 54), (20, 184, 166), (245, 166, 35), (255, 255, 255), (186, 198, 216)
+INK, WHITE, SLATE = (11, 23, 54), (255, 255, 255), (186, 198, 216)
+BLUE, BLUE_LIGHT, GREEN = (29, 78, 216), (147, 197, 253), (16, 185, 129)  # brand: Royal Blue, light blue text on navy, green accent
 W, H = 1200, 630
 
 skyline = Image.open(ROOT / "public/images/gift-city-skyline.jpg").convert("RGB")
@@ -30,20 +31,21 @@ def card(title: str, kicker: str) -> Image.Image:
     mask = mask.point(lambda v: int(v * 0.55))
     im.paste(sk, (W - sk.width, 0), mask)
     glow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    ImageDraw.Draw(glow).ellipse([820, -260, 1380, 300], fill=TEAL + (70,))
+    ImageDraw.Draw(glow).ellipse([820, -260, 1380, 300], fill=BLUE + (90,))
     im.paste(glow.filter(ImageFilter.GaussianBlur(90)), (0, 0), glow.filter(ImageFilter.GaussianBlur(90)))
     d = ImageDraw.Draw(im)
-    d.rectangle([70, 90, 150, 96], fill=AMBER)
-    d.text((70, 112), kicker, font=KICK, fill=TEAL)
+    d.rectangle([70, 90, 150, 96], fill=GREEN)
+    d.text((70, 112), kicker, font=KICK, fill=BLUE_LIGHT)
     lines = textwrap.wrap(title, width=26)[:4]
     y = 160
     for line in lines:
         d.text((70, y), line, font=BOLD, fill=WHITE)
         y += 76
     # footer
-    d.rounded_rectangle([70, 520, 124, 574], radius=12, fill=TEAL)
-    d.text((83, 522), "G", font=LOGO, fill=INK)
-    d.ellipse([112, 512, 128, 528], fill=AMBER)
+    d.rounded_rectangle([70, 520, 124, 574], radius=12, fill=BLUE)
+    d.text((83, 522), "G", font=LOGO, fill=WHITE)
+    d.ellipse([110, 510, 130, 530], fill=BLUE)
+    d.ellipse([113, 513, 127, 527], fill=GREEN)
     d.text((142, 516), "giftcityfunds.in", font=SMALL, fill=WHITE)
     d.text((142, 548), "By Anup Vatyani · AMFI-registered MFD · ARN 106715", font=SMALL, fill=SLATE)
     return im

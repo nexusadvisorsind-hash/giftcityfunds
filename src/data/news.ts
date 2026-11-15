@@ -10,9 +10,33 @@ export interface NewsItem {
   more?: [string, string]; // related guide on this site
 }
 
-export const NEWS_UPDATED = "2 November 2026";
+export const NEWS_UPDATED = "15 November 2026";
 
 export const NEWS: NewsItem[] = [
+  {
+    date: "2026-11-13",
+    title: "Franklin Templeton launches its first GIFT City fund, investing in US shares",
+    summary: "Franklin Templeton Asset Management (IFSC) opened the Franklin US Equity IFSC Fund, a retail outbound fund that invests in the FTGF Putnam US Research Fund. The new fund offer runs from 11 November to 11 December 2026, with a USD 5,000 minimum and top-ups in multiples of USD 500.",
+    tag: "Funds",
+    source: { label: "Angel One", url: "https://www.angelone.in/news/mutual-funds/franklin-templeton-introduces-first-outbound-fund-from-gift-city-for-us-stock-investments" },
+    more: ["/gift-city-fund/franklin-us-equity-ifsc-fund", "Franklin US Equity IFSC Fund"],
+  },
+  {
+    date: "2026-11-13",
+    title: "Government notifies commodity trading contracts as a financial product in GIFT IFSC",
+    summary: "The Centre notified commodity trading contracts entered into by IFSC units as a financial product under the IFSCA Act, 2019, to attract commodity trading firms to GIFT City. It does not change anything for fund investors.",
+    tag: "Regulation",
+    source: { label: "Business Standard", url: "https://www.business-standard.com/markets/news/govt-notifies-commodity-contracts-as-financial-products-at-gift-ifsc-126111301641_1.html" },
+    more: ["/gift-city-rules-updates", "GIFT City rules updates"],
+  },
+  {
+    date: "2026-11-09",
+    title: "IFSCA proposes rules for people who promote GIFT City financial products",
+    summary: "A consultation paper proposes that IFSC institutions using non-employees to market their products must check them, list them publicly and stay responsible for them. These \"financial solicitation professionals\" would have to disclose whose product they offer, give no assurance of returns and never hold client money. Comments are invited until 30 November 2026; the rules are not yet in force.",
+    tag: "Regulation",
+    source: { label: "TaxGuru (IFSCA consultation)", url: "https://taxguru.in/finance/ifsca-proposes-financial-solicitation-professionals-guidelines-2026-comments-invited-30-november.html" },
+    more: ["/gift-city-rules-updates", "GIFT City rules updates"],
+  },
   {
     date: "2026-11-02",
     title: "Razorpay gets final IFSCA licence for cross-border payments from GIFT City",

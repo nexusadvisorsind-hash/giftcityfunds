@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { GuidePage, h2, p, a, ul, table, th, td, type Faq } from "@/components/GuidePage";
 import NotFound from "@/pages/NotFound";
+import { FundAlerts } from "@/components/FundAlerts";
 import {
   FUND_PAGES,
   FUNDS_LAST_CHECKED,
@@ -174,6 +175,8 @@ const FundDetail = () => {
           </ul>
         </>
       )}
+
+      <FundAlerts source={`fund:${f.slug}`} className="mt-10" />
 
       <p className={p + " mt-6"}>
         Put this fund next to others with the <Link to="/gift-city-fund-compare" className={a}>comparison tool</Link>, see the full <Link to="/gift-city-fund-list" className={a}>GIFT City fund list</Link>, or check <Link to="/gift-city-route-checker" className={a}>which route applies to you</Link>.

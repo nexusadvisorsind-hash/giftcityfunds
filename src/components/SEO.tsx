@@ -65,6 +65,7 @@ const organizationSchema = {
     "sameAs": ["https://www.linkedin.com/in/anup-vatyani-081b4142"]
   },
   "description": "Informational platform about GIFT City and IFSC mutual fund frameworks. No investment advice.",
+  "address": { "@type": "PostalAddress", "addressLocality": "Ahmedabad", "addressRegion": "Gujarat", "addressCountry": "IN" },
   "contactPoint": [{
     "@type": "ContactPoint",
     "email": "info@giftcityfunds.in",
@@ -127,7 +128,7 @@ const pageSchemas = (schema ? (Array.isArray(schema) ? schema : [schema]) : []).
       <title>{title}</title>
       <meta name="title" content={title} />
       <meta name="description" content={description} />
-      <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
+      <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"} />
       
       {/* Canonical URL */}
       <link rel="canonical" href={canonical} />

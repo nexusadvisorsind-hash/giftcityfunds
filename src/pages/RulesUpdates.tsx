@@ -12,8 +12,14 @@ interface Update {
 
 // Newest first. Add a row whenever a rule that affects investors changes, and
 // update LAST_REVIEWED. Keep each entry factual and dated.
-const LAST_REVIEWED = "2 November 2026";
+const LAST_REVIEWED = "15 November 2026";
 const UPDATES: Update[] = [
+  {
+    date: "2026-11-09", label: "9 November 2026 (proposed)", body: "IFSCA",
+    change: "Consultation paper on engaging \"financial solicitation professionals\": IFSC institutions that use non-employees to market their products would have to vet them, publish a list of them and remain responsible for their conduct. These individuals must disclose whose product they offer, give no assurance of returns and never hold client money. Comments close 30 November 2026; not yet in force.",
+    forYou: "If adopted, you could check a fund house's website to confirm that the person promoting its GIFT City fund is engaged by it.",
+    link: ["/gift-city-news", "GIFT City news"],
+  },
   {
     date: "2026-10-15", label: "15 October 2026", body: "Ministry of Commerce and Industry",
     change: "SEZ (Fourth Amendment) Rules, 2026 notified: a fund in GIFT IFSC can rely on its fund management entity's provisional space offer and lease deed.",

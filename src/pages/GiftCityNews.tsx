@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { GuidePage, p, a, type Faq } from "@/components/GuidePage";
 import { NEWS, NEWS_UPDATED, formatNewsDate } from "@/data/news";
+import { FundAlerts } from "@/components/FundAlerts";
 
 const faqs: Faq[] = [
   { q: "What is the latest news on GIFT City?", a: `The most recent items here are ${NEWS[0].title.toLowerCase()} (${formatNewsDate(NEWS[0].date)}) and ${NEWS[1].title.toLowerCase()} (${formatNewsDate(NEWS[1].date)}). This page was last updated on ${NEWS_UPDATED}.` },
@@ -42,6 +43,8 @@ const GiftCityNews = () => (
     <p className={p}>
       <strong className="text-primary">The short version.</strong> The GIFT City developments that matter to NRIs and Indian investors, newest first. Each is summarised in plain English and linked to its original source. For changes to the rules themselves, see <Link to="/gift-city-rules-updates" className={a}>GIFT City rule changes</Link>.
     </p>
+
+    <FundAlerts source="news" className="mt-6" />
 
     <ol className="mt-8 space-y-4 list-none p-0">
       {NEWS.map((n) => (

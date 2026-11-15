@@ -3,7 +3,7 @@ import { SEO } from "@/components/SEO";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { openCookieSettings } from "@/lib/analytics";
 
-const UPDATED = "2 November 2026";
+const UPDATED = "15 November 2026";
 
 const h2 = "font-heading font-semibold text-2xl text-foreground mb-4";
 const p = "font-body text-foreground-muted";
@@ -27,14 +27,14 @@ const dataRows = [
     keep: "Until you unsubscribe",
   },
   {
-    where: "Newsletter sign-up (Insights page)",
-    what: "Email address",
-    why: "To send new articles by email",
+    where: "Newsletter sign-up (Insights page) and fund launch alerts (home, fund list, fund and news pages)",
+    what: "Email address, and the page you signed up on",
+    why: "To send new articles and alerts about GIFT City fund launches and rule changes by email",
     basis: "Your consent, given by subscribing",
     keep: "Until you unsubscribe",
   },
   {
-    where: "Both forms, automatically",
+    where: "All forms, automatically",
     what: "IP address and browser type",
     why: "To detect spam and misuse of the forms",
     basis: "Collected with the form you choose to submit",

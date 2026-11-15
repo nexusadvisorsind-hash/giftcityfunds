@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { SEO } from "@/components/SEO";
 import { SectionHead, SectionLabel } from "@/components/SectionHead";
+import { FundAlerts } from "@/components/FundAlerts";
 import { ArrowRight, ArrowDown, FileText, Globe2, Calculator, Route, ListChecks } from "lucide-react";
 import { PageFaqs, type PageFaq } from "@/components/PageFaqs";
 import LatestNews from "@/components/LatestNews";
@@ -113,6 +114,12 @@ const Home = () => {
         </section>
 
         <LatestNews />
+
+        <section className="pb-16 md:pb-20 bg-surface">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <FundAlerts source="home" />
+          </div>
+        </section>
 
         {/* Frequently asked: answered, with FAQPage schema */}
         <section className="py-16 md:py-20 bg-white border-t border-border">
