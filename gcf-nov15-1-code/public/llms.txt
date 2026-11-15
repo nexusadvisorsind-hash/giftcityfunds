@@ -1,0 +1,118 @@
+# GIFT City Funds
+
+> Plain-English educational guide to GIFT City (IFSC) mutual funds, AIFs and PMS structures for NRIs, OCIs and resident Indians. Written by Anup Vatyani, AMFI-registered Mutual Fund Distributor (ARN 106715). Informational only; not investment, tax or legal advice.
+
+## Guides
+
+- [What Is GIFT City & IFSC?](https://giftcityfunds.in/what-is-gift-city): India's international financial services centre and its regulator, IFSCA.
+- [GIFT City Fund Categories](https://giftcityfunds.in/funds-explained): Mutual Fund FoFs, AIFs, PMS and feeder funds compared.
+- [Who GIFT City Funds Are For](https://giftcityfunds.in/who-its-for): Fit for NRIs, OCIs and resident Indians.
+- [Regulation and Taxation](https://giftcityfunds.in/taxation): IFSCA oversight, Section 10(4D), LRS and TCS.
+- [How to Invest in GIFT City Funds](https://giftcityfunds.in/how-to-invest): Step-by-step for NRIs and residents: structures, LRS vs direct USD, KYC document checklist, remittance, allotment, redemption.
+- [GIFT City Funds vs Regular Mutual Funds](https://giftcityfunds.in/gift-city-funds-vs-mutual-funds): Regulator, currency, minimums, eligibility and tax compared.
+- [Risks of GIFT City Funds](https://giftcityfunds.in/gift-city-funds-risks): Market, currency, liquidity, tax and regulatory risks.
+- [GIFT City Insurance for NRIs](https://giftcityfunds.in/gift-city-insurance): US Dollar life and term policies from IFSC insurance offices, IFSCA regulation, the Section 10(10D) change from 1 April 2025, and tax abroad.
+- [GIFT City Bonds](https://giftcityfunds.in/gift-city-bonds): USD, masala and green bonds on India INX and NSE IX; USD 70.31 billion cumulative listings by 31 March 2026; who can buy.
+- [Redemption and Repatriation](https://giftcityfunds.in/gift-city-redemption-repatriation): How to withdraw from a GIFT City fund, timelines, where proceeds go, and the 180-day rule for residents.
+- [Moving Country with GIFT City Investments](https://giftcityfunds.in/gift-city-moving-country): Returning to India (FEMA 6(4), RNOR), moving abroad, moving between countries, PFIC and exit taxes.
+- [GIFT City Rule Changes](https://giftcityfunds.in/gift-city-rules-updates): Dated log of IFSCA, RBI, SEBI and tax changes that affect investors, reviewed monthly.
+- [GIFT City Document Checklist](https://giftcityfunds.in/gift-city-document-checklist): Interactive KYC checklist by status (NRI, OCI, resident), country and product.
+- [GIFT City Funds Returns and Performance](https://giftcityfunds.in/gift-city-funds-returns): Where to find NAVs and factsheets, how the rupee and fees change returns, and how to review a fund fairly. No rankings.
+- [Zerodha, Groww and GIFT City](https://giftcityfunds.in/gift-city-funds-zerodha-groww): IFSCA approvals of June 2026 for Zerodha, Upstox, Groww and Angel One (US stocks and ETFs), and how GIFT City funds are bought instead.
+- [GIFT City News](https://giftcityfunds.in/gift-city-news): Dated, sourced GIFT City news for investors: new funds, IFSCA decisions, banking and market updates.
+- [FAQs](https://giftcityfunds.in/faqs): Short answers to common questions.
+- [GIFT City Fund List 2026](https://giftcityfunds.in/gift-city-fund-list): Every public GIFT City fund we could verify, from 21 fund houses (PPFAS, HDFC, DSP, JioBlackRock, Edelweiss, Tata and more): minimum, who can invest (residents or NRIs), inbound or outbound, with sources. Facts only, not ranked.
+- [GIFT City Outbound Funds](https://giftcityfunds.in/gift-city-outbound-funds): Every public GIFT City fund that invests outside India (mostly for resident Indians under LRS), with minimums and eligibility.
+- [GIFT City Inbound Funds](https://giftcityfunds.in/gift-city-inbound-funds): Every public GIFT City fund that invests in India in US Dollars, for NRIs and foreign investors.
+- [Aditya Birla Sun Life GIFT City Funds](https://giftcityfunds.in/aditya-birla-sun-life-gift-city-funds): ABSL Emerging Market Equity Fund and India Growth Fund, both from USD 500.
+- [Edelweiss GIFT City Funds](https://giftcityfunds.in/edelweiss-gift-city-funds): Greater China and US Technology funds (USD 5,000, residents and NRIs) and an India multimanager AIF.
+- [Mirae Asset GIFT City Funds](https://giftcityfunds.in/mirae-asset-gift-city-funds): Global Allocation, Global Advantage and India Equity Allocation funds.
+- [ABSL Emerging Market Equity Fund](https://giftcityfunds.in/gift-city-fund/absl-emerging-market-equity-fund): Aditya Birla Sun Life, outbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [ABSL India Growth Fund](https://giftcityfunds.in/gift-city-fund/absl-india-growth-fund): Aditya Birla Sun Life, inbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [DSP Global Equity Fund](https://giftcityfunds.in/gift-city-fund/dsp-global-equity-fund): DSP, outbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [Edelweiss Greater China Equity Fund](https://giftcityfunds.in/gift-city-fund/edelweiss-greater-china-equity-fund): Edelweiss, outbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [Edelweiss US Technology Equity Fund](https://giftcityfunds.in/gift-city-fund/edelweiss-us-technology-equity-fund): Edelweiss, outbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [HDFC International Developed Markets Equity Fund](https://giftcityfunds.in/gift-city-fund/hdfc-international-developed-markets-equity-fund): HDFC, outbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [HDFC International Emerging Markets Equity Fund](https://giftcityfunds.in/gift-city-fund/hdfc-international-emerging-markets-equity-fund): HDFC, outbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [Franklin US Equity IFSC Fund](https://giftcityfunds.in/gift-city-fund/franklin-us-equity-ifsc-fund): Franklin Templeton, outbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [JioBlackRock Advantage World Equity Fund](https://giftcityfunds.in/gift-city-fund/jioblackrock-advantage-world-equity-fund): JioBlackRock, outbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [Marcellus Global Equities Fund](https://giftcityfunds.in/gift-city-fund/marcellus-global-equities-fund): Marcellus, outbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [Parag Parikh IFSC S&P 500 Fund of Fund](https://giftcityfunds.in/gift-city-fund/parag-parikh-ifsc-sp-500-fund-of-fund): PPFAS (Parag Parikh), outbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [Parag Parikh IFSC Nasdaq 100 Fund of Fund](https://giftcityfunds.in/gift-city-fund/parag-parikh-ifsc-nasdaq-100-fund-of-fund): PPFAS (Parag Parikh), outbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [Parag Parikh India Flexi Cap Fund (IFSC)](https://giftcityfunds.in/gift-city-fund/parag-parikh-india-flexi-cap-fund-ifsc): PPFAS (Parag Parikh), inbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [Sundaram India Mid Cap GIFT](https://giftcityfunds.in/gift-city-fund/sundaram-india-mid-cap-gift): Sundaram, inbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [Tata India Dynamic Equity Fund](https://giftcityfunds.in/gift-city-fund/tata-india-dynamic-equity-fund): Tata, inbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [Bandhan IFSC India Funds](https://giftcityfunds.in/gift-city-fund/bandhan-ifsc-india-funds): Bandhan, inbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [Baroda BNP Paribas GIFT US Small Cap Fund](https://giftcityfunds.in/gift-city-fund/baroda-bnp-paribas-gift-us-small-cap-fund): Baroda BNP Paribas, outbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [Edelweiss India Multimanager Equity Fund](https://giftcityfunds.in/gift-city-fund/edelweiss-india-multimanager-equity-fund): Edelweiss, inbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [Equitree Emerging Opportunities Fund](https://giftcityfunds.in/gift-city-fund/equitree-emerging-opportunities-fund): Equitree Capital, inbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [HDFC IFSC India Feeder Funds](https://giftcityfunds.in/gift-city-fund/hdfc-ifsc-india-feeder-funds): HDFC, inbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [Mirae Asset Global Allocation Fund](https://giftcityfunds.in/gift-city-fund/mirae-asset-global-allocation-fund): Mirae Asset, outbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [Mirae Asset Global Advantage Fund](https://giftcityfunds.in/gift-city-fund/mirae-asset-global-advantage-fund): Mirae Asset, outbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [Motilal Oswal GIFT City India Equity Fund of Funds](https://giftcityfunds.in/gift-city-fund/motilal-oswal-gift-city-india-equity-fof): Motilal Oswal, inbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [Nippon India Large Cap Fund GIFT](https://giftcityfunds.in/gift-city-fund/nippon-india-large-cap-fund-gift): Nippon India, inbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [Phillip India Billion Opportunities Fund](https://giftcityfunds.in/gift-city-fund/phillip-india-billion-opportunities-fund): Phillip Capital, inbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [The Wealth Company IFSC FoF](https://giftcityfunds.in/gift-city-fund/the-wealth-company-ifsc-fof): The Wealth Company, inbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [Unifi Capital Rangoli India Fund](https://giftcityfunds.in/gift-city-fund/unifi-rangoli-india-fund): Unifi Capital, inbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [Compare GIFT City Funds](https://giftcityfunds.in/gift-city-fund-compare): Up to four GIFT City funds side by side: minimum, direction, who can invest, excluded countries, source. Facts only.
+- [GIFT City in Numbers 2026](https://giftcityfunds.in/gift-city-in-numbers): IFSCA statistics with dates and sources: 235 fund managers, 401 schemes, USD 45.08 bn commitments, 16,150 investors (30 June 2026), retail investor growth.
+- [Dollar vs Rupee Calculator](https://giftcityfunds.in/usd-vs-inr-calculator): The currency effect on money held in US Dollars versus rupees, at a rate change the user chooses.
+- [Parag Parikh GIFT City Funds](https://giftcityfunds.in/parag-parikh-gift-city-fund): PPFAS IFSC S&P 500 and Nasdaq 100 FoFs (USD 500 minimum) and India Flexi Cap.
+- [HDFC GIFT City Funds](https://giftcityfunds.in/hdfc-gift-city-funds): HDFC AMC International (IFSC) outbound funds for residents and India feeder funds for NRIs.
+- [DSP GIFT City Funds](https://giftcityfunds.in/dsp-gift-city-funds): DSP Global Equity Fund for residents under LRS and DSP's India funds.
+- [Tata GIFT City Fund](https://giftcityfunds.in/tata-gift-city-fund): Tata India Dynamic Equity Fund for NRIs and foreign investors from USD 500.
+- [Is There a SIP in GIFT City Funds?](https://giftcityfunds.in/gift-city-sip): No. GIFT City funds have no SIP or monthly auto-debit; how lump-sum and additional investments work, and how LRS and TCS apply.
+- [GIFT City Funds vs International Mutual Funds](https://giftcityfunds.in/gift-city-vs-international-mutual-funds): SEBI USD 7 billion overseas cap, currency, minimums, SIP (not offered in GIFT City), LRS and TCS compared.
+- [GIFT City ETFs, US Stocks and ETFs Through GIFT City](https://giftcityfunds.in/gift-city-us-stocks-etfs): IFSC broker route, LRS, dividend withholding, US estate tax, Indian reporting.
+- [Pros and Cons of GIFT City Funds](https://giftcityfunds.in/gift-city-funds-pros-and-cons): Advantages and drawbacks for NRIs and resident Indians.
+- [What Is IFSCA?](https://giftcityfunds.in/what-is-ifsca): The unified regulator for GIFT IFSC, set up on 27 April 2020 under the IFSCA Act, 2019.
+- [GIFT City vs Singapore vs Dubai](https://giftcityfunds.in/gift-city-vs-singapore-dubai): The three fund centres compared for Indian and NRI investors.
+- [GIFT Nifty and GIFT City Exchanges](https://giftcityfunds.in/gift-city-markets-gift-nifty): GIFT Nifty vs SGX Nifty, trading hours, who can trade, NSE IX, India INX, IIBX.
+- [Family Offices, FPIs, VC Funds and Wealth Management](https://giftcityfunds.in/gift-city-family-office-fpi): Family investment funds, IFSC FPIs and SEBI's 2024 NRI change, venture capital schemes, PMS.
+- [Banks in GIFT City and Business Setup](https://giftcityfunds.in/gift-city-banks-and-business-setup): IFSC Banking Units, foreign currency accounts, company setup, SEZ vs DTA, leasing.
+- [GIFT City Guide](https://giftcityfunds.in/gift-city-guide): Ownership, area, location, metro, liquor rules, jobs and property.
+- [GIFT City AIF](https://giftcityfunds.in/gift-city-aif): Restricted and venture capital schemes, USD 150,000 minimum, vs SEBI Category I/II/III.
+- [GIFT City PMS](https://giftcityfunds.in/gift-city-pms): USD 75,000 minimum, discretionary vs non-discretionary, vs domestic PMS.
+- [GIFT City Feeder Funds](https://giftcityfunds.in/gift-city-feeder-funds): Inbound and outbound feeders; feeder vs direct FPI.
+- [GIFT City Minimum Investment and Limits](https://giftcityfunds.in/gift-city-minimum-investment): Every minimum, LRS limit and TCS threshold in one table.
+- [GIFT City Funds for NRIs](https://giftcityfunds.in/gift-city-funds-for-nri): Complete NRI guide with full explanations for the UAE, Gulf, UK, US (PFIC, QEF, mark-to-market), Canada, Singapore and Australia; minimums from USD 500.
+- [GIFT City Funds for UAE NRIs](https://giftcityfunds.in/gift-city-funds-for-uae-nris): Investing from Dubai or Abu Dhabi: no UAE personal tax, TRC, India's deemed-resident rule, funds that accept UAE residents.
+- [GIFT City Funds for Gulf NRIs](https://giftcityfunds.in/gift-city-funds-for-gulf-nris): Saudi Arabia, Qatar, Kuwait, Bahrain and Oman: local tax country by country, Oman's 5% income tax from 2028, deemed-resident rule, documents (Iqama, QID, Civil ID, CPR).
+- [GIFT City Funds for UK NRIs](https://giftcityfunds.in/gift-city-funds-for-uk-nris): UK offshore fund rules, reporting fund status, CGT rates and the 4-year FIG regime.
+- [GIFT City Funds for US NRIs](https://giftcityfunds.in/gift-city-funds-for-us-nris): Funds that exclude US persons, PFIC and Form 8621, QEF and mark-to-market, FBAR and Form 8938.
+- [GIFT City Funds for Singapore NRIs](https://giftcityfunds.in/gift-city-funds-for-singapore-nris): No capital gains tax, foreign-sourced income for individuals, Certificate of Residence, currency risk.
+- [GIFT City Funds for Canada NRIs](https://giftcityfunds.in/gift-city-funds-for-canada-nris): Funds that exclude Canadian residents, 50% capital gains inclusion, T1135 and section 94.1.
+- [How to Invest Abroad from India](https://giftcityfunds.in/invest-abroad-from-india): Four routes for residents compared: international mutual funds and the SEBI cap, India-listed global ETFs, US stocks under LRS, GIFT City funds.
+- [GIFT City Funds for OCIs](https://giftcityfunds.in/gift-city-funds-for-oci): OCI eligibility, documents and citizenship rules.
+- [GIFT City Funds for Resident Indians](https://giftcityfunds.in/gift-city-funds-for-resident-indians): LRS, TCS, what residents can and cannot do, Schedule FA.
+- [GIFT City Glossary](https://giftcityfunds.in/gift-city-glossary): 27 terms (IFSC, FME, LRS, TCS, PFIC, inbound/outbound) defined.
+
+## Tools
+
+- [TCS calculator for GIFT City investments](https://giftcityfunds.in/insights/lrs-tcs-gift-city#calculator): 20% TCS on LRS remittances above ₹10 lakh a year (FY 2026-27), with a calculator.
+- [GIFT City Route Checker](https://giftcityfunds.in/gift-city-route-checker): Four questions to see whether LRS, direct USD, NRE or NRO rules apply, and PFIC for US persons.
+
+## Insights articles
+
+- [How to Open a GIFT City Bank Account (IFSC Banking Unit)](https://giftcityfunds.in/insights/how-to-open-gift-city-bank-account): Who can open one, documents, funding and what to compare.
+- [GIFT City Fixed Deposits vs NRE and FCNR Deposits](https://giftcityfunds.in/insights/gift-city-fd-vs-nre-fcnr): Currency, tenure, Indian tax on interest and returning to India.
+- [Returning to India? What Happens to Your GIFT City Investments](https://giftcityfunds.in/insights/returning-to-india-gift-city-investments): RNOR status, FEMA holdings rules, LRS for new money, checklist.
+- [LRS and TCS for GIFT City Funds](https://giftcityfunds.in/insights/lrs-tcs-gift-city): USD 250,000 LRS limit, no TCS up to ₹10 lakh, 20% above, claiming it back, calculator.
+- [AIF vs PMS vs Mutual Fund FoF: Choosing a GIFT City Structure](https://giftcityfunds.in/insights/aif-vs-pms-vs-fof): A side-by-side comparison of the three main GIFT City fund structures — AIF, PMS and Mutual Fund FoF — to help you choose the right one for your ticket size and goals.
+- [IFSCA vs SEBI: Who Actually Regulates Your GIFT City Fund](https://giftcityfunds.in/insights/ifsca-vs-sebi): A clear explanation of how IFSCA regulates GIFT City IFSC funds, how that differs from SEBI's role for domestic Indian mutual funds, and what it means for investor protection.
+- [GIFT City Fund vs NRE/NRO Investing: A Straight Comparison](https://giftcityfunds.in/insights/gift-city-vs-nre-nro): How investing through a GIFT City fund compares with the traditional NRE and NRO account route for NRIs — currency, repatriation, tax and structure differences explained.
+- [GIFT City vs Direct Foreign Investment: What Actually Changes for an NRI](https://giftcityfunds.in/insights/gift-city-vs-direct-foreign): What changes when an NRI invests through a GIFT City IFSC fund instead of investing directly in a foreign brokerage account or offshore fund.
+- [Ten Questions NRIs Actually Ask About GIFT City Funds](https://giftcityfunds.in/insights/ten-questions-nris-ask): Ten plain-English answers to the questions NRIs most commonly ask before investing in a GIFT City IFSC fund.
+- [PFIC Explained: Why It Matters for Every US-Based NRI Investor](https://giftcityfunds.in/insights/pfic-explained): A plain-English explanation of PFIC status, why it applies to many foreign funds, and why GIFT City fund structure matters for US-based NRIs and US persons.
+
+## About
+
+- [About Anup Vatyani](https://giftcityfunds.in/about): Contributor background and registration (MFD ARN 106715).
+- [Contact](https://giftcityfunds.in/contact): Contact form and details.
+
+## Optional
+
+- [Disclaimer](https://giftcityfunds.in/disclaimer)
+- [Privacy Policy](https://giftcityfunds.in/privacy-policy)
+- [Terms of Use](https://giftcityfunds.in/terms-of-use)
+- [Accessibility Statement](https://giftcityfunds.in/accessibility-statement)
