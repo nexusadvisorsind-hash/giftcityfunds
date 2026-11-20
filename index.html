@@ -99,6 +99,7 @@
     <a href="#main-content" class="skip-to-content" aria-label="Skip to main content">Skip to Content</a>
     <div id="root"></div>
     <!-- Load main app script with high priority -->
+    <script>try{if(!localStorage.getItem("gcf-analytics-consent"))document.documentElement.classList.add("gcf-ask")}catch(e){document.documentElement.classList.add("gcf-ask")}</script>
     <script type="module" src="/src/main.tsx" fetchpriority="high"></script>
   </body>
 </html>

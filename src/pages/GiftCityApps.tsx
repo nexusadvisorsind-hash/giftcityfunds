@@ -13,11 +13,11 @@ const GiftCityApps = () => (
   <GuidePage
     path="/gift-city-funds-zerodha-groww"
     headline="GIFT City on Zerodha, Groww, Upstox and Angel One: What the Apps Offer"
-    seoTitle="GIFT City Funds on Zerodha & Groww: What the Apps Offer (2026)"
-    description="Can you buy GIFT City funds on Zerodha or Groww? What IFSCA approved in 2026, what the apps offer (US stocks and ETFs), and how GIFT City funds are bought instead."
+    seoTitle="Groww & Zerodha GIFT City: US Stocks, ETFs and Funds (2026)"
+    description="Groww opened US stocks and ETFs via GIFT City to all users on 22 October 2026. What Groww and Zerodha offer, and how GIFT City funds are bought instead."
     crumb="Zerodha, Groww and GIFT City"
     datePublished="2026-10-16"
-    dateModified="2026-11-02"
+    dateModified="2026-11-19"
     faqs={faqs}
     sources={["ifsca", "ifscaDirectory", "rbiLrs"]}
   >

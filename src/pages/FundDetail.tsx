@@ -22,6 +22,14 @@ const directionText = (f: Fund) =>
 const plural = (f: Fund) => (f.count ?? 1) > 1;
 
 // Keep titles inside what search results show (about 60 characters).
+// Hand-written titles where searchers use words the fund name lacks.
+const TITLE_OVERRIDE: Record<string, string> = {
+  "franklin-us-equity-ifsc-fund": "Franklin Templeton GIFT City Fund (NFO): Minimum USD 5,000",
+};
+const DESC_OVERRIDE: Record<string, string> = {
+  "franklin-us-equity-ifsc-fund": "Franklin Templeton's GIFT City fund, Franklin US Equity IFSC Fund: NFO 11 Nov to 11 Dec 2026, minimum USD 5,000, for Indian investors under LRS.",
+};
+
 const titleFor = (n: string) => {
   const opts = /gift/i.test(n)
     ? [`${n}: Minimum, Who Can Invest`, `${n}: Minimum & Eligibility`, `${n}: Minimum`, n]
@@ -92,8 +100,8 @@ const FundDetail = () => {
     <GuidePage
       path={path}
       headline={`${n}: GIFT City ${f.direction} ${many ? "Funds" : "Fund"} Facts`}
-      seoTitle={titleFor(n)}
-      description={`${n}: ${dir} GIFT City ${many ? "funds" : "fund"} from ${f.house}. Minimum ${f.minimum.split(/;|\(|, then| or /)[0].trim()}. Who can invest, what it holds and the source.`}
+      seoTitle={TITLE_OVERRIDE[f.slug!] ?? titleFor(n)}
+      description={DESC_OVERRIDE[f.slug!] ?? `${n}: ${dir} GIFT City ${many ? "funds" : "fund"} from ${f.house}. Minimum ${f.minimum.split(/;|\(|, then| or /)[0].trim()}. Who can invest, what it holds and the source.`}
       crumb={n}
       datePublished="2026-11-04"
       reviewed={`Last checked ${FUNDS_LAST_CHECKED}`}

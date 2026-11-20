@@ -8,6 +8,7 @@ const faqs: Faq[] = [
   { q: "Which GIFT City funds are available in India for Indian residents?", a: "Resident Indians can invest under LRS in outbound GIFT City funds, which invest in US or global markets. Most inbound funds, which invest in India, are for NRIs and foreign investors only. The fund list shows which fund houses run outbound schemes; check each scheme's eligibility." },
   { q: "Can resident Indians invest in GIFT City funds?", a: "Yes, through the Liberalised Remittance Scheme. Resident Indians can invest in outbound GIFT City funds and other permitted IFSC products, up to USD 250,000 a financial year across all LRS purposes." },
   { q: "Can resident Indians invest in inbound GIFT City funds?", a: "Usually not. Inbound funds that invest in India are generally meant for NRIs and foreign investors, and many exclude Indian residents. Residents normally use outbound funds or domestic Indian mutual funds." },
+  { q: "How does a resident Indian open a GIFT City account?", a: "There is no single GIFT City account. You open an account (a folio) with the fund house, or with an IFSC broker or bank, by completing its KYC: PAN, proof of Indian address, an Indian bank statement, often a passport, and a FATCA/CRS form. You then remit in USD from your Indian bank under LRS using Form A2. Each provider sets its own document list." },
   { q: "How much TCS will I pay?", a: "For FY 2026-27, no TCS on the first ₹10 lakh of LRS remittances in the year, then 20% on investment remittances above it. TCS is credited back against your income tax." },
   { q: "What do resident Indians need to report?", a: "Show the GIFT City holding in Schedule FA of your income tax return every year, and report any income or gains. Missing Schedule FA can attract heavy penalties." },
   { q: "Can resident Indians trade GIFT Nifty?", a: "Generally no. LRS does not allow remittances for margin trading or derivatives, so resident individuals cannot trade GIFT Nifty futures." },
@@ -17,10 +18,11 @@ const ResidentGuide = () => (
   <GuidePage
     path="/gift-city-funds-for-resident-indians"
     headline="GIFT City Funds for Resident Indians: LRS, TCS and How to Invest Abroad"
-    seoTitle="GIFT City Funds for Resident Indians: LRS, TCS, How to Invest"
-    description="How resident Indians invest through GIFT City: LRS up to USD 250,000 a year, 20% TCS above ₹10 lakh and claiming it back, Schedule FA, with a calculator."
+    seoTitle="GIFT City for Resident Indians: Account, LRS Limit & TCS (2026)"
+    description="How a resident Indian opens a GIFT City account: KYC, LRS up to USD 250,000 a year, 20% TCS above ₹10 lakh and claiming it back, and Schedule FA."
     crumb="GIFT City Funds for Resident Indians"
     datePublished="2026-10-09"
+    dateModified="2026-11-19"
     faqs={faqs}
     sources={["rbiLrs", "incomeTax", "ifscaDirectory"]}
   >
@@ -55,6 +57,21 @@ const ResidentGuide = () => (
     </div>
 
     <TcsCalculator />
+
+    <h2 className={h2}>How a resident Indian opens a GIFT City account</h2>
+    <p className={p}>
+      There is no single "GIFT City account". You open an account with the <strong className="text-primary">fund house</strong> (for a fund), or with an IFSC broker or bank (for US stocks or USD deposits), by completing its KYC. Typically you need:
+    </p>
+    <ul className={ul}>
+      <li><strong className="text-primary">PAN</strong> (mandatory for resident Indians)</li>
+      <li>Proof of Indian address and an Indian bank statement for the account the money comes from</li>
+      <li>A passport, which many providers ask for</li>
+      <li>A FATCA/CRS self-certification form</li>
+      <li>At your bank, when you send the money: <strong className="text-primary">Form A2 and the LRS declaration</strong></li>
+    </ul>
+    <p className={p}>
+      Each provider sets its own list, so confirm with it first. See the full <Link to="/gift-city-document-checklist" className={a}>GIFT City document checklist</Link>, and for a USD bank account, <Link to="/insights/how-to-open-gift-city-bank-account" className={a}>how to open a GIFT City bank account</Link>.
+    </p>
 
     <h2 className={h2}>Step by step</h2>
     <FlowSteps

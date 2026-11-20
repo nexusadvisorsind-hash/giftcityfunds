@@ -30,8 +30,8 @@ const FundList = () => {
     <GuidePage
       path="/gift-city-fund-list"
       headline="GIFT City Fund List 2026: AMCs and Fund Houses, Inbound and Outbound"
-      seoTitle={`GIFT City Funds List 2026: ${FUND_COUNT} Funds, ${HOUSE_COUNT} AMCs, Inbound & Outbound`}
-      description={`GIFT City fund list: ${FUND_COUNT} funds from ${HOUSE_COUNT} fund houses, including PPFAS, HDFC, DSP and Tata, with minimums, who can invest and a source for each.`}
+      seoTitle={`GIFT City Mutual Funds List 2026: ${FUND_COUNT} Funds from ${HOUSE_COUNT} AMCs`}
+      description={`GIFT City mutual funds list: ${FUND_COUNT} funds from ${HOUSE_COUNT} fund houses, including PPFAS, HDFC, DSP and Tata, with minimums, who can invest and a source for each.`}
       crumb="GIFT City Fund List"
       datePublished="2026-10-08"
       dateModified="2026-11-05"

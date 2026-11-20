@@ -3,6 +3,14 @@ import App, { preloadForPath } from './App.tsx'
 import './index.css'
 
 const root = document.getElementById("root")!;
+
+// Moving parts (the home facts strip) start on the visitor's first scroll,
+// tap, mouse move or key press, so the first screen is settled as soon as it loads.
+const startMotion = () => {
+  document.documentElement.classList.add("gcf-moved");
+  ["scroll", "pointerdown", "pointermove", "keydown", "touchstart"].forEach((e) => window.removeEventListener(e, startMotion));
+};
+["scroll", "pointerdown", "pointermove", "keydown", "touchstart"].forEach((e) => window.addEventListener(e, startMotion, { passive: true }));
 const normalize = (p: string) => (p.length > 1 ? p.replace(/\/+$/, "") : p);
 
 // Pages are prerendered to static HTML at build time (scripts/prerender-routes.ts).

@@ -46,11 +46,11 @@ const HowToInvest = () => (
   <GuidePage
     path="/how-to-invest"
     headline="How to Invest in GIFT City Funds: Step-by-Step Guide for NRIs and Residents"
-    seoTitle="How to Invest in GIFT City Funds (2026): NRI & Resident Guide"
-    description="How to invest in GIFT City funds, step by step: choosing a structure, LRS vs direct USD, KYC documents, remittance, allotment and redemption, with a checklist."
+    seoTitle="How to Invest in GIFT City: Step-by-Step for NRIs & Residents"
+    description="How to invest in GIFT City, step by step: choosing a structure, LRS vs direct USD, KYC documents, remittance, allotment and redemption, with a checklist."
     crumb="How to Invest"
     datePublished="2026-07-23"
-    dateModified="2026-10-08"
+    dateModified="2026-11-19"
     faqs={faqs}
     sources={["ifscaDirectory", "rbiLrs", "incomeTax", "irs8621"]}
     extraSchema={[

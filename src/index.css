@@ -244,6 +244,15 @@ All colors MUST be HSL.
   .gcf-spin-slower { animation: gcf-spin 60s linear infinite reverse; }
   .gcf-float { animation: gcf-float 5s ease-in-out infinite; }
   .gcf-marquee { animation: gcf-marquee 45s linear infinite; }
+  /* The strip holds still until the visitor first scrolls, taps or moves the mouse
+     (see main.tsx), so the first screen settles at once; then it scrolls as usual. */
+  html:not(.gcf-moved) .gcf-marquee-wait { animation-play-state: paused; }
+}
+
+/* Cookie banner: hidden unless index.html or ConsentBanner adds .gcf-ask */
+.gcf-consent { display: none; }
+html.gcf-ask .gcf-consent { display: block; }
+@layer utilities {
   .gcf-grow { animation: gcf-grow 1.8s .3s ease-out both; }
   .gcf-pop { animation: gcf-pop .5s cubic-bezier(.2,.8,.2,1.2) both; }
   .gcf-draw { transform-origin: left; animation: gcf-draw .9s .45s cubic-bezier(.2,.8,.2,1) both; }

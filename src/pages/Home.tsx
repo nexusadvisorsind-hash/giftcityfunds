@@ -47,7 +47,7 @@ const Home = () => {
         {/* Hero: centred, text and buttons only (owner's choice, Nov 2026). */}
         <section className="bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 md:pt-28 pb-16 md:pb-24 text-center flex flex-col items-center">
-            <p className="gcf-fade-up gcf-delay-1 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-accent px-3 py-1.5 font-body text-xs sm:text-sm font-semibold text-secondary">
+            <p className="inline-flex items-center gap-2 rounded-full border border-blue-100 bg-accent px-3 py-1.5 font-body text-xs sm:text-sm font-semibold text-secondary">
               <span className="h-2 w-2 rounded-full bg-emerald-500 ring-4 ring-emerald-500/20" aria-hidden="true"></span>
               Funds regulated by IFSCA · invested in US Dollars
             </p>
@@ -55,10 +55,10 @@ const Home = () => {
               GIFT City funds,<br />
               <span className="text-secondary">explained simply.</span>
             </h1>
-            <p className="gcf-fade-up gcf-delay-2 mt-6 font-body text-lg md:text-xl text-foreground-muted leading-relaxed">
+            <p className="mt-6 font-body text-lg md:text-xl text-foreground-muted leading-relaxed">
               Plain-English guides to {FUND_COUNT} GIFT City funds, for NRIs and resident Indians.
             </p>
-            <div className="gcf-fade-up gcf-delay-3 mt-9 flex flex-wrap items-center justify-center gap-3">
+            <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
               <a href="#fund-finder" className="inline-flex items-center gap-2 rounded-lg bg-ink text-white font-body font-semibold text-base px-5 py-3.5 hover:bg-primary-hover">
                 Browse {FUND_COUNT} funds <ArrowDown className="h-4 w-4" aria-hidden />
               </a>
@@ -74,7 +74,7 @@ const Home = () => {
 
         {/* Fact ticker */}
         <div className="bg-secondary text-white overflow-hidden whitespace-nowrap font-body font-medium text-[15px]" aria-label="Key facts">
-          <div className="gcf-marquee inline-flex gap-12 py-3.5">
+          <div className="gcf-marquee gcf-marquee-wait inline-flex gap-12 py-3.5">
             {[0, 1].map((copy) => (
               <span key={copy} className="inline-flex gap-12" aria-hidden={copy === 1 ? "true" : undefined}>
                 <span>Regulated by IFSCA, not SEBI</span>

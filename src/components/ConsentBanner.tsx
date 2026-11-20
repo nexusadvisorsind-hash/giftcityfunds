@@ -1,27 +1,27 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { CONSENT_EVENT, getConsent, loadAnalytics, setConsent } from "@/lib/analytics";
 
-// Shown until the visitor chooses. Rendered only in the browser, after load,
-// so prerendered HTML stays identical for every visitor.
-const ConsentBanner = () => {
-  const [open, setOpen] = useState(false);
+// The banner is in every prerendered page but hidden by CSS. A tiny script in
+// index.html adds "gcf-ask" to <html> before the first paint when no choice has
+// been saved, so the banner appears with the page instead of popping in once the
+// JavaScript has loaded (that late change slowed the Speed Index score).
+const show = (on: boolean) => document.documentElement.classList.toggle("gcf-ask", on);
 
+const ConsentBanner = () => {
   useEffect(() => {
     const choice = getConsent();
     if (choice === "granted") loadAnalytics();
-    if (choice === null) setOpen(true);
-    const reopen = () => setOpen(true);
+    show(choice === null);
+    const reopen = () => show(true);
     window.addEventListener(CONSENT_EVENT, reopen);
     return () => window.removeEventListener(CONSENT_EVENT, reopen);
   }, []);
 
-  if (!open) return null;
-
   const choose = (c: "granted" | "denied") => {
     setConsent(c);
-    setOpen(false);
+    show(false);
   };
 
   return (
@@ -29,7 +29,7 @@ const ConsentBanner = () => {
       role="dialog"
       aria-live="polite"
       aria-label="Analytics cookie consent"
-      className="fixed inset-x-0 bottom-0 z-[60] border-t border-border bg-background shadow-lg"
+      className="gcf-consent fixed inset-x-0 bottom-0 z-[60] border-t border-border bg-background shadow-lg"
     >
       <div className="max-w-5xl mx-auto px-4 py-3 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
         <p className="font-body text-xs md:text-sm text-foreground-muted flex-1 leading-snug">
