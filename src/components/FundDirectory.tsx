@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { Search, LayoutGrid, Table2, Check } from "lucide-react";
 import { LOW_MIN, HIGH_MIN, FUNDS_LAST_CHECKED, fundName, fundPath, isRetail, type Fund } from "@/data/funds";
+import { FUND_EXTRAS } from "@/data/fundExtras";
 
 // Searchable, filterable directory of every fund in src/data/funds.ts.
 // Facts only: no NAV, returns or ranking. Sorting is alphabetical or by
@@ -54,6 +55,12 @@ const Card = ({ f }: { f: Fund }) => {
       <dl className="mt-4 grid grid-cols-2 gap-3 rounded-xl bg-slate-50 border border-slate-200 p-3.5 font-body">
         <div><dt className="text-xs text-foreground-muted">Minimum</dt><dd className="mt-0.5 text-[15px] font-semibold text-primary">{minShort(f)}</dd></div>
         <div><dt className="text-xs text-foreground-muted">Who can invest</dt><dd className="mt-0.5 text-[15px] font-semibold text-primary">{whoShort(f)}</dd></div>
+        {f.slug && FUND_EXTRAS[f.slug]?.ter && (
+          <div><dt className="text-xs text-foreground-muted">Expense ratio</dt><dd className="mt-0.5 text-[13.5px] font-semibold text-primary">{FUND_EXTRAS[f.slug].ter!.split(";")[0].replace(" a year", "").replace(/ \(.*$/, "")}</dd></div>
+        )}
+        {f.slug && FUND_EXTRAS[f.slug]?.exitLoad && (
+          <div><dt className="text-xs text-foreground-muted">Exit load</dt><dd className="mt-0.5 text-[13.5px] font-semibold text-primary">{FUND_EXTRAS[f.slug].exitLoad!.split(";")[0].replace(" if redeemed", "").replace(/ \(.*?\)/, "")}</dd></div>
+        )}
       </dl>
       <div className="mt-auto flex items-center justify-between gap-3 border-t border-slate-200 pt-4 mt-4">
         <span className="inline-flex items-center gap-1 font-body text-xs text-foreground-muted">

@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { GuidePage, h2, p, a, ul, table, th, td, type Faq } from "@/components/GuidePage";
 import NotFound from "@/pages/NotFound";
 import { FundAlerts } from "@/components/FundAlerts";
+import { FUND_EXTRAS } from "@/data/fundExtras";
 import {
   FUND_PAGES,
   FUNDS_LAST_CHECKED,
@@ -56,6 +57,10 @@ function faqsFor(f: Fund): Faq[] {
     },
     { q: `What ${many ? "do these funds" : "does this fund"} invest in?`, a: `${f.invests}.` },
   ];
+  const x = f.slug ? FUND_EXTRAS[f.slug] : undefined;
+  if (x?.ter) out.push({ q: `What is the expense ratio (TER) of ${n}?`, a: `${x.ter}, as published. Expense ratios can change; check the latest factsheet or offer document.` });
+  if (x?.exitLoad) out.push({ q: `Is there an exit load on ${n}?`, a: `${x.exitLoad}.${x.lockIn ? ` Lock-in: ${x.lockIn.toLowerCase()}.` : ""}` });
+  if (x?.manager) out.push({ q: `Who manages ${n}?`, a: `${x.manager}, registered with IFSCA in GIFT City.` });
   if (f.excludes?.length) {
     out.push({
       q: `Who ${many ? "do these funds" : "does this fund"} not accept?`,
@@ -81,6 +86,18 @@ const FundDetail = () => {
   const dir = f.direction.toLowerCase();
   const dirPage = f.direction === "Inbound" ? "/gift-city-inbound-funds" : f.direction === "Outbound" ? "/gift-city-outbound-funds" : undefined;
 
+  const x = FUND_EXTRAS[f.slug!];
+  const extra: [string, string | undefined][] = [
+    ["Fund manager (IFSCA entity)", x?.manager],
+    ["Structure", x?.structure],
+    ["Expense ratio (TER)", x?.ter],
+    ["Exit load", x?.exitLoad],
+    ["Lock-in", x?.lockIn],
+    ["Dealing", x?.dealing],
+    ["Launched", x?.launched],
+    ["Benchmark", x?.benchmark],
+    ["IFSCA registration", x?.ifsca],
+  ];
   const rows: [string, React.ReactNode][] = [
     ["Fund house", housePage ? <Link to={housePage} className={a}>{f.house}</Link> : f.house],
     ...(many ? ([["Schemes", f.scheme]] as [string, React.ReactNode][]) : []),
@@ -91,9 +108,13 @@ const FundDetail = () => {
     ["Who can invest", f.who],
     ["Resident Indians (LRS)", f.residents ? "Yes" : "Not listed as eligible"],
     ["NRIs", f.nri ? "Yes" : "Not listed as eligible"],
-    ["Does not accept", f.excludes?.length ? f.excludes.map((x) => EXCL[x]).join(", ") : "None published"],
-    ["Status", f.upcoming ? "Listed by the fund house as coming soon" : "Open, per our source"],
-    ["Source", <a href={f.source.url} target="_blank" rel="noopener noreferrer" className={a}>{f.source.label}</a>],
+    ["Does not accept", f.excludes?.length ? f.excludes.map((e) => EXCL[e]).join(", ") : "None published"],
+    ...(extra.filter(([, v]) => v) as [string, React.ReactNode][]),
+    ["Status", x?.status ?? (f.upcoming ? "Listed by the fund house as coming soon" : "Open, per our source")],
+    ...(x?.docs?.length
+      ? ([["Documents", <>{x.docs.map((d, i) => <span key={d.url}>{i ? " · " : ""}<a href={d.url} target="_blank" rel="noopener noreferrer" className={a}>{d.label}</a></span>)}</>]] as [string, React.ReactNode][])
+      : []),
+    ["Sources", <>{[f.source, ...(x?.sources ?? []).filter((s) => s.url !== f.source.url)].map((s, i) => <span key={s.url}>{i ? " · " : ""}<a href={s.url} target="_blank" rel="noopener noreferrer" className={a}>{s.label}</a></span>)}</>],
   ];
 
   return (
@@ -115,6 +136,7 @@ const FundDetail = () => {
         {f.direction === "Inbound" ? ", investing in India" : f.direction === "Outbound" ? ", investing outside India" : ""}, in US Dollars.
         {" "}Minimum: <strong className="text-primary">{f.minimum}</strong>. Who can invest: {f.who}.
         {f.upcoming && <> The fund house lists it as <strong className="text-primary">coming soon</strong>, so it may not be open yet.</>}
+        {(x?.ter || x?.exitLoad) && <> Costs: {x?.ter ? <>expense ratio {x.ter}</> : null}{x?.ter && x?.exitLoad ? "; " : ""}{x?.exitLoad ? <>exit load {x.exitLoad.charAt(0).toLowerCase() + x.exitLoad.slice(1)}</> : null}.</>}
       </p>
 
       <h2 className={h2}>Fund facts</h2>
