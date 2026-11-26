@@ -12,7 +12,7 @@ export interface NewsItem {
 
 export const NEWS_UPDATED = "26 November 2026";
 
-export const NEWS: NewsItem[] = [
+const NEWS_ITEMS: NewsItem[] = [
   {
     date: "2026-11-23",
     title: "PPFAS opens its India Flexi Cap fund in GIFT City for NRIs",
@@ -252,6 +252,10 @@ export const NEWS: NewsItem[] = [
     more: ["/gift-city-bonds", "GIFT City bonds"],
   },
 ];
+
+// Always newest first, whatever order items were added in.
+export const NEWS: NewsItem[] = [...NEWS_ITEMS].sort((a, b) => b.date.localeCompare(a.date));
+
 
 export const formatNewsDate = (iso: string) =>
   new Date(iso + "T00:00:00Z").toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });

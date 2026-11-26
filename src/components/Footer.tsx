@@ -2,14 +2,52 @@ import { Link } from "react-router-dom";
 import { openCookieSettings } from "@/lib/analytics";
 import { Mail, Phone, MapPin } from "lucide-react";
 
+
+type L = [string, string];
+const GROUPS: [string, L[]][] = [
+  ["Learn", [
+    ["/what-is-gift-city", "What is GIFT City"], ["/funds-explained", "Funds Explained"], ["/how-to-invest", "How to Invest"],
+    ["/taxation", "Taxation"], ["/gift-city-funds-risks", "Risks"], ["/gift-city-funds-pros-and-cons", "Pros and Cons"],
+    ["/gift-city-funds-vs-mutual-funds", "GIFT City Funds vs Mutual Funds"], ["/gift-city-vs-international-mutual-funds", "vs International Funds"],
+    ["/gift-city-aif", "GIFT City AIF"], ["/gift-city-pms", "GIFT City PMS"], ["/gift-city-feeder-funds", "Feeder Funds"],
+    ["/gift-city-minimum-investment", "Minimums & Limits"], ["/gift-city-sip", "No SIP in GIFT City: why"], ["/gift-city-funds-returns", "Returns & Performance"],
+    ["/what-is-ifsca", "What Is IFSCA"], ["/gift-city-glossary", "Glossary"], ["/gift-city-guide", "GIFT City Guide"],
+  ]],
+  ["Who it's for", [
+    ["/who-its-for", "Who It's For"], ["/gift-city-funds-for-nri", "For NRIs"], ["/gift-city-funds-for-uae-nris", "NRIs in the UAE"],
+    ["/gift-city-funds-for-gulf-nris", "NRIs in the Gulf"], ["/gift-city-funds-for-uk-nris", "NRIs in the UK"], ["/gift-city-funds-for-us-nris", "NRIs in the US"],
+    ["/gift-city-funds-for-singapore-nris", "NRIs in Singapore"], ["/gift-city-funds-for-canada-nris", "NRIs in Canada"], ["/gift-city-funds-for-oci", "For OCIs"],
+    ["/gift-city-funds-for-resident-indians", "For Resident Indians"], ["/invest-abroad-from-india", "Invest Abroad from India"],
+    ["/gift-city-redemption-repatriation", "Redemption & Repatriation"], ["/gift-city-moving-country", "Moving Country"],
+  ]],
+  ["Funds", [
+    ["/gift-city-fund-list", "GIFT City Fund List"], ["/gift-city-outbound-funds", "Outbound Funds"], ["/gift-city-inbound-funds", "Inbound Funds"],
+    ["/gift-city-fund-compare", "Compare GIFT City Funds"], ["/parag-parikh-gift-city-fund", "Parag Parikh"], ["/hdfc-gift-city-funds", "HDFC"],
+    ["/dsp-gift-city-funds", "DSP"], ["/tata-gift-city-fund", "Tata"], ["/aditya-birla-sun-life-gift-city-funds", "Aditya Birla Sun Life"],
+    ["/edelweiss-gift-city-funds", "Edelweiss"], ["/mirae-asset-gift-city-funds", "Mirae Asset"], ["/gift-city-us-stocks-etfs", "US Stocks & ETFs"],
+    ["/gift-city-funds-zerodha-groww", "Zerodha, Groww & GIFT City"], ["/gift-city-bonds", "GIFT City Bonds"], ["/gift-city-insurance", "GIFT City Insurance"],
+  ]],
+  ["Tools and updates", [
+    ["/gift-city-route-checker", "Route Checker"], ["/insights/lrs-tcs-gift-city#calculator", "TCS Calculator"], ["/usd-vs-inr-calculator", "USD vs INR Calculator"],
+    ["/gift-city-document-checklist", "Document Checklist"], ["/gift-city-in-numbers", "GIFT City in Numbers"], ["/gift-city-news", "GIFT City News"],
+    ["/gift-city-rules-updates", "GIFT City Rule Changes"], ["/insights", "Insights"], ["/faqs", "FAQs"],
+    ["/gift-city-vs-singapore-dubai", "vs Singapore, Dubai, Mauritius"], ["/gift-city-markets-gift-nifty", "GIFT Nifty & Exchanges"],
+    ["/gift-city-family-office-fpi", "Family Offices & FPIs"], ["/gift-city-banks-and-business-setup", "Banks & Business Setup"],
+  ]],
+  ["About and legal", [
+    ["/about", "About Anup Vatyani"], ["/contact", "Contact"], ["/privacy-policy", "Privacy Policy"], ["/terms-of-use", "Terms of Use"],
+    ["/disclaimer", "Disclaimer"], ["/accessibility-statement", "Accessibility"],
+  ]],
+];
+
 const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
+        {/* Brand and contact */}
+        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 pb-8 border-b border-primary-foreground/20">
+          <div className="max-w-xl">
+            <div className="flex items-center gap-2 mb-3">
               <div className="w-10 h-10 bg-teal rounded-xl flex items-center justify-center">
                 <span className="text-white font-heading font-bold text-xl">G</span>
               </div>
@@ -18,299 +56,39 @@ const Footer = () => {
                 <span className="text-sm text-primary-foreground/80">An Informational Resource on GIFT City and IFSC Frameworks</span>
               </div>
             </div>
-            <p className="text-primary-foreground/80 mb-4 max-w-md">
-              giftcityfunds.in provides information about GIFT City and IFSC investment frameworks for NRIs and HNIs. Owned and operated by Anup Vatyani, AMFI-registered Mutual Fund Distributor (ARN 106715).
-              <br /><br />
-              This platform shares educational resources only and does not offer personalized investment advice or financial planning.
+            <p className="text-sm text-primary-foreground/80">
+              giftcityfunds.in provides information about GIFT City and IFSC investment frameworks for NRIs and HNIs. Owned and operated by Anup Vatyani, AMFI-registered Mutual Fund Distributor (ARN 106715). Educational resources only; no personalised investment advice or financial planning.
             </p>
-            <div className="space-y-2">
-              <div className="flex items-center space-x-2">
-                <Phone className="h-4 w-4" />
-                <span className="text-sm">+91 9537533533</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="h-4 w-4" />
-                <span className="text-sm">info@giftcityfunds.in</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <MapPin className="h-4 w-4" />
-                <span className="text-sm">Ahmedabad, Gujarat, India</span>
-              </div>
-            </div>
           </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="font-heading font-semibold text-lg mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/what-is-gift-city" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">What is GIFT City</Link>
-              </li>
-              <li>
-                <Link to="/funds-explained" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Funds Explained</Link>
-              </li>
-              <li>
-                <Link to="/who-its-for" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Who It's For</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-funds-vs-mutual-funds" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">GIFT City Funds vs Mutual Funds</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-funds-risks" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Risks</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-funds-for-nri" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">For NRIs</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-funds-for-uae-nris" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">NRIs in the UAE</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-funds-for-gulf-nris" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">NRIs in the Gulf</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-funds-for-uk-nris" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">NRIs in the UK</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-funds-for-us-nris" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">NRIs in the US</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-funds-for-singapore-nris" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">NRIs in Singapore</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-funds-for-canada-nris" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">NRIs in Canada</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-funds-for-oci" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">For OCIs</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-funds-for-resident-indians" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">For Resident Indians</Link>
-              </li>
-              <li>
-                <Link to="/invest-abroad-from-india" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Invest Abroad from India</Link>
-              </li>
-              <li>
-                <Link to="/taxation" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Taxation</Link>
-              </li>
-              <li>
-                <Link to="/how-to-invest" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">How to Invest</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-aif" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">GIFT City AIF</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-pms" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">GIFT City PMS</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-feeder-funds" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Feeder Funds</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-minimum-investment" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Minimums & Limits</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-fund-list" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">GIFT City Fund List</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-outbound-funds" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">GIFT City Outbound Funds</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-inbound-funds" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">GIFT City Inbound Funds</Link>
-              </li>
-              <li>
-                <Link to="/parag-parikh-gift-city-fund" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Parag Parikh GIFT City Funds</Link>
-              </li>
-              <li>
-                <Link to="/hdfc-gift-city-funds" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">HDFC GIFT City Funds</Link>
-              </li>
-              <li>
-                <Link to="/dsp-gift-city-funds" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">DSP GIFT City Funds</Link>
-              </li>
-              <li>
-                <Link to="/tata-gift-city-fund" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Tata GIFT City Fund</Link>
-              </li>
-              <li>
-                <Link to="/aditya-birla-sun-life-gift-city-funds" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Aditya Birla Sun Life GIFT City Funds</Link>
-              </li>
-              <li>
-                <Link to="/edelweiss-gift-city-funds" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Edelweiss GIFT City Funds</Link>
-              </li>
-              <li>
-                <Link to="/mirae-asset-gift-city-funds" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Mirae Asset GIFT City Funds</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-fund-compare" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Compare GIFT City Funds</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-in-numbers" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">GIFT City in Numbers</Link>
-              </li>
-              <li>
-                <Link to="/usd-vs-inr-calculator" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">USD vs INR Calculator</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-route-checker" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Route Checker</Link>
-              </li>
-              <li>
-                <Link to="/insights/lrs-tcs-gift-city#calculator" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">TCS Calculator</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-document-checklist" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Document Checklist</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-news" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">GIFT City News</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-rules-updates" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">GIFT City Rule Changes</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-bonds" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">GIFT City Bonds</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-insurance" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">GIFT City Insurance</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-redemption-repatriation" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Redemption & Repatriation</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-moving-country" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Moving Country</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-funds-returns" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Returns & Performance</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-funds-zerodha-groww" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Zerodha, Groww & GIFT City</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-sip" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">No SIP in GIFT City: why</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-vs-international-mutual-funds" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">vs International Funds</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-us-stocks-etfs" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">US Stocks & ETFs</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-funds-pros-and-cons" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Pros and Cons</Link>
-              </li>
-              <li>
-                <Link to="/what-is-ifsca" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">What Is IFSCA</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-glossary" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Glossary</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-vs-singapore-dubai" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">vs Singapore, Dubai, Mauritius</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-markets-gift-nifty" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">GIFT Nifty & Exchanges</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-family-office-fpi" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Family Offices & FPIs</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-banks-and-business-setup" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Banks & Business Setup</Link>
-              </li>
-              <li>
-                <Link to="/gift-city-guide" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">GIFT City Guide</Link>
-              </li>
-              <li>
-                <Link to="/insights" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">Insights</Link>
-              </li>
-              <li>
-                <Link to="/faqs" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">FAQs</Link>
-              </li>
-              <li>
-                <Link to="/about" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">About</Link>
-              </li>
-              <li>
-                <Link to="/contact" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Legal */}
-          <div>
-            <h3 className="font-heading font-semibold text-lg mb-4">Legal</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/privacy-policy" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link to="/terms-of-use" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">
-                  Terms & Conditions
-                </Link>
-              </li>
-              <li>
-                <Link to="/terms-of-use" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">
-                  Terms of Use
-                </Link>
-              </li>
-              <li>
-                <Link to="/disclaimer" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">
-                  Disclaimer
-                </Link>
-              </li>
-              <li>
-                <Link to="/accessibility-statement" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">
-                  Accessibility
-                </Link>
-              </li>
-              <li>
-                <button type="button" onClick={openCookieSettings} className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate text-left">
-                  Cookie settings
-                </button>
-              </li>
-              <li>
-              <Link to="/about" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">About Author</Link>
-              </li>
-            </ul>
+          <div className="space-y-2 text-sm">
+            <div className="flex items-center gap-2"><Phone className="h-4 w-4" aria-hidden /><span>+91 9537533533</span></div>
+            <div className="flex items-center gap-2"><Mail className="h-4 w-4" aria-hidden /><span>info@giftcityfunds.in</span></div>
+            <div className="flex items-center gap-2"><MapPin className="h-4 w-4" aria-hidden /><span>Ahmedabad, Gujarat, India</span></div>
           </div>
         </div>
 
-        {/* Clean Footer Navigation Bar */}
-        <div className="border-t border-primary-foreground/20 mt-8 pt-6">
-          <nav className="mb-8" aria-label="Footer navigation">
-            <div className="flex flex-wrap justify-center items-center gap-2 md:gap-4 text-sm">
-              <Link to="/" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate px-2 py-1">
-                Home
-              </Link>
-              <span className="text-primary-foreground/40">|</span>
-              <Link to="/funds-explained" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate px-2 py-1">Funds Explained</Link>
-              <span className="text-primary-foreground/40">|</span>
-              <Link to="/faqs" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate px-2 py-1">FAQs</Link>
-              <span className="text-primary-foreground/40">|</span>
-              <Link to="/about" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate px-2 py-1">
-                About
-              </Link>
-              <span className="text-primary-foreground/40">|</span>
-              <Link to="/disclaimer" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate px-2 py-1">
-                Disclaimer
-              </Link>
-              <span className="text-primary-foreground/40">|</span>
-              <Link to="/privacy-policy" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate px-2 py-1">
-                Privacy Policy
-              </Link>
-              <span className="text-primary-foreground/40">|</span>
-              <Link to="/terms-of-use" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate px-2 py-1">
-                Terms
-              </Link>
-              <span className="text-primary-foreground/40">|</span>
-              <Link to="/contact" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate px-2 py-1">
-                Contact
-              </Link>
-              <span className="text-primary-foreground/40">|</span>
-              <Link to="/insights" className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate px-2 py-1">Insights</Link>
+        {/* All pages, grouped */}
+        <nav aria-label="Site pages" className="h-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-8 py-8">
+          {GROUPS.map(([title, links]) => (
+            <div key={title}>
+              <h3 className="font-heading font-semibold text-base mb-3">{title}</h3>
+              <ul className="space-y-1.5 text-sm">
+                {links.map(([to, label]) => (
+                  <li key={to + label}>
+                    <Link to={to} className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate">{label}</Link>
+                  </li>
+                ))}
+                {title === "About and legal" && (
+                  <li>
+                    <button type="button" onClick={openCookieSettings} className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate text-left">Cookie settings</button>
+                  </li>
+                )}
+              </ul>
             </div>
-          </nav>
+          ))}
+        </nav>
 
-          <hr className="border-primary-foreground/20 mb-6" />
+        <div className="border-t border-primary-foreground/20 pt-6">
           
           <div className="text-center mb-6">
             <p className="text-primary-foreground/70 text-sm mb-2">
