@@ -12,6 +12,17 @@
       "permanent": true
     },
     {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "giftcityfunds-iota.vercel.app"
+        }
+      ],
+      "destination": "https://giftcityfunds.in/:path*",
+      "permanent": true
+    },
+    {
       "source": "/about-us",
       "destination": "/about",
       "permanent": true

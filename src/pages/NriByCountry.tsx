@@ -89,12 +89,12 @@ const NriByCountry = () => (
       type="article"
       schema={articleSchema}
       breadcrumbs={[
-        { name: "Home", url: "https://giftcityfunds.in/" },
+        { name: "GIFT City Funds", url: "https://giftcityfunds.in/" },
         { name: "NRIs by Country", url: URL },
       ]}
     />
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
-      <Breadcrumbs items={[{ name: "Home", url: "/" }, { name: "NRIs by Country", url: "/gift-city-funds-nri-tax-by-country" }]} />
+      <Breadcrumbs items={[{ name: "GIFT City Funds", url: "/" }, { name: "NRIs by Country", url: "/gift-city-funds-nri-tax-by-country" }]} />
       <h1 className="font-heading font-bold text-3xl md:text-4xl text-primary mt-6 mb-2">{HEADLINE}</h1>
       <AuthorByline dateText="Last reviewed October 2026" />
 

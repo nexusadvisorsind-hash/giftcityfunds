@@ -30,12 +30,12 @@ const WhoItsFor = () => (
       canonical="https://giftcityfunds.in/who-its-for"
       schema={articleSchema}
       breadcrumbs={[
-        { name: "Home", url: "https://giftcityfunds.in/" },
+        { name: "GIFT City Funds", url: "https://giftcityfunds.in/" },
         { name: "Who It's For", url: "https://giftcityfunds.in/who-its-for" },
       ]}
     />
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
-      <Breadcrumbs items={[{ name: "Home", url: "/" }, { name: "Who It's For", url: "/who-its-for" }]} />
+      <Breadcrumbs items={[{ name: "GIFT City Funds", url: "/" }, { name: "Who It's For", url: "/who-its-for" }]} />
       <h1 className="font-heading font-bold text-3xl md:text-4xl text-primary mt-6 mb-4">Who Can Invest in GIFT City Funds?</h1>
       <p className="font-body text-lg text-foreground-muted mb-8">Eligibility and mechanics differ depending on your residency status. Find the section that applies to you.</p>
 

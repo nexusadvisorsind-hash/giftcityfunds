@@ -7,7 +7,8 @@ import { ArrowRight, ArrowDown, FileText, Globe2, Calculator, Route, ListChecks 
 import { PageFaqs, type PageFaq } from "@/components/PageFaqs";
 import LatestNews from "@/components/LatestNews";
 import HomeFundFinder from "@/components/HomeFundFinder";
-import { FUND_COUNT } from "@/data/funds";
+import HomeGuide from "@/components/HomeGuide";
+import { FUND_COUNT, HOUSE_COUNT, FUND_PAGES, fundName, fundPath } from "@/data/funds";
 const PAGE_FAQS: PageFaq[] = [
   { q: "Which GIFT City fund is best?", a: "There is no single best GIFT City fund. The right fund depends on where you live, whether you want Indian or global markets, how much you invest and your tax position. Our GIFT City fund list sets out every fund we could verify, with minimums and who can invest, without ranking them." },
   { q: "Is it good to invest in GIFT City?", a: "It can suit some investors and not others. GIFT City funds offer US Dollar investing under IFSCA regulation, from USD 500 for some retail funds, and are not limited by the SEBI overseas cap. Drawbacks include no SIP, LRS and 20% TCS above ₹10 lakh for residents, short track records and, for US persons, PFIC rules. This is general information, not advice." },
@@ -31,16 +32,30 @@ const Home = () => {
     "url": "https://giftcityfunds.in/",
     "description": "Educational guide to GIFT City IFSC mutual funds, AIFs and PMS structures by Anup Vatyani (AMFI ARN 106715).",
     "areaServed": { "@type": "Country", "name": "India" },
+    "about": { "@type": "Thing", "name": "GIFT City funds" },
+    "isPartOf": { "@type": "WebSite", "name": "GIFT City Funds", "url": "https://giftcityfunds.in/" },
+    "mainEntity": {
+      "@type": "ItemList",
+      "name": "GIFT City funds",
+      "numberOfItems": FUND_PAGES.length,
+      "itemListOrder": "https://schema.org/ItemListUnordered",
+      "itemListElement": FUND_PAGES.map((f, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "name": fundName(f),
+        "url": `https://giftcityfunds.in${fundPath(f)}`,
+      })),
+    },
   };
 
   return (
     <>
       <SEO
-        title="GIFT City Funds: Types, Tax, Minimums & How to Invest (2026)"
-        description="Plain-English guide to GIFT City funds, AIFs and PMS for NRIs, OCIs and resident Indians. By Anup Vatyani, AMFI-registered MFD (ARN 106715)."
+        title={`GIFT City Funds 2026: All ${FUND_COUNT} Funds, Types, Tax & How to Invest`}
+        description={`GIFT City funds in one place: all ${FUND_COUNT} funds from ${HOUSE_COUNT} fund houses with minimums and who can invest, plus types, tax and how to invest.`}
         canonical="https://giftcityfunds.in/"
         schema={financialServiceSchema}
-        breadcrumbs={[{ name: "Home", url: "https://giftcityfunds.in/" }]}
+        breadcrumbs={[{ name: "GIFT City Funds", url: "https://giftcityfunds.in/" }]}
       />
 
       <div className="min-h-screen">
@@ -88,13 +103,16 @@ const Home = () => {
           </div>
         </div>
 
+        {/* What are GIFT City funds: answers the search "gift city funds" directly */}
+        <HomeGuide />
+
         {/* Fund finder: the funds themselves, near the top */}
         <HomeFundFinder />
 
         {/* Free tools */}
         <section className="py-16 md:py-20 bg-white border-t border-border" aria-labelledby="tools-h">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <SectionHead n={2} label="Free tools" id="tools-h" title="Work it out in under a minute" sub="No sign-up needed." />
+            <SectionHead n={3} label="Free tools" id="tools-h" title="Work it out in under a minute" sub="No sign-up needed." />
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {[
                 { to: "/gift-city-route-checker", icon: Route, t: "Which route applies to me?", d: "Resident, NRI, OCI or returning: see your route, limits and tax collected at source." },
@@ -124,7 +142,7 @@ const Home = () => {
         {/* Frequently asked: answered, with FAQPage schema */}
         <section className="py-16 md:py-20 bg-white border-t border-border">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <SectionLabel n={4} label="Questions" />
+            <SectionLabel n={5} label="Questions" />
             <PageFaqs items={PAGE_FAQS} title="Frequently asked questions" className="mt-3 [&>h2]:font-extrabold [&>h2]:text-3xl md:[&>h2]:text-4xl [&>h2]:tracking-[-0.02em] [&>h2]:mb-8" />
             <Link to="/faqs" className="mt-4 font-body text-secondary hover:underline inline-flex items-center">
               Read all FAQs <ArrowRight className="ml-1 h-4 w-4" />

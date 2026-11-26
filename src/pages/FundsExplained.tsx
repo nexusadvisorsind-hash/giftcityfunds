@@ -42,12 +42,12 @@ const FundsExplained = () => (
       canonical="https://giftcityfunds.in/funds-explained"
       schema={articleSchema}
       breadcrumbs={[
-        { name: "Home", url: "https://giftcityfunds.in/" },
+        { name: "GIFT City Funds", url: "https://giftcityfunds.in/" },
         { name: "Funds Explained", url: "https://giftcityfunds.in/funds-explained" },
       ]}
     />
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
-      <Breadcrumbs items={[{ name: "Home", url: "/" }, { name: "Funds Explained", url: "/funds-explained" }]} />
+      <Breadcrumbs items={[{ name: "GIFT City Funds", url: "/" }, { name: "Funds Explained", url: "/funds-explained" }]} />
       <h1 className="font-heading font-bold text-3xl md:text-4xl text-primary mt-6 mb-6">Types of GIFT City Funds: How They Are Structured</h1>
       <p className="font-body text-lg text-foreground-muted mb-8">
         Not all GIFT City funds work the same way. Before comparing anything, it helps to understand the four broad structures you'll come across — and the two directions money can flow between India and the rest of the world.

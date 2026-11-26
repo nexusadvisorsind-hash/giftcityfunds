@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import { LOW_MIN, HIGH_MIN, FUND_COUNT, HOUSE_COUNT, FUNDS_LAST_CHECKED, type Fund } from "@/data/funds";
+import { LOW_MIN, HIGH_MIN, FUND_COUNT, HOUSE_COUNT, FUNDS_LAST_CHECKED, fundName, fundPath, type Fund } from "@/data/funds";
 import { FundCard } from "@/components/FundCard";
 import { SectionHead } from "@/components/SectionHead";
 
@@ -17,6 +17,11 @@ const FILTERS: [Filter, string][] = [
 const SHOW = 6;
 const ALL: Fund[] = [...LOW_MIN, ...HIGH_MIN].filter((f) => !f.upcoming);
 
+// Every fund on the list, grouped by fund house, for the A-Z index below the cards.
+const BY_HOUSE = Object.entries(
+  [...LOW_MIN, ...HIGH_MIN].reduce<Record<string, Fund[]>>((m, f) => ((m[f.house] ??= []).push(f), m), {}),
+).sort(([a], [b]) => a.localeCompare(b));
+
 const match = (f: Fund, k: Filter) =>
   k === "all" ? true : k === "res" ? f.residents : k === "nri" ? f.nri : f.minimum.startsWith("USD 500");
 
@@ -28,7 +33,7 @@ const HomeFundFinder = () => {
     <section id="fund-finder" className="py-16 md:py-20 bg-surface scroll-mt-20" aria-labelledby="fund-finder-h">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHead
-          n={1}
+          n={2}
           label="Funds"
           id="fund-finder-h"
           title={<>{FUND_COUNT} GIFT City funds from {HOUSE_COUNT} fund houses</>}
@@ -78,6 +83,29 @@ const HomeFundFinder = () => {
           <Link to="/gift-city-fund-list" className="inline-flex items-center rounded-lg bg-primary px-5 py-2.5 font-body text-sm font-semibold text-primary-foreground hover:opacity-90">
             See the full fund list <ArrowRight className="ml-1 h-4 w-4" aria-hidden />
           </Link>
+        </div>
+
+        <div className="mt-12 rounded-2xl border-[1.5px] border-emerald-500/70 bg-white p-5 sm:p-6">
+          <h3 className="font-heading font-bold text-xl text-primary">All GIFT City funds, A to Z by fund house</h3>
+          <p className="mt-1 font-body text-sm text-foreground-muted">Each name opens that fund's facts page: minimum, who can invest and the source.</p>
+          <div className="mt-5 grid gap-x-8 gap-y-4 sm:grid-cols-2 lg:grid-cols-3">
+            {BY_HOUSE.map(([house, funds]) => (
+              <div key={house}>
+                <p className="font-body text-xs font-bold uppercase tracking-wide text-emerald-700">{house}</p>
+                <ul className="mt-1 space-y-1 list-none p-0 m-0">
+                  {funds.map((f) => {
+                    const to = fundPath(f);
+                    const label = fundName(f) + (f.upcoming ? " (coming soon)" : "");
+                    return (
+                      <li key={f.scheme} className="font-body text-sm leading-snug">
+                        {to ? <Link to={to} className="text-primary hover:text-secondary hover:underline">{label}</Link> : <span className="text-primary">{label}</span>}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

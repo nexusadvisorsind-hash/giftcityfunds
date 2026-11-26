@@ -20,12 +20,12 @@ const Disclaimer = () => (
         "about": "Investment risk disclosure and educational-content disclaimer"
       }}
       breadcrumbs={[
-        { name: "Home", url: "https://giftcityfunds.in/" },
+        { name: "GIFT City Funds", url: "https://giftcityfunds.in/" },
         { name: "Disclaimer", url: "https://giftcityfunds.in/disclaimer" },
       ]}
     />
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
-      <Breadcrumbs items={[{ name: "Home", url: "/" }, { name: "Disclaimer", url: "/disclaimer" }]} />
+      <Breadcrumbs items={[{ name: "GIFT City Funds", url: "/" }, { name: "Disclaimer", url: "/disclaimer" }]} />
       <h1 className="font-heading font-bold text-3xl md:text-4xl text-primary mt-6 mb-8">Disclaimer & Risk Disclosure</h1>
       <div className="font-body text-foreground-muted space-y-5">
         <p><strong className="text-primary">Nature of this website.</strong> This website ("GIFT City Funds") is an educational resource created and maintained by Anup Vatyani. It is intended solely to help visitors understand GIFT City, IFSC regulation, and the general structure and mechanics of GIFT City-based investment products.</p>

@@ -38,12 +38,12 @@ const About = () => (
       canonical="https://giftcityfunds.in/about"
       schema={personSchema}
       breadcrumbs={[
-        { name: "Home", url: "https://giftcityfunds.in/" },
+        { name: "GIFT City Funds", url: "https://giftcityfunds.in/" },
         { name: "About Anup Vatyani", url: "https://giftcityfunds.in/about" },
       ]}
     />
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
-      <Breadcrumbs items={[{ name: "Home", url: "/" }, { name: "About", url: "/about" }]} />
+      <Breadcrumbs items={[{ name: "GIFT City Funds", url: "/" }, { name: "About", url: "/about" }]} />
       <div className="flex flex-col sm:flex-row sm:items-center gap-6 mt-6 mb-8">
         <img
           src="/images/anup-vatyani-320.webp"

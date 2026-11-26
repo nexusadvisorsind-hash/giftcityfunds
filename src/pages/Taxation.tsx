@@ -43,12 +43,12 @@ const Taxation = () => (
       canonical="https://giftcityfunds.in/taxation"
       schema={articleSchema}
       breadcrumbs={[
-        { name: "Home", url: "https://giftcityfunds.in/" },
+        { name: "GIFT City Funds", url: "https://giftcityfunds.in/" },
         { name: "Taxation", url: "https://giftcityfunds.in/taxation" },
       ]}
     />
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
-      <Breadcrumbs items={[{ name: "Home", url: "/" }, { name: "Taxation", url: "/taxation" }]} />
+      <Breadcrumbs items={[{ name: "GIFT City Funds", url: "/" }, { name: "Taxation", url: "/taxation" }]} />
       <h1 className="font-heading font-bold text-3xl md:text-4xl text-primary mt-6 mb-2">Regulation and Taxation of GIFT City Funds</h1>
       <p className="font-body text-sm text-foreground-muted mb-6">Last updated: October 2026</p>
 

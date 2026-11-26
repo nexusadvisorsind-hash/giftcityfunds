@@ -64,12 +64,12 @@ const Faqs = () => (
       canonical="https://giftcityfunds.in/faqs"
       schema={faqSchema}
       breadcrumbs={[
-        { name: "Home", url: "https://giftcityfunds.in/" },
+        { name: "GIFT City Funds", url: "https://giftcityfunds.in/" },
         { name: "FAQs", url: "https://giftcityfunds.in/faqs" },
       ]}
     />
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
-      <Breadcrumbs items={[{ name: "Home", url: "/" }, { name: "FAQs", url: "/faqs" }]} />
+      <Breadcrumbs items={[{ name: "GIFT City Funds", url: "/" }, { name: "FAQs", url: "/faqs" }]} />
       <h1 className="font-heading font-bold text-3xl md:text-4xl text-primary mt-6 mb-10">GIFT City Funds: Frequently Asked Questions</h1>
       {faqs.map((g) => (
         <section key={g.g} className="mb-10">

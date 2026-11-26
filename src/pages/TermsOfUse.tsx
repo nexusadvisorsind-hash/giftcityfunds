@@ -23,7 +23,7 @@ const TermsOfUse = () => {
         canonical="https://giftcityfunds.in/terms-of-use"
         schema={schema}
         breadcrumbs={[
-          { name: "Home", url: "https://giftcityfunds.in/" },
+          { name: "GIFT City Funds", url: "https://giftcityfunds.in/" },
           { name: "Terms of Use", url: "https://giftcityfunds.in/terms-of-use" }
         ]}
       />
@@ -31,7 +31,7 @@ const TermsOfUse = () => {
       <div className="min-h-screen py-16 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={[
-            { name: "Home", url: "/" },
+            { name: "GIFT City Funds", url: "/" },
             { name: "Terms of Use", url: "/terms-of-use" }
           ]} />
 

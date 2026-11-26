@@ -30,12 +30,12 @@ const WhatIsGiftCity = () => (
       canonical="https://giftcityfunds.in/what-is-gift-city"
       schema={articleSchema}
       breadcrumbs={[
-        { name: "Home", url: "https://giftcityfunds.in/" },
+        { name: "GIFT City Funds", url: "https://giftcityfunds.in/" },
         { name: "What is GIFT City", url: "https://giftcityfunds.in/what-is-gift-city" },
       ]}
     />
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
-      <Breadcrumbs items={[{ name: "Home", url: "/" }, { name: "What is GIFT City", url: "/what-is-gift-city" }]} />
+      <Breadcrumbs items={[{ name: "GIFT City Funds", url: "/" }, { name: "What is GIFT City", url: "/what-is-gift-city" }]} />
       <h1 className="font-heading font-bold text-3xl md:text-4xl text-primary mt-6 mb-8">What Is GIFT City and GIFT IFSC?</h1>
 
       <div className="prose max-w-none font-body text-foreground-muted space-y-6">

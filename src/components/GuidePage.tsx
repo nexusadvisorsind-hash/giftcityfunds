@@ -75,12 +75,12 @@ export const GuidePage = ({
         type={kind === "Article" ? "article" : "website"}
         schema={[main, ...(faqSchema ? [faqSchema] : []), ...extraSchema]}
         breadcrumbs={[
-          { name: "Home", url: "https://giftcityfunds.in/" },
+          { name: "GIFT City Funds", url: "https://giftcityfunds.in/" },
           { name: crumb, url },
         ]}
       />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
-        <Breadcrumbs items={[{ name: "Home", url: "/" }, { name: crumb, url: path }]} />
+        <Breadcrumbs items={[{ name: "GIFT City Funds", url: "/" }, { name: crumb, url: path }]} />
         <h1 className="font-heading font-bold text-3xl md:text-4xl text-primary mt-6 mb-2">{headline}</h1>
         <AuthorByline dateText={reviewed} />
 

@@ -35,12 +35,12 @@ const UsBasedNris = () => (
       canonical="https://giftcityfunds.in/us-based-nris"
       schema={articleSchema}
       breadcrumbs={[
-        { name: "Home", url: "https://giftcityfunds.in/" },
+        { name: "GIFT City Funds", url: "https://giftcityfunds.in/" },
         { name: "For US NRIs", url: "https://giftcityfunds.in/us-based-nris" },
       ]}
     />
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
-      <Breadcrumbs items={[{ name: "Home", url: "/" }, { name: "For US NRIs", url: "/us-based-nris" }]} />
+      <Breadcrumbs items={[{ name: "GIFT City Funds", url: "/" }, { name: "For US NRIs", url: "/us-based-nris" }]} />
       <h1 className="font-heading font-bold text-3xl md:text-4xl text-primary mt-6 mb-2">GIFT City Funds for US-Based NRIs</h1>
       <p className="font-body text-sm text-foreground-muted mb-2">Last updated: July 2026</p>
       <p className="font-body text-lg text-foreground-muted mb-6">If you live in the United States, the way a fund is taxed can matter more than the fund itself. Here's what changes.</p>

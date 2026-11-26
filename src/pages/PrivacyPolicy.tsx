@@ -86,14 +86,14 @@ const PrivacyPolicy = () => {
         canonical="https://giftcityfunds.in/privacy-policy"
         schema={schema}
         breadcrumbs={[
-          { name: "Home", url: "https://giftcityfunds.in/" },
+          { name: "GIFT City Funds", url: "https://giftcityfunds.in/" },
           { name: "Privacy Policy", url: "https://giftcityfunds.in/privacy-policy" },
         ]}
       />
 
       <div className="min-h-screen py-16 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Breadcrumbs items={[{ name: "Home", url: "/" }, { name: "Privacy Policy", url: "/privacy-policy" }]} />
+          <Breadcrumbs items={[{ name: "GIFT City Funds", url: "/" }, { name: "Privacy Policy", url: "/privacy-policy" }]} />
 
           <p className="text-sm text-foreground-muted mb-4">Last updated: {UPDATED}</p>
           <h1 className="font-heading font-bold text-4xl text-primary mb-8">Privacy Policy</h1>

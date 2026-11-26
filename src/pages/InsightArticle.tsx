@@ -42,13 +42,13 @@ const InsightArticle = () => {
         type="article"
         schema={schema}
         breadcrumbs={[
-          { name: "Home", url: "https://giftcityfunds.in/" },
+          { name: "GIFT City Funds", url: "https://giftcityfunds.in/" },
           { name: "Insights", url: "https://giftcityfunds.in/insights" },
           { name: article.title, url },
         ]}
       />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
-        <Breadcrumbs items={[{ name: "Home", url: "/" }, { name: "Insights", url: "/insights" }, { name: article.title, url: `/insights/${article.slug}` }]} />
+        <Breadcrumbs items={[{ name: "GIFT City Funds", url: "/" }, { name: "Insights", url: "/insights" }, { name: article.title, url: `/insights/${article.slug}` }]} />
         <article>
           <h1 className="font-heading font-bold text-3xl md:text-4xl text-primary mt-6 mb-4">{article.title}</h1>
           <AuthorByline dateText={article.dateModified ? <>Updated <time dateTime={article.dateModified}>{formatDate(article.dateModified)}</time></> : <>Published <time dateTime={article.datePublished}>{formatDate(article.datePublished)}</time></>} />
