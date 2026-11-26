@@ -85,27 +85,41 @@ const HomeFundFinder = () => {
           </Link>
         </div>
 
-        <div className="mt-12 rounded-2xl border-[1.5px] border-emerald-500/70 bg-white p-5 sm:p-6">
-          <h3 className="font-heading font-bold text-xl text-primary">GIFT City IFSC funds, A to Z by fund house</h3>
-          <p className="mt-1 font-body text-sm text-foreground-muted">Each name opens that fund's facts page: minimum, who can invest and the source.</p>
-          <div className="mt-5 grid gap-x-8 gap-y-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14">
+          <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
+            <h3 className="font-heading font-bold text-2xl text-primary">GIFT City IFSC funds, A to Z by fund house</h3>
+            <p className="font-body text-sm text-foreground-muted">Names with an arrow open that fund's facts page.</p>
+          </div>
+          <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 list-none p-0">
             {BY_HOUSE.map(([house, funds]) => (
-              <div key={house}>
-                <p className="font-body text-xs font-bold uppercase tracking-wide text-emerald-700">{house}</p>
-                <ul className="mt-1 space-y-1 list-none p-0 m-0">
+              <li key={house} className="flex h-full flex-col overflow-hidden rounded-xl border border-slate-200/70 bg-white">
+                <div className="flex items-center justify-between gap-3 border-b border-slate-100 border-t-2 border-t-emerald-300 bg-slate-50/70 px-4 py-3">
+                  <span className="font-heading font-semibold text-[15px] text-primary">{house}</span>
+                  <span className="shrink-0 rounded-full bg-emerald-50 px-2 py-0.5 font-body text-xs font-semibold text-emerald-700">
+                    {(() => { const n = funds.reduce((t, f) => t + (f.count ?? 1), 0); return `${n} ${n === 1 ? "fund" : "funds"}`; })()}
+                  </span>
+                </div>
+                <ul className="divide-y divide-slate-100 list-none p-0 m-0">
                   {funds.map((f) => {
                     const to = fundPath(f);
                     const label = fundName(f) + (f.upcoming ? " (coming soon)" : "");
                     return (
                       <li key={f.scheme} className="font-body text-sm leading-snug">
-                        {to ? <Link to={to} className="text-primary hover:text-secondary hover:underline">{label}</Link> : <span className="text-primary">{label}</span>}
+                        {to ? (
+                          <Link to={to} className="group flex items-start justify-between gap-3 px-4 py-2.5 text-primary hover:bg-accent/60 hover:text-secondary">
+                            <span>{label}</span>
+                            <ArrowRight className="mt-0.5 h-4 w-4 shrink-0 text-slate-400 group-hover:text-secondary" aria-hidden />
+                          </Link>
+                        ) : (
+                          <span className="block px-4 py-2.5 text-primary">{label}</span>
+                        )}
                       </li>
                     );
                   })}
                 </ul>
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
     </section>
