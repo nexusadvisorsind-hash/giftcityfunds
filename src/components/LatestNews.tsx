@@ -5,7 +5,7 @@ import { SectionHead } from "@/components/SectionHead";
 
 // Home page strip: the three newest GIFT City news items.
 const LatestNews = () => (
-  <section className="py-16 md:py-20 bg-surface border-t border-border" aria-labelledby="news-h">
+  <section className="py-16 md:py-20 bg-[#F1F5F9] border-t border-border" aria-labelledby="news-h">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <SectionHead
         n={4}

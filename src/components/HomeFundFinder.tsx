@@ -30,7 +30,7 @@ const HomeFundFinder = () => {
   const list = ALL.filter((f) => match(f, filter));
 
   return (
-    <section id="fund-finder" className="py-16 md:py-20 bg-surface scroll-mt-20" aria-labelledby="fund-finder-h">
+    <section id="fund-finder" className="py-16 md:py-20 bg-[#F1F5F9] border-t border-border scroll-mt-20" aria-labelledby="fund-finder-h">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHead
           n={2}

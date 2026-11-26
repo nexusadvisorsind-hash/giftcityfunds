@@ -13,13 +13,31 @@ const TYPES = [
   { t: "AIFs", m: "Mostly USD 150,000", d: "Category I, II and III funds for larger investors.", to: "/gift-city-aif" },
 ];
 
-const card = "rounded-2xl border border-border bg-white p-5";
-const h3 = "font-heading font-semibold text-lg text-primary";
-const body = "font-body text-foreground-muted leading-relaxed";
-const link = "text-secondary font-semibold underline underline-offset-2";
+const BASICS: { t: string; body: React.ReactNode; links: [string, string][] }[] = [
+  {
+    t: "Inbound or outbound",
+    body: <><strong className="text-primary">Inbound</strong> funds invest in India and are mainly for NRIs and foreign investors. <strong className="text-primary">Outbound</strong> funds invest abroad, often in US shares, and many accept resident Indians.</>,
+    links: [["/gift-city-inbound-funds", "Inbound funds"], ["/gift-city-outbound-funds", "Outbound funds"]],
+  },
+  {
+    t: "Who can invest",
+    body: <><strong className="text-primary">NRIs, OCIs and foreign nationals</strong>, where the fund accepts their country. <strong className="text-primary">Resident Indians</strong> under LRS: up to USD 250,000 a year, with 20% TCS above ₹10 lakh, claimed back in your tax return. There is no SIP; each investment is a lump sum.</>,
+    links: [["/gift-city-funds-for-nri", "NRIs"], ["/gift-city-funds-for-resident-indians", "Resident Indians"], ["/gift-city-funds-for-oci", "OCIs"]],
+  },
+  {
+    t: "Tax, in one line",
+    body: <>The tax concessions sit mainly at the level of the fund. What you pay as an investor depends on the fund's structure and where you live, and NRIs are also taxed in their country of residence.</>,
+    links: [["/taxation", "GIFT City fund taxation"]],
+  },
+];
+
+const STEPS = ["Pick a fund that accepts you", "Complete the fund house's KYC", "Send US Dollars from your bank", "Units are allotted to you"];
+
+const sub = "font-heading font-bold text-xl text-primary";
+const link = "font-body text-sm font-semibold text-secondary underline underline-offset-2 hover:text-secondary-hover";
 
 const HomeGuide = () => (
-  <section className="py-16 md:py-20 bg-white border-t border-border" aria-labelledby="what-h">
+  <section className="py-16 md:py-20 bg-white" aria-labelledby="what-h">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <SectionHead
         n={1}
@@ -36,67 +54,55 @@ const HomeGuide = () => (
         Indian fund house. Today we list {FUND_COUNT} GIFT City funds from {HOUSE_COUNT} fund houses.
       </p>
 
-      <h3 className="mt-10 font-heading font-bold text-xl text-primary">Types of GIFT City funds</h3>
-      <div className="mt-4 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        {TYPES.map((x) => (
-          <Link key={x.t} to={x.to} className={`${card} group hover:border-secondary/40 hover:shadow-sm transition`}>
-            <p className={`${h3} group-hover:underline`}>{x.t}</p>
-            <p className="mt-1 font-body text-sm font-semibold text-emerald-700">{x.m}</p>
-            <p className="mt-2 font-body text-sm text-foreground-muted">{x.d}</p>
+      {/* Types */}
+      <div className="mt-12 pt-10 border-t border-border">
+        <h3 className={sub}>Types of GIFT City funds</h3>
+        <ul className="mt-5 grid sm:grid-cols-2 lg:grid-cols-4 gap-5 list-none p-0">
+          {TYPES.map((x) => (
+            <li key={x.t}>
+              <Link to={x.to} className="group flex h-full flex-col rounded-2xl border border-border bg-white p-5 transition hover:border-secondary/50 hover:shadow-md">
+                <span className="font-heading font-semibold text-lg text-primary group-hover:underline">{x.t}</span>
+                <span className="mt-2 inline-flex w-fit rounded-full bg-emerald-50 px-2.5 py-0.5 font-body text-xs font-semibold text-emerald-700">{x.m}</span>
+                <span className="mt-3 font-body text-sm leading-relaxed text-foreground-muted">{x.d}</span>
+                <span className="mt-auto pt-4 inline-flex items-center gap-1 font-body text-sm font-semibold text-secondary">Read more <ArrowRight className="h-4 w-4" aria-hidden /></span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Before you invest */}
+      <div className="mt-12 pt-10 border-t border-border">
+        <h3 className={sub}>Before you invest</h3>
+        <ul className="mt-5 grid md:grid-cols-3 gap-5 list-none p-0">
+          {BASICS.map((b) => (
+            <li key={b.t} className="flex h-full flex-col rounded-2xl border border-border bg-white p-6">
+              <h4 className="font-heading font-semibold text-lg text-primary">{b.t}</h4>
+              <p className="mt-2 font-body text-[15px] leading-relaxed text-foreground-muted">{b.body}</p>
+              <p className="mt-auto pt-4 flex flex-wrap gap-x-4 gap-y-1">
+                {b.links.map(([to, label]) => <Link key={to} to={to} className={link}>{label}</Link>)}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* How to invest */}
+      <div className="mt-12 rounded-2xl bg-surface border border-border p-6 sm:p-8">
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+          <h3 className={sub}>How to invest in GIFT City funds</h3>
+          <Link to="/how-to-invest" className="inline-flex items-center gap-1 font-body text-sm font-semibold text-secondary hover:underline">
+            Step-by-step guide <ArrowRight className="h-4 w-4" aria-hidden />
           </Link>
-        ))}
-      </div>
-
-      <div className="mt-10 grid md:grid-cols-3 gap-4">
-        <div className={card}>
-          <h3 className={h3}>Inbound or outbound</h3>
-          <p className={`mt-2 ${body}`}>
-            <strong className="text-primary">Inbound</strong> funds invest in India and are mainly for NRIs and foreign investors.{" "}
-            <strong className="text-primary">Outbound</strong> funds invest abroad, often in US shares, and many accept resident Indians.
-          </p>
-          <p className="mt-3 font-body text-sm">
-            <Link to="/gift-city-inbound-funds" className={link}>Inbound funds</Link> ·{" "}
-            <Link to="/gift-city-outbound-funds" className={link}>Outbound funds</Link>
-          </p>
         </div>
-        <div className={card}>
-          <h3 className={h3}>Who can invest</h3>
-          <p className={`mt-2 ${body}`}>
-            <strong className="text-primary">NRIs, OCIs and foreign nationals</strong>, where the fund accepts their country.{" "}
-            <strong className="text-primary">Resident Indians</strong> under LRS: up to USD 250,000 a year, with 20% TCS above ₹10 lakh,
-            claimed back in your tax return. There is no SIP; each investment is a lump sum.
-          </p>
-          <p className="mt-3 font-body text-sm">
-            <Link to="/gift-city-funds-for-nri" className={link}>NRIs</Link> ·{" "}
-            <Link to="/gift-city-funds-for-resident-indians" className={link}>Resident Indians</Link> ·{" "}
-            <Link to="/gift-city-funds-for-oci" className={link}>OCIs</Link>
-          </p>
-        </div>
-        <div className={card}>
-          <h3 className={h3}>Tax, in one line</h3>
-          <p className={`mt-2 ${body}`}>
-            The tax concessions sit mainly at the level of the fund. What you pay as an investor depends on the fund's structure and
-            where you live, and NRIs are also taxed in their country of residence.
-          </p>
-          <p className="mt-3 font-body text-sm">
-            <Link to="/taxation" className={link}>GIFT City fund taxation</Link>
-          </p>
-        </div>
-      </div>
-
-      <div className="mt-10 rounded-2xl bg-surface p-5 sm:p-6 flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
-        <div className="flex-1">
-          <h3 className={h3}>How to invest in GIFT City funds</h3>
-          <ol className="mt-2 grid sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-1 font-body text-foreground-muted list-decimal list-inside">
-            <li>Pick a fund that accepts you</li>
-            <li>Complete the fund house's KYC</li>
-            <li>Send US Dollars from your bank</li>
-            <li>Units are allotted to you</li>
-          </ol>
-        </div>
-        <Link to="/how-to-invest" className="inline-flex items-center gap-2 font-body font-semibold text-secondary hover:underline shrink-0">
-          Step-by-step guide <ArrowRight className="h-4 w-4" aria-hidden />
-        </Link>
+        <ol className="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 list-none p-0">
+          {STEPS.map((s, i) => (
+            <li key={s} className="flex items-start gap-3 rounded-xl bg-white border border-border p-4">
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-secondary font-body text-sm font-bold text-white" aria-hidden>{i + 1}</span>
+              <span className="font-body text-[15px] font-medium text-primary leading-snug pt-1">{s}</span>
+            </li>
+          ))}
+        </ol>
       </div>
     </div>
   </section>

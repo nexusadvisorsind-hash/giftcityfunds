@@ -113,7 +113,7 @@ const Home = () => {
         <section className="py-16 md:py-20 bg-white border-t border-border" aria-labelledby="tools-h">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <SectionHead n={3} label="Free tools" id="tools-h" title="Work it out in under a minute" sub="No sign-up needed." />
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
               {[
                 { to: "/gift-city-route-checker", icon: Route, t: "Which route applies to me?", d: "Resident, NRI, OCI or returning: see your route, limits and tax collected at source." },
                 { to: "/insights/lrs-tcs-gift-city#calculator", icon: Calculator, t: "TCS calculator", d: "Estimate TCS on any LRS remittance for FY 2026-27, including GIFT City investments." },
@@ -121,7 +121,7 @@ const Home = () => {
                 { to: "/gift-city-document-checklist", icon: FileText, t: "Document checklist", d: "Pick your status, country and product; print your KYC list." },
                 { to: "/gift-city-rules-updates", icon: Globe2, t: "What changed lately", d: "Dated IFSCA, RBI, SEBI and tax changes, and what each means for you." },
               ].map((c) => (
-                <Link key={c.to} to={c.to} className="group rounded-2xl border border-border bg-white p-5 hover:border-secondary/40 hover:shadow-sm transition">
+                <Link key={c.to} to={c.to} className="group flex h-full flex-col rounded-2xl border border-border bg-white p-5 hover:border-secondary/40 hover:shadow-md transition">
                   <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-accent"><c.icon className="h-5 w-5 text-secondary" aria-hidden /></span>
                   <p className="font-heading font-semibold text-lg text-primary group-hover:underline">{c.t}</p>
                   <p className="font-body text-sm text-foreground-muted mt-1">{c.d}</p>
@@ -133,7 +133,7 @@ const Home = () => {
 
         <LatestNews />
 
-        <section className="pb-16 md:pb-20 bg-surface">
+        <section className="pb-16 md:pb-20 bg-[#F1F5F9]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <FundAlerts source="home" />
           </div>
@@ -141,13 +141,13 @@ const Home = () => {
 
         {/* Frequently asked: answered, with FAQPage schema */}
         <section className="py-16 md:py-20 bg-white border-t border-border">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div className="max-w-4xl">
             <SectionLabel n={5} label="Questions" />
             <PageFaqs items={PAGE_FAQS} title="Frequently asked questions" className="mt-3 [&>h2]:font-extrabold [&>h2]:text-3xl md:[&>h2]:text-4xl [&>h2]:tracking-[-0.02em] [&>h2]:mb-8" />
             <Link to="/faqs" className="mt-4 font-body text-secondary hover:underline inline-flex items-center">
               Read all FAQs <ArrowRight className="ml-1 h-4 w-4" />
             </Link>
-          </div>
+          </div></div>
         </section>
 
         <section className="py-16 bg-primary text-primary-foreground">
