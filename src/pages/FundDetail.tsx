@@ -129,6 +129,20 @@ const FundDetail = () => {
       kind="WebPage"
       faqs={faqsFor(f)}
       sources={["ifscaDirectory", "ifsca"]}
+      extraSchema={[
+        {
+          "@context": "https://schema.org",
+          "@type": "InvestmentFund",
+          name: n,
+          url: `https://giftcityfunds.in${path}`,
+          description: `${directionText(f)} GIFT City ${isRetail(f) ? "retail fund" : "AIF or restricted fund"}. Invests in: ${f.invests}. Minimum: ${f.minimum}. Who can invest: ${f.who}.`,
+          currency: "USD",
+          provider: { "@type": "Organization", name: x?.manager ?? f.house },
+          areaServed: "GIFT IFSC, India",
+          ...(x?.ter ? { feesAndCommissionsSpecification: `Expense ratio (TER): ${x.ter}${x.exitLoad ? `. Exit load: ${x.exitLoad}` : ""}` } : x?.exitLoad ? { feesAndCommissionsSpecification: `Exit load: ${x.exitLoad}` } : {}),
+          sameAs: [f.source.url],
+        },
+      ]}
     >
       <p className={p}>
         <strong className="text-primary">The short answer.</strong> {many ? <>{n} {many ? "are" : "is"} {f.count} </> : <>{n} is an </>}

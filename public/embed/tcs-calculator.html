@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://giftcityfunds.in/insights/lrs-tcs-gift-city#calculator">
+<title>TCS calculator for a GIFT City investment</title>
+<style>
+  /* Self-contained: no cookies, no analytics, nothing sent anywhere. */
+  :root { --ink:#0f172a; --muted:#475569; --line:#e2e8f0; --blue:#1d4ed8; --green:#059669; --red:#b91c1c; --bg:#ffffff; --soft:#f8fafc; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.5 Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .wrap { max-width:760px; margin:0 auto; padding:16px; border:1.5px solid rgba(16,185,129,.7); border-radius:16px; }
+  h1 { font-size:20px; margin:0 0 2px; }
+  .sub { color:var(--muted); font-size:13px; margin:0 0 14px; }
+  .grid { display:grid; gap:12px; grid-template-columns:repeat(3,1fr); }
+  @media (max-width:620px){ .grid{ grid-template-columns:1fr; } }
+  label span { display:block; font-size:13px; font-weight:600; }
+  input { width:100%; margin-top:4px; padding:8px 10px; border:1px solid #cbd5e1; border-radius:8px; font:inherit; color:var(--ink); }
+  input:focus { outline:2px solid rgba(29,78,216,.35); border-color:var(--blue); }
+  .out { display:grid; gap:10px; grid-template-columns:repeat(3,1fr); margin-top:14px; }
+  @media (max-width:620px){ .out{ grid-template-columns:1fr; } }
+  .box { border:1px solid var(--line); border-radius:12px; padding:12px; background:var(--soft); }
+  .box.main { background:var(--blue); color:#fff; border-color:var(--blue); }
+  .box p { margin:0; font-size:12px; }
+  .box strong { display:block; font-size:21px; margin-top:2px; }
+  .warn { color:var(--red); font-size:13px; margin:10px 0 0; }
+  .note { color:var(--muted); font-size:12px; margin:12px 0 0; }
+  .credit { font-size:12px; margin:10px 0 0; color:var(--muted); }
+  .credit a { color:var(--blue); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>TCS calculator for a GIFT City investment</h1>
+  <p class="sub">For resident Indians, FY 2026-27. It runs in your browser; nothing you type is sent or stored.</p>
+  <div class="grid">
+    <label><span>Amount to invest in the GIFT City fund (₹)</span><input id="amt" type="number" inputmode="numeric" min="0" step="10000" value="2500000"></label>
+    <label><span>Already sent abroad this financial year, any purpose (₹)</span><input id="prior" type="number" inputmode="numeric" min="0" step="10000" value="0"></label>
+    <label><span>USD/INR rate (edit to today's)</span><input id="fx" type="number" inputmode="decimal" min="1" step="0.1" value="88"></label>
+  </div>
+  <div class="out" aria-live="polite">
+    <div class="box main"><p>TCS your bank collects</p><strong id="tcs">₹0</strong></div>
+    <div class="box"><p>Total debited from your account</p><strong id="total">₹0</strong></div>
+    <div class="box"><p>LRS used this year, approx.</p><strong id="lrs">USD 0</strong></div>
+  </div>
+  <p class="warn" id="over" hidden>This is above the LRS limit of USD 250,000 for the financial year. Reduce the amount or wait for the next financial year.</p>
+  <p class="note">20% on the part of your year's LRS remittances above ₹10 lakh. TCS is tax paid in advance: it appears against your PAN and is claimed in your income tax return. A higher rate applies without PAN/Aadhaar. Confirm with your bank or CA. Information only, not advice.</p>
+  <p class="credit">Calculator by <a href="https://giftcityfunds.in/insights/lrs-tcs-gift-city" target="_blank" rel="noopener">GIFT City Funds</a></p>
+</div>
+<script>
+  var THRESHOLD = 1000000, RATE = 0.2, LIMIT = 250000;
+  function inr(n){ return "₹" + Math.round(n).toLocaleString("en-IN"); }
+  function v(id){ var x = +document.getElementById(id).value; return isFinite(x) && x > 0 ? x : 0; }
+  function calc(){
+    var amt = v("amt"), prior = v("prior"), fx = v("fx") || 1;
+    var tcs = Math.max(0, prior + amt - Math.max(prior, THRESHOLD)) * RATE;
+    var usd = (amt + prior) / fx;
+    document.getElementById("tcs").textContent = inr(tcs);
+    document.getElementById("total").textContent = inr(amt + tcs);
+    document.getElementById("lrs").textContent = "USD " + Math.round(usd).toLocaleString("en-IN") + " of 250,000";
+    document.getElementById("over").hidden = usd <= LIMIT;
+  }
+  ["amt","prior","fx"].forEach(function(id){ document.getElementById(id).addEventListener("input", calc); });
+  calc();
+</script>
+</body>
+</html>

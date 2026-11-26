@@ -56,7 +56,7 @@ const Card = ({ f }: { f: Fund }) => {
         <div><dt className="text-xs text-foreground-muted">Minimum</dt><dd className="mt-0.5 text-[15px] font-semibold text-primary">{minShort(f)}</dd></div>
         <div><dt className="text-xs text-foreground-muted">Who can invest</dt><dd className="mt-0.5 text-[15px] font-semibold text-primary">{whoShort(f)}</dd></div>
         {f.slug && FUND_EXTRAS[f.slug]?.ter && (
-          <div><dt className="text-xs text-foreground-muted">Expense ratio</dt><dd className="mt-0.5 text-[13.5px] font-semibold text-primary">{FUND_EXTRAS[f.slug].ter!.split(";")[0].replace(" a year", "").replace(/ \(.*$/, "")}</dd></div>
+          <div><dt className="text-xs text-foreground-muted">Expense ratio</dt><dd className="mt-0.5 text-[13.5px] font-semibold text-primary">{FUND_EXTRAS[f.slug].ter!.split(";")[0].replace(" a year", "").replace(/ \([^)]*\)/g, "")}</dd></div>
         )}
         {f.slug && FUND_EXTRAS[f.slug]?.exitLoad && (
           <div><dt className="text-xs text-foreground-muted">Exit load</dt><dd className="mt-0.5 text-[13.5px] font-semibold text-primary">{FUND_EXTRAS[f.slug].exitLoad!.split(";")[0].replace(" if redeemed", "").replace(/ \(.*?\)/, "")}</dd></div>

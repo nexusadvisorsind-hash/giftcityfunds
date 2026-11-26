@@ -4,6 +4,7 @@ import { FlowSteps } from "@/components/Diagrams";
 import MoneyMap from "@/components/MoneyMap";
 import { FundDirectory } from "@/components/FundDirectory";
 import { FundAlerts } from "@/components/FundAlerts";
+import { CHANGES, CHANGES_SINCE } from "@/data/changes";
 import { LOW_MIN, HIGH_MIN, FUNDS_LAST_CHECKED as LAST_CHECKED, FUND_COUNT, HOUSE_COUNT, fundPath } from "@/data/funds";
 
 const ALL = [...LOW_MIN, ...HIGH_MIN];
@@ -34,11 +35,24 @@ const FundList = () => {
       description={`GIFT City mutual funds list: ${FUND_COUNT} funds from ${HOUSE_COUNT} fund houses, including PPFAS, HDFC, DSP and Tata, with minimums, who can invest and a source for each.`}
       crumb="GIFT City Fund List"
       datePublished="2026-10-08"
-      dateModified="2026-11-05"
+      dateModified="2026-11-26"
       reviewed={`Last checked ${LAST_CHECKED}`}
       faqs={faqs}
       sources={["ifscaDirectory", "ifsca", "amfi"]}
       extraSchema={[
+        {
+          "@context": "https://schema.org",
+          "@type": "Dataset",
+          name: "GIFT City funds list",
+          description: `${FUND_COUNT} GIFT City (IFSC) funds from ${HOUSE_COUNT} fund houses: fund house, direction, type, minimum investment, who can invest, expense ratio and exit load where published, and a source for each. Facts only; no NAVs, returns or rankings.`,
+          url: "https://giftcityfunds.in/gift-city-fund-list",
+          keywords: ["GIFT City funds", "IFSC funds", "GIFT City mutual funds", "IFSCA"],
+          creator: { "@type": "Organization", name: "GIFT City Funds", url: "https://giftcityfunds.in/" },
+          dateModified: "2026-11-26",
+          isAccessibleForFree: true,
+          spatialCoverage: "GIFT IFSC, Gandhinagar, India",
+          distribution: [{ "@type": "DataDownload", encodingFormat: "text/csv", contentUrl: "https://giftcityfunds.in/gift-city-funds.csv" }],
+        },
         {
           "@context": "https://schema.org",
           "@type": "ItemList",
@@ -55,6 +69,22 @@ const FundList = () => {
       <h2 className={h2}>GIFT City mutual funds and AMC list</h2>
       <p className="font-body text-sm text-foreground-muted">Every fund we could confirm, with its minimum and who can invest. Search, filter, or switch to the table for full details and sources. Not exhaustive and not a ranking.</p>
       <FundDirectory />
+      <p className="mt-4 font-body text-sm">
+        <a href="/gift-city-funds.csv" download className="font-semibold text-secondary underline underline-offset-2">Download this list (CSV)</a>
+        <span className="text-foreground-muted"> · Free to use with a link to this page. Blank cells mean not published or not confirmed.</span>
+      </p>
+
+      <h2 className={h2}>What changed</h2>
+      <p className="font-body text-sm text-foreground-muted">Changes to this list, newest first. Recorded since {CHANGES_SINCE}.</p>
+      <ul className={ul}>
+        {CHANGES.map((c, i) => (
+          <li key={i}>
+            <strong className="text-primary">{new Date(c.date + "T00:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })}:</strong> {c.text}
+            {c.link && <> <Link to={c.link[0]} className={a}>{c.link[1]}</Link></>}
+          </li>
+        ))}
+      </ul>
+
       <FundAlerts source="fund_list" className="my-8" />
 
       <h2 className={h2}>Inbound vs outbound in one picture</h2>

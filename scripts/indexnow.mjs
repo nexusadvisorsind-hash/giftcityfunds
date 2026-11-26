@@ -1,5 +1,5 @@
 // Tells IndexNow search engines (Bing, Yandex, Seznam, Naver; Bing also feeds
-// DuckDuckGo, Yahoo and ChatGPT search) about every URL in the sitemap.
+// DuckDuckGo, Yahoo and ChatGPT search) about URLs in the sitemap changed in the last 14 days.
 // Runs after each production build on Vercel. Google does not use IndexNow;
 // it reads public/sitemap.xml instead.
 // It never fails the build: any error is logged and ignored.
@@ -18,7 +18,16 @@ if (!isProduction && !dryRun) {
 
 try {
   const xml = readFileSync(new URL("../public/sitemap.xml", import.meta.url), "utf8");
-  const urlList = [...xml.matchAll(/<loc>\s*([^<\s]+)\s*<\/loc>/g)].map((m) => m[1]);
+  // Only pages changed in the last 14 days (by sitemap lastmod): IndexNow is
+  // for telling engines about changes, not for resubmitting the whole site.
+  const cutoff = Date.now() - 14 * 86400000;
+  const urlList = [...xml.matchAll(/<loc>\s*([^<\s]+)\s*<\/loc>\s*<lastmod>([^<]+)<\/lastmod>/g)]
+    .filter((m) => Date.parse(m[2]) >= cutoff)
+    .map((m) => m[1]);
+  if (!urlList.length) {
+    console.log("indexnow: no recently changed URLs");
+    process.exit(0);
+  }
   const body = { host: HOST, key: KEY, keyLocation: `https://${HOST}/${KEY}.txt`, urlList };
   if (dryRun) {
     console.log(`indexnow: dry run, would submit ${urlList.length} URLs`);

@@ -3,6 +3,7 @@
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import TcsCalculator from "@/components/TcsCalculator";
+import { EmbedCode } from "@/components/EmbedCode";
 import type { PageFaq } from "@/components/PageFaqs";
 import { BarChart, FlowSteps, RouteDiagram } from "@/components/Diagrams";
 
@@ -293,6 +294,7 @@ export const articles: InsightArticle[] = [
           </p>
 
           <TcsCalculator />
+          <EmbedCode />
 
           <h3 className="font-heading font-semibold text-xl text-primary pt-2">How much TCS on a GIFT City investment?</h3>
           <BarChart
