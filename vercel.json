@@ -44,7 +44,7 @@
     },
     {
       "source": "/knowledge/what-is-gift-city-fund",
-      "destination": "/what-is-gift-city",
+      "destination": "/",
       "permanent": true
     },
     {
@@ -54,7 +54,7 @@
     },
     {
       "source": "/knowledge/mutual-funds-in-gift-city",
-      "destination": "/funds-explained",
+      "destination": "/gift-city-fund-list",
       "permanent": true
     },
     {
