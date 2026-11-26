@@ -101,7 +101,7 @@ const FundDetail = () => {
       path={path}
       headline={`${n}: GIFT City ${f.direction} ${many ? "Funds" : "Fund"} Facts`}
       seoTitle={TITLE_OVERRIDE[f.slug!] ?? titleFor(n)}
-      description={DESC_OVERRIDE[f.slug!] ?? `${n}: ${dir} GIFT City ${many ? "funds" : "fund"} from ${f.house}. Minimum ${f.minimum.split(/;|\(|, then| or /)[0].trim()}. Who can invest, what it holds and the source.`}
+      description={DESC_OVERRIDE[f.slug!] ?? `${n}: ${dir} GIFT City ${many ? "funds" : "fund"} from ${f.house}. ${/^not published/i.test(f.minimum) ? "Minimum not published" : `Minimum ${f.minimum.split(/;|\(|, then| or /)[0].trim()}`}. Who can invest, what it holds and the source.`}
       crumb={n}
       datePublished="2026-11-04"
       reviewed={`Last checked ${FUNDS_LAST_CHECKED}`}

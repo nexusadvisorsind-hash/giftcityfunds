@@ -21,7 +21,7 @@
 - [Zerodha, Groww and GIFT City](https://giftcityfunds.in/gift-city-funds-zerodha-groww): IFSCA approvals of June 2026 for Zerodha, Upstox, Groww and Angel One (US stocks and ETFs), and how GIFT City funds are bought instead.
 - [GIFT City News](https://giftcityfunds.in/gift-city-news): Dated, sourced GIFT City news for investors: new funds, IFSCA decisions, banking and market updates.
 - [FAQs](https://giftcityfunds.in/faqs): Short answers to common questions.
-- [GIFT City Fund List 2026](https://giftcityfunds.in/gift-city-fund-list): Every public GIFT City fund we could verify, from 21 fund houses (PPFAS, HDFC, DSP, JioBlackRock, Edelweiss, Tata and more): minimum, who can invest (residents or NRIs), inbound or outbound, with sources. Facts only, not ranked.
+- [GIFT City Fund List 2026](https://giftcityfunds.in/gift-city-fund-list): Every public GIFT City fund we could verify, from 26 fund houses (PPFAS, HDFC, DSP, JioBlackRock, Edelweiss, Tata and more): minimum, who can invest (residents or NRIs), inbound or outbound, with sources. Facts only, not ranked.
 - [GIFT City Outbound Funds](https://giftcityfunds.in/gift-city-outbound-funds): Every public GIFT City fund that invests outside India (mostly for resident Indians under LRS), with minimums and eligibility.
 - [GIFT City Inbound Funds](https://giftcityfunds.in/gift-city-inbound-funds): Every public GIFT City fund that invests in India in US Dollars, for NRIs and foreign investors.
 - [Aditya Birla Sun Life GIFT City Funds](https://giftcityfunds.in/aditya-birla-sun-life-gift-city-funds): ABSL Emerging Market Equity Fund and India Growth Fund, both from USD 500.
@@ -34,6 +34,13 @@
 - [Edelweiss US Technology Equity Fund](https://giftcityfunds.in/gift-city-fund/edelweiss-us-technology-equity-fund): Edelweiss, outbound GIFT City fund: minimum, who can invest, what it invests in, source.
 - [HDFC International Developed Markets Equity Fund](https://giftcityfunds.in/gift-city-fund/hdfc-international-developed-markets-equity-fund): HDFC, outbound GIFT City fund: minimum, who can invest, what it invests in, source.
 - [HDFC International Emerging Markets Equity Fund](https://giftcityfunds.in/gift-city-fund/hdfc-international-emerging-markets-equity-fund): HDFC, outbound GIFT City fund: minimum, who can invest, what it invests in, source.
+- [Standard Chartered Signature CIO Funds](https://giftcityfunds.in/gift-city-fund/standard-chartered-signature-cio-funds): GIFT City fund facts: minimum, who can invest, source
+- [ABSL India Flexicap Fund (IFSC)](https://giftcityfunds.in/gift-city-fund/absl-india-flexicap-fund-ifsc): GIFT City fund facts: minimum, who can invest, source
+- [ABSL Global Bluechip Equity Fund (IFSC)](https://giftcityfunds.in/gift-city-fund/absl-global-bluechip-equity-fund-ifsc): GIFT City fund facts: minimum, who can invest, source
+- [Alchemy India Long Term Fund](https://giftcityfunds.in/gift-city-fund/alchemy-india-long-term-fund): GIFT City fund facts: minimum, who can invest, source
+- [Neo India All-Cap Core Equity Fund](https://giftcityfunds.in/gift-city-fund/neo-india-all-cap-core-equity-fund): GIFT City fund facts: minimum, who can invest, source
+- [Nuvama India EDGE Fund](https://giftcityfunds.in/gift-city-fund/nuvama-india-edge-fund): GIFT City fund facts: minimum, who can invest, source
+- [Ashoka WhiteOak India Multi Cap GIFT Fund](https://giftcityfunds.in/gift-city-fund/ashoka-whiteoak-india-multi-cap-gift-fund): GIFT City fund facts: minimum, who can invest, source
 - [Franklin US Equity IFSC Fund](https://giftcityfunds.in/gift-city-fund/franklin-us-equity-ifsc-fund): Franklin Templeton, outbound GIFT City fund: minimum, who can invest, what it invests in, source.
 - [JioBlackRock Advantage World Equity Fund](https://giftcityfunds.in/gift-city-fund/jioblackrock-advantage-world-equity-fund): JioBlackRock, outbound GIFT City fund: minimum, who can invest, what it invests in, source.
 - [Marcellus Global Equities Fund](https://giftcityfunds.in/gift-city-fund/marcellus-global-equities-fund): Marcellus, outbound GIFT City fund: minimum, who can invest, what it invests in, source.

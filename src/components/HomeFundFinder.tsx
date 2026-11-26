@@ -86,7 +86,7 @@ const HomeFundFinder = () => {
         </div>
 
         <div className="mt-12 rounded-2xl border-[1.5px] border-emerald-500/70 bg-white p-5 sm:p-6">
-          <h3 className="font-heading font-bold text-xl text-primary">All GIFT City funds, A to Z by fund house</h3>
+          <h3 className="font-heading font-bold text-xl text-primary">GIFT City IFSC funds, A to Z by fund house</h3>
           <p className="mt-1 font-body text-sm text-foreground-muted">Each name opens that fund's facts page: minimum, who can invest and the source.</p>
           <div className="mt-5 grid gap-x-8 gap-y-4 sm:grid-cols-2 lg:grid-cols-3">
             {BY_HOUSE.map(([house, funds]) => (

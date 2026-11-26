@@ -51,8 +51,8 @@ const Home = () => {
   return (
     <>
       <SEO
-        title={`GIFT City Funds 2026: All ${FUND_COUNT} Funds, Types, Tax & How to Invest`}
-        description={`GIFT City funds in one place: all ${FUND_COUNT} funds from ${HOUSE_COUNT} fund houses with minimums and who can invest, plus types, tax and how to invest.`}
+        title={`GIFT City Funds 2026: ${FUND_COUNT} Funds, Types, Tax & How to Invest`}
+        description={`GIFT City funds in one place: ${FUND_COUNT} funds from ${HOUSE_COUNT} fund houses with minimums and who can invest, plus types, tax and how to invest.`}
         canonical="https://giftcityfunds.in/"
         schema={financialServiceSchema}
         breadcrumbs={[{ name: "GIFT City Funds", url: "https://giftcityfunds.in/" }]}

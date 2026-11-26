@@ -10,9 +10,25 @@ export interface NewsItem {
   more?: [string, string]; // related guide on this site
 }
 
-export const NEWS_UPDATED = "15 November 2026";
+export const NEWS_UPDATED = "26 November 2026";
 
 export const NEWS: NewsItem[] = [
+  {
+    date: "2026-11-23",
+    title: "PPFAS opens its India Flexi Cap fund in GIFT City for NRIs",
+    summary: "PPFAS Alternate Asset Managers IFSC launched the Parag Parikh India Flexi Cap Fund, a US Dollar feeder into the Parag Parikh Flexi Cap Fund for NRIs and foreign investors. Business Today reports the new fund offer runs from 6 to 27 November 2026. Resident Indians cannot invest.",
+    tag: "Funds",
+    source: { label: "Business Today", url: "https://www.businesstoday.in/mutual-funds/story/ppfas-launches-dollar-denominated-flexi-cap-fund-at-gift-city-who-can-invest-and-what-are-the-charges-569083-2026-11-23" },
+    more: ["/gift-city-fund/parag-parikh-india-flexi-cap-fund-ifsc", "Parag Parikh India Flexi Cap Fund (IFSC)"],
+  },
+  {
+    date: "2026-11-12",
+    title: "Standard Chartered launches four Signature CIO Funds from GIFT City",
+    summary: "Standard Chartered launched four multi-asset Signature CIO Funds from GIFT City for its affluent clients in India, developed with Amundi Asset Management and SBI Funds International (IFSC). The funds invest across global equities, bonds, commodities, liquid alternatives and cash.",
+    tag: "Funds",
+    source: { label: "Cafemutual", url: "https://cafemutual.com/news/cafe-alt/39280-standard-chartered-launches-four-signature-cio-funds-from-gift-city" },
+    more: ["/gift-city-fund/standard-chartered-signature-cio-funds", "Standard Chartered Signature CIO Funds"],
+  },
   {
     date: "2026-11-13",
     title: "Franklin Templeton launches its first GIFT City fund, investing in US shares",
