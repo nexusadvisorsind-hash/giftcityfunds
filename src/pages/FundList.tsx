@@ -50,6 +50,7 @@ const FundList = () => {
           creator: { "@type": "Organization", name: "GIFT City Funds", url: "https://giftcityfunds.in/" },
           dateModified: "2026-11-26",
           isAccessibleForFree: true,
+          license: "https://creativecommons.org/licenses/by/4.0/",
           spatialCoverage: "GIFT IFSC, Gandhinagar, India",
           distribution: [{ "@type": "DataDownload", encodingFormat: "text/csv", contentUrl: "https://giftcityfunds.in/gift-city-funds.csv" }],
         },
