@@ -147,7 +147,7 @@ const NriGuide = () => (
     description="GIFT City funds for NRIs: invest in USD with no LRS, minimums from USD 500, documents, and tax rules for the UAE, Gulf, UK, US, Canada, Singapore and Australia."
     crumb="GIFT City Funds for NRIs"
     datePublished="2026-10-09"
-    dateModified="2026-11-02"
+    dateModified="2026-11-28"
     faqs={faqs}
     sources={["ifscaDirectory", "irs8621", "uaeTax", "hmrcOffshore", "ukFig", "craT1135", "irasOverseas", "incomeTax"]}
   >
@@ -206,6 +206,9 @@ const NriGuide = () => (
         { title: "Units allotted", sub: "Track on the investor portal" },
       ]}
     />
+    <p className={p}>
+      Each step, with the document checklist and what happens to your money, is explained in <Link to="/how-to-invest" className={a}>how to invest in GIFT City funds</Link>.
+    </p>
 
     <h2 className={h2}>Country by country: what changes for you</h2>
     <div tabIndex={0} role="region" aria-label="Table, scroll sideways to see more" className="overflow-x-auto">

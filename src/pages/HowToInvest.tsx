@@ -46,11 +46,11 @@ const HowToInvest = () => (
   <GuidePage
     path="/how-to-invest"
     headline="How to Invest in GIFT City Funds: Step-by-Step Guide for NRIs and Residents"
-    seoTitle="How to Invest in GIFT City: Step-by-Step for NRIs & Residents"
-    description="How to invest in GIFT City, step by step: choosing a structure, LRS vs direct USD, KYC documents, remittance, allotment and redemption, with a checklist."
+    seoTitle="How to Invest in GIFT City Funds (2026): Step-by-Step Process"
+    description="How to invest in GIFT City funds, step by step: choosing a structure, LRS vs direct USD, KYC documents, remittance, allotment and redemption, with a checklist."
     crumb="How to Invest"
     datePublished="2026-07-23"
-    dateModified="2026-11-19"
+    dateModified="2026-11-28"
     faqs={faqs}
     sources={["ifscaDirectory", "rbiLrs", "incomeTax", "irs8621"]}
     extraSchema={[
@@ -84,6 +84,9 @@ const HowToInvest = () => (
       via={{ label: "Scheme's USD account in GIFT IFSC", sub: "Run by an IFSCA-registered FME", tone: "ink" }}
       to={[{ label: "Units allotted at NAV", sub: "Statement and investor portal access", tone: "amber" }]}
     />
+    <p className={p}>
+      Living abroad? Our guide to <Link to="/gift-city-funds-for-nri" className={a}>GIFT City funds for NRIs</Link> covers minimums, documents and tax country by country, including the UAE, UK, US and Singapore.
+    </p>
 
     <h2 className={h2}>The GIFT City investment process, step by step</h2>
     <ol className="space-y-5 list-none p-0">
@@ -152,7 +155,7 @@ const HowToInvest = () => (
 
     <h3 className={h3}>Next</h3>
     <p className={p}>
-      Browse the <Link to="/gift-city-fund-list" className={a}>GIFT City fund list</Link>, read the <Link to="/gift-city-funds-risks" className={a}>risks</Link>, or see <Link to="/who-its-for" className={a}>who can invest</Link>.
+      Browse the <Link to="/gift-city-fund-list" className={a}>GIFT City fund list</Link>, read the <Link to="/gift-city-funds-risks" className={a}>risks</Link>, see <Link to="/who-its-for" className={a}>who can invest</Link>, or read the <Link to="/gift-city-funds-for-nri" className={a}>GIFT City investment guide for NRIs</Link>.
     </p>
   </GuidePage>
 );
